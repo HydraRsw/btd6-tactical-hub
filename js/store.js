@@ -5,7 +5,8 @@ import { loadGameData } from './lib/data.js';
 import { recall, remember } from './lib/storage.js';
 
 // Tabs in header order.
-export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'tools', 'farm', 'chimps'];
+// 'patch' (#patch) is a page reached from the patch label, not a header tab.
+export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'events', 'tools', 'farm', 'chimps', 'patch'];
 
 // The Tools tab has three views; each also has its own address (#planner, #degree, #compare).
 export const TOOL_VIEWS = ['planner', 'degree', 'compare'];
@@ -43,6 +44,16 @@ export function createHubStore() {
     modes: { modes: [] },
     rounds: { startCash: 650, sets: [] },
     templates: { intro: '', templates: [] },
+    patch: { intro: '', versions: [] },
+    bosses: { intro: '', tierRounds: [], coop: [1], bosses: [], sources: [] },
+    events: { intro: '', formats: [] },
+    freeplay: { intro: '', speed: [], moabHealth: [], cashPerPop: [], statusResistance: [], sources: [] },
+
+    // Saved in this browser only
+    favourites: recall('favourites', []), // [{ kind: 'tower' | 'hero' | 'map' | 'paragon' | 'mode' | 'build', id }]
+    medals: recall('medals', {}),         // { mapId: [modeId, …, 'black-border'] }
+    savedBuilds: recall('plannerSaved', []), // [{ id, name, savedAt, build }]
+    pendingBuild: null,                   // a saved build the planner should load next
     toolView: 'planner',   // which tool the Tools tab shows (see TOOL_VIEWS)
 
     mode: ['chimps', 'boss', 'normal'].includes(recall('mode', 'chimps')) ? recall('mode', 'chimps') : 'chimps', // which game mode the tiers are shown for (see MODES)
@@ -142,6 +153,57 @@ export function createHubStore() {
 
     openTower(towerId) {
       this.openPage('tower', towerId);
+    },
+
+    // --- Favourites ------------------------------------------------------
+    isFavourite(kind, id) {
+      return this.favourites.some((f) => f.kind === kind && f.id === id);
+    },
+
+    toggleFavourite(kind, id) {
+      this.favourites = this.isFavourite(kind, id)
+        ? this.favourites.filter((f) => !(f.kind === kind && f.id === id))
+        : [...this.favourites, { kind, id }];
+      remember('favourites', this.favourites);
+    },
+
+    // --- Saved planner builds ----------------------------------------------
+    saveBuild(name, build, id = null) {
+      const entry = { id: id ?? `b${Date.now()}`, name: name.trim() || 'Untitled build', savedAt: new Date().toISOString().slice(0, 10), build: JSON.parse(JSON.stringify(build)) };
+      this.savedBuilds = id ? this.savedBuilds.map((b) => (b.id === id ? entry : b)) : [...this.savedBuilds, entry];
+      remember('plannerSaved', this.savedBuilds);
+      return entry.id;
+    },
+
+    renameBuild(id, name) {
+      this.savedBuilds = this.savedBuilds.map((b) => (b.id === id ? { ...b, name: name.trim() || b.name } : b));
+      remember('plannerSaved', this.savedBuilds);
+    },
+
+    deleteBuild(id) {
+      this.savedBuilds = this.savedBuilds.filter((b) => b.id !== id);
+      remember('plannerSaved', this.savedBuilds);
+      if (this.isFavourite('build', id)) this.toggleFavourite('build', id);
+    },
+
+    /** Open a saved build in the planner. */
+    openBuild(id) {
+      const saved = this.savedBuilds.find((b) => b.id === id);
+      if (!saved) return;
+      this.pendingBuild = saved;
+      this.openTool('planner');
+    },
+
+    // --- Medal tracker ----------------------------------------------------
+    hasMedal(mapId, medalId) {
+      return (this.medals[mapId] ?? []).includes(medalId);
+    },
+
+    toggleMedal(mapId, medalId) {
+      const current = this.medals[mapId] ?? [];
+      const next = current.includes(medalId) ? current.filter((m) => m !== medalId) : [...current, medalId];
+      this.medals = { ...this.medals, [mapId]: next };
+      remember('medals', this.medals);
     },
 
     /** A tower or hero's own page. */

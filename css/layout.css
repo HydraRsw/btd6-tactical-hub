@@ -568,6 +568,57 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 .mk__effect { color: var(--text-soft); }
 .mk .pill { justify-self: start; }
 
+
+/* --- Favourites, stars and the patch link --- */
+.page-title { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.star-button { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; cursor: pointer; color: var(--text-dim); background: var(--well); border: 2px solid rgba(4, 18, 40, 0.7); }
+.star-button svg { width: 18px; height: 18px; }
+.star-button:hover { color: var(--gold); }
+.star-button--on { color: var(--gold); border-color: var(--gold-edge); }
+.star-button--on svg { fill: var(--gold); }
+.favourites-bar { display: flex; align-items: center; gap: 12px; padding: 10px 14px; margin-bottom: 16px; }
+.favourites-bar__label { display: inline-flex; align-items: center; gap: 6px; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold); white-space: nowrap; }
+.favourites-bar__label svg { width: 16px; height: 16px; fill: var(--gold); }
+.favourites-bar__items { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
+.chip--fav { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; padding: 3px 10px 3px 4px; }
+.chip--fav .avatar { width: 24px; height: 24px; }
+.chip--fav svg { width: 15px; height: 15px; }
+.patch-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 800; color: var(--text-muted); text-decoration: none; white-space: nowrap; }
+.patch-link:hover { color: var(--gold); }
+.patch-link svg { width: 16px; height: 16px; }
+.patch-list { display: grid; gap: 8px; font-size: 0.9rem; }
+.patch-list li { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.patch-link-inline { background: none; border: 0; padding: 0; font: inherit; font-weight: 800; color: var(--cyan); cursor: pointer; }
+
+/* --- Events --- */
+.event-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.event-card { display: grid; gap: 10px; align-content: start; padding: 16px; }
+.event-card__head { display: flex; gap: 12px; align-items: center; }
+.event-card__head h3 { margin: 4px 0 2px; }
+.event-card__icon { width: 56px; height: 56px; object-fit: contain; border-radius: 12px; background: var(--well); flex-shrink: 0; }
+.event-rules { font-size: 0.82rem; }
+.odyssey-islands { display: grid; gap: 4px; margin: 0; padding-left: 20px; font-size: 0.85rem; }
+
+/* --- Medal tracker --- */
+.medal-tracker__summary { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 14px 16px; cursor: pointer; list-style: none; }
+.medal-tracker__summary::-webkit-details-marker { display: none; }
+.medal-tracker__summary svg { color: var(--gold); width: 20px; height: 20px; }
+.medal-table table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.medal-table th { font-size: 0.66rem; font-weight: 900; color: var(--text-dim); padding: 6px 4px; text-align: center; cursor: help; }
+.medal-table th:first-child, .medal-table td:first-child { text-align: left; white-space: nowrap; }
+.medal-table td { padding: 4px; text-align: center; border-top: 2px solid rgba(4, 18, 40, 0.45); }
+.medal-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.medal { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 4px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.75rem; font-weight: 800; color: var(--text-muted); background: var(--well); border: 2px solid rgba(4, 18, 40, 0.7); }
+.medal__short { display: inline-grid; place-items: center; min-width: 26px; height: 22px; padding: 0 4px; border-radius: 999px; font-size: 0.62rem; background: rgba(255, 255, 255, 0.08); }
+.medal--on { color: var(--text); border-color: var(--gold-edge); }
+.medal--on .medal__short { color: #0b1b33; background: var(--gold); }
+.medal--on.medal--bb .medal__short { color: #fff; background: #111; box-shadow: 0 0 0 2px var(--gold); }
+
+/* --- Saved builds --- */
+.saved-build { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 8px 10px; }
+.saved-build--current { border-color: var(--gold); }
+.saved-build__name { flex: 1; min-width: 140px; width: auto; }
+
 /* --- Tower costs and hero levels --- */
 .tip-columns--costs { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
 .cost-table th, .cost-table td { text-align: left !important; }
@@ -613,6 +664,10 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
   .timeline-row { grid-template-columns: 64px minmax(0, 1fr); padding: 10px 12px; }
   .compare__row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 9px 12px; }
   .compare__label { grid-column: 1 / -1; }
+  .patch-link span { display: none; }
+  .favourites-bar { flex-direction: column; align-items: stretch; gap: 6px; }
+  .medal__name { display: none; }
+  .medal { padding: 3px; }
   .compare__row--head > span:first-child { display: none; }
   .tower-hero__text h2 { font-size: 1.9rem; }
 }

@@ -1,0 +1,131 @@
+{
+ "intro": "What changes after round 80. Freeplay starts after the last required round (round 40, 60, 80 or 100 depending on difficulty); these rules apply in every mode.",
+ "speed": [
+  {
+   "rounds": "81–100",
+   "formula": "1 + (round − 80) × 2%",
+   "note": "+2% per round"
+  },
+  {
+   "rounds": "101–150",
+   "formula": "1.18 + (round − 80) × 2%",
+   "note": "Jumps an extra 18% on round 101"
+  },
+  {
+   "rounds": "151–200",
+   "formula": "1.58 + (round − 80) × 2%",
+   "note": "Extra 40% on round 151"
+  },
+  {
+   "rounds": "201–251",
+   "formula": "2.08 + (round − 80) × 2%",
+   "note": "Extra 50% on round 201"
+  },
+  {
+   "rounds": "252+",
+   "formula": "2.56 + (round − 80) × 2%",
+   "note": "Extra 48% on round 252"
+  }
+ ],
+ "moabHealth": [
+  {
+   "rounds": "81–100",
+   "perRound": "+2%",
+   "formula": "1 + (round − 80) × 0.02"
+  },
+  {
+   "rounds": "101–124",
+   "perRound": "+5%",
+   "formula": "1.4 + (round − 100) × 0.05"
+  },
+  {
+   "rounds": "125–150",
+   "perRound": "+15%",
+   "formula": "2.6 + (round − 124) × 0.15"
+  },
+  {
+   "rounds": "151–250",
+   "perRound": "+35%",
+   "formula": "6.5 + (round − 150) × 0.35"
+  },
+  {
+   "rounds": "251–300",
+   "perRound": "+100%",
+   "formula": "41.5 + (round − 250) × 1"
+  },
+  {
+   "rounds": "301–400",
+   "perRound": "+150%",
+   "formula": "91.5 + (round − 300) × 1.5"
+  },
+  {
+   "rounds": "401–500",
+   "perRound": "+250%",
+   "formula": "241.5 + (round − 400) × 2.5"
+  },
+  {
+   "rounds": "500+",
+   "perRound": "+500%",
+   "formula": "491.5 + (round − 500) × 5"
+  }
+ ],
+ "cashPerPop": [
+  {
+   "rounds": "1–50",
+   "value": "100%"
+  },
+  {
+   "rounds": "51–60",
+   "value": "50%"
+  },
+  {
+   "rounds": "61–85",
+   "value": "20%"
+  },
+  {
+   "rounds": "86–100",
+   "value": "10%"
+  },
+  {
+   "rounds": "101–120",
+   "value": "5%"
+  },
+  {
+   "rounds": "121–140",
+   "value": "4%"
+  },
+  {
+   "rounds": "141+",
+   "value": "2%"
+  }
+ ],
+ "statusResistance": [
+  {
+   "rounds": "150–199",
+   "value": "10% shorter"
+  },
+  {
+   "rounds": "200–249",
+   "value": "20% shorter"
+  },
+  {
+   "rounds": "250–299",
+   "value": "30% shorter"
+  },
+  {
+   "rounds": "300–349",
+   "value": "40% shorter"
+  },
+  {
+   "rounds": "350+",
+   "value": "50% shorter"
+  }
+ ],
+ "statusNote": "Stuns, Snowstorm freezes, MOAB maims and slows, knockback and Bloon Sabotage get shorter.",
+ "superCeramics": "From round 81, regular Bloons spawn one child instead of two (to reduce lag), and Ceramics become Super Ceramics: 60 health instead of 10 (120 when Fortified), $87 for their Ceramic layer (before the cash-per-pop cut), and 65 lives lost if leaked (75 Fortified).",
+ "bossNote": "Boss health and speed do not scale with these Freeplay rules.",
+ "sources": [
+  "wiki-rounds",
+  "wiki-boss-bloon"
+ ]
+}

@@ -91,6 +91,11 @@ function buildSearchIndex(hub) {
     { title: 'Build planner', subtitle: 'Plan a CHIMPS run round by round', keywords: 'planner chimps build cash afford', go: () => hub.openTool('planner') },
     { title: 'Round browser', subtitle: 'Every round: bloons, RBE and cash', keywords: 'rounds rbe cash abr alternate', go: () => hub.openTab('rounds') },
     { title: 'Paragon degree calculator', subtitle: 'Power and degree from what you absorb', keywords: 'paragon degree power calculator', go: () => hub.openTool('degree') },
+    { title: 'Live events', subtitle: "This week's boss, race, Odyssey and Contested Territory", keywords: 'events boss race odyssey contested territory ct this week live', go: () => hub.openTab('events') },
+    { title: 'Boss guide', subtitle: 'Boss health per tier, skulls and Paragon matchups', keywords: 'boss bloonarius lych vortex dreadbloon phayze blastapopoulos diamondback health skull elite', go: () => hub.jumpTo('events', 'boss-guide') },
+    { title: 'What changed this patch', subtitle: 'Patch notes in plain words', keywords: 'patch notes changes update version nerf buff', go: () => hub.openTab('patch') },
+    { title: 'Freeplay scaling', subtitle: 'How rounds get harder after 80', keywords: 'freeplay scaling speed health super ceramic', go: () => hub.jumpTo('rounds', 'freeplay') },
+    { title: 'My medals', subtitle: 'Black Border and medal tracker', keywords: 'medals black border tracker progress', go: () => hub.openTab('maps') },
     { title: 'Compare towers and heroes', subtitle: 'Two units side by side', keywords: 'compare versus vs side by side', go: () => hub.openTool('compare') },
   ].map((tool) => ({ kind: 'Tool', ...tool }));
 

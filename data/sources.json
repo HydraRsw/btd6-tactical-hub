@@ -882,5 +882,57 @@
  "wiki-monkey-knowledge": {
   "title": "Bloons wiki: Monkey Knowledge (BTD6)",
   "url": "https://www.bloonswiki.com/Monkey_Knowledge_(BTD6)"
+ },
+ "wiki-v57-0": {
+  "title": "Bloons wiki: Version 57.0 notes",
+  "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_57.0"
+ },
+ "wiki-v57-1": {
+  "title": "Bloons wiki: Version 57.1 notes",
+  "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_57.1"
+ },
+ "wiki-v57-2": {
+  "title": "Bloons wiki: Version 57.2 notes",
+  "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_57.2"
+ },
+ "wiki-v57-3": {
+  "title": "Bloons wiki: Version 57.3 notes",
+  "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_57.3"
+ },
+ "wiki-v57-4": {
+  "title": "Bloons wiki: Version 57.4 notes",
+  "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_57.4"
+ },
+ "wiki-boss-bloon": {
+  "title": "Bloons wiki: Boss Bloon (BTD6)",
+  "url": "https://www.bloonswiki.com/Boss_Bloon_(BTD6)"
+ },
+ "wiki-boss-event": {
+  "title": "Bloons wiki: Boss Bloon Event",
+  "url": "https://www.bloonswiki.com/Boss_Bloon_Event"
+ },
+ "wiki-odyssey": {
+  "title": "Bloons wiki: Odyssey Event",
+  "url": "https://www.bloonswiki.com/Odyssey_Event"
+ },
+ "wiki-ct": {
+  "title": "Bloons wiki: Contested Territory (BTD6)",
+  "url": "https://www.bloonswiki.com/Contested_Territory_(BTD6)"
+ },
+ "wiki-race": {
+  "title": "Bloons wiki: Race Event",
+  "url": "https://www.bloonswiki.com/Race_Event"
+ },
+ "wiki-strategy-race": {
+  "title": "Bloons wiki: Race Event strategy (v47.1)",
+  "url": "https://www.bloonswiki.com/Strategy:Race_Event"
+ },
+ "nk-open-data": {
+  "title": "Ninja Kiwi Open Data API (live events)",
+  "url": "https://data.ninjakiwi.com/"
+ },
+ "wiki-boss-challenge": {
+  "title": "Bloons wiki: Boss Challenge",
+  "url": "https://www.bloonswiki.com/Boss_Challenge"
  }
 }

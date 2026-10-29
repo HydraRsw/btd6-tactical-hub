@@ -20,6 +20,8 @@ import { buildPlanner } from './components/planner.js';
 import { degreeCalculator } from './components/degree-calc.js';
 import { heroPage } from './components/hero-page.js';
 import { compareUnits } from './components/compare.js';
+import { eventsTab } from './components/events.js';
+import { medalTracker, favouritesBar, patchPage } from './components/tracker.js';
 
 document.addEventListener('alpine:init', () => {
   const Alpine = window.Alpine;
@@ -43,6 +45,10 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('degreeCalculator', degreeCalculator);
   Alpine.data('heroPage', heroPage);
   Alpine.data('compareUnits', compareUnits);
+  Alpine.data('eventsTab', eventsTab);
+  Alpine.data('medalTracker', medalTracker);
+  Alpine.data('favouritesBar', favouritesBar);
+  Alpine.data('patchPage', patchPage);
 
   const hub = Alpine.store('hub');
   hub.openTabFromUrl();
@@ -52,7 +58,7 @@ document.addEventListener('alpine:init', () => {
   document.addEventListener('keydown', (event) => handleShortcut(event, hub));
 });
 
-/** "/" focuses search, 1–8 switch tabs (ignored while typing in a field). */
+/** "/" focuses search, 1–9 switch tabs (ignored while typing in a field). */
 function handleShortcut(event, hub) {
   const typing = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName);
   if (typing || event.ctrlKey || event.metaKey || event.altKey) return;
@@ -60,7 +66,7 @@ function handleShortcut(event, hub) {
   if (event.key === '/') {
     event.preventDefault();
     document.getElementById('site-search-input')?.focus();
-  } else if (/^[1-8]$/.test(event.key)) {
+  } else if (/^[1-9]$/.test(event.key)) {
     hub.openTab(TABS[Number(event.key) - 1]);
   }
 }

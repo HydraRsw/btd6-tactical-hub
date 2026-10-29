@@ -1744,7 +1744,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-sniper",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-v57-1"
   ],
   "upgrades": [
    [
@@ -1777,7 +1778,8 @@
    "boss": [
     "Elite Defender (2-0-5) can solo Lych from far away and has camo for Phayze.",
     "Cripple MOAB (5-0-2) is a key blimp debuff.",
-    "v57 added the S.P.I.D.E.R. Monkey Paragon."
+    "v57 added the S.P.I.D.E.R. Monkey Paragon.",
+    "v57.1 restored Elite Defender's 4× life-loss speed boost."
    ],
    "normal": [
     "Dart + Sniper is a standard opener.",
@@ -1917,7 +1919,7 @@
      0
     ]
    ],
-   "leadText": "Full Metal Jacket (1-x-x).",
+   "leadText": "Full Metal Jacket (1-x-x). Since v57.1, Supply Drop (x-4-x) bullets are Sharp again, so pair it with Full Metal Jacket (1-4-x) for Lead.",
    "purple": "Pops Purple."
   },
   "knowledge": [

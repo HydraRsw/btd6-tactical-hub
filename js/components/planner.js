@@ -65,6 +65,9 @@ export function buildPlanner() {
     newRound: 6,
     copied: false,
     templateId: '',
+    savedId: null,       // which saved build this one came from, if any
+    saveName: '',
+    showLibrary: false,
 
     init() {
       const shared = buildFromUrl();
@@ -74,6 +77,9 @@ export function buildPlanner() {
       }
       this.newRound = this.mode.start;
       this.$watch('build', (value) => remember('plannerBuild', value), { deep: true });
+      // a saved build opened from the favourites bar or the library
+      this.$watch('$store.hub.pendingBuild', (saved) => saved && this.loadSaved(saved));
+      if (this.$store.hub.pendingBuild) this.loadSaved(this.$store.hub.pendingBuild);
     },
 
     // --- Settings ---------------------------------------------------------
@@ -150,6 +156,8 @@ export function buildPlanner() {
 
     reset() {
       this.build = { ...EMPTY_BUILD, towers: [] };
+      this.savedId = null;
+      this.saveName = '';
     },
 
     // --- Templates --------------------------------------------------------
@@ -171,6 +179,43 @@ export function buildPlanner() {
         mode: t.mode,
         towers: t.entries.map((entry) => ({ key: nextKey++, tower: entry.tower, steps: entry.steps.map((s) => ({ ...s })) })),
       };
+    },
+
+    // --- Saved builds (several, by name) ----------------------------------
+    get saved() {
+      return this.$store.hub.savedBuilds;
+    },
+
+    get currentSaved() {
+      return this.saved.find((b) => b.id === this.savedId) ?? null;
+    },
+
+    loadSaved(saved) {
+      this.build = upgradeBuild(saved.build);
+      this.savedId = saved.id;
+      this.saveName = saved.name;
+      this.$store.hub.pendingBuild = null;
+    },
+
+    /** Save over the build this came from, or as a new one. */
+    saveBuild(asNew = false) {
+      const name = this.saveName || this.currentSaved?.name || `Build ${this.saved.length + 1}`;
+      this.savedId = this.$store.hub.saveBuild(name, this.build, asNew ? null : this.savedId);
+      this.saveName = name;
+    },
+
+    duplicateSaved(saved) {
+      this.$store.hub.saveBuild(`${saved.name} (copy)`, saved.build);
+    },
+
+    renameSaved(saved, name) {
+      this.$store.hub.renameBuild(saved.id, name);
+      if (saved.id === this.savedId) this.saveName = name;
+    },
+
+    deleteSaved(saved) {
+      this.$store.hub.deleteBuild(saved.id);
+      if (saved.id === this.savedId) this.savedId = null;
     },
 
     async share() {
