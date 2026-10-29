@@ -2,7 +2,7 @@
 //
 //   <span x-icon="search"></span>          a Lucide icon by name
 //   <span x-icon="strategy.icon"></span>   …or from data (anything that isn't a plain icon name is evaluated)
-//   <div x-avatar="tower"></div>           tower / hero badge (add .small or .large)
+//   <div x-avatar="tower"></div>           tower / hero badge (add .small, .large or .huge)
 //   <div x-pips="route.path"></div>        3 × 5 upgrade grid for "2-0-5"
 //   <p x-sources="tower.sources"></p>      "Sources: Bloons wiki: …" links (ids from data/sources.json)
 
@@ -115,7 +115,7 @@ export function registerDirectives(Alpine) {
 
   Alpine.directive('avatar', (el, { expression, modifiers }, { evaluateLater, effect }) => {
     const readUnit = evaluateLater(expression);
-    const size = modifiers.includes('small') ? 'small' : modifiers.includes('large') ? 'large' : '';
+    const size = ['small', 'large', 'huge'].find((name) => modifiers.includes(name)) ?? '';
     effect(() =>
       readUnit((unit) => {
         if (!unit) return;

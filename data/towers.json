@@ -39,7 +39,54 @@
       "wiki-dart",
       "wiki-dreadbloon",
       "steam-v57"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Sharp Shots",
+        "Razor Sharp Shots",
+        "Spike-o-pult",
+        "Juggernaut",
+        "Ultra-Juggernaut"
+      ],
+      [
+        "Quick Shots",
+        "Very Quick Shots",
+        "Triple Shot",
+        "Super Monkey Fan Club",
+        "Plasma Monkey Fan Club"
+      ],
+      [
+        "Long Range Darts",
+        "Enhanced Eyesight",
+        "Crossbow",
+        "Sharp Shooter",
+        "Crossbow Master"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Cheapest Primary and a standard CHIMPS opener (Dart + Ninja, Dart + Desperado or Dart + Sub starts).",
+        "Crossbow Master needs camo from its own bottom path; place it along straight track sections."
+      ],
+      "boss": [
+        "Apex Plasma Master is the cheapest Paragon and a good option against tier 3–4 bosses."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "ninja",
+        "note": "Ninja + Dart start handles about half of Advanced maps."
+      },
+      {
+        "unit": "desperado",
+        "note": "Two-tower CHIMPS start."
+      },
+      {
+        "unit": "alch",
+        "note": "Brews multiply a Crossbow Master's pierce."
+      }
+    ],
+    "paragon": "apex-plasma-master"
   },
   {
     "id": "boomer",
@@ -82,7 +129,52 @@
       "wiki-chimps",
       "wiki-boomerang",
       "wiki-dreadbloon"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Improved Rangs",
+        "Glaives",
+        "Glaive Ricochet",
+        "M.O.A.R Glaives",
+        "Glaive Lord"
+      ],
+      [
+        "Faster Throwing",
+        "Faster Rangs",
+        "Bionic Boomerang",
+        "Turbo Charge",
+        "Perma Charge"
+      ],
+      [
+        "Long Range Rangs",
+        "Red Hot Rangs",
+        "Kylie Boomerang",
+        "MOAB Press",
+        "MOAB Domination"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Early CHIMPS: 0-2-2.",
+        "Glaive Lord (5-0-2) is a win condition; switch to 5-2-0 when you need lead popping.",
+        "MOAB Press (2-0-4) knocks blimps back and helps on R98/R99."
+      ],
+      "boss": [
+        "Early boss events: 1-0-2.",
+        "Glaive Dominus is a Lych-capable Paragon at higher degrees."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "alch",
+        "note": "Berserker Brew on many-projectile towers."
+      },
+      {
+        "unit": "village",
+        "note": "Jungle Drums attack speed."
+      }
+    ],
+    "paragon": "glaive-dominus"
   },
   {
     "id": "bomb",
@@ -133,7 +225,47 @@
       "wiki-bloonarius",
       "wiki-blastapopoulos",
       "steam-v57"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Bigger Bombs",
+        "Heavy Bombs",
+        "Really Big Bombs",
+        "Bloon Impact",
+        "Bloon Crush"
+      ],
+      [
+        "Faster Reload",
+        "Missile Launcher",
+        "MOAB Mauler",
+        "MOAB Assassin",
+        "MOAB Eliminator"
+      ],
+      [
+        "Extra Range",
+        "Frag Bombs",
+        "Cluster Bombs",
+        "Recursive Cluster",
+        "Bomb Blitz"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "MOAB Mauler (2-3-0) is a standard R40 answer.",
+        "Bomb Blitz was a listed win condition, but v57 limits its passive to once per round."
+      ],
+      "boss": [
+        "MOAB Eliminator against Lych: attack normally, save the ability until a skull.",
+        "Sticky Bomb damage gets burned off by Blastapopoulos."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "striker",
+        "note": "Buffs explosive towers and black-bloon popping."
+      }
+    ],
+    "paragon": "bomb-bunker"
   },
   {
     "id": "tack",
@@ -175,8 +307,54 @@
       "wiki-tack",
       "wiki-bloonarius",
       "wiki-lych",
-      "wiki-dreadbloon"
-    ]
+      "wiki-dreadbloon",
+      "wiki-crucible"
+    ],
+    "upgrades": [
+      [
+        "Faster Shooting",
+        "Even Faster Shooting",
+        "Hot Shots",
+        "Ring of Fire",
+        "Inferno Ring"
+      ],
+      [
+        "Long Range Tacks",
+        "Super Range Tacks",
+        "Blade Shooter",
+        "Blade Maelstrom",
+        "Super Maelstrom"
+      ],
+      [
+        "More Tacks",
+        "Even More Tacks",
+        "Tack Sprayer",
+        "Overdrive",
+        "The Tack Zone"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Short range: place it on corners and tight curves.",
+        "Bottom path wants the top-path attack speed crosspath (2-0-4 / 2-0-5)."
+      ],
+      "boss": [
+        "Overdrive and The Tack Zone appear in Bloonarius, Lych and Dreadbloon strategies.",
+        "Ring of Fire (4-2-0) handles Bloonarius spawns.",
+        "Crucible of Steel and Flame is a cheap Paragon that does well against Diamondback."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "alch",
+        "note": "Berserker Brew's flat damage and pierce suit its many tacks."
+      },
+      {
+        "unit": "ice",
+        "note": "Embrittlement adds damage to every tack."
+      }
+    ],
+    "paragon": "crucible"
   },
   {
     "id": "ice",
@@ -221,7 +399,51 @@
       "wiki-phayze",
       "wiki-blastapopoulos",
       "steam-v57"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Permafrost",
+        "Cold Snap",
+        "Ice Shards",
+        "Embrittlement",
+        "Super Brittle"
+      ],
+      [
+        "Enhanced Freeze",
+        "Deep Freeze",
+        "Arctic Wind",
+        "Snowstorm",
+        "Absolute Zero"
+      ],
+      [
+        "Larger Radius",
+        "Re-Freeze",
+        "Cryo Cannon",
+        "Icicles",
+        "Icicle Impale"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Embrittlement lets your other towers pop leads and adds damage to frozen bloons.",
+        "0-2-5 with camo from a 0-2-0 Village can handle DDTs alone."
+      ],
+      "boss": [
+        "Super Brittle is a staple boss debuff (Lych, Phayze).",
+        "Ice attacks cool Blastapopoulos, and Ice Monkeys ignore its overheat."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "silas",
+        "note": "Range, Ice Fragments and tier-5 discounts for Ice Monkeys."
+      },
+      {
+        "unit": "tack",
+        "note": "Many-projectile towers gain the most from Embrittlement."
+      }
+    ],
+    "paragon": "herald-of-everfrost"
   },
   {
     "id": "glue",
@@ -265,6 +487,53 @@
       "wiki-glue",
       "wiki-lych",
       "steam-v57"
+    ],
+    "upgrades": [
+      [
+        "Glue Soak",
+        "Corrosive Glue",
+        "Bloon Dissolver",
+        "Bloon Liquefier",
+        "The Bloon Solver"
+      ],
+      [
+        "Bigger Globs",
+        "Glue Splatter",
+        "Glue Hose",
+        "Glue Strike",
+        "Glue Storm"
+      ],
+      [
+        "Stickier Glue",
+        "Stronger Glue",
+        "MOAB Glue",
+        "Relentless Glue",
+        "Super Glue"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "The Bloon Solver (5-2-0) is a win condition against late Ceramics and R98's insides.",
+        "Glue Strike (2-4-0 mid, 1-4-0 late) lets other towers hurt DDTs."
+      ],
+      "boss": [
+        "Super Glue and Glue Storm are support picks against Lych.",
+        "Slows hold back a bloon's children too, so cheap glue stalls well on spaced rounds."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "sauda",
+        "note": "Relentless Glue triggers her stun and slow bonus."
+      },
+      {
+        "unit": "heli",
+        "note": "Glue Storm is part of the Comanche Commander win condition."
+      },
+      {
+        "unit": "spike",
+        "note": "Carpet of Spikes pairs with The Bloon Solver."
+      }
     ]
   },
   {
@@ -308,6 +577,48 @@
       "wiki-desperado-release",
       "wiki-bloonarius",
       "wiki-lych"
+    ],
+    "upgrades": [
+      [
+        "Quickdraw",
+        "Standoff",
+        "Big Iron",
+        "Twin Sixes",
+        "The Blazing Sun"
+      ],
+      [
+        "Eagle Eye",
+        "Bullseye",
+        "Deadeye",
+        "Bounty Hunter",
+        "Golden Justice"
+      ],
+      [
+        "Wanderer",
+        "Nomad",
+        "Enforcer",
+        "Avenger",
+        "The Desert Phantom"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Two Desperados, or Dart + Desperado, are viable CHIMPS starts thanks to range and targeting.",
+        "Golden Justice and the bottom path need cleanup support."
+      ],
+      "boss": [
+        "The Blazing Sun is a cheap tier 1 boss option; Bounty Hunter marking boosts damage on blimps."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "sub",
+        "note": "A base Desperado spots for Advanced Intel Subs."
+      },
+      {
+        "unit": "dart",
+        "note": "Two-tower CHIMPS start."
+      }
     ]
   },
   {
@@ -354,7 +665,52 @@
       "wiki-bloonarius",
       "steam-v57",
       "ninjakiwi-x-v57"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Full Metal Jacket",
+        "Large Calibre",
+        "Deadly Precision",
+        "Maim MOAB",
+        "Cripple MOAB"
+      ],
+      [
+        "Night Vision Goggles",
+        "Shrapnel Shot",
+        "Bouncing Bullet",
+        "Supply Drop",
+        "Elite Sniper"
+      ],
+      [
+        "Fast Firing",
+        "Even Faster Firing",
+        "Semi-Automatic",
+        "Full Auto Rifle",
+        "Elite Defender"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Global range: anywhere on the map works.",
+        "Maim MOAB stuns blimps; the Cheaper Maiming MK cuts its cost by $1,000."
+      ],
+      "boss": [
+        "Elite Defender (2-0-5) can solo Lych from far away and has camo for Phayze.",
+        "Cripple MOAB (5-0-2) is a key blimp debuff.",
+        "v57 added the S.P.I.D.E.R. Monkey Paragon."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "ninja",
+        "note": "Cripple MOAB amplifies Ninja damage on blimps."
+      },
+      {
+        "unit": "alch",
+        "note": "Permanent Brew suits Full Auto Rifles."
+      }
+    ],
+    "paragon": "spider-monkey"
   },
   {
     "id": "sub",
@@ -404,7 +760,55 @@
       "wiki-lych",
       "wiki-phayze",
       "wiki-bloonarius"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Longer Range",
+        "Advanced Intel",
+        "Submerge and Support",
+        "Bloontonium Reactor",
+        "Energizer"
+      ],
+      [
+        "Barbed Darts",
+        "Heat-tipped Darts",
+        "Ballistic Missile",
+        "First Strike Capability",
+        "Pre-emptive Strike"
+      ],
+      [
+        "Twin Guns",
+        "Airburst Darts",
+        "Triple Guns",
+        "Armor Piercing Darts",
+        "Sub Commander"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Standard early build 2-0-2; add Submerge and Support (3-0-2) for decamo.",
+        "Sub Commander struggles late against Super Ceramics; Energizer is the late pick."
+      ],
+      "boss": [
+        "Sub Commander (2-0-5) works against Dreadbloon, Lych and Phayze.",
+        "First Strike can skip a damaged BAD's insides."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "brickell",
+        "note": "Naval buffs; Energizer and Sub Commander pairings."
+      },
+      {
+        "unit": "psi",
+        "note": "Energizer helps Psi level."
+      },
+      {
+        "unit": "silas",
+        "note": "Pre-emptive Strike covers DDTs and the BAD with Silas."
+      }
+    ],
+    "paragon": "nautic-siege-core"
   },
   {
     "id": "bucc",
@@ -455,7 +859,52 @@
       "wiki-merchantman",
       "wiki-trade-empire",
       "wiki-dreadbloon"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Faster Shooting",
+        "Double Shot",
+        "Destroyer",
+        "Aircraft Carrier",
+        "Carrier Flagship"
+      ],
+      [
+        "Grape Shot",
+        "Hot Shot",
+        "Cannon Ship",
+        "Monkey Pirates",
+        "Pirate Lord"
+      ],
+      [
+        "Long Range",
+        "Crow's Nest",
+        "Merchantman",
+        "Favored Trades",
+        "Trade Empire"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Water only. Carrier Flagship and Pirate Lord are win conditions with Brickell.",
+        "Merchantman and its upgrades earn nothing in CHIMPS."
+      ],
+      "boss": [
+        "Merchantmen + Central Markets + Trade Empire replace Banana Farms on water maps.",
+        "Destroyer spam with Brickell works against Dreadbloon and Phayze.",
+        "Navarch of the Seas is a strong Paragon (save about $980,000 for a 40-Merchantman setup)."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "brickell",
+        "note": "Buffs every water tower."
+      },
+      {
+        "unit": "farm",
+        "note": "Central Markets add +10% Merchantman income each."
+      }
+    ],
+    "paragon": "navarch"
   },
   {
     "id": "ace",
@@ -497,7 +946,51 @@
       "wiki-chimps",
       "wiki-ace",
       "wiki-dreadbloon"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Rapid Fire",
+        "Lots More Darts",
+        "Fighter Plane",
+        "Operation: Dart Storm",
+        "Sky Shredder"
+      ],
+      [
+        "Exploding Pineapple",
+        "Spy Plane",
+        "Bomber Ace",
+        "Ground Zero",
+        "Tsar Bomba"
+      ],
+      [
+        "Sharper Darts",
+        "Centered Path",
+        "Neva-Miss Targeting",
+        "Spectre",
+        "Flying Fortress"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Sky Shredder (5-2-0) is a win condition; it benefits from Stronger Stimulant.",
+        "Ignores blockers, so it works on any map."
+      ],
+      "boss": [
+        "Flying Fortress (2-0-5) is strong late boss damage on any map format.",
+        "Goliath Doomship is one of the highest-damage Paragons."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "alch",
+        "note": "Stronger Stimulant boosts Sky Shredder."
+      },
+      {
+        "unit": "rosalia",
+        "note": "Discounts Aces in her range."
+      }
+    ],
+    "paragon": "goliath-doomship"
   },
   {
     "id": "heli",
@@ -539,6 +1032,53 @@
       "wiki-chimps",
       "wiki-heli",
       "wiki-lych"
+    ],
+    "upgrades": [
+      [
+        "Quad Darts",
+        "Pursuit",
+        "Razor Rotors",
+        "Apache Dartship",
+        "Apache Prime"
+      ],
+      [
+        "Bigger Jets",
+        "IFR",
+        "Downdraft",
+        "Support Chinook",
+        "Special Poperations"
+      ],
+      [
+        "Faster Darts",
+        "Faster Firing",
+        "MOAB Shove",
+        "Comanche Defense",
+        "Comanche Commander"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Comanche Commander (2-0-5) is a win condition with Geraldo and Glue Storm.",
+        "0-1-3 MOAB Shove is one of the best support builds."
+      ],
+      "boss": [
+        "Special Poperations helps keep lives up against Lych.",
+        "Support Chinook can carry towers out of Vortex's stun range."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "geraldo",
+        "note": "Part of the Comanche Commander win condition."
+      },
+      {
+        "unit": "glue",
+        "note": "Glue Storm completes the same combo."
+      },
+      {
+        "unit": "rosalia",
+        "note": "Discounts Heli Pilots in her range."
+      }
     ]
   },
   {
@@ -580,6 +1120,49 @@
     "sources": [
       "wiki-chimps",
       "wiki-mortar"
+    ],
+    "upgrades": [
+      [
+        "Bigger Blast",
+        "Bloon Buster",
+        "Shell Shock",
+        "The Big One",
+        "The Biggest One"
+      ],
+      [
+        "Faster Reload",
+        "Rapid Reload",
+        "Heavy Shells",
+        "Artillery Battery",
+        "Pop and Awe"
+      ],
+      [
+        "Increased Accuracy",
+        "Burny Stuff",
+        "Signal Flare",
+        "Shattering Shells",
+        "Blooncineration"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Pop and Awe is a win condition with Striker, stuns and Perma-Spike.",
+        "Blooncineration is a late CHIMPS carry; Shattering Shells helps on Fortified rounds.",
+        "Reposition the reticle ahead of bloons, ideally on bends."
+      ],
+      "boss": [
+        "Top-path upgrades have black-bloon weaknesses: bring Striker's buff."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "striker",
+        "note": "Favoured hero: attack speed and black popping."
+      },
+      {
+        "unit": "spike",
+        "note": "Perma-Spike covers Pop and Awe's leaks."
+      }
     ]
   },
   {
@@ -630,6 +1213,44 @@
       "wiki-lych",
       "wiki-dreadbloon",
       "wiki-bloonarius"
+    ],
+    "upgrades": [
+      [
+        "Focused Firing",
+        "Laser Shock",
+        "Laser Cannon",
+        "Plasma Accelerator",
+        "Ray of Doom"
+      ],
+      [
+        "Advanced Targeting",
+        "Faster Barrel Spin",
+        "Hydra Rocket Pods",
+        "Rocket Storm",
+        "M.A.D"
+      ],
+      [
+        "Faster Swivel",
+        "Powerful Darts",
+        "Buckshot",
+        "Bloon Area Denial System",
+        "Bloon Exclusion Zone"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Bloon Exclusion Zone (2-0-5) is a win condition; BADS (2-0-4) is the save-up step.",
+        "Infinite range and aimable: strongest on open maps."
+      ],
+      "boss": [
+        "Ray of Doom and Plasma Accelerator for boss damage; M.A.D against Lych and Bloonarius."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "alch",
+        "note": "Brews on Hydra Rocket Pods."
+      }
     ]
   },
   {
@@ -671,8 +1292,54 @@
     "sources": [
       "wiki-archmage",
       "wiki-chimps",
-      "wiki-dreadbloon"
-    ]
+      "wiki-dreadbloon",
+      "wiki-wizard",
+      "wiki-magus"
+    ],
+    "upgrades": [
+      [
+        "Guided Magic",
+        "Arcane Blast",
+        "Arcane Mastery",
+        "Arcane Spike",
+        "Archmage"
+      ],
+      [
+        "Fireball",
+        "Wall of Fire",
+        "Dragon's Breath",
+        "Summon Phoenix",
+        "Wizard Lord Phoenix"
+      ],
+      [
+        "Intense Magic",
+        "Monkey Sense",
+        "Shimmer",
+        "Necromancer: Unpopped Army",
+        "Prince of Darkness"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Archmage (5-2-0) does well on many Expert maps and excels on DDT rounds, but needs camo support and struggles with Super Ceramics.",
+        "Wall of Fire (1-2-0) is cheap CHIMPS support."
+      ],
+      "boss": [
+        "Wizard Lord Phoenix and Archmage against Dreadbloon.",
+        "Magus Perfectus is one of the highest-damage Paragons (weak against Blastapopoulos)."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "glue",
+        "note": "The Bloon Solver cleans up behind an Archmage."
+      },
+      {
+        "unit": "sauda",
+        "note": "Dragon's Breath triggers her damage-over-time bonus."
+      }
+    ],
+    "paragon": "magus-perfectus"
   },
   {
     "id": "super",
@@ -722,6 +1389,48 @@
       "wiki-bloonarius",
       "wiki-boss-events",
       "wiki-alch-strategy"
+    ],
+    "upgrades": [
+      [
+        "Laser Blasts",
+        "Plasma Blasts",
+        "Sun Avatar",
+        "Sun Temple",
+        "True Sun God"
+      ],
+      [
+        "Super Range",
+        "Epic Range",
+        "Robo Monkey",
+        "Tech Terror",
+        "The Anti-Bloon"
+      ],
+      [
+        "Knockback",
+        "Ultravision",
+        "Dark Knight",
+        "Dark Champion",
+        "Legend of the Night"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Not listed as a CHIMPS win condition on the wiki; needs Ultravision or support for camo."
+      ],
+      "boss": [
+        "Sun Avatar (3-2-0), Sun Temple (4-2-0) and Legend of the Night (2-0-5) appear in boss strategies.",
+        "Sun Temple needs $45,000+ of support sacrifices."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "alch",
+        "note": "Permanent Brew is the only way to fully buff a Sun Avatar."
+      },
+      {
+        "unit": "sub",
+        "note": "Energizer supports Super Monkeys."
+      }
     ]
   },
   {
@@ -766,7 +1475,55 @@
       "wiki-chimps",
       "wiki-dreadbloon",
       "wiki-bloonarius"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Ninja Discipline",
+        "Sharp Shurikens",
+        "Double Shot",
+        "Bloonjitsu",
+        "Grandmaster Ninja"
+      ],
+      [
+        "Distraction",
+        "Counter-Espionage",
+        "Shinobi Tactics",
+        "Bloon Sabotage",
+        "Grand Saboteur"
+      ],
+      [
+        "Seeking Shuriken",
+        "Caltrops",
+        "Flash Bomb",
+        "Sticky Bomb",
+        "Master Bomber"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Native camo detection; Shinobi Tactics (0-3-0) stacks buffs on Ninja-heavy builds.",
+        "Bloon Sabotage (0-4-0) is the R99 pick and strongest against DDTs."
+      ],
+      "boss": [
+        "Grandmaster Ninja (5-0-2) against Dreadbloon; top and middle Ninjas shine against bosses.",
+        "Ascended Shadow is a strong Paragon against Phayze and Vortex."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "alch",
+        "note": "Permanent Brew boosts damage and pierce."
+      },
+      {
+        "unit": "sniper",
+        "note": "Cripple MOAB amplifies blimp damage."
+      },
+      {
+        "unit": "dart",
+        "note": "Dart + Ninja start."
+      }
+    ],
+    "paragon": "ascended-shadow"
   },
   {
     "id": "alch",
@@ -809,6 +1566,54 @@
       "wiki-chimps",
       "wiki-lych",
       "steam-v57"
+    ],
+    "upgrades": [
+      [
+        "Larger Potions",
+        "Acidic Mixture Dip",
+        "Berserker Brew",
+        "Stronger Stimulant",
+        "Permanent Brew"
+      ],
+      [
+        "Stronger Acid",
+        "Perishing Potions",
+        "Unstable Concoction",
+        "Transforming Tonic",
+        "Total Transformation"
+      ],
+      [
+        "Faster Throwing",
+        "Acid Pool",
+        "Lead to Gold",
+        "Rubber to Gold",
+        "Bloon Master Alchemist"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Stronger Stimulant at 4-2-0; Berserker Brew at 3-0-1 for slow-attacking towers.",
+        "Lower tiers are usually preferred in CHIMPS because Permanent Brew is expensive.",
+        "Avoid Rubber to Gold and Bloon Master Alchemist in CHIMPS."
+      ],
+      "boss": [
+        "Rubber to Gold is boss-event income (v57: pays out instantly).",
+        "Never rely on brews against Lych: it steals them."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "ninja",
+        "note": "Bloonjitsu gains the most from Berserker Brew."
+      },
+      {
+        "unit": "tack",
+        "note": "Overdrive gains the most from Berserker Brew."
+      },
+      {
+        "unit": "super",
+        "note": "Permanent Brew keeps Sun Avatar fully buffed."
+      }
     ]
   },
   {
@@ -851,7 +1656,50 @@
       "wiki-chimps",
       "wiki-druid",
       "wiki-lych"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Hard Thorns",
+        "Heart of Thunder",
+        "Druid of the Storm",
+        "Ball Lightning",
+        "Monarch of Storms"
+      ],
+      [
+        "Thorn Swarm",
+        "Heart of Oak",
+        "Druid of the Jungle",
+        "Jungle's Bounty",
+        "Spirit of the Forest"
+      ],
+      [
+        "Druidic Reach",
+        "Heart of Vengeance",
+        "Druid of Wrath",
+        "Poplust",
+        "Avatar of Wrath"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Avatar of Wrath (0-1-5) with five Poplust druids and Stronger Stimulant is a win condition."
+      ],
+      "boss": [
+        "Jungle's Bounty and Spirit of the Forest help with lives against Lych.",
+        "Avatar of Wrath setups are too compact for Lych."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "alch",
+        "note": "Stronger Stimulant and Permanent Brew on Poplust druids."
+      },
+      {
+        "unit": "obyn",
+        "note": "Buffs Magic Monkeys."
+      }
+    ],
+    "paragon": "root-of-all-nature"
   },
   {
     "id": "mermonkey",
@@ -893,6 +1741,48 @@
       "wiki-mermonkey",
       "wiki-chimps",
       "wiki-silas"
+    ],
+    "upgrades": [
+      [
+        "Trident Efficiency",
+        "Trident Swiftness",
+        "Abyss Dweller",
+        "Abyssal Warrior",
+        "Lord of the Abyss"
+      ],
+      [
+        "Sharper Prongs",
+        "Tidal Chill",
+        "Riptide Champion",
+        "Arctic Knight",
+        "Popseidon"
+      ],
+      [
+        "Echosense Precision",
+        "Echosense Network",
+        "Alluring Melody",
+        "Symphonic Resonance",
+        "The Final Harmonic"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Abyss Dweller (3-0-1) is a support pick: its creature adds pierce to nearby towers.",
+        "35% more range in water; stack Echosense Network for more."
+      ],
+      "boss": [
+        "Popseidon's freeze lasts longer with Silas."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "silas",
+        "note": "Lengthens Popseidon's freeze."
+      },
+      {
+        "unit": "obyn",
+        "note": "The bottom path supports heroes and Magic Monkeys."
+      }
     ]
   },
   {
@@ -935,6 +1825,43 @@
       "wiki-skywarden-release",
       "wiki-farwind-seer",
       "steam-v57"
+    ],
+    "upgrades": [
+      [
+        "Aerial Attunement",
+        "Zephyr Sense",
+        "Wind Weaver",
+        "Gale Sage",
+        "Farwind Seer"
+      ],
+      [
+        "Storm's Pulse",
+        "Thundering Arc",
+        "Galvanic Conduit",
+        "Thunder's Decree",
+        "Stormwrath Archon"
+      ],
+      [
+        "Shatterpoint",
+        null,
+        "Coldchain",
+        "Frozen Verdict",
+        "Winter's Mercy"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Too new for a CHIMPS consensus; Zephyr Sense (2-x-x) gives camo."
+      ],
+      "boss": [
+        "Winter's Mercy path cools Blastapopoulos (v57 increased the heat reduction)."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "ice",
+        "note": "Another heat-reducing option against Blastapopoulos."
+      }
     ]
   },
   {
@@ -976,7 +1903,59 @@
       "wiki-boss-events",
       "wiki-brf",
       "wiki-marketplace",
-      "wiki-overclock"
+      "wiki-overclock",
+      "wiki-farm"
+    ],
+    "upgrades": [
+      [
+        "Increased Production",
+        "Greater Production",
+        "Banana Plantation",
+        "Banana Research Facility",
+        "Banana Central"
+      ],
+      [
+        "Long Life Bananas",
+        "Valuable Bananas",
+        "Monkey Bank",
+        "IMF Loan",
+        "Monkey-Nomics"
+      ],
+      [
+        "EZ Collect",
+        "Banana Salvage",
+        "Marketplace",
+        "Central Market",
+        "Monkey Wall Street"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Earns nothing in CHIMPS."
+      ],
+      "boss": [
+        "Rounds 1–20: two 2-0-0 farms, then Marketplaces or Bank → IMF Loan → Monkeyopolis.",
+        "Late: BRF spam with Overclock (5 → 9 crates), Banana Central for +25%.",
+        "Sell every farm at the end of round 119."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "engi",
+        "note": "Overclock nearly doubles BRF crates."
+      },
+      {
+        "unit": "village",
+        "note": "Monkeyopolis absorbs farms for crates."
+      },
+      {
+        "unit": "ben",
+        "note": "Early cash snowballs your farms."
+      },
+      {
+        "unit": "geraldo",
+        "note": "Rare Quincy Action Figure and Fertilizer."
+      }
     ]
   },
   {
@@ -1021,7 +2000,56 @@
       "wiki-lych",
       "wiki-dreadbloon",
       "steam-v57"
-    ]
+    ],
+    "upgrades": [
+      [
+        "Bigger Stacks",
+        "White Hot Spikes",
+        "Spiked Balls",
+        "Spiked Mines",
+        "Super Mines"
+      ],
+      [
+        "Faster Production",
+        "Even Faster Production",
+        "MOAB SHREDR",
+        "Spike Storm",
+        "Carpet of Spikes"
+      ],
+      [
+        "Long Reach",
+        "Smart Spikes",
+        "Long Life Spikes",
+        "Deadly Spikes",
+        "Perma-Spike"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Perma-Spike (1-0-5) is a win condition with Jungle Drums and a 3-0-1 Berserker Brew.",
+        "Cheap 0-0-0 / 1-0-0 Spike Factories are common end-of-track support.",
+        "White Hot Spikes (tier 2 top) lets spikes pop leads, including DDTs."
+      ],
+      "boss": [
+        "Spike Storm's ability handles the R100 BAD; Carpet of Spikes is good against bosses.",
+        "Mega Massive Munitions Factory is one of the highest-damage Paragons."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "village",
+        "note": "Jungle Drums is part of the Perma-Spike win condition."
+      },
+      {
+        "unit": "alch",
+        "note": "3-0-1 Berserker Brew completes it."
+      },
+      {
+        "unit": "glue",
+        "note": "Carpet of Spikes pairs with The Bloon Solver."
+      }
+    ],
+    "paragon": "mmmf"
   },
   {
     "id": "village",
@@ -1064,6 +2092,49 @@
       "wiki-lych",
       "wiki-boss-events",
       "steam-v57"
+    ],
+    "upgrades": [
+      [
+        "Bigger Radius",
+        "Jungle Drums",
+        "Primary Training",
+        "Primary Mentoring",
+        "Primary Expertise"
+      ],
+      [
+        "Grow Blocker",
+        "Radar Scanner",
+        "Monkey Intelligence Bureau",
+        "Call to Arms",
+        "Homeland Defense"
+      ],
+      [
+        "Monkey Business",
+        "Monkey Commerce",
+        "Monkey Town",
+        "Monkey City",
+        "Monkeyopolis"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Jungle Drums is always recommended; MIB covers every damage type.",
+        "Monkey City and Monkeyopolis give nothing in CHIMPS."
+      ],
+      "boss": [
+        "Call to Arms and Homeland Defense are stolen by Lych.",
+        "Monkeyopolis and Megaopolis drive late boss economy."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "spike",
+        "note": "Perma-Spike needs Jungle Drums."
+      },
+      {
+        "unit": "farm",
+        "note": "Monkeyopolis absorbs farms."
+      }
     ]
   },
   {
@@ -1113,8 +2184,58 @@
       "wiki-engineer-crosspaths",
       "wiki-boss-events",
       "wiki-lych",
-      "steam-v57"
-    ]
+      "steam-v57",
+      "wiki-master-builder"
+    ],
+    "upgrades": [
+      [
+        "Sentry Gun",
+        "Faster Engineering",
+        "Sprockets",
+        "Sentry Expert",
+        "Sentry Champion"
+      ],
+      [
+        "Larger Service Area",
+        "Deconstruction",
+        "Cleansing Foam",
+        "Overclock",
+        "Ultraboost"
+      ],
+      [
+        "Oversize Nails",
+        "Pin",
+        "Double Gun",
+        "Bloon Trap",
+        "XXXL Trap"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "Cleansing Foam (0-3-0) removes camo and regrow.",
+        "Overclock your main carry (40% shorter attack cooldown)."
+      ],
+      "boss": [
+        "Overclock BRFs during farming; Bloon Trap (0-1-4) and XXXL Trap (0-2-5) for income.",
+        "Don't overclock towers near Lych.",
+        "Master Builder's Power Glove boosts other Paragons."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "farm",
+        "note": "Overclocked BRFs make 9 crates."
+      },
+      {
+        "unit": "beast",
+        "note": "Max-power Orca or T-Rex are prime Overclock targets."
+      },
+      {
+        "unit": "churchill",
+        "note": "Good hero Overclock target."
+      }
+    ],
+    "paragon": "master-builder"
   },
   {
     "id": "beast",
@@ -1164,6 +2285,45 @@
       "wiki-bloonarius",
       "wiki-lych",
       "wiki-dreadbloon"
+    ],
+    "upgrades": [
+      [
+        "Piranha",
+        "Barracuda",
+        "Great White",
+        "Orca",
+        "Megalodon"
+      ],
+      [
+        "Microraptor",
+        "Adasaurus",
+        "Velociraptor",
+        "Tyrannosaurus Rex",
+        "Giganotosaurus"
+      ],
+      [
+        "Gyrfalcon",
+        "Horned Owl",
+        "Golden Eagle",
+        "Giant Condor",
+        "Pouākai"
+      ]
+    ],
+    "tips": {
+      "chimps": [
+        "The wiki rates Beast Handler top tier in CHIMPS.",
+        "Orca (4-0-0) on Strong targeting with Overclock is a win condition.",
+        "Merge beasts of the same path to build Beast Power."
+      ],
+      "boss": [
+        "Megalodon (5-0-0) is a strong single-tower option against Bloonarius, Lych and Dreadbloon."
+      ]
+    },
+    "synergies": [
+      {
+        "unit": "engi",
+        "note": "Overclock a max-power beast."
+      }
     ]
   }
 ]

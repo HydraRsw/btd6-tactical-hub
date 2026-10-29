@@ -214,6 +214,90 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 .route-card__name { font-weight: 800; font-size: 0.9rem; }
 .route-card__note { font-size: 0.78rem; color: var(--text-muted); }
 
+/* --- Collapsible filter panel (button only shows on narrow screens) ---- */
+.filters-toggle {
+  display: none;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-align: left;
+  color: var(--text);
+}
+
+.filters-toggle__text { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.filters-toggle__text .game-title { font-size: 1.1rem; }
+.filters-toggle__summary { font-size: 0.75rem; color: var(--text-muted); }
+.filters-toggle__chevron { transition: transform 0.2s; }
+.filters-toggle__chevron--open { transform: rotate(180deg); }
+
+.tier-row__chevron--page svg { color: var(--gold); }
+
+/* ==========================================================================
+   Tower page
+   ========================================================================== */
+.tower-hero {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.tower-hero__text { display: grid; gap: 8px; }
+.tower-hero__text h2 { font-size: 2.4rem; }
+.tower-hero__text p { color: var(--text-soft); max-width: 70ch; }
+.tower-hero__confidence { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-muted) !important; }
+.tower-hero__tiers { display: flex; gap: 16px; }
+.tower-hero__tiers .tier-badge { width: 56px; height: 56px; font-size: 2rem; }
+.tower-note { font-size: 0.8rem; margin-bottom: 12px; }
+
+.upgrade-tree { display: grid; gap: 8px; overflow-x: auto; }
+.upgrade-tree__row { display: grid; grid-template-columns: 96px repeat(5, minmax(112px, 1fr)); gap: 6px; align-items: stretch; min-width: 680px; }
+.upgrade-tree__path { align-self: center; font-size: 0.72rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); }
+
+.upgrade-cell {
+  display: grid;
+  gap: 2px;
+  padding: 8px 10px;
+  background: rgba(6, 26, 56, 0.55);
+  border: 2px solid rgba(4, 18, 40, 0.8);
+  border-radius: 10px;
+}
+
+.upgrade-cell__tier { font-size: 0.62rem; font-weight: 900; color: var(--text-dim); }
+.upgrade-cell__name { font-size: 0.82rem; font-weight: 800; line-height: 1.2; }
+.upgrade-cell--bought { background: linear-gradient(180deg, rgba(122, 212, 32, 0.35), rgba(63, 154, 16, 0.3)); border-color: #1f5200; }
+.upgrade-cell--bought.upgrade-cell--tier5 { background: linear-gradient(180deg, rgba(255, 240, 138, 0.45), rgba(255, 184, 0, 0.35)); border-color: var(--gold-edge); box-shadow: 0 0 12px rgba(255, 210, 63, 0.5); }
+.upgrade-cell--bought .upgrade-cell__tier { color: #e6ffcf; }
+
+.tip-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.tip-list { display: grid; gap: 8px; font-size: 0.9rem; color: var(--text-soft); }
+.tip-list li { display: flex; gap: 8px; align-items: flex-start; }
+.tip-list li > [x-icon] { margin-top: 3px; color: var(--green); }
+.tip-list li > [x-icon] svg { width: 16px; height: 16px; }
+.tip-list__minus > [x-icon] { color: var(--red) !important; }
+
+.synergy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+.synergy, .mention { display: flex; align-items: center; gap: 12px; padding: 10px 12px; text-align: left; transition: border-color 0.15s; }
+.synergy:hover, .mention:hover { border-color: var(--gold); }
+.synergy__text, .mention__text { display: grid; gap: 2px; min-width: 0; }
+.synergy__name { font-weight: 900; }
+.synergy__note { font-size: 0.8rem; color: var(--text-muted); }
+.mention__text { font-size: 0.85rem; }
+
+.tower-link { color: inherit; text-decoration: none; }
+.tower-link:hover { color: var(--gold); text-decoration: underline; }
+
+/* ==========================================================================
+   Paragons
+   ========================================================================== */
+.paragon-card { display: flex; flex-direction: column; gap: 10px; padding: 16px; }
+.paragon-card > p { font-size: 0.9rem; color: var(--text-soft); }
+.paragon-card__cost { font-family: var(--font-game); -webkit-text-stroke: 1px var(--ink); paint-order: stroke fill; }
+.power-table td { text-align: left !important; }
+.power-table th { text-align: left !important; }
+
 /* ==========================================================================
    Crosspath compendium
    ========================================================================== */
@@ -318,6 +402,10 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 @media (max-width: 1000px) {
   .tier-layout, .farm-layout { grid-template-columns: minmax(0, 1fr); }
   .tier-sidebar { position: static; }
+  .filters-toggle { display: flex; }
+  .tier-sidebar__body { display: none; margin-top: 12px; }
+  .tier-sidebar__body--open { display: grid; }
+  .tip-columns { grid-template-columns: minmax(0, 1fr); }
   .checkpoint { grid-template-columns: 90px minmax(0, 1fr); }
 }
 
@@ -329,4 +417,6 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
   .round-grid, .card-grid { grid-template-columns: minmax(0, 1fr); }
   .checkpoint { grid-template-columns: minmax(0, 1fr); }
   .section-head h2 { font-size: 1.6rem; }
+  .tower-hero { grid-template-columns: minmax(0, 1fr); justify-items: start; }
+  .tower-hero__text h2 { font-size: 1.9rem; }
 }

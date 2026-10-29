@@ -190,5 +190,29 @@
   "wiki-diamondback": {
     "title": "Bloons wiki: Diamondback",
     "url": "https://www.bloonswiki.com/Diamondback"
+  },
+  "wiki-paragon": {
+    "title": "Bloons wiki: Paragon",
+    "url": "https://www.bloonswiki.com/Paragon"
+  },
+  "wiki-crucible": {
+    "title": "Bloons wiki: Crucible of Steel and Flame",
+    "url": "https://www.bloonswiki.com/Crucible_of_Steel_and_Flame"
+  },
+  "wiki-magus": {
+    "title": "Bloons wiki: Magus Perfectus",
+    "url": "https://www.bloonswiki.com/Magus_Perfectus"
+  },
+  "wiki-master-builder": {
+    "title": "Bloons wiki: Master Builder",
+    "url": "https://www.bloonswiki.com/Master_Builder"
+  },
+  "wiki-wizard": {
+    "title": "Bloons wiki: Wizard Monkey",
+    "url": "https://www.bloonswiki.com/Wizard_Monkey_(BTD6)"
+  },
+  "wiki-farm": {
+    "title": "Bloons wiki: Banana Farm",
+    "url": "https://www.bloonswiki.com/Banana_Farm_(BTD6)"
   }
 }

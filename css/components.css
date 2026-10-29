@@ -167,6 +167,9 @@
 .avatar--small .avatar__initials { font-size: 0.85rem; }
 .avatar--large { width: 64px; height: 64px; }
 .avatar--large svg { width: 32px; height: 32px; }
+.avatar--huge { width: 112px; height: 112px; border-radius: 22px; border-width: 3px; }
+.avatar--huge svg { width: 56px; height: 56px; }
+.avatar--huge .avatar__initials { font-size: 2rem; }
 .avatar--s-tier { outline: 3px solid var(--gold); outline-offset: 1px; }
 
 .avatar[data-category="Primary"]  { background: linear-gradient(160deg, #7fd0ff, #1f86e0); }
