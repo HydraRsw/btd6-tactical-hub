@@ -129,8 +129,10 @@
             <div class="panel">
               <h3 class="game-title game-title--small sidebar-heading">Game Mode</h3>
               <div class="mode-switch">
-                <button class="button button--small" :class="mode === 'chimps' ? 'button--gold' : 'button--quiet'" @click="setMode('chimps')">CHIMPS</button>
-                <button class="button button--small" :class="mode === 'boss' ? 'button--gold' : 'button--quiet'" @click="setMode('boss')">Boss Events</button>
+                <template x-for="m in MODES" :key="m.id">
+                  <button class="button button--small" :class="mode === m.id ? 'button--gold' : 'button--quiet'"
+                          :aria-pressed="mode === m.id" :title="m.label" @click="$store.hub.setMode(m.id)" x-text="m.short"></button>
+                </template>
               </div>
             </div>
 
@@ -181,7 +183,7 @@
             <p class="note"><span x-icon="info"></span><span x-text="modeNote"></span></p>
 
             <div class="list-columns">
-              <span>Tier</span><span>Tower · best route</span><span>Upgrades</span><span>CHIMPS</span><span>Bosses</span><span></span>
+              <span>Tier</span><span>Tower · best route</span><span>Upgrades</span><span></span>
             </div>
 
             <template x-for="group in groups" :key="group.tier ?? 'all'">
@@ -218,8 +220,6 @@
                         <template x-if="unit.category === 'Heroes'"><span class="pill pill--hero"><span x-icon="star"></span>Hero</span></template>
                         <template x-if="unit.category !== 'Heroes'"><div x-pips="unit.bestRoute"></div></template>
                       </div>
-                      <div class="tier-score"><span class="tier-badge tier-badge--small" :data-tier="unit.tiers.chimps" x-text="unit.tiers.chimps"></span>CHIMPS</div>
-                      <div class="tier-score"><span class="tier-badge tier-badge--small" :data-tier="unit.tiers.boss" x-text="unit.tiers.boss"></span>BOSS</div>
                       <span class="tier-row__chevron" :class="{ 'tier-row__chevron--page': unit.category !== 'Heroes' }"
                             x-icon="unit.category === 'Heroes' ? 'chevron-down' : 'chevron-right'"></span>
                     </button>
@@ -288,9 +288,9 @@
                       <span x-text="CONFIDENCE_LABELS[tower.confidence]"></span>
                     </div>
                   </div>
-                  <div class="tower-card__tiers">
-                    <span class="tier-badge tier-badge--small" :data-tier="tower.tiers.chimps" x-text="tower.tiers.chimps"></span>CHIMPS
-                    <span class="tier-badge tier-badge--small" :data-tier="tower.tiers.boss" x-text="tower.tiers.boss"></span>BOSS
+                  <div class="tower-card__tiers" :title="`Tier in ${$store.hub.modeLabel}`">
+                    <span class="tier-badge tier-badge--small" :data-tier="$store.hub.tierOf(tower)" x-text="$store.hub.tierOf(tower)"></span>
+                    <span x-text="$store.hub.modeLabel"></span>
                   </div>
                 </header>
 
@@ -348,8 +348,12 @@
                 <p class="tower-hero__confidence"><span class="confidence-dot" :data-confidence="tower.confidence"></span><span x-text="CONFIDENCE_LABELS[tower.confidence]"></span></p>
               </div>
               <div class="tower-hero__tiers">
-                <div class="tier-score"><span class="tier-badge" :data-tier="tower.tiers.chimps" x-text="tower.tiers.chimps"></span>CHIMPS</div>
-                <div class="tier-score"><span class="tier-badge" :data-tier="tower.tiers.boss" x-text="tower.tiers.boss"></span>BOSSES</div>
+                <template x-for="m in MODES" :key="m.id">
+                  <button class="tier-score tier-score--button" :class="{ 'tier-score--active': $store.hub.mode === m.id }"
+                          :title="`${m.label}: tier ${tower.tiers[m.id]}`" @click="$store.hub.setMode(m.id)">
+                    <span class="tier-badge" :data-tier="tower.tiers[m.id]" x-text="tower.tiers[m.id]"></span><span x-text="m.short"></span>
+                  </button>
+                </template>
               </div>
             </header>
 
@@ -401,6 +405,10 @@
               <div class="panel panel--padded">
                 <h3 class="game-title game-title--small panel__title"><span x-icon="crown"></span>In boss events</h3>
                 <ul class="tip-list"><template x-for="tip in tower.tips?.boss ?? []"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template></ul>
+              </div>
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="infinity"></span>Normal &amp; Freeplay</h3>
+                <ul class="tip-list"><template x-for="tip in tower.tips?.normal ?? []"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template></ul>
               </div>
             </div>
 

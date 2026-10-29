@@ -5,7 +5,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "C"
+      "boss": "C",
+      "normal": "B"
     },
     "bestRoute": "Lv 10",
     "roles": [
@@ -24,7 +25,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "C"
+      "boss": "C",
+      "normal": "B"
     },
     "bestRoute": "Lv 10",
     "roles": [
@@ -41,7 +43,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -60,7 +63,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -79,7 +83,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -98,7 +103,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -117,7 +123,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "D",
-      "boss": "S"
+      "boss": "S",
+      "normal": "A"
     },
     "bestRoute": "Lv 10+",
     "roles": [
@@ -125,10 +132,11 @@
       "Buff"
     ],
     "confidence": "verified",
-    "summary": "A primary boss-event hero: early cash snowballs your economy. The CHIMPS page says to avoid him (income is disabled).",
+    "summary": "A primary boss-event hero: early cash snowballs your economy. The CHIMPS page says to avoid him (income is disabled). Normal/Freeplay: Snowballs income in standard games, especially if you reach him early.",
     "sources": [
       "wiki-boss-events",
-      "wiki-chimps"
+      "wiki-chimps",
+      "wiki-standard"
     ]
   },
   {
@@ -137,7 +145,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "C"
+      "boss": "C",
+      "normal": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -155,7 +164,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "S",
-      "boss": "A"
+      "boss": "A",
+      "normal": "S"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -163,10 +173,11 @@
       "MOAB"
     ],
     "confidence": "verified",
-    "summary": "CHIMPS win-condition hero; MOAB Hex is a listed R40 answer. A fallback support hero in boss events.",
+    "summary": "CHIMPS win-condition hero; MOAB Hex is a listed R40 answer. A fallback support hero in boss events. Normal/Freeplay: Her level 20 percentage damage is the Freeplay guide's main answer to late BADs.",
     "sources": [
       "wiki-chimps",
-      "wiki-boss-events"
+      "wiki-boss-events",
+      "wiki-freeplay"
     ]
   },
   {
@@ -175,17 +186,19 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "A"
+      "boss": "A",
+      "normal": "A"
     },
     "bestRoute": "Lv 20",
     "roles": [
       "DPS"
     ],
     "confidence": "approximate",
-    "summary": "A fallback boss-event hero; Blood Sacrifice suits True Sun God setups against Elite tier 5 bosses.",
+    "summary": "A fallback boss-event hero; Blood Sacrifice suits True Sun God setups against Elite tier 5 bosses. Normal/Freeplay: Blood Sacrifice powers the Sun Temple Freeplay build.",
     "sources": [
       "wiki-boss-events",
-      "wiki-bloonarius"
+      "wiki-bloonarius",
+      "wiki-freeplay"
     ]
   },
   {
@@ -194,7 +207,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "Lv 10",
     "roles": [
@@ -210,7 +224,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "Lv 11",
     "roles": [
@@ -230,7 +245,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "A",
+      "normal": "B"
     },
     "bestRoute": "Lv 10",
     "roles": [
@@ -253,7 +269,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "A",
-      "boss": "D"
+      "boss": "D",
+      "normal": "C"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -261,9 +278,10 @@
       "MOAB"
     ],
     "confidence": "verified",
-    "summary": "CHIMPS is his favored mode: instakills MOABs at level 14 and DDTs and ZOMGs at 20. He never targets BADs or Boss Bloons, and pairs poorly with Perma-Spike stalling.",
+    "summary": "CHIMPS is his favored mode: instakills MOABs at level 14 and DDTs and ZOMGs at 20. He never targets BADs or Boss Bloons, and pairs poorly with Perma-Spike stalling. Normal/Freeplay: Can't damage BADs, so the Freeplay guide says to avoid him.",
     "sources": [
-      "wiki-psi"
+      "wiki-psi",
+      "wiki-freeplay"
     ]
   },
   {
@@ -272,7 +290,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "A",
-      "boss": "S"
+      "boss": "S",
+      "normal": "A"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -281,11 +300,13 @@
       "Stall"
     ],
     "confidence": "verified",
-    "summary": "A primary boss-event hero (Rare Quincy Action Figure funds early farms; Blade Trap handles Bloonarius bleed). Support hero in CHIMPS, paired with Comanche Commander.",
+    "summary": "A primary boss-event hero (Rare Quincy Action Figure funds early farms; Blade Trap handles Bloonarius bleed). Support hero in CHIMPS, paired with Comanche Commander. Normal/Freeplay: Recommended on every standard map (the Rare Quincy Action Figure funds early farms), but the Freeplay guide says to avoid him.",
     "sources": [
       "wiki-boss-events",
       "wiki-bloonarius",
-      "wiki-chimps"
+      "wiki-chimps",
+      "wiki-standard",
+      "wiki-freeplay"
     ]
   },
   {
@@ -294,7 +315,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "S",
-      "boss": "A"
+      "boss": "A",
+      "normal": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [
@@ -312,7 +334,8 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [

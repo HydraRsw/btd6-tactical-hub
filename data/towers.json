@@ -6,7 +6,8 @@
     "icon": "arrow-up-right",
     "tiers": {
       "chimps": "B",
-      "boss": "C"
+      "boss": "C",
+      "normal": "C"
     },
     "bestRoute": "0-2-5",
     "roles": [
@@ -38,7 +39,8 @@
     "sources": [
       "wiki-dart",
       "wiki-dreadbloon",
-      "steam-v57"
+      "steam-v57",
+      "wiki-standard"
     ],
     "upgrades": [
       [
@@ -70,6 +72,10 @@
       ],
       "boss": [
         "Apex Plasma Master is the cheapest Paragon and a good option against tier 3–4 bosses."
+      ],
+      "normal": [
+        "Classic opener: Dart + Boomerang, Dart + Sub, Dart + Sniper, Dart + Engineer or three 0-0-0 Darts.",
+        "Crossbow Master struggles against Super Ceramics from round 81; consider selling it then."
       ]
     },
     "synergies": [
@@ -95,7 +101,8 @@
     "icon": "undo-2",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "A"
     },
     "bestRoute": "5-0-2",
     "roles": [
@@ -128,7 +135,9 @@
     "sources": [
       "wiki-chimps",
       "wiki-boomerang",
-      "wiki-dreadbloon"
+      "wiki-dreadbloon",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -162,6 +171,10 @@
       "boss": [
         "Early boss events: 1-0-2.",
         "Glaive Dominus is a Lych-capable Paragon at higher degrees."
+      ],
+      "normal": [
+        "Glaive Lord is a solid win condition in standard games.",
+        "Glaive Dominus is a recommended stalling Paragon in deep Freeplay."
       ]
     },
     "synergies": [
@@ -183,7 +196,8 @@
     "icon": "bomb",
     "tiers": {
       "chimps": "B",
-      "boss": "A"
+      "boss": "A",
+      "normal": "C"
     },
     "bestRoute": "2-3-0",
     "roles": [
@@ -224,7 +238,8 @@
       "wiki-lych",
       "wiki-bloonarius",
       "wiki-blastapopoulos",
-      "steam-v57"
+      "steam-v57",
+      "wiki-standard"
     ],
     "upgrades": [
       [
@@ -257,6 +272,10 @@
       "boss": [
         "MOAB Eliminator against Lych: attack normally, save the ability until a skull.",
         "Sticky Bomb damage gets burned off by Blastapopoulos."
+      ],
+      "normal": [
+        "Recursive Cluster struggles against Super Ceramics from round 81.",
+        "No Freeplay role in the wiki's guide."
       ]
     },
     "synergies": [
@@ -274,7 +293,8 @@
     "icon": "asterisk",
     "tiers": {
       "chimps": "C",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "2-0-4",
     "roles": [
@@ -308,7 +328,9 @@
       "wiki-bloonarius",
       "wiki-lych",
       "wiki-dreadbloon",
-      "wiki-crucible"
+      "wiki-crucible",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -342,6 +364,10 @@
         "Overdrive and The Tack Zone appear in Bloonarius, Lych and Dreadbloon strategies.",
         "Ring of Fire (4-2-0) handles Bloonarius spawns.",
         "Crucible of Steel and Flame is a cheap Paragon that does well against Diamondback."
+      ],
+      "normal": [
+        "Ring of Fire falls off against Super Ceramics after round 80.",
+        "The Tack Zone (2-0-5) and Inferno Ring (5-0-2) are supplemental Freeplay defense."
       ]
     },
     "synergies": [
@@ -363,7 +389,8 @@
     "icon": "snowflake",
     "tiers": {
       "chimps": "A",
-      "boss": "S"
+      "boss": "S",
+      "normal": "A"
     },
     "bestRoute": "4-2-0",
     "roles": [
@@ -398,7 +425,8 @@
       "wiki-lych",
       "wiki-phayze",
       "wiki-blastapopoulos",
-      "steam-v57"
+      "steam-v57",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -431,6 +459,10 @@
       "boss": [
         "Super Brittle is a staple boss debuff (Lych, Phayze).",
         "Ice attacks cool Blastapopoulos, and Ice Monkeys ignore its overheat."
+      ],
+      "normal": [
+        "Herald of Everfrost is essential for Ninja-based Freeplay builds.",
+        "Embrittlement still helps other towers pop leads in standard games."
       ]
     },
     "synergies": [
@@ -452,7 +484,8 @@
     "icon": "droplet",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "A"
     },
     "bestRoute": "5-2-0",
     "roles": [
@@ -486,7 +519,9 @@
       "wiki-chimps",
       "wiki-glue",
       "wiki-lych",
-      "steam-v57"
+      "steam-v57",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -519,6 +554,10 @@
       "boss": [
         "Super Glue and Glue Storm are support picks against Lych.",
         "Slows hold back a bloon's children too, so cheap glue stalls well on spaced rounds."
+      ],
+      "normal": [
+        "MOAB Glue and Relentless Glue are recommended support for rounds 90+.",
+        "Glue Storm is Freeplay support: 2-5-0, or 0-5-2 with The Final Harmonic."
       ]
     },
     "synergies": [
@@ -543,7 +582,8 @@
     "icon": "crosshair",
     "tiers": {
       "chimps": "B",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "5-2-0",
     "roles": [
@@ -608,6 +648,9 @@
       ],
       "boss": [
         "The Blazing Sun is a cheap tier 1 boss option; Bounty Hunter marking boosts damage on blimps."
+      ],
+      "normal": [
+        "Strong early game with long range; the standard-game and Freeplay guides don't cover it yet."
       ]
     },
     "synergies": [
@@ -628,7 +671,8 @@
     "icon": "scan",
     "tiers": {
       "chimps": "A",
-      "boss": "S"
+      "boss": "S",
+      "normal": "A"
     },
     "bestRoute": "2-0-5",
     "roles": [
@@ -664,7 +708,9 @@
       "wiki-phayze",
       "wiki-bloonarius",
       "steam-v57",
-      "ninjakiwi-x-v57"
+      "ninjakiwi-x-v57",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -698,6 +744,10 @@
         "Elite Defender (2-0-5) can solo Lych from far away and has camo for Phayze.",
         "Cripple MOAB (5-0-2) is a key blimp debuff.",
         "v57 added the S.P.I.D.E.R. Monkey Paragon."
+      ],
+      "normal": [
+        "Dart + Sniper is a standard opener.",
+        "Elite Sniper and Cripple MOAB (5-2-0) are recommended Freeplay support; Elite Defender fits Sun Temple setups."
       ]
     },
     "synergies": [
@@ -719,7 +769,8 @@
     "icon": "anchor",
     "tiers": {
       "chimps": "B",
-      "boss": "A"
+      "boss": "A",
+      "normal": "B"
     },
     "bestRoute": "2-0-2",
     "roles": [
@@ -759,7 +810,9 @@
       "wiki-dreadbloon",
       "wiki-lych",
       "wiki-phayze",
-      "wiki-bloonarius"
+      "wiki-bloonarius",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -792,6 +845,10 @@
       "boss": [
         "Sub Commander (2-0-5) works against Dreadbloon, Lych and Phayze.",
         "First Strike can skip a damaged BAD's insides."
+      ],
+      "normal": [
+        "Airburst Darts (2-0-2) is strong early on maps with water.",
+        "Nautic Siege Core targets Last in Freeplay."
       ]
     },
     "synergies": [
@@ -817,7 +874,8 @@
     "icon": "ship",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "A",
+      "normal": "A"
     },
     "bestRoute": "5-2-0",
     "roles": [
@@ -858,7 +916,9 @@
       "wiki-buccaneer",
       "wiki-merchantman",
       "wiki-trade-empire",
-      "wiki-dreadbloon"
+      "wiki-dreadbloon",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -892,6 +952,10 @@
         "Merchantmen + Central Markets + Trade Empire replace Banana Farms on water maps.",
         "Destroyer spam with Brickell works against Dreadbloon and Phayze.",
         "Navarch of the Seas is a strong Paragon (save about $980,000 for a 40-Merchantman setup)."
+      ],
+      "normal": [
+        "Destroyer (3-1-0) handles the first MOAB.",
+        "Aircraft Carrier and Carrier Flagship are mid-game picks; Destroyer spam only pays off on water-heavy Freeplay maps."
       ]
     },
     "synergies": [
@@ -913,7 +977,8 @@
     "icon": "plane",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "A",
+      "normal": "S"
     },
     "bestRoute": "5-2-0",
     "roles": [
@@ -945,7 +1010,9 @@
     "sources": [
       "wiki-chimps",
       "wiki-ace",
-      "wiki-dreadbloon"
+      "wiki-dreadbloon",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -978,6 +1045,10 @@
       "boss": [
         "Flying Fortress (2-0-5) is strong late boss damage on any map format.",
         "Goliath Doomship is one of the highest-damage Paragons."
+      ],
+      "normal": [
+        "Flying Fortress (2-0-5 with a 2-2-0 Village) is the main late-game carry in standard games.",
+        "Neva-Miss (2-0-3) into Spectre (2-0-4) carries the mid game."
       ]
     },
     "synergies": [
@@ -999,7 +1070,8 @@
     "icon": "fan",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "2-0-5",
     "roles": [
@@ -1031,7 +1103,8 @@
     "sources": [
       "wiki-chimps",
       "wiki-heli",
-      "wiki-lych"
+      "wiki-lych",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1064,6 +1137,9 @@
       "boss": [
         "Special Poperations helps keep lives up against Lych.",
         "Support Chinook can carry towers out of Vortex's stun range."
+      ],
+      "normal": [
+        "Support Chinook moves Ninjas into Sun Temple range in the strongest Freeplay hybrid, and can stall for extra income."
       ]
     },
     "synergies": [
@@ -1088,7 +1164,8 @@
     "icon": "radar",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "x-5-x",
     "roles": [
@@ -1119,7 +1196,9 @@
     ],
     "sources": [
       "wiki-chimps",
-      "wiki-mortar"
+      "wiki-mortar",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1152,6 +1231,10 @@
       ],
       "boss": [
         "Top-path upgrades have black-bloon weaknesses: bring Striker's buff."
+      ],
+      "normal": [
+        "Artillery Battery is a mid-game pick.",
+        "Avoid Blooncineration in Freeplay."
       ]
     },
     "synergies": [
@@ -1172,7 +1255,8 @@
     "icon": "zap",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "A",
+      "normal": "A"
     },
     "bestRoute": "2-0-5",
     "roles": [
@@ -1212,7 +1296,9 @@
       "wiki-dartling",
       "wiki-lych",
       "wiki-dreadbloon",
-      "wiki-bloonarius"
+      "wiki-bloonarius",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1244,6 +1330,10 @@
       ],
       "boss": [
         "Ray of Doom and Plasma Accelerator for boss damage; M.A.D against Lych and Bloonarius."
+      ],
+      "normal": [
+        "BADS, Plasma Accelerator, Ray of Doom and BEZ are standard-game carries.",
+        "BEZ (0-2-5) and M.A.D (0-5-2) are supplemental Freeplay defense."
       ]
     },
     "synergies": [
@@ -1260,7 +1350,8 @@
     "icon": "wand-sparkles",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "5-2-0",
     "roles": [
@@ -1294,7 +1385,9 @@
       "wiki-chimps",
       "wiki-dreadbloon",
       "wiki-wizard",
-      "wiki-magus"
+      "wiki-magus",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1327,6 +1420,10 @@
       "boss": [
         "Wizard Lord Phoenix and Archmage against Dreadbloon.",
         "Magus Perfectus is one of the highest-damage Paragons (weak against Blastapopoulos)."
+      ],
+      "normal": [
+        "Wall of Fire (1-2-0, or 0-2-2 toward Dragon's Breath) is a reliable early pick.",
+        "Magus Perfectus is one of the Paragons worth building in Freeplay."
       ]
     },
     "synergies": [
@@ -1348,7 +1445,8 @@
     "icon": "sun",
     "tiers": {
       "chimps": "A",
-      "boss": "S"
+      "boss": "S",
+      "normal": "S"
     },
     "bestRoute": "3-2-0",
     "roles": [
@@ -1388,7 +1486,8 @@
       "wiki-dreadbloon",
       "wiki-bloonarius",
       "wiki-boss-events",
-      "wiki-alch-strategy"
+      "wiki-alch-strategy",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1420,6 +1519,10 @@
       "boss": [
         "Sun Avatar (3-2-0), Sun Temple (4-2-0) and Legend of the Night (2-0-5) appear in boss strategies.",
         "Sun Temple needs $45,000+ of support sacrifices."
+      ],
+      "normal": [
+        "Vengeful True Sun God plus Sun Temples and Sun Avatars is a core Freeplay build (Adora's Blood Sacrifice helps).",
+        "Temples combined with Ninjas is the strongest Freeplay setup the wiki describes."
       ]
     },
     "synergies": [
@@ -1440,7 +1543,8 @@
     "icon": "swords",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "A",
+      "normal": "S"
     },
     "bestRoute": "0-4-0",
     "roles": [
@@ -1474,7 +1578,9 @@
       "wiki-ninja",
       "wiki-chimps",
       "wiki-dreadbloon",
-      "wiki-bloonarius"
+      "wiki-bloonarius",
+      "wiki-freeplay",
+      "wiki-standard"
     ],
     "upgrades": [
       [
@@ -1507,6 +1613,10 @@
       "boss": [
         "Grandmaster Ninja (5-0-2) against Dreadbloon; top and middle Ninjas shine against bosses.",
         "Ascended Shadow is a strong Paragon against Phayze and Vortex."
+      ],
+      "normal": [
+        "Bloonjitsu spam with about 20 Shinobi Tactics stacks each is the top Freeplay build (Grandmaster Ninja and Grand Saboteur too).",
+        "Ninja 1-0-1 is a strong opener on Spillway; Bloon Sabotage is round-90s support."
       ]
     },
     "synergies": [
@@ -1532,7 +1642,8 @@
     "icon": "flask-conical",
     "tiers": {
       "chimps": "S",
-      "boss": "S"
+      "boss": "S",
+      "normal": "S"
     },
     "bestRoute": "4-2-0",
     "roles": [
@@ -1565,7 +1676,9 @@
       "wiki-alch-strategy",
       "wiki-chimps",
       "wiki-lych",
-      "steam-v57"
+      "steam-v57",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1599,6 +1712,10 @@
       "boss": [
         "Rubber to Gold is boss-event income (v57: pays out instantly).",
         "Never rely on brews against Lych: it steals them."
+      ],
+      "normal": [
+        "Berserker Brew and Stronger Stimulant are the key mid-game buffs.",
+        "Permanent Brew is core Freeplay support; Bloon Master Alchemist only when you aren't stalling for abilities."
       ]
     },
     "synergies": [
@@ -1623,7 +1740,8 @@
     "icon": "leaf",
     "tiers": {
       "chimps": "A",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "0-1-5",
     "roles": [
@@ -1655,7 +1773,9 @@
     "sources": [
       "wiki-chimps",
       "wiki-druid",
-      "wiki-lych"
+      "wiki-lych",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1687,6 +1807,10 @@
       "boss": [
         "Jungle's Bounty and Spirit of the Forest help with lives against Lych.",
         "Avatar of Wrath setups are too compact for Lych."
+      ],
+      "normal": [
+        "Druid of the Jungle (1-3-0) is good on maps with one active lane.",
+        "Avatar of Wrath only fits Sun Temple Freeplay setups."
       ]
     },
     "synergies": [
@@ -1708,7 +1832,8 @@
     "icon": "waves",
     "tiers": {
       "chimps": "B",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "3-0-1",
     "roles": [
@@ -1740,7 +1865,9 @@
     "sources": [
       "wiki-mermonkey",
       "wiki-chimps",
-      "wiki-silas"
+      "wiki-silas",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1772,6 +1899,10 @@
       ],
       "boss": [
         "Popseidon's freeze lasts longer with Silas."
+      ],
+      "normal": [
+        "Symphonic Resonance is round-90s support; The Final Harmonic pairs with a 0-5-2 Glue Storm in Freeplay.",
+        "Popseidon only fits Sun Temple setups."
       ]
     },
     "synergies": [
@@ -1792,7 +1923,8 @@
     "icon": "wind",
     "tiers": {
       "chimps": "B",
-      "boss": "B"
+      "boss": "B",
+      "normal": "B"
     },
     "bestRoute": "5-x-x",
     "roles": [
@@ -1855,6 +1987,9 @@
       ],
       "boss": [
         "Winter's Mercy path cools Blastapopoulos (v57 increased the heat reduction)."
+      ],
+      "normal": [
+        "Too new for the standard-game or Freeplay guides."
       ]
     },
     "synergies": [
@@ -1871,7 +2006,8 @@
     "icon": "banana",
     "tiers": {
       "chimps": "D",
-      "boss": "S"
+      "boss": "S",
+      "normal": "S"
     },
     "bestRoute": "4-2-0",
     "roles": [
@@ -1904,7 +2040,9 @@
       "wiki-brf",
       "wiki-marketplace",
       "wiki-overclock",
-      "wiki-farm"
+      "wiki-farm",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -1937,6 +2075,10 @@
         "Rounds 1–20: two 2-0-0 farms, then Marketplaces or Bank → IMF Loan → Monkeyopolis.",
         "Late: BRF spam with Overclock (5 → 9 crates), Banana Central for +25%.",
         "Sell every farm at the end of round 119."
+      ],
+      "normal": [
+        "Start with 2-0-0 farms and 2-0-3 Marketplaces; Monkey Bank in the 30s or 40s leads into Monkeyopolis.",
+        "In Freeplay, farm instead of over-building defense for the first 100 rounds: Banana Central, BRF spam, Monkeyopolis and Overclocks."
       ]
     },
     "synergies": [
@@ -1965,7 +2107,8 @@
     "icon": "triangle",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "A",
+      "normal": "A"
     },
     "bestRoute": "1-0-5",
     "roles": [
@@ -1999,7 +2142,9 @@
       "wiki-spike-factory",
       "wiki-lych",
       "wiki-dreadbloon",
-      "steam-v57"
+      "steam-v57",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -2033,6 +2178,10 @@
       "boss": [
         "Spike Storm's ability handles the R100 BAD; Carpet of Spikes is good against bosses.",
         "Mega Massive Munitions Factory is one of the highest-damage Paragons."
+      ],
+      "normal": [
+        "A 1-0-0 Spike Factory after a starter catches early leaks.",
+        "Perma-Spike (1-0-5 with Jungle Drums and a 3-0-1 brew) tanks huge numbers of bloons; Super Mines (5-2-0) supports Freeplay."
       ]
     },
     "synergies": [
@@ -2058,7 +2207,8 @@
     "icon": "house",
     "tiers": {
       "chimps": "S",
-      "boss": "S"
+      "boss": "S",
+      "normal": "S"
     },
     "bestRoute": "2-3-0",
     "roles": [
@@ -2091,7 +2241,9 @@
       "wiki-village",
       "wiki-lych",
       "wiki-boss-events",
-      "steam-v57"
+      "steam-v57",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -2124,6 +2276,10 @@
       "boss": [
         "Call to Arms and Homeland Defense are stolen by Lych.",
         "Monkeyopolis and Megaopolis drive late boss economy."
+      ],
+      "normal": [
+        "Monkeyopolis (2-0-5 for range and Jungle Drums) is the main standard-game money-maker.",
+        "Homeland Defense with Call to Arms and Primary Expertise are Freeplay support."
       ]
     },
     "synergies": [
@@ -2144,7 +2300,8 @@
     "icon": "wrench",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "A",
+      "normal": "S"
     },
     "bestRoute": "0-4-0",
     "roles": [
@@ -2185,7 +2342,9 @@
       "wiki-boss-events",
       "wiki-lych",
       "steam-v57",
-      "wiki-master-builder"
+      "wiki-master-builder",
+      "wiki-standard",
+      "wiki-freeplay"
     ],
     "upgrades": [
       [
@@ -2219,6 +2378,10 @@
         "Overclock BRFs during farming; Bloon Trap (0-1-4) and XXXL Trap (0-2-5) for income.",
         "Don't overclock towers near Lych.",
         "Master Builder's Power Glove boosts other Paragons."
+      ],
+      "normal": [
+        "Overclock expensive carries (not Pouākai).",
+        "Freeplay: one Overclock per Bloonjitsu, two per Grandmaster Ninja, one per Sun Temple; Ultraboost too. Sentry Champion (5-2-0) supports. Avoid XXXL Trap."
       ]
     },
     "synergies": [
@@ -2244,7 +2407,8 @@
     "icon": "paw-print",
     "tiers": {
       "chimps": "S",
-      "boss": "A"
+      "boss": "A",
+      "normal": "A"
     },
     "bestRoute": "4-0-0",
     "roles": [
@@ -2284,7 +2448,8 @@
       "wiki-chimps",
       "wiki-bloonarius",
       "wiki-lych",
-      "wiki-dreadbloon"
+      "wiki-dreadbloon",
+      "wiki-standard"
     ],
     "upgrades": [
       [
@@ -2317,6 +2482,9 @@
       ],
       "boss": [
         "Megalodon (5-0-0) is a strong single-tower option against Bloonarius, Lych and Dreadbloon."
+      ],
+      "normal": [
+        "Pouākai is a late-game carry, strongest with extra Golden Eagles; Giant Condor is round-90s support."
       ]
     },
     "synergies": [

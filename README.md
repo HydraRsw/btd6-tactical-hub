@@ -69,14 +69,14 @@ A tower looks like this:
 ```
 
 - `category`: Primary, Military, Magic, Support (heroes use Heroes)
-- `tiers`: S, A, B, C or D for each mode
+- `tiers`: S, A, B, C or D for each mode: `chimps`, `boss` and `normal` (normal games and Freeplay)
 - `roles`: any of DPS, Stall, Buff, Cleanup, MOAB, Income
 - `confidence`: `verified`, `approximate` or `new`
 - `icon`: any [Lucide icon](https://lucide.dev/icons) name
 - route `path`: digits 0–5 per path; use `x` for "any / still settling"
 - `sources`: ids from `data/sources.json`. Every claim should trace back to one of them.
 - `upgrades`: three lists (top, middle, bottom path) of five upgrade names; `null` if unknown
-- `tips`: `{ "chimps": [...], "boss": [...] }`, shown on the tower page
+- `tips`: `{ "chimps": [...], "boss": [...], "normal": [...] }`, shown on the tower page
 - `synergies`: `[{ "unit": "alch", "note": "…" }]`, where `unit` is a tower or hero id
 - `paragon`: id of the tower's Paragon in `paragons.json` (optional)
 

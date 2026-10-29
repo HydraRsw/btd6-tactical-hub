@@ -7,6 +7,13 @@ import { recall, remember } from './lib/storage.js';
 // Tabs in header order. A tower's own page isn't a tab: its address is #tower/<id>.
 export const TABS = ['tier', 'cross', 'paragons', 'farm', 'chimps'];
 
+// Game modes the tiers are ranked for. Each tower/hero has tiers.<mode>.
+export const MODES = [
+  { id: 'chimps', label: 'CHIMPS', short: 'CHIMPS' },
+  { id: 'boss', label: 'Boss events', short: 'Bosses' },
+  { id: 'normal', label: 'Normal & Freeplay', short: 'Normal' },
+];
+
 export function createHubStore() {
   return {
     status: 'loading', // 'loading' | 'ready' | 'error'
@@ -20,10 +27,26 @@ export function createHubStore() {
     sources: {},           // id → { title, url }, referenced by every entry's "sources" list
     paragons: { intro: '', paragons: [], degreeGuide: { basics: [], powerSources: [], tips: [], sources: [] } },
 
+    mode: ['chimps', 'boss', 'normal'].includes(recall('mode', 'chimps')) ? recall('mode', 'chimps') : 'chimps', // which game mode the tiers are shown for (see MODES)
     activeTab: 'tier',     // one of TABS, or 'tower' while a tower page is open
     towerId: null,         // which tower page is open
     openUnitIds: [],       // expanded rows in the tier list
     showPatchBanner: false,
+
+    setMode(mode) {
+      if (!MODES.some((m) => m.id === mode)) return;
+      this.mode = mode;
+      remember('mode', mode);
+    },
+
+    get modeLabel() {
+      return MODES.find((m) => m.id === this.mode)?.label ?? '';
+    },
+
+    /** A tower or hero's tier in the selected mode. */
+    tierOf(unit) {
+      return unit?.tiers?.[this.mode] ?? '?';
+    },
 
     /** The tower whose page is open, if any. */
     get currentTower() {

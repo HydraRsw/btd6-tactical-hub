@@ -21,7 +21,7 @@ function buildSearchIndex(hub) {
     kind: 'Tower',
     unit: tower,
     title: tower.name,
-    subtitle: `${tower.category} · ${tower.bestRoute} · CHIMPS ${tower.tiers.chimps} / Boss ${tower.tiers.boss}`,
+    subtitle: `${tower.category} · ${tower.bestRoute} · CHIMPS ${tower.tiers.chimps} / Boss ${tower.tiers.boss} / Normal ${tower.tiers.normal}`,
     keywords: [tower.category, tower.bestRoute, ...tower.roles, ...tower.routes.map((r) => `${r.name} ${r.path}`)].join(' '),
     go: () => hub.openTower(tower.id),
   }));
@@ -30,7 +30,7 @@ function buildSearchIndex(hub) {
     kind: 'Hero',
     unit: hero,
     title: hero.name,
-    subtitle: `Hero · CHIMPS ${hero.tiers.chimps} / Boss ${hero.tiers.boss}`,
+    subtitle: `Hero · CHIMPS ${hero.tiers.chimps} / Boss ${hero.tiers.boss} / Normal ${hero.tiers.normal}`,
     keywords: ['hero', ...hero.roles].join(' '),
     go: synergyHeroIds.includes(hero.id)
       ? () => hub.jumpTo('chimps', `hero-${hero.id}`)

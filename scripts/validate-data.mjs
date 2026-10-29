@@ -32,7 +32,7 @@ function checkUnit(unit, where, { isHero }) {
   need(typeof unit.id === 'string' && /^[a-z0-9-]+$/.test(unit.id), 'id must be lowercase letters, digits or dashes');
   need(typeof unit.name === 'string' && unit.name.length > 0, 'missing name');
   need(isHero ? unit.category === 'Heroes' : TOWER_CATEGORIES.includes(unit.category), `bad category "${unit.category}"`);
-  need(TIERS.includes(unit.tiers?.chimps) && TIERS.includes(unit.tiers?.boss), 'tiers.chimps and tiers.boss must be S, A, B, C or D');
+  need(['chimps', 'boss', 'normal'].every((mode) => TIERS.includes(unit.tiers?.[mode])), 'tiers.chimps, tiers.boss and tiers.normal must each be S, A, B, C or D');
   need(Array.isArray(unit.roles) && unit.roles.length > 0 && unit.roles.every((r) => ROLES.includes(r)), `roles must be from ${ROLES.join(', ')}`);
   need(CONFIDENCE.includes(unit.confidence), `confidence must be ${CONFIDENCE.join(', ')}`);
   need(typeof unit.summary === 'string' && unit.summary.length > 0, 'missing summary');
@@ -132,8 +132,8 @@ for (const tower of Array.isArray(towers) ? towers : []) {
       && tower.upgrades.every((path) => Array.isArray(path) && path.length === 5 && path.every((n) => n === null || typeof n === 'string'));
     if (!ok) problems.push(`${at}: upgrades must be 3 lists of 5 names (null for unknown)`);
   }
-  if (tower.tips !== undefined && !(Array.isArray(tower.tips.chimps) && Array.isArray(tower.tips.boss))) {
-    problems.push(`${at}: tips needs "chimps" and "boss" lists`);
+  if (tower.tips !== undefined && !['chimps', 'boss', 'normal'].every((mode) => Array.isArray(tower.tips[mode]))) {
+    problems.push(`${at}: tips needs "chimps", "boss" and "normal" lists`);
   }
   for (const synergy of tower.synergies ?? []) {
     if (!unitIds.has(synergy.unit)) problems.push(`${at}: synergy points at unknown tower/hero "${synergy.unit}"`);

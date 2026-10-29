@@ -1,7 +1,8 @@
 {
   "modeNotes": {
     "chimps": "CHIMPS disables income and selling, so farms, Merchantmen, Monkey City and Benjamin give nothing. Tiers lean on the Bloons wiki's CHIMPS strategy page: its listed win conditions rank highest, its support picks next.",
-    "boss": "Boss events reward economy first (Geraldo and Benjamin, BRFs with Overclock), then raw damage and Paragons in later tiers. Each boss counters different things, so check the boss notes before committing."
+    "boss": "Boss events reward economy first (Geraldo and Benjamin, BRFs with Overclock), then raw damage and Paragons in later tiers. Each boss counters different things, so check the boss notes before committing.",
+    "normal": "Normal games and Freeplay allow farming and selling, so economy towers rank high. Tiers lean on the wiki's standard-game guide (last updated v46.3, so treat it as approximate) and its Freeplay guide, where Ninja and Sun Temple builds, Overclock and Ezili against late BADs dominate. Heroes the guides don't cover sit at B."
   },
   "dangerRounds": [
     {

@@ -5,6 +5,7 @@
 import { parseRoute } from '../lib/upgrades.js';
 import { formatCash } from '../lib/text.js';
 import { CATEGORY_ICONS } from './tier-list.js';
+import { MODES } from '../store.js';
 
 const PATH_NAMES = ['Top path', 'Middle path', 'Bottom path'];
 
@@ -19,6 +20,7 @@ export function towerPage() {
     PATH_NAMES,
     CONFIDENCE_LABELS,
     CATEGORY_ICONS,
+    MODES,
     formatCash,
 
     get tower() {
