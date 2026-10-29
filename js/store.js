@@ -4,8 +4,17 @@
 import { loadGameData } from './lib/data.js';
 import { recall, remember } from './lib/storage.js';
 
-// Tabs in header order. A tower's own page isn't a tab: its address is #tower/<id>.
-export const TABS = ['tier', 'cross', 'paragons', 'farm', 'chimps'];
+// Tabs in header order.
+export const TABS = ['tier', 'cross', 'maps', 'paragons', 'farm', 'chimps'];
+
+// Detail pages aren't tabs. Each has an address like #tower/<id> and a list
+// in the data it looks its id up in.
+export const PAGES = {
+  tower: (hub) => hub.towers,
+  map: (hub) => hub.maps.maps,
+  mode: (hub) => hub.modes.modes,
+  paragon: (hub) => hub.paragons.paragons,
+};
 
 // Game modes the tiers are ranked for. Each tower/hero has tiers.<mode>.
 export const MODES = [
@@ -26,10 +35,13 @@ export function createHubStore() {
     playbook: { modeNotes: {}, dangerRounds: [], heroSynergies: [], bosses: [] },
     sources: {},           // id → { title, url }, referenced by every entry's "sources" list
     paragons: { intro: '', paragons: [], degreeGuide: { basics: [], powerSources: [], tips: [], sources: [] } },
+    maps: { intro: '', maps: [] },
+    modes: { modes: [] },
 
     mode: ['chimps', 'boss', 'normal'].includes(recall('mode', 'chimps')) ? recall('mode', 'chimps') : 'chimps', // which game mode the tiers are shown for (see MODES)
-    activeTab: 'tier',     // one of TABS, or 'tower' while a tower page is open
-    towerId: null,         // which tower page is open
+    activeTab: 'tier',     // one of TABS, or a PAGES kind ('tower', 'map'…) while a detail page is open
+    pageId: null,          // id of the open detail page's tower / map / mode / Paragon
+    mapMode: recall('mapMode', 'chimps'), // game mode picked on the Maps tab and map pages
     openUnitIds: [],       // expanded rows in the tier list
     showPatchBanner: false,
 
@@ -48,9 +60,23 @@ export function createHubStore() {
       return unit?.tiers?.[this.mode] ?? '?';
     },
 
-    /** The tower whose page is open, if any. */
+    setMapMode(modeId) {
+      this.mapMode = modeId;
+      remember('mapMode', modeId);
+    },
+
+    /** The tower, map, mode or Paragon whose page is open, if any. */
+    get currentPage() {
+      const list = PAGES[this.activeTab]?.(this) ?? [];
+      return list.find((item) => item.id === this.pageId) ?? null;
+    },
+
     get currentTower() {
-      return this.towers.find((tower) => tower.id === this.towerId) ?? null;
+      return this.activeTab === 'tower' ? this.currentPage : null;
+    },
+
+    findMode(modeId) {
+      return this.modes.modes.find((mode) => mode.id === modeId) ?? null;
     },
 
     /** Towers and heroes in one list (the tier list shows both). */
@@ -76,30 +102,36 @@ export function createHubStore() {
       return Boolean(lastSeen) && lastSeen !== this.meta.patch;
     },
 
-    // --- Tabs and tower pages (kept in the URL hash: #farm, #tower/sniper) --
+    // --- Tabs and detail pages (kept in the URL hash: #farm, #map/logs) ----
     openTab(tab) {
       if (!TABS.includes(tab)) return;
       this.activeTab = tab;
-      this.towerId = null;
+      this.pageId = null;
       if (location.hash !== `#${tab}`) history.replaceState(null, '', `#${tab}`);
     },
 
-    openTower(towerId) {
-      this.towerId = towerId;
-      this.activeTab = 'tower';
+    /** Open a detail page: openPage('map', 'logs') → #map/logs. */
+    openPage(kind, id) {
+      if (!PAGES[kind]) return;
+      this.activeTab = kind;
+      this.pageId = id;
       // pushState so the browser's Back button returns to the list
-      if (location.hash !== `#tower/${towerId}`) history.pushState(null, '', `#tower/${towerId}`);
+      if (location.hash !== `#${kind}/${id}`) history.pushState(null, '', `#${kind}/${id}`);
       window.scrollTo({ top: 0 });
     },
 
+    openTower(towerId) {
+      this.openPage('tower', towerId);
+    },
+
     openTabFromUrl() {
-      const hash = location.hash.slice(1);
-      if (hash.startsWith('tower/')) {
-        this.towerId = hash.slice('tower/'.length);
-        this.activeTab = 'tower';
+      const [kind, id] = location.hash.slice(1).split('/');
+      if (PAGES[kind] && id) {
+        this.activeTab = kind;
+        this.pageId = decodeURIComponent(id);
         return;
       }
-      this.openTab(hash || 'tier');
+      this.openTab(kind || 'tier');
     },
 
     // --- Tier list rows -------------------------------------------------

@@ -400,6 +400,50 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 
 .site-footer a { color: var(--text-muted); }
 
+
+/* ==========================================================================
+   Maps and game modes
+   ========================================================================== */
+/* One colour per difficulty, shared by maps (Beginner…Expert) and modes (Easy…Hard). */
+[data-difficulty="Beginner"], [data-difficulty="Easy"]         { --difficulty: var(--green); }
+[data-difficulty="Intermediate"], [data-difficulty="Medium"]   { --difficulty: var(--gold); }
+[data-difficulty="Advanced"]                                   { --difficulty: var(--orange); }
+[data-difficulty="Expert"], [data-difficulty="Hard"]           { --difficulty: var(--red); }
+[data-difficulty="Any"]                                        { --difficulty: #a77bff; }
+
+.difficulty-pill {
+  display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.05em;
+  color: #0b1b33; background: var(--difficulty, var(--gold)); white-space: nowrap;
+}
+.tier-group-heading .difficulty-pill { font-size: 0.9rem; padding: 4px 14px; }
+.pill--trait { background: rgba(6, 26, 56, 0.55); color: var(--text-soft); }
+
+.mode-row { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 10px; align-items: center; }
+.mode-row__label { font-size: 0.72rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.06em; color: var(--difficulty); }
+.mode-preview { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 10px 14px; }
+.mode-switch--wide { display: flex; flex-wrap: wrap; padding: 0; }
+.map-search { width: 240px; }
+.mode-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); margin-left: 6px; }
+
+.map-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.map-card {
+  display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; text-align: left; cursor: pointer;
+  border-left: 5px solid var(--difficulty, var(--gold)); transition: transform 0.15s, border-color 0.15s;
+}
+.map-card:hover { transform: translateY(-2px); border-color: var(--gold); }
+.map-card[data-difficulty] { border-left-color: var(--difficulty); }
+.map-card__top { display: flex; align-items: center; gap: 8px; }
+.map-card__summary { font-size: 0.85rem; color: var(--text-soft); }
+
+.map-hero__icon { background: var(--difficulty, var(--gold)) !important; color: #0b1b33; }
+.map-hero__icon svg { width: 52px; height: 52px; }
+.tip-columns--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tip-columns .well { padding: 12px 14px; }
+.tip-columns .well h4 { margin-bottom: 8px; }
+.synergy--blocked { opacity: 0.55; }
+.note--gold { color: var(--text-soft); border-color: var(--gold); background: rgba(255, 210, 63, 0.12); }
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -409,7 +453,7 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
   .filters-toggle { display: flex; }
   .tier-sidebar__body { display: none; margin-top: 12px; }
   .tier-sidebar__body--open { display: grid; }
-  .tip-columns { grid-template-columns: minmax(0, 1fr); }
+  .tip-columns, .tip-columns--two { grid-template-columns: minmax(0, 1fr); }
   .checkpoint { grid-template-columns: 90px minmax(0, 1fr); }
 }
 
@@ -424,5 +468,7 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
   .section-head h2 { font-size: 1.6rem; }
   .tower-hero { grid-template-columns: minmax(0, 1fr); justify-items: start; }
   .neighbour-name { display: none; }
+  .map-search { width: 100%; }
+  .mode-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .tower-hero__text h2 { font-size: 1.9rem; }
 }

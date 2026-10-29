@@ -151,12 +151,63 @@ if (paragonsFile) {
     if (!CONFIDENCE.includes(paragon.confidence)) problems.push(`${at}: bad confidence`);
     if (paragon.cost !== null && typeof paragon.cost !== 'number') problems.push(`${at}: cost must be a number or null`);
     checkSourceIds(paragon.sources, at);
+    // Paragon page fields
+    for (const field of ['combines', 'strategy', 'synergies', 'bestBosses', 'worstBosses', 'degreeTips']) {
+      if (!Array.isArray(paragon[field])) problems.push(`${at}: ${field} must be a list`);
+    }
+    if (!paragon.howItWorks) problems.push(`${at}: missing howItWorks`);
+    for (const synergy of paragon.synergies ?? []) {
+      if (!unitIds.has(synergy.unit) && !paragonIds.has(synergy.unit)) problems.push(`${at}: synergy points at unknown tower/hero/Paragon "${synergy.unit}"`);
+      if (!synergy.note) problems.push(`${at}: synergy with "${synergy.unit}" needs a note`);
+    }
   }
   checkSourceIds(paragonsFile.degreeGuide?.sources, 'paragons.json degreeGuide');
+}
+
+// Maps and game modes
+const MAP_DIFFICULTIES = ['Beginner', 'Intermediate', 'Advanced', 'Expert'];
+const MODE_DIFFICULTIES = ['Easy', 'Medium', 'Hard', 'Any'];
+const modesFile = load('modes');
+const mapsFile = load('maps');
+const modeIds = new Set((modesFile?.modes ?? []).map((m) => m.id));
+const checkPicks = (list, at) => {
+  if (!Array.isArray(list)) return problems.push(`${at}: must be a list`);
+  for (const pick of list) {
+    if (!unitIds.has(pick.unit)) problems.push(`${at}: "${pick.upgrade}" points at unknown tower/hero "${pick.unit}"`);
+    if (!pick.upgrade || !pick.note) problems.push(`${at}: each pick needs an upgrade and a note`);
+  }
+};
+if (modesFile) {
+  checkUniqueIds(modesFile.modes ?? [], 'modes.json');
+  for (const mode of modesFile.modes ?? []) {
+    const at = `modes.json "${mode.id}"`;
+    if (!mode.name) problems.push(`${at}: missing name`);
+    if (!MODE_DIFFICULTIES.includes(mode.difficulty)) problems.push(`${at}: difficulty must be ${MODE_DIFFICULTIES.join(', ')}`);
+    if (!ICON.test(mode.icon ?? '')) problems.push(`${at}: icon must be a Lucide icon name`);
+    if (!Array.isArray(mode.rules) || !mode.rules.length) problems.push(`${at}: needs rules`);
+    if (!Array.isArray(mode.strategy) || !mode.strategy.length) problems.push(`${at}: needs strategy`);
+    checkPicks(mode.towers, `${at} towers`);
+    checkSourceIds(mode.sources, at);
+  }
+}
+if (mapsFile) {
+  checkUniqueIds(mapsFile.maps ?? [], 'maps.json');
+  for (const map of mapsFile.maps ?? []) {
+    const at = `maps.json "${map.id}"`;
+    if (!/^[a-z0-9-]+$/.test(map.id ?? '')) problems.push(`${at}: id must be lowercase letters, digits or dashes`);
+    if (!MAP_DIFFICULTIES.includes(map.difficulty)) problems.push(`${at}: difficulty must be ${MAP_DIFFICULTIES.join(', ')}`);
+    for (const field of ['name', 'summary', 'placement']) if (!map[field]) problems.push(`${at}: missing ${field}`);
+    if (!Array.isArray(map.traits)) problems.push(`${at}: traits must be a list`);
+    checkPicks(map.recommended, `${at} recommended`);
+    for (const modeId of Object.keys(map.modeNotes ?? {})) {
+      if (!modeIds.has(modeId)) problems.push(`${at}: modeNotes has unknown mode "${modeId}"`);
+    }
+    checkSourceIds(map.sources, at);
+  }
 }
 
 if (problems.length) {
   console.error(`✗ ${problems.length} problem(s) in /data:\n  - ${problems.join('\n  - ')}`);
   process.exit(1);
 }
-console.log(`✓ data OK: patch ${meta.patch}, ${towers.length} towers, ${heroes.length} heroes, ${paragonIds.size} paragons`);
+console.log(`✓ data OK: patch ${meta.patch}, ${towers.length} towers, ${heroes.length} heroes, ${paragonIds.size} paragons, ${mapsFile?.maps?.length ?? 0} maps, ${modeIds.size} modes`);

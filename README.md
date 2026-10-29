@@ -26,6 +26,8 @@ js/
     global-search.js     Header search.
     tower-page.js        A tower's own page (#tower/<id>).
     paragons.js          Paragons tab: tier list and degree guide.
+    paragon-page.js      A Paragon's own page (#paragon/<id>).
+    maps.js              Maps & Modes tab, map pages (#map/<id>) and mode pages (#mode/<id>).
   lib/
     economy.js           Farm income / payback maths (pure functions).
     upgrades.js          "2-0-5" → upgrade pip grid.
@@ -39,7 +41,9 @@ data/
   economy.json           Farm builds for the calculator, strategy cards, boss checkpoints.
   playbook.json          Mode notes, CHIMPS danger rounds, hero synergies, boss notes.
   sources.json           Every cited page (id → title + url). Entries point at these ids.
-  paragons.json          Paragon tier list (boss events) and the degree guide.
+  paragons.json          Paragon tier list (boss events), each Paragon's page and the degree guide.
+  maps.json              Every map: difficulty, traits, where to build, recommended towers, per-mode notes.
+  modes.json             Every game mode: rules, general strategy, towers that shine.
 ```
 
 ## Updating for a new patch
@@ -81,6 +85,22 @@ A tower looks like this:
 - `paragon`: id of the tower's Paragon in `paragons.json` (optional)
 
 Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
+
+### Maps, modes and Paragon pages
+
+- `maps.json` → `maps[]`: `id`, `name`, `difficulty` (Beginner, Intermediate, Advanced,
+  Expert), `traits`, `summary`, `placement`, `recommended: [{ upgrade, unit, note }]`,
+  `modeNotes: { "<mode id>": "…" }` (only where a source has something specific to say
+  about this map in that mode), `sources`. Page: `#map/<id>`.
+- `modes.json` → `modes[]`: `id`, `name`, `difficulty` (Easy, Medium, Hard, Any), Lucide
+  `icon`, `rules`, `strategy`, `towers: [{ upgrade, unit, note }]`, `sources`. Page: `#mode/<id>`.
+  A map page combines the map with whichever mode the visitor picks.
+- `paragons.json` → each Paragon also has `combines` (its three tier 5s), `howItWorks`,
+  `strategy`, `synergies: [{ unit, note }]` (a tower, hero or Paragon id), `bestBosses`,
+  `worstBosses` and `degreeTips`. Page: `#paragon/<id>`.
+
+Map and mode advice comes from each map's Bloons wiki page and the wiki's mode strategy
+pages; Paragon pages from each Paragon's wiki page (its Strategy section).
 
 ## Where the rankings come from
 

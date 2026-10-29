@@ -1,0 +1,534 @@
+{
+ "modes": [
+  {
+   "id": "easy",
+   "name": "Easy (Standard)",
+   "difficulty": "Easy",
+   "icon": "smile",
+   "rules": [
+    "Rounds 1–40, 200 lives.",
+    "Towers cost 15% less than Medium.",
+    "The round 40 MOAB has a third less health on Easy."
+   ],
+   "strategy": [
+    "Any reasonable defense works; it's the place to learn maps.",
+    "Save for one answer to the round 40 MOAB."
+   ],
+   "towers": [],
+   "sources": [
+    "wiki-difficulty"
+   ]
+  },
+  {
+   "id": "primary-only",
+   "name": "Primary Only",
+   "difficulty": "Easy",
+   "icon": "crosshair",
+   "rules": [
+    "Easy rules (rounds 1–40), but only Primary towers and your hero."
+   ],
+   "strategy": [
+    "Only Enhanced Eyesight, Cold Snap and Eagle Eye give Primary towers camo; leads need Bomb Shooters, Red Hot Rangs or Hot Shots.",
+    "The only blimp is the round 40 MOAB: a MOAB Assassin far from the track one-shots it, so don't overspend on anti-MOAB.",
+    "Hardest on Flooded Valley, where the dam blocks most Primary towers."
+   ],
+   "towers": [
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "The strongest pick: Spear pops leads, Vision handles the round 33–37 camos, Ancestral Might beats round 40."
+    },
+    {
+     "upgrade": "Quincy",
+     "unit": "quincy",
+     "note": "Gets camo and lead popping on time if placed at the start."
+    },
+    {
+     "upgrade": "Sauda",
+     "unit": "sauda",
+     "note": "Innate camo, lead popping from her level 3 ability."
+    },
+    {
+     "upgrade": "Geraldo",
+     "unit": "geraldo",
+     "note": "A Rare Quincy Action Figure bought on round 1 is worth about $9,700 by round 31."
+    },
+    {
+     "upgrade": "MOAB Assassin",
+     "unit": "bomb",
+     "note": "One-shots the only MOAB."
+    }
+   ],
+   "sources": [
+    "wiki-strategy-primary-only"
+   ]
+  },
+  {
+   "id": "deflation",
+   "name": "Deflation",
+   "difficulty": "Easy",
+   "icon": "piggy-bank",
+   "rules": [
+    "Start on round 31 with $20,000 (no income at all) and finish round 60.",
+    "Selling works normally; continues and powers are disabled."
+   ],
+   "strategy": [
+    "Build the whole defense on the first round and cover every bloon type (camo purples on 45 and 48, camo leads on 59).",
+    "Skip tier-2 towers other than Villages: a few strong tier 3–4s beat many tier 2s.",
+    "Trick: buy Monkey Commerce first, place everything in its range for the discount, upgrade, then sell the Commerce village.",
+    "Jungle Drums, Berserker Brew and Stronger Stimulant are worth it almost always. Income towers are useless."
+   ],
+   "towers": [
+    {
+     "upgrade": "The Blazing Sun",
+     "unit": "desperado",
+     "note": "5-2-0 is affordable with More Cash and can solo to round 60 on most maps."
+    },
+    {
+     "upgrade": "Neva-Miss Targeting",
+     "unit": "ace",
+     "note": "Three 2-0-3s with a 4-0-0 Stronger Stimulant and a 0-2-0 Village beat it on nearly every map."
+    },
+    {
+     "upgrade": "Bloon Area Denial System",
+     "unit": "dartling",
+     "note": "0-2-4 with a 3-2-0 Berserker Brew coasts through."
+    },
+    {
+     "upgrade": "Destroyer",
+     "unit": "bucc",
+     "note": "3-2-0 with a 3-2-0 Berserker Brew and camo; Brickell is the hero to pair."
+    },
+    {
+     "upgrade": "Robo Monkey",
+     "unit": "super",
+     "note": "2-3-0 carries maps without line-of-sight blockers if camo and purple are covered."
+    }
+   ],
+   "sources": [
+    "wiki-strategy-deflation",
+    "wiki-deflation"
+   ]
+  },
+  {
+   "id": "medium",
+   "name": "Medium (Standard)",
+   "difficulty": "Medium",
+   "icon": "meh",
+   "rules": [
+    "Rounds 1–60, 150 lives, normal tower prices.",
+    "Bloons move 10% faster than Easy."
+   ],
+   "strategy": [
+    "Farm early, then build a mid-game carry; the round 60 BFB is the final check."
+   ],
+   "towers": [],
+   "sources": [
+    "wiki-difficulty"
+   ]
+  },
+  {
+   "id": "military-only",
+   "name": "Military Only",
+   "difficulty": "Medium",
+   "icon": "shield",
+   "rules": [
+    "Medium rules (rounds 1–60), but only Military towers and your hero. No Banana Farms."
+   ],
+   "strategy": [
+    "Every Military tower has a cheap camo upgrade; Submerge and Support and Signal Flare strip camo.",
+    "Full Metal Jacket is the easiest lead answer; Hot Shot and Heat-tipped Darts also pop leads.",
+    "Unlike Primary Only, you can't leak every camo and still win."
+   ],
+   "towers": [
+    {
+     "upgrade": "Destroyer → Carrier Flagship",
+     "unit": "bucc",
+     "note": "3-2-0 Destroyer is one of the best early-mid towers; Flagship all but guarantees the win."
+    },
+    {
+     "upgrade": "Monkey Pirates",
+     "unit": "bucc",
+     "note": "A cheap finisher whose hook one-shots the round 60 BFB."
+    },
+    {
+     "upgrade": "Armor Piercing Darts → Sub Commander",
+     "unit": "sub",
+     "note": "Shreds MOABs on water maps, best with Brickell."
+    },
+    {
+     "upgrade": "Maim MOAB",
+     "unit": "sniper",
+     "note": "Stuns MOABs so the rest of your defense gets more hits."
+    },
+    {
+     "upgrade": "Admiral Brickell",
+     "unit": "brickell",
+     "note": "The best hero on water maps."
+    },
+    {
+     "upgrade": "Benjamin",
+     "unit": "ben",
+     "note": "Helps save for expensive Military tier 5s."
+    }
+   ],
+   "sources": [
+    "wiki-strategy-military-only"
+   ]
+  },
+  {
+   "id": "apopalypse",
+   "name": "Apopalypse",
+   "difficulty": "Medium",
+   "icon": "zap",
+   "rules": [
+    "Medium rules with random, harder rounds that never stop: you must act mid-round.",
+    "Stalling gains nothing."
+   ],
+   "strategy": [
+    "Get your hero early; have answers for camo, lead, zebra and purple by about rounds 12–20.",
+    "Farm (a Monkey Bank) in the 20s–30s, finish farming by about round 35, and sell farms when the first MOAB appears.",
+    "Late game, rely on Artillery Battery, Aircraft Carrier or BADS; Spectre if you farmed enough."
+   ],
+   "towers": [
+    {
+     "upgrade": "Destroyer",
+     "unit": "bucc",
+     "note": "3-2-0 with Berserker Brew and camo."
+    },
+    {
+     "upgrade": "Airburst Darts",
+     "unit": "sub",
+     "note": "2-0-2 coverage, into Triple Guns or Armor Piercing Darts."
+    },
+    {
+     "upgrade": "Dragon's Breath",
+     "unit": "wizard",
+     "note": "0-3-2."
+    },
+    {
+     "upgrade": "Artillery Battery",
+     "unit": "mortar",
+     "note": "2-4-0."
+    },
+    {
+     "upgrade": "Lead to Gold",
+     "unit": "alch",
+     "note": "Often better than farms mid-late game because leads are so common."
+    },
+    {
+     "upgrade": "Benjamin / Geraldo",
+     "unit": "ben",
+     "note": "Benjamin for income; Geraldo for flexibility."
+    }
+   ],
+   "sources": [
+    "wiki-apopalypse"
+   ]
+  },
+  {
+   "id": "reverse",
+   "name": "Reverse",
+   "difficulty": "Medium",
+   "icon": "undo-2",
+   "rules": [
+    "Medium rules, but bloons travel the track backwards and each round's groups come in reverse order."
+   ],
+   "strategy": [
+    "Barely changes most maps; normal Medium strategies work.",
+    "Past round 60, rounds 63 (densest clump first), 78 (camo Ceramics) and 95 (no warm-up) get harder.",
+    "Dark Castle (Spike Factories weaker) and Workshop (bloons go up the MOAB path) get notably harder."
+   ],
+   "towers": [],
+   "sources": [
+    "wiki-reverse"
+   ]
+  },
+  {
+   "id": "hard",
+   "name": "Hard (Standard)",
+   "difficulty": "Hard",
+   "icon": "frown",
+   "rules": [
+    "Rounds 3–80, 100 lives, towers cost 8% more than Medium.",
+    "Bloons move 25% faster than Easy."
+   ],
+   "strategy": [
+    "The best mode for earning XP and Monkey Knowledge before the harder Hard modes.",
+    "Prepare for rounds 40, 63, 75, 76 and 78 (see the CHIMPS playbook for counters)."
+   ],
+   "towers": [],
+   "sources": [
+    "wiki-difficulty"
+   ]
+  },
+  {
+   "id": "magic-only",
+   "name": "Magic Monkeys Only",
+   "difficulty": "Hard",
+   "icon": "sparkles",
+   "rules": [
+    "Hard rules (rounds 3–80), but only Magic towers and your hero."
+   ],
+   "strategy": [
+    "Get plenty of Monkey Knowledge first; beating Hard Standard on many maps helps.",
+    "Danger rounds: 40 (MOAB), 63 (Ceramic waves), 75 (BFB packs and fortified MOABs), 76, 78."
+   ],
+   "towers": [
+    {
+     "upgrade": "Geraldo",
+     "unit": "geraldo",
+     "note": "A Rare Quincy Action Figure bought before round 10 is worth over $23,000 by round 60; See Invisibility Potion handles camos."
+    },
+    {
+     "upgrade": "Obyn Greenfoot",
+     "unit": "obyn",
+     "note": "Buffs Magic towers, especially Druids; Wall of Trees tanks and pays out."
+    },
+    {
+     "upgrade": "Bloonjitsu",
+     "unit": "ninja",
+     "note": "With Berserker Brew it pops every type early; later a 20× Shinobi army."
+    },
+    {
+     "upgrade": "Druid of the Storm / Ball Lightning",
+     "unit": "druid",
+     "note": "Strong support and cleanup for the cost, especially with Obyn."
+    }
+   ],
+   "sources": [
+    "wiki-strategy-magic-only"
+   ]
+  },
+  {
+   "id": "double-hp-moabs",
+   "name": "Double HP MOABs",
+   "difficulty": "Hard",
+   "icon": "heart",
+   "rules": [
+    "Hard rules, but every MOAB-class bloon has double health (stacks with fortification)."
+   ],
+   "strategy": [
+    "Only slightly harder than Hard Standard and identical early, apart from rounds 40 and 50.",
+    "The round 40 MOAB is even more of a run-killer: bring a strong answer.",
+    "Blimp-damage towers gain value after the early game."
+   ],
+   "towers": [
+    {
+     "upgrade": "Turbo Charge",
+     "unit": "boomer",
+     "note": "Listed as a strong round 40 answer."
+    },
+    {
+     "upgrade": "MOAB Assassin",
+     "unit": "bomb",
+     "note": "Listed as a strong round 40 answer."
+    },
+    {
+     "upgrade": "Great White (max power)",
+     "unit": "beast",
+     "note": "Listed as a strong round 40 answer."
+    },
+    {
+     "upgrade": "Striker Jones / Pat Fusty",
+     "unit": "striker",
+     "note": "Heroes listed as strong round 40 answers."
+    }
+   ],
+   "sources": [
+    "wiki-double-hp-moabs"
+   ]
+  },
+  {
+   "id": "half-cash",
+   "name": "Half Cash",
+   "difficulty": "Hard",
+   "icon": "coins",
+   "rules": [
+    "Hard rules, but almost all cash is halved: starting cash, pops, round bonus and tower income.",
+    "Exceptions: Monkey Bank interest, Geraldo's Rare Quincy Action Figure, Corvus' Nourishment, Bananite crystals and the Havoc Staff are unaffected."
+   ],
+   "strategy": [
+    "Arguably the most frustrating mode; get lots of Monkey Knowledge first (Bonus Monkey!, More Cash, Mana Shield, Military Conscription, Veteran Monkey Training).",
+    "Your hero matters most: Corvus is the strongest. Place towers you'll upgrade later rather than sell.",
+    "Use several cheap towers over one expensive tier 5. Cheap buffs (Jungle Drums, Berserker Brew, Stronger Stimulant) are key.",
+    "There are no Super Ceramics, so grouped-damage towers that struggle in CHIMPS (Recursive Cluster, M.O.A.R Glaives, Ring of Fire) gain value."
+   ],
+   "towers": [
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "Strong at every stage and very versatile."
+    },
+    {
+     "upgrade": "Destroyer / Aircraft Carrier",
+     "unit": "bucc",
+     "note": "Recommended for most maps."
+    },
+    {
+     "upgrade": "Glue Hose / Glue Strike",
+     "unit": "glue",
+     "note": "Cheap control and support."
+    },
+    {
+     "upgrade": "M.O.A.R Glaives",
+     "unit": "boomer",
+     "note": "Cheap grouped damage with no Super Ceramics to worry about."
+    },
+    {
+     "upgrade": "Dragon's Breath / Summon Phoenix",
+     "unit": "wizard",
+     "note": "Recommended for most maps."
+    },
+    {
+     "upgrade": "Heavy Shells / Artillery Battery",
+     "unit": "mortar",
+     "note": "Recommended for most maps."
+    }
+   ],
+   "sources": [
+    "wiki-strategy-half-cash",
+    "wiki-half-cash",
+    "wiki-fandom-half-cash"
+   ]
+  },
+  {
+   "id": "abr",
+   "name": "Alternate Bloons Rounds",
+   "difficulty": "Hard",
+   "icon": "shuffle",
+   "rules": [
+    "Hard rules with redesigned, harder rounds: strong bloon types and camos appear much earlier. Win after round 80."
+   ],
+   "strategy": [
+    "Cover every bloon type early (lead, purple, camo, zebra); radar and decamo matter more than usual.",
+    "Danger rounds: 10 (early leads), 27 (huge camo rush), 30 (camo leads), 40 (fortified MOAB), 50, 63 (with camo Ceramics), 75 (arguably the hardest).",
+    "Once everything is covered, farm properly; cheap buffs are very useful."
+   ],
+   "towers": [
+    {
+     "upgrade": "Monkeyopolis",
+     "unit": "village",
+     "note": "Recommended economy."
+    },
+    {
+     "upgrade": "Benjamin / Sauda / Corvus / Geraldo",
+     "unit": "corvus",
+     "note": "The recommended heroes."
+    },
+    {
+     "upgrade": "Airburst Darts",
+     "unit": "sub",
+     "note": "Recommended for most maps."
+    },
+    {
+     "upgrade": "Bloonjitsu",
+     "unit": "ninja",
+     "note": "Recommended for most maps."
+    },
+    {
+     "upgrade": "Spectre",
+     "unit": "ace",
+     "note": "Recommended for most maps."
+    }
+   ],
+   "sources": [
+    "wiki-strategy-abr",
+    "wiki-abr"
+   ]
+  },
+  {
+   "id": "impoppable",
+   "name": "Impoppable",
+   "difficulty": "Hard",
+   "icon": "skull",
+   "rules": [
+    "Rounds 6–100 with one life (no Mana Shield).",
+    "Towers cost 20% more than Medium.",
+    "After round 80, Ceramics become Super Ceramics and bloons gradually speed up."
+   ],
+   "strategy": [
+    "Rounds 95 and 98 appear, so plan a real late game; farm well but not excessively.",
+    "Geraldo is recommended on every map; Benjamin snowballs income. Monkeyopolis (2-0-5) is the main money-maker.",
+    "Late carries: Flying Fortress (2-0-5 with a 2-2-0 Village), Ray of Doom, BEZ, Pouākai; sell Recursive Cluster, Ring of Fire and Crossbow Master around round 81."
+   ],
+   "towers": [
+    {
+     "upgrade": "Geraldo",
+     "unit": "geraldo",
+     "note": "Recommended on every map."
+    },
+    {
+     "upgrade": "Monkeyopolis",
+     "unit": "village",
+     "note": "The main money-maker (2-0-5)."
+    },
+    {
+     "upgrade": "Flying Fortress",
+     "unit": "ace",
+     "note": "The main late-game carry."
+    },
+    {
+     "upgrade": "Perma-Spike",
+     "unit": "spike",
+     "note": "Tanks huge numbers of bloons (1-0-5 with Jungle Drums and a 3-0-1 brew)."
+    }
+   ],
+   "sources": [
+    "wiki-impoppable",
+    "wiki-standard"
+   ]
+  },
+  {
+   "id": "chimps",
+   "name": "CHIMPS",
+   "difficulty": "Hard",
+   "icon": "skull",
+   "rules": [
+    "Rounds 6–100 with one life and no Continues, Hearts lost, Income, Monkey Knowledge, Powers or Selling."
+   ],
+   "strategy": [
+    "See the CHIMPS & Bosses tab for the danger rounds and their counters, and the CHIMPS tier list for win conditions."
+   ],
+   "towers": [],
+   "sources": [
+    "wiki-chimps"
+   ]
+  },
+  {
+   "id": "freeplay",
+   "name": "Freeplay",
+   "difficulty": "Any",
+   "icon": "infinity",
+   "rules": [
+    "Keep playing after winning a standard game; bloons get faster and tougher every round past 80.",
+    "Selling, income and Monkey Knowledge all work."
+   ],
+   "strategy": [
+    "Farm instead of over-building defense for the first 100 rounds: Banana Central, BRF spam, Monkeyopolis and Overclocks.",
+    "Bloonjitsu spam with about 20 Shinobi Tactics stacks each is the top late build, with Grandmaster Ninja and Grand Saboteur.",
+    "Paragons with high degrees, Ezili against late BADs and Homeland Defense as support."
+   ],
+   "towers": [
+    {
+     "upgrade": "Bloonjitsu + Shinobi Tactics",
+     "unit": "ninja",
+     "note": "The standard late-Freeplay damage build."
+    },
+    {
+     "upgrade": "Banana Central / Monkeyopolis",
+     "unit": "farm",
+     "note": "Income for the first 100 rounds."
+    },
+    {
+     "upgrade": "Ezili",
+     "unit": "ezili",
+     "note": "Strong against late BADs."
+    }
+   ],
+   "sources": [
+    "wiki-freeplay"
+   ]
+  }
+ ]
+}

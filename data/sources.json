@@ -1,226 +1,690 @@
 {
-  "wiki-chimps": {
-    "title": "Bloons wiki: CHIMPS strategy (v55.1)",
-    "url": "https://www.bloonswiki.com/Strategy:CHIMPS"
-  },
-  "wiki-boss-events": {
-    "title": "Bloons wiki: Boss Bloon Event strategy",
-    "url": "https://www.bloonswiki.com/Strategy:Boss_Bloon_Event"
-  },
-  "wiki-bloonarius": {
-    "title": "Bloons wiki: Bloonarius strategy",
-    "url": "https://www.bloonswiki.com/Strategy:Bloonarius_(BTD6)"
-  },
-  "wiki-dreadbloon": {
-    "title": "Bloons wiki: Dreadbloon strategy",
-    "url": "https://www.bloonswiki.com/Strategy:Dreadbloon_(BTD6)"
-  },
-  "wiki-lych": {
-    "title": "Bloons wiki: Lych strategy",
-    "url": "https://www.bloonswiki.com/Strategy:Lych"
-  },
-  "wiki-phayze": {
-    "title": "Bloons wiki: Phayze strategy",
-    "url": "https://www.bloonswiki.com/Strategy:Phayze"
-  },
-  "wiki-vortex": {
-    "title": "Bloons wiki: Vortex",
-    "url": "https://www.bloonswiki.com/Vortex_(BTD6)"
-  },
-  "wiki-blastapopoulos": {
-    "title": "Bloons wiki: Blastapopoulos",
-    "url": "https://www.bloonswiki.com/Blastapopoulos_(BTD6)"
-  },
-  "wiki-alch-strategy": {
-    "title": "Bloons wiki: Alchemist strategy (v50.2)",
-    "url": "https://www.bloonswiki.com/Strategy:Alchemist_(BTD6)"
-  },
-  "wiki-overclock": {
-    "title": "Bloons wiki: Overclock",
-    "url": "https://www.bloonswiki.com/Overclock_(BTD6)"
-  },
-  "wiki-archmage": {
-    "title": "Bloons wiki: Archmage",
-    "url": "https://www.bloonswiki.com/Archmage_(BTD6)"
-  },
-  "wiki-engineer-crosspaths": {
-    "title": "Bloons Wiki (Fandom): Engineer crosspathing",
-    "url": "https://bloons.fandom.com/wiki/Crosspathing/Engineer_Monkey"
-  },
-  "wiki-brf": {
-    "title": "Bloons wiki: Banana Research Facility",
-    "url": "https://www.bloonswiki.com/Banana_Research_Facility_(BTD6)"
-  },
-  "wiki-marketplace": {
-    "title": "Bloons wiki: Marketplace",
-    "url": "https://www.bloonswiki.com/Marketplace_(BTD6)"
-  },
-  "wiki-central-market": {
-    "title": "Bloons wiki: Central Market",
-    "url": "https://www.bloonswiki.com/Central_Market_(BTD6)"
-  },
-  "wiki-merchantman": {
-    "title": "Bloons wiki: Merchantman",
-    "url": "https://www.bloonswiki.com/Merchantman_(BTD6)"
-  },
-  "wiki-trade-empire": {
-    "title": "Bloons wiki: Trade Empire",
-    "url": "https://www.bloonswiki.com/Trade_Empire_(BTD6)"
-  },
-  "wiki-skywarden-release": {
-    "title": "Bloons wiki: Version 56.0 (Skywarden)",
-    "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_56.0"
-  },
-  "wiki-farwind-seer": {
-    "title": "Bloons wiki: Farwind Seer",
-    "url": "https://www.bloonswiki.com/Farwind_Seer"
-  },
-  "wiki-desperado-release": {
-    "title": "Bloons wiki: Version 49.0 (Desperado)",
-    "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_49.0"
-  },
-  "wiki-dart": {
-    "title": "Bloons wiki: Dart Monkey",
-    "url": "https://www.bloonswiki.com/Dart_Monkey_(BTD6)"
-  },
-  "wiki-boomerang": {
-    "title": "Bloons wiki: Boomerang Monkey",
-    "url": "https://www.bloonswiki.com/Boomerang_Monkey_(BTD6)"
-  },
-  "wiki-bomb": {
-    "title": "Bloons wiki: Bomb Shooter",
-    "url": "https://www.bloonswiki.com/Bomb_Shooter_(BTD6)"
-  },
-  "wiki-tack": {
-    "title": "Bloons wiki: Tack Shooter",
-    "url": "https://www.bloonswiki.com/Tack_Shooter_(BTD6)"
-  },
-  "wiki-ice": {
-    "title": "Bloons wiki: Ice Monkey",
-    "url": "https://www.bloonswiki.com/Ice_Monkey_(BTD6)"
-  },
-  "wiki-glue": {
-    "title": "Bloons wiki: Glue Gunner",
-    "url": "https://www.bloonswiki.com/Glue_Gunner_(BTD6)"
-  },
-  "wiki-desperado": {
-    "title": "Bloons wiki: Desperado",
-    "url": "https://www.bloonswiki.com/Desperado_(BTD6)"
-  },
-  "wiki-sniper": {
-    "title": "Bloons wiki: Sniper Monkey",
-    "url": "https://www.bloonswiki.com/Sniper_Monkey_(BTD6)"
-  },
-  "wiki-sub": {
-    "title": "Bloons wiki: Monkey Sub",
-    "url": "https://www.bloonswiki.com/Monkey_Sub_(BTD6)"
-  },
-  "wiki-buccaneer": {
-    "title": "Bloons wiki: Monkey Buccaneer",
-    "url": "https://www.bloonswiki.com/Monkey_Buccaneer_(BTD6)"
-  },
-  "wiki-ace": {
-    "title": "Bloons wiki: Monkey Ace",
-    "url": "https://www.bloonswiki.com/Monkey_Ace_(BTD6)"
-  },
-  "wiki-heli": {
-    "title": "Bloons wiki: Heli Pilot",
-    "url": "https://www.bloonswiki.com/Heli_Pilot_(BTD6)"
-  },
-  "wiki-mortar": {
-    "title": "Bloons wiki: Mortar Monkey",
-    "url": "https://www.bloonswiki.com/Mortar_Monkey_(BTD6)"
-  },
-  "wiki-dartling": {
-    "title": "Bloons wiki: Dartling Gunner",
-    "url": "https://www.bloonswiki.com/Dartling_Gunner_(BTD6)"
-  },
-  "wiki-super": {
-    "title": "Bloons wiki: Super Monkey",
-    "url": "https://www.bloonswiki.com/Super_Monkey_(BTD6)"
-  },
-  "wiki-ninja": {
-    "title": "Bloons wiki: Ninja Monkey",
-    "url": "https://www.bloonswiki.com/Ninja_Monkey_(BTD6)"
-  },
-  "wiki-alchemist": {
-    "title": "Bloons wiki: Alchemist",
-    "url": "https://www.bloonswiki.com/Alchemist_(BTD6)"
-  },
-  "wiki-druid": {
-    "title": "Bloons wiki: Druid",
-    "url": "https://www.bloonswiki.com/Druid_(BTD6)"
-  },
-  "wiki-mermonkey": {
-    "title": "Bloons wiki: Mermonkey",
-    "url": "https://www.bloonswiki.com/Mermonkey_(BTD6)"
-  },
-  "wiki-spike-factory": {
-    "title": "Bloons wiki: Spike Factory",
-    "url": "https://www.bloonswiki.com/Spike_Factory_(BTD6)"
-  },
-  "wiki-village": {
-    "title": "Bloons wiki: Monkey Village",
-    "url": "https://www.bloonswiki.com/Monkey_Village_(BTD6)"
-  },
-  "wiki-beast-handler": {
-    "title": "Bloons wiki: Beast Handler",
-    "url": "https://www.bloonswiki.com/Beast_Handler_(BTD6)"
-  },
-  "wiki-silas": {
-    "title": "Bloons wiki: Silas",
-    "url": "https://www.bloonswiki.com/Silas_(BTD6)"
-  },
-  "wiki-psi": {
-    "title": "Bloons wiki: Psi",
-    "url": "https://www.bloonswiki.com/Psi_(BTD6)"
-  },
-  "wiki-sauda": {
-    "title": "Bloons wiki: Sauda",
-    "url": "https://www.bloonswiki.com/Sauda_(BTD6)"
-  },
-  "steam-v57": {
-    "title": "Ninja Kiwi on Steam: v57.0 update notes (Oct 8, 2026)",
-    "url": "https://steamcommunity.com/app/960090/announcements/"
-  },
-  "ninjakiwi-x-v57": {
-    "title": "Ninja Kiwi on X: update 57 announcement",
-    "url": "https://x.com/ninjakiwigames/status/2106029995147612207"
-  },
-  "wiki-diamondback": {
-    "title": "Bloons wiki: Diamondback",
-    "url": "https://www.bloonswiki.com/Diamondback"
-  },
-  "wiki-paragon": {
-    "title": "Bloons wiki: Paragon",
-    "url": "https://www.bloonswiki.com/Paragon"
-  },
-  "wiki-crucible": {
-    "title": "Bloons wiki: Crucible of Steel and Flame",
-    "url": "https://www.bloonswiki.com/Crucible_of_Steel_and_Flame"
-  },
-  "wiki-magus": {
-    "title": "Bloons wiki: Magus Perfectus",
-    "url": "https://www.bloonswiki.com/Magus_Perfectus"
-  },
-  "wiki-master-builder": {
-    "title": "Bloons wiki: Master Builder",
-    "url": "https://www.bloonswiki.com/Master_Builder"
-  },
-  "wiki-wizard": {
-    "title": "Bloons wiki: Wizard Monkey",
-    "url": "https://www.bloonswiki.com/Wizard_Monkey_(BTD6)"
-  },
-  "wiki-farm": {
-    "title": "Bloons wiki: Banana Farm",
-    "url": "https://www.bloonswiki.com/Banana_Farm_(BTD6)"
-  },
-  "wiki-freeplay": {
-    "title": "Bloons wiki: Freeplay strategy",
-    "url": "https://www.bloonswiki.com/Strategy:Freeplay_(BTD6)"
-  },
-  "wiki-standard": {
-    "title": "Bloons wiki: Impoppable / standard-game strategy (v46.3)",
-    "url": "https://www.bloonswiki.com/Strategy:Impoppable_(BTD6)"
-  }
+ "wiki-chimps": {
+  "title": "Bloons wiki: CHIMPS strategy (v55.1)",
+  "url": "https://www.bloonswiki.com/Strategy:CHIMPS"
+ },
+ "wiki-boss-events": {
+  "title": "Bloons wiki: Boss Bloon Event strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Boss_Bloon_Event"
+ },
+ "wiki-bloonarius": {
+  "title": "Bloons wiki: Bloonarius strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Bloonarius_(BTD6)"
+ },
+ "wiki-dreadbloon": {
+  "title": "Bloons wiki: Dreadbloon strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Dreadbloon_(BTD6)"
+ },
+ "wiki-lych": {
+  "title": "Bloons wiki: Lych strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Lych"
+ },
+ "wiki-phayze": {
+  "title": "Bloons wiki: Phayze strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Phayze"
+ },
+ "wiki-vortex": {
+  "title": "Bloons wiki: Vortex",
+  "url": "https://www.bloonswiki.com/Vortex_(BTD6)"
+ },
+ "wiki-blastapopoulos": {
+  "title": "Bloons wiki: Blastapopoulos",
+  "url": "https://www.bloonswiki.com/Blastapopoulos_(BTD6)"
+ },
+ "wiki-alch-strategy": {
+  "title": "Bloons wiki: Alchemist strategy (v50.2)",
+  "url": "https://www.bloonswiki.com/Strategy:Alchemist_(BTD6)"
+ },
+ "wiki-overclock": {
+  "title": "Bloons wiki: Overclock",
+  "url": "https://www.bloonswiki.com/Overclock_(BTD6)"
+ },
+ "wiki-archmage": {
+  "title": "Bloons wiki: Archmage",
+  "url": "https://www.bloonswiki.com/Archmage_(BTD6)"
+ },
+ "wiki-engineer-crosspaths": {
+  "title": "Bloons Wiki (Fandom): Engineer crosspathing",
+  "url": "https://bloons.fandom.com/wiki/Crosspathing/Engineer_Monkey"
+ },
+ "wiki-brf": {
+  "title": "Bloons wiki: Banana Research Facility",
+  "url": "https://www.bloonswiki.com/Banana_Research_Facility_(BTD6)"
+ },
+ "wiki-marketplace": {
+  "title": "Bloons wiki: Marketplace",
+  "url": "https://www.bloonswiki.com/Marketplace_(BTD6)"
+ },
+ "wiki-central-market": {
+  "title": "Bloons wiki: Central Market",
+  "url": "https://www.bloonswiki.com/Central_Market_(BTD6)"
+ },
+ "wiki-merchantman": {
+  "title": "Bloons wiki: Merchantman",
+  "url": "https://www.bloonswiki.com/Merchantman_(BTD6)"
+ },
+ "wiki-trade-empire": {
+  "title": "Bloons wiki: Trade Empire",
+  "url": "https://www.bloonswiki.com/Trade_Empire_(BTD6)"
+ },
+ "wiki-skywarden-release": {
+  "title": "Bloons wiki: Version 56.0 (Skywarden)",
+  "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_56.0"
+ },
+ "wiki-farwind-seer": {
+  "title": "Bloons wiki: Farwind Seer",
+  "url": "https://www.bloonswiki.com/Farwind_Seer"
+ },
+ "wiki-desperado-release": {
+  "title": "Bloons wiki: Version 49.0 (Desperado)",
+  "url": "https://www.bloonswiki.com/Update_history:Bloons_TD_6/Version_49.0"
+ },
+ "wiki-dart": {
+  "title": "Bloons wiki: Dart Monkey",
+  "url": "https://www.bloonswiki.com/Dart_Monkey_(BTD6)"
+ },
+ "wiki-boomerang": {
+  "title": "Bloons wiki: Boomerang Monkey",
+  "url": "https://www.bloonswiki.com/Boomerang_Monkey_(BTD6)"
+ },
+ "wiki-bomb": {
+  "title": "Bloons wiki: Bomb Shooter",
+  "url": "https://www.bloonswiki.com/Bomb_Shooter_(BTD6)"
+ },
+ "wiki-tack": {
+  "title": "Bloons wiki: Tack Shooter",
+  "url": "https://www.bloonswiki.com/Tack_Shooter_(BTD6)"
+ },
+ "wiki-ice": {
+  "title": "Bloons wiki: Ice Monkey",
+  "url": "https://www.bloonswiki.com/Ice_Monkey_(BTD6)"
+ },
+ "wiki-glue": {
+  "title": "Bloons wiki: Glue Gunner",
+  "url": "https://www.bloonswiki.com/Glue_Gunner_(BTD6)"
+ },
+ "wiki-desperado": {
+  "title": "Bloons wiki: Desperado",
+  "url": "https://www.bloonswiki.com/Desperado_(BTD6)"
+ },
+ "wiki-sniper": {
+  "title": "Bloons wiki: Sniper Monkey",
+  "url": "https://www.bloonswiki.com/Sniper_Monkey_(BTD6)"
+ },
+ "wiki-sub": {
+  "title": "Bloons wiki: Monkey Sub",
+  "url": "https://www.bloonswiki.com/Monkey_Sub_(BTD6)"
+ },
+ "wiki-buccaneer": {
+  "title": "Bloons wiki: Monkey Buccaneer",
+  "url": "https://www.bloonswiki.com/Monkey_Buccaneer_(BTD6)"
+ },
+ "wiki-ace": {
+  "title": "Bloons wiki: Monkey Ace",
+  "url": "https://www.bloonswiki.com/Monkey_Ace_(BTD6)"
+ },
+ "wiki-heli": {
+  "title": "Bloons wiki: Heli Pilot",
+  "url": "https://www.bloonswiki.com/Heli_Pilot_(BTD6)"
+ },
+ "wiki-mortar": {
+  "title": "Bloons wiki: Mortar Monkey",
+  "url": "https://www.bloonswiki.com/Mortar_Monkey_(BTD6)"
+ },
+ "wiki-dartling": {
+  "title": "Bloons wiki: Dartling Gunner",
+  "url": "https://www.bloonswiki.com/Dartling_Gunner_(BTD6)"
+ },
+ "wiki-super": {
+  "title": "Bloons wiki: Super Monkey",
+  "url": "https://www.bloonswiki.com/Super_Monkey_(BTD6)"
+ },
+ "wiki-ninja": {
+  "title": "Bloons wiki: Ninja Monkey",
+  "url": "https://www.bloonswiki.com/Ninja_Monkey_(BTD6)"
+ },
+ "wiki-alchemist": {
+  "title": "Bloons wiki: Alchemist",
+  "url": "https://www.bloonswiki.com/Alchemist_(BTD6)"
+ },
+ "wiki-druid": {
+  "title": "Bloons wiki: Druid",
+  "url": "https://www.bloonswiki.com/Druid_(BTD6)"
+ },
+ "wiki-mermonkey": {
+  "title": "Bloons wiki: Mermonkey",
+  "url": "https://www.bloonswiki.com/Mermonkey_(BTD6)"
+ },
+ "wiki-spike-factory": {
+  "title": "Bloons wiki: Spike Factory",
+  "url": "https://www.bloonswiki.com/Spike_Factory_(BTD6)"
+ },
+ "wiki-village": {
+  "title": "Bloons wiki: Monkey Village",
+  "url": "https://www.bloonswiki.com/Monkey_Village_(BTD6)"
+ },
+ "wiki-beast-handler": {
+  "title": "Bloons wiki: Beast Handler",
+  "url": "https://www.bloonswiki.com/Beast_Handler_(BTD6)"
+ },
+ "wiki-silas": {
+  "title": "Bloons wiki: Silas",
+  "url": "https://www.bloonswiki.com/Silas_(BTD6)"
+ },
+ "wiki-psi": {
+  "title": "Bloons wiki: Psi",
+  "url": "https://www.bloonswiki.com/Psi_(BTD6)"
+ },
+ "wiki-sauda": {
+  "title": "Bloons wiki: Sauda",
+  "url": "https://www.bloonswiki.com/Sauda_(BTD6)"
+ },
+ "steam-v57": {
+  "title": "Ninja Kiwi on Steam: v57.0 update notes (Oct 8, 2026)",
+  "url": "https://steamcommunity.com/app/960090/announcements/"
+ },
+ "ninjakiwi-x-v57": {
+  "title": "Ninja Kiwi on X: update 57 announcement",
+  "url": "https://x.com/ninjakiwigames/status/2106029995147612207"
+ },
+ "wiki-diamondback": {
+  "title": "Bloons wiki: Diamondback",
+  "url": "https://www.bloonswiki.com/Diamondback"
+ },
+ "wiki-paragon": {
+  "title": "Bloons wiki: Paragon",
+  "url": "https://www.bloonswiki.com/Paragon"
+ },
+ "wiki-crucible": {
+  "title": "Bloons wiki: Crucible of Steel and Flame",
+  "url": "https://www.bloonswiki.com/Crucible_of_Steel_and_Flame"
+ },
+ "wiki-magus": {
+  "title": "Bloons wiki: Magus Perfectus",
+  "url": "https://www.bloonswiki.com/Magus_Perfectus"
+ },
+ "wiki-master-builder": {
+  "title": "Bloons wiki: Master Builder",
+  "url": "https://www.bloonswiki.com/Master_Builder"
+ },
+ "wiki-wizard": {
+  "title": "Bloons wiki: Wizard Monkey",
+  "url": "https://www.bloonswiki.com/Wizard_Monkey_(BTD6)"
+ },
+ "wiki-farm": {
+  "title": "Bloons wiki: Banana Farm",
+  "url": "https://www.bloonswiki.com/Banana_Farm_(BTD6)"
+ },
+ "wiki-freeplay": {
+  "title": "Bloons wiki: Freeplay strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Freeplay_(BTD6)"
+ },
+ "wiki-standard": {
+  "title": "Bloons wiki: Impoppable / standard-game strategy (v46.3)",
+  "url": "https://www.bloonswiki.com/Strategy:Impoppable_(BTD6)"
+ },
+ "wiki-map-alpine-run": {
+  "title": "Bloons wiki: Alpine Run",
+  "url": "https://www.bloonswiki.com/Alpine_Run"
+ },
+ "wiki-map-candy-falls": {
+  "title": "Bloons wiki: Candy Falls",
+  "url": "https://www.bloonswiki.com/Candy_Falls"
+ },
+ "wiki-map-carved": {
+  "title": "Bloons wiki: Carved",
+  "url": "https://www.bloonswiki.com/Carved"
+ },
+ "wiki-map-cubism": {
+  "title": "Bloons wiki: Cubism",
+  "url": "https://www.bloonswiki.com/Cubism"
+ },
+ "wiki-map-end-of-the-road": {
+  "title": "Bloons wiki: End Of The Road",
+  "url": "https://www.bloonswiki.com/End_Of_The_Road"
+ },
+ "wiki-map-four-circles": {
+  "title": "Bloons wiki: Four Circles",
+  "url": "https://www.bloonswiki.com/Four_Circles"
+ },
+ "wiki-map-frozen-over": {
+  "title": "Bloons wiki: Frozen Over",
+  "url": "https://www.bloonswiki.com/Frozen_Over"
+ },
+ "wiki-map-hedge": {
+  "title": "Bloons wiki: Hedge",
+  "url": "https://www.bloonswiki.com/Hedge"
+ },
+ "wiki-map-in-the-loop": {
+  "title": "Bloons wiki: In The Loop",
+  "url": "https://www.bloonswiki.com/In_The_Loop"
+ },
+ "wiki-map-logs": {
+  "title": "Bloons wiki: Logs",
+  "url": "https://www.bloonswiki.com/Logs"
+ },
+ "wiki-map-lotus-island": {
+  "title": "Bloons wiki: Lotus Island",
+  "url": "https://www.bloonswiki.com/Lotus_Island"
+ },
+ "wiki-map-middle-of-the-road": {
+  "title": "Bloons wiki: Middle of the Road",
+  "url": "https://www.bloonswiki.com/Middle_of_the_Road"
+ },
+ "wiki-map-monkey-meadow": {
+  "title": "Bloons wiki: Monkey Meadow",
+  "url": "https://www.bloonswiki.com/Monkey_Meadow_(BTD6)"
+ },
+ "wiki-map-one-two-tree": {
+  "title": "Bloons wiki: One Two Tree",
+  "url": "https://www.bloonswiki.com/One_Two_Tree"
+ },
+ "wiki-map-park-path": {
+  "title": "Bloons wiki: Park Path",
+  "url": "https://www.bloonswiki.com/Park_Path_(BTD6)"
+ },
+ "wiki-map-resort": {
+  "title": "Bloons wiki: Resort",
+  "url": "https://www.bloonswiki.com/Resort"
+ },
+ "wiki-map-scrapyard": {
+  "title": "Bloons wiki: Scrapyard",
+  "url": "https://www.bloonswiki.com/Scrapyard"
+ },
+ "wiki-map-skates": {
+  "title": "Bloons wiki: Skates",
+  "url": "https://www.bloonswiki.com/Skates"
+ },
+ "wiki-map-skull-tweak": {
+  "title": "Bloons wiki: Skull Tweak",
+  "url": "https://www.bloonswiki.com/Skull_Tweak"
+ },
+ "wiki-map-spa-pits": {
+  "title": "Bloons wiki: Spa Pits",
+  "url": "https://www.bloonswiki.com/Spa_Pits"
+ },
+ "wiki-map-the-cabin": {
+  "title": "Bloons wiki: The Cabin",
+  "url": "https://www.bloonswiki.com/The_Cabin"
+ },
+ "wiki-map-three-mines-round": {
+  "title": "Bloons wiki: Three Mines 'Round",
+  "url": "https://www.bloonswiki.com/Three_Mines_%27Round"
+ },
+ "wiki-map-tinkerton": {
+  "title": "Bloons wiki: Tinkerton",
+  "url": "https://www.bloonswiki.com/Tinkerton"
+ },
+ "wiki-map-town-center": {
+  "title": "Bloons wiki: Town Center",
+  "url": "https://www.bloonswiki.com/Town_Center"
+ },
+ "wiki-map-tree-stump": {
+  "title": "Bloons wiki: Tree Stump",
+  "url": "https://www.bloonswiki.com/Tree_Stump"
+ },
+ "wiki-map-winter-park": {
+  "title": "Bloons wiki: Winter Park",
+  "url": "https://www.bloonswiki.com/Winter_Park"
+ },
+ "wiki-map-adoras-temple": {
+  "title": "Bloons wiki: Adora's Temple",
+  "url": "https://www.bloonswiki.com/Adora%27s_Temple"
+ },
+ "wiki-map-ancient-portal": {
+  "title": "Bloons wiki: Ancient Portal",
+  "url": "https://www.bloonswiki.com/Ancient_Portal"
+ },
+ "wiki-map-balance": {
+  "title": "Bloons wiki: Balance",
+  "url": "https://www.bloonswiki.com/Balance"
+ },
+ "wiki-map-bazaar": {
+  "title": "Bloons wiki: Bazaar",
+  "url": "https://www.bloonswiki.com/Bazaar"
+ },
+ "wiki-map-bloonarius-prime": {
+  "title": "Bloons wiki: Bloonarius Prime",
+  "url": "https://www.bloonswiki.com/Bloonarius_Prime"
+ },
+ "wiki-map-chutes": {
+  "title": "Bloons wiki: Chutes",
+  "url": "https://www.bloonswiki.com/Chutes"
+ },
+ "wiki-map-covered-garden": {
+  "title": "Bloons wiki: Covered Garden",
+  "url": "https://www.bloonswiki.com/Covered_Garden"
+ },
+ "wiki-map-cracked": {
+  "title": "Bloons wiki: Cracked",
+  "url": "https://www.bloonswiki.com/Cracked"
+ },
+ "wiki-map-downstream": {
+  "title": "Bloons wiki: Downstream",
+  "url": "https://www.bloonswiki.com/Downstream_(BTD6)"
+ },
+ "wiki-map-encrypted": {
+  "title": "Bloons wiki: Encrypted",
+  "url": "https://www.bloonswiki.com/Encrypted"
+ },
+ "wiki-map-firing-range": {
+  "title": "Bloons wiki: Firing Range",
+  "url": "https://www.bloonswiki.com/Firing_Range"
+ },
+ "wiki-map-haunted": {
+  "title": "Bloons wiki: Haunted",
+  "url": "https://www.bloonswiki.com/Haunted"
+ },
+ "wiki-map-kartsndarts": {
+  "title": "Bloons wiki: KartsNDarts",
+  "url": "https://www.bloonswiki.com/KartsNDarts"
+ },
+ "wiki-map-lost-crevasse": {
+  "title": "Bloons wiki: Lost Crevasse",
+  "url": "https://www.bloonswiki.com/Lost_Crevasse"
+ },
+ "wiki-map-luminous-cove": {
+  "title": "Bloons wiki: Luminous Cove",
+  "url": "https://www.bloonswiki.com/Luminous_Cove"
+ },
+ "wiki-map-moon-landing": {
+  "title": "Bloons wiki: Moon Landing",
+  "url": "https://www.bloonswiki.com/Moon_Landing_(BTD6)"
+ },
+ "wiki-map-polyphemus": {
+  "title": "Bloons wiki: Polyphemus",
+  "url": "https://www.bloonswiki.com/Polyphemus"
+ },
+ "wiki-map-protect-the-yacht": {
+  "title": "Bloons wiki: Protect The Yacht",
+  "url": "https://www.bloonswiki.com/Protect_The_Yacht"
+ },
+ "wiki-map-quarry": {
+  "title": "Bloons wiki: Quarry",
+  "url": "https://www.bloonswiki.com/Quarry"
+ },
+ "wiki-map-quiet-street": {
+  "title": "Bloons wiki: Quiet Street",
+  "url": "https://www.bloonswiki.com/Quiet_Street"
+ },
+ "wiki-map-rake": {
+  "title": "Bloons wiki: Rake",
+  "url": "https://www.bloonswiki.com/Rake"
+ },
+ "wiki-map-spice-islands": {
+  "title": "Bloons wiki: Spice Islands",
+  "url": "https://www.bloonswiki.com/Spice_Islands"
+ },
+ "wiki-map-spring-spring": {
+  "title": "Bloons wiki: Spring Spring",
+  "url": "https://www.bloonswiki.com/Spring_Spring"
+ },
+ "wiki-map-streambed": {
+  "title": "Bloons wiki: Streambed",
+  "url": "https://www.bloonswiki.com/Streambed"
+ },
+ "wiki-map-sulfur-springs": {
+  "title": "Bloons wiki: Sulfur Springs",
+  "url": "https://www.bloonswiki.com/Sulfur_Springs"
+ },
+ "wiki-map-water-park": {
+  "title": "Bloons wiki: Water Park",
+  "url": "https://www.bloonswiki.com/Water_Park"
+ },
+ "wiki-map-another-brick": {
+  "title": "Bloons wiki: Another Brick",
+  "url": "https://www.bloonswiki.com/Another_Brick"
+ },
+ "wiki-map-ascent": {
+  "title": "Bloons wiki: Ascent",
+  "url": "https://www.bloonswiki.com/Ascent"
+ },
+ "wiki-map-cargo": {
+  "title": "Bloons wiki: Cargo",
+  "url": "https://www.bloonswiki.com/Cargo"
+ },
+ "wiki-map-castle-revenge": {
+  "title": "Bloons wiki: Castle Revenge",
+  "url": "https://www.bloonswiki.com/Castle_Revenge"
+ },
+ "wiki-map-cornfield": {
+  "title": "Bloons wiki: Cornfield",
+  "url": "https://www.bloonswiki.com/Cornfield"
+ },
+ "wiki-map-dark-path": {
+  "title": "Bloons wiki: Dark Path",
+  "url": "https://www.bloonswiki.com/Dark_Path"
+ },
+ "wiki-map-enchanted-glade": {
+  "title": "Bloons wiki: Enchanted Glade",
+  "url": "https://www.bloonswiki.com/Enchanted_Glade"
+ },
+ "wiki-map-erosion": {
+  "title": "Bloons wiki: Erosion",
+  "url": "https://www.bloonswiki.com/Erosion"
+ },
+ "wiki-map-geared": {
+  "title": "Bloons wiki: Geared",
+  "url": "https://www.bloonswiki.com/Geared"
+ },
+ "wiki-map-high-finance": {
+  "title": "Bloons wiki: High Finance",
+  "url": "https://www.bloonswiki.com/High_Finance"
+ },
+ "wiki-map-last-resort": {
+  "title": "Bloons wiki: Last Resort",
+  "url": "https://www.bloonswiki.com/Last_Resort"
+ },
+ "wiki-map-mesa": {
+  "title": "Bloons wiki: Mesa",
+  "url": "https://www.bloonswiki.com/Mesa"
+ },
+ "wiki-map-midnight-mansion": {
+  "title": "Bloons wiki: Midnight Mansion",
+  "url": "https://www.bloonswiki.com/Midnight_Mansion"
+ },
+ "wiki-map-mushroom-grotto": {
+  "title": "Bloons wiki: Mushroom Grotto",
+  "url": "https://www.bloonswiki.com/Mushroom_Grotto"
+ },
+ "wiki-map-off-the-coast": {
+  "title": "Bloons wiki: Off The Coast",
+  "url": "https://www.bloonswiki.com/Off_The_Coast"
+ },
+ "wiki-map-party-parade": {
+  "title": "Bloons wiki: Party Parade",
+  "url": "https://www.bloonswiki.com/Party_Parade"
+ },
+ "wiki-map-pats-pond": {
+  "title": "Bloons wiki: Pat's Pond",
+  "url": "https://www.bloonswiki.com/Pat%27s_Pond"
+ },
+ "wiki-map-peninsula": {
+  "title": "Bloons wiki: Peninsula",
+  "url": "https://www.bloonswiki.com/Peninsula"
+ },
+ "wiki-map-ship-capture": {
+  "title": "Bloons wiki: Ship Capture",
+  "url": "https://www.bloonswiki.com/Ship_Capture"
+ },
+ "wiki-map-spillway": {
+  "title": "Bloons wiki: Spillway",
+  "url": "https://www.bloonswiki.com/Spillway"
+ },
+ "wiki-map-sunken-columns": {
+  "title": "Bloons wiki: Sunken Columns",
+  "url": "https://www.bloonswiki.com/Sunken_Columns"
+ },
+ "wiki-map-sunset-gulch": {
+  "title": "Bloons wiki: Sunset Gulch",
+  "url": "https://www.bloonswiki.com/Sunset_Gulch"
+ },
+ "wiki-map-underground": {
+  "title": "Bloons wiki: Underground",
+  "url": "https://www.bloonswiki.com/Underground"
+ },
+ "wiki-map-x-factor": {
+  "title": "Bloons wiki: X Factor",
+  "url": "https://www.bloonswiki.com/X_Factor"
+ },
+ "wiki-map-blons": {
+  "title": "Bloons wiki: Blons",
+  "url": "https://www.bloonswiki.com/Blons"
+ },
+ "wiki-map-bloody-puddles": {
+  "title": "Bloons wiki: Bloody Puddles",
+  "url": "https://www.bloonswiki.com/Bloody_Puddles"
+ },
+ "wiki-map-dark-castle": {
+  "title": "Bloons wiki: Dark Castle",
+  "url": "https://www.bloonswiki.com/Dark_Castle"
+ },
+ "wiki-map-dark-dungeons": {
+  "title": "Bloons wiki: Dark Dungeons",
+  "url": "https://www.bloonswiki.com/Dark_Dungeons"
+ },
+ "wiki-map-flooded-valley": {
+  "title": "Bloons wiki: Flooded Valley",
+  "url": "https://www.bloonswiki.com/Flooded_Valley"
+ },
+ "wiki-map-glacial-trail": {
+  "title": "Bloons wiki: Glacial Trail",
+  "url": "https://www.bloonswiki.com/Glacial_Trail"
+ },
+ "wiki-map-infernal": {
+  "title": "Bloons wiki: Infernal",
+  "url": "https://www.bloonswiki.com/Infernal"
+ },
+ "wiki-map-muddy-puddles": {
+  "title": "Bloons wiki: Muddy Puddles",
+  "url": "https://www.bloonswiki.com/Muddy_Puddles"
+ },
+ "wiki-map-ouch": {
+  "title": "Bloons wiki: #Ouch",
+  "url": "https://www.bloonswiki.com/Ouch"
+ },
+ "wiki-map-quad": {
+  "title": "Bloons wiki: Quad",
+  "url": "https://www.bloonswiki.com/Quad"
+ },
+ "wiki-map-ravine": {
+  "title": "Bloons wiki: Ravine",
+  "url": "https://www.bloonswiki.com/Ravine"
+ },
+ "wiki-map-sanctuary": {
+  "title": "Bloons wiki: Sanctuary",
+  "url": "https://www.bloonswiki.com/Sanctuary"
+ },
+ "wiki-map-tricky-tracks": {
+  "title": "Bloons wiki: Tricky Tracks",
+  "url": "https://www.bloonswiki.com/Tricky_Tracks"
+ },
+ "wiki-map-workshop": {
+  "title": "Bloons wiki: Workshop",
+  "url": "https://www.bloonswiki.com/Workshop_(BTD6)"
+ },
+ "wiki-difficulty": {
+  "title": "Bloons wiki: Difficulty",
+  "url": "https://www.bloonswiki.com/Difficulty"
+ },
+ "wiki-strategy-primary-only": {
+  "title": "Bloons wiki: Primary Only strategy (v49.3)",
+  "url": "https://www.bloonswiki.com/Strategy:Primary_Only"
+ },
+ "wiki-strategy-deflation": {
+  "title": "Bloons wiki: Deflation strategy (v57.1)",
+  "url": "https://www.bloonswiki.com/Strategy:Deflation_(BTD6)"
+ },
+ "wiki-deflation": {
+  "title": "Bloons wiki: Deflation",
+  "url": "https://www.bloonswiki.com/Deflation_(BTD6)"
+ },
+ "wiki-strategy-military-only": {
+  "title": "Bloons wiki: Military Only strategy (v46.3)",
+  "url": "https://www.bloonswiki.com/Strategy:Military_Only"
+ },
+ "wiki-apopalypse": {
+  "title": "Bloons wiki: Apopalypse strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Apopalypse_(BTD6)"
+ },
+ "wiki-reverse": {
+  "title": "Bloons wiki: Reverse",
+  "url": "https://www.bloonswiki.com/Reverse_(BTD6)"
+ },
+ "wiki-strategy-magic-only": {
+  "title": "Bloons wiki: Magic Monkeys Only strategy (v46.3)",
+  "url": "https://www.bloonswiki.com/Strategy:Magic_Monkeys_Only"
+ },
+ "wiki-double-hp-moabs": {
+  "title": "Bloons wiki: Double HP MOABs (v56.3)",
+  "url": "https://www.bloonswiki.com/Double_HP_MOABs"
+ },
+ "wiki-strategy-half-cash": {
+  "title": "Bloons wiki: Half Cash strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Half_Cash"
+ },
+ "wiki-half-cash": {
+  "title": "Bloons wiki: Half Cash",
+  "url": "https://www.bloonswiki.com/Half_Cash"
+ },
+ "wiki-fandom-half-cash": {
+  "title": "Bloons Wiki (Fandom): Half Cash",
+  "url": "https://bloons.fandom.com/wiki/Half_Cash"
+ },
+ "wiki-strategy-abr": {
+  "title": "Bloons wiki: Alternate Bloons Rounds strategy",
+  "url": "https://www.bloonswiki.com/Strategy:Alternate_Bloons_Rounds"
+ },
+ "wiki-abr": {
+  "title": "Bloons wiki: Alternate Bloons Rounds",
+  "url": "https://www.bloonswiki.com/Alternate_Bloons_Rounds"
+ },
+ "wiki-impoppable": {
+  "title": "Bloons wiki: Impoppable",
+  "url": "https://www.bloonswiki.com/Impoppable_(BTD6)"
+ },
+ "wiki-apex-plasma-master": {
+  "title": "Bloons wiki: Apex Plasma Master",
+  "url": "https://www.bloonswiki.com/Apex_Plasma_Master"
+ },
+ "wiki-glaive-dominus": {
+  "title": "Bloons wiki: Glaive Dominus",
+  "url": "https://www.bloonswiki.com/Glaive_Dominus"
+ },
+ "wiki-ascended-shadow": {
+  "title": "Bloons wiki: Ascended Shadow",
+  "url": "https://www.bloonswiki.com/Ascended_Shadow"
+ },
+ "wiki-navarch": {
+  "title": "Bloons wiki: Navarch of the Seas",
+  "url": "https://www.bloonswiki.com/Navarch_of_the_Seas"
+ },
+ "wiki-goliath-doomship": {
+  "title": "Bloons wiki: Goliath Doomship",
+  "url": "https://www.bloonswiki.com/Goliath_Doomship"
+ },
+ "wiki-nautic-siege-core": {
+  "title": "Bloons wiki: Nautic Siege Core",
+  "url": "https://www.bloonswiki.com/Nautic_Siege_Core"
+ },
+ "wiki-mmmf": {
+  "title": "Bloons wiki: Mega Massive Munitions Factory",
+  "url": "https://www.bloonswiki.com/Mega_Massive_Munitions_Factory"
+ },
+ "wiki-bomb-bunker": {
+  "title": "Bloons wiki: Ballistic Obliteration Missile Bunker",
+  "url": "https://www.bloonswiki.com/Ballistic_Obliteration_Missile_Bunker"
+ },
+ "wiki-herald": {
+  "title": "Bloons wiki: Herald of Everfrost",
+  "url": "https://www.bloonswiki.com/Herald_of_Everfrost"
+ },
+ "wiki-root-of-all-nature": {
+  "title": "Bloons wiki: Root of all Nature",
+  "url": "https://www.bloonswiki.com/Root_of_all_Nature"
+ },
+ "wiki-spider-monkey": {
+  "title": "Bloons wiki: S.P.I.D.E.R. Monkey",
+  "url": "https://www.bloonswiki.com/S.P.I.D.E.R._Monkey"
+ }
 }

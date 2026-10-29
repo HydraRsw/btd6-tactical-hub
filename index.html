@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>BTD6 Tactical Hub</title>
-  <meta name="description" content="Unofficial BTD6 fan hub: tier lists, crosspath guide, farming calculator and CHIMPS/boss playbooks.">
+  <meta name="description" content="Unofficial BTD6 fan hub: tier lists, crosspath guide, map and game-mode strategies, Paragon guides, farming calculator and CHIMPS/boss playbooks.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎈</text></svg>">
 
   <!-- Fonts: Luckiest Guy for BTD6-style headings, Nunito for everything else -->
@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="css/theme.css?v=194c6e55ae">
   <link rel="stylesheet" href="css/components.css?v=84766d580b">
-  <link rel="stylesheet" href="css/layout.css?v=34ad81d8e0">
+  <link rel="stylesheet" href="css/layout.css?v=65bd3d7522">
 
   <!-- Libraries (no build step). Order matters: our module first, Alpine last. -->
   <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
@@ -22,26 +22,28 @@
   <script type="importmap">
   {
     "imports": {
-      "./js/components/crosspath.js": "./js/components/crosspath.js?v=4578cbb2e8",
-      "./js/components/farming.js": "./js/components/farming.js?v=4578cbb2e8",
-      "./js/components/global-search.js": "./js/components/global-search.js?v=4578cbb2e8",
-      "./js/components/paragons.js": "./js/components/paragons.js?v=4578cbb2e8",
-      "./js/components/playbook.js": "./js/components/playbook.js?v=4578cbb2e8",
-      "./js/components/tier-list.js": "./js/components/tier-list.js?v=4578cbb2e8",
-      "./js/components/tower-page.js": "./js/components/tower-page.js?v=4578cbb2e8",
-      "./js/directives.js": "./js/directives.js?v=4578cbb2e8",
-      "./js/lib/data.js": "./js/lib/data.js?v=4578cbb2e8",
-      "./js/lib/economy.js": "./js/lib/economy.js?v=4578cbb2e8",
-      "./js/lib/storage.js": "./js/lib/storage.js?v=4578cbb2e8",
-      "./js/lib/text.js": "./js/lib/text.js?v=4578cbb2e8",
-      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=4578cbb2e8",
-      "./js/main.js": "./js/main.js?v=4578cbb2e8",
-      "./js/store.js": "./js/store.js?v=4578cbb2e8"
+      "./js/components/crosspath.js": "./js/components/crosspath.js?v=0167d9aee1",
+      "./js/components/farming.js": "./js/components/farming.js?v=0167d9aee1",
+      "./js/components/global-search.js": "./js/components/global-search.js?v=0167d9aee1",
+      "./js/components/maps.js": "./js/components/maps.js?v=0167d9aee1",
+      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=0167d9aee1",
+      "./js/components/paragons.js": "./js/components/paragons.js?v=0167d9aee1",
+      "./js/components/playbook.js": "./js/components/playbook.js?v=0167d9aee1",
+      "./js/components/tier-list.js": "./js/components/tier-list.js?v=0167d9aee1",
+      "./js/components/tower-page.js": "./js/components/tower-page.js?v=0167d9aee1",
+      "./js/directives.js": "./js/directives.js?v=0167d9aee1",
+      "./js/lib/data.js": "./js/lib/data.js?v=0167d9aee1",
+      "./js/lib/economy.js": "./js/lib/economy.js?v=0167d9aee1",
+      "./js/lib/storage.js": "./js/lib/storage.js?v=0167d9aee1",
+      "./js/lib/text.js": "./js/lib/text.js?v=0167d9aee1",
+      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=0167d9aee1",
+      "./js/main.js": "./js/main.js?v=0167d9aee1",
+      "./js/store.js": "./js/store.js?v=0167d9aee1"
     }
   }
   </script>
   <!-- import-map:end -->
-  <script type="module" src="js/main.js?v=4578cbb2e8"></script>
+  <script type="module" src="js/main.js?v=0167d9aee1"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 
@@ -65,7 +67,7 @@
         <div class="field-with-icon">
           <span x-icon="search"></span>
           <input id="site-search-input" x-ref="input" class="field" type="search" autocomplete="off"
-                 placeholder="Search towers, heroes, rounds…  ( / )"
+                 placeholder="Search towers, maps, Paragons…  ( / )"
                  x-model="query" @input="onType()" @focus="onType()"
                  @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)"
                  @keydown.enter.prevent="choose()" @keydown.escape="close(); $el.blur()">
@@ -99,6 +101,7 @@
       <template x-for="tab in [
           { id: 'tier',   label: 'Tier List',        icon: 'layers' },
           { id: 'cross',  label: 'Crosspath Guide',  icon: 'git-branch' },
+          { id: 'maps',   label: 'Maps & Modes',     icon: 'map' },
           { id: 'paragons', label: 'Paragons',       icon: 'crown' },
           { id: 'farm',   label: 'Farming Engine',   icon: 'banana' },
           { id: 'chimps', label: 'CHIMPS & Bosses',  icon: 'skull' } ]" :key="tab.id">
@@ -345,6 +348,233 @@
         </section>
 
         <!-- =============================================================
+             TAB · MAPS  (every map plus the game modes)
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'maps'" x-cloak x-data="mapGuide" class="stack">
+          <div class="section-head">
+            <div>
+              <h2 class="game-title">Map <span class="highlight">Strategies</span></h2>
+              <p x-text="$store.hub.maps.intro"></p>
+            </div>
+          </div>
+
+          <!-- Game modes -->
+          <div class="panel panel--padded stack stack--tight">
+            <h3 class="game-title game-title--small panel__title"><span x-icon="gamepad-2"></span>Game modes</h3>
+            <p class="dim tower-note">Each mode's rules and general strategy. Pick one to see it on every map page.</p>
+            <template x-for="group in MODE_GROUPS" :key="group">
+              <div class="mode-row" x-show="modesIn(group).length">
+                <span class="mode-row__label" :data-difficulty="group" x-text="group"></span>
+                <div class="pill-list">
+                  <template x-for="mode in modesIn(group)" :key="mode.id">
+                    <button class="button button--small" :class="$store.hub.mapMode === mode.id ? 'button--gold' : 'button--quiet'"
+                            @click="$store.hub.setMapMode(mode.id)" :aria-pressed="$store.hub.mapMode === mode.id">
+                      <span x-icon="mode.icon"></span><span x-text="mode.name"></span>
+                    </button>
+                  </template>
+                </div>
+              </div>
+            </template>
+            <template x-if="$store.hub.findMode($store.hub.mapMode)">
+              <div class="well mode-preview">
+                <p class="muted" x-text="$store.hub.findMode($store.hub.mapMode).rules[0]"></p>
+                <button class="button button--blue button--small" @click="$store.hub.openPage('mode', $store.hub.mapMode)">
+                  <span x-icon="book-open"></span><span x-text="`${$store.hub.findMode($store.hub.mapMode).name} guide`"></span>
+                </button>
+              </div>
+            </template>
+          </div>
+
+          <!-- Filters -->
+          <div class="row-wrap">
+            <div class="mode-switch mode-switch--wide">
+              <template x-for="d in ['All', ...DIFFICULTIES]" :key="d">
+                <button class="button button--small" :class="difficulty === d ? 'button--gold' : 'button--quiet'"
+                        :aria-pressed="difficulty === d" @click="difficulty = d" x-text="d"></button>
+              </template>
+            </div>
+            <div class="field-with-icon push-right map-search">
+              <span x-icon="filter"></span>
+              <input class="field" type="search" placeholder="Find a map or trait…" x-model="query" aria-label="Find a map">
+            </div>
+          </div>
+
+          <template x-for="group in groups" :key="group.difficulty">
+            <div class="stack stack--tight">
+              <div class="tier-group-heading">
+                <span class="difficulty-pill" :data-difficulty="group.difficulty" x-text="group.difficulty"></span>
+                <span class="dim" x-text="`${group.maps.length} maps`"></span>
+                <span class="tier-group-heading__line"></span>
+              </div>
+              <div class="map-grid">
+                <template x-for="map in group.maps" :key="map.id">
+                  <button class="panel map-card" :data-difficulty="map.difficulty" @click="$store.hub.openPage('map', map.id)">
+                    <span class="map-card__top">
+                      <span class="game-title game-title--small" x-text="map.name"></span>
+                      <span class="pill pill--good push-right" x-show="noteFor(map)" title="This map has a note for the selected mode"><span x-icon="sparkles"></span>Mode note</span>
+                    </span>
+                    <span class="pill-list">
+                      <template x-for="trait in map.traits.slice(0, 3)"><span class="pill pill--trait" x-text="trait"></span></template>
+                    </span>
+                    <span class="map-card__summary" x-text="map.summary"></span>
+                  </button>
+                </template>
+              </div>
+            </div>
+          </template>
+          <div class="panel panel--padded muted" x-show="groups.length === 0">No maps match that filter.</div>
+        </section>
+
+        <!-- =============================================================
+             MAP PAGE  (#map/<id>)
+             ============================================================= -->
+        <template x-if="$store.hub.activeTab === 'map' && $store.hub.currentPage">
+          <section x-data="mapPage" class="stack tower-page">
+            <nav class="row-wrap">
+              <button class="button button--quiet button--small" @click="$store.hub.openTab('maps')"><span x-icon="arrow-left"></span>All maps</button>
+              <span class="push-right row-wrap">
+                <button class="button button--quiet button--small" @click="$store.hub.openPage('map', neighbour(-1).id)" :aria-label="`Previous map: ${neighbour(-1).name}`"><span x-icon="chevron-left"></span><span class="neighbour-name" x-text="neighbour(-1).name"></span></button>
+                <button class="button button--quiet button--small" @click="$store.hub.openPage('map', neighbour(1).id)" :aria-label="`Next map: ${neighbour(1).name}`"><span class="neighbour-name" x-text="neighbour(1).name"></span><span x-icon="chevron-right"></span></button>
+              </span>
+            </nav>
+
+            <header class="panel tower-hero map-hero" :data-difficulty="map.difficulty">
+              <div class="avatar avatar--huge map-hero__icon" :data-difficulty="map.difficulty"><span x-icon="'map'"></span></div>
+              <div class="tower-hero__text">
+                <h2 class="game-title" x-text="map.name"></h2>
+                <div class="pill-list">
+                  <span class="difficulty-pill" :data-difficulty="map.difficulty" x-text="map.difficulty"></span>
+                  <template x-for="trait in map.traits"><span class="pill pill--trait" x-text="trait"></span></template>
+                </div>
+                <p x-text="map.summary"></p>
+              </div>
+            </header>
+
+            <div class="tip-columns tip-columns--two">
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="map-pin"></span>Where to build</h3>
+                <p x-text="map.placement"></p>
+              </div>
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="star"></span>Recommended here</h3>
+                <div class="stack stack--tight" x-show="recommended.length">
+                  <template x-for="entry in recommended" :key="entry.upgrade">
+                    <button class="well synergy" @click="entry.partner && openUnit(entry.partner)" :class="{ 'synergy--blocked': restriction(entry.partner, $store.hub.mapMode) }">
+                      <template x-if="entry.partner"><div x-avatar.small="entry.partner"></div></template>
+                      <span class="synergy__text">
+                        <span class="synergy__name" x-text="entry.upgrade"></span>
+                        <span class="synergy__note" x-text="entry.note"></span>
+                        <span class="pill pill--warn" x-show="restriction(entry.partner, $store.hub.mapMode)" x-text="restriction(entry.partner, $store.hub.mapMode)"></span>
+                      </span>
+                    </button>
+                  </template>
+                </div>
+                <p class="muted" x-show="!recommended.length">The guides don't single out one tower for this map; use the mode advice below.</p>
+              </div>
+            </div>
+
+            <!-- Mode switcher -->
+            <div class="panel panel--padded stack stack--tight">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="gamepad-2"></span>Playing it in…</h3>
+              <div class="pill-list">
+                <template x-for="m in $store.hub.modes.modes" :key="m.id">
+                  <button class="button button--small" :class="$store.hub.mapMode === m.id ? 'button--gold' : 'button--quiet'"
+                          @click="$store.hub.setMapMode(m.id)" :aria-pressed="$store.hub.mapMode === m.id">
+                    <span x-text="m.name"></span><span class="mode-dot" x-show="hasNote(m.id)" title="Has a note for this map"></span>
+                  </button>
+                </template>
+              </div>
+
+              <template x-if="mode">
+                <div class="stack stack--tight">
+                  <p class="note note--gold" x-show="mapNote"><span x-icon="sparkles"></span><span><strong x-text="`${map.name} in ${mode.name}: `"></strong><span x-text="mapNote"></span></span></p>
+                  <div class="tip-columns tip-columns--two">
+                    <div class="well">
+                      <h4 class="game-title game-title--small">Rules</h4>
+                      <ul class="tip-list"><template x-for="rule in mode.rules"><li><span x-icon="info"></span><span x-text="rule"></span></li></template></ul>
+                    </div>
+                    <div class="well">
+                      <h4 class="game-title game-title--small">Mode strategy</h4>
+                      <ul class="tip-list"><template x-for="tip in mode.strategy"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template></ul>
+                    </div>
+                  </div>
+                  <div class="synergy-grid" x-show="modeTowers.length">
+                    <template x-for="entry in modeTowers" :key="entry.upgrade">
+                      <button class="well synergy" @click="entry.partner && openUnit(entry.partner)">
+                        <template x-if="entry.partner"><div x-avatar.small="entry.partner"></div></template>
+                        <span class="synergy__text">
+                          <span class="synergy__name" x-text="entry.upgrade"></span>
+                          <span class="synergy__note" x-text="entry.note"></span>
+                        </span>
+                      </button>
+                    </template>
+                  </div>
+                  <p class="dim tower-note">Mode advice is general (from the mode's strategy guide); the highlighted note, when there is one, is specific to this map.</p>
+                  <button class="button button--blue button--small" style="align-self:flex-start" @click="$store.hub.openPage('mode', mode.id)"><span x-icon="book-open"></span><span x-text="`Full ${mode.name} guide`"></span></button>
+                </div>
+              </template>
+            </div>
+
+            <p x-sources="sources"></p>
+          </section>
+        </template>
+
+        <!-- =============================================================
+             GAME MODE PAGE  (#mode/<id>)
+             ============================================================= -->
+        <template x-if="$store.hub.activeTab === 'mode' && $store.hub.currentPage">
+          <section x-data="modePage" class="stack tower-page">
+            <nav class="row-wrap">
+              <button class="button button--quiet button--small" @click="$store.hub.openTab('maps')"><span x-icon="arrow-left"></span>Maps &amp; modes</button>
+            </nav>
+
+            <header class="panel tower-hero">
+              <div class="avatar avatar--huge map-hero__icon" :data-difficulty="mode.difficulty"><span x-icon="mode.icon"></span></div>
+              <div class="tower-hero__text">
+                <h2 class="game-title" x-text="mode.name"></h2>
+                <div class="pill-list"><span class="difficulty-pill" :data-difficulty="mode.difficulty" x-text="`${mode.difficulty} mode`"></span></div>
+                <ul class="tip-list"><template x-for="rule in mode.rules"><li><span x-icon="info"></span><span x-text="rule"></span></li></template></ul>
+              </div>
+            </header>
+
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="swords"></span>Strategy</h3>
+              <ul class="tip-list"><template x-for="tip in mode.strategy"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template></ul>
+            </div>
+
+            <div class="panel panel--padded" x-show="towers.length">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="star"></span>Towers and heroes that shine</h3>
+              <div class="synergy-grid">
+                <template x-for="entry in towers" :key="entry.upgrade">
+                  <button class="well synergy" @click="entry.partner && openUnit(entry.partner)">
+                    <template x-if="entry.partner"><div x-avatar.small="entry.partner"></div></template>
+                    <span class="synergy__text">
+                      <span class="synergy__name" x-text="entry.upgrade"></span>
+                      <span class="synergy__note" x-text="entry.note"></span>
+                    </span>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <div class="panel panel--padded" x-show="mapNotes.length">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="map"></span>Map-specific notes</h3>
+              <div class="stack stack--tight">
+                <template x-for="item in mapNotes" :key="item.map.id">
+                  <button class="well mention" @click="$store.hub.openPage('map', item.map.id)">
+                    <span class="difficulty-pill" :data-difficulty="item.map.difficulty" x-text="item.map.difficulty"></span>
+                    <span class="mention__text"><strong x-text="item.map.name"></strong><span class="muted" x-text="item.note"></span></span>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <button class="button button--gold" style="align-self:flex-start" @click="browseMaps()"><span x-icon="map"></span><span x-text="`Browse maps with ${mode.name} advice`"></span></button>
+            <p x-sources="mode.sources"></p>
+          </section>
+        </template>
+
+        <!-- =============================================================
              TOWER PAGE  (#tower/<id>, opened from the tier list, guide or search)
              ============================================================= -->
         <template x-if="$store.hub.activeTab === 'tower' && $store.hub.currentTower">
@@ -460,7 +690,7 @@
                   <strong class="game-title game-title--small" x-text="paragon.name"></strong>
                   <span class="pill" x-text="paragon.role"></span>
                   <span class="cash numbers" x-text="paragon.cost ? formatCash(paragon.cost) : ''"></span>
-                  <button class="button button--blue button--small push-right" @click="$store.hub.jumpTo('paragons', `paragon-${paragon.id}`)">Paragon guide</button>
+                  <button class="button button--blue button--small push-right" @click="$store.hub.openPage('paragon', paragon.id)">Paragon page</button>
                 </div>
                 <p class="muted" x-text="paragon.summary"></p>
               </div>
@@ -524,6 +754,7 @@
                       <template x-for="line in paragon.strengths"><li><span x-icon="circle-check"></span><span x-text="line"></span></li></template>
                       <template x-for="line in paragon.weaknesses"><li class="tip-list__minus"><span x-icon="circle-alert"></span><span x-text="line"></span></li></template>
                     </ul>
+                    <button class="button button--blue button--small" @click="$store.hub.openPage('paragon', paragon.id)"><span x-icon="book-open"></span>Full Paragon page</button>
                     <p x-sources="paragon.sources"></p>
                   </article>
                 </template>
@@ -554,6 +785,98 @@
             <p x-sources="guide.sources"></p>
           </div>
         </section>
+
+        <!-- =============================================================
+             PARAGON PAGE  (#paragon/<id>)
+             ============================================================= -->
+        <template x-if="$store.hub.activeTab === 'paragon' && $store.hub.currentPage">
+          <section x-data="paragonPage" class="stack tower-page">
+            <nav class="row-wrap">
+              <button class="button button--quiet button--small" @click="$store.hub.openTab('paragons')"><span x-icon="arrow-left"></span>Paragons</button>
+              <span class="push-right row-wrap">
+                <button class="button button--quiet button--small" @click="$store.hub.openPage('paragon', neighbour(-1).id)" :aria-label="`Previous Paragon: ${neighbour(-1).name}`"><span x-icon="chevron-left"></span><span class="neighbour-name" x-text="neighbour(-1).name"></span></button>
+                <button class="button button--quiet button--small" @click="$store.hub.openPage('paragon', neighbour(1).id)" :aria-label="`Next Paragon: ${neighbour(1).name}`"><span class="neighbour-name" x-text="neighbour(1).name"></span><span x-icon="chevron-right"></span></button>
+              </span>
+            </nav>
+
+            <header class="panel tower-hero">
+              <div x-avatar.huge="{ ...tower, tier: paragon.bossTier }"></div>
+              <div class="tower-hero__text">
+                <h2 class="game-title" x-text="paragon.name"></h2>
+                <div class="pill-list">
+                  <span class="pill"><span x-icon="gem"></span><span x-text="`${tower.name} Paragon`"></span></span>
+                  <span class="pill" x-text="paragon.role"></span>
+                  <span class="cash numbers" x-text="paragon.cost ? formatCash(paragon.cost) : ''"></span>
+                </div>
+                <p x-text="paragon.howItWorks"></p>
+                <p class="muted" x-text="paragon.summary"></p>
+              </div>
+              <div class="tower-hero__tiers">
+                <span class="tier-score"><span class="tier-badge" :data-tier="paragon.bossTier" x-text="paragon.bossTier"></span><span>Bosses</span></span>
+              </div>
+            </header>
+
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="combine"></span>How you get it</h3>
+              <p class="dim tower-note">Own one of each of these tier 5s (plus the Paragon's cost) and the Paragon upgrade appears on any of them.</p>
+              <div class="pill-list">
+                <template x-for="name in paragon.combines"><span class="pill pill--route" x-text="name"></span></template>
+              </div>
+            </div>
+
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="swords"></span>How to use it</h3>
+              <ul class="tip-list">
+                <template x-for="tip in paragon.strategy"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template>
+                <template x-for="line in paragon.strengths"><li><span x-icon="circle-plus"></span><span x-text="line"></span></li></template>
+                <template x-for="line in paragon.weaknesses"><li class="tip-list__minus"><span x-icon="circle-alert"></span><span x-text="line"></span></li></template>
+              </ul>
+            </div>
+
+            <div class="tip-columns tip-columns--two">
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="thumbs-up"></span>Best against</h3>
+                <ul class="tip-list"><template x-for="boss in paragon.bestBosses"><li><span x-icon="circle-check"></span><span x-text="boss"></span></li></template></ul>
+              </div>
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="thumbs-down"></span>Worst against</h3>
+                <ul class="tip-list">
+                  <template x-for="boss in paragon.worstBosses"><li class="tip-list__minus"><span x-icon="circle-alert"></span><span x-text="boss"></span></li></template>
+                  <li class="muted" x-show="!paragon.worstBosses.length"><span x-icon="info"></span><span>The guide names no bad matchup.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="panel panel--padded" x-show="synergies.length">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="link"></span>Synergies</h3>
+              <div class="synergy-grid">
+                <template x-for="synergy in synergies" :key="synergy.unit">
+                  <button class="well synergy" @click="synergy.go()">
+                    <div x-avatar.small="synergy.avatar"></div>
+                    <span class="synergy__text">
+                      <span class="synergy__name" x-text="synergy.name"></span>
+                      <span class="synergy__note" x-text="synergy.note"></span>
+                    </span>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="trending-up"></span>Raising its degree</h3>
+              <ul class="tip-list">
+                <template x-for="tip in paragon.degreeTips"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template>
+                <li class="muted" x-show="!paragon.degreeTips.length"><span x-icon="info"></span><span>No Paragon-specific advice; the general degree guide applies.</span></li>
+              </ul>
+              <div class="row-wrap" style="margin-top:10px">
+                <button class="button button--blue button--small" @click="$store.hub.jumpTo('paragons', 'degree-guide')"><span x-icon="book-open"></span>General degree guide</button>
+                <button class="button button--quiet button--small" @click="$store.hub.openTower(tower.id)"><span x-icon="tower-control"></span><span x-text="`${tower.name} page`"></span></button>
+              </div>
+            </div>
+
+            <p x-sources="paragon.sources"></p>
+          </section>
+        </template>
 
         <!-- =============================================================
              TAB 3 · FARMING ENGINE

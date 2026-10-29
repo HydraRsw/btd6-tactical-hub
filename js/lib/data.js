@@ -2,7 +2,7 @@
 // between patches: the weekly update job rewrites them and the page picks the
 // new values up on the next visit.
 
-const FILES = ['meta', 'towers', 'heroes', 'economy', 'playbook', 'sources', 'paragons'];
+const FILES = ['meta', 'towers', 'heroes', 'economy', 'playbook', 'sources', 'paragons', 'maps', 'modes'];
 
 async function fetchJson(name) {
   // no-store so visitors never see last patch's numbers from a stale cache
@@ -12,11 +12,11 @@ async function fetchJson(name) {
 }
 
 export async function loadGameData() {
-  const [meta, towers, heroes, economy, playbook, sources, paragons] = await Promise.all(FILES.map(fetchJson));
+  const [meta, towers, heroes, economy, playbook, sources, paragons, maps, modes] = await Promise.all(FILES.map(fetchJson));
 
   if (!Array.isArray(towers) || !Array.isArray(heroes)) {
     throw new Error('towers.json and heroes.json must each contain a list');
   }
 
-  return { meta, towers, heroes, economy, playbook, sources, paragons };
+  return { meta, towers, heroes, economy, playbook, sources, paragons, maps, modes };
 }

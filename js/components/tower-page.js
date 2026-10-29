@@ -88,7 +88,12 @@ export function towerPage() {
           go: () => hub.jumpTo('chimps', `hero-${synergy.heroId}`),
         }));
 
-      return [...rounds, ...bosses, ...heroes];
+      const maps = hub.maps.maps
+        .flatMap((map) => map.recommended
+          .filter((pick) => pick.unit === this.tower.id)
+          .map((pick) => ({ kind: 'Map', title: `${map.name}: ${pick.upgrade}`, text: pick.note, go: () => hub.openPage('map', map.id) })));
+
+      return [...rounds, ...bosses, ...heroes, ...maps];
     },
 
     /** Previous / next tower in the data's order, for quick browsing. */
