@@ -16,6 +16,7 @@ export function createHubStore() {
     heroes: [],
     economy: { farmBuilds: [], strategies: [], bossCheckpoints: [] },
     playbook: { modeNotes: {}, dangerRounds: [], heroSynergies: [], bosses: [] },
+    sources: {},           // id → { title, url }, referenced by every entry's "sources" list
 
     activeTab: 'tier',
     openUnitIds: [],       // expanded rows in the tier list

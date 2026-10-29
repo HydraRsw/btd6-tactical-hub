@@ -12,7 +12,10 @@
       "DPS"
     ],
     "confidence": "verified",
-    "summary": "Cheap and consistent early game; falls off past R80."
+    "summary": "Recommended as an early-game CHIMPS starter.",
+    "sources": [
+      "wiki-chimps"
+    ]
   },
   {
     "id": "gwen",
@@ -27,8 +30,9 @@
       "Cleanup",
       "Buff"
     ],
-    "confidence": "verified",
-    "summary": "Fire damage pops leads early; Heat It Up buffs nearby towers."
+    "confidence": "approximate",
+    "summary": "Fire damage pops leads early; Heat It Up buffs nearby towers. Not covered by the wiki's strategy pages.",
+    "sources": []
   },
   {
     "id": "striker",
@@ -36,14 +40,18 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [
       "Buff"
     ],
     "confidence": "verified",
-    "summary": "Buffs bombs/mortars and black-bloon handling; Artillery Command resets cooldowns."
+    "summary": "Support hero for CHIMPS; the favored pick for Mortar builds thanks to attack-speed and black-popping buffs (pairs with Pop and Awe).",
+    "sources": [
+      "wiki-chimps",
+      "wiki-mortar"
+    ]
   },
   {
     "id": "obyn",
@@ -56,10 +64,13 @@
     "bestRoute": "Lv 20",
     "roles": [
       "Buff",
-      "Stall"
+      "DPS"
     ],
     "confidence": "verified",
-    "summary": "Magic tower buff + Wall of Trees; Ocean Obyn for water comps."
+    "summary": "Listed as a CHIMPS win-condition hero.",
+    "sources": [
+      "wiki-chimps"
+    ]
   },
   {
     "id": "rosalia",
@@ -74,30 +85,37 @@
       "DPS"
     ],
     "confidence": "approximate",
-    "summary": "Flexible ranged DPS with movement; mid-tier pick."
+    "summary": "Flexible ranged DPS; discounts Heli Pilots and Aces in range.",
+    "sources": [
+      "wiki-heli",
+      "wiki-ace"
+    ]
   },
   {
     "id": "churchill",
     "name": "Captain Churchill",
     "category": "Heroes",
     "tiers": {
-      "chimps": "A",
-      "boss": "A"
+      "chimps": "B",
+      "boss": "B"
     },
     "bestRoute": "Lv 20",
     "roles": [
       "DPS",
       "MOAB"
     ],
-    "confidence": "verified",
-    "summary": "Tank shell DPS and MOAB Barrage; expensive but powerful."
+    "confidence": "approximate",
+    "summary": "Strong tank DPS and an Overclock target. Not covered by the wiki's CHIMPS or boss pages.",
+    "sources": [
+      "wiki-overclock"
+    ]
   },
   {
     "id": "ben",
     "name": "Benjamin",
     "category": "Heroes",
     "tiers": {
-      "chimps": "C",
+      "chimps": "D",
       "boss": "S"
     },
     "bestRoute": "Lv 10+",
@@ -106,7 +124,11 @@
       "Buff"
     ],
     "confidence": "verified",
-    "summary": "Cash per round + Bank Hack / Syphon Funding. Income disabled in CHIMPS; a boss-event econ king."
+    "summary": "A primary boss-event hero: early cash snowballs your economy. The CHIMPS page says to avoid him (income is disabled).",
+    "sources": [
+      "wiki-boss-events",
+      "wiki-chimps"
+    ]
   },
   {
     "id": "pat",
@@ -114,21 +136,24 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "B",
-      "boss": "B"
+      "boss": "C"
     },
     "bestRoute": "Lv 20",
     "roles": [
       "Stall"
     ],
-    "confidence": "verified",
-    "summary": "Big Squeeze grabs blimps; Rallying Roar buffs nearby. Bosses immune to squeeze."
+    "confidence": "approximate",
+    "summary": "Big Squeeze grabs blimps; a good Overclock target from level 5.",
+    "sources": [
+      "wiki-overclock"
+    ]
   },
   {
     "id": "ezili",
     "name": "Ezili",
     "category": "Heroes",
     "tiers": {
-      "chimps": "A",
+      "chimps": "S",
       "boss": "A"
     },
     "bestRoute": "Lv 20",
@@ -137,44 +162,53 @@
       "MOAB"
     ],
     "confidence": "verified",
-    "summary": "Percentage-style MOAB hex damage; Heartstopper stops healing/regen bosses."
+    "summary": "CHIMPS win-condition hero; MOAB Hex is a listed R40 answer. A fallback support hero in boss events.",
+    "sources": [
+      "wiki-chimps",
+      "wiki-boss-events"
+    ]
   },
   {
     "id": "adora",
     "name": "Adora",
     "category": "Heroes",
     "tiers": {
-      "chimps": "A",
+      "chimps": "B",
       "boss": "A"
     },
     "bestRoute": "Lv 20",
     "roles": [
       "DPS"
     ],
-    "confidence": "verified",
-    "summary": "Sacrifice towers to power her up; Blood Sacrifice + Ball of Light."
+    "confidence": "approximate",
+    "summary": "A fallback boss-event hero; Blood Sacrifice suits True Sun God setups against Elite tier 5 bosses.",
+    "sources": [
+      "wiki-boss-events",
+      "wiki-bloonarius"
+    ]
   },
   {
     "id": "etienne",
     "name": "Etienne",
     "category": "Heroes",
     "tiers": {
-      "chimps": "A",
-      "boss": "A"
+      "chimps": "B",
+      "boss": "B"
     },
     "bestRoute": "Lv 10",
     "roles": [
       "Buff"
     ],
-    "confidence": "verified",
-    "summary": "Global camo detection (UAV) and drone DPS — removes camo worries for R78/R95."
+    "confidence": "approximate",
+    "summary": "Drone DPS and global camo detection. Not covered by the wiki's strategy pages.",
+    "sources": []
   },
   {
     "id": "sauda",
     "name": "Sauda",
     "category": "Heroes",
     "tiers": {
-      "chimps": "S",
+      "chimps": "B",
       "boss": "B"
     },
     "bestRoute": "Lv 11",
@@ -183,7 +217,11 @@
       "Cleanup"
     ],
     "confidence": "verified",
-    "summary": "Shreds non-MOAB bloons and carries R1–R60 nearly alone. Weak vs. MOAB-class."
+    "summary": "Strong early-game starter, but not a solo carry: her bonus damage needs stuns, slows or damage over time (Relentless Glue, Dragon's Breath). Leaping Sword is spammable early boss damage in Boss Rush.",
+    "sources": [
+      "wiki-sauda",
+      "wiki-chimps"
+    ]
   },
   {
     "id": "brickell",
@@ -199,7 +237,13 @@
       "MOAB"
     ],
     "confidence": "verified",
-    "summary": "Naval Tactics attack-speed buff for water towers; Mega Mine for MOAB-class."
+    "summary": "Support hero that buffs naval towers: pairs with Carrier Flagship, Pirate Lord, Destroyers and Subs.",
+    "sources": [
+      "wiki-chimps",
+      "wiki-lych",
+      "wiki-phayze",
+      "wiki-dreadbloon"
+    ]
   },
   {
     "id": "psi",
@@ -207,46 +251,58 @@
     "category": "Heroes",
     "tiers": {
       "chimps": "A",
-      "boss": "A"
+      "boss": "D"
     },
     "bestRoute": "Lv 20",
     "roles": [
       "DPS",
       "MOAB"
     ],
-    "confidence": "approximate",
-    "summary": "Psychic blasts lock and destroy bloons; Psionic Scream for MOAB waves. Check boss immunities."
+    "confidence": "verified",
+    "summary": "CHIMPS is his favored mode: instakills MOABs at level 14 and DDTs and ZOMGs at 20. He never targets BADs or Boss Bloons, and pairs poorly with Perma-Spike stalling.",
+    "sources": [
+      "wiki-psi"
+    ]
   },
   {
     "id": "geraldo",
     "name": "Geraldo",
     "category": "Heroes",
     "tiers": {
-      "chimps": "S",
+      "chimps": "A",
       "boss": "S"
     },
     "bestRoute": "Lv 20",
     "roles": [
       "Buff",
+      "Income",
       "Stall"
     ],
     "confidence": "verified",
-    "summary": "Shop items: Sharpening Stone, Creepy Idol, Jar of Pickles, Genie Bottle, Fertilizer, Paragon Totem."
+    "summary": "A primary boss-event hero (Rare Quincy Action Figure funds early farms; Blade Trap handles Bloonarius bleed). Support hero in CHIMPS, paired with Comanche Commander.",
+    "sources": [
+      "wiki-boss-events",
+      "wiki-bloonarius",
+      "wiki-chimps"
+    ]
   },
   {
     "id": "corvus",
     "name": "Corvus",
     "category": "Heroes",
     "tiers": {
-      "chimps": "A",
+      "chimps": "S",
       "boss": "A"
     },
     "bestRoute": "Lv 20",
     "roles": [
       "DPS"
     ],
-    "confidence": "approximate",
-    "summary": "Mana-based spellbook with very high late-game ceiling; micro-intensive."
+    "confidence": "verified",
+    "summary": "CHIMPS win-condition hero; Ancestral Might is a listed R40 answer.",
+    "sources": [
+      "wiki-chimps"
+    ]
   },
   {
     "id": "silas",
@@ -261,7 +317,12 @@
       "Buff",
       "Stall"
     ],
-    "confidence": "approximate",
-    "summary": "Ice Shaper (v50). Synergizes with Ice Monkeys; strong freeze control."
+    "confidence": "verified",
+    "summary": "CHIMPS win-condition hero that supports Ice Monkeys (range, Ice Fragments, tier 5 discounts) and is immune to Blastapopoulos overheating. His abilities do nothing to BADs.",
+    "sources": [
+      "wiki-silas",
+      "wiki-chimps",
+      "wiki-blastapopoulos"
+    ]
   }
 ]

@@ -226,6 +226,7 @@
                           </div>
                         </template>
                       </div>
+                      <p x-sources="unit.sources"></p>
                     </div>
                   </article>
                 </template>
@@ -297,6 +298,7 @@
                 <div class="pill-list">
                   <template x-for="role in tower.roles"><span class="pill" :data-role="role" x-text="role"></span></template>
                 </div>
+                <p x-sources="tower.sources"></p>
               </article>
             </template>
           </div>
@@ -392,6 +394,7 @@
                   </div>
                 </div>
                 <ul><template x-for="point in strategy.points"><li x-text="point"></li></template></ul>
+                <p x-sources="strategy.sources"></p>
               </article>
             </template>
           </div>
@@ -400,7 +403,7 @@
           <div class="panel panel--padded stack stack--tight">
             <div class="row-wrap">
               <h3 class="game-title game-title--small panel__title" style="margin:0"><span x-icon="flag"></span>Boss Checkpoints</h3>
-              <span class="dim push-right" style="font-size:.78rem">Normal-tier guideline · roughly 2–3× for Elite</span>
+              <span class="dim push-right" style="font-size:.78rem">Milestones from the Bloons wiki's boss-event guide</span>
             </div>
             <template x-for="(checkpoint, i) in $store.hub.economy.bossCheckpoints" :key="checkpoint.round">
               <div class="tier-row checkpoint" :id="`checkpoint-${checkpoint.round}`" :style="`--stripe:${CHECKPOINT_COLORS[i % CHECKPOINT_COLORS.length]}`">
@@ -413,6 +416,7 @@
                 <p class="muted"><span class="checkpoint__label">Economy move</span><span x-text="checkpoint.economy"></span></p>
               </div>
             </template>
+            <p x-sources="['wiki-boss-events']"></p>
           </div>
         </section>
 
@@ -449,6 +453,7 @@
                 <ul>
                   <template x-for="counter in danger.counters"><li class="well"><span x-icon="circle-check"></span><span x-text="counter"></span></li></template>
                 </ul>
+                <p x-sources="danger.sources"></p>
               </article>
             </template>
           </div>
@@ -471,6 +476,7 @@
                 <div class="pill-list"><template x-for="mode in synergy.modes"><span class="pill" x-text="mode"></span></template></div>
                 <ul><template x-for="line in synergy.synergies"><li><span x-icon="link"></span><span x-text="line"></span></li></template></ul>
                 <p class="hero-card__tip"><strong>Pro tip:</strong> <span x-text="synergy.tip"></span></p>
+                <p x-sources="synergy.sources"></p>
               </article>
             </template>
           </div>
@@ -483,6 +489,7 @@
                 <div>
                   <h4 class="game-title game-title--small" x-text="boss.name"></h4>
                   <p x-text="boss.note"></p>
+                  <p x-sources="boss.sources"></p>
                 </div>
               </article>
             </template>
@@ -496,6 +503,7 @@
     <p>Bloons TD 6 and all related monkey graphics, character designs and trademarks are the property of
       <a href="https://ninjakiwi.com" target="_blank" rel="noopener">Ninja Kiwi Limited</a>.</p>
     <p>BTD6 Tactical Hub is an unofficial, non-commercial fan-made project and is not affiliated with, endorsed or sponsored by Ninja Kiwi.</p>
+    <p>Tiers and routes are editorial judgments based on the sources listed on each entry, mostly the <a href="https://www.bloonswiki.com" target="_blank" rel="noopener">Bloons wiki</a>. Entries marked approximate or new have weaker backing.</p>
     <p>Shortcuts: <kbd>/</kbd> search · <kbd>1–4</kbd> switch tabs · <kbd>Esc</kbd> close search</p>
   </footer>
 </body>

@@ -4,6 +4,7 @@
 //   <span x-icon="strategy.icon"></span>   …or from data (anything that isn't a plain icon name is evaluated)
 //   <div x-avatar="tower"></div>           tower / hero badge (add .small or .large)
 //   <div x-pips="route.path"></div>        3 × 5 upgrade grid for "2-0-5"
+//   <p x-sources="tower.sources"></p>      "Sources: Bloons wiki: …" links (ids from data/sources.json)
 
 import { initials } from './lib/text.js';
 import { pipRows } from './lib/upgrades.js';
@@ -83,6 +84,25 @@ function buildPips(route) {
   return grid;
 }
 
+function buildSourceLinks(ids, sources) {
+  const line = document.createDocumentFragment();
+  const known = (ids ?? []).map((id) => sources[id]).filter(Boolean);
+  if (known.length === 0) {
+    line.append('Sources: none yet, this entry is editorial.');
+    return line;
+  }
+  line.append('Sources: ');
+  known.forEach((source, index) => {
+    const link = document.createElement('a');
+    link.href = source.url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = source.title.replace(/^Bloons wiki: /, '');
+    line.append(index ? ' · ' : '', link);
+  });
+  return line;
+}
+
 export function registerDirectives(Alpine) {
   Alpine.directive('icon', (el, { expression }, { evaluateLater, effect }) => {
     if (PLAIN_ICON_NAME.test(expression)) {
@@ -102,6 +122,14 @@ export function registerDirectives(Alpine) {
         const imageDir = Alpine.store('hub').meta.imageDir;
         el.replaceChildren(buildAvatar(unit, { size, imageDir }));
       }),
+    );
+  });
+
+  Alpine.directive('sources', (el, { expression }, { evaluateLater, effect }) => {
+    const readIds = evaluateLater(expression);
+    el.classList.add('sources');
+    effect(() =>
+      readIds((ids) => el.replaceChildren(buildSourceLinks(ids, Alpine.store('hub').sources))),
     );
   });
 

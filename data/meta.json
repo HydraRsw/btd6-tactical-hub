@@ -2,7 +2,13 @@
   "patch": "56.2",
   "updated": "2026-10-29",
   "changes": [
-    "Initial data set for v56.2 (Skywarden era)"
+    "Every tower and hero now lists its sources (mostly the Bloons wiki)",
+    "Tiers re-checked against the wiki's CHIMPS and boss-event strategy pages",
+    "Perma-Spike route corrected to 1-0-5; new win conditions for Glue, Heli, Dartling and Druid",
+    "Psi dropped to D for bosses: he can't target Boss Bloons",
+    "CHIMPS danger rounds now match the wiki: R75 and R90 added, R76 removed",
+    "Boss checkpoints now use the wiki's milestones instead of estimated cash targets"
   ],
-  "imageDir": "img"
+  "imageDir": "img",
+  "researched": "2026-10-29"
 }

@@ -63,6 +63,28 @@ const towers = load('towers');
 const heroes = load('heroes');
 const economy = load('economy');
 const playbook = load('playbook');
+const sources = load('sources');
+
+// Every "sources" list must point at ids defined in sources.json.
+function checkSourceIds(ids, where) {
+  if (ids === undefined) return;
+  if (!Array.isArray(ids)) return problems.push(`${where}: sources must be a list of ids`);
+  for (const id of ids) {
+    if (!sources?.[id]) problems.push(`${where}: unknown source "${id}" (add it to sources.json)`);
+  }
+}
+
+if (sources) {
+  for (const [id, source] of Object.entries(sources)) {
+    if (!source.title || !/^https:\/\//.test(source.url ?? '')) problems.push(`sources.json "${id}": needs a title and an https url`);
+  }
+}
+for (const unit of [...(Array.isArray(towers) ? towers : []), ...(Array.isArray(heroes) ? heroes : [])]) {
+  checkSourceIds(unit.sources, `"${unit.id}"`);
+}
+for (const [section, items] of Object.entries({ ...(playbook ?? {}), ...(economy ?? {}) })) {
+  if (Array.isArray(items)) items.forEach((item, i) => checkSourceIds(item?.sources, `${section}[${i}]`));
+}
 
 if (meta) {
   if (!/^\d+(\.\d+)*$/.test(String(meta.patch))) problems.push('meta.json: patch must look like "57.0"');

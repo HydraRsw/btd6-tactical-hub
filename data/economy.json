@@ -26,7 +26,7 @@
     },
     {
       "id": "mkt3",
-      "name": "0-2-3 Marketplace",
+      "name": "2-0-3 Marketplace",
       "group": "Hands-off",
       "incomeRule": "flat",
       "quantity": 4,
@@ -34,11 +34,11 @@
       "incomePerRound": 416,
       "sellbackPercent": 85,
       "isEstimate": true,
-      "note": "16 auto packets/round. Banana Salvage + Marketplace bonus give boosted sellback."
+      "note": "16 auto packets/round. 10% higher sellback than other farms."
     },
     {
       "id": "mkt4",
-      "name": "0-2-4 Central Market",
+      "name": "2-0-4 Central Market",
       "group": "Hands-off",
       "incomeRule": "flat",
       "quantity": 0,
@@ -104,10 +104,15 @@
       "tag": "Max raw cash",
       "color": "amber",
       "points": [
-        "Core: 4-2-0 BRF spam once you can afford ~$27k each; they out-earn Marketplaces per farm slot.",
-        "Add one 5-2-0 Banana Central when you own 6+ BRFs — the +25% crate buff pays for itself fast.",
-        "Rotate an Overclock (Engineer 0-4-0) onto a BRF to boost its production; Ultraboost for permanent gains.",
-        "Use Marketplaces as a stepping stone and sell them into BRF upgrades."
+        "Core: 4-2-0 Banana Research Facilities ($1,950 a round each with Valuable Bananas).",
+        "Overclock raises a BRF or Banana Central from 5 to 9 crates per round.",
+        "Banana Central (5-2-0) adds +25% to every BRF on the map.",
+        "Late game: BRF spam with Overclocks, then sell everything at the end of round 119."
+      ],
+      "sources": [
+        "wiki-brf",
+        "wiki-overclock",
+        "wiki-boss-events"
       ]
     },
     {
@@ -116,10 +121,15 @@
       "tag": "Zero collection",
       "color": "emerald",
       "points": [
-        "0-2-3 / 0-2-4 Marketplaces auto-collect every packet — no tapping, no missed bananas.",
-        "Boosted sellback (default ~85% in the calculator — confirm on your patch) means you lose little when you liquidate before a boss tier.",
-        "Central Markets also give every Merchantman +10% (stacks 10×), bridging into the water meta.",
-        "Healthy Bananas MK: Marketplaces/Central Markets generate lives — useful vs. Lych."
+        "Marketplaces auto-collect 16 cash packets every round.",
+        "2-0-3 is the usual pick while saving up; with Monkey Knowledge 0-2-3 earns slightly more.",
+        "Marketplace and up sell back for 10% more than other farms, so they are cheap to liquidate into BRFs.",
+        "Healthy Bananas MK makes them generate lives, which helps against Lych."
+      ],
+      "sources": [
+        "wiki-marketplace",
+        "wiki-central-market",
+        "wiki-lych"
       ]
     },
     {
@@ -128,10 +138,15 @@
       "tag": "Best scaling on water maps",
       "color": "sky",
       "points": [
-        "Spam 0-2-3 Merchantmen (cheap, discountable with Monkey Commerce) — $200/rd each.",
-        "At ~16 boats, buy 0-0-5 Trade Empire: +$10 per Merchantman / +$20 per Favored Trades to up to 20 boats, plus damage.",
-        "Upgrade to 0-2-4 Favored Trades once 20 Merchantmen exist; 10 Central Markets double Merchantman income.",
-        "0-0-4 Monkey City villages near the fleet stack discounts and cash bonuses before Monkeyopolis."
+        "Merchantmen earn $200 a round; each Central Market adds +10% (up to 10).",
+        "Trade Empire is worth it from about 16 Merchantmen and buffs up to 20 boats.",
+        "Upgrade to Favored Trades once 20 Merchantmen exist.",
+        "The wiki's Navarch of the Seas plan saves about $980,000 for a 40-Merchantmen setup."
+      ],
+      "sources": [
+        "wiki-merchantman",
+        "wiki-trade-empire",
+        "wiki-boss-events"
       ]
     },
     {
@@ -140,10 +155,13 @@
       "tag": "High APM value",
       "color": "rose",
       "points": [
-        "2-4-0 IMF Loan: take the loan right before a big buy, repay automatically from income — ideal before a boss tier spike.",
-        "Cycle: Loan → buy DPS → bank refills → collect at cap → loan again when off cooldown.",
-        "Monkeyopolis (0-0-5 Village) absorbs farms in its radius and converts their value into crates — space farms inside the circle before buying it.",
-        "Sacrificing expensive 4-x-x farms gives the best absorption value per farm."
+        "\"Miniopolis\": Monkey Bank → IMF Loan → Monkeyopolis.",
+        "Cash out the bank at about $1,100 saved.",
+        "Deposit into the IMF until about $8,300–8,500, then collect near $11,500.",
+        "Monkeyopolis absorbs every farm in its radius, so place farms inside it first."
+      ],
+      "sources": [
+        "wiki-boss-events"
       ]
     }
   ],
@@ -151,37 +169,52 @@
     {
       "round": 40,
       "bossTier": "Tier 1",
-      "cashTarget": "$15k–25k banked or ~$4k/rd eco",
-      "defense": "Camo + lead coverage, one MOAB answer (Bomb 2-3-0/Sniper 2-0-2), Ice Embrittlement if affordable.",
-      "economy": "Keep farming; buy first BRF or 4–6 Marketplaces."
+      "cashTarget": "Farms running; lead defense done",
+      "defense": "Defend the lead rounds 28 and 30 (and 26 against Dreadbloon), then a tier 1 boss defense.",
+      "economy": "Rounds 1–20: put spare cash into income. Two 2-0-0 farms, then a Marketplace or Bank → IMF Loan → Monkeyopolis plan.",
+      "sources": [
+        "wiki-boss-events"
+      ]
     },
     {
       "round": 60,
       "bossTier": "Tier 2",
-      "cashTarget": "$40k–60k or ~$10k/rd eco",
-      "defense": "Main single-target carry at T4 (Sniper 4-0-2 / Sub 2-0-4), Alch 4-0-1, Village MIB.",
-      "economy": "Transition Marketplaces → BRFs; Trade Empire on water."
+      "cashTarget": "Rebuild farms after Tier 1",
+      "defense": "Hold the tier 1 boss, then rebuild. Aim for two Bloon Traps by round 47.",
+      "economy": "Bloon Trap (0-1-4) and Rubber to Gold under Monkeyopolis, then Banana Central or Merchantmen on water.",
+      "sources": [
+        "wiki-boss-events"
+      ]
     },
     {
       "round": 80,
       "bossTier": "Tier 3",
-      "cashTarget": "$100k–150k or ~$20k/rd eco",
-      "defense": "First T5 damage (Super Brittle, MOAB Eliminator or Sun Temple), Overclock rotation.",
-      "economy": "Banana Central; consider selling some eco before the boss spawns."
+      "cashTarget": "Farming pops for Paragons",
+      "defense": "Tier 2 boss defense; start building pops toward Paragons.",
+      "economy": "BRFs with Overclock; Trade Empire fleet on water-heavy maps.",
+      "sources": [
+        "wiki-boss-events"
+      ]
     },
     {
       "round": 100,
       "bossTier": "Tier 4",
-      "cashTarget": "$250k+",
-      "defense": "2+ T5 carries, full buff stack (Alch, Village 2-3-0/2-4-0, Ice debuff), Geraldo items.",
-      "economy": "Liquidate low-ROI farms before spawn; keep BRFs only if the boss can be stalled."
+      "cashTarget": "Sun Temples or Megaopolis",
+      "defense": "Tier 3 boss: Sun Temples with $45,000+ of support sacrifices, or Paragons.",
+      "economy": "Megaopolis option; keep scaling BRFs and Monkey Cities.",
+      "sources": [
+        "wiki-boss-events"
+      ]
     },
     {
       "round": 120,
       "bossTier": "Tier 5",
-      "cashTarget": "$500k+ / Paragon-ready",
-      "defense": "Paragon or several T5s + Monkey Knowledge/Powers as allowed by the event.",
-      "economy": "Sell remaining eco into damage at the end of R119."
+      "cashTarget": "Sell everything at end of R119",
+      "defense": "Four Paragons at Degree 40+ handle nearly every boss, including Elite.",
+      "economy": "Sell all farms at the end of round 119 and spend it all on the final defense.",
+      "sources": [
+        "wiki-boss-events"
+      ]
     }
   ]
 }
