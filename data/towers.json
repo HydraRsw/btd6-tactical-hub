@@ -69,7 +69,7 @@
   ],
   "tips": {
    "chimps": [
-    "Cheapest Primary and a standard CHIMPS opener (Dart + Ninja, Dart + Desperado or Dart + Sub starts).",
+    "Cheapest Primary and a standard CHIMPS opener: three 0-0-0 Darts, Dart + Sniper, Dart + Sub (water maps) or Dart + Engineer.",
     "Crossbow Master needs camo from its own bottom path; place it along straight track sections."
    ],
    "boss": [
@@ -81,10 +81,6 @@
    ]
   },
   "synergies": [
-   {
-    "unit": "ninja",
-    "note": "Ninja + Dart start handles about half of Advanced maps."
-   },
    {
     "unit": "desperado",
     "note": "Two-tower CHIMPS start."
@@ -224,6 +220,11 @@
    {
     "name": "Extra Dart Pops",
     "effect": "+1 pierce on every Dart Monkey shot.",
+    "cost": "Free"
+   },
+   {
+    "name": "Increased Lifespan",
+    "effect": "Longer projectile life for Dart Monkeys, Bomb Shooters, Tack Shooters and Glue Gunners.",
     "cost": "Free"
    },
    {
@@ -2160,7 +2161,7 @@
   },
   "detection": {
    "camo": [],
-   "camoText": "None of its own: Advanced Intel (x-2-x) shares other towers' detection; Submerge and Support (3-x-x) strips Camo.",
+   "camoText": "None of its own: Advanced Intel (2-x-x) shares other towers' detection; Submerge and Support (3-x-x) strips Camo.",
    "lead": [
     [
      0,
@@ -3403,7 +3404,7 @@
    "camoText": "Advanced Targeting (x-1-x).",
    "lead": [
     [
-     3,
+     4,
      0,
      0
     ],
@@ -3413,7 +3414,7 @@
      0
     ]
    ],
-   "leadText": "Laser Cannon (3-x-x) or Hydra Rocket Pods (x-3-x); base darts can't.",
+   "leadText": "Plasma Accelerator (4-x-x) or Hydra Rocket Pods (x-3-x); base darts and Laser Cannon's Energy lasers can't.",
    "purple": "Laser Cannon and Plasma Accelerator can't pop Purple."
   },
   "knowledge": [
@@ -3647,12 +3648,17 @@
    "camoText": "Monkey Sense (x-x-2); Shimmer (x-x-3) strips Camo.",
    "lead": [
     [
+     4,
      0,
+     0
+    ],
+    [
      0,
+     1,
      0
     ]
    ],
-   "leadText": "Energy bolts pop Lead from the start.",
+   "leadText": "The main bolts can't pop Lead until Arcane Spike (4-x-x) makes them Plasma; Fireball (x-1-x) explosions can pop Lead.",
    "purple": "Can't pop Purple: base bolts are energy, Arcane Spike is plasma and the fire path is fire."
   },
   "knowledge": [
@@ -4396,7 +4402,7 @@
     ]
    ],
    "leadText": "Acid pops Lead; Acidic Mixture Dip (2-x-x) lets other towers pop Lead.",
-   "purple": "Pops Purple."
+   "purple": "Pops Purple, except Transforming Tonic's attack."
   },
   "knowledge": [
    {
@@ -4930,7 +4936,7 @@
     "Aerial Attunement",
     "Zephyr Sense",
     "Wind Weaver",
-    "Gale Sage",
+    "Galesage",
     "Farwind Seer"
    ],
    [
@@ -5567,7 +5573,7 @@
      0
     ]
    ],
-   "camoText": "Spikes hit Camo from the start (they don't need to see them).",
+   "camoText": "Spikes can hit Camo from the start, but the factory has no Camo detection, so detection-sharing effects (Advanced Intel, Gerry's Fire) don't work through it.",
    "lead": [
     [
      2,
@@ -6070,7 +6076,7 @@
     ]
    ],
    "leadText": "Cleansing Foam (x-3-x).",
-   "purple": "Pops Purple."
+   "purple": "The nail gun pops Purple; Sentry Champion's plasma, Energy sentries and some of Master Builder's Mega Sentries can't."
   },
   "knowledge": [
    {
@@ -6307,12 +6313,17 @@
      0
     ],
     [
+     3,
+     0,
+     0
+    ],
+    [
      0,
      0,
-     2
+     5
     ]
    ],
-   "leadText": "Adasaurus (x-2-x) or Horned Owl (x-x-2); the staff can't.",
+   "leadText": "Adasaurus (x-2-x), Great White (3-x-x) or Pouākai (x-x-5); the staff and the other birds can't (birds need outside Lead popping).",
    "purple": "The staff can't pop Purple."
   },
   "knowledge": []

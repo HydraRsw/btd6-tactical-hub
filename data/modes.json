@@ -70,7 +70,7 @@
    "icon": "piggy-bank",
    "rules": [
     "Start on round 31 with $20,000 (no income at all) and finish round 60.",
-    "Selling works normally; continues and powers are disabled."
+    "Selling works normally; Continues, Perks and Fast Track are disabled."
    ],
    "strategy": [
     "Build the whole defense on the first round and cover every bloon type (camo purples on 45 and 48, camo leads on 59).",

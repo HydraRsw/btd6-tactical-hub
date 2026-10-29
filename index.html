@@ -22,36 +22,36 @@
   <script type="importmap">
   {
     "imports": {
-      "./js/components/compare.js": "./js/components/compare.js?v=f35ef6eeb7",
-      "./js/components/crosspath.js": "./js/components/crosspath.js?v=f35ef6eeb7",
-      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=f35ef6eeb7",
-      "./js/components/events.js": "./js/components/events.js?v=f35ef6eeb7",
-      "./js/components/farming.js": "./js/components/farming.js?v=f35ef6eeb7",
-      "./js/components/global-search.js": "./js/components/global-search.js?v=f35ef6eeb7",
-      "./js/components/hero-page.js": "./js/components/hero-page.js?v=f35ef6eeb7",
-      "./js/components/maps.js": "./js/components/maps.js?v=f35ef6eeb7",
-      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=f35ef6eeb7",
-      "./js/components/paragons.js": "./js/components/paragons.js?v=f35ef6eeb7",
-      "./js/components/planner.js": "./js/components/planner.js?v=f35ef6eeb7",
-      "./js/components/playbook.js": "./js/components/playbook.js?v=f35ef6eeb7",
-      "./js/components/rounds.js": "./js/components/rounds.js?v=f35ef6eeb7",
-      "./js/components/tier-list.js": "./js/components/tier-list.js?v=f35ef6eeb7",
-      "./js/components/tower-page.js": "./js/components/tower-page.js?v=f35ef6eeb7",
-      "./js/components/tracker.js": "./js/components/tracker.js?v=f35ef6eeb7",
-      "./js/directives.js": "./js/directives.js?v=f35ef6eeb7",
-      "./js/lib/data.js": "./js/lib/data.js?v=f35ef6eeb7",
-      "./js/lib/economy.js": "./js/lib/economy.js?v=f35ef6eeb7",
-      "./js/lib/game.js": "./js/lib/game.js?v=f35ef6eeb7",
-      "./js/lib/storage.js": "./js/lib/storage.js?v=f35ef6eeb7",
-      "./js/lib/text.js": "./js/lib/text.js?v=f35ef6eeb7",
-      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=f35ef6eeb7",
-      "./js/main.js": "./js/main.js?v=f35ef6eeb7",
-      "./js/store.js": "./js/store.js?v=f35ef6eeb7"
+      "./js/components/compare.js": "./js/components/compare.js?v=c6721c2a31",
+      "./js/components/crosspath.js": "./js/components/crosspath.js?v=c6721c2a31",
+      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=c6721c2a31",
+      "./js/components/events.js": "./js/components/events.js?v=c6721c2a31",
+      "./js/components/farming.js": "./js/components/farming.js?v=c6721c2a31",
+      "./js/components/global-search.js": "./js/components/global-search.js?v=c6721c2a31",
+      "./js/components/hero-page.js": "./js/components/hero-page.js?v=c6721c2a31",
+      "./js/components/maps.js": "./js/components/maps.js?v=c6721c2a31",
+      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=c6721c2a31",
+      "./js/components/paragons.js": "./js/components/paragons.js?v=c6721c2a31",
+      "./js/components/planner.js": "./js/components/planner.js?v=c6721c2a31",
+      "./js/components/playbook.js": "./js/components/playbook.js?v=c6721c2a31",
+      "./js/components/rounds.js": "./js/components/rounds.js?v=c6721c2a31",
+      "./js/components/tier-list.js": "./js/components/tier-list.js?v=c6721c2a31",
+      "./js/components/tower-page.js": "./js/components/tower-page.js?v=c6721c2a31",
+      "./js/components/tracker.js": "./js/components/tracker.js?v=c6721c2a31",
+      "./js/directives.js": "./js/directives.js?v=c6721c2a31",
+      "./js/lib/data.js": "./js/lib/data.js?v=c6721c2a31",
+      "./js/lib/economy.js": "./js/lib/economy.js?v=c6721c2a31",
+      "./js/lib/game.js": "./js/lib/game.js?v=c6721c2a31",
+      "./js/lib/storage.js": "./js/lib/storage.js?v=c6721c2a31",
+      "./js/lib/text.js": "./js/lib/text.js?v=c6721c2a31",
+      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=c6721c2a31",
+      "./js/main.js": "./js/main.js?v=c6721c2a31",
+      "./js/store.js": "./js/store.js?v=c6721c2a31"
     }
   }
   </script>
   <!-- import-map:end -->
-  <script type="module" src="js/main.js?v=f35ef6eeb7"></script>
+  <script type="module" src="js/main.js?v=c6721c2a31"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 
@@ -1303,7 +1303,7 @@
                 </header>
                 <template x-if="live.boss.rules">
                   <div class="stack stack--tight">
-                    <p><strong x-text="mapLabel(live.boss.rules.map)"></strong> · <span x-text="`${live.boss.rules.difficulty} ${live.boss.rules.mode}`"></span> · <span x-text="`Scoring: ${scoring(live.boss.event.normalScoringType)}`"></span></p>
+                    <p><strong x-text="mapLabel(live.boss.rules.map)"></strong> · <span x-text="`${live.boss.rules.difficulty} ${modeLabel(live.boss.rules.mode)}`"></span> · <span x-text="`Scoring: ${scoring(live.boss.event.normalScoringType)}`"></span></p>
                     <p class="dim" x-text="`Rounds ${live.boss.rules.startRound}–${live.boss.rules.endRound} · $${live.boss.rules.startingCash} · ${live.boss.rules.lives} lives · up to ${live.boss.rules.maxParagons} Paragons and ${live.boss.rules.maxTowers} towers`"></p>
                     <template x-if="restrictions(live.boss.rules)">
                       <ul class="tip-list event-rules">
@@ -1334,7 +1334,7 @@
                 </header>
                 <template x-if="live.race.rules">
                   <div class="stack stack--tight">
-                    <p><strong x-text="mapLabel(live.race.rules.map)"></strong> · <span x-text="`${live.race.rules.difficulty} ${live.race.rules.mode}`"></span> · <span x-text="`rounds ${live.race.rules.startRound}–${live.race.rules.endRound}`"></span></p>
+                    <p><strong x-text="mapLabel(live.race.rules.map)"></strong> · <span x-text="`${live.race.rules.difficulty} ${modeLabel(live.race.rules.mode)}`"></span> · <span x-text="`rounds ${live.race.rules.startRound}–${live.race.rules.endRound}`"></span></p>
                     <template x-if="restrictions(live.race.rules)">
                       <ul class="tip-list event-rules">
                         <li><span x-icon="star"></span><span x-text="`Heroes: ${restrictions(live.race.rules).heroes}`"></span></li>
@@ -1365,7 +1365,7 @@
                 </template>
                 <ol class="odyssey-islands">
                   <template x-for="(island, i) in live.odyssey.maps" :key="i">
-                    <li><strong x-text="mapLabel(island.map)"></strong> <span class="dim" x-text="`${island.difficulty} ${island.mode} · rounds ${island.startRound}–${island.endRound}`"></span></li>
+                    <li><strong x-text="mapLabel(island.map)"></strong> <span class="dim" x-text="`${island.difficulty} ${modeLabel(island.mode)} · rounds ${island.startRound}–${island.endRound}`"></span></li>
                   </template>
                 </ol>
               </article>
