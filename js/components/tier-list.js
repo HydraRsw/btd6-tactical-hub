@@ -1,7 +1,7 @@
 // Tier List tab: filters on the left, rows grouped by tier on the right.
 
-import { recall, remember } from '../lib/storage.js';
 import { matchesQuery } from '../lib/text.js';
+import { MODES } from '../store.js';
 
 export const CATEGORIES = ['Primary', 'Military', 'Magic', 'Support', 'Heroes'];
 export const ROLES = ['DPS', 'Stall', 'Buff', 'Cleanup', 'MOAB', 'Income'];
@@ -12,7 +12,6 @@ export const TIER_COLORS = { S: '#ff4747', A: '#ff8a1f', B: '#ffc700', C: '#5bbf
 
 export function tierList() {
   return {
-    mode: recall('mode', 'chimps'), // 'chimps' | 'boss'
     sortBy: 'tier',                 // 'tier' | 'name' | 'category'
     query: '',
     categories: [...CATEGORIES],
@@ -24,9 +23,10 @@ export function tierList() {
     CATEGORY_ICONS,
     TIER_COLORS,
 
-    setMode(mode) {
-      this.mode = mode;
-      remember('mode', mode);
+    MODES,
+
+    get mode() {
+      return this.$store.hub.mode;
     },
 
     toggle(list, value) {
@@ -37,7 +37,7 @@ export function tierList() {
 
     /** Short summary for the collapsed filter button, e.g. "CHIMPS · 4/5 classes · all roles". */
     get filterSummary() {
-      const mode = this.mode === 'chimps' ? 'CHIMPS' : 'Boss events';
+      const mode = this.$store.hub.modeLabel;
       const classes = this.categories.length === CATEGORIES.length ? 'all classes' : `${this.categories.length}/${CATEGORIES.length} classes`;
       const roles = this.roles.length === ROLES.length ? 'all roles' : `${this.roles.length}/${ROLES.length} roles`;
       return `${mode} · ${classes} · ${roles}`;
@@ -50,7 +50,7 @@ export function tierList() {
     },
 
     tierOf(unit) {
-      return unit.tiers[this.mode];
+      return this.$store.hub.tierOf(unit);
     },
 
     get modeNote() {

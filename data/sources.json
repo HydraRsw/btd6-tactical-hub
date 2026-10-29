@@ -214,5 +214,13 @@
   "wiki-farm": {
     "title": "Bloons wiki: Banana Farm",
     "url": "https://www.bloonswiki.com/Banana_Farm_(BTD6)"
+  },
+  "wiki-freeplay": {
+    "title": "Bloons wiki: Freeplay strategy",
+    "url": "https://www.bloonswiki.com/Strategy:Freeplay_(BTD6)"
+  },
+  "wiki-standard": {
+    "title": "Bloons wiki: Impoppable / standard-game strategy (v46.3)",
+    "url": "https://www.bloonswiki.com/Strategy:Impoppable_(BTD6)"
   }
 }
