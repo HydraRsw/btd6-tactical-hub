@@ -28,12 +28,17 @@ js/
     paragons.js          Paragons tab: tier list and degree guide.
     paragon-page.js      A Paragon's own page (#paragon/<id>).
     maps.js              Maps & Modes tab, map pages (#map/<id>) and mode pages (#mode/<id>).
+    hero-page.js         A hero's own page (#hero/<id>).
+    rounds.js            Rounds tab: every round's bloons, RBE and cash.
+    planner.js           Planner tab: round-by-round build planner (shareable with ?build=…).
+    degree-calc.js       Paragon degree calculator (on the Paragons tab).
   lib/
     economy.js           Farm income / payback maths (pure functions).
     upgrades.js          "2-0-5" → upgrade pip grid.
     text.js              Cash formatting, initials, fuzzy search.
     storage.js           Remembering preferences in the browser.
     data.js              Loads the files in /data.
+    game.js              Game maths: prices, crosspath rules, cash by round, hero XP, Paragon power.
 data/
   meta.json              Patch number, update date, changelog, optional image folder.
   towers.json            Every tower: tiers, best route, alternatives, roles, icon.
@@ -44,6 +49,7 @@ data/
   paragons.json          Paragon tier list (boss events), each Paragon's page and the degree guide.
   maps.json              Every map: difficulty, traits, where to build, recommended towers, per-mode notes.
   modes.json             Every game mode: rules, general strategy, towers that shine.
+  rounds.json            Standard and ABR rounds 1–140: bloon groups, duration, RBE, cash, hero XP.
 ```
 
 ## Updating for a new patch
@@ -98,6 +104,18 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 - `paragons.json` → each Paragon also has `combines` (its three tier 5s), `howItWorks`,
   `strategy`, `synergies: [{ unit, note }]` (a tower, hero or Paragon id), `bestBosses`,
   `worstBosses` and `degreeTips`. Page: `#paragon/<id>`.
+
+### Costs, detection, heroes and rounds
+
+- Towers have `costs: { base: [e, m, h, i], upgrades: [path][tier] → [e, m, h, i] }` (Easy,
+  Medium, Hard, Impoppable) and `detection: { camo, lead }` as lists of minimum crosspaths
+  (`[[0, 0, 2]]` = bottom path tier 2 or more; `[[0, 0, 0]]` = from the start; `[]` = never
+  on its own), with `camoText`, `leadText` and `purple` notes for people.
+- Heroes have `cost` (same four prices), `xpModifier`, `milestones: [{ level, text }]`
+  (our own summaries), `camoLevel` / `leadLevel` (level the main attack gets it, `0` = from
+  the start, `null` = never), `bestFor`, `tips` and `pairs: [{ unit, note }]`.
+- `rounds.json` comes from the wiki's round tables. Cash is `popCash + bonusCash`.
+- Paragons have `costs` per difficulty; the degree formula and power caps are in `js/lib/game.js`.
 
 Map and mode advice comes from each map's Bloons wiki page and the wiki's mode strategy
 pages; Paragon pages from each Paragon's wiki page (its Strategy section).

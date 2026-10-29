@@ -6,6 +6,7 @@ import { parseRoute } from '../lib/upgrades.js';
 import { formatCash } from '../lib/text.js';
 import { CATEGORY_ICONS } from './tier-list.js';
 import { MODES } from '../store.js';
+import { DIFFICULTIES, meetsRule, upgradeCost } from '../lib/game.js';
 
 const PATH_NAMES = ['Top path', 'Middle path', 'Bottom path'];
 
@@ -21,7 +22,33 @@ export function towerPage() {
     CONFIDENCE_LABELS,
     CATEGORY_ICONS,
     MODES,
+    DIFFICULTIES,
     formatCash,
+    costDifficulty: 2, // Hard: the CHIMPS price
+
+    /** Is this upgrade part of the recommended route? */
+    onRoute(path, tier) {
+      const bought = parseRoute(this.tower.bestRoute);
+      return bought[path] !== null && tier <= bought[path];
+    },
+
+    /** Total price of the recommended route on the chosen difficulty, or null if the route isn't fixed. */
+    get routeCost() {
+      const route = parseRoute(this.tower.bestRoute);
+      if (!this.tower.costs || route.some((tier) => tier === null)) return null;
+      return upgradeCost(this.tower, null, route, this.costDifficulty);
+    },
+
+    /** "At 2-0-5 it sees Camo but can't pop Lead without help." */
+    get routeDetection() {
+      const route = parseRoute(this.tower.bestRoute);
+      const d = this.tower.detection;
+      if (!d || route.some((tier) => tier === null) || d.camo === null) return '';
+      const camo = meetsRule(d.camo, route);
+      const lead = meetsRule(d.lead, route);
+      const parts = [camo ? 'sees Camo' : 'needs Camo support', lead ? 'pops Lead' : 'needs Lead support'];
+      return `At ${this.tower.bestRoute} its main attack ${parts.join(' and ')}.`;
+    },
 
     get tower() {
       return this.$store.hub.currentTower;
@@ -104,9 +131,7 @@ export function towerPage() {
     },
 
     openUnit(unit) {
-      const hub = this.$store.hub;
-      if (unit.category === 'Heroes') hub.jumpTo('tier', `tier-${unit.id}`, unit.id);
-      else hub.openTower(unit.id);
+      this.$store.hub.openUnit(unit);
     },
   };
 }

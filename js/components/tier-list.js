@@ -43,10 +43,9 @@ export function tierList() {
       return `${mode} · ${classes} · ${roles}`;
     },
 
-    /** Towers open their own page; heroes expand in place. */
+    /** Towers and heroes open their own page. */
     openRow(unit) {
-      if (unit.category === 'Heroes') this.$store.hub.toggleOpen(unit.id);
-      else this.$store.hub.openTower(unit.id);
+      this.$store.hub.openUnit(unit);
     },
 
     tierOf(unit) {

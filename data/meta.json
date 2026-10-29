@@ -1,14 +1,12 @@
 {
-  "patch": "57.0",
-  "updated": "2026-10-29",
-  "changes": [
-    "New Normal & Freeplay tier list, based on the wiki's standard-game and Freeplay guides",
-    "The tier list now shows only the tier for the mode you pick",
-    "Tower pages gained a Normal & Freeplay tips column",
-    "Updated for BTD6 v57.0 (released October 8, 2026)",
-    "Bomb Blitz nerfed to one passive trigger per round",
-    "Crossbow Master now fires two bolts at half the rate"
-  ],
-  "imageDir": "img",
-  "researched": "2026-10-29"
+ "patch": "57.0",
+ "updated": "2026-10-29",
+ "changes": [
+  "New Rounds tab: every standard and ABR round with bloons, RBE and cash",
+  "New Planner tab: plan a CHIMPS run round by round and check it's affordable",
+  "Paragon degree calculator, plus a fix to how cash counts toward degree",
+  "Hero pages (Dan D'Monke added), tower upgrade costs and Camo/Lead info, map trait filters"
+ ],
+ "imageDir": "img",
+ "researched": "2026-10-29"
 }

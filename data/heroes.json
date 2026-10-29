@@ -1,353 +1,1437 @@
 [
-  {
-    "id": "quincy",
-    "name": "Quincy",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "B",
-      "boss": "C",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 10",
-    "roles": [
-      "DPS"
-    ],
-    "confidence": "verified",
-    "summary": "Recommended as an early-game CHIMPS starter. v57 gave him a Focus toggle at level 4 (more range and precise shots, slower attacks).",
-    "sources": [
-      "wiki-chimps",
-      "steam-v57"
-    ]
+ {
+  "id": "quincy",
+  "name": "Quincy",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "C",
+   "normal": "B"
   },
-  {
-    "id": "gwen",
-    "name": "Gwendolin",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "B",
-      "boss": "C",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 10",
-    "roles": [
-      "Cleanup",
-      "Buff"
-    ],
-    "confidence": "approximate",
-    "summary": "Fire damage pops leads early; Heat It Up buffs nearby towers. Not covered by the wiki's strategy pages.",
-    "sources": []
+  "bestRoute": "Lv 10",
+  "roles": [
+   "DPS"
+  ],
+  "confidence": "verified",
+  "summary": "Recommended as an early-game CHIMPS starter. v57 gave him a Focus toggle at level 4 (more range and precise shots, slower attacks).",
+  "sources": [
+   "wiki-chimps",
+   "steam-v57",
+   "wiki-hero-quincy",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   460,
+   540,
+   585,
+   650
+  ],
+  "xpModifier": 1.0,
+  "introduced": "Launch",
+  "milestones": [
+   {
+    "level": 3,
+    "text": "Rapid Shot ability: a burst of triple attack speed."
+   },
+   {
+    "level": 4,
+    "text": "Focus toggle: trade attack speed for range and accurate shots."
+   },
+   {
+    "level": 5,
+    "text": "Sees Camo."
+   },
+   {
+    "level": 6,
+    "text": "Fires two arrows per shot."
+   },
+   {
+    "level": 8,
+    "text": "Triple damage to MOAB-class."
+   },
+   {
+    "level": 10,
+    "text": "Storm of Arrows: rains arrows over a big area."
+   },
+   {
+    "level": 14,
+    "text": "Quadruple MOAB damage."
+   },
+   {
+    "level": 19,
+    "text": "Three arrows per shot."
+   },
+   {
+    "level": 20,
+    "text": "Stronger attacks and a much bigger Storm of Arrows."
+   }
+  ],
+  "camoLevel": 5,
+  "leadLevel": null,
+  "bestFor": "A cheap, flexible early-game hero who stays useful as MOAB damage in CHIMPS, especially with Berserker Brew and Stronger Stimulant.",
+  "tips": [
+   "Set him to Strong before Storm of Arrows to drop it on blimps.",
+   "He can't hurt DDTs (Lead) without help: plan an MIB or Glue Strike for the late game."
+  ],
+  "pairs": [
+   {
+    "unit": "alch",
+    "note": "Berserker Brew and Stronger Stimulant suit his many low-damage arrows."
+   },
+   {
+    "unit": "village",
+    "note": "Monkey Intelligence Bureau lets him hit DDTs."
+   }
+  ]
+ },
+ {
+  "id": "gwen",
+  "name": "Gwendolin",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "C",
+   "normal": "B"
   },
-  {
-    "id": "striker",
-    "name": "Striker Jones",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "A",
-      "boss": "B",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "Buff"
-    ],
-    "confidence": "verified",
-    "summary": "Support hero for CHIMPS; the favored pick for Mortar builds thanks to attack-speed and black-popping buffs (pairs with Pop and Awe).",
-    "sources": [
-      "wiki-chimps",
-      "wiki-mortar"
-    ]
+  "bestRoute": "Lv 10",
+  "roles": [
+   "Cleanup",
+   "Buff"
+  ],
+  "confidence": "approximate",
+  "summary": "Fire damage pops leads early; Heat It Up buffs nearby towers. Not covered by the wiki's strategy pages.",
+  "sources": [
+   "wiki-hero-gwen",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   615,
+   725,
+   785,
+   870
+  ],
+  "xpModifier": 1.0,
+  "introduced": "Launch",
+  "milestones": [
+   {
+    "level": 3,
+    "text": "Cocktail of Fire: a burning patch on the track."
+   },
+   {
+    "level": 4,
+    "text": "Heat It Up: every 40 attacks, a blast that gives nearby Monkeys fire damage."
+   },
+   {
+    "level": 6,
+    "text": "Attacks set Bloons burning."
+   },
+   {
+    "level": 8,
+    "text": "Two blasts per shot."
+   },
+   {
+    "level": 10,
+    "text": "Firestorm: burns every Bloon on screen and buffs all Monkeys."
+   },
+   {
+    "level": 16,
+    "text": "Can now damage Purple Bloons."
+   },
+   {
+    "level": 17,
+    "text": "Heat It Up adds a layer of popping and extra Lead damage to buffed Monkeys."
+   },
+   {
+    "level": 19,
+    "text": "Three blasts per shot."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": 0,
+  "bestFor": "Strategies that need steady Lead popping against DDTs, and fast low-damage towers that benefit from Heat It Up. Her abilities answer the Ceramic rushes on rounds 63, 76 and 78.",
+  "tips": [
+   "Place her just ahead of your main damage so Heat It Up triggers often.",
+   "Her flat pierce buff is strongest on high-damage, low-pierce attacks like Inferno Ring."
+  ],
+  "pairs": [
+   {
+    "unit": "tack",
+    "note": "Inferno Ring gains the most from her pierce buff and fire passive."
+   },
+   {
+    "unit": "mortar",
+    "note": "Her fire-tower passive speeds Signal Flare too."
+   }
+  ]
+ },
+ {
+  "id": "striker",
+  "name": "Striker Jones",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "A",
+   "boss": "B",
+   "normal": "B"
   },
-  {
-    "id": "obyn",
-    "name": "Obyn Greenfoot",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "A",
-      "boss": "B",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "Buff",
-      "DPS"
-    ],
-    "confidence": "verified",
-    "summary": "Listed as a CHIMPS win-condition hero.",
-    "sources": [
-      "wiki-chimps"
-    ]
+  "bestRoute": "Lv 20",
+  "roles": [
+   "Buff"
+  ],
+  "confidence": "verified",
+  "summary": "Support hero for CHIMPS; the favored pick for Mortar builds thanks to attack-speed and black-popping buffs (pairs with Pop and Awe).",
+  "sources": [
+   "wiki-chimps",
+   "wiki-mortar",
+   "wiki-hero-striker",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   595,
+   700,
+   755,
+   840
+  ],
+  "xpModifier": 1.0,
+  "introduced": "Launch",
+  "milestones": [
+   {
+    "level": 3,
+    "text": "Concussive Shell: a guided shell that stuns."
+   },
+   {
+    "level": 4,
+    "text": "Bomb Shooters and Mortars attack 10% faster."
+   },
+   {
+    "level": 5,
+    "text": "Black Bloons become weaker to explosions from all Monkeys."
+   },
+   {
+    "level": 7,
+    "text": "Target Focus: Mortars aim at your cursor for 15 seconds."
+   },
+   {
+    "level": 8,
+    "text": "Nearby towers gain range and 25% pierce."
+   },
+   {
+    "level": 10,
+    "text": "Artillery Command: resets all Bomb and Mortar cooldowns."
+   },
+   {
+    "level": 19,
+    "text": "Black Bloons are fully vulnerable to explosions."
+   },
+   {
+    "level": 20,
+    "text": "Artillery Command also doubles Bomb and Mortar damage for 10 seconds."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": 0,
+  "bestFor": "Bomb Shooter and Mortar strategies: he removes their Black Bloon weakness and speeds them up. His pierce buff also helps Spike Factories.",
+  "tips": [
+   "Save Concussive Shell for stall-heavy rounds like 63.",
+   "At level 20, Artillery Command is a strong answer to rounds 98–100."
+  ],
+  "pairs": [
+   {
+    "unit": "mortar",
+    "note": "Removes the Black Bloon weakness of Pop and Awe and Artillery Battery."
+   },
+   {
+    "unit": "bomb",
+    "note": "Faster, Black-popping explosions."
+   },
+   {
+    "unit": "spike",
+    "note": "His pierce buff helps Spike Factories."
+   }
+  ]
+ },
+ {
+  "id": "obyn",
+  "name": "Obyn Greenfoot",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "A",
+   "boss": "B",
+   "normal": "B"
   },
-  {
-    "id": "rosalia",
-    "name": "Rosalia",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "B",
-      "boss": "B",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "DPS"
-    ],
-    "confidence": "approximate",
-    "summary": "Flexible ranged DPS; discounts Heli Pilots and Aces in range.",
-    "sources": [
-      "wiki-heli",
-      "wiki-ace"
-    ]
+  "bestRoute": "Lv 20",
+  "roles": [
+   "Buff",
+   "DPS"
+  ],
+  "confidence": "verified",
+  "summary": "Listed as a CHIMPS win-condition hero.",
+  "sources": [
+   "wiki-chimps",
+   "wiki-hero-obyn",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   555,
+   650,
+   700,
+   780
+  ],
+  "xpModifier": 1.0,
+  "introduced": "Launch",
+  "milestones": [
+   {
+    "level": 2,
+    "text": "Druids and Skywardens in range gain pierce."
+   },
+   {
+    "level": 3,
+    "text": "Brambles: a spiked bush on the track."
+   },
+   {
+    "level": 4,
+    "text": "Totems that slow nearby Bloons."
+   },
+   {
+    "level": 5,
+    "text": "Extra range for Druids of the Jungle and Wind Weavers, and bonus cash for Druids."
+   },
+   {
+    "level": 8,
+    "text": "Druids and Skywardens in range gain Camo detection."
+   },
+   {
+    "level": 10,
+    "text": "Wall of Trees: destroys Bloons that enter, then bursts into cash."
+   },
+   {
+    "level": 11,
+    "text": "Magic Monkeys in range gain range and pierce."
+   },
+   {
+    "level": 16,
+    "text": "Brambles pop 500 Bloons and hit every type."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": 0,
+  "bestFor": "The best hero for Druid and Skywarden builds, and a beginner-friendly pick. His Jungle's Bounty cash buff rivals the money heroes.",
+  "tips": [
+   "His Brambles and totems are random: don't rely on them for early Camo or slowdown.",
+   "Place him near as many Jungle's Bounties as you can when farming."
+  ],
+  "pairs": [
+   {
+    "unit": "druid",
+    "note": "Pierce, Camo detection and extra Jungle's Bounty cash."
+   },
+   {
+    "unit": "skywarden",
+    "note": "Pierce and Camo detection, plus path-specific buffs."
+   }
+  ]
+ },
+ {
+  "id": "rosalia",
+  "name": "Rosalia",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "B",
+   "normal": "B"
   },
-  {
-    "id": "churchill",
-    "name": "Captain Churchill",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "B",
-      "boss": "B",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "DPS",
-      "MOAB"
-    ],
-    "confidence": "approximate",
-    "summary": "Strong tank DPS and an Overclock target. Not covered by the wiki's CHIMPS or boss pages.",
-    "sources": [
-      "wiki-overclock"
-    ]
+  "bestRoute": "Lv 20",
+  "roles": [
+   "DPS"
+  ],
+  "confidence": "approximate",
+  "summary": "Flexible ranged DPS; discounts Heli Pilots and Aces in range.",
+  "sources": [
+   "wiki-heli",
+   "wiki-ace",
+   "wiki-hero-rosalia",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   745,
+   875,
+   945,
+   1050
+  ],
+  "xpModifier": 1.425,
+  "introduced": "Version 43.0",
+  "milestones": [
+   {
+    "level": 2,
+    "text": "Grenade weapon: switch between laser and grenades."
+   },
+   {
+    "level": 3,
+    "text": "Scatter Missile ability."
+   },
+   {
+    "level": 4,
+    "text": "Attacks faster the more Bloons are near."
+   },
+   {
+    "level": 6,
+    "text": "Monkey Aces and Heli Pilots near her workshop get cheaper upgrades."
+   },
+   {
+    "level": 7,
+    "text": "Hovers and can use Flight Boost to chase Bloons over the whole map."
+   },
+   {
+    "level": 10,
+    "text": "Kinetic Charge: stores damage dealt to a Bloon, then detonates."
+   },
+   {
+    "level": 13,
+    "text": "Lasers become plasma; grenades split into clusters."
+   },
+   {
+    "level": 20,
+    "text": "The Anti-Bloon costs 30% less; triple Scatter Missiles."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": 0,
+  "bestFor": "A versatile hero with a strong early game from her laser, best on maps with one active lane per round. Her discounts help afford Flying Fortress and Apache Prime.",
+  "tips": [
+   "Most of her damage is the laser; use grenades for grouped cleanup.",
+   "Scatter Missile is excellent for clearing a tough clump."
+  ],
+  "pairs": [
+   {
+    "unit": "ace",
+    "note": "Cheaper upgrades for aircraft near her workshop."
+   },
+   {
+    "unit": "heli",
+    "note": "Cheaper upgrades for aircraft near her workshop."
+   }
+  ]
+ },
+ {
+  "id": "churchill",
+  "name": "Captain Churchill",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "B",
+   "normal": "B"
   },
-  {
-    "id": "ben",
-    "name": "Benjamin",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "D",
-      "boss": "S",
-      "normal": "A"
-    },
-    "bestRoute": "Lv 10+",
-    "roles": [
-      "Income",
-      "Buff"
-    ],
-    "confidence": "verified",
-    "summary": "A primary boss-event hero: early cash snowballs your economy. The CHIMPS page says to avoid him (income is disabled). Normal/Freeplay: Snowballs income in standard games, especially if you reach him early.",
-    "sources": [
-      "wiki-boss-events",
-      "wiki-chimps",
-      "wiki-standard"
-    ]
+  "bestRoute": "Lv 20",
+  "roles": [
+   "DPS",
+   "MOAB"
+  ],
+  "confidence": "approximate",
+  "summary": "Strong tank DPS and an Overclock target. Not covered by the wiki's CHIMPS or boss pages.",
+  "sources": [
+   "wiki-overclock",
+   "wiki-hero-churchill",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   1700,
+   2000,
+   2160,
+   2400
+  ],
+  "xpModifier": 1.71,
+  "introduced": "Version 2.0",
+  "milestones": [
+   {
+    "level": 3,
+    "text": "Armor Piercing Shells: shells pop Black and hit Ceramics harder."
+   },
+   {
+    "level": 5,
+    "text": "Adds a machine gun."
+   },
+   {
+    "level": 6,
+    "text": "Sees Camo."
+   },
+   {
+    "level": 10,
+    "text": "MOAB Barrage: shells hit up to 10 blimps."
+   },
+   {
+    "level": 13,
+    "text": "Stronger Armor Piercing Shells and MOAB Barrage."
+   },
+   {
+    "level": 15,
+    "text": "Extra damage to Camo, Lead, Fortified and stunned Bloons."
+   },
+   {
+    "level": 20,
+    "text": "Massive damage boost to all his attacks."
+   }
+  ],
+  "camoLevel": 6,
+  "leadLevel": 0,
+  "bestFor": "An expensive early and mid-game carry that's strong on straight tracks. He levels slowly, so he falls off late without Energizer.",
+  "tips": [
+   "Save up specifically to buy him.",
+   "Bring something else for the first Camo rounds: he only sees Camo from level 6."
+  ],
+  "pairs": [
+   {
+    "unit": "sub",
+    "note": "Energizer helps him keep leveling."
+   }
+  ]
+ },
+ {
+  "id": "ben",
+  "name": "Benjamin",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "D",
+   "boss": "S",
+   "normal": "A"
   },
-  {
-    "id": "pat",
-    "name": "Pat Fusty",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "B",
-      "boss": "C",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "Stall"
-    ],
-    "confidence": "approximate",
-    "summary": "Big Squeeze grabs blimps; a good Overclock target from level 5.",
-    "sources": [
-      "wiki-overclock"
-    ]
+  "bestRoute": "Lv 10+",
+  "roles": [
+   "Income",
+   "Buff"
+  ],
+  "confidence": "verified",
+  "summary": "A primary boss-event hero: early cash snowballs your economy. The CHIMPS page says to avoid him (income is disabled). Normal/Freeplay: Snowballs income in standard games, especially if you reach him early.",
+  "sources": [
+   "wiki-boss-events",
+   "wiki-chimps",
+   "wiki-standard",
+   "wiki-hero-ben",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   1020,
+   1200,
+   1295,
+   1440
+  ],
+  "xpModifier": 1.5,
+  "introduced": "Version 3.0",
+  "milestones": [
+   {
+    "level": 1,
+    "text": "Earns cash every round (more at levels 2, 8, 11, 15 and 17)."
+   },
+   {
+    "level": 3,
+    "text": "Biohack: four nearby Monkeys pop extra layers briefly."
+   },
+   {
+    "level": 4,
+    "text": "Restores lives each round."
+   },
+   {
+    "level": 5,
+    "text": "Banks earn more."
+   },
+   {
+    "level": 7,
+    "text": "Bloon Trojan: a Bloon spawns no children and gives extra cash."
+   },
+   {
+    "level": 10,
+    "text": "Syphon Funding: newly spawned Bloons drop a rank for a few seconds."
+   },
+   {
+    "level": 18,
+    "text": "Trojan can hit BFBs and DDTs."
+   },
+   {
+    "level": 20,
+    "text": "Syphon Funding lasts longer and gives triple cash."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": null,
+  "bestFor": "Easy income for casual games and boss events. In CHIMPS he earns nothing but Syphon Funding can delete dense rounds like 94, 96 and 98.",
+  "tips": [
+   "Keep him away from income-per-pop towers and Paragons: Trojan steals their pops.",
+   "In CHIMPS, place him around round 80 just to reach level 10 in time."
+  ],
+  "pairs": [
+   {
+    "unit": "farm",
+    "note": "Bank Hack boosts Monkey Banks."
+   }
+  ]
+ },
+ {
+  "id": "pat",
+  "name": "Pat Fusty",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "C",
+   "normal": "B"
   },
-  {
-    "id": "ezili",
-    "name": "Ezili",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "S",
-      "boss": "A",
-      "normal": "S"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "DPS",
-      "MOAB"
-    ],
-    "confidence": "verified",
-    "summary": "CHIMPS win-condition hero; MOAB Hex is a listed R40 answer. A fallback support hero in boss events. Normal/Freeplay: Her level 20 percentage damage is the Freeplay guide's main answer to late BADs.",
-    "sources": [
-      "wiki-chimps",
-      "wiki-boss-events",
-      "wiki-freeplay"
-    ]
+  "bestRoute": "Lv 20",
+  "roles": [
+   "Stall"
+  ],
+  "confidence": "approximate",
+  "summary": "Big Squeeze grabs blimps; a good Overclock target from level 5.",
+  "sources": [
+   "wiki-overclock",
+   "wiki-hero-pat",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   680,
+   800,
+   865,
+   960
+  ],
+  "xpModifier": 1.425,
+  "introduced": "Version 9.0",
+  "milestones": [
+   {
+    "level": 3,
+    "text": "Rallying Roar: nearby Monkeys pop an extra layer."
+   },
+   {
+    "level": 5,
+    "text": "Occasional slap pushes Bloons back."
+   },
+   {
+    "level": 6,
+    "text": "Hits stun Bloons."
+   },
+   {
+    "level": 10,
+    "text": "Big Squeeze: crushes a blimp."
+   },
+   {
+    "level": 13,
+    "text": "Longer stuns that briefly stop blimps."
+   },
+   {
+    "level": 16,
+    "text": "Much more damage to Ceramics."
+   },
+   {
+    "level": 20,
+    "text": "Big Squeeze grabs several blimps and stuns nearby Bloons."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": 0,
+  "bestFor": "A very map-dependent hero whose value is stalling blimps and his level 3 buff. Best on maps where his short range reaches every path.",
+  "tips": [
+   "Rallying Roar is best on fast, low-damage towers like The Tack Zone and Super Maelstrom.",
+   "Big Squeeze switches off his stun: save it for rounds with few blimps (60, 80, 85, 87, 97)."
+  ],
+  "pairs": [
+   {
+    "unit": "tack",
+    "note": "Rallying Roar on The Tack Zone or Super Maelstrom."
+   },
+   {
+    "unit": "beast",
+    "note": "T-Rex deals extra damage to Bloons he stuns."
+   },
+   {
+    "unit": "alch",
+    "note": "Berserker Brew makes his stuns much more frequent."
+   }
+  ]
+ },
+ {
+  "id": "ezili",
+  "name": "Ezili",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "S",
+   "boss": "A",
+   "normal": "S"
   },
-  {
-    "id": "adora",
-    "name": "Adora",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "B",
-      "boss": "A",
-      "normal": "A"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "DPS"
-    ],
-    "confidence": "approximate",
-    "summary": "A fallback boss-event hero; Blood Sacrifice suits True Sun God setups against Elite tier 5 bosses. Normal/Freeplay: Blood Sacrifice powers the Sun Temple Freeplay build.",
-    "sources": [
-      "wiki-boss-events",
-      "wiki-bloonarius",
-      "wiki-freeplay"
-    ]
+  "bestRoute": "Lv 20",
+  "roles": [
+   "DPS",
+   "MOAB"
+  ],
+  "confidence": "verified",
+  "summary": "CHIMPS win-condition hero; MOAB Hex is a listed R40 answer. A fallback support hero in boss events. Normal/Freeplay: Her level 20 percentage damage is the Freeplay guide's main answer to late BADs.",
+  "sources": [
+   "wiki-chimps",
+   "wiki-boss-events",
+   "wiki-freeplay",
+   "wiki-hero-ezili",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   470,
+   550,
+   595,
+   660
+  ],
+  "xpModifier": 1.425,
+  "introduced": "Version 7.0",
+  "milestones": [
+   {
+    "level": 1,
+    "text": "Sees Camo."
+   },
+   {
+    "level": 3,
+    "text": "Heartstopper: lets your Monkeys pop Purple and stops regrowth."
+   },
+   {
+    "level": 6,
+    "text": "Much more damage to MOAB-class."
+   },
+   {
+    "level": 7,
+    "text": "Sacrificial Totem: Camo detection and big buffs nearby (especially Wizards), at the cost of lives."
+   },
+   {
+    "level": 9,
+    "text": "Strips Camo, Regrow and Fortified from small Bloons."
+   },
+   {
+    "level": 10,
+    "text": "MOAB Hex: a blimp takes damage every second until destroyed."
+   },
+   {
+    "level": 16,
+    "text": "Totem costs 1 life; can strip Camo from DDTs."
+   },
+   {
+    "level": 20,
+    "text": "MOAB Hex works faster and can kill BADs."
+   }
+  ],
+  "camoLevel": 0,
+  "leadLevel": 0,
+  "bestFor": "One of the best heroes in deep Freeplay thanks to MOAB Hex's percentage damage on BADs, and strong in CHIMPS by chaining Hex across blimps.",
+  "tips": [
+   "Leave her on Strong.",
+   "Normal damage buffs do little for her; cooldown buffs (Energizer, The Final Harmonic) help a lot."
+  ],
+  "pairs": [
+   {
+    "unit": "sub",
+    "note": "Energizer shortens MOAB Hex's cooldown."
+   },
+   {
+    "unit": "mermonkey",
+    "note": "The Final Harmonic shortens her cooldowns."
+   },
+   {
+    "unit": "wizard",
+    "note": "Sacrificial Totem buffs Wizards most."
+   }
+  ]
+ },
+ {
+  "id": "adora",
+  "name": "Adora",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "A",
+   "normal": "A"
   },
-  {
-    "id": "etienne",
-    "name": "Etienne",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "B",
-      "boss": "B",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 10",
-    "roles": [
-      "Buff"
-    ],
-    "confidence": "approximate",
-    "summary": "Drone DPS and global camo detection. Not covered by the wiki's strategy pages.",
-    "sources": []
+  "bestRoute": "Lv 20",
+  "roles": [
+   "DPS"
+  ],
+  "confidence": "approximate",
+  "summary": "A fallback boss-event hero; Blood Sacrifice suits True Sun God setups against Elite tier 5 bosses. Normal/Freeplay: Blood Sacrifice powers the Sun Temple Freeplay build.",
+  "sources": [
+   "wiki-boss-events",
+   "wiki-bloonarius",
+   "wiki-freeplay",
+   "wiki-hero-adora",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   850,
+   1000,
+   1080,
+   1200
+  ],
+  "xpModifier": 1.71,
+  "introduced": "Version 14.0",
+  "milestones": [
+   {
+    "level": 3,
+    "text": "Long Arm of Light: big range and power boost that hits every Bloon type."
+   },
+   {
+    "level": 4,
+    "text": "Two bolts at a time (more at 6, 8, 12, 14 and 18)."
+   },
+   {
+    "level": 7,
+    "text": "Blood Sacrifice: sacrifice a tower for XP and a temporary boost."
+   },
+   {
+    "level": 10,
+    "text": "Ball of Light: a powerful energy strike."
+   },
+   {
+    "level": 15,
+    "text": "Bolts pop an extra layer; stronger Ball of Light."
+   },
+   {
+    "level": 20,
+    "text": "Greatly improved Ball of Light and stronger sacrifice buffs."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": 0,
+  "bestFor": "Her Blood Sacrifice buff to Sun Temples and True Sun God in late game and boss events; in CHIMPS she has a very strong early game.",
+  "tips": [
+   "Great Berserker Brew target before round 50; Overclock her at level 20.",
+   "You can sacrifice a mid-game carry to rush level 20 before round 98."
+  ],
+  "pairs": [
+   {
+    "unit": "super",
+    "note": "Blood Sacrifice powers up Sun Temples and True Sun God."
+   },
+   {
+    "unit": "alch",
+    "note": "Berserker Brew early."
+   },
+   {
+    "unit": "engi",
+    "note": "Overclock at level 20."
+   }
+  ]
+ },
+ {
+  "id": "etienne",
+  "name": "Etienne",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "B",
+   "normal": "B"
   },
-  {
-    "id": "sauda",
-    "name": "Sauda",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "B",
-      "boss": "B",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 11",
-    "roles": [
-      "DPS",
-      "Cleanup"
-    ],
-    "confidence": "verified",
-    "summary": "Strong early-game starter, but not a solo carry: her bonus damage needs stuns, slows or damage over time (Relentless Glue, Dragon's Breath). Leaping Sword is spammable early boss damage in Boss Rush.",
-    "sources": [
-      "wiki-sauda",
-      "wiki-chimps"
-    ]
+  "bestRoute": "Lv 10",
+  "roles": [
+   "Buff"
+  ],
+  "confidence": "approximate",
+  "summary": "Drone DPS and global camo detection. Not covered by the wiki's strategy pages.",
+  "sources": [
+   "wiki-hero-etienne",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   555,
+   650,
+   700,
+   780
+  ],
+  "xpModifier": 1.0,
+  "introduced": "Version 20.0",
+  "milestones": [
+   {
+    "level": 2,
+    "text": "Nearby Monkeys gain range."
+   },
+   {
+    "level": 3,
+    "text": "Drone Swarm: extra temporary drones."
+   },
+   {
+    "level": 5,
+    "text": "Drones see Camo."
+   },
+   {
+    "level": 7,
+    "text": "Two drones."
+   },
+   {
+    "level": 8,
+    "text": "UAV: every Monkey gains Camo detection."
+   },
+   {
+    "level": 10,
+    "text": "UCAV: a powerful combat drone for a while."
+   },
+   {
+    "level": 16,
+    "text": "Nearby Monkeys gain 20% range."
+   },
+   {
+    "level": 20,
+    "text": "The UCAV becomes permanent."
+   }
+  ],
+  "camoLevel": 5,
+  "leadLevel": 0,
+  "bestFor": "Solid damage and support with a strong mid game. His level 8 map-wide Camo detection can replace a Radar Scanner.",
+  "tips": [
+   "UAV doesn't help against Phayze's Radar Jam.",
+   "His level 16 range buff helps towers reach extra lanes (MOAB Domination, Popseidon, Desperados).",
+   "Avoid him with ability-based stall towers: the permanent UCAV ruins stalls."
+  ],
+  "pairs": [
+   {
+    "unit": "boomer",
+    "note": "Range buff lets MOAB Domination reach more lanes."
+   },
+   {
+    "unit": "desperado",
+    "note": "Range buff for path 1 and 2 Desperados."
+   }
+  ]
+ },
+ {
+  "id": "sauda",
+  "name": "Sauda",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "B",
+   "normal": "B"
   },
-  {
-    "id": "brickell",
-    "name": "Admiral Brickell",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "A",
-      "boss": "A",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 10",
-    "roles": [
-      "Buff",
-      "MOAB"
-    ],
-    "confidence": "verified",
-    "summary": "Support hero that buffs naval towers: pairs with Carrier Flagship, Pirate Lord, Destroyers and Subs. v57 reworked her: weaker early Naval Tactics and Pistol, water towers get +1 pierce from level 4, shorter Mega Mine.",
-    "sources": [
-      "wiki-chimps",
-      "wiki-lych",
-      "wiki-phayze",
-      "wiki-dreadbloon",
-      "steam-v57"
-    ]
+  "bestRoute": "Lv 11",
+  "roles": [
+   "DPS",
+   "Cleanup"
+  ],
+  "confidence": "verified",
+  "summary": "Strong early-game starter, but not a solo carry: her bonus damage needs stuns, slows or damage over time (Relentless Glue, Dragon's Breath). Leaping Sword is spammable early boss damage in Boss Rush.",
+  "sources": [
+   "wiki-sauda",
+   "wiki-chimps",
+   "wiki-hero-sauda",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   510,
+   600,
+   650,
+   720
+  ],
+  "xpModifier": 1.425,
+  "introduced": "Version 24.0",
+  "milestones": [
+   {
+    "level": 1,
+    "text": "Sees Camo."
+   },
+   {
+    "level": 3,
+    "text": "Leaping Sword Attack: a Lead-popping leap."
+   },
+   {
+    "level": 7,
+    "text": "Extra damage to stunned Bloons; pops frozen."
+   },
+   {
+    "level": 9,
+    "text": "Bleed damage over time."
+   },
+   {
+    "level": 10,
+    "text": "Sword Charge: sweeps the whole track."
+   },
+   {
+    "level": 11,
+    "text": "Extra damage to slowed or burning Bloons."
+   },
+   {
+    "level": 13,
+    "text": "Damages every Bloon type."
+   },
+   {
+    "level": 20,
+    "text": "Sword Charge sweeps three times."
+   }
+  ],
+  "camoLevel": 0,
+  "leadLevel": 3,
+  "bestFor": "An easy, strong early game, best on Beginner and Intermediate maps and maps with overlapping lanes (Quad). Needs towers that trigger her bonus damage later.",
+  "tips": [
+   "Pair her with stuns, slows and burns: Relentless Glue and Dragon's Breath.",
+   "Sword Charge trivialises rounds 63, 76 and 78."
+  ],
+  "pairs": [
+   {
+    "unit": "glue",
+    "note": "Relentless Glue triggers her stun and slow bonuses."
+   },
+   {
+    "unit": "wizard",
+    "note": "Dragon's Breath burn triggers her damage-over-time bonus."
+   }
+  ]
+ },
+ {
+  "id": "brickell",
+  "name": "Admiral Brickell",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "A",
+   "boss": "A",
+   "normal": "B"
   },
-  {
-    "id": "psi",
-    "name": "Psi",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "A",
-      "boss": "D",
-      "normal": "C"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "DPS",
-      "MOAB"
-    ],
-    "confidence": "verified",
-    "summary": "CHIMPS is his favored mode: instakills MOABs at level 14 and DDTs and ZOMGs at 20. He never targets BADs or Boss Bloons, and pairs poorly with Perma-Spike stalling. Normal/Freeplay: Can't damage BADs, so the Freeplay guide says to avoid him.",
-    "sources": [
-      "wiki-psi",
-      "wiki-freeplay"
-    ]
+  "bestRoute": "Lv 10",
+  "roles": [
+   "Buff",
+   "MOAB"
+  ],
+  "confidence": "verified",
+  "summary": "Support hero that buffs naval towers: pairs with Carrier Flagship, Pirate Lord, Destroyers and Subs. v57 reworked her: weaker early Naval Tactics and Pistol, water towers get +1 pierce from level 4, shorter Mega Mine.",
+  "sources": [
+   "wiki-chimps",
+   "wiki-lych",
+   "wiki-phayze",
+   "wiki-dreadbloon",
+   "steam-v57",
+   "wiki-hero-brickell",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   765,
+   900,
+   970,
+   1080
+  ],
+  "xpModifier": 1.425,
+  "introduced": "Version 18.0",
+  "milestones": [
+   {
+    "level": 3,
+    "text": "Naval Tactics: big attack speed boost to nearby Subs and Buccaneers."
+   },
+   {
+    "level": 4,
+    "text": "Water towers nearby gain pierce."
+   },
+   {
+    "level": 5,
+    "text": "Naval Tactics lets them hit every Bloon type except Camo."
+   },
+   {
+    "level": 7,
+    "text": "Sees Camo; Blast Chain ability."
+   },
+   {
+    "level": 8,
+    "text": "Naval Tactics reaches all water towers and grants Camo."
+   },
+   {
+    "level": 10,
+    "text": "Mega Mine: a stockpilable blimp-killing mine."
+   },
+   {
+    "level": 15,
+    "text": "Sea Mines pop Black and remove Camo."
+   },
+   {
+    "level": 19,
+    "text": "Naval Tactics becomes global."
+   }
+  ],
+  "camoLevel": 7,
+  "leadLevel": 0,
+  "bestFor": "Water defenses: Buccaneers, Subs and amphibious towers on water. Naval Tactics is burst damage and Mega Mines delete blimps.",
+  "tips": [
+   "Mega Mines can be stockpiled across rounds.",
+   "From level 8, amphibious towers on water (Symphonic Resonance, Popseidon, Absolute Zero) get Naval Tactics too."
+  ],
+  "pairs": [
+   {
+    "unit": "bucc",
+    "note": "Naval Tactics on Destroyers and Monkey Pirates."
+   },
+   {
+    "unit": "sub",
+    "note": "Naval Tactics and pierce on fast-firing Subs."
+   },
+   {
+    "unit": "mermonkey",
+    "note": "Amphibious towers on water benefit from level 8."
+   }
+  ]
+ },
+ {
+  "id": "psi",
+  "name": "Psi",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "A",
+   "boss": "D",
+   "normal": "C"
   },
-  {
-    "id": "geraldo",
-    "name": "Geraldo",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "A",
-      "boss": "S",
-      "normal": "A"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "Buff",
-      "Income",
-      "Stall"
-    ],
-    "confidence": "verified",
-    "summary": "A primary boss-event hero (Rare Quincy Action Figure funds early farms; Blade Trap handles Bloonarius bleed). Support hero in CHIMPS, paired with Comanche Commander. Normal/Freeplay: Recommended on every standard map (the Rare Quincy Action Figure funds early farms), but the Freeplay guide says to avoid him.",
-    "sources": [
-      "wiki-boss-events",
-      "wiki-bloonarius",
-      "wiki-chimps",
-      "wiki-standard",
-      "wiki-freeplay"
-    ]
+  "bestRoute": "Lv 20",
+  "roles": [
+   "DPS",
+   "MOAB"
+  ],
+  "confidence": "verified",
+  "summary": "CHIMPS is his favored mode: instakills MOABs at level 14 and DDTs and ZOMGs at 20. He never targets BADs or Boss Bloons, and pairs poorly with Perma-Spike stalling. Normal/Freeplay: Can't damage BADs, so the Freeplay guide says to avoid him.",
+  "sources": [
+   "wiki-psi",
+   "wiki-freeplay",
+   "wiki-hero-psi",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   850,
+   1000,
+   1080,
+   1200
+  ],
+  "xpModifier": 1.5,
+  "introduced": "Version 26.0",
+  "milestones": [
+   {
+    "level": 1,
+    "text": "Destroys one Bloon at a time anywhere on the map; sees Camo."
+   },
+   {
+    "level": 3,
+    "text": "Psychic Blast: a long stun nearby."
+   },
+   {
+    "level": 6,
+    "text": "Can destroy Lead."
+   },
+   {
+    "level": 7,
+    "text": "Can destroy Ceramics."
+   },
+   {
+    "level": 9,
+    "text": "Targets two Bloons at once."
+   },
+   {
+    "level": 10,
+    "text": "Psionic Scream: throws Bloons into chaos and removes huge RBE."
+   },
+   {
+    "level": 11,
+    "text": "Can destroy Purple."
+   },
+   {
+    "level": 14,
+    "text": "Destroys MOABs (BFBs at 16, DDTs and ZOMGs at 20)."
+   }
+  ],
+  "camoLevel": 0,
+  "leadLevel": 6,
+  "bestFor": "Advanced and Expert maps in CHIMPS: he ignores obstacles and levels faster there, and deletes RBE in the mid game.",
+  "tips": [
+   "Level 20 needs Energizer to reach naturally.",
+   "He ruins end-of-round stalls, so he's not ideal with Perma-Spike."
+  ],
+  "pairs": [
+   {
+    "unit": "sub",
+    "note": "Energizer to reach level 20."
+   }
+  ]
+ },
+ {
+  "id": "geraldo",
+  "name": "Geraldo",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "A",
+   "boss": "S",
+   "normal": "A"
   },
-  {
-    "id": "corvus",
-    "name": "Corvus",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "S",
-      "boss": "A",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "DPS"
-    ],
-    "confidence": "verified",
-    "summary": "CHIMPS win-condition hero; Ancestral Might is a listed R40 answer.",
-    "sources": [
-      "wiki-chimps"
-    ]
+  "bestRoute": "Lv 20",
+  "roles": [
+   "Buff",
+   "Income",
+   "Stall"
+  ],
+  "confidence": "verified",
+  "summary": "A primary boss-event hero (Rare Quincy Action Figure funds early farms; Blade Trap handles Bloonarius bleed). Support hero in CHIMPS, paired with Comanche Commander. Normal/Freeplay: Recommended on every standard map (the Rare Quincy Action Figure funds early farms), but the Freeplay guide says to avoid him.",
+  "sources": [
+   "wiki-boss-events",
+   "wiki-bloonarius",
+   "wiki-chimps",
+   "wiki-standard",
+   "wiki-freeplay",
+   "wiki-hero-geraldo",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   640,
+   750,
+   810,
+   900
+  ],
+  "xpModifier": 1.0,
+  "introduced": "Version 31.0",
+  "milestones": [
+   {
+    "level": 1,
+    "text": "Shop: turret, nails, idol, pickles."
+   },
+   {
+    "level": 2,
+    "text": "Rare Quincy Action Figure: grows in value the longer you hold it."
+   },
+   {
+    "level": 3,
+    "text": "See Invisibility Potion: temporary Camo for one tower."
+   },
+   {
+    "level": 9,
+    "text": "Fertilizer: boosts Banana Farm output."
+   },
+   {
+    "level": 11,
+    "text": "Rejuv Potion: resets cooldowns and restores lives."
+   },
+   {
+    "level": 12,
+    "text": "Genie Bottle: a plasma Genie for two rounds."
+   },
+   {
+    "level": 20,
+    "text": "Paragon Power Totem and a full shop restock."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": 0,
+  "bestFor": "Boss events (Paragon Power Totems and efficient income) and Least Tiers. Flexible in every stage but hard to master.",
+  "tips": [
+   "Don't overspend on items; learn their value in casual games first.",
+   "Buy the Rare Quincy Action Figure early for a big payout later."
+  ],
+  "pairs": [
+   {
+    "unit": "farm",
+    "note": "Fertilizer boosts farms."
+   }
+  ]
+ },
+ {
+  "id": "corvus",
+  "name": "Corvus",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "S",
+   "boss": "A",
+   "normal": "B"
   },
-  {
-    "id": "silas",
-    "name": "Silas",
-    "category": "Heroes",
-    "tiers": {
-      "chimps": "A",
-      "boss": "B",
-      "normal": "B"
-    },
-    "bestRoute": "Lv 20",
-    "roles": [
-      "Buff",
-      "Stall"
-    ],
-    "confidence": "verified",
-    "summary": "CHIMPS win-condition hero that supports Ice Monkeys (range, Ice Fragments, tier 5 discounts) and is immune to Blastapopoulos overheating. His abilities do nothing to BADs.",
-    "sources": [
-      "wiki-silas",
-      "wiki-chimps",
-      "wiki-blastapopoulos"
-    ]
-  }
+  "bestRoute": "Lv 20",
+  "roles": [
+   "DPS"
+  ],
+  "confidence": "verified",
+  "summary": "CHIMPS win-condition hero; Ancestral Might is a listed R40 answer.",
+  "sources": [
+   "wiki-chimps",
+   "wiki-hero-corvus",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   1125,
+   1325,
+   1430,
+   1590
+  ],
+  "xpModifier": 1.425,
+  "introduced": "Version 40.0",
+  "milestones": [
+   {
+    "level": 1,
+    "text": "Haunts Bloons for mana; his Spirit attacks anywhere; learns Spear, Nourishment and Repel."
+   },
+   {
+    "level": 3,
+    "text": "Soul Harvest; learns Echo and Haste."
+   },
+   {
+    "level": 5,
+    "text": "Learns Frostbound, Aggression and Vision (Camo while casting)."
+   },
+   {
+    "level": 7,
+    "text": "Spirit Walk to reposition; learns Ancestral Might and Malevolence."
+   },
+   {
+    "level": 10,
+    "text": "Dark Ritual; learns Recovery."
+   },
+   {
+    "level": 13,
+    "text": "Learns Overload."
+   },
+   {
+    "level": 19,
+    "text": "Can haunt blimps."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": 0,
+  "bestFor": "CHIMPS and Half Cash: his spells save a lot of cash if used well. Best on maps with one active lane per round.",
+  "tips": [
+   "Echo is essential for chaining spells on hard rounds.",
+   "Set him to Close on multi-lane maps to stop him chasing.",
+   "Keep a backup cleanup tower (Spiked Mines, Perma-Spike) for spell mistakes."
+  ],
+  "pairs": [
+   {
+    "unit": "spike",
+    "note": "Perma-Spike or Spiked Mines as a safety net."
+   }
+  ]
+ },
+ {
+  "id": "silas",
+  "name": "Silas",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "A",
+   "boss": "B",
+   "normal": "B"
+  },
+  "bestRoute": "Lv 20",
+  "roles": [
+   "Buff",
+   "Stall"
+  ],
+  "confidence": "verified",
+  "summary": "CHIMPS win-condition hero that supports Ice Monkeys (range, Ice Fragments, tier 5 discounts) and is immune to Blastapopoulos overheating. His abilities do nothing to BADs.",
+  "sources": [
+   "wiki-silas",
+   "wiki-chimps",
+   "wiki-blastapopoulos",
+   "wiki-hero-silas",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   725,
+   850,
+   920,
+   1020
+  ],
+  "xpModifier": 1.5,
+  "introduced": "Version 50.0",
+  "milestones": [
+   {
+    "level": 1,
+    "text": "Ice attacks that rime, then freeze, then shatter Bloons; slowing aura; sees Camo."
+   },
+   {
+    "level": 2,
+    "text": "Ice Monkeys nearby gain orbiting ice fragments."
+   },
+   {
+    "level": 3,
+    "text": "Frostbite: hits every Bloon type for a while."
+   },
+   {
+    "level": 4,
+    "text": "Ice Walls on the track push back and freeze."
+   },
+   {
+    "level": 7,
+    "text": "Frozen Cascade ability."
+   },
+   {
+    "level": 10,
+    "text": "Frozen Burial: freezes and damages every Bloon."
+   },
+   {
+    "level": 13,
+    "text": "Cheaper Ice Monkey tier 5s and a fourth Ice tier 5."
+   }
+  ],
+  "camoLevel": 0,
+  "leadLevel": 0,
+  "bestFor": "Ice Monkey builds. His slowing aura and Camo detection make early placement easier on Flooded Valley and #Ouch.",
+  "tips": [
+   "His early game is slow and many early towers can't pop frozen Bloons.",
+   "Place him so his range edge covers a lot of track while his aura still reaches it."
+  ],
+  "pairs": [
+   {
+    "unit": "ice",
+    "note": "Ice fragments, range buffs and cheaper tier 5s."
+   },
+   {
+    "unit": "skywarden",
+    "note": "Coldchain Skywardens benefit from his ice buffs."
+   }
+  ]
+ },
+ {
+  "id": "dan",
+  "name": "Dan D'Monke",
+  "category": "Heroes",
+  "tiers": {
+   "chimps": "B",
+   "boss": "C",
+   "normal": "B"
+  },
+  "bestRoute": "Lv 10",
+  "roles": [
+   "Buff"
+  ],
+  "confidence": "new",
+  "summary": "Added in v55. A cheap support hero: Reposition moves towers, Rabble Rouser buffs nearby Monkeys and triggers life-loss passives; his alter ego adds Camo and Lead.",
+  "sources": [
+   "wiki-hero-dan",
+   "wiki-hero-xp"
+  ],
+  "cost": [
+   555,
+   650,
+   700,
+   780
+  ],
+  "xpModifier": 1.425,
+  "introduced": "Version 55.0",
+  "milestones": [
+   {
+    "level": 3,
+    "text": "Transformation: switch to the Masqued Macaque (Camo detection and Lead popping) and back."
+   },
+   {
+    "level": 4,
+    "text": "Occasionally throws a net that grabs Bloons."
+   },
+   {
+    "level": 5,
+    "text": "Leaking a Bloon reduces damage taken and pushes Bloons back."
+   },
+   {
+    "level": 7,
+    "text": "Reposition: move any Monkey, including himself (Macaque: Volant Strike)."
+   },
+   {
+    "level": 10,
+    "text": "Rabble Rouser: nearby Monkeys attack slower but harder and life-loss passives trigger (Macaque: Berserk Frenzy)."
+   }
+  ],
+  "camoLevel": null,
+  "leadLevel": null,
+  "bestFor": "Cheap support: Reposition substitutes for a Support Chinook, Rabble Rouser for Pat's roar, and it triggers life-loss passives (Elite Defender, x-x-2+ Desperado) in CHIMPS.",
+  "tips": [
+   "His base form is usually preferred for its support; the Masqued Macaque is good in ABR for its Camo and Lead.",
+   "Use Transform's damage burst on hard grouped early rounds."
+  ],
+  "pairs": [
+   {
+    "unit": "sniper",
+    "note": "Rabble Rouser triggers Elite Defender's life-loss speed boost."
+   },
+   {
+    "unit": "desperado",
+    "note": "Triggers x-x-2+ Desperado life-loss passives."
+   }
+  ]
+ }
 ]

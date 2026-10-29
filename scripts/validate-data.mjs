@@ -206,8 +206,46 @@ if (mapsFile) {
   }
 }
 
+// Tower costs and detection, hero levels, rounds
+const price4 = (list) => Array.isArray(list) && list.length === 4 && list.every((n) => typeof n === 'number' && n >= 0);
+const ruleList = (rules) => rules === null || (Array.isArray(rules) && rules.every((r) => Array.isArray(r) && r.length === 3 && r.every((n) => Number.isInteger(n) && n >= 0 && n <= 5)));
+for (const tower of Array.isArray(towers) ? towers : []) {
+  const at = `towers.json "${tower.id}"`;
+  if (tower.costs) {
+    if (!price4(tower.costs.base)) problems.push(`${at}: costs.base must be [easy, medium, hard, impoppable]`);
+    const ok = Array.isArray(tower.costs.upgrades) && tower.costs.upgrades.length === 3 && tower.costs.upgrades.every((path) => path.length === 5 && path.every(price4));
+    if (!ok) problems.push(`${at}: costs.upgrades must be 3 paths × 5 tiers × 4 difficulties`);
+  } else problems.push(`${at}: missing costs`);
+  if (tower.detection) {
+    if (!ruleList(tower.detection.camo) || !ruleList(tower.detection.lead)) problems.push(`${at}: detection.camo / detection.lead must be lists of [top, middle, bottom] minimum tiers (or null)`);
+    for (const field of ['camoText', 'leadText', 'purple']) if (!tower.detection[field]) problems.push(`${at}: detection.${field} missing`);
+  } else problems.push(`${at}: missing detection`);
+}
+for (const hero of Array.isArray(heroes) ? heroes : []) {
+  const at = `heroes.json "${hero.id}"`;
+  if (!price4(hero.cost)) problems.push(`${at}: cost must be [easy, medium, hard, impoppable]`);
+  if (typeof hero.xpModifier !== 'number') problems.push(`${at}: xpModifier must be a number`);
+  if (!Array.isArray(hero.milestones) || hero.milestones.some((m) => !Number.isInteger(m.level) || m.level < 1 || m.level > 20 || !m.text)) problems.push(`${at}: milestones must be [{ level 1–20, text }]`);
+  for (const field of ['camoLevel', 'leadLevel']) if (hero[field] !== null && !Number.isInteger(hero[field])) problems.push(`${at}: ${field} must be a level or null`);
+  for (const pair of hero.pairs ?? []) if (!unitIds.has(pair.unit)) problems.push(`${at}: pairs with unknown tower/hero "${pair.unit}"`);
+  checkSourceIds(hero.sources, at);
+}
+const roundsFile = load('rounds');
+if (roundsFile) {
+  for (const set of roundsFile.sets ?? []) {
+    const at = `rounds.json "${set.id}"`;
+    if (!Array.isArray(set.rounds) || set.rounds.length !== 140) problems.push(`${at}: needs 140 rounds`);
+    (set.rounds ?? []).forEach((round, i) => {
+      if (round.round !== i + 1) problems.push(`${at}: round ${i + 1} is out of order`);
+      if (!Array.isArray(round.groups) || !round.groups.length || round.groups.some((g) => !g.bloon || !(g.count > 0))) problems.push(`${at} round ${round.round}: bad groups`);
+      for (const field of ['rbe', 'popCash', 'bonusCash', 'duration', 'xp']) if (typeof round[field] !== 'number') problems.push(`${at} round ${round.round}: ${field} must be a number`);
+    });
+    checkSourceIds(set.sources, at);
+  }
+}
+
 if (problems.length) {
   console.error(`✗ ${problems.length} problem(s) in /data:\n  - ${problems.join('\n  - ')}`);
   process.exit(1);
 }
-console.log(`✓ data OK: patch ${meta.patch}, ${towers.length} towers, ${heroes.length} heroes, ${paragonIds.size} paragons, ${mapsFile?.maps?.length ?? 0} maps, ${modeIds.size} modes`);
+console.log(`✓ data OK: patch ${meta.patch}, ${towers.length} towers, ${heroes.length} heroes, ${paragonIds.size} paragons, ${mapsFile?.maps?.length ?? 0} maps, ${modeIds.size} modes, ${(roundsFile?.sets ?? []).map((x) => x.rounds.length + ' ' + x.id).join(' / ')} rounds`);

@@ -54,6 +54,12 @@
    "degreeTips": [
     "Most pops come from Flying Fortress, sometimes with Sky Shredder.",
     "Cheapest tiers: 0-2-2 and 0-3-2 for T2/T3, 4-2-0 for T4; 2-0-4 Spectres are the priciest T4."
+   ],
+   "costs": [
+    765000,
+    900000,
+    972000,
+    1080000
    ]
   },
   {
@@ -107,6 +113,12 @@
    ],
    "degreeTips": [
     "Cheap T2/T3: 2-0-2 or 3-0-2; cheap T4: 2-0-4 Necromancer; priciest T4: 4-2-0 Arcane Spikes."
+   ],
+   "costs": [
+    680000,
+    800000,
+    864000,
+    960000
    ]
   },
   {
@@ -158,6 +170,12 @@
    "degreeTips": [
     "Flat pierce from degree matters a lot (+1 every 10 degrees).",
     "Aim all Spike Factories at the entrances for pops; cheapest tiers 0-2-2 and 0-2-3, 4-2-0 for the priciest T4."
+   ],
+   "costs": [
+    637500,
+    750000,
+    810000,
+    900000
    ]
   },
   {
@@ -210,6 +228,12 @@
    ],
    "degreeTips": [
     "High degree is essential unless you only want the cooldown buff."
+   ],
+   "costs": [
+    340000,
+    400000,
+    432000,
+    480000
    ]
   },
   {
@@ -267,6 +291,12 @@
    "degreeTips": [
     "Pair XXXL Trap with Rubber to Gold, Monkey City and Bounty Hunter: income supplies most of its pop requirement.",
     "Overclock and Ultraboost Banana Farms for extra income."
+   ],
+   "costs": [
+    510000,
+    600000,
+    648000,
+    720000
    ]
   },
   {
@@ -319,6 +349,12 @@
    "degreeTips": [
     "Get pops from a Ninja-heavy defense with many Shinobi Tactics.",
     "Cheapest tiers: 2-2-0 and 3-2-0 for T2/T3, 4-2-0 Bloonjitsu for T4; 2-0-4 Sticky Bombs are the priciest T4."
+   ],
+   "costs": [
+    425000,
+    500000,
+    540000,
+    600000
    ]
   },
   {
@@ -373,6 +409,12 @@
    "degreeTips": [
     "Spam Trade Empire / Favored Trades: their cash counts more than raw pops.",
     "The boss guide saves about $980,000 for a 40-Merchantman Navarch setup."
+   ],
+   "costs": [
+    467500,
+    550000,
+    594000,
+    660000
    ]
   },
   {
@@ -422,7 +464,13 @@
    "worstBosses": [
     "Bloonarius"
    ],
-   "degreeTips": []
+   "degreeTips": [],
+   "costs": [
+    255000,
+    300000,
+    324000,
+    360000
+   ]
   },
   {
    "id": "apex-plasma-master",
@@ -475,7 +523,13 @@
    "worstBosses": [
     "Open maps in general"
    ],
-   "degreeTips": []
+   "degreeTips": [],
+   "costs": [
+    127500,
+    150000,
+    162000,
+    180000
+   ]
   },
   {
    "id": "crucible",
@@ -525,6 +579,12 @@
    "degreeTips": [
     "Put all tier-5 Tack Shooters near the front for pops.",
     "Cheapest tiers: 0-2-2 and 0-2-3, 0-4-2 Blade Maelstrom for T4; 2-0-4 Overdrive if you're transitioning into it."
+   ],
+   "costs": [
+    170000,
+    200000,
+    216000,
+    240000
    ]
   },
   {
@@ -566,6 +626,12 @@
    "degreeTips": [
     "Degree 40 is usually reached from tiers alone plus a little cash slider; degree 51+ gives full Overcharge uptime.",
     "Cheapest tiers: 0-2-2 and 3-0-2 for T2/T3, 4-0-2 M.O.A.R Glaives for T4; 2-4-0 Turbo Charges are the priciest T4."
+   ],
+   "costs": [
+    318750,
+    375000,
+    405000,
+    450000
    ]
   },
   {
@@ -620,6 +686,12 @@
    ],
    "degreeTips": [
     "Higher degree is essential for consistency."
+   ],
+   "costs": [
+    552500,
+    650000,
+    702000,
+    780000
    ]
   },
   {
@@ -672,13 +744,19 @@
    "degreeTips": [
     "Pile up pops over many rounds instead of building it as a makeshift Paragon.",
     "Most pops should come from 0-4-1 Jungle's Bounty with a full farm setup."
+   ],
+   "costs": [
+    403750,
+    475000,
+    513000,
+    570000
    ]
   },
   {
    "id": "spider-monkey",
    "name": "S.P.I.D.E.R. Monkey",
    "tower": "sniper",
-   "cost": null,
+   "cost": 800000,
    "bossTier": "B",
    "role": "Damage / support",
    "confidence": "new",
@@ -720,7 +798,13 @@
    "worstBosses": [
     "Bloonarius (many skulls make Single Out weak)"
    ],
-   "degreeTips": []
+   "degreeTips": [],
+   "costs": [
+    680000,
+    800000,
+    864000,
+    960000
+   ]
   }
  ],
  "degreeGuide": {
@@ -731,8 +815,8 @@
   ],
   "powerSources": [
    {
-    "source": "Cash spent on absorbed towers (and the slider)",
-    "value": "1 power per $1",
+    "source": "Cash spent on absorbed towers (tier 5s excluded) and the cost slider",
+    "value": "1 power per (Paragon cost ÷ 20,000) dollars; the slider needs 5% more per power",
     "cap": "80,000 since v57 (was 60,000)"
    },
    {
@@ -767,12 +851,13 @@
    "Four Paragons at degree 40+ handle nearly every boss, including Elite."
   ],
   "degree100": "At degree 100, damage and pierce double (+10 flat each) and the boss damage multiplier reaches ×2.25 (Normal) / ×4.5 (Elite).",
-  "note": "Power values come from the wiki's Paragon page (pre-v57) with the cap changes from the v57.0 notes applied. With the new caps, the non-totem sources add up to 255,000, more than the 200,000 needed, so degree 100 may now be reachable solo without totems; this is our arithmetic, not a tested result.",
+  "note": "Power values follow the wiki's Paragon page (updated for v57.0). Cash power depends on the Paragon's price on your difficulty, so it's cheapest on Easy. The non-totem sources add up to 255,000, more than the 200,000 degree 100 needs.",
   "sources": [
    "wiki-paragon",
    "steam-v57",
    "wiki-master-builder",
    "wiki-boss-events"
-  ]
+  ],
+  "formula": "Power for degree D (2–99) = (50D³ + 5025D² + 168324D + 843000) ÷ 600, rounded down; degree 100 needs 200,000."
  }
 }
