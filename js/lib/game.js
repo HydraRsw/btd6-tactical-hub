@@ -199,3 +199,35 @@ export function paragonPower({ paragonCost, towerCash = 0, sliderCash = 0, extra
   };
   return { ...parts, total: parts.cash + parts.tier5 + parts.damage + parts.totems, perPower };
 }
+
+// --- Freeplay scaling (from the wiki's Rounds page) -------------------------
+/** Bloon speed multiplier on a round (1 = normal). */
+export function freeplaySpeed(round) {
+  if (round <= 80) return 1;
+  const base = round <= 100 ? 1 : round <= 150 ? 1.18 : round <= 200 ? 1.58 : round <= 251 ? 2.08 : 2.56;
+  return base + (round - 80) * 0.02;
+}
+
+/** MOAB-class health multiplier on a round (1 = normal). */
+export function freeplayMoabHealth(round) {
+  if (round <= 80) return 1;
+  if (round <= 100) return 1 + (round - 80) * 0.02;
+  if (round <= 124) return 1.4 + (round - 100) * 0.05;
+  if (round <= 150) return 2.6 + (round - 124) * 0.15;
+  if (round <= 250) return 6.5 + (round - 150) * 0.35;
+  if (round <= 300) return 41.5 + (round - 250) * 1;
+  if (round <= 400) return 91.5 + (round - 300) * 1.5;
+  if (round <= 500) return 241.5 + (round - 400) * 2.5;
+  return 491.5 + (round - 500) * 5;
+}
+
+/** Share of normal cash per pop on a round. */
+export function cashPerPop(round) {
+  if (round <= 50) return 1;
+  if (round <= 60) return 0.5;
+  if (round <= 85) return 0.2;
+  if (round <= 100) return 0.1;
+  if (round <= 120) return 0.05;
+  if (round <= 140) return 0.04;
+  return 0.02;
+}

@@ -1,0 +1,86 @@
+{
+ "intro": "Live events come straight from Ninja Kiwi's public Open Data API each time you open this tab, so they're always current. The notes below explain how each event works.",
+ "api": "https://data.ninjakiwi.com/btd6",
+ "formats": [
+  {
+   "id": "boss",
+   "name": "Boss Bloon Event",
+   "icon": "crown",
+   "schedule": "Weekly, usually Saturday 02:00 to Thursday 03:00 UTC. Bosses rotate: Bloonarius, Lych, Vortex, Dreadbloon, Phayze, Blastapopoulos, Diamondback.",
+   "rules": [
+    "A modified Boss Challenge: beat all five boss tiers before round 140 starts (tiers arrive on rounds 40, 60, 80, 100 and 120).",
+    "Usually Medium with $650, 200 lives (100 in Elite) and up to 4 Paragons; some weeks restrict towers, heroes or modes.",
+    "Elite opens in single player after you beat tier 5 Normal. Ranked mode scores by fastest time, least cash or least tiers."
+   ],
+   "tips": [
+    "Paragons are the main boss damage: each 20 degrees adds 25% boss damage, and Elite bosses take double from them.",
+    "Check the boss page here for its health per tier and which Paragons suit it.",
+    "Plan income early (Benjamin, Geraldo or farms) so you can afford Paragons by the later tiers."
+   ],
+   "sources": [
+    "wiki-boss-event",
+    "wiki-boss-events"
+   ]
+  },
+  {
+   "id": "race",
+   "name": "Race Event",
+   "icon": "timer",
+   "schedule": "Weekly, usually Friday 07:00 to Tuesday 03:00 UTC. The first attempt is free; later attempts cost Monkey Money for 3 hours unless you use a Race Pass.",
+   "rules": [
+    "Beat a set number of rounds as fast as possible; you may send future rounds early.",
+    "Each race has its own map, modifiers and tower or hero limits.",
+    "Pausing too often costs time (more than once every 25 seconds)."
+   ],
+   "tips": [
+    "High-pierce, grouped damage matters most: Bloons arrive in huge clumps.",
+    "Leaking a few lives early is normal for a top time.",
+    "Strong cheap starters include a base Mortar; mid-game picks include Wall of Fire, Druid of the Jungle, Glaive Ricochet, Juggernaut, Cannon Ship and Cluster Bombs.",
+    "When allowed, Rosalia (Scatter Missile) and Gwendolin (Cocktail of Fire) are strong starting heroes.",
+    "Plan the run before starting; very high Monkey Knowledge helps for leaderboard times."
+   ],
+   "sources": [
+    "wiki-race",
+    "wiki-strategy-race"
+   ]
+  },
+  {
+   "id": "odyssey",
+   "name": "Odyssey",
+   "icon": "ship",
+   "schedule": "Weekly. Easy has 3 islands, Medium 4, Hard 5.",
+   "rules": [
+    "Pick a crew (towers, Powers and one hero) before you start; only those can be used, up to the copies you chose.",
+    "All islands share one pool of lives, and finishing an island with fewer lives lowers your maximum for the rest.",
+    "In Extreme mode, any tower you place on an island can't be used on later islands (selling it frees it for that island only)."
+   ],
+   "tips": [
+    "Build the crew around the hardest island first.",
+    "Bring Camo, Lead and MOAB answers that fit the number of seats.",
+    "Protect lives early: lost lives can only be regained within the same island."
+   ],
+   "sources": [
+    "wiki-odyssey"
+   ]
+  },
+  {
+   "id": "ct",
+   "name": "Contested Territory",
+   "icon": "hexagon",
+   "schedule": "Every other week, Tuesday 22:00 UTC for 7 days, alternating with Boss Rush.",
+   "rules": [
+    "Six teams fight over a hexagonal board; each tile has a challenge and a scoring type (race, least cash, least tiers, boss…).",
+    "You can only attack tiles next to ones your team owns. Players get 4 tickets a day; a ticket is spent only when you capture.",
+    "Tiles give points for 24 hours, then stop, and turn neutral after 72 hours. Scores on a tile get easier to beat starting 5 hours after capture."
+   ],
+   "tips": [
+    "Banner tiles give the most points; Relic tiles give your team useful bonuses on every tile.",
+    "Coordinate with your team about who takes which tile type.",
+    "Up to four Relics from tiles can be used at a time, plus shop Relics bought with team trophies."
+   ],
+   "sources": [
+    "wiki-ct"
+   ]
+  }
+ ]
+}

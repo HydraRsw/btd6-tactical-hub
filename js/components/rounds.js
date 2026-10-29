@@ -1,7 +1,7 @@
 // Rounds tab (#rounds): every round of the standard and ABR sets with its
 // bloons, RBE and cash, filterable by range and by what the round contains.
 
-import { ROUND_TAGS, cashAtRoundStart, parseBloon, roundCash, roundTags } from '../lib/game.js';
+import { ROUND_TAGS, cashAtRoundStart, cashPerPop, freeplayMoabHealth, freeplaySpeed, parseBloon, roundCash, roundTags } from '../lib/game.js';
 import { formatCash } from '../lib/text.js';
 import { recall, remember } from '../lib/storage.js';
 
@@ -21,7 +21,8 @@ const SORTS = [
   { id: 'blimps', label: 'Most MOAB-class' },
 ];
 
-let chart = null; // Chart.js instance, kept outside Alpine so it isn't made reactive
+let chart = null; // Chart.js instances, kept outside Alpine so they aren't made reactive
+let freeplayChart = null;
 
 // Where your money count starts: a normal game starts on round 1, CHIMPS and Impoppable on round 6.
 const STARTS = [
@@ -140,6 +141,40 @@ export function roundBrowser() {
             x: { ticks: { color: '#b9cdee', maxTicksLimit: 14 }, grid: { color: 'rgba(255,255,255,.06)' } },
             rbe: { type: 'logarithmic', position: 'left', title: { display: true, text: 'RBE (log scale)', color: '#ff9b9b' }, ticks: { color: '#b9cdee' }, grid: { color: 'rgba(255,255,255,.06)' } },
             cash: { type: 'linear', position: 'right', title: { display: true, text: 'Cash', color: '#c8f59a' }, ticks: { color: '#b9cdee' }, grid: { display: false } },
+          },
+        },
+      });
+    },
+
+    // --- Freeplay scaling --------------------------------------------------
+    freeplayRound: 150,
+
+    /** Multipliers on the round typed into the Freeplay box. */
+    get freeplayAt() {
+      const round = Math.max(1, Math.round(Number(this.freeplayRound) || 1));
+      return { round, speed: freeplaySpeed(round), moab: freeplayMoabHealth(round), cash: cashPerPop(round) };
+    },
+
+    drawFreeplay(canvas) {
+      if (!window.Chart || !canvas) return;
+      const rounds = Array.from({ length: 221 }, (_, i) => 80 + i); // 80 → 300
+      freeplayChart?.destroy();
+      freeplayChart = new window.Chart(canvas, {
+        type: 'line',
+        data: {
+          labels: rounds,
+          datasets: [
+            { label: 'MOAB-class health ×', data: rounds.map(freeplayMoabHealth), borderColor: '#ff6b6b', pointRadius: 0, borderWidth: 2 },
+            { label: 'Bloon speed ×', data: rounds.map(freeplaySpeed), borderColor: '#43c6ff', pointRadius: 0, borderWidth: 2 },
+          ],
+        },
+        options: {
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: { legend: { labels: { color: '#dce8ff' } }, tooltip: { callbacks: { title: (items) => `Round ${items[0].label}`, label: (item) => `${item.dataset.label}${item.parsed.y.toFixed(2)}` } } },
+          scales: {
+            x: { ticks: { color: '#b9cdee', maxTicksLimit: 12 }, grid: { color: 'rgba(255,255,255,.06)' } },
+            y: { type: 'logarithmic', ticks: { color: '#b9cdee' }, grid: { color: 'rgba(255,255,255,.06)' }, title: { display: true, text: 'Multiplier (log scale)', color: '#b9cdee' } },
           },
         },
       });

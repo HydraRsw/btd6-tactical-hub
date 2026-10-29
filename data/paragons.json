@@ -765,12 +765,14 @@
     "New in v57"
    ],
    "weaknesses": [
-    "Too new to rank: placeholder tier"
+    "Too new to rank: placeholder tier",
+    "v57.1 cut its bullets' bonus boss damage from +15,500 to +500 and its shrapnel pierce to 1"
    ],
    "sources": [
     "wiki-spider-monkey",
     "steam-v57",
-    "ninjakiwi-x-v57"
+    "ninjakiwi-x-v57",
+    "wiki-v57-1"
    ],
    "combines": [
     "Cripple MOAB",

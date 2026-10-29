@@ -33,6 +33,8 @@ js/
     planner.js           Tools tab → build planner (shareable with ?build=…, #planner).
     degree-calc.js       Tools tab → Paragon degree calculator (#degree).
     compare.js           Tools tab → compare two towers or heroes (#compare).
+    events.js            Events tab: live events (Ninja Kiwi Open Data API), boss guide, event notes.
+    tracker.js           Medal tracker, favourites bar and the patch page (#patch).
   lib/
     economy.js           Farm income / payback maths (pure functions).
     upgrades.js          "2-0-5" → upgrade pip grid.
@@ -51,6 +53,10 @@ data/
   maps.json              Every map: difficulty, traits, where to build, recommended towers, per-mode notes.
   modes.json             Every game mode: rules, general strategy, towers that shine.
   rounds.json            Standard and ABR rounds 1–140: bloon groups, duration, RBE, cash, hero XP.
+  patch.json             "What changed" page: each version's gameplay changes in plain words.
+  bosses.json            Boss health per tier (Normal/Elite), skulls, shields/armor.
+  events.json            How each event works (boss, race, Odyssey, Contested Territory).
+  freeplay.json          Freeplay scaling tables (speed, MOAB health, cash per pop…).
   templates.json         Planner templates: CHIMPS openings (towers/heroes with rounds and crosspaths).
 ```
 
@@ -120,6 +126,11 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
   Knowledge (paraphrased), with `keyPick: true` on ones that change how you build them.
 - `templates.json` → `templates[]`: `id`, `name`, `fits`, `description`, `mode`,
   `entries: [{ tower, steps: [{ round, path }] }]` (a hero id works as `tower`), `sources`.
+- The Events tab reads live events in the browser from Ninja Kiwi's public Open Data
+  API (https://data.ninjakiwi.com/btd6/bosses, /races, /odyssey, /ct), so it never
+  needs updating by hand. Only `events.json` (how events work) is static.
+- Medals, favourites and saved planner builds are stored in the visitor's browser
+  (localStorage), never on a server.
 - Bloon pictures on the Rounds tab are optional: see `img/bloons/README.md`.
 - `rounds.json` comes from the wiki's round tables. Cash is `popCash + bonusCash`.
 - Paragons have `costs` per difficulty; the degree formula and power caps are in `js/lib/game.js`.

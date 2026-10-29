@@ -1,0 +1,78 @@
+{
+ "intro": "What changed in the current version, in plain words. Only gameplay changes are listed; cosmetic and store changes are left out. Each version links to the wiki's full notes.",
+ "versions": [
+  {
+   "version": "57.4",
+   "date": "2026-10-22",
+   "headline": "Bug fixes only.",
+   "changes": [
+    { "area": "Maps", "text": "Fixed the Halloween crash on Another Brick (decorative pigeons)." }
+   ],
+   "sources": ["wiki-v57-4"]
+  },
+  {
+   "version": "57.3",
+   "date": "2026-10-20",
+   "headline": "Bug fixes, including the S.P.I.D.E.R. Monkey.",
+   "changes": [
+    { "area": "Paragons", "unit": "spider-monkey", "text": "Single Out can no longer one-shot bosses under certain conditions." }
+   ],
+   "sources": ["wiki-v57-3"]
+  },
+  {
+   "version": "57.2",
+   "date": "2026-10-15",
+   "headline": "Bug fixes for Skywarden, Supply Drop and cash counters.",
+   "changes": [
+    { "area": "Paragons", "unit": "herald-of-everfrost", "text": "Its ability can skip a boss skull again even if the S.P.I.D.E.R. Monkey already skipped one." },
+    { "area": "Towers", "unit": "sniper", "text": "Elite Sniper's ammo crate buff now ends as soon as the tower is sold." },
+    { "area": "Towers", "unit": "skywarden", "text": "Storm's Pulse now crosspaths correctly with every other Skywarden upgrade." },
+    { "area": "Towers", "unit": "heli", "text": "Comanche Defense's mini Comanches no longer stop other towers from targeting Bloons." },
+    { "area": "Heroes", "unit": "corvus", "text": "Ember no longer lasts forever through its cooldown." },
+    { "area": "Towers", "unit": "glue", "text": "Corrosive Glue and Super Glue now show a damage counter." }
+   ],
+   "sources": ["wiki-v57-2"]
+  },
+  {
+   "version": "57.1",
+   "date": "2026-10-12",
+   "headline": "Sniper and S.P.I.D.E.R. Monkey fixes, and Rubber to Gold and Bloon Trap exploit fixes.",
+   "changes": [
+    { "area": "Paragons", "unit": "spider-monkey", "text": "Big nerf: its bullets' bonus damage to bosses dropped from +15,500 to +500, and its shrapnel's pierce from 100 to 1." },
+    { "area": "Towers", "unit": "sniper", "text": "Supply Drop (x-4-x) bullets are Sharp again, so they can't pop Lead unless the Sniper also has Full Metal Jacket (1-4-x)." },
+    { "area": "Towers", "unit": "sniper", "text": "Elite Defender's life-loss speed boost is back to 4× (v57.0 had cut it to 2×)." },
+    { "area": "Towers", "unit": "alch", "text": "Rubber to Gold no longer makes money in CHIMPS, and its bonus now drops with the late-game cash-per-pop reduction." },
+    { "area": "Towers", "unit": "engi", "text": "Bloon Trap no longer makes extra money in Deflation or from regrown Regrow Bloons (the same fix applies to Obyn's Wall of Trees)." },
+    { "area": "Towers", "unit": "skywarden", "text": "Aerial Attunement buffs heroes of any level again; Wind Weaver's combo now affects BADs; Thunder's Decree can be reused after 9 seconds instead of 15." },
+    { "area": "Heroes", "unit": "corvus", "text": "Ancestral Might casts properly again." }
+   ],
+   "sources": ["wiki-v57-1"]
+  },
+  {
+   "version": "57.0",
+   "date": "2026-10-06",
+   "headline": "S.P.I.D.E.R. Monkey (Sniper Paragon), the Advanced map Ship Capture, a Paragon power rework and a new Insta Monkey system.",
+   "changes": [
+    { "area": "Paragons", "unit": "spider-monkey", "text": "New Sniper Paragon: the S.P.I.D.E.R. Monkey." },
+    { "area": "Paragons", "text": "Paragon power rework: extra upgrade tiers no longer count; the cash cap rose from 60,000 to 80,000 power and the pops/income cap from 90,000 to 125,000. Degree 100 is now possible without totems or co-op." },
+    { "area": "Maps", "map": "ship-capture", "text": "New Advanced map: Ship Capture." },
+    { "area": "Maps", "map": "lost-crevasse", "text": "Lost Crevasse's lanes were simplified: all of them now cross the middle and none slow down." },
+    { "area": "Towers", "unit": "dart", "text": "Crossbow and Sharp Shooter gained pierce and crit damage; Crossbow Master now fires two bolts side by side at half the attack rate." },
+    { "area": "Towers", "unit": "bomb", "text": "Bomb Blitz's passive now triggers only once per round; frag pierce on several crosspaths was retuned." },
+    { "area": "Towers", "unit": "glue", "text": "Glue Splatter is cheaper ($970 → $650) and Glue Strike pricier ($4,000 → $4,500); Stickier Glue and the MOAB Glue line hold MOAB-class for less time." },
+    { "area": "Towers", "unit": "sniper", "text": "Supply Drop can now switch to an Ammo Drop that powers up shrapnel for a few shots (Elite Sniper shares it with two nearby Snipers)." },
+    { "area": "Towers", "unit": "super", "text": "Sun Temple's Storm Blast (with enough Magic sacrifices) can now hit and strip Camo, and DDTs with bigger sacrifices." },
+    { "area": "Towers", "unit": "skywarden", "text": "Big rebalance: path 1 is cheaper at tiers 3–4 with a smaller, capped range buff; Thundering Arc now deals Plasma damage (pops Lead); Galvanic Conduit and Thunder's Decree cost more; Winter's Mercy hits harder." },
+    { "area": "Towers", "unit": "spike", "text": "Mega Massive Munitions Factory's mini spikes deal more MOAB damage (+100 → +200)." },
+    { "area": "Towers", "unit": "village", "text": "Call to Arms and Homeland Defense can no longer be activated while their buff is already active." },
+    { "area": "Towers", "unit": "engi", "text": "Bloon Trap now pays pop cash immediately; only its bonus cash waits for collection." },
+    { "area": "Towers", "unit": "heli", "text": "MOAB Shove no longer affects ZOMGs." },
+    { "area": "Heroes", "unit": "quincy", "text": "From level 4 he has a Focus toggle: more range and accurate shots at a slower rate." },
+    { "area": "Heroes", "unit": "brickell", "text": "Reworked: the water pierce buff comes at level 4, Naval Tactics starts weaker but covers all water towers from level 8 and adds damage from level 14." },
+    { "area": "Boss events", "text": "Blastapopoulos: bottom-path Skywardens now cool its heat. Boss Rush island requirements and some boss stats were adjusted." },
+    { "area": "Monkey Knowledge", "text": "Every Monkey Knowledge point can now be turned off on its own; flat-discount Knowledge now works correctly outside Medium." }
+   ],
+   "sources": ["wiki-v57-0", "steam-v57"]
+  }
+ ]
+}

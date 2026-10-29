@@ -264,6 +264,33 @@ for (const t of templatesFile?.templates ?? []) {
   checkSourceIds(t.sources, at);
 }
 
+// Patch notes, bosses, events, Freeplay scaling
+const patchFile = load('patch');
+const mapIds = new Set((mapsFile?.maps ?? []).map((m) => m.id));
+for (const v of patchFile?.versions ?? []) {
+  const at = `patch.json "${v.version}"`;
+  if (!/^\d+\.\d+$/.test(v.version ?? '') || !/^\d{4}-\d{2}-\d{2}$/.test(v.date ?? '')) problems.push(`${at}: needs a version like 57.4 and a date like 2026-10-22`);
+  for (const c of v.changes ?? []) {
+    if (!c.area || !c.text) problems.push(`${at}: each change needs an area and text`);
+    if (c.unit && !unitIds.has(c.unit) && !paragonIds.has(c.unit)) problems.push(`${at}: unknown tower/hero/Paragon "${c.unit}"`);
+    if (c.map && !mapIds.has(c.map)) problems.push(`${at}: unknown map "${c.map}"`);
+  }
+  checkSourceIds(v.sources, at);
+}
+const bossesFile = load('bosses');
+for (const b of bossesFile?.bosses ?? []) {
+  const at = `bosses.json "${b.id}"`;
+  for (const form of ['normal', 'elite']) {
+    if (!Array.isArray(b[form]) || b[form].length !== 5 || b[form].some((n) => typeof n !== 'number')) problems.push(`${at}: ${form} must be 5 health numbers`);
+    if (!Number.isInteger(b.skulls?.[form])) problems.push(`${at}: skulls.${form} must be a number`);
+  }
+  checkSourceIds(b.sources, at);
+}
+const eventsFile = load('events');
+for (const f of eventsFile?.formats ?? []) checkSourceIds(f.sources, `events.json "${f.id}"`);
+const freeplayFile = load('freeplay');
+if (freeplayFile) checkSourceIds(freeplayFile.sources, 'freeplay.json');
+
 if (problems.length) {
   console.error(`✗ ${problems.length} problem(s) in /data:\n  - ${problems.join('\n  - ')}`);
   process.exit(1);
