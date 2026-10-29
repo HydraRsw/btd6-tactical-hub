@@ -1,0 +1,886 @@
+[
+  {
+    "id": "dart",
+    "name": "Dart Monkey",
+    "category": "Primary",
+    "icon": "arrow-up-right",
+    "tiers": {
+      "chimps": "B",
+      "boss": "C"
+    },
+    "bestRoute": "0-2-5",
+    "roles": [
+      "DPS",
+      "Cleanup"
+    ],
+    "confidence": "verified",
+    "summary": "Crossbow Master is a cheap, pierce-heavy all-rounder that scales hard with Alch + Village.",
+    "routes": [
+      {
+        "path": "0-2-5",
+        "kind": "optimal",
+        "name": "Crossbow Master",
+        "note": "Huge pierce + range, crits chunk ceramics. Best value carry with buffs; needs camo help or MIB."
+      },
+      {
+        "path": "2-5-0",
+        "kind": "situational",
+        "name": "Plasma Monkey Fan Club",
+        "note": "Ability-based burst that converts nearby darts into plasma — superb for one wave, idle between cooldowns."
+      },
+      {
+        "path": "5-2-0",
+        "kind": "situational",
+        "name": "Ultra-Juggernaut",
+        "note": "Splitting juggernauts shred ceramics/leads on long tracks; weaker vs. MOAB-class."
+      }
+    ]
+  },
+  {
+    "id": "boomer",
+    "name": "Boomerang Monkey",
+    "category": "Primary",
+    "icon": "undo-2",
+    "tiers": {
+      "chimps": "B",
+      "boss": "C"
+    },
+    "bestRoute": "2-0-4",
+    "roles": [
+      "Stall",
+      "Cleanup"
+    ],
+    "confidence": "verified",
+    "summary": "MOAB Press knocks blimps back and strips fortification; Perma Charge for sustained DPS.",
+    "routes": [
+      {
+        "path": "2-0-4",
+        "kind": "optimal",
+        "name": "MOAB Press",
+        "note": "Knockback + defortify on MOAB-class — strong stall for R98-style waves."
+      },
+      {
+        "path": "0-4-2",
+        "kind": "situational",
+        "name": "Turbo Charge",
+        "note": "Burst attack-speed ability; good mid-game cleanup with Kylie crosspath."
+      },
+      {
+        "path": "5-0-2",
+        "kind": "situational",
+        "name": "Glaive Lord",
+        "note": "Orbiting glaives clear dense layers; poor vs. single big targets."
+      }
+    ]
+  },
+  {
+    "id": "bomb",
+    "name": "Bomb Shooter",
+    "category": "Primary",
+    "icon": "bomb",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "2-4-0",
+    "roles": [
+      "DPS",
+      "MOAB"
+    ],
+    "confidence": "verified",
+    "summary": "MOAB Mauler/Assassin lines are the classic R40 answer and stay relevant through Eliminator.",
+    "routes": [
+      {
+        "path": "2-4-0",
+        "kind": "optimal",
+        "name": "MOAB Assassin",
+        "note": "Cheap ability that deletes a MOAB/BFB; Assassin passive keeps hurting blimps."
+      },
+      {
+        "path": "0-5-2",
+        "kind": "situational",
+        "name": "MOAB Eliminator",
+        "note": "Massive boss damage on the ability; frag crosspath helps cleanup."
+      },
+      {
+        "path": "2-0-4",
+        "kind": "situational",
+        "name": "Recursive Cluster",
+        "note": "Dense-bloon cleanup (R63-style), black bloons still immune to its explosions."
+      }
+    ]
+  },
+  {
+    "id": "tack",
+    "name": "Tack Shooter",
+    "category": "Primary",
+    "icon": "asterisk",
+    "tiers": {
+      "chimps": "C",
+      "boss": "D"
+    },
+    "bestRoute": "4-0-2",
+    "roles": [
+      "Cleanup"
+    ],
+    "confidence": "verified",
+    "summary": "Ring of Fire / Inferno Ring are fine corner cleanup; rarely a primary carry.",
+    "routes": [
+      {
+        "path": "4-0-2",
+        "kind": "optimal",
+        "name": "Ring of Fire",
+        "note": "Lead-popping fire ring for cleanup at a choke."
+      },
+      {
+        "path": "2-0-4",
+        "kind": "situational",
+        "name": "Overdrive",
+        "note": "Very fast tack rate; bad pierce scaling vs. ceramics without buffs."
+      }
+    ]
+  },
+  {
+    "id": "ice",
+    "name": "Ice Monkey",
+    "category": "Primary",
+    "icon": "snowflake",
+    "tiers": {
+      "chimps": "A",
+      "boss": "S"
+    },
+    "bestRoute": "4-0-1",
+    "roles": [
+      "Buff",
+      "Stall"
+    ],
+    "confidence": "verified",
+    "summary": "Embrittlement removes camo/lead-type defenses and adds damage — Super Brittle is a boss-event staple.",
+    "routes": [
+      {
+        "path": "4-0-1",
+        "kind": "optimal",
+        "name": "Embrittlement",
+        "note": "Debuff that makes bloons take extra damage and lose camo; crosspath helps reach."
+      },
+      {
+        "path": "5-0-2",
+        "kind": "situational",
+        "name": "Super Brittle",
+        "note": "Huge damage amp on bosses — near-mandatory in many boss comps."
+      },
+      {
+        "path": "0-2-4",
+        "kind": "situational",
+        "name": "Icicles",
+        "note": "Ceramic stall/damage; cheaper than Embrittlement but no debuff."
+      }
+    ]
+  },
+  {
+    "id": "glue",
+    "name": "Glue Gunner",
+    "category": "Primary",
+    "icon": "droplet",
+    "tiers": {
+      "chimps": "B",
+      "boss": "B"
+    },
+    "bestRoute": "0-2-3",
+    "roles": [
+      "Stall"
+    ],
+    "confidence": "approximate",
+    "summary": "MOAB Glue slows blimps cheaply; Liquefier lines add DoT cleanup.",
+    "routes": [
+      {
+        "path": "0-2-3",
+        "kind": "optimal",
+        "name": "MOAB Glue",
+        "note": "Slow MOAB-class — buys time for single-target DPS. Bosses and BAD resist slows."
+      },
+      {
+        "path": "4-2-0",
+        "kind": "situational",
+        "name": "Bloon Liquefier",
+        "note": "Heavy DoT on glued bloons; cleanup rather than control."
+      }
+    ]
+  },
+  {
+    "id": "desperado",
+    "name": "Desperado",
+    "category": "Primary",
+    "icon": "crosshair",
+    "tiers": {
+      "chimps": "B",
+      "boss": "B"
+    },
+    "bestRoute": "—",
+    "roles": [
+      "DPS"
+    ],
+    "confidence": "new",
+    "summary": "Added in v49 (June 2025). Gunslinger-style single-target tower; optimal crosspaths still debated — check the latest Index runs.",
+    "routes": [
+      {
+        "path": "—",
+        "kind": "optimal",
+        "name": "Route settling",
+        "note": "Treat as a flexible single-target DPS slot; verify the current top route in recent CHIMPS clears before committing."
+      }
+    ]
+  },
+  {
+    "id": "sniper",
+    "name": "Sniper Monkey",
+    "category": "Military",
+    "icon": "scan",
+    "tiers": {
+      "chimps": "A",
+      "boss": "S"
+    },
+    "bestRoute": "4-0-2",
+    "roles": [
+      "DPS",
+      "MOAB",
+      "Stall"
+    ],
+    "confidence": "verified",
+    "summary": "Global range. Maim MOAB stuns blimps; Cripple MOAB and Elite Sniper are boss mainstays.",
+    "routes": [
+      {
+        "path": "4-0-2",
+        "kind": "optimal",
+        "name": "Maim MOAB",
+        "note": "Stuns MOAB-class and boosts damage taken. Note: BAD and bosses ignore the stun."
+      },
+      {
+        "path": "0-2-5",
+        "kind": "situational",
+        "name": "Elite Defender",
+        "note": "Fires faster as lives drop / at the back of the track — insurance vs. leaks."
+      },
+      {
+        "path": "2-5-0",
+        "kind": "situational",
+        "name": "Elite Sniper",
+        "note": "Elite targeting + team attack-speed buff to snipers; Supply Drop eco removed in CHIMPS."
+      }
+    ]
+  },
+  {
+    "id": "sub",
+    "name": "Monkey Sub",
+    "category": "Military",
+    "icon": "anchor",
+    "tiers": {
+      "chimps": "A",
+      "boss": "B"
+    },
+    "bestRoute": "2-0-5",
+    "roles": [
+      "DPS",
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Submerge (top-2) decamos bloons nearby; Sub Commander buffs all subs and shreds.",
+    "routes": [
+      {
+        "path": "2-0-4",
+        "kind": "optimal",
+        "name": "Armor Piercing Darts → 2-0-5 Sub Commander",
+        "note": "Submerge decamo + lead-popping darts. Upgrade to Sub Commander for global sub buff and big DPS."
+      },
+      {
+        "path": "4-0-2",
+        "kind": "situational",
+        "name": "Energizer (Reactor line)",
+        "note": "Bloontonium Reactor AoE (lead-capable) + Submerge decamo; Energizer supports Super Monkeys. Low single-target."
+      },
+      {
+        "path": "0-4-2",
+        "kind": "situational",
+        "name": "First Strike Capability",
+        "note": "Huge MOAB strike on a cooldown — strong vs. R98/R100 spikes."
+      }
+    ]
+  },
+  {
+    "id": "bucc",
+    "name": "Monkey Buccaneer",
+    "category": "Military",
+    "icon": "ship",
+    "tiers": {
+      "chimps": "B",
+      "boss": "A"
+    },
+    "bestRoute": "2-4-0",
+    "roles": [
+      "MOAB",
+      "Income"
+    ],
+    "confidence": "verified",
+    "summary": "Monkey Pirates hooks blimps off the track; Merchantmen fuel the water economy (not in CHIMPS).",
+    "routes": [
+      {
+        "path": "2-4-0",
+        "kind": "optimal",
+        "name": "Monkey Pirates",
+        "note": "Hook ability pulls MOAB/BFB off track; Double Shot crosspath for DPS."
+      },
+      {
+        "path": "0-2-3",
+        "kind": "situational",
+        "name": "Merchantman",
+        "note": "$200/round passive income, stacks with Central Market & Trade Empire. Useless in CHIMPS."
+      },
+      {
+        "path": "0-0-5",
+        "kind": "situational",
+        "name": "Trade Empire",
+        "note": "Buffs up to 20 Merchantmen/Favored Trades with cash + damage. Worth it from ~16 Merchantmen."
+      }
+    ]
+  },
+  {
+    "id": "ace",
+    "name": "Monkey Ace",
+    "category": "Military",
+    "icon": "plane",
+    "tiers": {
+      "chimps": "B",
+      "boss": "C"
+    },
+    "bestRoute": "0-2-4",
+    "roles": [
+      "DPS",
+      "Cleanup"
+    ],
+    "confidence": "verified",
+    "summary": "Spectre gives map-wide coverage; Ground Zero/Tsar Bomba for burst.",
+    "routes": [
+      {
+        "path": "0-2-4",
+        "kind": "optimal",
+        "name": "Spectre",
+        "note": "Spy Plane camo + massive dart/bomb volume across the map."
+      },
+      {
+        "path": "0-4-2",
+        "kind": "situational",
+        "name": "Ground Zero",
+        "note": "Ability nuke for a single rush (R63/R76)."
+      }
+    ]
+  },
+  {
+    "id": "heli",
+    "name": "Heli Pilot",
+    "category": "Military",
+    "icon": "fan",
+    "tiers": {
+      "chimps": "A",
+      "boss": "B"
+    },
+    "bestRoute": "2-0-4",
+    "roles": [
+      "DPS",
+      "Stall"
+    ],
+    "confidence": "verified",
+    "summary": "Comanche Defense spawns mini-helis on demand; MOAB Shove pushes blimps back.",
+    "routes": [
+      {
+        "path": "2-0-4",
+        "kind": "optimal",
+        "name": "Comanche Defense",
+        "note": "Pursuit + MOAB Shove stall + summon burst. Great CHIMPS value."
+      },
+      {
+        "path": "4-0-2",
+        "kind": "situational",
+        "name": "Apache Dartship",
+        "note": "Strong sustained DPS with missiles; needs camo support."
+      }
+    ]
+  },
+  {
+    "id": "mortar",
+    "name": "Mortar Monkey",
+    "category": "Military",
+    "icon": "radar",
+    "tiers": {
+      "chimps": "C",
+      "boss": "B"
+    },
+    "bestRoute": "0-2-4",
+    "roles": [
+      "Cleanup",
+      "Buff"
+    ],
+    "confidence": "approximate",
+    "summary": "Signal Flare/Shattering Shells strip camo and fortification at a fixed target.",
+    "routes": [
+      {
+        "path": "0-2-4",
+        "kind": "optimal",
+        "name": "Shattering Shells",
+        "note": "Removes camo/fortified/regrow on hit — excellent for R76/R78/R98."
+      },
+      {
+        "path": "0-4-2",
+        "kind": "situational",
+        "name": "Artillery Battery",
+        "note": "Very high shell rate, burny stuff DoT; cheap boss filler."
+      }
+    ]
+  },
+  {
+    "id": "dartling",
+    "name": "Dartling Gunner",
+    "category": "Military",
+    "icon": "zap",
+    "tiers": {
+      "chimps": "B",
+      "boss": "A"
+    },
+    "bestRoute": "2-0-4",
+    "roles": [
+      "DPS"
+    ],
+    "confidence": "verified",
+    "summary": "BADS ability deletes blimps; Ray of Doom/Plasma Accelerator are boss lasers.",
+    "routes": [
+      {
+        "path": "2-0-4",
+        "kind": "optimal",
+        "name": "Bloon Area Denial System",
+        "note": "Buckshot DPS + periodic MOAB-class-only blast."
+      },
+      {
+        "path": "4-2-0",
+        "kind": "situational",
+        "name": "Plasma Accelerator",
+        "note": "Piercing beam; aim along long track stretches. Upgrades to Ray of Doom."
+      }
+    ]
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard Monkey",
+    "category": "Magic",
+    "icon": "wand-sparkles",
+    "tiers": {
+      "chimps": "A",
+      "boss": "B"
+    },
+    "bestRoute": "0-2-4",
+    "roles": [
+      "Cleanup",
+      "DPS"
+    ],
+    "confidence": "verified",
+    "summary": "Necromancer cleans everything that leaks through; Arcane Spike melts MOABs.",
+    "routes": [
+      {
+        "path": "0-2-4",
+        "kind": "optimal",
+        "name": "Necromancer: Unpopped Army",
+        "note": "Zombie bloons pop ceramic+ rushes; strong value with Alch."
+      },
+      {
+        "path": "4-2-0",
+        "kind": "situational",
+        "name": "Arcane Spike",
+        "note": "High MOAB damage single target; cheaper than Super lines."
+      },
+      {
+        "path": "0-4-2",
+        "kind": "situational",
+        "name": "Summon Phoenix",
+        "note": "Global-ish fire DPS on a cooldown; Monkey Sense for camo."
+      }
+    ]
+  },
+  {
+    "id": "super",
+    "name": "Super Monkey",
+    "category": "Magic",
+    "icon": "sun",
+    "tiers": {
+      "chimps": "S",
+      "boss": "S"
+    },
+    "bestRoute": "3-0-2",
+    "roles": [
+      "DPS",
+      "Cleanup"
+    ],
+    "confidence": "verified",
+    "summary": "Sun Avatar is the classic CHIMPS DPS core; Legend of the Night and Sun Temple for end-game.",
+    "routes": [
+      {
+        "path": "3-0-2",
+        "kind": "optimal",
+        "name": "Sun Avatar (Ultravision)",
+        "note": "Massive pierce/damage + knockback & camo from bottom crosspath. Scales into 4-0-2 Sun Temple."
+      },
+      {
+        "path": "0-2-5",
+        "kind": "situational",
+        "name": "Legend of the Night",
+        "note": "Dark-champion damage + Black Hole/Dark Phoenix ability. Very expensive; best late-game boss/R100."
+      }
+    ]
+  },
+  {
+    "id": "ninja",
+    "name": "Ninja Monkey",
+    "category": "Magic",
+    "icon": "swords",
+    "tiers": {
+      "chimps": "S",
+      "boss": "A"
+    },
+    "bestRoute": "4-0-1",
+    "roles": [
+      "DPS",
+      "Stall",
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Native camo detection. Bloonjitsu is cheap DPS; Bloon Sabotage halves MOAB speed.",
+    "routes": [
+      {
+        "path": "4-0-1",
+        "kind": "optimal",
+        "name": "Bloonjitsu",
+        "note": "Great early carry with camo; scales into Grandmaster Ninja (5-0-x)."
+      },
+      {
+        "path": "0-4-0",
+        "kind": "situational",
+        "name": "Bloon Sabotage",
+        "note": "Ability slows all bloons heavily — saves R98/R100 runs. Shinobi Tactics stacks at 0-3-0."
+      },
+      {
+        "path": "2-0-4",
+        "kind": "situational",
+        "name": "Sticky Bomb",
+        "note": "Big single-target bomb on MOAB-class; pairs with Flash Bomb stun at 0-0-3."
+      }
+    ]
+  },
+  {
+    "id": "alch",
+    "name": "Alchemist",
+    "category": "Magic",
+    "icon": "flask-conical",
+    "tiers": {
+      "chimps": "S",
+      "boss": "S"
+    },
+    "bestRoute": "4-0-1",
+    "roles": [
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Berserker Brew/Stronger Stimulant buffs damage, pierce, range and speed — the best multiplier in the game.",
+    "routes": [
+      {
+        "path": "4-2-0",
+        "kind": "optimal",
+        "name": "Stronger Stimulant + Perishing Potions",
+        "note": "Middle crosspath adds acid damage (bonus vs. MOAB-class) to the Alch’s own throws — good when the Alch also has to contribute DPS."
+      },
+      {
+        "path": "4-0-1",
+        "kind": "situational",
+        "name": "Stronger Stimulant + Faster Throwing",
+        "note": "Throws faster → re-brews more towers and keeps uptime high across a wide cluster. Preferred when buffing many towers."
+      },
+      {
+        "path": "5-0-1",
+        "kind": "situational",
+        "name": "Permanent Brew",
+        "note": "Brews never expire. Expensive; mostly boss / late freeplay."
+      }
+    ]
+  },
+  {
+    "id": "druid",
+    "name": "Druid",
+    "category": "Magic",
+    "icon": "leaf",
+    "tiers": {
+      "chimps": "B",
+      "boss": "B"
+    },
+    "bestRoute": "0-2-4",
+    "roles": [
+      "DPS",
+      "Buff"
+    ],
+    "confidence": "approximate",
+    "summary": "Poplust druids buff each other; Heart of Oak blocks regrow.",
+    "routes": [
+      {
+        "path": "0-2-4",
+        "kind": "optimal",
+        "name": "Poplust",
+        "note": "Stacking buff between druids; Heart of Oak (x-2-x) blocks regrow for R76."
+      },
+      {
+        "path": "1-4-0",
+        "kind": "situational",
+        "name": "Jungle's Bounty",
+        "note": "Cash + lives ability — disabled value in CHIMPS (income), great in boss events."
+      }
+    ]
+  },
+  {
+    "id": "mermonkey",
+    "name": "Mermonkey",
+    "category": "Magic",
+    "icon": "waves",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "4-0-2",
+    "roles": [
+      "DPS",
+      "Buff"
+    ],
+    "confidence": "approximate",
+    "summary": "Amphibious magic tower (v44). Top line buffs nearby pierce; tier 5s include Lord of the Abyss, Arctic Knight and Poseidon.",
+    "routes": [
+      {
+        "path": "4-0-2",
+        "kind": "optimal",
+        "name": "Top line (→ Lord of the Abyss)",
+        "note": "Sea-creature attacks, slows bloons and adds pierce to nearby towers — strong value with water/land placement."
+      },
+      {
+        "path": "2-0-4",
+        "kind": "situational",
+        "name": "Bottom line (→ Poseidon)",
+        "note": "Higher burst/ability focus; better for boss damage windows. Verify current crosspath numbers in-game."
+      }
+    ]
+  },
+  {
+    "id": "skywarden",
+    "name": "Skywarden",
+    "category": "Magic",
+    "icon": "wind",
+    "tiers": {
+      "chimps": "B",
+      "boss": "B"
+    },
+    "bestRoute": "5-x-x",
+    "roles": [
+      "DPS",
+      "Buff"
+    ],
+    "confidence": "new",
+    "summary": "New in v56 (Aug 2026). Wind-magic archer: path 1 boosts range (and nearby range) up to Farwind Seer; path 2 explosive arcs; path 3 shatter.",
+    "routes": [
+      {
+        "path": "5-x-x",
+        "kind": "optimal",
+        "name": "Farwind Seer (Path 1)",
+        "note": "Range-scaling arrows that hit harder the farther they fly; Zephyr Sense (x-2) gives camo. Crosspath consensus still forming."
+      },
+      {
+        "path": "x-4-x",
+        "kind": "situational",
+        "name": "Thunder's Decree (Path 2)",
+        "note": "Thundering Arc explosions grow with distance and can target a location over walls."
+      }
+    ]
+  },
+  {
+    "id": "farm",
+    "name": "Banana Farm",
+    "category": "Support",
+    "icon": "banana",
+    "tiers": {
+      "chimps": "D",
+      "boss": "S"
+    },
+    "bestRoute": "4-2-0",
+    "roles": [
+      "Income"
+    ],
+    "confidence": "verified",
+    "summary": "Disabled in CHIMPS. In boss events BRFs + Banana Central are the land economy backbone.",
+    "routes": [
+      {
+        "path": "4-2-0",
+        "kind": "optimal",
+        "name": "Banana Research Facility",
+        "note": "5 crates × $390 = $1,950/round with Valuable Bananas; +25% with Banana Central."
+      },
+      {
+        "path": "0-2-3",
+        "kind": "situational",
+        "name": "Marketplace",
+        "note": "Auto-collects 16 cash packets/round; boosted sellback → cheap, flexible stepping stone."
+      },
+      {
+        "path": "2-3-0",
+        "kind": "situational",
+        "name": "Monkey Bank",
+        "note": "Stores cash with interest; collect manually. Upgrades to IMF Loan (x-4-x) for loan cycles."
+      }
+    ]
+  },
+  {
+    "id": "spike",
+    "name": "Spike Factory",
+    "category": "Support",
+    "icon": "triangle",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "0-2-5",
+    "roles": [
+      "DPS",
+      "Cleanup"
+    ],
+    "confidence": "verified",
+    "summary": "End-of-track insurance; Perma-Spike is an elite leak-stopper.",
+    "routes": [
+      {
+        "path": "0-2-5",
+        "kind": "optimal",
+        "name": "Perma-Spike",
+        "note": "Fast production of very durable, high-damage spikes — consistent leak protection every round."
+      },
+      {
+        "path": "2-5-0",
+        "kind": "situational",
+        "name": "Carpet of Spikes (incl. Spike Storm)",
+        "note": "Spike Storm ability (x-4-x) for a single burst; Carpet adds periodic map-wide spikes. Better for planned rush rounds."
+      },
+      {
+        "path": "5-2-0",
+        "kind": "situational",
+        "name": "Super Mines",
+        "note": "Huge explosive mines; black bloons immune — pair with other damage types."
+      }
+    ]
+  },
+  {
+    "id": "village",
+    "name": "Monkey Village",
+    "category": "Support",
+    "icon": "house",
+    "tiers": {
+      "chimps": "S",
+      "boss": "S"
+    },
+    "bestRoute": "2-3-0",
+    "roles": [
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Radar (camo) + MIB (all damage types) solve most property problems in one tower.",
+    "routes": [
+      {
+        "path": "2-3-0",
+        "kind": "optimal",
+        "name": "Monkey Intelligence Bureau",
+        "note": "Lets towers in radius pop any bloon type (lead/black/purple/frozen) + Jungle Drums speed."
+      },
+      {
+        "path": "2-4-0",
+        "kind": "situational",
+        "name": "Call to Arms",
+        "note": "Periodic +50% speed/pierce ability — line it up with R98/R100."
+      },
+      {
+        "path": "0-2-4",
+        "kind": "situational",
+        "name": "Monkey City",
+        "note": "Eco village (no CHIMPS value). Monkeyopolis (x-x-5) absorbs farms for big crates."
+      }
+    ]
+  },
+  {
+    "id": "engi",
+    "name": "Engineer Monkey",
+    "category": "Support",
+    "icon": "wrench",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "0-4-0",
+    "roles": [
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Overclock supercharges a carry or a BRF; Ultraboost makes it permanent.",
+    "routes": [
+      {
+        "path": "0-4-0",
+        "kind": "optimal",
+        "name": "Overclock",
+        "note": "Huge temporary attack-speed buff (or production for farms). Rotate onto your carry."
+      },
+      {
+        "path": "0-5-0",
+        "kind": "situational",
+        "name": "Ultraboost",
+        "note": "Permanent stacking boost to one tower — late-game scaling."
+      },
+      {
+        "path": "0-2-4",
+        "kind": "situational",
+        "name": "Bloon Trap",
+        "note": "Captures bloons for cash (income disabled in CHIMPS) — boss-event utility."
+      }
+    ]
+  },
+  {
+    "id": "beast",
+    "name": "Beast Handler",
+    "category": "Support",
+    "icon": "paw-print",
+    "tiers": {
+      "chimps": "B",
+      "boss": "B"
+    },
+    "bestRoute": "0-4-1",
+    "roles": [
+      "DPS",
+      "Stall"
+    ],
+    "confidence": "approximate",
+    "summary": "Fish/dino/bird lines (Megalodon, Giganotosaurus, Pouākai). Handlers can merge beasts to reach higher power.",
+    "routes": [
+      {
+        "path": "0-4-1",
+        "kind": "optimal",
+        "name": "Dino line (→ Giganotosaurus)",
+        "note": "Strong ground DPS + roar stun; merging handlers accelerates power."
+      },
+      {
+        "path": "4-0-1",
+        "kind": "situational",
+        "name": "Water line (→ Megalodon)",
+        "note": "Water-only; grabs and drowns bloons/MOABs — great on water maps."
+      },
+      {
+        "path": "1-0-4",
+        "kind": "situational",
+        "name": "Bird line (→ Pouākai)",
+        "note": "Flying birds with map coverage; strong vs. scattered spawns."
+      }
+    ]
+  }
+]

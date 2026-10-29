@@ -1,0 +1,208 @@
+{
+  "modeNotes": {
+    "chimps": "CHIMPS strips income and selling: farms, Merchantmen, Benjamin’s cash and Bloon Trap give nothing. Value comes from efficient DPS per dollar, camo/lead/fortified coverage, and buffs (Alch, Village, Overclock).",
+    "boss": "Boss events reward economy (BRF/Marketplace/Merchantmen + Benjamin) and raw single-target damage amplified by debuffs (Super Brittle, Embrittlement) and buffs. Bosses ignore stuns/slows/knockback."
+  },
+  "dangerRounds": [
+    {
+      "round": 40,
+      "title": "First MOAB",
+      "threat": "A single MOAB with no prior MOAB pressure — the first real DPS check.",
+      "counters": [
+        "Bomb 0-3-0 MOAB Mauler (or 2-3-0)",
+        "Sniper 2-0-2 / 2-0-3 + Ballistic Missile Sub 0-3-0",
+        "Sauda / Quincy ability timing",
+        "Ninja 2-0-3 Flash Bomb stun"
+      ]
+    },
+    {
+      "round": 63,
+      "title": "Dense Leads & Ceramics",
+      "threat": "Massive ceramic rush with lead bloons mixed in — a pierce and lead-popping check.",
+      "counters": [
+        "Village 2-3-0 MIB (all damage types)",
+        "Wizard 0-2-4 Necromancer / Dragon’s Breath line",
+        "Ice 3-0-0+ (Ice Shards) or Embrittlement",
+        "Spike Factory end-of-track insurance"
+      ]
+    },
+    {
+      "round": 76,
+      "title": "Regrow Ceramic Rush",
+      "threat": "Dense regrow ceramics that refill layers if not finished quickly.",
+      "counters": [
+        "Village Grow Blocker (x-1-x) in radius",
+        "Druid Heart of Oak (x-2-x) blocks regrow",
+        "Mortar 0-2-4 Shattering Shells removes regrow",
+        "High-pierce Crossbow Master / Necromancer"
+      ]
+    },
+    {
+      "round": 78,
+      "title": "Camo Ceramic Waves",
+      "threat": "Fast camo ceramics — any DPS without camo detection is wasted.",
+      "counters": [
+        "Village Radar Scanner (x-2-x)",
+        "Etienne UAV / Sub Advanced Intel",
+        "Ice Embrittlement or Mortar Signal Flare strips camo",
+        "Ninja (native camo) Bloonjitsu"
+      ]
+    },
+    {
+      "round": 95,
+      "title": "DDT Rush",
+      "threat": "Many DDTs — fast, camo, lead & black properties (immune to sharp and explosive without help).",
+      "counters": [
+        "MIB (Village 2-3-0) on your carries",
+        "Embrittlement / Shattering Shells to strip properties",
+        "Sniper 4-0-2 / Elite Sniper (ignores pathing)",
+        "Comanche / Perma-Spike as leak insurance"
+      ]
+    },
+    {
+      "round": 98,
+      "title": "Mass Fortified BFB / ZOMG",
+      "threat": "The classic run-ender: a dense wall of fortified MOAB-class.",
+      "counters": [
+        "Ninja 0-4-0 Bloon Sabotage + Sniper Maim MOAB stuns",
+        "Boomerang 2-0-4 MOAB Press defortify + knockback",
+        "First Strike / MOAB Assassin abilities saved for this round",
+        "Call to Arms + Overclock timed on your carry"
+      ]
+    },
+    {
+      "round": 99,
+      "title": "Fortified DDTs",
+      "threat": "Fortified DDTs that punish weak damage-per-hit and lack of camo/black coverage.",
+      "counters": [
+        "Super Monkey 3-0-2+/Sun Temple with MIB",
+        "Embrittlement (+damage, removes camo)",
+        "Elite Defender / Perma-Spike backup",
+        "Re-check every carry has camo + MIB"
+      ]
+    },
+    {
+      "round": 100,
+      "title": "B.A.D.",
+      "threat": "Big Airship of Doom: immune to stuns, slows and knockback; spawns ZOMGs & DDTs on death.",
+      "counters": [
+        "Pure single-target DPS: Sun Temple, Legend of the Night, MOAB Eliminator, Ray of Doom",
+        "Ice Embrittlement / Super Brittle damage amp",
+        "Save MOAB-killer abilities for the children",
+        "Don’t rely on Maim/Sabotage/Glue — BAD ignores them"
+      ]
+    }
+  ],
+  "heroSynergies": [
+    {
+      "heroId": "geraldo",
+      "name": "Geraldo",
+      "tagline": "The Swiss-army hero",
+      "modes": [
+        "CHIMPS",
+        "Bosses"
+      ],
+      "synergies": [
+        "Sharpening Stone on your main carry (Crossbow Master, Sniper)",
+        "Creepy Idol / Jar of Pickles stall & black-bloon help",
+        "Fertilizer accelerates Banana Farms in boss events",
+        "Paragon Power Totem for degree boosting"
+      ],
+      "tip": "Level him early — the shop unlocks scale with level and items are cheap for their value."
+    },
+    {
+      "heroId": "sauda",
+      "name": "Sauda",
+      "tagline": "Early-game blender",
+      "modes": [
+        "CHIMPS"
+      ],
+      "synergies": [
+        "Carries R1–R60 nearly solo → save cash for T4/T5 MOAB answers",
+        "Pair with MOAB-class specialists: Sniper 4-0-2, Bomb 2-4-0, Ninja Sabotage",
+        "Place at a track crossing for maximum sword uptime",
+        "Weak late game — plan your R80+ DPS early"
+      ],
+      "tip": "Her value is the cash she saves you; spend it on the MOAB carry before R63."
+    },
+    {
+      "heroId": "ben",
+      "name": "Benjamin",
+      "tagline": "Boss & farming accelerator",
+      "modes": [
+        "Bosses"
+      ],
+      "synergies": [
+        "Passive cash each round + Bank Hack boosts Monkey Banks",
+        "Biohack ability buffs adjacent towers for big burst windows",
+        "Stacks with BRF/Marketplace/Merchant setups",
+        "Useless income in CHIMPS (income disabled)"
+      ],
+      "tip": "Place him first in boss events; his early cash compounds into the R40 checkpoint."
+    },
+    {
+      "heroId": "psi",
+      "name": "Psi",
+      "tagline": "MOAB-class deleter",
+      "modes": [
+        "CHIMPS",
+        "Bosses"
+      ],
+      "synergies": [
+        "Alch + Village buffs boost his blast rate",
+        "Psionic Scream for MOAB-class waves (R98)",
+        "Cover his weak pierce with Necromancer / Crossbow Master",
+        "Check boss immunities before relying on him"
+      ],
+      "tip": "Excellent filler single-target; treat abilities like a mini MOAB Assassin."
+    },
+    {
+      "heroId": "brickell",
+      "name": "Admiral Brickell",
+      "tagline": "Water-map commander",
+      "modes": [
+        "CHIMPS",
+        "Bosses"
+      ],
+      "synergies": [
+        "Naval Tactics boosts attack speed of water towers (Sub Commander, Pirates, Mermonkey)",
+        "Mega Mine deletes MOAB-class on R98/R100",
+        "Pair with Sub 2-0-5 for decamo + lead",
+        "Merchantman eco synergy in boss events"
+      ],
+      "tip": "Only pick her on maps with real water space near the track."
+    }
+  ],
+  "bosses": [
+    {
+      "name": "Bloonarius",
+      "icon": "droplets",
+      "note": "Spawns bloons as it takes damage. Needs strong cleanup + single-target carry; Spike Factory end-of-track helps."
+    },
+    {
+      "name": "Lych",
+      "icon": "skull",
+      "note": "Steals buffs and drains lives via its soul; Ezili Heartstopper and life generation (Healthy Bananas) help."
+    },
+    {
+      "name": "Vortex",
+      "icon": "wind",
+      "note": "Very fast; stuns towers. Needs damage concentrated near spawn and range coverage."
+    },
+    {
+      "name": "Dreadbloon",
+      "icon": "shield",
+      "note": "Armored with lead/fortified shields — bring MIB/lead-popping burst for shield phases."
+    },
+    {
+      "name": "Phayze",
+      "icon": "eye-off",
+      "note": "Blinds and disables towers in phases — spread DPS and keep camo detection redundant."
+    },
+    {
+      "name": "Blastapopoulos",
+      "icon": "flame",
+      "note": "Overheats and stuns towers; heat-resistant positioning and alternating carries matter."
+    }
+  ]
+}

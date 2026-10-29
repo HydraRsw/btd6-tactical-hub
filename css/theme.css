@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Theme — colours, fonts and page background.
+   Every colour used on the site is defined here as a variable, so the whole
+   look can be retuned from this one file.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* Sky (page background) */
+  --sky-top: #0c2f60;
+  --sky-bottom: #08214a;
+
+  /* BTD6 blue panels */
+  --panel-light: #2668b8;
+  --panel: #174d93;
+  --panel-dark: #123f7c;
+  --outline: #0a2449;          /* the thick dark edge around every panel */
+  --ink: #0a1c38;              /* text outline / deepest shadow */
+  --well: rgba(6, 26, 56, 0.55); /* sunken areas inside panels */
+
+  /* Game accents */
+  --gold: #ffd23f;
+  --gold-dark: #f0a500;
+  --gold-edge: #7a4a00;
+  --green: #7ad420;
+  --green-dark: #3f9a10;
+  --red: #ff5b5b;
+  --orange: #ff9b3d;
+  --cyan: #43c6ff;
+  --pink: #ff6fb5;
+  --purple: #a77bff;
+
+  /* Text */
+  --text: #f4f8ff;
+  --text-soft: #dce8ff;
+  --text-muted: #b9cdee;
+  --text-dim: #86a3d1;
+  --cash: #a8f05a;
+
+  /* Tier colours (S → D) */
+  --tier-s: #ff4747;
+  --tier-a: #ff8a1f;
+  --tier-b: #ffc700;
+  --tier-c: #5bbf12;
+  --tier-d: #2f9ae6;
+
+  /* Type */
+  --font-game: 'Luckiest Guy', 'Arial Black', Impact, sans-serif;
+  --font-body: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Shape */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --page-width: 1240px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: clip;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(95, 182, 255, 0.45), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(255, 210, 63, 0.16), transparent 55%),
+    radial-gradient(800px 800px at 50% 120%, rgba(122, 212, 32, 0.14), transparent 60%),
+    linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+  background-color: var(--sky-bottom);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+button { font: inherit; color: inherit; cursor: pointer; }
+a { color: inherit; }
+[x-cloak] { display: none !important; }
+
+/* --- BTD6 headline text: chunky font with a thick dark outline --------- */
+.game-title {
+  font-family: var(--font-game);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  color: var(--text);
+  -webkit-text-stroke: 1.6px var(--ink);
+  paint-order: stroke fill;
+  text-shadow: 0 3px 0 var(--ink), 0 5px 10px rgba(0, 0, 0, 0.35);
+  text-wrap: balance;
+}
+
+.game-title--small {
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 0 2px 0 var(--ink);
+}
+
+.highlight { color: var(--gold); }
+.muted { color: var(--text-muted); }
+.dim { color: var(--text-dim); }
+.cash { color: var(--cash); }
+.numbers { font-variant-numeric: tabular-nums; }
+
+/* --- Floating balloons in the background ------------------------------ */
+.balloons {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -120px;
+  width: 46px;
+  height: 56px;
+  border-radius: 50% 50% 48% 48% / 55% 55% 45% 45%;
+  opacity: 0.22;
+  box-shadow: inset -8px -10px 0 rgba(0, 0, 0, 0.2), inset 6px 6px 0 rgba(255, 255, 255, 0.35);
+  animation: balloon-rise linear infinite;
+}
+
+.balloon::after {             /* the string */
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  width: 1.5px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes balloon-rise {
+  from { transform: translateY(0) rotate(-4deg); }
+  50%  { transform: translateY(-60vh) rotate(4deg); }
+  to   { transform: translateY(-125vh) rotate(-4deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
