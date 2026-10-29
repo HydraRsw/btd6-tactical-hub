@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="css/theme.css?v=194c6e55ae">
   <link rel="stylesheet" href="css/components.css?v=84766d580b">
-  <link rel="stylesheet" href="css/layout.css?v=748ae32eef">
+  <link rel="stylesheet" href="css/layout.css?v=74bb1d29d0">
 
   <!-- Libraries (no build step). Order matters: our module first, Alpine last. -->
   <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
@@ -25,37 +25,40 @@
   <script type="importmap">
   {
     "imports": {
-      "./js/components/compare.js": "./js/components/compare.js?v=21783a85b0",
-      "./js/components/crosspath.js": "./js/components/crosspath.js?v=21783a85b0",
-      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=21783a85b0",
-      "./js/components/events.js": "./js/components/events.js?v=21783a85b0",
-      "./js/components/farming.js": "./js/components/farming.js?v=21783a85b0",
-      "./js/components/global-search.js": "./js/components/global-search.js?v=21783a85b0",
-      "./js/components/hero-page.js": "./js/components/hero-page.js?v=21783a85b0",
-      "./js/components/maps.js": "./js/components/maps.js?v=21783a85b0",
-      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=21783a85b0",
-      "./js/components/paragons.js": "./js/components/paragons.js?v=21783a85b0",
-      "./js/components/planner.js": "./js/components/planner.js?v=21783a85b0",
-      "./js/components/playbook.js": "./js/components/playbook.js?v=21783a85b0",
-      "./js/components/rounds.js": "./js/components/rounds.js?v=21783a85b0",
-      "./js/components/tier-list.js": "./js/components/tier-list.js?v=21783a85b0",
-      "./js/components/tower-page.js": "./js/components/tower-page.js?v=21783a85b0",
-      "./js/components/tracker.js": "./js/components/tracker.js?v=21783a85b0",
-      "./js/directives.js": "./js/directives.js?v=21783a85b0",
-      "./js/lib/data.js": "./js/lib/data.js?v=21783a85b0",
-      "./js/lib/economy.js": "./js/lib/economy.js?v=21783a85b0",
-      "./js/lib/game.js": "./js/lib/game.js?v=21783a85b0",
-      "./js/lib/i18n.js": "./js/lib/i18n.js?v=21783a85b0",
-      "./js/lib/storage.js": "./js/lib/storage.js?v=21783a85b0",
-      "./js/lib/text.js": "./js/lib/text.js?v=21783a85b0",
-      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=21783a85b0",
-      "./js/main.js": "./js/main.js?v=21783a85b0",
-      "./js/store.js": "./js/store.js?v=21783a85b0"
+      "./js/components/boss-page.js": "./js/components/boss-page.js?v=448316b04a",
+      "./js/components/compare.js": "./js/components/compare.js?v=448316b04a",
+      "./js/components/crosspath.js": "./js/components/crosspath.js?v=448316b04a",
+      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=448316b04a",
+      "./js/components/events.js": "./js/components/events.js?v=448316b04a",
+      "./js/components/farming.js": "./js/components/farming.js?v=448316b04a",
+      "./js/components/global-search.js": "./js/components/global-search.js?v=448316b04a",
+      "./js/components/hero-page.js": "./js/components/hero-page.js?v=448316b04a",
+      "./js/components/knowledge.js": "./js/components/knowledge.js?v=448316b04a",
+      "./js/components/maps.js": "./js/components/maps.js?v=448316b04a",
+      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=448316b04a",
+      "./js/components/paragons.js": "./js/components/paragons.js?v=448316b04a",
+      "./js/components/planner.js": "./js/components/planner.js?v=448316b04a",
+      "./js/components/playbook.js": "./js/components/playbook.js?v=448316b04a",
+      "./js/components/rounds.js": "./js/components/rounds.js?v=448316b04a",
+      "./js/components/tab-scroller.js": "./js/components/tab-scroller.js?v=448316b04a",
+      "./js/components/tier-list.js": "./js/components/tier-list.js?v=448316b04a",
+      "./js/components/tower-page.js": "./js/components/tower-page.js?v=448316b04a",
+      "./js/components/tracker.js": "./js/components/tracker.js?v=448316b04a",
+      "./js/directives.js": "./js/directives.js?v=448316b04a",
+      "./js/lib/data.js": "./js/lib/data.js?v=448316b04a",
+      "./js/lib/economy.js": "./js/lib/economy.js?v=448316b04a",
+      "./js/lib/game.js": "./js/lib/game.js?v=448316b04a",
+      "./js/lib/i18n.js": "./js/lib/i18n.js?v=448316b04a",
+      "./js/lib/storage.js": "./js/lib/storage.js?v=448316b04a",
+      "./js/lib/text.js": "./js/lib/text.js?v=448316b04a",
+      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=448316b04a",
+      "./js/main.js": "./js/main.js?v=448316b04a",
+      "./js/store.js": "./js/store.js?v=448316b04a"
     }
   }
   </script>
   <!-- import-map:end -->
-  <script type="module" src="js/main.js?v=21783a85b0"></script>
+  <script type="module" src="js/main.js?v=448316b04a"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 
@@ -114,7 +117,9 @@
       </div>
     </div>
 
-    <nav class="container tabs" role="tablist" aria-label="Sections">
+    <div class="container tabs-wrap" x-data="tabScroller" @resize.window.debounce.150ms="update()">
+    <button type="button" class="tabs-arrow tabs-arrow--left" x-show="canLeft" x-cloak @click="scrollBy(-1)" aria-label="Scroll tabs left"><span x-icon="chevron-left"></span></button>
+    <nav class="tabs" role="tablist" aria-label="Sections" x-ref="strip" @scroll.passive="update()" @wheel="wheel($event)">
       <template x-for="tab in [
           { id: 'tier',   label: 'Tier List',        icon: 'layers' },
           { id: 'cross',  label: 'Crosspath Guide',  icon: 'git-branch' },
@@ -124,13 +129,16 @@
           { id: 'events', label: 'Events',           icon: 'calendar-clock' },
           { id: 'tools',  label: 'Tools',            icon: 'wrench' },
           { id: 'farm',   label: 'Farming Engine',   icon: 'banana' },
-          { id: 'chimps', label: 'CHIMPS & Bosses',  icon: 'skull' } ]" :key="tab.id">
+          { id: 'chimps', label: 'CHIMPS & Bosses',  icon: 'skull' },
+          { id: 'knowledge', label: 'Monkey Knowledge', icon: 'graduation-cap' } ]" :key="tab.id">
         <button class="tab" role="tab" :class="{ 'tab--active': $store.hub.activeTab === tab.id }"
                 :aria-selected="$store.hub.activeTab === tab.id" @click="$store.hub.openTab(tab.id)">
           <span x-icon="tab.icon"></span><span x-text="tab.label"></span>
         </button>
       </template>
     </nav>
+    <button type="button" class="tabs-arrow tabs-arrow--right" x-show="canRight" x-cloak @click="scrollBy(1)" aria-label="Scroll tabs right"><span x-icon="chevron-right"></span></button>
+    </div>
   </header>
 
   <main class="container" x-data>
@@ -477,7 +485,13 @@
                         :aria-pressed="difficulty === d" @click="difficulty = d" x-text="d"></button>
               </template>
             </div>
-            <div class="field-with-icon push-right map-search">
+            <label class="sort-select push-right"><span class="dim">Order</span>
+              <select class="field" x-model="sort" aria-label="Map order">
+                <option value="game">Game order</option>
+                <option value="az">A–Z</option>
+              </select>
+            </label>
+            <div class="field-with-icon map-search">
               <span x-icon="filter"></span>
               <input class="field" type="search" placeholder="Find a map or trait…" x-model="query" aria-label="Find a map">
             </div>
@@ -1164,6 +1178,200 @@
         </template>
 
         <!-- =============================================================
+             BOSS PAGE  (#boss/<id>)
+             ============================================================= -->
+        <template x-if="$store.hub.activeTab === 'boss' && $store.hub.currentPage">
+          <section x-data="bossPage" class="stack tower-page">
+            <nav class="row-wrap">
+              <button class="button button--quiet button--small" @click="$store.hub.jumpTo('events', 'boss-guide')"><span x-icon="arrow-left"></span>All bosses</button>
+              <span class="push-right row-wrap">
+                <button class="button button--quiet button--small" @click="$store.hub.openPage('boss', neighbour(-1).id)" :aria-label="`Previous boss: ${neighbour(-1).name}`"><span x-icon="chevron-left"></span><span class="neighbour-name" x-text="neighbour(-1).name"></span></button>
+                <button class="button button--quiet button--small" @click="$store.hub.openPage('boss', neighbour(1).id)" :aria-label="`Next boss: ${neighbour(1).name}`"><span class="neighbour-name" x-text="neighbour(1).name"></span><span x-icon="chevron-right"></span></button>
+              </span>
+            </nav>
+
+            <header class="panel tower-hero boss-hero">
+              <div class="avatar avatar--huge" data-category="Boss" aria-hidden="true"><span x-icon="skull"></span></div>
+              <div class="tower-hero__text">
+                <h2 class="game-title page-title"><span x-text="boss.name"></span><button class="star-button" :class="{ 'star-button--on': $store.hub.isFavourite('boss', boss.id) }" @click="$store.hub.toggleFavourite('boss', boss.id)" :aria-pressed="$store.hub.isFavourite('boss', boss.id)" :aria-label="$store.hub.isFavourite('boss', boss.id) ? `Remove ${boss.name} from favourites` : `Add ${boss.name} to favourites`" :title="$store.hub.isFavourite('boss', boss.id) ? 'In your favourites' : 'Add to favourites'"><span x-icon="star"></span></button></h2>
+                <div class="pill-list">
+                  <span class="pill" x-text="boss.title"></span>
+                  <span class="pill" x-text="`Skulls: ${boss.skulls.normal} Normal · ${boss.skulls.elite} Elite`"></span>
+                  <span class="pill" x-text="`Introduced in ${boss.introduced}`"></span>
+                </div>
+                <p x-text="boss.summary"></p>
+              </div>
+            </header>
+
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="swords"></span>How it fights</h3>
+              <ul class="tip-list">
+                <template x-for="m in boss.mechanics"><li><span x-icon="zap"></span><span><strong x-text="m.name"></strong> · <span x-text="m.text"></span></span></li></template>
+              </ul>
+            </div>
+
+            <div class="panel panel--padded stack">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="hammer"></span>What to build</h3>
+              <template x-for="s in boss.stages" :key="s.label">
+                <div class="boss-stage">
+                  <h4 class="boss-stage__title" x-text="s.label"></h4>
+                  <p class="muted" x-show="s.note" x-text="s.note"></p>
+                  <div class="synergy-grid">
+                    <template x-for="p in s.picks.map((pick) => resolve(pick))" :key="p.name">
+                      <button class="well synergy" :disabled="!p.go" @click="p.go && p.go()">
+                        <div x-avatar.small="p.avatar" x-show="p.avatar"></div>
+                        <span class="synergy__text">
+                          <span class="synergy__name"><span x-text="p.name"></span> <span class="pill pill--route" x-show="p.route" x-text="p.route"></span></span>
+                          <span class="synergy__note" x-text="p.note"></span>
+                        </span>
+                      </button>
+                    </template>
+                  </div>
+                </div>
+              </template>
+            </div>
+
+            <div class="tip-columns tip-columns--two">
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="banknote"></span>Money plan</h3>
+                <ul class="tip-list"><template x-for="line in boss.money"><li><span x-icon="circle-dollar-sign"></span><span x-text="line"></span></li></template></ul>
+                <p class="dim tower-note">Farming plan for boss events</p>
+                <button class="button button--quiet button--small" @click="$store.hub.openTab('farm')"><span x-icon="banana"></span>Open the Farming Engine</button>
+              </div>
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="lightbulb"></span>Tips</h3>
+                <ul class="tip-list"><template x-for="line in boss.tips"><li><span x-icon="circle-check"></span><span x-text="line"></span></li></template></ul>
+              </div>
+            </div>
+
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="flame"></span>Elite version</h3>
+              <ul class="tip-list"><template x-for="line in boss.eliteNotes"><li><span x-icon="circle-alert"></span><span x-text="line"></span></li></template></ul>
+            </div>
+
+            <div class="panel panel--padded stack">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="heart-pulse"></span>Health per tier</h3>
+              <div class="row-wrap">
+                <div class="mode-switch">
+                  <button class="button button--small" :class="!elite ? 'button--gold' : 'button--quiet'" @click="elite = false">Normal</button>
+                  <button class="button button--small" :class="elite ? 'button--gold' : 'button--quiet'" @click="elite = true">Elite</button>
+                </div>
+                <label class="planner-field planner-field--small"><span class="dim">Players</span>
+                  <select class="field" x-model.number="players"><template x-for="n in [1, 2, 3, 4]"><option :value="n" x-text="n" :selected="n === players"></option></template></select>
+                </label>
+              </div>
+              <div class="table-scroll">
+                <table class="farm-table numbers">
+                  <thead><tr><th>Tier</th><th>Appears</th><th>Health</th><th x-show="boss.extra" x-text="boss.extra?.label"></th></tr></thead>
+                  <tbody>
+                    <template x-for="row in rows" :key="row.tier">
+                      <tr><td x-text="row.tier"></td><td x-text="`Round ${row.round}`"></td><td class="numbers" x-text="row.health.toLocaleString('en-US')"></td><td class="numbers" x-show="boss.extra" x-text="row.extra?.toLocaleString('en-US')"></td></tr>
+                    </template>
+                  </tbody>
+                </table>
+              </div>
+              <button class="button button--blue button--small" style="justify-self:start" @click="$store.hub.jumpTo('events', 'boss-guide')"><span x-icon="calculator"></span>Open in the boss guide</button>
+            </div>
+
+            <div class="tip-columns tip-columns--two">
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="thumbs-up"></span>Paragons that do well</h3>
+                <div class="pill-list">
+                  <template x-for="p in matchups.good" :key="p.id"><button class="pill pill--link" @click="$store.hub.openPage('paragon', p.id)" x-text="p.name"></button></template>
+                </div>
+              </div>
+              <div class="panel panel--padded" x-show="matchups.bad.length">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="thumbs-down"></span>Paragons to avoid</h3>
+                <div class="pill-list">
+                  <template x-for="p in matchups.bad" :key="p.id"><button class="pill pill--link" @click="$store.hub.openPage('paragon', p.id)" x-text="p.name"></button></template>
+                </div>
+              </div>
+            </div>
+
+            <p x-sources="boss.sources"></p>
+          </section>
+        </template>
+
+        <!-- =============================================================
+             TAB · MONKEY KNOWLEDGE  (#knowledge)
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'knowledge'" x-cloak x-data="knowledgeTab" class="stack">
+          <div class="section-head">
+            <h2 class="game-title">Monkey <span class="highlight">Knowledge</span></h2>
+            <p class="muted" x-text="$store.hub.knowledge.intro"></p>
+          </div>
+
+          <details class="panel panel--padded">
+            <summary class="game-title game-title--small"><span x-icon="info"></span> How the trees unlock</summary>
+            <div class="table-scroll">
+              <table class="farm-table numbers">
+                <thead><tr><th>Tier</th><template x-for="c in $store.hub.knowledge.categories"><th x-text="c"></th></template><th>One-time Monkey Money</th></tr></thead>
+                <tbody>
+                  <template x-for="rule in $store.hub.knowledge.treeRules" :key="rule.tier">
+                    <tr><td x-text="rule.tier"></td><template x-for="n in rule.points"><td class="numbers" x-text="n"></td></template><td class="numbers" x-text="rule.mm ? rule.mm + ' MM' : 'Free'"></td></tr>
+                  </template>
+                </tbody>
+              </table>
+            </div>
+            <p class="dim tower-note">Points needed in the tree</p>
+            <p class="muted" x-text="$store.hub.knowledge.respec"></p>
+          </details>
+
+          <div class="row-wrap">
+            <div class="mode-switch mode-switch--wide">
+              <template x-for="c in ['All', ...$store.hub.knowledge.categories]" :key="c">
+                <button class="button button--small" :class="tree === c ? 'button--gold' : 'button--quiet'" :aria-pressed="tree === c" @click="tree = c">
+                  <span x-text="c === 'All' ? 'All trees' : c"></span> <span class="dim numbers" x-text="`${progress(c).owned}/${progress(c).total}`"></span>
+                </button>
+              </template>
+            </div>
+          </div>
+          <div class="row-wrap">
+            <div class="mode-switch">
+              <button class="button button--small" :class="show === 'all' ? 'button--gold' : 'button--quiet'" @click="show = 'all'">Everything</button>
+              <button class="button button--small" :class="show === 'missing' ? 'button--gold' : 'button--quiet'" @click="show = 'missing'">Missing</button>
+              <button class="button button--small" :class="show === 'owned' ? 'button--gold' : 'button--quiet'" @click="show = 'owned'">Owned</button>
+            </div>
+            <label class="option option--inline"><input type="checkbox" class="checkbox" x-model="keyOnly"><span>Key picks only</span></label>
+            <div class="field-with-icon push-right map-search">
+              <span x-icon="filter"></span>
+              <input class="field" type="search" placeholder="Search Monkey Knowledge…" x-model="query" aria-label="Search Monkey Knowledge">
+            </div>
+          </div>
+          <p class="dim tower-note"><span>Mark the points you own</span> · <span>Your marks stay in this browser.</span></p>
+
+          <template x-for="g in groups" :key="g.category">
+            <div class="stack">
+              <h3 class="game-title game-title--small" x-text="g.category"></h3>
+              <div class="mk-grid">
+                <template x-for="e in g.entries" :key="e.id">
+                  <article class="panel mk-card" :class="{ 'mk-card--owned': isOwned(e.id), 'mk-card--key': e.keyPick }">
+                    <header class="mk-card__head">
+                      <label class="mk-card__check" :title="isOwned(e.id) ? 'owned' : 'Mark the points you own'"><input type="checkbox" class="checkbox" :checked="isOwned(e.id)" @change="toggleOwned(e.id)" :aria-label="e.name"></label>
+                      <h4 class="mk-card__name" x-text="e.name"></h4>
+                      <span class="pill pill--good" x-show="e.keyPick"><span x-icon="star"></span><span>Key pick</span></span>
+                    </header>
+                    <p x-text="e.effect"></p>
+                    <p class="mk-card__note" x-show="e.keyPick"><span x-icon="sparkles"></span> <span x-text="e.keyPick"></span></p>
+                    <p class="mk-card__note mk-card__note--warn" x-show="e.downside"><span x-icon="circle-alert"></span> <span>Can backfire</span>: <span x-text="e.downside"></span></p>
+                    <div class="mk-card__meta">
+                      <span class="pill" x-show="!e.requires.length"><span x-icon="flag"></span><span>Starting point</span></span>
+                      <template x-if="e.requires.length"><span class="dim"><span>Requires</span>: <span x-text="e.requires.join(' · ')"></span></span></template>
+                      <span class="pill numbers" x-show="e.points" :title="'Points spent in this tree'" x-text="`${e.points} MK`"></span>
+                      <span class="pill numbers" x-show="e.mm" x-text="`${e.mm} MM`"></span>
+                    </div>
+                    <div class="pill-list" x-show="e.towers.length">
+                      <template x-for="id in e.towers"><button class="pill pill--link" @click="$store.hub.openTower(id)" x-text="towerName(id)"></button></template>
+                    </div>
+                  </article>
+                </template>
+              </div>
+            </div>
+          </template>
+          <p x-sources="$store.hub.knowledge.sources"></p>
+        </section>
+
+        <!-- =============================================================
              TAB · ROUNDS  (every round of the standard and ABR sets)
              ============================================================= -->
         <section x-show="$store.hub.activeTab === 'rounds'" x-cloak x-data="roundBrowser" class="stack">
@@ -1432,6 +1640,7 @@
                 <input class="field numbers" type="number" min="1" max="100" x-model.number="degree">
               </label>
               <span class="pill pill--good" x-text="`×${multiplier} boss damage`"></span>
+              <button class="button button--gold button--small push-right" @click="$store.hub.openPage('boss', bossId)"><span x-icon="book-open"></span><span x-text="`${boss.name}: boss page`"></span></button>
             </div>
             <p class="note" x-show="boss.note"><span x-icon="info"></span><span x-text="boss.note"></span></p>
             <div class="well table-scroll">
@@ -2027,6 +2236,7 @@
                 <div>
                   <h4 class="game-title game-title--small" x-text="boss.name"></h4>
                   <p x-text="boss.note"></p>
+                  <button class="button button--quiet button--small" x-show="$store.hub.bosses.bosses.some((b) => b.name === boss.name)" @click="$store.hub.openPage('boss', $store.hub.bosses.bosses.find((b) => b.name === boss.name).id)"><span x-icon="book-open"></span>Boss page</button>
                   <p x-sources="boss.sources"></p>
                 </div>
               </article>

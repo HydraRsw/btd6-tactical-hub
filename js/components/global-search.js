@@ -16,6 +16,8 @@ const KIND_STYLES = {
   Map: { color: '#7ad420', icon: 'map' },
   Mode: { color: '#ff9f1c', icon: 'gamepad-2' },
   Tool: { color: '#ffd23f', icon: 'wrench' },
+  Boss: { color: '#ff5b5b', icon: 'skull' },
+  Knowledge: { color: '#43c6ff', icon: 'graduation-cap' },
 };
 
 /** Everything the search box can find, built from the loaded data. */
@@ -88,6 +90,22 @@ function buildSearchIndex(hub) {
     go: () => hub.openPage('mode', mode.id),
   }));
 
+  const bosses = hub.bosses.bosses.map((boss) => ({
+    kind: 'Boss',
+    title: boss.name,
+    subtitle: `Boss · ${boss.title}`,
+    keywords: `boss ${boss.title} ${(boss.mechanics ?? []).map((m) => m.name).join(' ')}`,
+    go: () => hub.openPage('boss', boss.id),
+  }));
+
+  const knowledge = hub.knowledge.entries.map((entry) => ({
+    kind: 'Knowledge',
+    title: entry.name,
+    subtitle: `Monkey Knowledge · ${entry.category}`,
+    keywords: `mk monkey knowledge ${entry.effect}`,
+    go: () => hub.openTab('knowledge'),
+  }));
+
   const tools = [
     { title: 'Build planner', subtitle: 'Plan a CHIMPS run round by round', keywords: 'planner chimps build cash afford', go: () => hub.openTool('planner') },
     { title: 'Round browser', subtitle: 'Every round: bloons, RBE and cash', keywords: 'rounds rbe cash abr alternate', go: () => hub.openTab('rounds') },
@@ -97,10 +115,11 @@ function buildSearchIndex(hub) {
     { title: 'What changed this patch', subtitle: 'Patch notes in plain words', keywords: 'patch notes changes update version nerf buff', go: () => hub.openTab('patch') },
     { title: 'Freeplay scaling', subtitle: 'How rounds get harder after 80', keywords: 'freeplay scaling speed health super ceramic', go: () => hub.jumpTo('rounds', 'freeplay') },
     { title: 'My medals', subtitle: 'Black Border and medal tracker', keywords: 'medals black border tracker progress', go: () => hub.openTab('maps') },
+    { title: 'Monkey Knowledge', subtitle: 'Every Monkey Knowledge point, by tree.', keywords: 'mk monkey knowledge tree points', go: () => hub.openTab('knowledge') },
     { title: 'Compare towers and heroes', subtitle: 'Two units side by side', keywords: 'compare versus vs side by side', go: () => hub.openTool('compare') },
   ].map((tool) => ({ kind: 'Tool', ...tool }));
 
-  return [...tools, ...towers, ...heroes, ...paragons, ...maps, ...modes, ...rounds, ...checkpoints, ...strategies];
+  return [...tools, ...towers, ...heroes, ...paragons, ...bosses, ...maps, ...modes, ...knowledge, ...rounds, ...checkpoints, ...strategies];
 }
 
 export function globalSearch() {

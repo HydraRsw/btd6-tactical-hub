@@ -77,6 +77,7 @@ const KINDS = {
   map: { list: (hub) => hub.maps.maps, open: (hub, id) => hub.openPage('map', id) },
   mode: { list: (hub) => hub.modes.modes, open: (hub, id) => hub.openPage('mode', id) },
   paragon: { list: (hub) => hub.paragons.paragons, open: (hub, id) => hub.openPage('paragon', id) },
+  boss: { list: (hub) => hub.bosses.bosses, open: (hub, id) => hub.openPage('boss', id) },
 };
 
 export function favouritesBar() {

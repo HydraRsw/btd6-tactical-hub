@@ -1,0 +1,1863 @@
+{
+ "intro": "Monkey Knowledge is the permanent upgrade system that opens at player level 30. Each point costs a Knowledge Point; deeper points also need a number of points already spent in the same tree and a one-time Monkey Money payment. It is switched off in CHIMPS and by some challenge rules.",
+ "categories": [
+  "Primary",
+  "Military",
+  "Magic",
+  "Support",
+  "Heroes",
+  "Powers"
+ ],
+ "treeRules": [
+  {
+   "tier": 3,
+   "points": [
+    5,
+    4,
+    4,
+    3,
+    3,
+    3
+   ],
+   "mm": 0
+  },
+  {
+   "tier": 4,
+   "points": [
+    8,
+    8,
+    4,
+    3,
+    3,
+    3
+   ],
+   "mm": 250
+  },
+  {
+   "tier": 5,
+   "points": [
+    10,
+    8,
+    8,
+    8,
+    8,
+    3
+   ],
+   "mm": 500
+  },
+  {
+   "tier": 6,
+   "points": [
+    10,
+    14,
+    8,
+    14,
+    8,
+    10
+   ],
+   "mm": 1000
+  }
+ ],
+ "respec": "Respec costs 2,000 Monkey Money and refunds every Knowledge Point; Monkey Money already paid stays paid, so re-buying a point later only costs the Knowledge Point. Each point can also be switched off on its own for free.",
+ "entries": [
+  {
+   "id": "ExtraDartPops",
+   "name": "Extra Dart Pops",
+   "category": "Primary",
+   "effect": "+1 pierce on every Dart Monkey shot.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "dart"
+   ],
+   "keyPick": "Cheap, useful early point."
+  },
+  {
+   "id": "FastTackAttacks",
+   "name": "Fast Tack Attacks",
+   "category": "Primary",
+   "effect": "Tack Shooters attack 8% faster.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "tack"
+   ]
+  },
+  {
+   "id": "IncreasedLifespan",
+   "name": "Increased Lifespan",
+   "category": "Primary",
+   "effect": "Longer projectile life for Dart Monkeys, Bomb Shooters, Tack Shooters and Glue Gunners.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "dart"
+   ]
+  },
+  {
+   "id": "CheapRangs",
+   "name": "Cheap 'Rangs",
+   "category": "Primary",
+   "effect": "Boomerang Monkey costs $50 less.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Increased Lifespan"
+   ],
+   "towers": [
+    "boomer"
+   ]
+  },
+  {
+   "id": "CrossbowReach",
+   "name": "Crossbow Reach",
+   "category": "Primary",
+   "effect": "More range for Crossbow.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Extra Dart Pops"
+   ],
+   "towers": [
+    "dart"
+   ]
+  },
+  {
+   "id": "FastGlue",
+   "name": "Fast Glue",
+   "category": "Primary",
+   "effect": "Glue Gunners attack 10% faster.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Fast Tack Attacks"
+   ],
+   "towers": [
+    "glue"
+   ]
+  },
+  {
+   "id": "FraggyFrags",
+   "name": "Fraggy Frags",
+   "category": "Primary",
+   "effect": "Frag Bombs throw 2 extra frags.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Increased Lifespan"
+   ],
+   "towers": [
+    "bomb"
+   ]
+  },
+  {
+   "id": "HardTacks",
+   "name": "Hard Tacks",
+   "category": "Primary",
+   "effect": "Tacks can pop Frozen Bloons, which makes Tacks work next to Ice Monkeys.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Fast Tack Attacks"
+   ],
+   "towers": [
+    "tack"
+   ]
+  },
+  {
+   "id": "PoppyBlades",
+   "name": "Poppy Blades",
+   "category": "Primary",
+   "effect": "Blade Shooter gets +2 pierce.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Hard Tacks"
+   ],
+   "towers": [
+    "tack"
+   ]
+  },
+  {
+   "id": "4And4",
+   "name": "4 and 4",
+   "category": "Primary",
+   "effect": "Triple Shot fires 4 darts every 4th shot.",
+   "points": 5,
+   "mm": 0,
+   "requires": [
+    "Crossbow Reach"
+   ],
+   "towers": [
+    "dart"
+   ]
+  },
+  {
+   "id": "BigInferno",
+   "name": "Big Inferno",
+   "category": "Primary",
+   "effect": "Inferno Ring's burst radius grows by 3.",
+   "points": 5,
+   "mm": 0,
+   "requires": [
+    "Poppy Blades"
+   ],
+   "towers": [
+    "tack"
+   ]
+  },
+  {
+   "id": "BudgetClusters",
+   "name": "Budget Clusters",
+   "category": "Primary",
+   "effect": "Cluster Bombs cost $100 less.",
+   "points": 5,
+   "mm": 0,
+   "requires": [
+    "Fraggy Frags"
+   ],
+   "towers": [
+    "bomb"
+   ]
+  },
+  {
+   "id": "ExtraBounce",
+   "name": "Extra Bounce",
+   "category": "Primary",
+   "effect": "Glaive Ricochet gets +30 pierce.",
+   "points": 5,
+   "mm": 0,
+   "requires": [
+    "Cheap 'Rangs"
+   ],
+   "towers": [
+    "boomer"
+   ]
+  },
+  {
+   "id": "ForceVsForce",
+   "name": "Force vs Force",
+   "category": "Primary",
+   "effect": "Juggernaut deals +2 damage to MOAB-class.",
+   "points": 5,
+   "mm": 0,
+   "requires": [
+    "Crossbow Reach"
+   ],
+   "towers": [
+    "dart"
+   ]
+  },
+  {
+   "id": "IcyChill",
+   "name": "Icy Chill",
+   "category": "Primary",
+   "effect": "Slightly bigger freeze radius.",
+   "points": 5,
+   "mm": 0,
+   "requires": [
+    "Hard Tacks"
+   ],
+   "towers": [
+    "ice"
+   ]
+  },
+  {
+   "id": "MoreSplattyGlue",
+   "name": "More Splatty Glue",
+   "category": "Primary",
+   "effect": "Glue Splatter hits 2 more Bloons per shot.",
+   "points": 5,
+   "mm": 0,
+   "requires": [
+    "Fast Glue"
+   ],
+   "towers": [
+    "glue"
+   ]
+  },
+  {
+   "id": "RecurringRangs",
+   "name": "Recurring 'Rangs",
+   "category": "Primary",
+   "effect": "Boomerangs that come back are thrown again.",
+   "points": 5,
+   "mm": 0,
+   "requires": [
+    "Extra Bounce"
+   ],
+   "towers": [
+    "boomer"
+   ]
+  },
+  {
+   "id": "AviationGradeGlue",
+   "name": "Aviation Grade Glue",
+   "category": "Primary",
+   "effect": "MOAB Glue slows more.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "More Splatty Glue"
+   ],
+   "towers": [
+    "glue"
+   ]
+  },
+  {
+   "id": "HardPress",
+   "name": "Hard Press",
+   "category": "Primary",
+   "effect": "MOAB Press pushes 30% further.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "Extra Bounce"
+   ],
+   "towers": [
+    "boomer"
+   ]
+  },
+  {
+   "id": "MasterDoubleCross",
+   "name": "Master Double Cross",
+   "category": "Primary",
+   "effect": "Lets you own two Crossbow Masters, which also means an extra tier 5 for Apex Plasma Master.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "4 and 4"
+   ],
+   "towers": [
+    "dart"
+   ]
+  },
+  {
+   "id": "MegaMauler",
+   "name": "Mega Mauler",
+   "category": "Primary",
+   "effect": "MOAB Mauler deals more damage per hit.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "Aviation Grade Glue",
+    "Hard Press"
+   ],
+   "towers": [
+    "bomb"
+   ]
+  },
+  {
+   "id": "SoCold",
+   "name": "So... Cold...",
+   "category": "Primary",
+   "effect": "Permafrost slows by 60%.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "Icy Chill"
+   ],
+   "towers": [
+    "ice"
+   ]
+  },
+  {
+   "id": "BigCryoBlast",
+   "name": "Big Cryo Blast",
+   "category": "Primary",
+   "effect": "Cryo Cannon's blast radius grows.",
+   "points": 10,
+   "mm": 500,
+   "requires": [
+    "So... Cold..."
+   ],
+   "towers": [
+    "ice"
+   ]
+  },
+  {
+   "id": "BionicAugmentation",
+   "name": "Bionic Augmentation",
+   "category": "Primary",
+   "effect": "Bionic Boomerang sees Camo while Turbo Charge is active, a camo option for x-4-x builds.",
+   "points": 10,
+   "mm": 500,
+   "requires": [
+    "Long Turbo"
+   ],
+   "towers": [
+    "boomer"
+   ]
+  },
+  {
+   "id": "CheaperSolution",
+   "name": "Cheaper Solution",
+   "category": "Primary",
+   "effect": "Bloon Liquefier costs $1,000 less.",
+   "points": 10,
+   "mm": 500,
+   "requires": [
+    "Aviation Grade Glue"
+   ],
+   "towers": [
+    "glue"
+   ]
+  },
+  {
+   "id": "ComeOnEverybody",
+   "name": "Come On Everybody!",
+   "category": "Primary",
+   "effect": "Primary towers attack 5% faster while all of them are below tier 3, and cost 5% less while all are tier 3 or 4.",
+   "points": 10,
+   "mm": 500,
+   "requires": [
+    "Master Double Cross"
+   ],
+   "towers": []
+  },
+  {
+   "id": "Hypothermia",
+   "name": "Hypothermia",
+   "category": "Primary",
+   "effect": "Snowstorm freezes for longer.",
+   "points": 10,
+   "mm": 500,
+   "requires": [
+    "So... Cold..."
+   ],
+   "towers": [
+    "ice"
+   ]
+  },
+  {
+   "id": "LongTurbo",
+   "name": "Long Turbo",
+   "category": "Primary",
+   "effect": "Turbo Charge lasts 15 seconds.",
+   "points": 10,
+   "mm": 500,
+   "requires": [
+    "Hard Press"
+   ],
+   "towers": [
+    "boomer"
+   ]
+  },
+  {
+   "id": "ViolentImpact",
+   "name": "Violent Impact",
+   "category": "Primary",
+   "effect": "Bloon Impact stuns 25% longer.",
+   "points": 10,
+   "mm": 500,
+   "requires": [
+    "Budget Clusters"
+   ],
+   "towers": [
+    "bomb"
+   ]
+  },
+  {
+   "id": "BonusGlueGunner",
+   "name": "Bonus Glue Gunner",
+   "category": "Primary",
+   "effect": "Start every game with a free Glue Gunner (one free tower per game).",
+   "points": 10,
+   "mm": 1000,
+   "requires": [
+    "Cheaper Solution"
+   ],
+   "towers": [
+    "glue"
+   ],
+   "keyPick": "A free Glue Gunner every game."
+  },
+  {
+   "id": "BonusMonkey",
+   "name": "Bonus Monkey!",
+   "category": "Primary",
+   "effect": "Start every game with a free Dart Monkey (one free tower per game).",
+   "points": 10,
+   "mm": 1000,
+   "requires": [
+    "Come On Everybody!"
+   ],
+   "towers": [
+    "dart"
+   ],
+   "keyPick": "A free Dart Monkey every game."
+  },
+  {
+   "id": "MoreCash",
+   "name": "More Cash",
+   "category": "Primary",
+   "effect": "Start every game with $200 more.",
+   "points": 10,
+   "mm": 1000,
+   "requires": [
+    "Bonus Glue Gunner",
+    "Bonus Monkey!"
+   ],
+   "towers": [],
+   "keyPick": "$200 more every game."
+  },
+  {
+   "id": "AirforceUpgrades",
+   "name": "Airforce Upgrades",
+   "category": "Military",
+   "effect": "Tier 3+ Aces and Helis get +1 pierce per shot.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "ace",
+    "heli"
+   ]
+  },
+  {
+   "id": "EliteMilitaryTraining",
+   "name": "Elite Military Training",
+   "category": "Military",
+   "effect": "Military towers get a one-time 1,000 XP and earn XP 5% faster.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": []
+  },
+  {
+   "id": "EmergencyUnlock",
+   "name": "Emergency Unlock",
+   "category": "Military",
+   "effect": "Ability that unlocks locked Dartlings and speeds their swivel (can interfere with hotkeys).",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "dartling"
+   ],
+   "downside": "Can block ability hotkeys if your Dartlings aren't on Normal targeting."
+  },
+  {
+   "id": "NavalUpgrades",
+   "name": "Naval Upgrades",
+   "category": "Military",
+   "effect": "Subs and Buccaneers get +1 pierce per shot.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "sub",
+    "bucc"
+   ],
+   "keyPick": "Cheap, useful early point."
+  },
+  {
+   "id": "ExtraBurnyStuff",
+   "name": "Extra Burny Stuff",
+   "category": "Military",
+   "effect": "Burny Stuff ticks every second.",
+   "points": 4,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "mortar"
+   ]
+  },
+  {
+   "id": "AcceleratedAerodarts",
+   "name": "Accelerated Aerodarts",
+   "category": "Military",
+   "effect": "Ace darts fly faster.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Airforce Upgrades"
+   ],
+   "towers": [
+    "ace"
+   ]
+  },
+  {
+   "id": "BigBunch",
+   "name": "Big Bunch",
+   "category": "Military",
+   "effect": "Grape Shot fires 6 grapes.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Naval Upgrades"
+   ],
+   "towers": [
+    "bucc"
+   ]
+  },
+  {
+   "id": "CeramicShock",
+   "name": "Ceramic Shock",
+   "category": "Military",
+   "effect": "Sniper hits briefly slow Ceramics.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Elite Military Training"
+   ],
+   "towers": [
+    "sniper"
+   ]
+  },
+  {
+   "id": "BreakingBallistic",
+   "name": "Breaking Ballistic",
+   "category": "Military",
+   "effect": "Ballistic Missile hits Ceramics harder.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Naval Upgrades"
+   ],
+   "towers": [
+    "sub"
+   ]
+  },
+  {
+   "id": "CheaperMaiming",
+   "name": "Cheaper Maiming",
+   "category": "Military",
+   "effect": "Maim MOAB costs $1,000 less.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Ceramic Shock"
+   ],
+   "towers": [
+    "sniper"
+   ]
+  },
+  {
+   "id": "FasterTakedowns",
+   "name": "Faster Takedowns",
+   "category": "Military",
+   "effect": "MOAB Takedown cooldown is 5 seconds shorter.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Big Bunch"
+   ],
+   "towers": [
+    "bucc"
+   ]
+  },
+  {
+   "id": "GorgonStorm",
+   "name": "Gorgon Storm",
+   "category": "Military",
+   "effect": "Rocket Storm briefly stuns what it hits.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Emergency Unlock"
+   ],
+   "towers": [
+    "dartling"
+   ]
+  },
+  {
+   "id": "RapidRazors",
+   "name": "Rapid Razors",
+   "category": "Military",
+   "effect": "Razor Rotors pop faster.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Airforce Upgrades"
+   ],
+   "towers": [
+    "heli"
+   ]
+  },
+  {
+   "id": "TargetedPineapples",
+   "name": "Targeted Pineapples",
+   "category": "Military",
+   "effect": "Pineapples only drop near the track (can be worse on tiny maps).",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Accelerated Aerodarts"
+   ],
+   "towers": [
+    "ace"
+   ],
+   "downside": "On short tracks it can mean fewer pineapples overall."
+  },
+  {
+   "id": "CrossTheStreams",
+   "name": "Cross the Streams",
+   "category": "Military",
+   "effect": "Crossing Plasma or Ray of Doom beams leave plasma pools, which can hit Camo.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "Gorgon Storm"
+   ],
+   "towers": [
+    "dartling"
+   ],
+   "downside": "The plasma pools add lag in Freeplay for little damage."
+  },
+  {
+   "id": "GunCoolant",
+   "name": "Gun Coolant",
+   "category": "Military",
+   "effect": "Aces attack 10% faster.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "Targeted Pineapples"
+   ],
+   "towers": [
+    "ace"
+   ]
+  },
+  {
+   "id": "PaintStripper",
+   "name": "Paint Stripper",
+   "category": "Military",
+   "effect": "Shattering Shells strip Fortified from DDTs, a big help on rounds 99 and up.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "Extra Burny Stuff"
+   ],
+   "towers": [
+    "mortar"
+   ]
+  },
+  {
+   "id": "QuadBurst",
+   "name": "Quad Burst",
+   "category": "Military",
+   "effect": "Airburst Darts split into 4 instead of 3.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "Breaking Ballistic"
+   ],
+   "towers": [
+    "sub"
+   ]
+  },
+  {
+   "id": "TradeAgreements",
+   "name": "Trade Agreements",
+   "category": "Military",
+   "effect": "Merchantmen make +$20 per round.",
+   "points": 8,
+   "mm": 250,
+   "requires": [
+    "Faster Takedowns"
+   ],
+   "towers": [
+    "bucc"
+   ]
+  },
+  {
+   "id": "AeronauticSubsidy",
+   "name": "Aeronautic Subsidy",
+   "category": "Military",
+   "effect": "Ace tier 5s cost 10% less.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Gun Coolant"
+   ],
+   "towers": [
+    "ace"
+   ]
+  },
+  {
+   "id": "BudgetBattery",
+   "name": "Budget Battery",
+   "category": "Military",
+   "effect": "Artillery Battery costs $600 less.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Paint Stripper"
+   ],
+   "towers": [
+    "mortar"
+   ]
+  },
+  {
+   "id": "ChargedChinooks",
+   "name": "Charged Chinooks",
+   "category": "Military",
+   "effect": "Support Chinook drops give 25% more lives and cash.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Rapid Razors"
+   ],
+   "towers": [
+    "heli"
+   ]
+  },
+  {
+   "id": "FlankingManeuvers",
+   "name": "Flanking Maneuvers",
+   "category": "Military",
+   "effect": "Snipers, Subs and Buccaneers on Last targeting attack 10% faster.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Quad Burst",
+    "Trade Agreements"
+   ],
+   "towers": [
+    "sniper",
+    "sub",
+    "bucc"
+   ]
+  },
+  {
+   "id": "MasterDefender",
+   "name": "Master Defender",
+   "category": "Military",
+   "effect": "Elite Defender's ability has no cooldown.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Cheaper Maiming"
+   ],
+   "towers": [
+    "sniper"
+   ]
+  },
+  {
+   "id": "Wingmonkey",
+   "name": "Wingmonkey",
+   "category": "Military",
+   "effect": "Several Aces stagger their attack runs.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Aeronautic Subsidy"
+   ],
+   "towers": [
+    "ace"
+   ]
+  },
+  {
+   "id": "AdvancedLogistics",
+   "name": "Advanced Logistics",
+   "category": "Military",
+   "effect": "Every Military tower costs 5% less to place.",
+   "points": 14,
+   "mm": 1000,
+   "requires": [
+    "Aeronautic Subsidy",
+    "Door Gunner"
+   ],
+   "towers": []
+  },
+  {
+   "id": "BigBloonSabotage",
+   "name": "Big Bloon Sabotage",
+   "category": "Military",
+   "effect": "Every MOAB-class bloon arrives already partly damaged.",
+   "points": 14,
+   "mm": 1000,
+   "requires": [
+    "Sub Admiral",
+    "Master Defender"
+   ],
+   "towers": [],
+   "keyPick": "Every blimp is weaker; turn it off for Paragon-degree farming in boss events.",
+   "downside": "In boss events and Boss Rush, weaker blimps mean less damage collected for Paragon degree."
+  },
+  {
+   "id": "DoorGunner",
+   "name": "Door Gunner",
+   "category": "Military",
+   "effect": "Towers carried by Special Poperations (tier 4 and below) keep attacking in transit.",
+   "points": 14,
+   "mm": 1000,
+   "requires": [
+    "Charged Chinooks"
+   ],
+   "towers": [
+    "heli"
+   ]
+  },
+  {
+   "id": "MilitaryConscription",
+   "name": "Military Conscription",
+   "category": "Military",
+   "effect": "Your first Military tower each game costs two thirds of its price.",
+   "points": 14,
+   "mm": 1000,
+   "requires": [
+    "Trade Agreements"
+   ],
+   "towers": [],
+   "keyPick": "Huge early discount on a Military tower."
+  },
+  {
+   "id": "SubAdmiral",
+   "name": "Sub Admiral",
+   "category": "Military",
+   "effect": "Sub Commander buffs every Sub on the map, not just nearby ones.",
+   "points": 14,
+   "mm": 1000,
+   "requires": [
+    "Flanking Maneuvers"
+   ],
+   "towers": [
+    "sub"
+   ]
+  },
+  {
+   "id": "LingeringMagic",
+   "name": "Lingering Magic",
+   "category": "Magic",
+   "effect": "Longer projectile life for Wizards, Super Monkeys, Skywardens and Druids.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "wizard",
+    "super",
+    "druid",
+    "skywarden"
+   ]
+  },
+  {
+   "id": "MagicTricks",
+   "name": "Magic Tricks",
+   "category": "Magic",
+   "effect": "Guided Magic and Intense Magic cost $25 less.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "wizard"
+   ]
+  },
+  {
+   "id": "SuperRange",
+   "name": "SUPER Range",
+   "category": "Magic",
+   "effect": "Super Range gives even more range.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "super"
+   ]
+  },
+  {
+   "id": "CheaperDoubles",
+   "name": "Cheaper Doubles",
+   "category": "Magic",
+   "effect": "Double Shot costs $100 less.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "SUPER Range"
+   ],
+   "towers": [
+    "ninja"
+   ]
+  },
+  {
+   "id": "HeavyKnockback",
+   "name": "Heavy Knockback",
+   "category": "Magic",
+   "effect": "Knockback pushes Bloons a bit harder.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "SUPER Range"
+   ],
+   "towers": [
+    "super"
+   ]
+  },
+  {
+   "id": "HotMagic",
+   "name": "Hot Magic",
+   "category": "Magic",
+   "effect": "Every Magic tower can pop frozen bloons.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Lingering Magic"
+   ],
+   "towers": []
+  },
+  {
+   "id": "MoMonkeyMoney",
+   "name": "Mo' Monkey Money",
+   "category": "Magic",
+   "effect": "Wins pay 10% more Monkey Money on every difficulty.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Speedy Brewing"
+   ],
+   "towers": [],
+   "keyPick": "Get it first: it speeds up earning the Monkey Money deeper points cost."
+  },
+  {
+   "id": "SpeedyBrewing",
+   "name": "Speedy Brewing",
+   "category": "Magic",
+   "effect": "Every potion reloads 5% faster.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Magic Tricks"
+   ],
+   "towers": [
+    "alch"
+   ]
+  },
+  {
+   "id": "DiversionTactics",
+   "name": "Diversion Tactics",
+   "category": "Magic",
+   "effect": "Distraction sends Bloons back more often.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Cheaper Doubles"
+   ],
+   "towers": [
+    "ninja"
+   ]
+  },
+  {
+   "id": "FlameJet",
+   "name": "Flame Jet",
+   "category": "Magic",
+   "effect": "Dragon's Breath flames travel much faster.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Magic Tricks",
+    "Hot Magic"
+   ],
+   "towers": [
+    "wizard"
+   ]
+  },
+  {
+   "id": "StrikeDownTheFalse",
+   "name": "Strike Down the False",
+   "category": "Magic",
+   "effect": "Sun Avatar can pop Purple Bloons.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Heavy Knockback"
+   ],
+   "towers": [
+    "super"
+   ]
+  },
+  {
+   "id": "StrongTonic",
+   "name": "Strong Tonic",
+   "category": "Magic",
+   "effect": "Transforming Tonic lasts longer.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Speedy Brewing"
+   ],
+   "towers": [
+    "alch"
+   ]
+  },
+  {
+   "id": "WarmOak",
+   "name": "Warm Oak",
+   "category": "Magic",
+   "effect": "Heart of Oak costs $100 less.",
+   "points": 4,
+   "mm": 0,
+   "requires": [
+    "Hot Magic"
+   ],
+   "towers": [
+    "druid"
+   ]
+  },
+  {
+   "id": "AcidStability",
+   "name": "Acid Stability",
+   "category": "Magic",
+   "effect": "Acid pools last 5 seconds longer (can steal Rubber to Gold income).",
+   "points": 4,
+   "mm": 250,
+   "requires": [
+    "Strong Tonic"
+   ],
+   "towers": [
+    "alch"
+   ],
+   "downside": "Can steal Rubber to Gold income and add lag in Freeplay."
+  },
+  {
+   "id": "ArcaneImpale",
+   "name": "Arcane Impale",
+   "category": "Magic",
+   "effect": "Arcane Spike hits MOAB-class and Ceramics harder.",
+   "points": 4,
+   "mm": 250,
+   "requires": [
+    "Flame Jet"
+   ],
+   "towers": [
+    "wizard"
+   ]
+  },
+  {
+   "id": "ColdFront",
+   "name": "Cold Front",
+   "category": "Magic",
+   "effect": "Ball Lightning's extra bolts also freeze.",
+   "points": 4,
+   "mm": 250,
+   "requires": [
+    "Warm Oak"
+   ],
+   "towers": [
+    "druid"
+   ]
+  },
+  {
+   "id": "XrayUltra",
+   "name": "X-ray Ultra",
+   "category": "Magic",
+   "effect": "Ultravision sees and fires through obstacles.",
+   "points": 4,
+   "mm": 250,
+   "requires": [
+    "Strike Down the False"
+   ],
+   "towers": [
+    "super"
+   ]
+  },
+  {
+   "id": "DeadlyTranquility",
+   "name": "Deadly Tranquility",
+   "category": "Magic",
+   "effect": "Bloonjitsu and Grandmaster Ninja throw an extra shuriken.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Diversion Tactics"
+   ],
+   "towers": [
+    "ninja"
+   ]
+  },
+  {
+   "id": "ThereCanBeOnlyOne",
+   "name": "There Can Be Only One",
+   "category": "Magic",
+   "effect": "A hidden effect for True Sun God; see the wiki page for what it does.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "X-ray Ultra"
+   ],
+   "towers": [
+    "super"
+   ],
+   "keyPick": "Lets a lone Super Monkey become a Vengeful True Sun God."
+  },
+  {
+   "id": "VineRupture",
+   "name": "Vine Rupture",
+   "category": "Magic",
+   "effect": "Spirit of the Forest gets an ability that bursts all track vines (not against Lead).",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Cold Front"
+   ],
+   "towers": [
+    "druid"
+   ]
+  },
+  {
+   "id": "ManaShield",
+   "name": "Mana Shield",
+   "category": "Magic",
+   "effect": "A free shield absorbs up to 25 lives and slowly recharges on rounds without leaks.",
+   "points": 8,
+   "mm": 1000,
+   "requires": [
+    "Arcane Impale"
+   ],
+   "towers": [],
+   "keyPick": "25 free lives, great insurance."
+  },
+  {
+   "id": "TinyTornadoes",
+   "name": "Tiny Tornadoes",
+   "category": "Magic",
+   "effect": "Tornadoes split into 3 smaller ones when they end.",
+   "points": 8,
+   "mm": 1000,
+   "requires": [
+    "Deadly Tranquility",
+    "Cold Front",
+    "Vine Rupture"
+   ],
+   "towers": [
+    "druid"
+   ]
+  },
+  {
+   "id": "FlatPackBuildings",
+   "name": "Flat Pack Buildings",
+   "category": "Support",
+   "effect": "Farms and Villages cost 2% less and sell for 2% more.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "farm",
+    "village"
+   ]
+  },
+  {
+   "id": "OneMoreSpike",
+   "name": "One More Spike",
+   "category": "Support",
+   "effect": "Spike piles get +1 spike.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": [
+    "spike"
+   ]
+  },
+  {
+   "id": "MonkeyEducation",
+   "name": "Monkey Education",
+   "category": "Support",
+   "effect": "All towers earn XP 8% faster.",
+   "points": 3,
+   "mm": 0,
+   "requires": [],
+   "towers": []
+  },
+  {
+   "id": "FirstLastLineOfDefense",
+   "name": "First Last Line of Defense",
+   "category": "Support",
+   "effect": "Your first Spike Factory each game costs $150 less.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "One More Spike"
+   ],
+   "towers": [
+    "spike"
+   ]
+  },
+  {
+   "id": "InsiderTrades",
+   "name": "Insider Trades",
+   "category": "Support",
+   "effect": "Monkey Business discount is 2% bigger.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Flat Pack Buildings"
+   ],
+   "towers": [
+    "village"
+   ]
+  },
+  {
+   "id": "MoreValuableBananas",
+   "name": "More Valuable Bananas",
+   "category": "Support",
+   "effect": "Valuable Bananas gives 30% more.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Flat Pack Buildings"
+   ],
+   "towers": [
+    "farm"
+   ]
+  },
+  {
+   "id": "BiggerBanks",
+   "name": "Bigger Banks",
+   "category": "Support",
+   "effect": "Monkey Banks hold $2,500 more.",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "Insider Trades"
+   ],
+   "towers": [
+    "farm"
+   ]
+  },
+  {
+   "id": "FarmSubsidy",
+   "name": "Farm Subsidy",
+   "category": "Support",
+   "effect": "Your first Banana Farm each game costs $100 less.",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "More Valuable Bananas"
+   ],
+   "towers": [
+    "farm"
+   ]
+  },
+  {
+   "id": "VigilantSentries",
+   "name": "Vigilant Sentries",
+   "category": "Support",
+   "effect": "Sentries last longer.",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "One More Spike"
+   ],
+   "towers": [
+    "engi"
+   ]
+  },
+  {
+   "id": "BackroomDeals",
+   "name": "Backroom Deals",
+   "category": "Support",
+   "effect": "IMF Loan gives $1,000 more and only 40% of income repays it.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "Bigger Banks"
+   ],
+   "towers": [
+    "farm"
+   ]
+  },
+  {
+   "id": "InlandRevenueStreams",
+   "name": "Inland Revenue Streams",
+   "category": "Support",
+   "effect": "Monkey Town's cash bonus is 10% higher.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "Farm Subsidy"
+   ],
+   "towers": [
+    "village"
+   ]
+  },
+  {
+   "id": "ThickerFoams",
+   "name": "Thicker Foams",
+   "category": "Support",
+   "effect": "Cleansing Foam hits 3 more Bloons.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "Vigilant Sentries"
+   ],
+   "towers": [
+    "engi"
+   ]
+  },
+  {
+   "id": "ToArms",
+   "name": "To ARMS!",
+   "category": "Support",
+   "effect": "Call to Arms lasts 3 seconds longer.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "Monkey Education"
+   ],
+   "towers": [
+    "village"
+   ]
+  },
+  {
+   "id": "VeryShreddy",
+   "name": "Very Shreddy",
+   "category": "Support",
+   "effect": "MOAB SHREDR spikes deal +1 to MOAB-class.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "First Last Line of Defense"
+   ],
+   "towers": [
+    "spike"
+   ]
+  },
+  {
+   "id": "BetterSellDeals",
+   "name": "Better Sell Deals",
+   "category": "Support",
+   "effect": "All towers sell for 5% more.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Backroom Deals"
+   ],
+   "towers": [],
+   "keyPick": "More cash back whenever you sell."
+  },
+  {
+   "id": "BigTraps",
+   "name": "Big Traps",
+   "category": "Support",
+   "effect": "Bloon Trap holds 30 more RBE.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Thicker Foams"
+   ],
+   "towers": [
+    "engi"
+   ]
+  },
+  {
+   "id": "GlobalAbilityCooldowns",
+   "name": "Global Ability Cooldowns",
+   "category": "Support",
+   "effect": "Every tower's abilities recharge 3% faster.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "To ARMS!"
+   ],
+   "towers": [],
+   "keyPick": "Every ability recharges faster."
+  },
+  {
+   "id": "HealthyBananas",
+   "name": "Healthy Bananas",
+   "category": "Support",
+   "effect": "Marketplaces make 1 life per round, Central Markets 3.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Inland Revenue Streams"
+   ],
+   "towers": [
+    "farm"
+   ],
+   "keyPick": "Free lives from Marketplaces."
+  },
+  {
+   "id": "HiValueMines",
+   "name": "Hi-Value Mines",
+   "category": "Support",
+   "effect": "Spiked Mines costs $1,500 less.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Very Shreddy"
+   ],
+   "towers": [
+    "spike"
+   ]
+  },
+  {
+   "id": "VeteranMonkeyTraining",
+   "name": "Veteran Monkey Training",
+   "category": "Support",
+   "effect": "All towers reload 3% faster.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "To ARMS!"
+   ],
+   "towers": [],
+   "keyPick": "Every tower reloads faster."
+  },
+  {
+   "id": "BankDeposits",
+   "name": "Bank Deposits",
+   "category": "Support",
+   "effect": "Tier 4+ Monkey Banks accept deposits of your cash.",
+   "points": 14,
+   "mm": 1000,
+   "requires": [
+    "Better Sell Deals"
+   ],
+   "towers": [
+    "farm"
+   ],
+   "keyPick": "Store spare cash in banks to earn interest."
+  },
+  {
+   "id": "ParagonOfPower",
+   "name": "Paragon of Power",
+   "category": "Support",
+   "effect": "Paragons attack faster when there is no tier 5 of the same tower on the map.",
+   "points": 14,
+   "mm": 1000,
+   "requires": [
+    "Veteran Monkey Training"
+   ],
+   "towers": [],
+   "keyPick": "Faster Paragons."
+  },
+  {
+   "id": "AbilityDiscipline",
+   "name": "Ability Discipline",
+   "category": "Heroes",
+   "effect": "Level 10 hero abilities recharge 10% faster.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": []
+  },
+  {
+   "id": "HeroicReach",
+   "name": "Heroic Reach",
+   "category": "Heroes",
+   "effect": "All heroes get a little more range.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": []
+  },
+  {
+   "id": "MoreSplody",
+   "name": "More 'Splody",
+   "category": "Heroes",
+   "effect": "Heroes' explosions get +2 pierce.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": []
+  },
+  {
+   "id": "HeroicVelocity",
+   "name": "Heroic Velocity",
+   "category": "Heroes",
+   "effect": "Heroes' projectiles fly a little faster.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Heroic Reach"
+   ],
+   "towers": []
+  },
+  {
+   "id": "Scholarships",
+   "name": "Scholarships",
+   "category": "Heroes",
+   "effect": "Hero training items cost 10% less.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "More 'Splody"
+   ],
+   "towers": []
+  },
+  {
+   "id": "AbilityMastery",
+   "name": "Ability Mastery",
+   "category": "Heroes",
+   "effect": "Once a hero hits level 20, its level 3 ability recharges 30% faster.",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "Ability Discipline"
+   ],
+   "towers": []
+  },
+  {
+   "id": "QuickHands",
+   "name": "Quick Hands",
+   "category": "Heroes",
+   "effect": "All heroes attack 4% faster.",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "Heroic Velocity"
+   ],
+   "towers": []
+  },
+  {
+   "id": "SelfTaughtHeroes",
+   "name": "Self Taught Heroes",
+   "category": "Heroes",
+   "effect": "Heroes earn XP 10% faster.",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "Scholarships"
+   ],
+   "towers": [],
+   "keyPick": "Heroes level faster."
+  },
+  {
+   "id": "HeroFavors",
+   "name": "Hero Favors",
+   "category": "Heroes",
+   "effect": "Heroes cost 10% less to place.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "Self Taught Heroes",
+    "Quick Hands"
+   ],
+   "towers": [],
+   "keyPick": "Cheaper heroes."
+  },
+  {
+   "id": "BigBloonBlueprints",
+   "name": "Big Bloon Blueprints",
+   "category": "Heroes",
+   "effect": "Heroes' base attacks deal +1 damage to MOAB-class bloons.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Ability Mastery"
+   ],
+   "towers": []
+  },
+  {
+   "id": "EmpoweredHeroes",
+   "name": "Empowered Heroes",
+   "category": "Heroes",
+   "effect": "Heroes start every game at level 3.",
+   "points": 8,
+   "mm": 500,
+   "requires": [
+    "Hero Favors"
+   ],
+   "towers": [],
+   "keyPick": "Heroes start at level 3."
+  },
+  {
+   "id": "MonkeysTogetherStrong",
+   "name": "Monkeys Together Strong",
+   "category": "Heroes",
+   "effect": "Heroes earn 5% more XP for every hero on the map.",
+   "points": 8,
+   "mm": 1000,
+   "requires": [
+    "Empowered Heroes"
+   ],
+   "towers": []
+  },
+  {
+   "id": "WeakPoint",
+   "name": "Weak Point",
+   "category": "Heroes",
+   "effect": "All heroes deal +1 damage to Ceramic and Fortified bloons.",
+   "points": 8,
+   "mm": 1000,
+   "requires": [
+    "Monkeys Together Strong",
+    "Big Bloon Blueprints"
+   ],
+   "towers": []
+  },
+  {
+   "id": "BiggerCamoTrap",
+   "name": "Bigger Camo Trap",
+   "category": "Powers",
+   "effect": "Camo Trap catches 600 bloons.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": []
+  },
+  {
+   "id": "CheaperLakes",
+   "name": "Cheaper Lakes",
+   "category": "Powers",
+   "effect": "Portable Lakes cost 40 Monkey Money.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": []
+  },
+  {
+   "id": "JustOneMore",
+   "name": "Just One More",
+   "category": "Powers",
+   "effect": "Road Spike piles hold 21 spikes.",
+   "points": 0,
+   "mm": 0,
+   "requires": [],
+   "towers": []
+  },
+  {
+   "id": "BudgetPontoons",
+   "name": "Budget Pontoons",
+   "category": "Powers",
+   "effect": "Pontoons cost 40 Monkey Money.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Cheaper Lakes"
+   ],
+   "towers": []
+  },
+  {
+   "id": "LongerDartTime",
+   "name": "Longer Time Stop",
+   "category": "Powers",
+   "effect": "Time Stop lasts longer.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Just One More"
+   ],
+   "towers": []
+  },
+  {
+   "id": "MaulingMoabMines",
+   "name": "Mauling MOAB Mines",
+   "category": "Powers",
+   "effect": "MOAB Mines hit harder.",
+   "points": 0,
+   "mm": 0,
+   "requires": [
+    "Bigger Camo Trap"
+   ],
+   "towers": []
+  },
+  {
+   "id": "LongerBoosts",
+   "name": "Longer Boosts",
+   "category": "Powers",
+   "effect": "Monkey Boost lasts longer.",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "Longer Time Stop"
+   ],
+   "towers": []
+  },
+  {
+   "id": "PowerfulMonkeyStorm",
+   "name": "Powerful Monkey Storm",
+   "category": "Powers",
+   "effect": "Super Monkey Storm deals more damage.",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "Budget Pontoons",
+    "Longer Boosts"
+   ],
+   "towers": []
+  },
+  {
+   "id": "SupersizeGlueTrap",
+   "name": "Supersize Glue Trap",
+   "category": "Powers",
+   "effect": "Glue Trap can slow MOAB-class bloons (bigger bloons use up more glue).",
+   "points": 3,
+   "mm": 0,
+   "requires": [
+    "Mauling MOAB Mines"
+   ],
+   "towers": []
+  },
+  {
+   "id": "AmbushTech",
+   "name": "Ambush Tech",
+   "category": "Powers",
+   "effect": "Techbot can be set to fire only when bloons enter a chosen part of the track.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "Supersize Glue Trap"
+   ],
+   "towers": []
+  },
+  {
+   "id": "FitFarmers",
+   "name": "Fit Farmers",
+   "category": "Powers",
+   "effect": "Monkey Farmers collect from a bigger radius.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "Powerful Monkey Storm"
+   ],
+   "towers": []
+  },
+  {
+   "id": "PreGamePrep",
+   "name": "Pre-game Prep",
+   "category": "Powers",
+   "effect": "Start every game with a permanent pile of Road Spikes at the end of the track.",
+   "points": 3,
+   "mm": 250,
+   "requires": [
+    "Longer Boosts"
+   ],
+   "towers": [],
+   "keyPick": "Free permanent spikes at the exit."
+  },
+  {
+   "id": "BudgetCashDrops",
+   "name": "Budget Cash Drops",
+   "category": "Powers",
+   "effect": "Cash Drops cost 20 Monkey Money less.",
+   "points": 3,
+   "mm": 500,
+   "requires": [
+    "Fit Farmers"
+   ],
+   "towers": []
+  },
+  {
+   "id": "SupaThrive",
+   "name": "Supa-Thrive",
+   "category": "Powers",
+   "effect": "Thrive adds 30% instead of 25%.",
+   "points": 3,
+   "mm": 500,
+   "requires": [
+    "Fit Farmers"
+   ],
+   "towers": []
+  },
+  {
+   "id": "GrandPrixSpree",
+   "name": "Grand Prix Spree",
+   "category": "Powers",
+   "effect": "Race entries cost 10% less Monkey Money.",
+   "points": 10,
+   "mm": 1000,
+   "requires": [
+    "Budget Cash Drops"
+   ],
+   "towers": []
+  }
+ ],
+ "sources": [
+  "wiki-monkey-knowledge"
+ ]
+}

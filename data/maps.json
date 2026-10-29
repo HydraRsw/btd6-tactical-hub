@@ -2,31 +2,391 @@
  "intro": "Every map's difficulty, what makes it tricky, where to build and which towers the community guides recommend. Pick a game mode to add that mode's rules and general advice; some maps have notes for a specific mode.",
  "maps": [
   {
-   "id": "alpine-run",
-   "name": "Alpine Run",
+   "id": "monkey-meadow",
+   "name": "Monkey Meadow",
    "difficulty": "Beginner",
    "traits": [
-    "Straight lines",
-    "No line-of-sight blockers"
+    "Generic layout",
+    "Light line-of-sight blockers"
    ],
-   "summary": "A ski slope split by a lift. The track is spread out, so it's on the harder side for a Beginner map.",
-   "placement": "Place towers around the centre of the middle lane; high-pierce towers that use straight lines shine.",
+   "summary": "The first map in the menu and a generic layout where almost anything works.",
+   "placement": "The centre, just below the top enclosed patch, gives the widest coverage.",
    "recommended": [
     {
-     "upgrade": "MOAB Domination",
+     "upgrade": "Glaive Lord",
      "unit": "boomer",
-     "note": "Between the centre and the last bend, its press reaches almost the whole map with Stronger Stimulant and Primary Training."
+     "note": "In the middle its spinning and ricochet glaives cover clumps and the whole map."
     },
     {
-     "upgrade": "Bloon Exclusion Zone",
-     "unit": "dartling",
-     "note": "Near the exit, 2-0-5 BEZ with camo, lead popping and Stronger Stimulant handles the late game."
+     "upgrade": "Dragon's Breath",
+     "unit": "wizard",
+     "note": "Strong mid-game at the central intersections; 0-3-2 needs another tower or hero to cover purple bloons."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-alpine-run"
-   ]
+    "wiki-map-monkey-meadow"
+   ],
+   "order": 1
+  },
+  {
+   "id": "in-the-loop",
+   "name": "In The Loop",
+   "difficulty": "Beginner",
+   "traits": [
+    "Water",
+    "Loops",
+    "Line-of-sight blockers (trees)"
+   ],
+   "summary": "Average Beginner difficulty: long but spread out.",
+   "placement": "The central spot lets long-range towers hit three or more passes.",
+   "recommended": [
+    {
+     "upgrade": "MOAB Domination",
+     "unit": "boomer",
+     "note": "From the centre it covers the map and wipes the late game."
+    },
+    {
+     "upgrade": "Destroyer",
+     "unit": "bucc",
+     "note": "Bottom-left of the lake with a Grape Shot crosspath to use the wide loops."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-in-the-loop"
+   ],
+   "order": 2
+  },
+  {
+   "id": "skull-tweak",
+   "name": "Skull Tweak",
+   "difficulty": "Beginner",
+   "traits": [
+    "Line-of-sight blocker (skull)",
+    "Long track",
+    "Harder alternate layout"
+   ],
+   "summary": "A BTD5 Skull Peak remix added in v55. The normal layout is easy; the harder dual-lane version plays like an above-average Advanced map.",
+   "placement": "Flying towers and towers that ignore obstacles work best because of the skull.",
+   "recommended": [
+    {
+     "upgrade": "Monkey Ace / Heli Pilot",
+     "unit": "ace",
+     "note": "Both reach every part of the map regardless of the skull; all paths work."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-skull-tweak"
+   ],
+   "order": 3
+  },
+  {
+   "id": "three-mines-round",
+   "name": "Three Mines 'Round",
+   "difficulty": "Beginner",
+   "traits": [
+    "Long loop",
+    "Bananite crystals",
+    "Water puddles"
+   ],
+   "summary": "One of the easiest Beginner maps: the long triple loop gives towers three or four chances at each bloon.",
+   "placement": "Use spots near the lane intersections rather than the middle of the big loop (unless the tower has area damage).",
+   "recommended": [
+    {
+     "upgrade": "Crystal harvesting",
+     "unit": "farm",
+     "note": "The cheapest Bananite crystal is almost always worth harvesting; more cost-efficient than early farms."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-three-mines-round"
+   ],
+   "order": 4
+  },
+  {
+   "id": "spa-pits",
+   "name": "Spa Pits",
+   "difficulty": "Beginner",
+   "traits": [
+    "Very long track",
+    "Lots of water",
+    "Compact"
+   ],
+   "summary": "About the fourth-easiest map: very long with lots of overlap. Space is a bit tight for Freeplay.",
+   "placement": "Save a spot next to the central pool for a Jungle Drums village; water strategies are especially strong.",
+   "recommended": [
+    {
+     "upgrade": "Carrier Flagship",
+     "unit": "bucc",
+     "note": "Grows smoothly from Destroyer and Aircraft Carrier with huge damage."
+    }
+   ],
+   "modeNotes": {
+    "freeplay": "Only worth it for Freeplay with Destroyer or Aircraft Carrier builds."
+   },
+   "sources": [
+    "wiki-map-spa-pits"
+   ],
+   "order": 5
+  },
+  {
+   "id": "tinkerton",
+   "name": "Tinkerton",
+   "difficulty": "Beginner",
+   "traits": [
+    "Slow zone (40% slower)",
+    "Line-of-sight blockers",
+    "Spread-out track"
+   ],
+   "summary": "Above-average Beginner difficulty, but long, and bloons are slowed after the top bend.",
+   "placement": "Decent-range towers in the middle cover many sections; the one-off rocket can be ignored.",
+   "recommended": [
+    {
+     "upgrade": "The Bloon Solver",
+     "unit": "glue",
+     "note": "On the central crater it sees four track sections at once."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-tinkerton"
+   ],
+   "order": 6
+  },
+  {
+   "id": "tree-stump",
+   "name": "Tree Stump",
+   "difficulty": "Beginner",
+   "traits": [
+    "Line-of-sight blockers (logs)",
+    "Central stump"
+   ],
+   "summary": "Average Beginner difficulty with a spread-out track.",
+   "placement": "Towers on the central stump ignore the blockers and cover a lot.",
+   "recommended": [
+    {
+     "upgrade": "Bloon Exclusion Zone",
+     "unit": "dartling",
+     "note": "On the stump it covers the whole map; 2-0-5 with MIB clears the late game."
+    },
+    {
+     "upgrade": "Comanche Commander",
+     "unit": "heli",
+     "note": "Uses the full spread-out length; pair with Geraldo and Glue Storm."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-tree-stump"
+   ],
+   "order": 7
+  },
+  {
+   "id": "town-center",
+   "name": "Town Center",
+   "difficulty": "Beginner",
+   "traits": [
+    "Short track",
+    "Line-of-sight blockers",
+    "Water (ocean)"
+   ],
+   "summary": "One of the hardest Beginner maps: short, spread out and blocked.",
+   "placement": "Most good strategies use the central space.",
+   "recommended": [
+    {
+     "upgrade": "MOAB Domination",
+     "unit": "boomer",
+     "note": "From the centre its press reaches almost the whole map."
+    },
+    {
+     "upgrade": "The Bloon Solver",
+     "unit": "glue",
+     "note": "Covers several sectors from the centre."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-town-center"
+   ],
+   "order": 8
+  },
+  {
+   "id": "middle-of-the-road",
+   "name": "Middle of the Road",
+   "difficulty": "Beginner",
+   "traits": [
+    "Line-of-sight blockers (buildings)",
+    "Long track"
+   ],
+   "summary": "One of the hardest Beginner maps: the most line-of-sight-restricted of them.",
+   "placement": "Global-range towers excel; the water tower near the top-right holds one big tower.",
+   "recommended": [
+    {
+     "upgrade": "Bloon Exclusion Zone",
+     "unit": "dartling",
+     "note": "On the water tower it covers the whole map; with MIB the 2-0-5 beats the late game, saving up from BADS."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-middle-of-the-road"
+   ],
+   "order": 9
+  },
+  {
+   "id": "one-two-tree",
+   "name": "One Two Tree",
+   "difficulty": "Beginner",
+   "traits": [
+    "Tile buffs under trees",
+    "Line-of-sight blockers",
+    "Single lane"
+   ],
+   "summary": "A Christmas tree farm where clearing the trees reveals spaces that buff towers placed on them.",
+   "placement": "Put one-damage towers on +1 damage spaces (for example Druid of the Jungle on space 4 early).",
+   "recommended": [
+    {
+     "upgrade": "Sun Avatar",
+     "unit": "super",
+     "note": "On a +1 damage space its many one-damage hits become huge; Geraldo's Worn Hero's Cape fits several on spaces 16 and 20."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-one-two-tree"
+   ],
+   "order": 10
+  },
+  {
+   "id": "scrapyard",
+   "name": "Scrapyard",
+   "difficulty": "Beginner",
+   "traits": [
+    "Longest track",
+    "Line-of-sight blockers (junk)",
+    "Limited space"
+   ],
+   "summary": "The longest map, but spread out and cramped, so not the easiest.",
+   "placement": "Limited-range towers on the top-left box; save room above or top-right of it for a Village.",
+   "recommended": [
+    {
+     "upgrade": "Bloon Exclusion Zone",
+     "unit": "dartling",
+     "note": "The wiki's editors call BEZ an easy carry and the most optimal pick here."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-scrapyard"
+   ],
+   "order": 11
+  },
+  {
+   "id": "the-cabin",
+   "name": "The Cabin",
+   "difficulty": "Beginner",
+   "traits": [
+    "Short track",
+    "Line-of-sight blockers",
+    "Water (pond)",
+    "Removable car ($500)"
+   ],
+   "summary": "Widely considered the hardest Beginner map: short, spread out and cramped.",
+   "placement": "Global-range towers and boats in the pond work best.",
+   "recommended": [
+    {
+     "upgrade": "Carrier Flagship",
+     "unit": "bucc",
+     "note": "Use 5-2-0 here; Destroyer and Aircraft Carrier save up to it comfortably and it buffs other boats."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-the-cabin"
+   ],
+   "order": 12
+  },
+  {
+   "id": "resort",
+   "name": "Resort",
+   "difficulty": "Beginner",
+   "traits": [
+    "Very long track",
+    "Loops",
+    "Water (pool)"
+   ],
+   "summary": "By consensus the second-easiest map; bloons pass the top lane repeatedly.",
+   "placement": "The enclosed space top-right of the pool is ideal for loop towers (Tack Shooters, Ice Monkeys).",
+   "recommended": [
+    {
+     "upgrade": "Sauda",
+     "unit": "sauda",
+     "note": "In the top-right enclosed space, at a corner, she is extremely strong; on release she soloed CHIMPS here."
+    }
+   ],
+   "modeNotes": {
+    "freeplay": "A close second to Logs for Freeplay with Bloonjitsu and Shinobi Tactics."
+   },
+   "sources": [
+    "wiki-map-resort"
+   ],
+   "order": 13
+  },
+  {
+   "id": "skates",
+   "name": "Skates",
+   "difficulty": "Beginner",
+   "traits": [
+    "Water (ice cracks)",
+    "Removable objects ($500 houses)",
+    "Spread-out track"
+   ],
+   "summary": "Long but spread out, so global-range towers stand out.",
+   "placement": "Limited-range towers go left of the large middle loop.",
+   "recommended": [
+    {
+     "upgrade": "Carrier Flagship",
+     "unit": "bucc",
+     "note": "Uses the whole map, holds up into the 90s and buffs Destroyers in the central crack."
+    },
+    {
+     "upgrade": "Bloon Exclusion Zone",
+     "unit": "dartling",
+     "note": "Below the end of the track its buckshot spreads well; with MIB it clears the late game."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-skates"
+   ],
+   "order": 14
+  },
+  {
+   "id": "lotus-island",
+   "name": "Lotus Island",
+   "difficulty": "Beginner",
+   "traits": [
+    "Short track",
+    "Lots of water",
+    "Line-of-sight blockers (lotus plants)"
+   ],
+   "summary": "Seen as the second-hardest Beginner map: short, spread out and blocked.",
+   "placement": "Land towers right of the lower-middle loop; water towers just left and right of it.",
+   "recommended": [
+    {
+     "upgrade": "Carrier Flagship",
+     "unit": "bucc",
+     "note": "Overcomes the spread-out track and buffs the many water towers this map allows."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-lotus-island"
+   ],
+   "order": 15
   },
   {
    "id": "candy-falls",
@@ -49,7 +409,31 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-candy-falls"
-   ]
+   ],
+   "order": 16
+  },
+  {
+   "id": "winter-park",
+   "name": "Winter Park",
+   "difficulty": "Beginner",
+   "traits": [
+    "Four loops",
+    "Water (fountain)"
+   ],
+   "summary": "Fairly simple when towers cover several sections at once.",
+   "placement": "Boats at the left or right of the fountain cover four sections; long-range land towers centre-left or centre-right cover three.",
+   "recommended": [
+    {
+     "upgrade": "Destroyer",
+     "unit": "bucc",
+     "note": "The fountain is ringed by track; 3-2-0 with Berserker Brew and camo saves for Carrier Flagship."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-winter-park"
+   ],
+   "order": 17
   },
   {
    "id": "carved",
@@ -77,82 +461,59 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-carved"
-   ]
+   ],
+   "order": 18
   },
   {
-   "id": "cubism",
-   "name": "Cubism",
+   "id": "park-path",
+   "name": "Park Path",
    "difficulty": "Beginner",
    "traits": [
-    "Long track",
-    "Water",
-    "Many intersections"
+    "Water (stream)",
+    "Line-of-sight blockers (trees)"
    ],
-   "summary": "Widely seen as the 4th easiest map: very long with excellent central spots.",
-   "placement": "Use the small shapes in the middle, just left of centre.",
-   "recommended": [
-    {
-     "upgrade": "Overdrive",
-     "unit": "tack",
-     "note": "Place it near the top of a small shape so the kill zone sits on the track; add Berserker Brew and Geraldo."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-cubism"
-   ]
-  },
-  {
-   "id": "end-of-the-road",
-   "name": "End Of The Road",
-   "difficulty": "Beginner",
-   "traits": [
-    "Short track",
-    "Water (pool)",
-    "Line-of-sight blockers (cacti)",
-    "Open space"
-   ],
-   "summary": "The shortest Beginner map, but very open, which makes it good for farming.",
-   "placement": "The central pool is surrounded by track on both sides.",
+   "summary": "A BTD5 remaster with a stream through the middle.",
+   "placement": "Boats in the central water spot; land towers just above and top-right of it.",
    "recommended": [
     {
      "upgrade": "Destroyer",
      "unit": "bucc",
-     "note": "In the pool both gun sides fire often; five 3-1-0/3-2-0 Destroyers with Brickell and camo afford Permanent Brew, which then trivialises the late game."
+     "note": "3-2-0 with Berserker Brew and camo in the central spot sweeps the mid game and saves for Carrier Flagship."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-end-of-the-road"
-   ]
+    "wiki-map-park-path"
+   ],
+   "order": 19
   },
   {
-   "id": "four-circles",
-   "name": "Four Circles",
+   "id": "alpine-run",
+   "name": "Alpine Run",
    "difficulty": "Beginner",
    "traits": [
-    "Long track",
-    "Water",
-    "Central spot"
+    "Straight lines",
+    "No line-of-sight blockers"
    ],
-   "summary": "One of the least difficult maps thanks to its length and a central spot that covers four sectors.",
-   "placement": "Take the central spot first.",
+   "summary": "A ski slope split by a lift. The track is spread out, so it's on the harder side for a Beginner map.",
+   "placement": "Place towers around the centre of the middle lane; high-pierce towers that use straight lines shine.",
    "recommended": [
     {
      "upgrade": "MOAB Domination",
      "unit": "boomer",
-     "note": "From the centre its attacks run down many straight lines and its press covers nearly the whole map."
+     "note": "Between the centre and the last bend, its press reaches almost the whole map with Stronger Stimulant and Primary Training."
     },
     {
-     "upgrade": "Glaive Lord",
-     "unit": "boomer",
-     "note": "Spinning glaives clean up clumps and its ricochets bounce around the whole map."
+     "upgrade": "Bloon Exclusion Zone",
+     "unit": "dartling",
+     "note": "Near the exit, 2-0-5 BEZ with camo, lead popping and Stronger Stimulant handles the late game."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-four-circles"
-   ]
+    "wiki-map-alpine-run"
+   ],
+   "order": 20
   },
   {
    "id": "frozen-over",
@@ -180,7 +541,61 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-frozen-over"
-   ]
+   ],
+   "order": 21
+  },
+  {
+   "id": "cubism",
+   "name": "Cubism",
+   "difficulty": "Beginner",
+   "traits": [
+    "Long track",
+    "Water",
+    "Many intersections"
+   ],
+   "summary": "Widely seen as the 4th easiest map: very long with excellent central spots.",
+   "placement": "Use the small shapes in the middle, just left of centre.",
+   "recommended": [
+    {
+     "upgrade": "Overdrive",
+     "unit": "tack",
+     "note": "Place it near the top of a small shape so the kill zone sits on the track; add Berserker Brew and Geraldo."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-cubism"
+   ],
+   "order": 22
+  },
+  {
+   "id": "four-circles",
+   "name": "Four Circles",
+   "difficulty": "Beginner",
+   "traits": [
+    "Long track",
+    "Water",
+    "Central spot"
+   ],
+   "summary": "One of the least difficult maps thanks to its length and a central spot that covers four sectors.",
+   "placement": "Take the central spot first.",
+   "recommended": [
+    {
+     "upgrade": "MOAB Domination",
+     "unit": "boomer",
+     "note": "From the centre its attacks run down many straight lines and its press covers nearly the whole map."
+    },
+    {
+     "upgrade": "Glaive Lord",
+     "unit": "boomer",
+     "note": "Spinning glaives clean up clumps and its ricochets bounce around the whole map."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-four-circles"
+   ],
+   "order": 23
   },
   {
    "id": "hedge",
@@ -213,35 +628,33 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-hedge"
-   ]
+   ],
+   "order": 24
   },
   {
-   "id": "in-the-loop",
-   "name": "In The Loop",
+   "id": "end-of-the-road",
+   "name": "End Of The Road",
    "difficulty": "Beginner",
    "traits": [
-    "Water",
-    "Loops",
-    "Line-of-sight blockers (trees)"
+    "Short track",
+    "Water (pool)",
+    "Line-of-sight blockers (cacti)",
+    "Open space"
    ],
-   "summary": "Average Beginner difficulty: long but spread out.",
-   "placement": "The central spot lets long-range towers hit three or more passes.",
+   "summary": "The shortest Beginner map, but very open, which makes it good for farming.",
+   "placement": "The central pool is surrounded by track on both sides.",
    "recommended": [
-    {
-     "upgrade": "MOAB Domination",
-     "unit": "boomer",
-     "note": "From the centre it covers the map and wipes the late game."
-    },
     {
      "upgrade": "Destroyer",
      "unit": "bucc",
-     "note": "Bottom-left of the lake with a Grape Shot crosspath to use the wide loops."
+     "note": "In the pool both gun sides fire often; five 3-1-0/3-2-0 Destroyers with Brickell and camo afford Permanent Brew, which then trivialises the late game."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-in-the-loop"
-   ]
+    "wiki-map-end-of-the-road"
+   ],
+   "order": 25
   },
   {
    "id": "logs",
@@ -267,716 +680,8 @@
    },
    "sources": [
     "wiki-map-logs"
-   ]
-  },
-  {
-   "id": "lotus-island",
-   "name": "Lotus Island",
-   "difficulty": "Beginner",
-   "traits": [
-    "Short track",
-    "Lots of water",
-    "Line-of-sight blockers (lotus plants)"
    ],
-   "summary": "Seen as the second-hardest Beginner map: short, spread out and blocked.",
-   "placement": "Land towers right of the lower-middle loop; water towers just left and right of it.",
-   "recommended": [
-    {
-     "upgrade": "Carrier Flagship",
-     "unit": "bucc",
-     "note": "Overcomes the spread-out track and buffs the many water towers this map allows."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-lotus-island"
-   ]
-  },
-  {
-   "id": "middle-of-the-road",
-   "name": "Middle of the Road",
-   "difficulty": "Beginner",
-   "traits": [
-    "Line-of-sight blockers (buildings)",
-    "Long track"
-   ],
-   "summary": "One of the hardest Beginner maps: the most line-of-sight-restricted of them.",
-   "placement": "Global-range towers excel; the water tower near the top-right holds one big tower.",
-   "recommended": [
-    {
-     "upgrade": "Bloon Exclusion Zone",
-     "unit": "dartling",
-     "note": "On the water tower it covers the whole map; with MIB the 2-0-5 beats the late game, saving up from BADS."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-middle-of-the-road"
-   ]
-  },
-  {
-   "id": "monkey-meadow",
-   "name": "Monkey Meadow",
-   "difficulty": "Beginner",
-   "traits": [
-    "Generic layout",
-    "Light line-of-sight blockers"
-   ],
-   "summary": "The first map in the menu and a generic layout where almost anything works.",
-   "placement": "The centre, just below the top enclosed patch, gives the widest coverage.",
-   "recommended": [
-    {
-     "upgrade": "Glaive Lord",
-     "unit": "boomer",
-     "note": "In the middle its spinning and ricochet glaives cover clumps and the whole map."
-    },
-    {
-     "upgrade": "Dragon's Breath",
-     "unit": "wizard",
-     "note": "Strong mid-game at the central intersections; 0-3-2 needs another tower or hero to cover purple bloons."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-monkey-meadow"
-   ]
-  },
-  {
-   "id": "one-two-tree",
-   "name": "One Two Tree",
-   "difficulty": "Beginner",
-   "traits": [
-    "Tile buffs under trees",
-    "Line-of-sight blockers",
-    "Single lane"
-   ],
-   "summary": "A Christmas tree farm where clearing the trees reveals spaces that buff towers placed on them.",
-   "placement": "Put one-damage towers on +1 damage spaces (for example Druid of the Jungle on space 4 early).",
-   "recommended": [
-    {
-     "upgrade": "Sun Avatar",
-     "unit": "super",
-     "note": "On a +1 damage space its many one-damage hits become huge; Geraldo's Worn Hero's Cape fits several on spaces 16 and 20."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-one-two-tree"
-   ]
-  },
-  {
-   "id": "park-path",
-   "name": "Park Path",
-   "difficulty": "Beginner",
-   "traits": [
-    "Water (stream)",
-    "Line-of-sight blockers (trees)"
-   ],
-   "summary": "A BTD5 remaster with a stream through the middle.",
-   "placement": "Boats in the central water spot; land towers just above and top-right of it.",
-   "recommended": [
-    {
-     "upgrade": "Destroyer",
-     "unit": "bucc",
-     "note": "3-2-0 with Berserker Brew and camo in the central spot sweeps the mid game and saves for Carrier Flagship."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-park-path"
-   ]
-  },
-  {
-   "id": "resort",
-   "name": "Resort",
-   "difficulty": "Beginner",
-   "traits": [
-    "Very long track",
-    "Loops",
-    "Water (pool)"
-   ],
-   "summary": "By consensus the second-easiest map; bloons pass the top lane repeatedly.",
-   "placement": "The enclosed space top-right of the pool is ideal for loop towers (Tack Shooters, Ice Monkeys).",
-   "recommended": [
-    {
-     "upgrade": "Sauda",
-     "unit": "sauda",
-     "note": "In the top-right enclosed space, at a corner, she is extremely strong; on release she soloed CHIMPS here."
-    }
-   ],
-   "modeNotes": {
-    "freeplay": "A close second to Logs for Freeplay with Bloonjitsu and Shinobi Tactics."
-   },
-   "sources": [
-    "wiki-map-resort"
-   ]
-  },
-  {
-   "id": "scrapyard",
-   "name": "Scrapyard",
-   "difficulty": "Beginner",
-   "traits": [
-    "Longest track",
-    "Line-of-sight blockers (junk)",
-    "Limited space"
-   ],
-   "summary": "The longest map, but spread out and cramped, so not the easiest.",
-   "placement": "Limited-range towers on the top-left box; save room above or top-right of it for a Village.",
-   "recommended": [
-    {
-     "upgrade": "Bloon Exclusion Zone",
-     "unit": "dartling",
-     "note": "The wiki's editors call BEZ an easy carry and the most optimal pick here."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-scrapyard"
-   ]
-  },
-  {
-   "id": "skates",
-   "name": "Skates",
-   "difficulty": "Beginner",
-   "traits": [
-    "Water (ice cracks)",
-    "Removable objects ($500 houses)",
-    "Spread-out track"
-   ],
-   "summary": "Long but spread out, so global-range towers stand out.",
-   "placement": "Limited-range towers go left of the large middle loop.",
-   "recommended": [
-    {
-     "upgrade": "Carrier Flagship",
-     "unit": "bucc",
-     "note": "Uses the whole map, holds up into the 90s and buffs Destroyers in the central crack."
-    },
-    {
-     "upgrade": "Bloon Exclusion Zone",
-     "unit": "dartling",
-     "note": "Below the end of the track its buckshot spreads well; with MIB it clears the late game."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-skates"
-   ]
-  },
-  {
-   "id": "skull-tweak",
-   "name": "Skull Tweak",
-   "difficulty": "Beginner",
-   "traits": [
-    "Line-of-sight blocker (skull)",
-    "Long track",
-    "Harder alternate layout"
-   ],
-   "summary": "A BTD5 Skull Peak remix added in v55. The normal layout is easy; the harder dual-lane version plays like an above-average Advanced map.",
-   "placement": "Flying towers and towers that ignore obstacles work best because of the skull.",
-   "recommended": [
-    {
-     "upgrade": "Monkey Ace / Heli Pilot",
-     "unit": "ace",
-     "note": "Both reach every part of the map regardless of the skull; all paths work."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-skull-tweak"
-   ]
-  },
-  {
-   "id": "spa-pits",
-   "name": "Spa Pits",
-   "difficulty": "Beginner",
-   "traits": [
-    "Very long track",
-    "Lots of water",
-    "Compact"
-   ],
-   "summary": "About the fourth-easiest map: very long with lots of overlap. Space is a bit tight for Freeplay.",
-   "placement": "Save a spot next to the central pool for a Jungle Drums village; water strategies are especially strong.",
-   "recommended": [
-    {
-     "upgrade": "Carrier Flagship",
-     "unit": "bucc",
-     "note": "Grows smoothly from Destroyer and Aircraft Carrier with huge damage."
-    }
-   ],
-   "modeNotes": {
-    "freeplay": "Only worth it for Freeplay with Destroyer or Aircraft Carrier builds."
-   },
-   "sources": [
-    "wiki-map-spa-pits"
-   ]
-  },
-  {
-   "id": "the-cabin",
-   "name": "The Cabin",
-   "difficulty": "Beginner",
-   "traits": [
-    "Short track",
-    "Line-of-sight blockers",
-    "Water (pond)",
-    "Removable car ($500)"
-   ],
-   "summary": "Widely considered the hardest Beginner map: short, spread out and cramped.",
-   "placement": "Global-range towers and boats in the pond work best.",
-   "recommended": [
-    {
-     "upgrade": "Carrier Flagship",
-     "unit": "bucc",
-     "note": "Use 5-2-0 here; Destroyer and Aircraft Carrier save up to it comfortably and it buffs other boats."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-the-cabin"
-   ]
-  },
-  {
-   "id": "three-mines-round",
-   "name": "Three Mines 'Round",
-   "difficulty": "Beginner",
-   "traits": [
-    "Long loop",
-    "Bananite crystals",
-    "Water puddles"
-   ],
-   "summary": "One of the easiest Beginner maps: the long triple loop gives towers three or four chances at each bloon.",
-   "placement": "Use spots near the lane intersections rather than the middle of the big loop (unless the tower has area damage).",
-   "recommended": [
-    {
-     "upgrade": "Crystal harvesting",
-     "unit": "farm",
-     "note": "The cheapest Bananite crystal is almost always worth harvesting; more cost-efficient than early farms."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-three-mines-round"
-   ]
-  },
-  {
-   "id": "tinkerton",
-   "name": "Tinkerton",
-   "difficulty": "Beginner",
-   "traits": [
-    "Slow zone (40% slower)",
-    "Line-of-sight blockers",
-    "Spread-out track"
-   ],
-   "summary": "Above-average Beginner difficulty, but long, and bloons are slowed after the top bend.",
-   "placement": "Decent-range towers in the middle cover many sections; the one-off rocket can be ignored.",
-   "recommended": [
-    {
-     "upgrade": "The Bloon Solver",
-     "unit": "glue",
-     "note": "On the central crater it sees four track sections at once."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-tinkerton"
-   ]
-  },
-  {
-   "id": "town-center",
-   "name": "Town Center",
-   "difficulty": "Beginner",
-   "traits": [
-    "Short track",
-    "Line-of-sight blockers",
-    "Water (ocean)"
-   ],
-   "summary": "One of the hardest Beginner maps: short, spread out and blocked.",
-   "placement": "Most good strategies use the central space.",
-   "recommended": [
-    {
-     "upgrade": "MOAB Domination",
-     "unit": "boomer",
-     "note": "From the centre its press reaches almost the whole map."
-    },
-    {
-     "upgrade": "The Bloon Solver",
-     "unit": "glue",
-     "note": "Covers several sectors from the centre."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-town-center"
-   ]
-  },
-  {
-   "id": "tree-stump",
-   "name": "Tree Stump",
-   "difficulty": "Beginner",
-   "traits": [
-    "Line-of-sight blockers (logs)",
-    "Central stump"
-   ],
-   "summary": "Average Beginner difficulty with a spread-out track.",
-   "placement": "Towers on the central stump ignore the blockers and cover a lot.",
-   "recommended": [
-    {
-     "upgrade": "Bloon Exclusion Zone",
-     "unit": "dartling",
-     "note": "On the stump it covers the whole map; 2-0-5 with MIB clears the late game."
-    },
-    {
-     "upgrade": "Comanche Commander",
-     "unit": "heli",
-     "note": "Uses the full spread-out length; pair with Geraldo and Glue Storm."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-tree-stump"
-   ]
-  },
-  {
-   "id": "winter-park",
-   "name": "Winter Park",
-   "difficulty": "Beginner",
-   "traits": [
-    "Four loops",
-    "Water (fountain)"
-   ],
-   "summary": "Fairly simple when towers cover several sections at once.",
-   "placement": "Boats at the left or right of the fountain cover four sections; long-range land towers centre-left or centre-right cover three.",
-   "recommended": [
-    {
-     "upgrade": "Destroyer",
-     "unit": "bucc",
-     "note": "The fountain is ringed by track; 3-2-0 with Berserker Brew and camo saves for Carrier Flagship."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-winter-park"
-   ]
-  },
-  {
-   "id": "adoras-temple",
-   "name": "Adora's Temple",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Alternating entrances",
-    "Temple peak spots",
-    "Line-of-sight blockers"
-   ],
-   "summary": "Bloons switch entrances each round and climb the temple steps.",
-   "placement": "Put win conditions on the two spots at the very top of the temple, which see most of the track.",
-   "recommended": [
-    {
-     "upgrade": "MOAB Domination",
-     "unit": "boomer",
-     "note": "From a peak spot its press covers practically the whole map."
-    }
-   ],
-   "modeNotes": {
-    "chimps": "Only place towers on the peak spots early if they'll become your win condition, and don't block the peak with lower-layer towers."
-   },
-   "sources": [
-    "wiki-map-adoras-temple"
-   ]
-  },
-  {
-   "id": "ancient-portal",
-   "name": "Ancient Portal",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Switchable exit (portals)",
-    "Hero pedestals",
-    "Single lane"
-   ],
-   "summary": "A middle-of-the-road Intermediate map; a portal decides which of two exits bloons take, and pedestals buff heroes.",
-   "placement": "Towers between the top-right and bottom-right cover both sections well.",
-   "recommended": [
-    {
-     "upgrade": "Pop and Awe",
-     "unit": "mortar",
-     "note": "The many bends suit it; set the portal to send bloons left for the longer track."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-ancient-portal"
-   ]
-  },
-  {
-   "id": "balance",
-   "name": "Balance",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Two entrances",
-    "Central loop",
-    "Hedges block line-of-sight"
-   ],
-   "summary": "Eight paths meet in a central loop that bloons circle three and a half times, making it one of the easiest Intermediate maps.",
-   "placement": "Save the spots around the central loop for late-game towers rather than early ones.",
-   "recommended": [
-    {
-     "upgrade": "Sauda",
-     "unit": "sauda",
-     "note": "Practically perfect here: the loop maximises her pierce and Sword Charge hits the overlapping lanes; add stuns."
-    },
-    {
-     "upgrade": "Overdrive",
-     "unit": "tack",
-     "note": "The very long loop suits its kill zone."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-balance"
-   ]
-  },
-  {
-   "id": "bazaar",
-   "name": "Bazaar",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Alternating lanes each round",
-    "Line-of-sight blockers",
-    "Short track",
-    "Limited space"
-   ],
-   "summary": "One of the hardest Intermediate maps: the lane switches every round.",
-   "placement": "The middle section sees both lanes; Heli Pilots do well with one lane per round.",
-   "recommended": [
-    {
-     "upgrade": "Corvus",
-     "unit": "corvus",
-     "note": "His spirit handles the early game on single-lane rounds and his long range covers most of the map."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-bazaar"
-   ]
-  },
-  {
-   "id": "bloonarius-prime",
-   "name": "Bloonarius Prime",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Alternating lanes",
-    "Line-of-sight blockers (centre)",
-    "Water (river)"
-   ],
-   "summary": "Among the hardest Intermediate maps (but easier than Lost Crevasse used to be): few spots cover both lanes.",
-   "placement": "Corvus at the entrance farms mana all game.",
-   "recommended": [
-    {
-     "upgrade": "Corvus",
-     "unit": "corvus",
-     "note": "Handles the early game and saves up for expensive win conditions."
-    },
-    {
-     "upgrade": "Geraldo",
-     "unit": "geraldo",
-     "note": "Works with many of the best towers here."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-bloonarius-prime"
-   ]
-  },
-  {
-   "id": "chutes",
-   "name": "Chutes",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Alternating short lanes",
-    "Water (small pools)",
-    "Limited space"
-   ],
-   "summary": "One of the hardest Intermediate maps, arguably harder than some Advanced maps: short alternating lanes and few good spots.",
-   "placement": "Global towers are the most reliable.",
-   "recommended": [
-    {
-     "upgrade": "Comanche Commander",
-     "unit": "heli",
-     "note": "Handles the alternating lanes; with Glue Storm it hits DDTs without MIB, and Geraldo's Sharpening Stone adds pierce."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-chutes"
-   ]
-  },
-  {
-   "id": "covered-garden",
-   "name": "Covered Garden",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Moving glass panels block line-of-sight",
-    "Single lane"
-   ],
-   "summary": "A rotating glass roof covers three quarters of the garden each round, which makes the first CHIMPS rounds fiddly.",
-   "placement": "Global towers outside the garden ignore the panels; save cash so towers inside can be upgraded before a panel covers them.",
-   "recommended": [
-    {
-     "upgrade": "Corvus",
-     "unit": "corvus",
-     "note": "At the front of the track he farms mana untouched by the panels."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-covered-garden"
-   ]
-  },
-  {
-   "id": "cracked",
-   "name": "Cracked",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Long single lane",
-    "Removable rock ($1,000, reveals water)",
-    "Line-of-sight blockers"
-   ],
-   "summary": "One of the easiest Intermediate maps: long with plenty of bends.",
-   "placement": "Long-range towers right of the rock cover several sections.",
-   "recommended": [
-    {
-     "upgrade": "Comanche Defense → Commander",
-     "unit": "heli",
-     "note": "Uses the whole track and saves up comfortably; Commander with Geraldo handles the late game."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-cracked"
-   ]
-  },
-  {
-   "id": "downstream",
-   "name": "Downstream",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Single lane",
-    "Water (stream)",
-    "Loops"
-   ],
-   "summary": "On the easier side of Intermediate: one long lane.",
-   "placement": "Long-range towers in the open top-middle; Tack Shooters inside the loops; boats right of the track start.",
-   "recommended": [
-    {
-     "upgrade": "Destroyer",
-     "unit": "bucc",
-     "note": "Both gun sides fire from the water right of the start; 3-2-0 with Berserker Brew, then Aircraft Carrier."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-downstream"
-   ]
-  },
-  {
-   "id": "encrypted",
-   "name": "Encrypted",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Walled crypt",
-    "Two exits",
-    "Limited central space"
-   ],
-   "summary": "The small central space inside the crypt walls has by far the best coverage.",
-   "placement": "Reserve the crypt for important late-game towers, especially in CHIMPS; walls let projectiles bounce.",
-   "recommended": [
-    {
-     "upgrade": "Sauda",
-     "unit": "sauda",
-     "note": "In the crypt centre with Berserker Brew and Relentless Glue she carries the mid game; two exits double Sword Charge."
-    },
-    {
-     "upgrade": "Ultra-Juggernaut",
-     "unit": "dart",
-     "note": "Inside the crypt its balls bounce off the walls."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-encrypted"
-   ]
-  },
-  {
-   "id": "firing-range",
-   "name": "Firing Range",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Two lanes",
-    "Removable outpost",
-    "Water"
-   ],
-   "summary": "Looks cramped at first, but compact and long enough to be fairly simple.",
-   "placement": "Clear the central outpost for good spots; use the water for boats.",
-   "recommended": [
-    {
-     "upgrade": "Destroyer",
-     "unit": "bucc",
-     "note": "With Grape Shot early, Berserker Brew and camo it dominates the mid game."
-    },
-    {
-     "upgrade": "Pop and Awe",
-     "unit": "mortar",
-     "note": "The compact track lets its explosions hit huge areas; pair with Striker Jones and stuns."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-firing-range"
-   ]
-  },
-  {
-   "id": "haunted",
-   "name": "Haunted",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Two entrances",
-    "Short track",
-    "Water (central pond)",
-    "Removable trees ($500)"
-   ],
-   "summary": "One of the harder Intermediate maps: separate entrances, short length and overlapping paths that hide leaks.",
-   "placement": "The central pond makes water towers excel; the bottom bends suit land towers.",
-   "recommended": [
-    {
-     "upgrade": "Destroyer",
-     "unit": "bucc",
-     "note": "Bloons pass both sides of the pond; five Destroyers (or a Carrier Flagship) with camo and Stronger Stimulant sweep the mid game."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-haunted"
-   ]
-  },
-  {
-   "id": "kartsndarts",
-   "name": "KartsNDarts",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Figure-eight track",
-    "Tunnel (bloons inside can't be hit)"
-   ],
-   "summary": "Widely seen as the second-easiest Intermediate map; bloons pass the loops twice.",
-   "placement": "Top-left or top-right of the tunnel, between the loops.",
-   "recommended": [
-    {
-     "upgrade": "MOAB Domination",
-     "unit": "boomer",
-     "note": "From beside the tunnel its press covers almost the whole map; with Primary Training, Radar Scanner and Stronger Stimulant it handles the BAD."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-kartsndarts"
-   ]
+   "order": 26
   },
   {
    "id": "lost-crevasse",
@@ -999,7 +704,8 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-lost-crevasse"
-   ]
+   ],
+   "order": 27
   },
   {
    "id": "luminous-cove",
@@ -1025,232 +731,32 @@
    },
    "sources": [
     "wiki-map-luminous-cove"
-   ]
+   ],
+   "order": 28
   },
   {
-   "id": "moon-landing",
-   "name": "Moon Landing",
+   "id": "ancient-portal",
+   "name": "Ancient Portal",
    "difficulty": "Intermediate",
    "traits": [
-    "Walled craters",
-    "Long track"
+    "Switchable exit (portals)",
+    "Hero pedestals",
+    "Single lane"
    ],
-   "summary": "Walls make the early game tricky, but the long track makes the rest easy.",
-   "placement": "Simple starts: Beast Handler 0-0-1 → 0-1-1, a base Alchemist top-left of the first crater, three Dart Monkeys or a Mortar.",
+   "summary": "A middle-of-the-road Intermediate map; a portal decides which of two exits bloons take, and pedestals buff heroes.",
+   "placement": "Towers between the top-right and bottom-right cover both sections well.",
    "recommended": [
     {
-     "upgrade": "Ultra-Juggernaut",
-     "unit": "dart",
-     "note": "Balls bounce around inside the craters; place near a crater entrance on First or its exit on Strong."
-    },
-    {
-     "upgrade": "Apache Prime",
-     "unit": "heli",
-     "note": "Trivialises the single lane with support for DDTs."
+     "upgrade": "Pop and Awe",
+     "unit": "mortar",
+     "note": "The many bends suit it; set the portal to send bloons left for the longer track."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-moon-landing"
-   ]
-  },
-  {
-   "id": "polyphemus",
-   "name": "Polyphemus",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Two entrances",
-    "Eye that buffs towers",
-    "Removable walls ($500)",
-    "Water"
+    "wiki-map-ancient-portal"
    ],
-   "summary": "Average Intermediate difficulty; the eye in the middle buffs towers placed on it.",
-   "placement": "Keeping the eye open (about $26,000 to round 100) is worth it; land towers just above and below the eye use the loop.",
-   "recommended": [
-    {
-     "upgrade": "Carrier Flagship",
-     "unit": "bucc",
-     "note": "Wipes the mid game, saves lots of cash and still hits hard in the 90s."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-polyphemus"
-   ]
-  },
-  {
-   "id": "protect-the-yacht",
-   "name": "Protect The Yacht",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Two short lanes",
-    "Bloons invincible for most of the track"
-   ],
-   "summary": "Rated Intermediate but arguably harder than most Advanced and the easiest Expert maps: bloons are invincible for over half the track.",
-   "placement": "Avoid relying on Tack Shooters, Pat Fusty or Sauda at the only turns, which sit right by the exits.",
-   "recommended": [
-    {
-     "upgrade": "The Final Harmonic",
-     "unit": "mermonkey",
-     "note": "One of the few stall towers that works here; it also buffs Magic Monkeys, enabling Druid or Shinobi spam."
-    },
-    {
-     "upgrade": "Carpet of Spikes",
-     "unit": "spike",
-     "note": "Covers the remaining track with MOAB-popping spikes."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-protect-the-yacht"
-   ]
-  },
-  {
-   "id": "quarry",
-   "name": "Quarry",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Elevation layers",
-    "Line-of-sight walls",
-    "Faster bloons on streams",
-    "Long track"
-   ],
-   "summary": "One of the easiest Intermediate maps despite the layers: long, bendy and open.",
-   "placement": "Heli Pilots ignore the elevation walls.",
-   "recommended": [
-    {
-     "upgrade": "Prince of Darkness",
-     "unit": "wizard",
-     "note": "Zombies ignore line-of-sight and have time to spawn; great on R95 DDTs. Pair with Ezili or Corvus."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-quarry"
-   ]
-  },
-  {
-   "id": "quiet-street",
-   "name": "Quiet Street",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Two overlapping entrances",
-    "Separate blimp lane"
-   ],
-   "summary": "Hard early and mid game (bloons from both sides), easy late game because blimps use one lane.",
-   "placement": "BEZ far right covers a wide area.",
-   "recommended": [
-    {
-     "upgrade": "Corvus",
-     "unit": "corvus",
-     "note": "Spear handles the early game, his spellbook the mid game, and Ancestral Might and Overload stay strong late."
-    },
-    {
-     "upgrade": "Bloon Exclusion Zone",
-     "unit": "dartling",
-     "note": "On the far right its spread covers much of the map."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-quiet-street"
-   ]
-  },
-  {
-   "id": "rake",
-   "name": "Rake",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Two simultaneous short lanes",
-    "Confusing targeting",
-    "Removable rock"
-   ],
-   "summary": "One of the hardest Intermediate maps: two short lanes confuse targeting.",
-   "placement": "Place towers at or just below the centre, or where the rock was; add cleanup for leaks.",
-   "recommended": [
-    {
-     "upgrade": "Perma-Spike",
-     "unit": "spike",
-     "note": "Slightly top-left of the bottom-left enclosure on Smart, with Berserker Brew and Jungle Drums, it covers both exits."
-    },
-    {
-     "upgrade": "Glaive Lord",
-     "unit": "boomer",
-     "note": "Handles the separated lanes well."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-rake"
-   ]
-  },
-  {
-   "id": "spice-islands",
-   "name": "Spice Islands",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Almost all water",
-    "Single lane",
-    "Removable trees ($1,000)"
-   ],
-   "summary": "Nearly all water, but a single lane keeps it manageable.",
-   "placement": "Arctic Wind lets land towers stand on water.",
-   "recommended": [
-    {
-     "upgrade": "Admiral Brickell",
-     "unit": "brickell",
-     "note": "Naval Tactics gives water towers attack speed, pierce, camo and normal damage; Mega Mines delete RBE and DDTs."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-spice-islands"
-   ]
-  },
-  {
-   "id": "spring-spring",
-   "name": "Spring Spring",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Two separate paths",
-    "Islands"
-   ],
-   "summary": "On the harder side of Intermediate: two separate paths loop round the islands.",
-   "placement": "Place near the right end of the large island; add a global blimp-breaker (Aircraft Carrier) to stagger blimp insides.",
-   "recommended": [
-    {
-     "upgrade": "Glaive Lord",
-     "unit": "boomer",
-     "note": "At the back its spinning glaives clean up and its thrown glaives bounce along the whole track."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-spring-spring"
-   ]
-  },
-  {
-   "id": "streambed",
-   "name": "Streambed",
-   "difficulty": "Intermediate",
-   "traits": [
-    "Single lane",
-    "Water (pool)",
-    "Removable skull ($1,000)"
-   ],
-   "summary": "Among the easiest Intermediate maps: long, compact, single lane.",
-   "placement": "Right of the skull or below the line from the entrance; boats at the top of the pool.",
-   "recommended": [
-    {
-     "upgrade": "Destroyer",
-     "unit": "bucc",
-     "note": "From the top of the pool it hits above the skull with both sides; 3-2-0 with Berserker Brew."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-streambed"
-   ]
+   "order": 29
   },
   {
    "id": "sulfur-springs",
@@ -1273,7 +779,8 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-sulfur-springs"
-   ]
+   ],
+   "order": 30
   },
   {
    "id": "water-park",
@@ -1301,438 +808,552 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-water-park"
-   ]
+   ],
+   "order": 31
   },
   {
-   "id": "another-brick",
-   "name": "Another Brick",
-   "difficulty": "Advanced",
-   "traits": [
-    "Brick walls block line-of-sight",
-    "Single lane",
-    "Water (potholes)"
-   ],
-   "summary": "One of the easiest Advanced maps despite the walls: bendy and fairly long.",
-   "placement": "Use towers that see over walls (Aircraft Carrier, Wizards with Guided Magic).",
-   "recommended": [
-    {
-     "upgrade": "Carrier Flagship",
-     "unit": "bucc",
-     "note": "Sees past the wall and uses the whole track; 5-2-0 is stronger here. Pair with Admiral Brickell."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-another-brick"
-   ]
-  },
-  {
-   "id": "ascent",
-   "name": "Ascent",
-   "difficulty": "Advanced",
-   "traits": [
-    "Two paths (right one longer)",
-    "No major line-of-sight blockers"
-   ],
-   "summary": "Added in v56. One of the easiest Advanced maps: long paths and few blockers. Most Military towers do well.",
-   "placement": "Heli Pilots on Pursuit can get confused by the two paths.",
-   "recommended": [
-    {
-     "upgrade": "Perma-Spike",
-     "unit": "spike",
-     "note": "On the middle bottom-right platform it covers both paths near the end and can share Jungle Drums."
-    },
-    {
-     "upgrade": "Submerge and Support",
-     "unit": "sub",
-     "note": "A submerged Sub at the start decamos everything; use 3-0-1 for consistent decamo."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-ascent"
-   ]
-  },
-  {
-   "id": "cargo",
-   "name": "Cargo",
-   "difficulty": "Advanced",
-   "traits": [
-    "Separate bloon and MOAB lanes",
-    "Line-of-sight blockers (trucks)",
-    "Lots of water"
-   ],
-   "summary": "Hard mid game because both lanes are active at once; early and late game are effectively single lane.",
-   "placement": "Early: right of the MOAB lane. After round 39: as much defense as possible below the MOAB lane's first bend. Boats right of the MOAB exit.",
-   "recommended": [
-    {
-     "upgrade": "Corvus",
-     "unit": "corvus",
-     "note": "Near the front he trivialises the single-lane early game and farms mana."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-cargo"
-   ]
-  },
-  {
-   "id": "castle-revenge",
-   "name": "Castle Revenge",
-   "difficulty": "Advanced",
-   "traits": [
-    "Two simultaneous divergent lanes",
-    "Bloons invulnerable at the start",
-    "Castle walls"
-   ],
-   "summary": "One of the hardest Advanced maps (only Erosion and X Factor are rated harder). The valve at the back blocks Perma-Spike's best spot.",
-   "placement": "You need separate defenses for each lane or global towers that cover both.",
-   "recommended": [
-    {
-     "upgrade": "Carpet of Spikes",
-     "unit": "spike",
-     "note": "Its spikes cover both lanes, handle DDTs that Giant Condor can't, and crack ZOMG shells."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-castle-revenge"
-   ]
-  },
-  {
-   "id": "cornfield",
-   "name": "Cornfield",
-   "difficulty": "Advanced",
-   "traits": [
-    "Removable corn patches",
-    "Longest Advanced map"
-   ],
-   "summary": "Usually seen as one of the easiest Advanced maps: the longest, with cheap corn removal later.",
-   "placement": "There are four secret spots for No Harvest challenges (2nd, 5th and 6th bends, and above the 3rd).",
-   "recommended": [
-    {
-     "upgrade": "Ultra-Juggernaut",
-     "unit": "dart",
-     "note": "Balls bounce off the corn patches and rehit bloons; it makes the map simple in every mode."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-cornfield"
-   ]
-  },
-  {
-   "id": "dark-path",
-   "name": "Dark Path",
-   "difficulty": "Advanced",
-   "traits": [
-    "Walls (removable)",
-    "Single lane",
-    "Loops",
-    "High platform"
-   ],
-   "summary": "A dark take on Park Path; tied with Another Brick and Off The Coast as one of the easiest Advanced maps.",
-   "placement": "The high platform over the centre fits limited-range and support towers; Mortars love the middle loops.",
-   "recommended": [
-    {
-     "upgrade": "Artillery Battery → Pop and Awe",
-     "unit": "mortar",
-     "note": "The middle loops give them huge power; Artillery Battery saves up to Pop and Awe with little help."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-dark-path"
-   ]
-  },
-  {
-   "id": "enchanted-glade",
-   "name": "Enchanted Glade",
-   "difficulty": "Advanced",
-   "traits": [
-    "Alternating lanes",
-    "Line-of-sight blockers",
-    "Central chokepoint"
-   ],
-   "summary": "One of the easier Advanced maps thanks to long lanes and a central chokepoint.",
-   "placement": "Use the bottom-centre space, the area just below the centre, or global towers.",
-   "recommended": [
-    {
-     "upgrade": "Druid of the Jungle",
-     "unit": "druid",
-     "note": "The long alternating lanes suit its vines; it carries the early game."
-    },
-    {
-     "upgrade": "Flying Fortress",
-     "unit": "ace",
-     "note": "Affordable with Rosalia's discount and strong here."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-enchanted-glade"
-   ]
-  },
-  {
-   "id": "erosion",
-   "name": "Erosion",
-   "difficulty": "Advanced",
-   "traits": [
-    "Land collapses every 18 rounds",
-    "Six paths, one active",
-    "Very short final track"
-   ],
-   "summary": "Easy outside CHIMPS (sunk towers refund cash), but the collapsing land and short final track make it one of the hardest Advanced maps.",
-   "placement": "Use global towers on the top-right, teleportable towers, or Arctic Wind ice platforms early.",
-   "recommended": [
-    {
-     "upgrade": "Corvus",
-     "unit": "corvus",
-     "note": "His spirit pops from anywhere and Spirit Walk (level 7) lets him move as land sinks."
-    }
-   ],
-   "modeNotes": {
-    "chimps": "Keep almost everything on the permanent platform: towers that sink in CHIMPS give no cash back."
-   },
-   "sources": [
-    "wiki-map-erosion"
-   ]
-  },
-  {
-   "id": "geared",
-   "name": "Geared",
-   "difficulty": "Advanced",
-   "traits": [
-    "Rotating gears move towers",
-    "Single lane"
-   ],
-   "summary": "One of the hardest Advanced maps because the rotation breaks early-game towers; the late game is average.",
-   "placement": "Sniper Monkeys are usually the only affordable early option; then global towers (Comanche Defense, Spectre).",
-   "recommended": [
-    {
-     "upgrade": "Corvus",
-     "unit": "corvus",
-     "note": "His spirit and Spear ignore the rotation and trivialise the early game."
-    }
-   ],
-   "modeNotes": {
-    "chimps": "The early game is the hard part, especially in CHIMPS and Half Cash."
-   },
-   "sources": [
-    "wiki-map-geared"
-   ]
-  },
-  {
-   "id": "high-finance",
-   "name": "High Finance",
-   "difficulty": "Advanced",
-   "traits": [
-    "Alternating lanes",
-    "Limited space",
-    "Obstacles"
-   ],
-   "summary": "Average Advanced difficulty; the initial space covers both lanes well enough for a whole strategy.",
-   "placement": "Heli Pilots do well on the alternating single lanes.",
-   "recommended": [
-    {
-     "upgrade": "Carrier Flagship",
-     "unit": "bucc",
-     "note": "5-2-0 is preferred here; Brickell's Naval Tactics gives it full DDT popping."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-high-finance"
-   ]
-  },
-  {
-   "id": "last-resort",
-   "name": "Last Resort",
-   "difficulty": "Advanced",
-   "traits": [
-    "Alternating lane layouts",
-    "Fast bloons on some rounds",
-    "Little land",
-    "Frozen pool"
-   ],
-   "summary": "A wintry revenge version of Resort; moderately hard because of short straight-line rounds and fast alternating lanes.",
-   "placement": "Land is scarce; plan placements carefully.",
-   "recommended": [
-    {
-     "upgrade": "Giant Condor",
-     "unit": "beast",
-     "note": "On straight-line rounds, aim its reticle at the start of the outer loop when bloons near the exit to drag them back."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-last-resort"
-   ]
-  },
-  {
-   "id": "mesa",
-   "name": "Mesa",
-   "difficulty": "Advanced",
-   "traits": [
-    "Two simultaneous lanes",
-    "Confusing targeting",
-    "Line-of-sight blockers"
-   ],
-   "summary": "One of the hardest Advanced maps: two lanes and confusing targeting.",
-   "placement": "The section just top-right of the centre reaches both lanes; rock growths avoid line-of-sight issues.",
-   "recommended": [
-    {
-     "upgrade": "Perma-Spike",
-     "unit": "spike",
-     "note": "Tanks leaks from both lanes caused by the confusing targeting."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-mesa"
-   ]
-  },
-  {
-   "id": "midnight-mansion",
-   "name": "Midnight Mansion",
-   "difficulty": "Advanced",
+   "id": "polyphemus",
+   "name": "Polyphemus",
+   "difficulty": "Intermediate",
    "traits": [
     "Two entrances",
-    "Flames block line-of-sight by round",
-    "Very limited large-tower space"
+    "Eye that buffs towers",
+    "Removable walls ($500)",
+    "Water"
    ],
-   "summary": "Moderately hard in CHIMPS, but by far the hardest map for Freeplay: no farm space and only two spots for large towers.",
-   "placement": "Use the bends; large towers (Villages, Super Monkeys) compete for two spots.",
-   "recommended": [],
-   "modeNotes": {
-    "freeplay": "The wiki calls it by far the hardest Freeplay map: no room for Banana Farms or several big T5s at once."
-   },
-   "sources": [
-    "wiki-map-midnight-mansion"
-   ]
-  },
-  {
-   "id": "mushroom-grotto",
-   "name": "Mushroom Grotto",
-   "difficulty": "Advanced",
-   "traits": [
-    "Darkness hides bloons",
-    "Two intersecting tracks",
-    "Light-up mushrooms"
-   ],
-   "summary": "Added in v54. Towers can't see or hit bloons in the dark; the early game is hardest, and it gets easier from the 20s once mushrooms are lit.",
-   "placement": "You don't have to light the mushrooms: some towers do better without them.",
+   "summary": "Average Intermediate difficulty; the eye in the middle buffs towers placed on it.",
+   "placement": "Keeping the eye open (about $26,000 to round 100) is worth it; land towers just above and below the eye use the loop.",
    "recommended": [
-    {
-     "upgrade": "Carpet of Spikes",
-     "unit": "spike",
-     "note": "With no mushrooms lit, all its spikes land on the middle section, concentrating damage."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-mushroom-grotto"
-   ]
-  },
-  {
-   "id": "off-the-coast",
-   "name": "Off The Coast",
-   "difficulty": "Advanced",
-   "traits": [
-    "Single lane",
-    "Land and water",
-    "Wide loops"
-   ],
-   "summary": "One of the easiest Advanced maps: fairly long and single lane; the start and exit are both in the water.",
-   "placement": "Lots of land and water, so most strategies work.",
-   "recommended": [
-    {
-     "upgrade": "Comanche Defense → Commander",
-     "unit": "heli",
-     "note": "Strong mid game and an easy save-up; mini-Comanche thresholds line up with the three wide loops."
-    },
     {
      "upgrade": "Carrier Flagship",
      "unit": "bucc",
-     "note": "Its planes cover the lack of compact sections and can nearly solo into the 80s."
+     "note": "Wipes the mid game, saves lots of cash and still hits hard in the 90s."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-off-the-coast"
-   ]
+    "wiki-map-polyphemus"
+   ],
+   "order": 32
   },
   {
-   "id": "party-parade",
-   "name": "Party Parade",
-   "difficulty": "Advanced",
+   "id": "covered-garden",
+   "name": "Covered Garden",
+   "difficulty": "Intermediate",
    "traits": [
-    "Two separated short lanes",
-    "Wide central wall"
+    "Moving glass panels block line-of-sight",
+    "Single lane"
    ],
-   "summary": "One of the harder Advanced maps, close to an easy Expert: both short lanes are completely separated.",
-   "placement": "Snipers only reach one side, and Heli Pilots on Pursuit shuttle between lanes uselessly.",
+   "summary": "A rotating glass roof covers three quarters of the garden each round, which makes the first CHIMPS rounds fiddly.",
+   "placement": "Global towers outside the garden ignore the panels; save cash so towers inside can be upgraded before a panel covers them.",
    "recommended": [
     {
-     "upgrade": "Psi",
-     "unit": "psi",
-     "note": "Unbothered by the wall and dual lanes; Advanced-map levelling gets him to level 14 in time for MOABs."
-    },
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "At the front of the track he farms mana untouched by the panels."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-covered-garden"
+   ],
+   "order": 33
+  },
+  {
+   "id": "quarry",
+   "name": "Quarry",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Elevation layers",
+    "Line-of-sight walls",
+    "Faster bloons on streams",
+    "Long track"
+   ],
+   "summary": "One of the easiest Intermediate maps despite the layers: long, bendy and open.",
+   "placement": "Heli Pilots ignore the elevation walls.",
+   "recommended": [
     {
      "upgrade": "Prince of Darkness",
      "unit": "wizard",
-     "note": "With one range buff (Village or Etienne) its zombies reach both lanes."
+     "note": "Zombies ignore line-of-sight and have time to spawn; great on R95 DDTs. Pair with Ezili or Corvus."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-party-parade"
-   ]
+    "wiki-map-quarry"
+   ],
+   "order": 34
   },
   {
-   "id": "pats-pond",
-   "name": "Pat's Pond",
-   "difficulty": "Advanced",
+   "id": "quiet-street",
+   "name": "Quiet Street",
+   "difficulty": "Intermediate",
    "traits": [
-    "Two lanes far apart in the middle",
-    "Overlapping entrances/exits"
+    "Two overlapping entrances",
+    "Separate blimp lane"
    ],
-   "summary": "Unusual: the lanes split far apart in the middle, so strategies cram short-range towers at one entrance.",
-   "placement": "The right entrance is used more (the BAD exits there, giving time to build up). Global towers tend to chase between lanes.",
+   "summary": "Hard early and mid game (bloons from both sides), easy late game because blimps use one lane.",
+   "placement": "BEZ far right covers a wide area.",
+   "recommended": [
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "Spear handles the early game, his spellbook the mid game, and Ancestral Might and Overload stay strong late."
+    },
+    {
+     "upgrade": "Bloon Exclusion Zone",
+     "unit": "dartling",
+     "note": "On the far right its spread covers much of the map."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-quiet-street"
+   ],
+   "order": 35
+  },
+  {
+   "id": "bloonarius-prime",
+   "name": "Bloonarius Prime",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Alternating lanes",
+    "Line-of-sight blockers (centre)",
+    "Water (river)"
+   ],
+   "summary": "Among the hardest Intermediate maps (but easier than Lost Crevasse used to be): few spots cover both lanes.",
+   "placement": "Corvus at the entrance farms mana all game.",
+   "recommended": [
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "Handles the early game and saves up for expensive win conditions."
+    },
+    {
+     "upgrade": "Geraldo",
+     "unit": "geraldo",
+     "note": "Works with many of the best towers here."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-bloonarius-prime"
+   ],
+   "order": 36
+  },
+  {
+   "id": "balance",
+   "name": "Balance",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Two entrances",
+    "Central loop",
+    "Hedges block line-of-sight"
+   ],
+   "summary": "Eight paths meet in a central loop that bloons circle three and a half times, making it one of the easiest Intermediate maps.",
+   "placement": "Save the spots around the central loop for late-game towers rather than early ones.",
    "recommended": [
     {
      "upgrade": "Sauda",
      "unit": "sauda",
-     "note": "Thrives where only small parts of the map are usable."
+     "note": "Practically perfect here: the loop maximises her pierce and Sword Charge hits the overlapping lanes; add stuns."
+    },
+    {
+     "upgrade": "Overdrive",
+     "unit": "tack",
+     "note": "The very long loop suits its kill zone."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-pats-pond"
-   ]
+    "wiki-map-balance"
+   ],
+   "order": 37
   },
   {
-   "id": "peninsula",
-   "name": "Peninsula",
-   "difficulty": "Advanced",
+   "id": "encrypted",
+   "name": "Encrypted",
+   "difficulty": "Intermediate",
    "traits": [
-    "Mountain blocks line-of-sight",
-    "Short single lane",
-    "Lots of water"
+    "Walled crypt",
+    "Two exits",
+    "Limited central space"
    ],
-   "summary": "Slightly above-average Advanced difficulty; once considered the 4th hardest map before newer maps and tower buffs.",
-   "placement": "Water and the single lane suit boat strategies.",
+   "summary": "The small central space inside the crypt walls has by far the best coverage.",
+   "placement": "Reserve the crypt for important late-game towers, especially in CHIMPS; walls let projectiles bounce.",
    "recommended": [
     {
-     "upgrade": "Carrier Flagship",
-     "unit": "bucc",
-     "note": "One of the few win conditions that sees over the mountain and uses the whole track; strong through the 80s."
+     "upgrade": "Sauda",
+     "unit": "sauda",
+     "note": "In the crypt centre with Berserker Brew and Relentless Glue she carries the mid game; two exits double Sword Charge."
+    },
+    {
+     "upgrade": "Ultra-Juggernaut",
+     "unit": "dart",
+     "note": "Inside the crypt its balls bounce off the walls."
     }
    ],
    "modeNotes": {},
    "sources": [
-    "wiki-map-peninsula"
-   ]
+    "wiki-map-encrypted"
+   ],
+   "order": 38
+  },
+  {
+   "id": "bazaar",
+   "name": "Bazaar",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Alternating lanes each round",
+    "Line-of-sight blockers",
+    "Short track",
+    "Limited space"
+   ],
+   "summary": "One of the hardest Intermediate maps: the lane switches every round.",
+   "placement": "The middle section sees both lanes; Heli Pilots do well with one lane per round.",
+   "recommended": [
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "His spirit handles the early game on single-lane rounds and his long range covers most of the map."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-bazaar"
+   ],
+   "order": 39
+  },
+  {
+   "id": "adoras-temple",
+   "name": "Adora's Temple",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Alternating entrances",
+    "Temple peak spots",
+    "Line-of-sight blockers"
+   ],
+   "summary": "Bloons switch entrances each round and climb the temple steps.",
+   "placement": "Put win conditions on the two spots at the very top of the temple, which see most of the track.",
+   "recommended": [
+    {
+     "upgrade": "MOAB Domination",
+     "unit": "boomer",
+     "note": "From a peak spot its press covers practically the whole map."
+    }
+   ],
+   "modeNotes": {
+    "chimps": "Only place towers on the peak spots early if they'll become your win condition, and don't block the peak with lower-layer towers."
+   },
+   "sources": [
+    "wiki-map-adoras-temple"
+   ],
+   "order": 40
+  },
+  {
+   "id": "spring-spring",
+   "name": "Spring Spring",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Two separate paths",
+    "Islands"
+   ],
+   "summary": "On the harder side of Intermediate: two separate paths loop round the islands.",
+   "placement": "Place near the right end of the large island; add a global blimp-breaker (Aircraft Carrier) to stagger blimp insides.",
+   "recommended": [
+    {
+     "upgrade": "Glaive Lord",
+     "unit": "boomer",
+     "note": "At the back its spinning glaives clean up and its thrown glaives bounce along the whole track."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-spring-spring"
+   ],
+   "order": 41
+  },
+  {
+   "id": "kartsndarts",
+   "name": "KartsNDarts",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Figure-eight track",
+    "Tunnel (bloons inside can't be hit)"
+   ],
+   "summary": "Widely seen as the second-easiest Intermediate map; bloons pass the loops twice.",
+   "placement": "Top-left or top-right of the tunnel, between the loops.",
+   "recommended": [
+    {
+     "upgrade": "MOAB Domination",
+     "unit": "boomer",
+     "note": "From beside the tunnel its press covers almost the whole map; with Primary Training, Radar Scanner and Stronger Stimulant it handles the BAD."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-kartsndarts"
+   ],
+   "order": 42
+  },
+  {
+   "id": "moon-landing",
+   "name": "Moon Landing",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Walled craters",
+    "Long track"
+   ],
+   "summary": "Walls make the early game tricky, but the long track makes the rest easy.",
+   "placement": "Simple starts: Beast Handler 0-0-1 → 0-1-1, a base Alchemist top-left of the first crater, three Dart Monkeys or a Mortar.",
+   "recommended": [
+    {
+     "upgrade": "Ultra-Juggernaut",
+     "unit": "dart",
+     "note": "Balls bounce around inside the craters; place near a crater entrance on First or its exit on Strong."
+    },
+    {
+     "upgrade": "Apache Prime",
+     "unit": "heli",
+     "note": "Trivialises the single lane with support for DDTs."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-moon-landing"
+   ],
+   "order": 43
+  },
+  {
+   "id": "haunted",
+   "name": "Haunted",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Two entrances",
+    "Short track",
+    "Water (central pond)",
+    "Removable trees ($500)"
+   ],
+   "summary": "One of the harder Intermediate maps: separate entrances, short length and overlapping paths that hide leaks.",
+   "placement": "The central pond makes water towers excel; the bottom bends suit land towers.",
+   "recommended": [
+    {
+     "upgrade": "Destroyer",
+     "unit": "bucc",
+     "note": "Bloons pass both sides of the pond; five Destroyers (or a Carrier Flagship) with camo and Stronger Stimulant sweep the mid game."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-haunted"
+   ],
+   "order": 44
+  },
+  {
+   "id": "downstream",
+   "name": "Downstream",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Single lane",
+    "Water (stream)",
+    "Loops"
+   ],
+   "summary": "On the easier side of Intermediate: one long lane.",
+   "placement": "Long-range towers in the open top-middle; Tack Shooters inside the loops; boats right of the track start.",
+   "recommended": [
+    {
+     "upgrade": "Destroyer",
+     "unit": "bucc",
+     "note": "Both gun sides fire from the water right of the start; 3-2-0 with Berserker Brew, then Aircraft Carrier."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-downstream"
+   ],
+   "order": 45
+  },
+  {
+   "id": "firing-range",
+   "name": "Firing Range",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Two lanes",
+    "Removable outpost",
+    "Water"
+   ],
+   "summary": "Looks cramped at first, but compact and long enough to be fairly simple.",
+   "placement": "Clear the central outpost for good spots; use the water for boats.",
+   "recommended": [
+    {
+     "upgrade": "Destroyer",
+     "unit": "bucc",
+     "note": "With Grape Shot early, Berserker Brew and camo it dominates the mid game."
+    },
+    {
+     "upgrade": "Pop and Awe",
+     "unit": "mortar",
+     "note": "The compact track lets its explosions hit huge areas; pair with Striker Jones and stuns."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-firing-range"
+   ],
+   "order": 46
+  },
+  {
+   "id": "cracked",
+   "name": "Cracked",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Long single lane",
+    "Removable rock ($1,000, reveals water)",
+    "Line-of-sight blockers"
+   ],
+   "summary": "One of the easiest Intermediate maps: long with plenty of bends.",
+   "placement": "Long-range towers right of the rock cover several sections.",
+   "recommended": [
+    {
+     "upgrade": "Comanche Defense → Commander",
+     "unit": "heli",
+     "note": "Uses the whole track and saves up comfortably; Commander with Geraldo handles the late game."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-cracked"
+   ],
+   "order": 47
+  },
+  {
+   "id": "streambed",
+   "name": "Streambed",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Single lane",
+    "Water (pool)",
+    "Removable skull ($1,000)"
+   ],
+   "summary": "Among the easiest Intermediate maps: long, compact, single lane.",
+   "placement": "Right of the skull or below the line from the entrance; boats at the top of the pool.",
+   "recommended": [
+    {
+     "upgrade": "Destroyer",
+     "unit": "bucc",
+     "note": "From the top of the pool it hits above the skull with both sides; 3-2-0 with Berserker Brew."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-streambed"
+   ],
+   "order": 48
+  },
+  {
+   "id": "chutes",
+   "name": "Chutes",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Alternating short lanes",
+    "Water (small pools)",
+    "Limited space"
+   ],
+   "summary": "One of the hardest Intermediate maps, arguably harder than some Advanced maps: short alternating lanes and few good spots.",
+   "placement": "Global towers are the most reliable.",
+   "recommended": [
+    {
+     "upgrade": "Comanche Commander",
+     "unit": "heli",
+     "note": "Handles the alternating lanes; with Glue Storm it hits DDTs without MIB, and Geraldo's Sharpening Stone adds pierce."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-chutes"
+   ],
+   "order": 49
+  },
+  {
+   "id": "rake",
+   "name": "Rake",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Two simultaneous short lanes",
+    "Confusing targeting",
+    "Removable rock"
+   ],
+   "summary": "One of the hardest Intermediate maps: two short lanes confuse targeting.",
+   "placement": "Place towers at or just below the centre, or where the rock was; add cleanup for leaks.",
+   "recommended": [
+    {
+     "upgrade": "Perma-Spike",
+     "unit": "spike",
+     "note": "Slightly top-left of the bottom-left enclosure on Smart, with Berserker Brew and Jungle Drums, it covers both exits."
+    },
+    {
+     "upgrade": "Glaive Lord",
+     "unit": "boomer",
+     "note": "Handles the separated lanes well."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-rake"
+   ],
+   "order": 50
+  },
+  {
+   "id": "spice-islands",
+   "name": "Spice Islands",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Almost all water",
+    "Single lane",
+    "Removable trees ($1,000)"
+   ],
+   "summary": "Nearly all water, but a single lane keeps it manageable.",
+   "placement": "Arctic Wind lets land towers stand on water.",
+   "recommended": [
+    {
+     "upgrade": "Admiral Brickell",
+     "unit": "brickell",
+     "note": "Naval Tactics gives water towers attack speed, pierce, camo and normal damage; Mega Mines delete RBE and DDTs."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-spice-islands"
+   ],
+   "order": 51
+  },
+  {
+   "id": "protect-the-yacht",
+   "name": "Protect The Yacht",
+   "difficulty": "Intermediate",
+   "traits": [
+    "Two short lanes",
+    "Bloons invincible for most of the track"
+   ],
+   "summary": "Rated Intermediate but arguably harder than most Advanced and the easiest Expert maps: bloons are invincible for over half the track.",
+   "placement": "Avoid relying on Tack Shooters, Pat Fusty or Sauda at the only turns, which sit right by the exits.",
+   "recommended": [
+    {
+     "upgrade": "The Final Harmonic",
+     "unit": "mermonkey",
+     "note": "One of the few stall towers that works here; it also buffs Magic Monkeys, enabling Druid or Shinobi spam."
+    },
+    {
+     "upgrade": "Carpet of Spikes",
+     "unit": "spike",
+     "note": "Covers the remaining track with MOAB-popping spikes."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-protect-the-yacht"
+   ],
+   "order": 52
   },
   {
    "id": "ship-capture",
@@ -1760,32 +1381,261 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-ship-capture"
-   ]
+   ],
+   "order": 53
   },
   {
-   "id": "spillway",
-   "name": "Spillway",
+   "id": "ascent",
+   "name": "Ascent",
    "difficulty": "Advanced",
    "traits": [
-    "Four entrances",
-    "Central loop",
-    "Removable valves ($2,000)"
+    "Two paths (right one longer)",
+    "No major line-of-sight blockers"
    ],
-   "summary": "Not especially hard: bloons spend a long time in the central loop.",
-   "placement": "Mortars reach the middle; removing the valves later opens many spots.",
+   "summary": "Added in v56. One of the easiest Advanced maps: long paths and few blockers. Most Military towers do well.",
+   "placement": "Heli Pilots on Pursuit can get confused by the two paths.",
    "recommended": [
     {
-     "upgrade": "Pop and Awe",
+     "upgrade": "Perma-Spike",
+     "unit": "spike",
+     "note": "On the middle bottom-right platform it covers both paths near the end and can share Jungle Drums."
+    },
+    {
+     "upgrade": "Submerge and Support",
+     "unit": "sub",
+     "note": "A submerged Sub at the start decamos everything; use 3-0-1 for consistent decamo."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-ascent"
+   ],
+   "order": 54
+  },
+  {
+   "id": "mushroom-grotto",
+   "name": "Mushroom Grotto",
+   "difficulty": "Advanced",
+   "traits": [
+    "Darkness hides bloons",
+    "Two intersecting tracks",
+    "Light-up mushrooms"
+   ],
+   "summary": "Added in v54. Towers can't see or hit bloons in the dark; the early game is hardest, and it gets easier from the 20s once mushrooms are lit.",
+   "placement": "You don't have to light the mushrooms: some towers do better without them.",
+   "recommended": [
+    {
+     "upgrade": "Carpet of Spikes",
+     "unit": "spike",
+     "note": "With no mushrooms lit, all its spikes land on the middle section, concentrating damage."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-mushroom-grotto"
+   ],
+   "order": 55
+  },
+  {
+   "id": "party-parade",
+   "name": "Party Parade",
+   "difficulty": "Advanced",
+   "traits": [
+    "Two separated short lanes",
+    "Wide central wall"
+   ],
+   "summary": "One of the harder Advanced maps, close to an easy Expert: both short lanes are completely separated.",
+   "placement": "Snipers only reach one side, and Heli Pilots on Pursuit shuttle between lanes uselessly.",
+   "recommended": [
+    {
+     "upgrade": "Psi",
+     "unit": "psi",
+     "note": "Unbothered by the wall and dual lanes; Advanced-map levelling gets him to level 14 in time for MOABs."
+    },
+    {
+     "upgrade": "Prince of Darkness",
+     "unit": "wizard",
+     "note": "With one range buff (Village or Etienne) its zombies reach both lanes."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-party-parade"
+   ],
+   "order": 56
+  },
+  {
+   "id": "sunset-gulch",
+   "name": "Sunset Gulch",
+   "difficulty": "Advanced",
+   "traits": [
+    "Splitting exits",
+    "Short MOAB exit",
+    "Elevated valley spots"
+   ],
+   "summary": "A middle-tier Advanced map: splitting exits and poor central coverage.",
+   "placement": "Treat it as a short single lane: build the main defense near the end and guard the short MOAB exit; use the left side early.",
+   "recommended": [
+    {
+     "upgrade": "The Desert Phantom",
+     "unit": "desperado",
+     "note": "The straight MOAB path lets its knockback and pierce work fully; 2-0-5 is preferred."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-sunset-gulch"
+   ],
+   "order": 57
+  },
+  {
+   "id": "enchanted-glade",
+   "name": "Enchanted Glade",
+   "difficulty": "Advanced",
+   "traits": [
+    "Alternating lanes",
+    "Line-of-sight blockers",
+    "Central chokepoint"
+   ],
+   "summary": "One of the easier Advanced maps thanks to long lanes and a central chokepoint.",
+   "placement": "Use the bottom-centre space, the area just below the centre, or global towers.",
+   "recommended": [
+    {
+     "upgrade": "Druid of the Jungle",
+     "unit": "druid",
+     "note": "The long alternating lanes suit its vines; it carries the early game."
+    },
+    {
+     "upgrade": "Flying Fortress",
+     "unit": "ace",
+     "note": "Affordable with Rosalia's discount and strong here."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-enchanted-glade"
+   ],
+   "order": 58
+  },
+  {
+   "id": "last-resort",
+   "name": "Last Resort",
+   "difficulty": "Advanced",
+   "traits": [
+    "Alternating lane layouts",
+    "Fast bloons on some rounds",
+    "Little land",
+    "Frozen pool"
+   ],
+   "summary": "A wintry revenge version of Resort; moderately hard because of short straight-line rounds and fast alternating lanes.",
+   "placement": "Land is scarce; plan placements carefully.",
+   "recommended": [
+    {
+     "upgrade": "Giant Condor",
+     "unit": "beast",
+     "note": "On straight-line rounds, aim its reticle at the start of the outer loop when bloons near the exit to drag them back."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-last-resort"
+   ],
+   "order": 59
+  },
+  {
+   "id": "castle-revenge",
+   "name": "Castle Revenge",
+   "difficulty": "Advanced",
+   "traits": [
+    "Two simultaneous divergent lanes",
+    "Bloons invulnerable at the start",
+    "Castle walls"
+   ],
+   "summary": "One of the hardest Advanced maps (only Erosion and X Factor are rated harder). The valve at the back blocks Perma-Spike's best spot.",
+   "placement": "You need separate defenses for each lane or global towers that cover both.",
+   "recommended": [
+    {
+     "upgrade": "Carpet of Spikes",
+     "unit": "spike",
+     "note": "Its spikes cover both lanes, handle DDTs that Giant Condor can't, and crack ZOMG shells."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-castle-revenge"
+   ],
+   "order": 60
+  },
+  {
+   "id": "dark-path",
+   "name": "Dark Path",
+   "difficulty": "Advanced",
+   "traits": [
+    "Walls (removable)",
+    "Single lane",
+    "Loops",
+    "High platform"
+   ],
+   "summary": "A dark take on Park Path; tied with Another Brick and Off The Coast as one of the easiest Advanced maps.",
+   "placement": "The high platform over the centre fits limited-range and support towers; Mortars love the middle loops.",
+   "recommended": [
+    {
+     "upgrade": "Artillery Battery → Pop and Awe",
      "unit": "mortar",
-     "note": "2-5-0 covers most of the central loop and hits many DDTs at once; pair with Striker Jones."
+     "note": "The middle loops give them huge power; Artillery Battery saves up to Pop and Awe with little help."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-dark-path"
+   ],
+   "order": 61
+  },
+  {
+   "id": "erosion",
+   "name": "Erosion",
+   "difficulty": "Advanced",
+   "traits": [
+    "Land collapses every 18 rounds",
+    "Six paths, one active",
+    "Very short final track"
+   ],
+   "summary": "Easy outside CHIMPS (sunk towers refund cash), but the collapsing land and short final track make it one of the hardest Advanced maps.",
+   "placement": "Use global towers on the top-right, teleportable towers, or Arctic Wind ice platforms early.",
+   "recommended": [
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "His spirit pops from anywhere and Spirit Walk (level 7) lets him move as land sinks."
     }
    ],
    "modeNotes": {
-    "chimps": "Start with a Ninja on the centre barrel, then a 1-0-0 Wizard or a hero like Psi at 2-0-1."
+    "chimps": "Keep almost everything on the permanent platform: towers that sink in CHIMPS give no cash back."
    },
    "sources": [
-    "wiki-map-spillway"
-   ]
+    "wiki-map-erosion"
+   ],
+   "order": 62
+  },
+  {
+   "id": "midnight-mansion",
+   "name": "Midnight Mansion",
+   "difficulty": "Advanced",
+   "traits": [
+    "Two entrances",
+    "Flames block line-of-sight by round",
+    "Very limited large-tower space"
+   ],
+   "summary": "Moderately hard in CHIMPS, but by far the hardest map for Freeplay: no farm space and only two spots for large towers.",
+   "placement": "Use the bends; large towers (Villages, Super Monkeys) compete for two spots.",
+   "recommended": [],
+   "modeNotes": {
+    "freeplay": "The wiki calls it by far the hardest Freeplay map: no room for Banana Farms or several big T5s at once."
+   },
+   "sources": [
+    "wiki-map-midnight-mansion"
+   ],
+   "order": 63
   },
   {
    "id": "sunken-columns",
@@ -1812,52 +1662,8 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-sunken-columns"
-   ]
-  },
-  {
-   "id": "sunset-gulch",
-   "name": "Sunset Gulch",
-   "difficulty": "Advanced",
-   "traits": [
-    "Splitting exits",
-    "Short MOAB exit",
-    "Elevated valley spots"
    ],
-   "summary": "A middle-tier Advanced map: splitting exits and poor central coverage.",
-   "placement": "Treat it as a short single lane: build the main defense near the end and guard the short MOAB exit; use the left side early.",
-   "recommended": [
-    {
-     "upgrade": "The Desert Phantom",
-     "unit": "desperado",
-     "note": "The straight MOAB path lets its knockback and pierce work fully; 2-0-5 is preferred."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-sunset-gulch"
-   ]
-  },
-  {
-   "id": "underground",
-   "name": "Underground",
-   "difficulty": "Advanced",
-   "traits": [
-    "Two short lanes",
-    "Cave walls"
-   ],
-   "summary": "Near-average Advanced difficulty: short, but many spots cover both lanes.",
-   "placement": "The centre and the spaces above and below it; stalling support like Relentless Glue is very useful.",
-   "recommended": [
-    {
-     "upgrade": "Sauda",
-     "unit": "sauda",
-     "note": "At the far left or right of the central space she clears the early rounds and covers both lanes late with stun support."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-underground"
-   ]
+   "order": 64
   },
   {
    "id": "x-factor",
@@ -1880,7 +1686,586 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-x-factor"
-   ]
+   ],
+   "order": 65
+  },
+  {
+   "id": "mesa",
+   "name": "Mesa",
+   "difficulty": "Advanced",
+   "traits": [
+    "Two simultaneous lanes",
+    "Confusing targeting",
+    "Line-of-sight blockers"
+   ],
+   "summary": "One of the hardest Advanced maps: two lanes and confusing targeting.",
+   "placement": "The section just top-right of the centre reaches both lanes; rock growths avoid line-of-sight issues.",
+   "recommended": [
+    {
+     "upgrade": "Perma-Spike",
+     "unit": "spike",
+     "note": "Tanks leaks from both lanes caused by the confusing targeting."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-mesa"
+   ],
+   "order": 66
+  },
+  {
+   "id": "geared",
+   "name": "Geared",
+   "difficulty": "Advanced",
+   "traits": [
+    "Rotating gears move towers",
+    "Single lane"
+   ],
+   "summary": "One of the hardest Advanced maps because the rotation breaks early-game towers; the late game is average.",
+   "placement": "Sniper Monkeys are usually the only affordable early option; then global towers (Comanche Defense, Spectre).",
+   "recommended": [
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "His spirit and Spear ignore the rotation and trivialise the early game."
+    }
+   ],
+   "modeNotes": {
+    "chimps": "The early game is the hard part, especially in CHIMPS and Half Cash."
+   },
+   "sources": [
+    "wiki-map-geared"
+   ],
+   "order": 67
+  },
+  {
+   "id": "spillway",
+   "name": "Spillway",
+   "difficulty": "Advanced",
+   "traits": [
+    "Four entrances",
+    "Central loop",
+    "Removable valves ($2,000)"
+   ],
+   "summary": "Not especially hard: bloons spend a long time in the central loop.",
+   "placement": "Mortars reach the middle; removing the valves later opens many spots.",
+   "recommended": [
+    {
+     "upgrade": "Pop and Awe",
+     "unit": "mortar",
+     "note": "2-5-0 covers most of the central loop and hits many DDTs at once; pair with Striker Jones."
+    }
+   ],
+   "modeNotes": {
+    "chimps": "Start with a Ninja on the centre barrel, then a 1-0-0 Wizard or a hero like Psi at 2-0-1."
+   },
+   "sources": [
+    "wiki-map-spillway"
+   ],
+   "order": 68
+  },
+  {
+   "id": "cargo",
+   "name": "Cargo",
+   "difficulty": "Advanced",
+   "traits": [
+    "Separate bloon and MOAB lanes",
+    "Line-of-sight blockers (trucks)",
+    "Lots of water"
+   ],
+   "summary": "Hard mid game because both lanes are active at once; early and late game are effectively single lane.",
+   "placement": "Early: right of the MOAB lane. After round 39: as much defense as possible below the MOAB lane's first bend. Boats right of the MOAB exit.",
+   "recommended": [
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "Near the front he trivialises the single-lane early game and farms mana."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-cargo"
+   ],
+   "order": 69
+  },
+  {
+   "id": "pats-pond",
+   "name": "Pat's Pond",
+   "difficulty": "Advanced",
+   "traits": [
+    "Two lanes far apart in the middle",
+    "Overlapping entrances/exits"
+   ],
+   "summary": "Unusual: the lanes split far apart in the middle, so strategies cram short-range towers at one entrance.",
+   "placement": "The right entrance is used more (the BAD exits there, giving time to build up). Global towers tend to chase between lanes.",
+   "recommended": [
+    {
+     "upgrade": "Sauda",
+     "unit": "sauda",
+     "note": "Thrives where only small parts of the map are usable."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-pats-pond"
+   ],
+   "order": 70
+  },
+  {
+   "id": "peninsula",
+   "name": "Peninsula",
+   "difficulty": "Advanced",
+   "traits": [
+    "Mountain blocks line-of-sight",
+    "Short single lane",
+    "Lots of water"
+   ],
+   "summary": "Slightly above-average Advanced difficulty; once considered the 4th hardest map before newer maps and tower buffs.",
+   "placement": "Water and the single lane suit boat strategies.",
+   "recommended": [
+    {
+     "upgrade": "Carrier Flagship",
+     "unit": "bucc",
+     "note": "One of the few win conditions that sees over the mountain and uses the whole track; strong through the 80s."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-peninsula"
+   ],
+   "order": 71
+  },
+  {
+   "id": "high-finance",
+   "name": "High Finance",
+   "difficulty": "Advanced",
+   "traits": [
+    "Alternating lanes",
+    "Limited space",
+    "Obstacles"
+   ],
+   "summary": "Average Advanced difficulty; the initial space covers both lanes well enough for a whole strategy.",
+   "placement": "Heli Pilots do well on the alternating single lanes.",
+   "recommended": [
+    {
+     "upgrade": "Carrier Flagship",
+     "unit": "bucc",
+     "note": "5-2-0 is preferred here; Brickell's Naval Tactics gives it full DDT popping."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-high-finance"
+   ],
+   "order": 72
+  },
+  {
+   "id": "another-brick",
+   "name": "Another Brick",
+   "difficulty": "Advanced",
+   "traits": [
+    "Brick walls block line-of-sight",
+    "Single lane",
+    "Water (potholes)"
+   ],
+   "summary": "One of the easiest Advanced maps despite the walls: bendy and fairly long.",
+   "placement": "Use towers that see over walls (Aircraft Carrier, Wizards with Guided Magic).",
+   "recommended": [
+    {
+     "upgrade": "Carrier Flagship",
+     "unit": "bucc",
+     "note": "Sees past the wall and uses the whole track; 5-2-0 is stronger here. Pair with Admiral Brickell."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-another-brick"
+   ],
+   "order": 73
+  },
+  {
+   "id": "off-the-coast",
+   "name": "Off The Coast",
+   "difficulty": "Advanced",
+   "traits": [
+    "Single lane",
+    "Land and water",
+    "Wide loops"
+   ],
+   "summary": "One of the easiest Advanced maps: fairly long and single lane; the start and exit are both in the water.",
+   "placement": "Lots of land and water, so most strategies work.",
+   "recommended": [
+    {
+     "upgrade": "Comanche Defense → Commander",
+     "unit": "heli",
+     "note": "Strong mid game and an easy save-up; mini-Comanche thresholds line up with the three wide loops."
+    },
+    {
+     "upgrade": "Carrier Flagship",
+     "unit": "bucc",
+     "note": "Its planes cover the lack of compact sections and can nearly solo into the 80s."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-off-the-coast"
+   ],
+   "order": 74
+  },
+  {
+   "id": "cornfield",
+   "name": "Cornfield",
+   "difficulty": "Advanced",
+   "traits": [
+    "Removable corn patches",
+    "Longest Advanced map"
+   ],
+   "summary": "Usually seen as one of the easiest Advanced maps: the longest, with cheap corn removal later.",
+   "placement": "There are four secret spots for No Harvest challenges (2nd, 5th and 6th bends, and above the 3rd).",
+   "recommended": [
+    {
+     "upgrade": "Ultra-Juggernaut",
+     "unit": "dart",
+     "note": "Balls bounce off the corn patches and rehit bloons; it makes the map simple in every mode."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-cornfield"
+   ],
+   "order": 75
+  },
+  {
+   "id": "underground",
+   "name": "Underground",
+   "difficulty": "Advanced",
+   "traits": [
+    "Two short lanes",
+    "Cave walls"
+   ],
+   "summary": "Near-average Advanced difficulty: short, but many spots cover both lanes.",
+   "placement": "The centre and the spaces above and below it; stalling support like Relentless Glue is very useful.",
+   "recommended": [
+    {
+     "upgrade": "Sauda",
+     "unit": "sauda",
+     "note": "At the far left or right of the central space she clears the early rounds and covers both lanes late with stun support."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-underground"
+   ],
+   "order": 76
+  },
+  {
+   "id": "tricky-tracks",
+   "name": "Tricky Tracks",
+   "difficulty": "Expert",
+   "traits": [
+    "Separated lanes",
+    "Bloons clump mid-track"
+   ],
+   "summary": "One of the less mechanically annoying Expert maps (v52 notes); a later speed-up may have made it harder.",
+   "placement": "Cover the separated lanes with long-range or seeking towers; crowd control in the middle of each track.",
+   "recommended": [
+    {
+     "upgrade": "Deadeye",
+     "unit": "desperado",
+     "note": "Its range covers the separated lanes in the mid game."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-tricky-tracks"
+   ],
+   "order": 77
+  },
+  {
+   "id": "glacial-trail",
+   "name": "Glacial Trail",
+   "difficulty": "Expert",
+   "traits": [
+    "Towers freeze periodically by placement round",
+    "Elevation and ice cliffs"
+   ],
+   "summary": "Towers freeze on a schedule based on the round they were placed; if all your key towers freeze together you lose.",
+   "placement": "Space key towers' placement rounds apart (check Stats → Round Placed); place most late-game towers on rounds ending in 2 or 4.",
+   "recommended": [],
+   "modeNotes": {
+    "chimps": "You can't sell towers about to freeze, so plan which towers each round needs and place them on time."
+   },
+   "sources": [
+    "wiki-map-glacial-trail"
+   ],
+   "order": 78
+  },
+  {
+   "id": "dark-dungeons",
+   "name": "Dark Dungeons",
+   "difficulty": "Expert",
+   "traits": [
+    "Six walled rooms",
+    "Up to four paths",
+    "Two far-apart MOAB lanes"
+   ],
+   "summary": "Considered by some a True Expert map (around the 5th hardest). The mid game is hardest; late game is mostly two blimp lanes.",
+   "placement": "Walls cut Sniper sightlines early; plan for the top MOAB path from the mid game.",
+   "recommended": [
+    {
+     "upgrade": "Sauda",
+     "unit": "sauda",
+     "note": "Both MOAB lanes have good bends for her."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-dark-dungeons"
+   ],
+   "order": 79
+  },
+  {
+   "id": "sanctuary",
+   "name": "Sanctuary",
+   "difficulty": "Expert",
+   "traits": [
+    "Moving platforms",
+    "Merging lanes",
+    "Four exits"
+   ],
+   "summary": "Hard early because platforms move towers, easier later where paths overlap; about as hard as Workshop.",
+   "placement": "Use the overlapping middle section for the mid and late game.",
+   "recommended": [
+    {
+     "upgrade": "Perma-Spike",
+     "unit": "spike",
+     "note": "A precise spot on the bottom-middle platform with Set Target, a Village and Stronger Stimulant tanks all leaks."
+    },
+    {
+     "upgrade": "Corvus",
+     "unit": "corvus",
+     "note": "Spear makes the hard early game much easier."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-sanctuary"
+   ],
+   "order": 80
+  },
+  {
+   "id": "ravine",
+   "name": "Ravine",
+   "difficulty": "Expert",
+   "traits": [
+    "Alternating entrances that split",
+    "Many line-of-sight blockers"
+   ],
+   "summary": "By consensus the second-hardest map.",
+   "placement": "The bottom-left space is surrounded by all four lanes; Monkey Aces ignore the blockers; stalls like Relentless Glue are vital.",
+   "recommended": [
+    {
+     "upgrade": "Sky Shredder",
+     "unit": "ace",
+     "note": "Ignores the blockers and shreds high-health blimps late."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-ravine"
+   ],
+   "order": 81
+  },
+  {
+   "id": "flooded-valley",
+   "name": "Flooded Valley",
+   "difficulty": "Expert",
+   "traits": [
+    "Overlapping lanes on a dam",
+    "Water",
+    "Land towers can't see over the wall"
+   ],
+   "summary": "Land towers are useless early unless they see over walls; water towers dominate the start. Overlap hides leaks.",
+   "placement": "Global or long-range towers on a rock; otherwise wait for Silas or Arctic Wind.",
+   "recommended": [
+    {
+     "upgrade": "Silas",
+     "unit": "silas",
+     "note": "Lets land towers go on water early; his level 7 ability with Ice Monkeys or Icicles clears Ceramics and MOABs."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-flooded-valley"
+   ],
+   "order": 82
+  },
+  {
+   "id": "infernal",
+   "name": "Infernal",
+   "difficulty": "Expert",
+   "traits": [
+    "Alternating lanes",
+    "Long lanes",
+    "Little space"
+   ],
+   "summary": "Generally the easiest Expert map, especially in CHIMPS: the longest Expert lanes and one entrance per round.",
+   "placement": "Alternating-lane towers excel: Heli Pilots, Snipers and Dartlings.",
+   "recommended": [
+    {
+     "upgrade": "Perma-Brewed Sniper army",
+     "unit": "sniper",
+     "note": "0-5-2 Elite Sniper and 0-2-5 Elite Defender with Jungle Drums and Stronger Stimulant save to Permanent Brew, then spam Snipers."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-infernal"
+   ],
+   "order": 83
+  },
+  {
+   "id": "bloody-puddles",
+   "name": "Bloody Puddles",
+   "difficulty": "Expert",
+   "traits": [
+    "Five paths, spawns change every round",
+    "Short tracks",
+    "True Expert"
+   ],
+   "summary": "Generally considered the hardest map in the game: bloons spawn far apart and the spawn points change every round.",
+   "placement": "The early game needs precise placement and some luck.",
+   "recommended": [
+    {
+     "upgrade": "Giant Condor",
+     "unit": "beast",
+     "note": "Pulls bloons into a single lane, turning most two-spawn rounds into one lane for low-range towers."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-bloody-puddles"
+   ],
+   "order": 84
+  },
+  {
+   "id": "workshop",
+   "name": "Workshop",
+   "difficulty": "Expert",
+   "traits": [
+    "Bloons 50% faster",
+    "Separate MOAB lane",
+    "Single exit",
+    "Toggleable gizmos"
+   ],
+   "summary": "Bloons move 50% faster, which makes the CHIMPS early game tough, but the single exit makes it one of the easier Expert maps.",
+   "placement": "Three Dart Monkeys in precise spots for the first rounds.",
+   "recommended": [
+    {
+     "upgrade": "Spike Factories",
+     "unit": "spike",
+     "note": "Fast bloons and one exit make Spike Factories excellent at tanking leaks."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-workshop"
+   ],
+   "order": 85
+  },
+  {
+   "id": "quad",
+   "name": "Quad",
+   "difficulty": "Expert",
+   "traits": [
+    "Four simultaneous lanes",
+    "Overlapping paths hide leaks",
+    "Central pond"
+   ],
+   "summary": "Looks easy but is a True Expert map, by consensus the third hardest: lanes are far apart and overlaps hide leaks.",
+   "placement": "Use separate defense clusters for the top and bottom halves.",
+   "recommended": [
+    {
+     "upgrade": "Sauda",
+     "unit": "sauda",
+     "note": "The overlaps let Sword Charge hit every bloon twice; add stuns like Relentless Glue."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-quad"
+   ],
+   "order": 86
+  },
+  {
+   "id": "dark-castle",
+   "name": "Dark Castle",
+   "difficulty": "Expert",
+   "traits": [
+    "Four entrances converging",
+    "Bloons immune under trees (removable, $1,000)",
+    "Open space"
+   ],
+   "summary": "Very short, but the converging exit and open space make it by consensus the second-easiest Expert map.",
+   "placement": "Spike Factories on the castle at the right are especially useful.",
+   "recommended": [
+    {
+     "upgrade": "Perma-Spike",
+     "unit": "spike",
+     "note": "The converging exit lets it tank leaks and cover weaknesses like Avatar of Wrath against DDTs."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-dark-castle"
+   ],
+   "order": 87
+  },
+  {
+   "id": "muddy-puddles",
+   "name": "Muddy Puddles",
+   "difficulty": "Expert",
+   "traits": [
+    "Four alternating lanes",
+    "No simultaneous lanes"
+   ],
+   "summary": "A very hard early game, but tower buffs made the rest easier; no longer considered True Expert.",
+   "placement": "Early towers must cover several lanes; long-range strategies excel. Late game, the first lane is easiest; focus local defense on lanes two and three.",
+   "recommended": [],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-muddy-puddles"
+   ],
+   "order": 88
+  },
+  {
+   "id": "ouch",
+   "name": "#Ouch",
+   "difficulty": "Expert",
+   "traits": [
+    "Four simultaneous lanes",
+    "Short lanes",
+    "Central pond (drainable)"
+   ],
+   "summary": "A True Expert map: four short lanes all active every round.",
+   "placement": "Water strategies (Destroyers with Permanent Brew) do well; wide-area towers in the middle excel.",
+   "recommended": [
+    {
+     "upgrade": "Symphonic Resonance",
+     "unit": "mermonkey",
+     "note": "From the central water its range covers all four lanes and stalls MOABs and DDTs."
+    },
+    {
+     "upgrade": "Grandmaster Ninja",
+     "unit": "ninja",
+     "note": "With the water drained, it's a strong Black Border pick with Shinobi Tactics."
+    }
+   ],
+   "modeNotes": {},
+   "sources": [
+    "wiki-map-ouch"
+   ],
+   "order": 89
   },
   {
    "id": "blons",
@@ -1909,303 +2294,8 @@
    "modeNotes": {},
    "sources": [
     "wiki-map-blons"
-   ]
-  },
-  {
-   "id": "bloody-puddles",
-   "name": "Bloody Puddles",
-   "difficulty": "Expert",
-   "traits": [
-    "Five paths, spawns change every round",
-    "Short tracks",
-    "True Expert"
    ],
-   "summary": "Generally considered the hardest map in the game: bloons spawn far apart and the spawn points change every round.",
-   "placement": "The early game needs precise placement and some luck.",
-   "recommended": [
-    {
-     "upgrade": "Giant Condor",
-     "unit": "beast",
-     "note": "Pulls bloons into a single lane, turning most two-spawn rounds into one lane for low-range towers."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-bloody-puddles"
-   ]
-  },
-  {
-   "id": "dark-castle",
-   "name": "Dark Castle",
-   "difficulty": "Expert",
-   "traits": [
-    "Four entrances converging",
-    "Bloons immune under trees (removable, $1,000)",
-    "Open space"
-   ],
-   "summary": "Very short, but the converging exit and open space make it by consensus the second-easiest Expert map.",
-   "placement": "Spike Factories on the castle at the right are especially useful.",
-   "recommended": [
-    {
-     "upgrade": "Perma-Spike",
-     "unit": "spike",
-     "note": "The converging exit lets it tank leaks and cover weaknesses like Avatar of Wrath against DDTs."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-dark-castle"
-   ]
-  },
-  {
-   "id": "dark-dungeons",
-   "name": "Dark Dungeons",
-   "difficulty": "Expert",
-   "traits": [
-    "Six walled rooms",
-    "Up to four paths",
-    "Two far-apart MOAB lanes"
-   ],
-   "summary": "Considered by some a True Expert map (around the 5th hardest). The mid game is hardest; late game is mostly two blimp lanes.",
-   "placement": "Walls cut Sniper sightlines early; plan for the top MOAB path from the mid game.",
-   "recommended": [
-    {
-     "upgrade": "Sauda",
-     "unit": "sauda",
-     "note": "Both MOAB lanes have good bends for her."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-dark-dungeons"
-   ]
-  },
-  {
-   "id": "flooded-valley",
-   "name": "Flooded Valley",
-   "difficulty": "Expert",
-   "traits": [
-    "Overlapping lanes on a dam",
-    "Water",
-    "Land towers can't see over the wall"
-   ],
-   "summary": "Land towers are useless early unless they see over walls; water towers dominate the start. Overlap hides leaks.",
-   "placement": "Global or long-range towers on a rock; otherwise wait for Silas or Arctic Wind.",
-   "recommended": [
-    {
-     "upgrade": "Silas",
-     "unit": "silas",
-     "note": "Lets land towers go on water early; his level 7 ability with Ice Monkeys or Icicles clears Ceramics and MOABs."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-flooded-valley"
-   ]
-  },
-  {
-   "id": "glacial-trail",
-   "name": "Glacial Trail",
-   "difficulty": "Expert",
-   "traits": [
-    "Towers freeze periodically by placement round",
-    "Elevation and ice cliffs"
-   ],
-   "summary": "Towers freeze on a schedule based on the round they were placed; if all your key towers freeze together you lose.",
-   "placement": "Space key towers' placement rounds apart (check Stats → Round Placed); place most late-game towers on rounds ending in 2 or 4.",
-   "recommended": [],
-   "modeNotes": {
-    "chimps": "You can't sell towers about to freeze, so plan which towers each round needs and place them on time."
-   },
-   "sources": [
-    "wiki-map-glacial-trail"
-   ]
-  },
-  {
-   "id": "infernal",
-   "name": "Infernal",
-   "difficulty": "Expert",
-   "traits": [
-    "Alternating lanes",
-    "Long lanes",
-    "Little space"
-   ],
-   "summary": "Generally the easiest Expert map, especially in CHIMPS: the longest Expert lanes and one entrance per round.",
-   "placement": "Alternating-lane towers excel: Heli Pilots, Snipers and Dartlings.",
-   "recommended": [
-    {
-     "upgrade": "Perma-Brewed Sniper army",
-     "unit": "sniper",
-     "note": "0-5-2 Elite Sniper and 0-2-5 Elite Defender with Jungle Drums and Stronger Stimulant save to Permanent Brew, then spam Snipers."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-infernal"
-   ]
-  },
-  {
-   "id": "muddy-puddles",
-   "name": "Muddy Puddles",
-   "difficulty": "Expert",
-   "traits": [
-    "Four alternating lanes",
-    "No simultaneous lanes"
-   ],
-   "summary": "A very hard early game, but tower buffs made the rest easier; no longer considered True Expert.",
-   "placement": "Early towers must cover several lanes; long-range strategies excel. Late game, the first lane is easiest; focus local defense on lanes two and three.",
-   "recommended": [],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-muddy-puddles"
-   ]
-  },
-  {
-   "id": "ouch",
-   "name": "#Ouch",
-   "difficulty": "Expert",
-   "traits": [
-    "Four simultaneous lanes",
-    "Short lanes",
-    "Central pond (drainable)"
-   ],
-   "summary": "A True Expert map: four short lanes all active every round.",
-   "placement": "Water strategies (Destroyers with Permanent Brew) do well; wide-area towers in the middle excel.",
-   "recommended": [
-    {
-     "upgrade": "Symphonic Resonance",
-     "unit": "mermonkey",
-     "note": "From the central water its range covers all four lanes and stalls MOABs and DDTs."
-    },
-    {
-     "upgrade": "Grandmaster Ninja",
-     "unit": "ninja",
-     "note": "With the water drained, it's a strong Black Border pick with Shinobi Tactics."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-ouch"
-   ]
-  },
-  {
-   "id": "quad",
-   "name": "Quad",
-   "difficulty": "Expert",
-   "traits": [
-    "Four simultaneous lanes",
-    "Overlapping paths hide leaks",
-    "Central pond"
-   ],
-   "summary": "Looks easy but is a True Expert map, by consensus the third hardest: lanes are far apart and overlaps hide leaks.",
-   "placement": "Use separate defense clusters for the top and bottom halves.",
-   "recommended": [
-    {
-     "upgrade": "Sauda",
-     "unit": "sauda",
-     "note": "The overlaps let Sword Charge hit every bloon twice; add stuns like Relentless Glue."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-quad"
-   ]
-  },
-  {
-   "id": "ravine",
-   "name": "Ravine",
-   "difficulty": "Expert",
-   "traits": [
-    "Alternating entrances that split",
-    "Many line-of-sight blockers"
-   ],
-   "summary": "By consensus the second-hardest map.",
-   "placement": "The bottom-left space is surrounded by all four lanes; Monkey Aces ignore the blockers; stalls like Relentless Glue are vital.",
-   "recommended": [
-    {
-     "upgrade": "Sky Shredder",
-     "unit": "ace",
-     "note": "Ignores the blockers and shreds high-health blimps late."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-ravine"
-   ]
-  },
-  {
-   "id": "sanctuary",
-   "name": "Sanctuary",
-   "difficulty": "Expert",
-   "traits": [
-    "Moving platforms",
-    "Merging lanes",
-    "Four exits"
-   ],
-   "summary": "Hard early because platforms move towers, easier later where paths overlap; about as hard as Workshop.",
-   "placement": "Use the overlapping middle section for the mid and late game.",
-   "recommended": [
-    {
-     "upgrade": "Perma-Spike",
-     "unit": "spike",
-     "note": "A precise spot on the bottom-middle platform with Set Target, a Village and Stronger Stimulant tanks all leaks."
-    },
-    {
-     "upgrade": "Corvus",
-     "unit": "corvus",
-     "note": "Spear makes the hard early game much easier."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-sanctuary"
-   ]
-  },
-  {
-   "id": "tricky-tracks",
-   "name": "Tricky Tracks",
-   "difficulty": "Expert",
-   "traits": [
-    "Separated lanes",
-    "Bloons clump mid-track"
-   ],
-   "summary": "One of the less mechanically annoying Expert maps (v52 notes); a later speed-up may have made it harder.",
-   "placement": "Cover the separated lanes with long-range or seeking towers; crowd control in the middle of each track.",
-   "recommended": [
-    {
-     "upgrade": "Deadeye",
-     "unit": "desperado",
-     "note": "Its range covers the separated lanes in the mid game."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-tricky-tracks"
-   ]
-  },
-  {
-   "id": "workshop",
-   "name": "Workshop",
-   "difficulty": "Expert",
-   "traits": [
-    "Bloons 50% faster",
-    "Separate MOAB lane",
-    "Single exit",
-    "Toggleable gizmos"
-   ],
-   "summary": "Bloons move 50% faster, which makes the CHIMPS early game tough, but the single exit makes it one of the easier Expert maps.",
-   "placement": "Three Dart Monkeys in precise spots for the first rounds.",
-   "recommended": [
-    {
-     "upgrade": "Spike Factories",
-     "unit": "spike",
-     "note": "Fast bloons and one exit make Spike Factories excellent at tanking leaks."
-    }
-   ],
-   "modeNotes": {},
-   "sources": [
-    "wiki-map-workshop"
-   ]
+   "order": 90
   }
  ]
 }

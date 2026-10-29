@@ -291,6 +291,34 @@ for (const f of eventsFile?.formats ?? []) checkSourceIds(f.sources, `events.jso
 const freeplayFile = load('freeplay');
 if (freeplayFile) checkSourceIds(freeplayFile.sources, 'freeplay.json');
 
+// Boss pages: every boss needs its page fields, and picks must point at real towers, heroes or Paragons.
+const bossUnitIds = new Set([...towers.map((x) => x.id), ...heroes.map((x) => x.id)]);
+for (const b of bossesFile?.bosses ?? []) {
+  const at = `bosses.json "${b.id}"`;
+  for (const key of ['title', 'summary', 'introduced']) if (typeof b[key] !== 'string' || !b[key]) problems.push(`${at}: needs "${key}"`);
+  for (const key of ['mechanics', 'stages', 'eliteNotes', 'money', 'tips']) if (!Array.isArray(b[key]) || !b[key].length) problems.push(`${at}: needs a "${key}" list`);
+  for (const s of b.stages ?? []) for (const p of s.picks ?? []) {
+    if (!p.unit) continue;
+    const ok = p.unit.startsWith('paragon:') ? paragonIds.has(p.unit.slice(8)) : bossUnitIds.has(p.unit);
+    if (!ok) problems.push(`${at}: pick "${p.name}" points at unknown "${p.unit}"`);
+  }
+}
+
+// Monkey Knowledge tab
+const knowledgeFile = load('knowledge');
+if (knowledgeFile) {
+  const cats = new Set(knowledgeFile.categories);
+  const names = new Set(knowledgeFile.entries.map((e) => e.name));
+  for (const e of knowledgeFile.entries) {
+    const at = `knowledge.json "${e.name}"`;
+    if (!cats.has(e.category)) problems.push(`${at}: unknown category "${e.category}"`);
+    if (!e.effect) problems.push(`${at}: needs an effect`);
+    for (const r of e.requires ?? []) if (!names.has(r)) problems.push(`${at}: requires unknown "${r}"`);
+    for (const id of e.towers ?? []) if (!towers.some((x) => x.id === id)) problems.push(`${at}: unknown tower "${id}"`);
+  }
+  checkSourceIds(knowledgeFile.sources, 'knowledge.json');
+}
+
 // Spanish dictionary (js/lib/i18n.js): exact strings and regex patterns must be usable.
 const es = load('i18n/es');
 if (es) {

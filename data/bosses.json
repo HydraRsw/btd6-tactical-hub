@@ -37,10 +37,115 @@
    ],
    "extra": null,
    "sources": [
+    "wiki-boss-page-bloonarius",
     "wiki-bloonarius",
-    "wiki-boss-bloon"
+    "wiki-boss-event"
    ],
-   "note": "High health, slow; its threat is the bloons it spawns. Damage releases Bleed bloons, and skulls spawn waves (BADs at later tiers). Mix boss damage with spawn defense; Geraldo's Blade Trap helps."
+   "note": "High health, slow; its threat is the bloons it spawns. Damage releases Bleed bloons, and skulls spawn waves (BADs at later tiers). Mix boss damage with spawn defense; Geraldo's Blade Trap helps.",
+   "title": "The Inflator",
+   "introduced": "v27.0",
+   "summary": "The first and simplest boss. It is slow and has a lot of health, but every hit makes it spray bloons across the track, and each skull drops a dense pack right in front of it. Under-built defenses get overrun by the spawns rather than by the boss.",
+   "mechanics": [
+    {
+     "name": "Scattered bloons",
+     "text": "For every 1% of health it loses, it scatters bloons along the whole track (green at tier 1 up to rainbows at tier 5; Elite sends much stronger ones). They are briefly immune when they appear and give no cash."
+    },
+    {
+     "name": "Skull burst",
+     "text": "At each skull it stops for half a second, scatters a big wave and spawns a dense pack in front of it: Ceramics at tiers 1–2, MOABs at tier 3, ZOMGs at tier 4 and a BAD at tier 5 (Elite adds BADs and DDTs much earlier)."
+    },
+    {
+     "name": "Slow movement",
+     "text": "It is the slowest regular boss, so towers that need time on target (Overdrive, Avatar of Wrath, spike setups) get long windows."
+    }
+   ],
+   "stages": [
+    {
+     "label": "Tiers 1–2",
+     "note": "Split the defense: something that damages the boss, and very high pierce for the spawns. Put boss damage on Strong so the spawns don't distract it.",
+     "picks": [
+      {
+       "name": "Elite Defender",
+       "note": "Reliable tier 1 option.",
+       "unit": "sniper",
+       "route": "0-2-5"
+      },
+      {
+       "name": "Overdrive / The Tack Zone + Embrittlement",
+       "note": "Its slow speed keeps it in range for a long time.",
+       "unit": "tack",
+       "route": "2-0-4"
+      },
+      {
+       "name": "Avatar of Wrath + Poplust",
+       "note": "Same idea: shines against a slow boss.",
+       "unit": "druid",
+       "route": "0-1-5"
+      },
+      {
+       "name": "M.O.A.R Glaives / Glaive Lord",
+       "note": "Cleans up the spawns.",
+       "unit": "boomer",
+       "route": "4-0-2"
+      },
+      {
+       "name": "Bloon Liquefier / The Bloon Solver",
+       "note": "Huge pierce against the scattered bloons.",
+       "unit": "glue",
+       "route": "4-2-0"
+      },
+      {
+       "name": "Jungle's Bounty / Spirit of the Forest",
+       "note": "Covers the whole track against spawns.",
+       "unit": "druid",
+       "route": "0-4-1"
+      },
+      {
+       "name": "Geraldo's Blade Trap",
+       "note": "Cheap and very good against each skull pack.",
+       "unit": "geraldo"
+      }
+     ]
+    },
+    {
+     "label": "Tiers 3–5",
+     "note": "Expensive towers and Paragons handle it; whatever kills the boss usually also kills the spawns, as long as it has the range.",
+     "picks": [
+      {
+       "name": "Apex Plasma Master",
+       "note": "Cheap Paragon that does very well here.",
+       "unit": "paragon:apex-plasma-master"
+      },
+      {
+       "name": "Magus Perfectus",
+       "note": "One of the highest boss-damage Paragons.",
+       "unit": "paragon:magus-perfectus"
+      },
+      {
+       "name": "Mega Massive Munitions Factory",
+       "note": "Spike piles for boss and spawns alike.",
+       "unit": "paragon:mmmf"
+      },
+      {
+       "name": "Root of all Nature",
+       "note": "Recommended against Bloonarius.",
+       "unit": "paragon:root-of-all-nature"
+      }
+     ]
+    }
+   ],
+   "eliteNotes": [
+    "Elite sends Pinks and Ceramics from tier 1 and BFBs at the tier 2 skulls, so plan spawn cleanup earlier.",
+    "Elite tier 5 spawns Fortified BADs at each skull and camo DDTs in its scatter: keep camo cleanup near the exit."
+   ],
+   "money": [
+    "Spawned bloons give no cash, so don't count on the fight to pay for itself: farm in the first 40 rounds as usual.",
+    "Because it is slow, cheap spike and Druid setups go a long way at tier 1, leaving more cash for farms."
+   ],
+   "tips": [
+    "Set boss-damage towers to Strong; switch them to First only when the spawns get dangerous.",
+    "M.A.D works, but place it so its rockets reach the boss before the spawns eat their pierce."
+   ]
   },
   {
    "id": "lych",
@@ -65,10 +170,180 @@
    ],
    "extra": null,
    "sources": [
+    "wiki-boss-page-lych",
     "wiki-lych",
-    "wiki-boss-bloon"
+    "wiki-boss-event"
    ],
-   "note": "Steals most buffs (not Village range) and heals when you sell. Its soul drains lives and it revives MOABs. Keep Overclock, Call to Arms and brews away from it; Elite Defender (2-0-5) can solo it from range."
+   "note": "Steals most buffs (not Village range) and heals when you sell. Its soul drains lives and it revives MOABs. Keep Overclock, Call to Arms and brews away from it; Elite Defender (2-0-5) can solo it from range.",
+   "title": "The Gravelord",
+   "introduced": "v28.0",
+   "summary": "Lych punishes buffs and compact defenses. It heals over time, steals temporary buffs from nearby towers, halves sell value while it is out, raises undead MOABs from tombstones, and at each skull turns invulnerable until its souls spread along the track are destroyed.",
+   "mechanics": [
+    {
+     "name": "Regrow",
+     "text": "It heals 1.5% of its health every 9 seconds (more after each skull). Anything that removes Regrow stops it, such as Heart of Oak or Cleansing Foam."
+    },
+    {
+     "name": "Buff absorbing",
+     "text": "Every 12 seconds it strips temporary buffs from towers within 100 units: brews (even Permanent Brew), Overclock, Ultraboost, Call to Arms, Turbo Charge. It cannot steal Jungle Drums, Shinobi Tactics, Carrier Flagship, hero buffs, powers or map effects."
+    },
+    {
+     "name": "Tombstones and undead MOABs",
+     "text": "It keeps dropping tombstones behind it that raise undead MOABs, BFBs and ZOMGs. Tombstones soak pierce, are top priority for Strong targeting, and burst into a large group if left alone."
+    },
+    {
+     "name": "Souls at each skull",
+     "text": "At each skull it goes ethereal (can't be hit, moves at half speed) and sends Lych-souls to fixed points along the track (2–3 on Normal, 5 on Elite). Souls drain lives and must all be popped to make Lych vulnerable again."
+    },
+    {
+     "name": "Lower sell value",
+     "text": "While it is on the map, towers sell for 35% instead of 70%."
+    }
+   ],
+   "stages": [
+    {
+     "label": "Tier 1",
+     "note": "The souls and undead MOABs are the real danger, not Lych. Jungle Drums is worth it at every tier because Lych can't steal it.",
+     "picks": [
+      {
+       "name": "Elite Defender",
+       "note": "Fully counters it: souls drain lives, which speeds Elite Defender up. Keep it far from Lych and give it camo detection.",
+       "unit": "sniper",
+       "route": "2-0-5"
+      },
+      {
+       "name": "MOAB Eliminator + MOAB Assassin",
+       "note": "Attack normally and save the ability for when the soul appears.",
+       "unit": "bomb",
+       "route": "0-5-0"
+      },
+      {
+       "name": "Spike Storm ×3",
+       "note": "Space out their abilities between Lych and its spawns.",
+       "unit": "spike",
+       "route": "2-4-0"
+      },
+      {
+       "name": "Sub Commander",
+       "note": "With vision of the whole track; better with Triple Guns or Brickell.",
+       "unit": "sub",
+       "route": "2-0-5"
+      },
+      {
+       "name": "Aircraft Carrier / Carrier Flagship",
+       "note": "Global range against the souls.",
+       "unit": "bucc",
+       "route": "4-2-0"
+      }
+     ]
+    },
+    {
+     "label": "Tier 2",
+     "note": "Spread damage along the track; add something that can stall MOABs from anywhere (MOAB Shove, Maim MOAB).",
+     "picks": [
+      {
+       "name": "M.A.D",
+       "note": "Don't use Emergency Unlock.",
+       "unit": "dartling",
+       "route": "1-5-0"
+      },
+      {
+       "name": "Avatar of Wrath + 5 Poplust",
+       "note": "Works, but only if Lych spends time in its range.",
+       "unit": "druid",
+       "route": "0-1-5"
+      },
+      {
+       "name": "Cripple MOAB",
+       "note": "Big damage debuff.",
+       "unit": "sniper",
+       "route": "5-0-2"
+      },
+      {
+       "name": "Master Bomber",
+       "note": "Hits boss, soul and MOABs at once.",
+       "unit": "ninja",
+       "route": "1-0-5"
+      },
+      {
+       "name": "First Strike Capability ×4",
+       "note": "Use them in pairs: one for the skull, one for the soul.",
+       "unit": "sub",
+       "route": "2-4-0"
+      }
+     ]
+    },
+    {
+     "label": "Tier 3",
+     "note": "Few single towers can do it alone; combine two or three tier 2 options, or buy any Paragon (degree 1 is enough).",
+     "picks": [
+      {
+       "name": "Megalodon",
+       "note": "Power 84 almost always works; 132 on hard weeks.",
+       "unit": "beast",
+       "route": "5-0-0"
+      },
+      {
+       "name": "Legend of the Night",
+       "note": "Single-tower option.",
+       "unit": "super",
+       "route": "2-0-5"
+      },
+      {
+       "name": "Any Paragon",
+       "note": "Degree 1 is enough.",
+       "unit": "paragon:apex-plasma-master"
+      }
+     ]
+    },
+    {
+     "label": "Tiers 4–5",
+     "note": "Paragons. For tier 5 plan about four Paragons at degree 40+ (or three at 60+). Keep backup at the exit (Super Glue + MOAB Domination, or Perma-Spike).",
+     "picks": [
+      {
+       "name": "Goliath Doomship",
+       "note": "Degree 1 at tier 4, 20+ at tier 5; degree 80 beats it alone.",
+       "unit": "paragon:goliath-doomship"
+      },
+      {
+       "name": "Navarch of the Seas",
+       "note": "Degree 20 at tier 4, 40+ at tier 5.",
+       "unit": "paragon:navarch"
+      },
+      {
+       "name": "Nautic Siege Core",
+       "note": "Degree 20 at tier 4, 40+ at tier 5.",
+       "unit": "paragon:nautic-siege-core"
+      },
+      {
+       "name": "Glaive Dominus",
+       "note": "Degree 60+ for tier 5.",
+       "unit": "paragon:glaive-dominus"
+      },
+      {
+       "name": "Root of all Nature",
+       "note": "Deals far more damage to Regrow bloons like Lych.",
+       "unit": "paragon:root-of-all-nature"
+      }
+     ]
+    }
+   ],
+   "eliteNotes": [
+    "Elite has more skulls and five souls, so compact defenses struggle even more.",
+    "Tier 1: Elite Defender, 4× Spike Storm, Sub Commander with Triple Guns, or 3× Aircraft Carrier, plus a MOAB stall.",
+    "Tier 3 is usually a degree 20 Apex Plasma Master, Crucible or Glaive Dominus."
+   ],
+   "money": [
+    "Sell value drops to 35% while Lych is out: do your selling (farms into Paragons) between tiers, when it isn't on the map.",
+    "Its souls drain lives, so early farming has less room for leaks: buy a little more defense before round 40.",
+    "Keep Overclock and Ultraboost on farms far from the track; at tier 5 Lych reaches the whole map."
+   ],
+   "tips": [
+    "Don't lean on Permanent Brew, Call to Arms or Homeland Defense near Lych; Village buffs and Jungle Drums are safe.",
+    "Spread cheap Regrow removal (Heart of Oak, Cleansing Foam) so it never heals.",
+    "After tier 1 the 40s still send many MOABs (many Fortified): keep MOAB defense up.",
+    "From tier 4 it can raise DDTs; rounds 102–118 and 128–138 with Fortified DDTs need a global-range answer."
+   ]
   },
   {
    "id": "vortex",
@@ -93,10 +368,110 @@
    ],
    "extra": null,
    "sources": [
+    "wiki-boss-page-vortex",
     "wiki-vortex",
-    "wiki-boss-bloon"
+    "wiki-boss-event"
    ],
-   "note": "Speeds every bloon up until they reach it. At each skull it is knocked back, shielded, and stuns nearby towers. Use long-range towers, spread defenses along the track and keep exit backup."
+   "note": "Speeds every bloon up until they reach it. At each skull it is knocked back, shielded, and stuns nearby towers. Use long-range towers, spread defenses along the track and keep exit backup.",
+   "title": "Deadly Master of Air",
+   "introduced": "v31.0",
+   "summary": "A fast boss that speeds up every bloon until they touch it. At each skull it is knocked back, raises a shield and stuns nearby towers, and every few seconds it blows away nearby projectiles. It beats compact defenses; long-range towers spread along the track beat it.",
+   "mechanics": [
+    {
+     "name": "Slipstream",
+     "text": "While it is alive, all bloons move 2.5× faster until they reach Vortex. On multi-lane maps, bloons on another lane keep the boost all the way to the exit."
+    },
+    {
+     "name": "Storm pulse",
+     "text": "Every 5 seconds it destroys projectiles within 60 units, including Spike Factory spikes and banana/trap collectibles."
+    },
+    {
+     "name": "Skull: knockback, shield, stun",
+     "text": "At each skull it jumps 100 units back, deflects projectiles for 6 seconds and stuns nearby towers (no attacks, abilities or income; the stun grows at higher tiers). One hit can never carry damage past a skull."
+    }
+   ],
+   "stages": [
+    {
+     "label": "Tiers 1–2",
+     "note": "Use towers that hit it from far away (so they avoid the stun) and that can catch sped-up bloons that run past it.",
+     "picks": [
+      {
+       "name": "Elite Defender",
+       "note": "Global range, away from the stun.",
+       "unit": "sniper",
+       "route": "2-0-5"
+      },
+      {
+       "name": "M.A.D",
+       "note": "Strong against MOABs and the boss.",
+       "unit": "dartling",
+       "route": "1-5-0"
+      },
+      {
+       "name": "Master Bomber",
+       "note": "Its bombs follow the boss.",
+       "unit": "ninja",
+       "route": "1-0-5"
+      },
+      {
+       "name": "First Strike Capability",
+       "note": "A global strike at the right moment.",
+       "unit": "sub",
+       "route": "0-4-0"
+      },
+      {
+       "name": "Triple Guns / Armor Piercing Darts + Advanced Intel",
+       "note": "Several Subs firing from afar.",
+       "unit": "sub",
+       "route": "2-0-3"
+      },
+      {
+       "name": "Aircraft Carrier / Carrier Flagship",
+       "note": "Its planes follow it around the map.",
+       "unit": "bucc",
+       "route": "4-2-0"
+      },
+      {
+       "name": "Monkey Ace / Heli Pilot",
+       "note": "They attack without sitting next to the boss.",
+       "unit": "ace"
+      }
+     ]
+    },
+    {
+     "label": "Tiers 3–5",
+     "note": "Paragons that hit hard from range. Accept that some towers get stunned, but keep extra defense elsewhere so bloons can't walk out meanwhile.",
+     "picks": [
+      {
+       "name": "Nautic Siege Core",
+       "note": "Recommended for high-tier Vortex.",
+       "unit": "paragon:nautic-siege-core"
+      },
+      {
+       "name": "Ascended Shadow",
+       "note": "Strong against Vortex.",
+       "unit": "paragon:ascended-shadow"
+      },
+      {
+       "name": "Goliath Doomship",
+       "note": "Its aircraft avoid the stun.",
+       "unit": "paragon:goliath-doomship"
+      }
+     ]
+    }
+   ],
+   "eliteNotes": [
+    "Elite has seven skulls, so it stuns and resets far more often: spread defenses even more."
+   ],
+   "money": [
+    "Its storm pulse destroys banana crates near it: keep farms away from the track or use farms that auto-collect (Banana Central, Marketplaces, Merchantmen).",
+    "Stunned towers make no income, so keep income towers out of its stun range."
+   ],
+   "tips": [
+    "A Support Chinook can carry key towers out of the stun range just before a skull.",
+    "Late on, stall bloons at the very start of the track (Bloon Crush): sped-up bloons can't use their speed if they can't move, and Vortex won't stun towers it has passed.",
+    "Watch lanes Vortex doesn't use: bloons there keep the 2.5× speed to the exit."
+   ]
   },
   {
    "id": "dreadbloon",
@@ -138,10 +513,141 @@
     "note": "Armor layers come on top of its health."
    },
    "sources": [
+    "wiki-boss-page-dreadbloon",
     "wiki-dreadbloon",
-    "wiki-boss-bloon"
+    "wiki-boss-event"
    ],
-   "note": "Cycles immunity through Primary, Military, Magic and Support, so mix tower classes. Constantly spawns Dreadrock bloons and has a Ceramic phase then a Lead phase that reduces incoming damage."
+   "note": "Cycles immunity through Primary, Military, Magic and Support, so mix tower classes. Constantly spawns Dreadrock bloons and has a Ceramic phase then a Lead phase that reduces incoming damage.",
+   "title": "Armored Behemoth",
+   "introduced": "v34.0",
+   "summary": "Dreadbloon cycles immunity through the four tower classes, starts each skull phase inside a Ceramic shell, becomes Lead underneath and shrugs off a flat amount of every hit. While the shell is up it keeps sending Dreadrock bloons that grab Strong targeting.",
+   "mechanics": [
+    {
+     "name": "Class immunity",
+     "text": "Immune to Primary first, then Military, Magic and Support after each skull, cycling (Elite cycles twice). Immune towers' shots bounce off and can't apply effects."
+    },
+    {
+     "name": "Ceramic armor shell",
+     "text": "Each phase starts with a shell worth 50% of its health (35% on Elite) that slows it heavily. Bonus MOAB, boss and some Ceramic damage apply to it."
+    },
+    {
+     "name": "Lead body and damage reduction",
+     "text": "Under the shell it is Lead (immune to sharp, cold and energy) and takes 1 less damage per hit (2–3 on Elite tiers 4–5). Glue Strike, Embrittlement and MIB help."
+    },
+    {
+     "name": "Dreadrock bloons",
+     "text": "While the shell is up, fast rock bloons spawn from the entrances. They share its immunity and are top priority for Strong targeting."
+    },
+    {
+     "name": "Harder rounds",
+     "text": "Normal Lead and Ceramic bloons become Fortified, Zebras become Leads, Rainbows become Ceramics, and MOABs become Fortified (every other one after round 40, all after 70)."
+    }
+   ],
+   "stages": [
+    {
+     "label": "Tiers 1–2",
+     "note": "Pick a main damage source plus a backup from another class for the phase your main one is immune to. Selling and switching classes between phases also works.",
+     "picks": [
+      {
+       "name": "MOAB Assassin / MOAB Eliminator",
+       "note": "Primary; also clears the rocks.",
+       "unit": "bomb",
+       "route": "0-4-0"
+      },
+      {
+       "name": "Overdrive + Embrittlement",
+       "note": "Primary, with support for the Lead phase.",
+       "unit": "tack",
+       "route": "2-0-4"
+      },
+      {
+       "name": "Elite Defender",
+       "note": "Military.",
+       "unit": "sniper",
+       "route": "2-0-5"
+      },
+      {
+       "name": "Artillery Battery / Pop and Awe",
+       "note": "Military.",
+       "unit": "mortar",
+       "route": "2-4-0"
+      },
+      {
+       "name": "Plasma Accelerator",
+       "note": "Military.",
+       "unit": "dartling",
+       "route": "4-2-0"
+      },
+      {
+       "name": "Sun Avatar",
+       "note": "Magic.",
+       "unit": "super",
+       "route": "3-0-2"
+      },
+      {
+       "name": "Master Bomber",
+       "note": "Magic.",
+       "unit": "ninja",
+       "route": "1-0-5"
+      },
+      {
+       "name": "MOAB SHREDR",
+       "note": "Support.",
+       "unit": "spike",
+       "route": "0-3-2"
+      }
+     ]
+    },
+    {
+     "label": "Tier 3",
+     "note": "Get a Paragon ready, ideally a Primary one: keep the tier 2 defense to break the Primary-immune phase, then sell into Apex Plasma Master or Glaive Dominus.",
+     "picks": [
+      {
+       "name": "Apex Plasma Master",
+       "note": "Cheap Primary Paragon.",
+       "unit": "paragon:apex-plasma-master"
+      },
+      {
+       "name": "Glaive Dominus",
+       "note": "Primary Paragon.",
+       "unit": "paragon:glaive-dominus"
+      }
+     ]
+    },
+    {
+     "label": "Tiers 4–5",
+     "note": "Paragons from different classes, so one is always allowed to hit.",
+     "picks": [
+      {
+       "name": "Goliath Doomship",
+       "note": "Military.",
+       "unit": "paragon:goliath-doomship"
+      },
+      {
+       "name": "Magus Perfectus",
+       "note": "Magic.",
+       "unit": "paragon:magus-perfectus"
+      },
+      {
+       "name": "Mega Massive Munitions Factory",
+       "note": "Support.",
+       "unit": "paragon:mmmf"
+      }
+     ]
+    }
+   ],
+   "eliteNotes": [
+    "Elite cycles the immunities twice and its rocks follow the same immunity, so a single class never carries the fight.",
+    "Its damage reduction rises to 2 at tier 4 and 3 at tier 5: low-damage, high-speed attacks lose most of their value."
+   ],
+   "money": [
+    "Fortified rounds are tougher, so the early defense costs more than usual: farm, but don't skimp on lead and Fortified answers.",
+    "Plan which towers you'll sell when the immunity changes; selling at 70% between phases is part of the strategy."
+   ],
+   "tips": [
+    "Check targeting: Strong sends shots at the rocks first. Use First or Last on boss-damage towers.",
+    "A degree 20 Primary Paragon handles the rocks for the rest of the game."
+   ]
   },
   {
    "id": "phayze",
@@ -183,10 +689,182 @@
     "note": "The shield comes on top of its health."
    },
    "sources": [
+    "wiki-boss-page-phayze",
     "wiki-phayze",
-    "wiki-boss-bloon"
+    "wiki-boss-event"
    ],
-   "note": "Camo, warps ahead after skulls, and jams radar so towers attack about half the time. Use native-camo, long-range towers (Elite Defender, Aircraft Carrier, Plasma Accelerator)."
+   "note": "Camo, warps ahead after skulls, and jams radar so towers attack about half the time. Use native-camo, long-range towers (Elite Defender, Aircraft Carrier, Plasma Accelerator).",
+   "title": "The Reality Warper",
+   "introduced": "v38.0",
+   "summary": "Phayze is Camo, keeps switching camo support off, warps ahead along the track at each skull and slows every tower on screen more and more. It is easy on looping maps and very hard on maps where towers only get one pass at it.",
+   "mechanics": [
+    {
+     "name": "Camo",
+     "text": "It is a Camo bloon. Decamo works, but Radar Jam restores its camo."
+    },
+    {
+     "name": "Radar Jam",
+     "text": "Every 24 seconds it disables camo-granting buffs on non-Paragon towers for 12 seconds, regains camo (and can't lose it for 12 seconds), and pulls bloons behind it up to its position, making them camo."
+    },
+    {
+     "name": "Reality Shield",
+     "text": "A shield worth 25% of its health that makes it much faster until it breaks; it comes back at every skull."
+    },
+    {
+     "name": "Warp and portal",
+     "text": "At each skull it dashes about 8% of the track (immune meanwhile) and leaves a portal where new bloons spawn instead of the entrance."
+    },
+    {
+     "name": "Slow aura",
+     "text": "After the first skull, every tower on screen (Paragons too) attacks slower, and it gets worse with each skull."
+    }
+   ],
+   "stages": [
+    {
+     "label": "Tier 1",
+     "note": "You need towers with their own camo detection and global or very long range.",
+     "picks": [
+      {
+       "name": "Elite Defender",
+       "note": "Own camo detection and global range.",
+       "unit": "sniper",
+       "route": "0-2-5"
+      },
+      {
+       "name": "Aircraft Carrier",
+       "note": "Global range.",
+       "unit": "bucc",
+       "route": "4-0-2"
+      },
+      {
+       "name": "Plasma Accelerator",
+       "note": "Covers a lot of track.",
+       "unit": "dartling",
+       "route": "4-2-0"
+      },
+      {
+       "name": "Sticky Bomb ×2–3",
+       "note": "Spread to cover most of the track.",
+       "unit": "ninja",
+       "route": "1-0-4"
+      },
+      {
+       "name": "Spike Storm ×2",
+       "note": "Global ability.",
+       "unit": "spike",
+       "route": "1-4-0"
+      },
+      {
+       "name": "Sub Commander",
+       "note": "Give it vision from towers that see camo natively.",
+       "unit": "sub",
+       "route": "2-0-5"
+      }
+     ]
+    },
+    {
+     "label": "Tier 2",
+     "note": "Mostly upgrades of the tier 1 picks.",
+     "picks": [
+      {
+       "name": "Golden Justice",
+       "note": "On open maps; mark it with Marked to Pop.",
+       "unit": "desperado",
+       "route": "2-5-0"
+      },
+      {
+       "name": "Carrier Flagship",
+       "note": "On longer maps.",
+       "unit": "bucc",
+       "route": "5-0-2"
+      },
+      {
+       "name": "Sky Shredder",
+       "note": "Global damage.",
+       "unit": "ace",
+       "route": "5-2-0"
+      },
+      {
+       "name": "M.A.D",
+       "note": "Strong against Phayze.",
+       "unit": "dartling",
+       "route": "1-5-0"
+      },
+      {
+       "name": "Master Bomber",
+       "note": "Follows the boss.",
+       "unit": "ninja",
+       "route": "1-0-5"
+      },
+      {
+       "name": "Blooncineration",
+       "note": "Tier 2 option.",
+       "unit": "mortar",
+       "route": "2-0-5"
+      }
+     ]
+    },
+    {
+     "label": "Tier 3",
+     "note": "Add buffs (Permanent Brew, Call to Arms, Jungle Drums) and boss debuffs (Cripple MOAB, Super Brittle, Glue Storm). Dart and Boomerang Paragons can beat it at degree 1 on most maps.",
+     "picks": [
+      {
+       "name": "Legend of the Night",
+       "note": "Single-tower option.",
+       "unit": "super",
+       "route": "2-0-5"
+      },
+      {
+       "name": "Apex Plasma Master",
+       "note": "Degree 1 usually enough.",
+       "unit": "paragon:apex-plasma-master"
+      },
+      {
+       "name": "Glaive Dominus",
+       "note": "Degree 1 usually enough.",
+       "unit": "paragon:glaive-dominus"
+      }
+     ]
+    },
+    {
+     "label": "Tiers 4–5",
+     "note": "Sell a Primary Paragon from tier 3 into one suited to Phayze; degree 20+ global-range Paragons beat tiers 4 and 5 almost anywhere.",
+     "picks": [
+      {
+       "name": "Nautic Siege Core",
+       "note": "Global range.",
+       "unit": "paragon:nautic-siege-core"
+      },
+      {
+       "name": "Ascended Shadow",
+       "note": "Also gives camo detection Radar Jam can't disable.",
+       "unit": "paragon:ascended-shadow"
+      },
+      {
+       "name": "Navarch of the Seas",
+       "note": "Recommended against Phayze.",
+       "unit": "paragon:navarch"
+      },
+      {
+       "name": "Goliath Doomship",
+       "note": "Degree 1 with good micro.",
+       "unit": "paragon:goliath-doomship"
+      }
+     ]
+    }
+   ],
+   "eliteNotes": [
+    "Elite moves faster with its shield and slows towers more at every tier: single-tower answers struggle on short maps.",
+    "Tier 1 Elite: Elite Defender, Carrier Flagship, 2× Plasma Accelerator or 4× Spike Storm, ideally with Stronger Stimulant and Jungle Drums."
+   ],
+   "money": [
+    "Camo support (Radar Scanner, Etienne) only works half the time: budget for towers that see camo on their own instead of relying on cheap camo buffs.",
+    "In Least Cash and Least Tiers events, the late portal plus Radar Jam pulls put bloons near the exit; rounds 128–138 need extra backup."
+   ],
+   "tips": [
+    "Map matters most: on looping maps (Monkey Meadow, Four Circles) compact spam is fine; on one-pass maps you need global range.",
+    "Use MOAB Eliminator's ability only while Radar Jam is off, or the shot can be wasted."
+   ]
   },
   {
    "id": "blastapopoulos",
@@ -211,10 +889,109 @@
    ],
    "extra": null,
    "sources": [
+    "wiki-boss-page-blastapopoulos",
     "wiki-blastapopoulos",
-    "wiki-boss-bloon"
+    "wiki-boss-event"
    ],
-   "note": "Purple, burns off damage-over-time, and shrinks tower range. Most hits add heat; overheating stuns towers and slows abilities. Ice towers cut heat, and Ice Monkeys and Silas ignore the overheat."
+   "note": "Purple, burns off damage-over-time, and shrinks tower range. Most hits add heat; overheating stuns towers and slows abilities. Ice towers cut heat, and Ice Monkeys and Silas ignore the overheat.",
+   "title": "Demon of the Core",
+   "introduced": "v45.0",
+   "summary": "A Purple boss built around heat. Most hits heat it up and abilities heat it a lot; when the meter fills it overheats, stunning every tower and slowing abilities. At skulls it throws fireballs that debuff towers and surrounds itself with rocks. Fight it up close with towers that work without abilities.",
+   "mechanics": [
+    {
+     "name": "Purple and burn-off",
+     "text": "Immune to what can't hit Purple. Every 2 seconds it removes damage over time, including Sticky Bombs. Tower range on screen drops 8% and ability cooldowns run 10–30% slower depending on tier."
+    },
+    {
+     "name": "Heat",
+     "text": "Most projectiles add heat (more if they can't hit Purple); Cold attacks remove it (Icicles, Icicle Impale, Herald of Everfrost, Winter's Mercy, Silas). Using an ability adds heat based on its cooldown."
+    },
+    {
+     "name": "Overheat",
+     "text": "At full heat: all towers are stunned for 4 seconds, ability cooldowns get +10 seconds (+15 Elite) and projectiles last only 0.2 seconds for 20 seconds. Dan D'Monke is immune."
+    },
+    {
+     "name": "Fireballs and rocks",
+     "text": "At each skull it gains heat, fires up to three fireballs (at the closest, farthest and most expensive towers) that leave magma pools slowing towers, and rings itself with rocks that block line of sight for 12 seconds."
+    }
+   ],
+   "stages": [
+    {
+     "label": "Tiers 1–2",
+     "note": "Towers that do their work with base attacks, close to the track. Cheap Icicles keep heat down early.",
+     "picks": [
+      {
+       "name": "Elite Defender",
+       "note": "Reliable option.",
+       "unit": "sniper",
+       "route": "2-0-5"
+      },
+      {
+       "name": "M.A.D",
+       "note": "Heavy damage without relying on abilities.",
+       "unit": "dartling",
+       "route": "1-5-0"
+      },
+      {
+       "name": "Overdrive / The Tack Zone + Embrittlement",
+       "note": "Up close; Embrittlement also cools it.",
+       "unit": "tack",
+       "route": "2-0-4"
+      },
+      {
+       "name": "Avatar of Wrath + Poplust",
+       "note": "Close-range damage.",
+       "unit": "druid",
+       "route": "0-1-5"
+      },
+      {
+       "name": "MOAB Eliminator",
+       "note": "Careful: its ability adds heat.",
+       "unit": "bomb",
+       "route": "0-5-0"
+      },
+      {
+       "name": "Icicles",
+       "note": "Cheap and cuts a lot of heat.",
+       "unit": "ice",
+       "route": "0-0-4"
+      }
+     ]
+    },
+    {
+     "label": "Tiers 3–5",
+     "note": "Paragons or a Vengeful True Sun God. Keep a backup (Perma-Spike or Spirit of the Forest) in case it overheats at a bad moment.",
+     "picks": [
+      {
+       "name": "Apex Plasma Master",
+       "note": "Its balls bounce around inside the rock ring.",
+       "unit": "paragon:apex-plasma-master"
+      },
+      {
+       "name": "Herald of Everfrost",
+       "note": "Keeps heat in check almost by itself.",
+       "unit": "paragon:herald-of-everfrost"
+      },
+      {
+       "name": "Root of all Nature",
+       "note": "Support Paragon that also cools it.",
+       "unit": "paragon:root-of-all-nature"
+      }
+     ]
+    }
+   ],
+   "eliteNotes": [
+    "Elite overheats harder (+15 seconds to cooldowns) and its rock ring is tighter: Herald of Everfrost becomes close to essential at tier 5."
+   ],
+   "money": [
+    "Fireballs can hit your most expensive tower: a Monkeyopolis (or a lone farm or Benjamin) far from the boss can soak one at tiers 1–2.",
+    "Towers hit by fireballs can't be sold until the magma pool ends: don't plan to sell right after a skull."
+   ],
+   "tips": [
+    "Bait the closest and farthest fireballs with cheap Dart Monkeys: one right by the track, one in a far corner.",
+    "Avoid Sticky Bomb, Master Bomber and Ascended Shadow: their bombs count as damage over time and burn off.",
+    "Geraldo's Rejuv Potion makes abilities ready again, but each use adds heat."
+   ]
   },
   {
    "id": "diamondback",
@@ -257,9 +1034,100 @@
    },
    "sources": [
     "wiki-diamondback",
-    "wiki-boss-bloon"
+    "wiki-boss-event"
    ],
-   "note": "Multi-segment snake: the head cancels pierce, so hit it from the sides or behind where segments bunch up. Breaking the tail shield stuns it; skulls release Diamond Bloon waves, so keep fast or damage-over-time cleanup."
+   "note": "Multi-segment snake: the head cancels pierce, so hit it from the sides or behind where segments bunch up. Breaking the tail shield stuns it; skulls release Diamond Bloon waves, so keep fast or damage-over-time cleanup.",
+   "title": "The Village Devourer",
+   "introduced": "v52.0",
+   "summary": "A long snake made of segments that share one health bar. Its head cancels the pierce of anything that touches it and its body eats pierce too, so hit it from the sides or behind where the segments bunch up. Skulls shed a segment and release Diamond Bloons, the real early threat.",
+   "mechanics": [
+    {
+     "name": "Segments",
+     "text": "A head, a tail and 5 body segments (7 on Elite). Each takes damage separately into the shared health bar. The head removes all pierce from a projectile; body segments remove 2."
+    },
+    {
+     "name": "Rattle Tail",
+     "text": "The tail has a Fortified shield worth 10% of its health. Breaking it stuns Diamondback for 12 seconds and doubles all damage until the shield returns (after 60 seconds or the next skull)."
+    },
+    {
+     "name": "Scattered bloons",
+     "text": "For every 1% of health lost, the head and each body segment scatter bloons along the track, so there are fewer as it loses segments."
+    },
+    {
+     "name": "Skulls and Diamond Bloons",
+     "text": "At each skull it restores the tail shield, scatters a bigger wave including Diamond Bloons, loses a body segment and is invulnerable for 3 seconds. Diamond Bloons need a set number of hits, ignore slows, cost many lives and release a Fortified Ceramic."
+    }
+   ],
+   "stages": [
+    {
+     "label": "Early tiers",
+     "note": "Place high-pierce towers to the side of or behind the boss, or where the track coils so one shot hits many segments. Keep fast attacks or damage over time for Diamond Bloons.",
+     "picks": [
+      {
+       "name": "Master Bomber",
+       "note": "Sticks several bombs at once, one per segment.",
+       "unit": "ninja",
+       "route": "1-0-5"
+      },
+      {
+       "name": "Glue Gunner (top path)",
+       "note": "Diamond Bloon cleanup.",
+       "unit": "glue",
+       "route": "4-2-0"
+      },
+      {
+       "name": "Destroyer with Grape Shot",
+       "note": "Fast attacks against Diamond Bloons.",
+       "unit": "bucc",
+       "route": "3-1-0"
+      },
+      {
+       "name": "Dragon's Breath",
+       "note": "Damage over time for Diamond Bloons.",
+       "unit": "wizard",
+       "route": "0-3-0"
+      },
+      {
+       "name": "Overdrive / The Tack Zone",
+       "note": "Lots of fast hits.",
+       "unit": "tack",
+       "route": "2-0-4"
+      }
+     ]
+    },
+    {
+     "label": "Later tiers",
+     "note": "Paragons. If your main damage hits hard but rarely (M.A.D, the Bomb Shooter Paragon, Goliath Doomship), keep backup for Diamond Bloons.",
+     "picks": [
+      {
+       "name": "Crucible of Steel and Flame",
+       "note": "Cheap Paragon that does well against Diamondback.",
+       "unit": "paragon:crucible"
+      },
+      {
+       "name": "Glaive Dominus",
+       "note": "Plenty of pierce against the segments.",
+       "unit": "paragon:glaive-dominus"
+      },
+      {
+       "name": "Mega Massive Munitions Factory",
+       "note": "Its clusters hit several segments.",
+       "unit": "paragon:mmmf"
+      }
+     ]
+    }
+   ],
+   "eliteNotes": [
+    "Elite has 7 body segments and sends Diamond Bloons much harder; its tail is on screen only late, so ignore it."
+   ],
+   "money": [
+    "It takes 7 seconds to land (other bosses take 3), a little extra time to finish setting up.",
+    "Diamond Bloons cost many lives if they leak, so don't trim cleanup to afford farms."
+   ],
+   "tips": [
+    "Usually don't bother breaking the tail: its shield regrows at each skull and the bonus damage just rushes you to the next skull.",
+    "Breaking the tail is worth it when you want it to stop moving (its stun lasts 12 seconds)."
+   ]
   }
  ],
  "sources": [
