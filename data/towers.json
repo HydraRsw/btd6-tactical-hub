@@ -20,7 +20,7 @@
         "path": "0-2-5",
         "kind": "optimal",
         "name": "Crossbow Master",
-        "note": "Camo detection from the bottom path and strong on straight track sections. The wiki gives no specific crosspath, so 0-2-5 is the common default."
+        "note": "Camo detection from the bottom path and strong on straight track sections. The wiki gives no specific crosspath, so 0-2-5 is the common default. v57: now fires two parallel bolts at half the attack rate; Crossbow and Sharp Shooter tiers gained pierce and crit damage."
       },
       {
         "path": "2-5-0",
@@ -37,7 +37,8 @@
     ],
     "sources": [
       "wiki-dart",
-      "wiki-dreadbloon"
+      "wiki-dreadbloon",
+      "steam-v57"
     ]
   },
   {
@@ -98,7 +99,7 @@
       "MOAB"
     ],
     "confidence": "approximate",
-    "summary": "MOAB Mauler is a popular answer to the first MOAB (R40). MOAB Eliminator and Assassin are strong boss options, and Bomb Blitz is a CHIMPS win condition.",
+    "summary": "MOAB Mauler is a popular answer to the first MOAB (R40). MOAB Eliminator and Assassin are strong boss options, and Bomb Blitz is a CHIMPS win condition. v57 nerfed Bomb Blitz (one passive trigger per round) and changed MOAB Assassin frags (more pierce, half as many).",
     "routes": [
       {
         "path": "2-3-0",
@@ -122,7 +123,7 @@
         "path": "x-x-5",
         "kind": "situational",
         "name": "Bomb Blitz",
-        "note": "Named as a CHIMPS win condition; the wiki gives no crosspath."
+        "note": "Named as a CHIMPS win condition on the wiki (v55.1), but v57 limits its passive to one trigger per round, so treat it as weaker until the wiki re-evaluates it."
       }
     ],
     "sources": [
@@ -130,7 +131,8 @@
       "wiki-bomb",
       "wiki-lych",
       "wiki-bloonarius",
-      "wiki-blastapopoulos"
+      "wiki-blastapopoulos",
+      "steam-v57"
     ]
   },
   {
@@ -192,7 +194,7 @@
       "DPS"
     ],
     "confidence": "verified",
-    "summary": "Embrittlement makes hit bloons take extra damage while frozen and temporarily lose Lead immunity. The wiki calls 5-2-0 the best all-round late pick; Ice towers also keep Blastapopoulos's heat down.",
+    "summary": "Embrittlement makes hit bloons take extra damage while frozen and temporarily lose Lead immunity. The wiki calls 5-2-0 the best all-round late pick; Ice towers also keep Blastapopoulos's heat down. v57: freeze now applies after damage.",
     "routes": [
       {
         "path": "4-2-0",
@@ -217,7 +219,8 @@
       "wiki-ice",
       "wiki-lych",
       "wiki-phayze",
-      "wiki-blastapopoulos"
+      "wiki-blastapopoulos",
+      "steam-v57"
     ]
   },
   {
@@ -248,7 +251,7 @@
         "path": "2-4-0",
         "kind": "situational",
         "name": "Glue Strike",
-        "note": "Mid-game support (1-4-0 late). Glued targets take extra damage from other towers."
+        "note": "Mid-game support (1-4-0 late). Glued targets take extra damage from other towers. v57: Glue Strike costs more ($4,000 → $4,500) and Glue Splatter less ($970 → $650)."
       },
       {
         "path": "0-2-5",
@@ -260,7 +263,8 @@
     "sources": [
       "wiki-chimps",
       "wiki-glue",
-      "wiki-lych"
+      "wiki-lych",
+      "steam-v57"
     ]
   },
   {
@@ -322,7 +326,7 @@
       "Stall"
     ],
     "confidence": "approximate",
-    "summary": "Global range. Elite Defender can clear Lych and its spawns alone and has native camo detection for Phayze; Cripple MOAB is a key blimp debuff in boss strategies.",
+    "summary": "Global range. Elite Defender can clear Lych and its spawns alone and has native camo detection for Phayze; Cripple MOAB is a key blimp debuff in boss strategies. v57 added its Paragon, the S.P.I.D.E.R. Monkey, and Supply Drop can now switch to an Ammo Drop.",
     "routes": [
       {
         "path": "2-0-5",
@@ -347,7 +351,9 @@
       "wiki-sniper",
       "wiki-lych",
       "wiki-phayze",
-      "wiki-bloonarius"
+      "wiki-bloonarius",
+      "steam-v57",
+      "ninjakiwi-x-v57"
     ]
   },
   {
@@ -776,7 +782,7 @@
       "Buff"
     ],
     "confidence": "verified",
-    "summary": "Its top path is the most useful because of the buffs. Brews give the biggest gains to many-projectile towers such as Bloonjitsu or Overdrive. Avoid Rubber to Gold and Bloon Master Alchemist in CHIMPS, and avoid brews against Lych, which steals them.",
+    "summary": "Its top path is the most useful because of the buffs. Brews give the biggest gains to many-projectile towers such as Bloonjitsu or Overdrive. Avoid Rubber to Gold and Bloon Master Alchemist in CHIMPS, and avoid brews against Lych, which steals them. v57: Rubber to Gold now pays its bonus cash immediately when a bloon pops.",
     "routes": [
       {
         "path": "4-2-0",
@@ -801,7 +807,8 @@
       "wiki-alchemist",
       "wiki-alch-strategy",
       "wiki-chimps",
-      "wiki-lych"
+      "wiki-lych",
+      "steam-v57"
     ]
   },
   {
@@ -903,24 +910,31 @@
       "Buff"
     ],
     "confidence": "new",
-    "summary": "New Magic archer from v56. Path 1 boosts its own range and nearby Monkeys' range, gains camo at tier 2 (Zephyr Sense) and ends in Farwind Seer. Path 2's Thundering Arc explosions grow with distance.",
+    "summary": "Magic archer added in v56 and rebalanced in v57. Path 1 (Aerial Attunement → Zephyr Sense → Wind Weaver → Gale Sage → Farwind Seer) buffs range and gains camo at tier 2; path 2 ends in Stormwrath Archon; path 3 (Coldchain → Frozen Verdict → Winter's Mercy) cools Blastapopoulos and was strongly buffed against blimps.",
     "routes": [
       {
         "path": "5-x-x",
         "kind": "optimal",
         "name": "Farwind Seer",
-        "note": "Arrows hit harder the farther they travel. Crosspath consensus is still forming."
+        "note": "Arrows hit harder the farther they fly. v57 made Wind Weaver and Gale Sage cheaper but cut Aerial Attunement's stacks to 3. Crosspath consensus is still forming."
       },
       {
-        "path": "x-4-x",
+        "path": "x-5-x",
         "kind": "situational",
-        "name": "Thunder's Decree",
-        "note": "Explosive arcs that can fire over walls and at a chosen location."
+        "name": "Stormwrath Archon",
+        "note": "v57: Thundering Arc now deals Plasma damage with a bigger blast; Thunder's Decree costs more and lasts less."
+      },
+      {
+        "path": "x-x-5",
+        "kind": "situational",
+        "name": "Winter's Mercy",
+        "note": "v57 doubled its blimp damage (e.g. ZOMG 200 → 400) and it removes a lot of Blastapopoulos heat."
       }
     ],
     "sources": [
       "wiki-skywarden-release",
-      "wiki-farwind-seer"
+      "wiki-farwind-seer",
+      "steam-v57"
     ]
   },
   {
@@ -992,7 +1006,7 @@
         "path": "2-4-0",
         "kind": "situational",
         "name": "Spike Storm",
-        "note": "Ability is strong against the R100 BAD; Carpet of Spikes (2-5-0) suits most non-dense rounds and bosses."
+        "note": "Ability is strong against the R100 BAD; Carpet of Spikes (2-5-0) suits most non-dense rounds and bosses. v57 doubled Mini Spike bonus damage to MOABs."
       },
       {
         "path": "5-2-0",
@@ -1005,7 +1019,8 @@
       "wiki-chimps",
       "wiki-spike-factory",
       "wiki-lych",
-      "wiki-dreadbloon"
+      "wiki-dreadbloon",
+      "steam-v57"
     ]
   },
   {
@@ -1034,7 +1049,7 @@
         "path": "2-4-0",
         "kind": "situational",
         "name": "Call to Arms",
-        "note": "Burst buff ability; Lych can steal it, so keep it away from Lych."
+        "note": "Burst buff ability; Lych can steal it, so keep it away from Lych. v57: can no longer be re-activated while a Call to Arms or Homeland buff is already active."
       },
       {
         "path": "0-0-5",
@@ -1047,7 +1062,8 @@
       "wiki-chimps",
       "wiki-village",
       "wiki-lych",
-      "wiki-boss-events"
+      "wiki-boss-events",
+      "steam-v57"
     ]
   },
   {
@@ -1083,7 +1099,7 @@
         "path": "0-1-4",
         "kind": "situational",
         "name": "Bloon Trap",
-        "note": "Boss-event income; XXXL Trap is best at 0-2-5."
+        "note": "Boss-event income; XXXL Trap is best at 0-2-5. v57: base cash from trapped pops is now paid immediately; only the bonus is stored."
       },
       {
         "path": "5-2-0",
@@ -1096,7 +1112,8 @@
       "wiki-overclock",
       "wiki-engineer-crosspaths",
       "wiki-boss-events",
-      "wiki-lych"
+      "wiki-lych",
+      "steam-v57"
     ]
   },
   {
