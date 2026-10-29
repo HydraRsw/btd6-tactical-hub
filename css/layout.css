@@ -13,7 +13,7 @@
 
 main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 
-.stack { display: grid; gap: 16px; align-content: start; }
+.stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-content: start; }
 .stack--tight { gap: 10px; }
 .row-wrap { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .push-right { margin-left: auto; }
@@ -481,7 +481,7 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 
 /* --- Planner --- */
 .planner-settings { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
-.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
 .stat { display: grid; gap: 4px; padding: 12px 14px; border-left: 5px solid var(--gold); }
 .stat strong { font-size: 1.05rem; }
 .stat--good { border-left-color: var(--green); }
