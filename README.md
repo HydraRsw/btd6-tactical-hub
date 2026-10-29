@@ -113,6 +113,19 @@ Badges show an icon by default. To use your own pictures, either:
 
 A missing image falls back to the icon.
 
+## After changing code (css/ or js/)
+
+Run:
+
+```
+node scripts/stamp-version.mjs
+```
+
+It adds a content fingerprint (`?v=…`) to every stylesheet and module address in
+`index.html`. GitHub Pages lets browsers cache files for 10 minutes; without the
+fingerprint a visitor can get the new page with old cached scripts, which breaks
+it. Data changes in `data/` don't need this.
+
 ## Running it locally
 
 The page loads its data with `fetch`, which browsers block for files opened

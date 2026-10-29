@@ -11,14 +11,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@600;700;800;900&display=swap">
 
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/theme.css?v=194c6e55ae">
+  <link rel="stylesheet" href="css/components.css?v=84766d580b">
+  <link rel="stylesheet" href="css/layout.css?v=34ad81d8e0">
 
   <!-- Libraries (no build step). Order matters: our module first, Alpine last. -->
   <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <!-- import-map:start (written by scripts/stamp-version.mjs) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "./js/components/crosspath.js": "./js/components/crosspath.js?v=4578cbb2e8",
+      "./js/components/farming.js": "./js/components/farming.js?v=4578cbb2e8",
+      "./js/components/global-search.js": "./js/components/global-search.js?v=4578cbb2e8",
+      "./js/components/paragons.js": "./js/components/paragons.js?v=4578cbb2e8",
+      "./js/components/playbook.js": "./js/components/playbook.js?v=4578cbb2e8",
+      "./js/components/tier-list.js": "./js/components/tier-list.js?v=4578cbb2e8",
+      "./js/components/tower-page.js": "./js/components/tower-page.js?v=4578cbb2e8",
+      "./js/directives.js": "./js/directives.js?v=4578cbb2e8",
+      "./js/lib/data.js": "./js/lib/data.js?v=4578cbb2e8",
+      "./js/lib/economy.js": "./js/lib/economy.js?v=4578cbb2e8",
+      "./js/lib/storage.js": "./js/lib/storage.js?v=4578cbb2e8",
+      "./js/lib/text.js": "./js/lib/text.js?v=4578cbb2e8",
+      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=4578cbb2e8",
+      "./js/main.js": "./js/main.js?v=4578cbb2e8",
+      "./js/store.js": "./js/store.js?v=4578cbb2e8"
+    }
+  }
+  </script>
+  <!-- import-map:end -->
+  <script type="module" src="js/main.js?v=4578cbb2e8"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 
