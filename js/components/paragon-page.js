@@ -7,8 +7,14 @@ export function paragonPage() {
   return {
     formatCash,
 
+    keep: null,
+
+    init() {
+      this.keep = this.$store.hub.pageKeeper('paragon');
+    },
+
     get paragon() {
-      return this.$store.hub.currentPage;
+      return this.keep ? this.keep() : this.$store.hub.currentPage;
     },
 
     get tower() {

@@ -22,33 +22,33 @@
   <script type="importmap">
   {
     "imports": {
-      "./js/components/crosspath.js": "./js/components/crosspath.js?v=a10c92ce41",
-      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=a10c92ce41",
-      "./js/components/farming.js": "./js/components/farming.js?v=a10c92ce41",
-      "./js/components/global-search.js": "./js/components/global-search.js?v=a10c92ce41",
-      "./js/components/hero-page.js": "./js/components/hero-page.js?v=a10c92ce41",
-      "./js/components/maps.js": "./js/components/maps.js?v=a10c92ce41",
-      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=a10c92ce41",
-      "./js/components/paragons.js": "./js/components/paragons.js?v=a10c92ce41",
-      "./js/components/planner.js": "./js/components/planner.js?v=a10c92ce41",
-      "./js/components/playbook.js": "./js/components/playbook.js?v=a10c92ce41",
-      "./js/components/rounds.js": "./js/components/rounds.js?v=a10c92ce41",
-      "./js/components/tier-list.js": "./js/components/tier-list.js?v=a10c92ce41",
-      "./js/components/tower-page.js": "./js/components/tower-page.js?v=a10c92ce41",
-      "./js/directives.js": "./js/directives.js?v=a10c92ce41",
-      "./js/lib/data.js": "./js/lib/data.js?v=a10c92ce41",
-      "./js/lib/economy.js": "./js/lib/economy.js?v=a10c92ce41",
-      "./js/lib/game.js": "./js/lib/game.js?v=a10c92ce41",
-      "./js/lib/storage.js": "./js/lib/storage.js?v=a10c92ce41",
-      "./js/lib/text.js": "./js/lib/text.js?v=a10c92ce41",
-      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=a10c92ce41",
-      "./js/main.js": "./js/main.js?v=a10c92ce41",
-      "./js/store.js": "./js/store.js?v=a10c92ce41"
+      "./js/components/crosspath.js": "./js/components/crosspath.js?v=926b3279a1",
+      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=926b3279a1",
+      "./js/components/farming.js": "./js/components/farming.js?v=926b3279a1",
+      "./js/components/global-search.js": "./js/components/global-search.js?v=926b3279a1",
+      "./js/components/hero-page.js": "./js/components/hero-page.js?v=926b3279a1",
+      "./js/components/maps.js": "./js/components/maps.js?v=926b3279a1",
+      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=926b3279a1",
+      "./js/components/paragons.js": "./js/components/paragons.js?v=926b3279a1",
+      "./js/components/planner.js": "./js/components/planner.js?v=926b3279a1",
+      "./js/components/playbook.js": "./js/components/playbook.js?v=926b3279a1",
+      "./js/components/rounds.js": "./js/components/rounds.js?v=926b3279a1",
+      "./js/components/tier-list.js": "./js/components/tier-list.js?v=926b3279a1",
+      "./js/components/tower-page.js": "./js/components/tower-page.js?v=926b3279a1",
+      "./js/directives.js": "./js/directives.js?v=926b3279a1",
+      "./js/lib/data.js": "./js/lib/data.js?v=926b3279a1",
+      "./js/lib/economy.js": "./js/lib/economy.js?v=926b3279a1",
+      "./js/lib/game.js": "./js/lib/game.js?v=926b3279a1",
+      "./js/lib/storage.js": "./js/lib/storage.js?v=926b3279a1",
+      "./js/lib/text.js": "./js/lib/text.js?v=926b3279a1",
+      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=926b3279a1",
+      "./js/main.js": "./js/main.js?v=926b3279a1",
+      "./js/store.js": "./js/store.js?v=926b3279a1"
     }
   }
   </script>
   <!-- import-map:end -->
-  <script type="module" src="js/main.js?v=a10c92ce41"></script>
+  <script type="module" src="js/main.js?v=926b3279a1"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 
@@ -979,7 +979,7 @@
 
             <div class="well calc-target">
               <label class="planner-field planner-field--small"><span class="dim">Target degree</span><input class="field numbers" type="number" min="1" max="100" x-model.number="form.target"></label>
-              <p x-text="target.missing === 0 ? `You already reach degree ${target.degree}.` : `Degree ${target.degree} needs ${target.needed.toLocaleString('en-US')} power: ${target.missing.toLocaleString('en-US')} more. ` + (target.sliderCash ? `The slider can add up to ${formatCash(target.sliderCash)} worth before the cash cap` : 'The cash cap is already reached') + (target.afterSlider > 0 ? `, leaving ${target.afterSlider.toLocaleString('en-US')} power (about ${target.totems} totems, or more pops/tier 5s).` : '.')"></p>
+              <p x-text="target.missing === 0 ? `You already reach degree ${target.degree}.` : `Degree ${target.degree} needs ${target.needed.toLocaleString('en-US')} power: ${target.missing.toLocaleString('en-US')} more. ` + (target.afterSlider === 0 ? `Putting ${formatCash(target.sliderCash)} on the slider covers it.` : (target.sliderCash ? `The slider covers ${formatCash(target.sliderCash)} worth before the cash cap, ` : 'The cash cap is already reached, ') + `leaving ${target.afterSlider.toLocaleString('en-US')} power (about ${target.totems} totems, or more pops and tier 5s).`)"></p>
               <p class="dim" x-text="`At degree ${target.degree}: ×${target.normal} damage to bosses, ×${target.elite} to Elite bosses.`"></p>
             </div>
             <p x-sources="['wiki-paragon']"></p>
