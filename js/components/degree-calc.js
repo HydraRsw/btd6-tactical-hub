@@ -6,13 +6,35 @@ import { DIFFICULTIES, PARAGON_POWER_CAPS, bossMultiplier, degreeForPower, parag
 import { formatCash } from '../lib/text.js';
 import { recall, remember } from '../lib/storage.js';
 
+// Text for the ⓘ buttons next to each field and result.
+const HELP = {
+  paragon: 'The Paragon you plan to build. Each one has its own price, and the price sets how much cash power you get per dollar.',
+  difficulty: 'The difficulty of your game. Paragons cost less on Easy and more on Hard and Impoppable, so the same cash gives more power on easier difficulties.',
+  towerCash: 'When you buy a Paragon, every other tower of the same type on the map is absorbed into it. Enter the money you spent placing and upgrading those towers, but leave out the tier 5s (they count in the next fields). Not sure? Add up the upgrade prices from the tower\'s page on this site.',
+  sliderCash: 'The Paragon upgrade window has a slider that lets you pay extra cash on top of the price. It works like spending on towers but costs 5% more per power. Cash from towers and the slider share one cap of 80,000 power.',
+  extraTier5: 'You need three tier 5s of the tower to unlock the Paragon (one of each path). Each extra tier 5 that also gets absorbed adds 6,000 power. Normally you can only own one of each tier 5, so this is usually 0 unless something lets you build a second copy (the wiki names Master Double Cross and level 13+ Silas).',
+  damage: 'Every tower shows a damage (pops) counter in its panel. Add up the counters of all the towers that will be absorbed, tier 5s included. Every 180 damage is 1 power. Leaving towers on the map longer before upgrading raises this.',
+  income: 'Towers that make money (Merchantmen, Bloon Traps, Bounty Hunters…) show an income counter in their panel. Add up the counters of the towers that will be absorbed. Every $45 is 1 power. Pops and income share one cap of 125,000 power.',
+  totems: "Paragon Power Totems are bought from Geraldo's shop once he reaches level 20. Each totem the Paragon absorbs adds 2,000 power, with no cap. Three totems are worth one extra tier 5.",
+  degree: 'Degree goes from 1 to 100 and comes from total power. Every 20 degrees (20, 40, 60, 80, 100) the Paragon deals 25% more damage to bosses, and Elite bosses take double on top.',
+  breakdown: 'How much power each source gives. When a row turns gold, that source has hit its cap and adding more to it does nothing.',
+  target: 'Pick the degree you want. The calculator shows how much power is missing, how much slider cash would cover it, and how many totems you would need for whatever the slider can\'t cover.',
+};
+
 const DEFAULTS = { paragonId: 'goliath-doomship', difficulty: 2, towerCash: 0, sliderCash: 0, extraTier5: 0, damage: 0, income: 0, totems: 0, target: 40 };
 
 export function degreeCalculator() {
   return {
     DIFFICULTIES,
     CAPS: PARAGON_POWER_CAPS,
+    HELP,
     formatCash,
+    help: null,          // which ⓘ explanation is open
+    showGuide: false,    // the "How to use" steps
+
+    toggleHelp(id) {
+      this.help = this.help === id ? null : id;
+    },
     form: { ...DEFAULTS, ...(recall('degreeCalc', null) ?? {}) },
 
     init() {
