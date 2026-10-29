@@ -30,8 +30,9 @@ js/
     maps.js              Maps & Modes tab, map pages (#map/<id>) and mode pages (#mode/<id>).
     hero-page.js         A hero's own page (#hero/<id>).
     rounds.js            Rounds tab: every round's bloons, RBE and cash.
-    planner.js           Planner tab: round-by-round build planner (shareable with ?build=…).
-    degree-calc.js       Paragon degree calculator (on the Paragons tab).
+    planner.js           Tools tab → build planner (shareable with ?build=…, #planner).
+    degree-calc.js       Tools tab → Paragon degree calculator (#degree).
+    compare.js           Tools tab → compare two towers or heroes (#compare).
   lib/
     economy.js           Farm income / payback maths (pure functions).
     upgrades.js          "2-0-5" → upgrade pip grid.
@@ -50,6 +51,7 @@ data/
   maps.json              Every map: difficulty, traits, where to build, recommended towers, per-mode notes.
   modes.json             Every game mode: rules, general strategy, towers that shine.
   rounds.json            Standard and ABR rounds 1–140: bloon groups, duration, RBE, cash, hero XP.
+  templates.json         Planner templates: CHIMPS openings (towers/heroes with rounds and crosspaths).
 ```
 
 ## Updating for a new patch
@@ -114,6 +116,11 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 - Heroes have `cost` (same four prices), `xpModifier`, `milestones: [{ level, text }]`
   (our own summaries), `camoLevel` / `leadLevel` (level the main attack gets it, `0` = from
   the start, `null` = never), `bestFor`, `tips` and `pairs: [{ unit, note }]`.
+- Towers also have `knowledge: [{ name, effect, cost, keyPick? }]`: their own Monkey
+  Knowledge (paraphrased), with `keyPick: true` on ones that change how you build them.
+- `templates.json` → `templates[]`: `id`, `name`, `fits`, `description`, `mode`,
+  `entries: [{ tower, steps: [{ round, path }] }]` (a hero id works as `tower`), `sources`.
+- Bloon pictures on the Rounds tab are optional: see `img/bloons/README.md`.
 - `rounds.json` comes from the wiki's round tables. Cash is `popCash + bonusCash`.
 - Paragons have `costs` per difficulty; the degree formula and power caps are in `js/lib/game.js`.
 

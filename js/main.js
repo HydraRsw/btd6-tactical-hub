@@ -19,6 +19,7 @@ import { roundBrowser } from './components/rounds.js';
 import { buildPlanner } from './components/planner.js';
 import { degreeCalculator } from './components/degree-calc.js';
 import { heroPage } from './components/hero-page.js';
+import { compareUnits } from './components/compare.js';
 
 document.addEventListener('alpine:init', () => {
   const Alpine = window.Alpine;
@@ -41,6 +42,7 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('buildPlanner', buildPlanner);
   Alpine.data('degreeCalculator', degreeCalculator);
   Alpine.data('heroPage', heroPage);
+  Alpine.data('compareUnits', compareUnits);
 
   const hub = Alpine.store('hub');
   hub.openTabFromUrl();

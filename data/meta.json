@@ -2,10 +2,10 @@
  "patch": "57.0",
  "updated": "2026-10-29",
  "changes": [
-  "New Rounds tab: every standard and ABR round with bloons, RBE and cash",
-  "New Planner tab: plan a CHIMPS run round by round and check it's affordable",
-  "Paragon degree calculator, plus a fix to how cash counts toward degree",
-  "Hero pages (Dan D'Monke added), tower upgrade costs and Camo/Lead info, map trait filters"
+  "New Tools tab: build planner, degree calculator and a side-by-side compare",
+  "Planner: heroes are added like towers, on any round, and there are opening templates",
+  "Rounds: bloon icons, sort by biggest threats, and an RBE and cash chart",
+  "Tower pages list their Monkey Knowledge; ⓘ tips now show on hover"
  ],
  "imageDir": "img",
  "researched": "2026-10-29"

@@ -5,6 +5,8 @@
 //   <div x-avatar="tower"></div>           tower / hero badge (add .small, .large or .huge)
 //   <div x-pips="route.path"></div>        3 × 5 upgrade grid for "2-0-5"
 //   <p x-sources="tower.sources"></p>      "Sources: Bloons wiki: …" links (ids from data/sources.json)
+//   <span x-bloon="bloon"></span>          a bloon icon (drawn, or your own picture from img/bloons/, see img/bloons/README.md)
+//   <span x-tip="HELP.cash"></span>        an ⓘ icon that shows the text while hovered (or focused on touch screens)
 
 import { initials } from './lib/text.js';
 import { pipRows } from './lib/upgrades.js';
@@ -103,7 +105,133 @@ function buildSourceLinks(ids, sources) {
   return line;
 }
 
+// --- Bloon icons --------------------------------------------------------
+// Simple original drawings: a balloon for regular bloons, a blimp for MOAB-class.
+// Camo adds a dashed pattern, Regrow a green arrow and Fortified a metal band.
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const RAINBOW = ['#ff4d4d', '#ffd23f', '#62d02b', '#3aa0ff', '#a14dff'];
+
+function svgEl(name, attrs) {
+  const node = document.createElementNS(SVG_NS, name);
+  for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value);
+  return node;
+}
+
+function drawBloon(bloon) {
+  const svg = svgEl('svg', { viewBox: '0 0 32 32', class: 'bloon-svg', 'aria-hidden': 'true' });
+  const fill = bloon.base === 'Rainbow' ? 'url(#bloon-rainbow)' : bloon.base === 'Zebra' ? 'url(#bloon-zebra)' : bloon.color;
+  if (bloon.base === 'Rainbow' || bloon.base === 'Zebra') {
+    const defs = svgEl('defs', {});
+    const grad = svgEl('linearGradient', { id: bloon.base === 'Rainbow' ? 'bloon-rainbow' : 'bloon-zebra', x1: '0', x2: '1', y1: '0', y2: '0' });
+    const colors = bloon.base === 'Rainbow' ? RAINBOW : ['#1d1d22', '#f2f4f7', '#1d1d22', '#f2f4f7'];
+    colors.forEach((color, i) => {
+      grad.append(svgEl('stop', { offset: `${(i / colors.length) * 100}%`, 'stop-color': color }));
+      grad.append(svgEl('stop', { offset: `${((i + 1) / colors.length) * 100}%`, 'stop-color': color }));
+    });
+    defs.append(grad);
+    svg.append(defs);
+  }
+  if (bloon.blimp) {
+    svg.append(svgEl('path', { d: 'M3 16c0-4 6-7 13-7s13 3 13 7-6 7-13 7S3 20 3 16z', fill, stroke: '#0a1c38', 'stroke-width': '2' }));
+    svg.append(svgEl('path', { d: 'M27 12l4-3v14l-4-3', fill, stroke: '#0a1c38', 'stroke-width': '2', 'stroke-linejoin': 'round' }));
+    svg.append(svgEl('path', { d: 'M8 16h14', stroke: 'rgba(255,255,255,.55)', 'stroke-width': '2', 'stroke-linecap': 'round' }));
+  } else {
+    svg.append(svgEl('path', { d: 'M16 3c6 0 10 5 10 11 0 6-5 11-10 11S6 20 6 14C6 8 10 3 16 3z', fill, stroke: '#0a1c38', 'stroke-width': '2' }));
+    svg.append(svgEl('path', { d: 'M14 25l2 3 2-3z', fill: bloon.base === 'Rainbow' ? '#a14dff' : bloon.color, stroke: '#0a1c38', 'stroke-width': '1.5' }));
+    svg.append(svgEl('ellipse', { cx: '12.5', cy: '9.5', rx: '2.2', ry: '3.2', fill: 'rgba(255,255,255,.55)' }));
+  }
+  if (bloon.camo) svg.append(svgEl('path', { d: bloon.blimp ? 'M6 13h20M5 17h22M7 21h18' : 'M9 10h14M8 14h16M9 18h14', stroke: '#2f5d1e', 'stroke-width': '2', 'stroke-dasharray': '3 2', opacity: '.8' }));
+  if (bloon.fortified) svg.append(svgEl('rect', { x: bloon.blimp ? '13' : '6', y: bloon.blimp ? '9' : '13', width: bloon.blimp ? '4' : '20', height: bloon.blimp ? '14' : '3', fill: '#9aa5b1', stroke: '#0a1c38', 'stroke-width': '1' }));
+  if (bloon.regrow) svg.append(svgEl('path', { d: 'M24 26a5 5 0 1 0-3-8m3 8l-3 1m3-1l-1-3', fill: 'none', stroke: '#7ad420', 'stroke-width': '2.2', 'stroke-linecap': 'round' }));
+  return svg;
+}
+
+/** Your own picture if it's in img/bloons/: "fortified-camo-regrow-ceramic.png", falling back to "ceramic.png". */
+function bloonImageNames(bloon) {
+  const base = bloon.base.toLowerCase();
+  const prefix = [bloon.fortified && 'fortified', bloon.camo && bloon.base !== 'DDT' && 'camo', bloon.regrow && 'regrow'].filter(Boolean).join('-');
+  return [...new Set([prefix ? `${prefix}-${base}` : base, base])];
+}
+
+function buildBloon(bloon, imageDir) {
+  const wrap = document.createElement('span');
+  wrap.className = 'bloon-icon';
+  wrap.title = bloon.name;
+  wrap.append(drawBloon(bloon));
+  if (imageDir) {
+    const names = bloonImageNames(bloon);
+    const picture = document.createElement('img');
+    picture.className = 'bloon-icon__image';
+    picture.alt = '';
+    picture.loading = 'lazy';
+    let attempt = 0;
+    const tryNext = () => {
+      if (attempt >= names.length) return picture.remove();
+      picture.src = `${imageDir.replace(/\/+$/, '')}/bloons/${names[attempt++]}.png`;
+    };
+    picture.addEventListener('error', tryNext);
+    picture.addEventListener('load', () => wrap.classList.add('bloon-icon--picture'));
+    tryNext();
+    wrap.append(picture);
+  }
+  return wrap;
+}
+
+// One shared bubble for every ⓘ tip, positioned next to the icon and kept on screen.
+let bubble = null;
+function showTip(anchor, text) {
+  if (!bubble) {
+    bubble = document.createElement('div');
+    bubble.className = 'tip-bubble';
+    bubble.setAttribute('role', 'tooltip');
+    bubble.id = 'tip-bubble';
+    document.body.append(bubble);
+  }
+  bubble.textContent = text;
+  bubble.hidden = false;
+  const icon = anchor.getBoundingClientRect();
+  const box = bubble.getBoundingClientRect();
+  const margin = 8;
+  const left = Math.min(window.innerWidth - box.width - margin, Math.max(margin, icon.left + icon.width / 2 - box.width / 2));
+  const below = icon.bottom + 8;
+  const top = below + box.height > window.innerHeight - margin ? icon.top - box.height - 8 : below;
+  bubble.style.left = `${left}px`;
+  bubble.style.top = `${Math.max(margin, top)}px`;
+  anchor.setAttribute('aria-describedby', 'tip-bubble');
+}
+function hideTip(anchor) {
+  if (bubble) bubble.hidden = true;
+  anchor?.removeAttribute('aria-describedby');
+}
+window.addEventListener('scroll', () => hideTip(), { passive: true });
+
 export function registerDirectives(Alpine) {
+  Alpine.directive('bloon', (el, { expression }, { evaluateLater, effect }) => {
+    const readBloon = evaluateLater(expression);
+    effect(() => readBloon((bloon) => {
+      if (bloon) el.replaceChildren(buildBloon(bloon, Alpine.store('hub').meta.imageDir));
+    }));
+  });
+
+  Alpine.directive('tip', (el, { expression }, { evaluateLater, effect, cleanup }) => {
+    const readText = evaluateLater(expression);
+    let text = '';
+    effect(() => readText((value) => {
+      text = value ?? '';
+      el.setAttribute('aria-label', text);
+    }));
+    el.classList.add('info-tip');
+    el.tabIndex = 0;
+    el.replaceChildren(iconSvg('info'));
+    const show = () => showTip(el, text);
+    const hide = () => hideTip(el);
+    el.addEventListener('mouseenter', show);
+    el.addEventListener('mouseleave', hide);
+    el.addEventListener('focus', show);
+    el.addEventListener('blur', hide);
+    cleanup(() => hide());
+  });
+
   Alpine.directive('icon', (el, { expression }, { evaluateLater, effect }) => {
     if (PLAIN_ICON_NAME.test(expression)) {
       el.replaceChildren(iconSvg(expression));

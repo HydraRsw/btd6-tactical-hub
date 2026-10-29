@@ -5,7 +5,10 @@ import { loadGameData } from './lib/data.js';
 import { recall, remember } from './lib/storage.js';
 
 // Tabs in header order.
-export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'planner', 'farm', 'chimps'];
+export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'tools', 'farm', 'chimps'];
+
+// The Tools tab has three views; each also has its own address (#planner, #degree, #compare).
+export const TOOL_VIEWS = ['planner', 'degree', 'compare'];
 
 // Detail pages aren't tabs. Each has an address like #tower/<id> and a list
 // in the data it looks its id up in.
@@ -39,6 +42,8 @@ export function createHubStore() {
     maps: { intro: '', maps: [] },
     modes: { modes: [] },
     rounds: { startCash: 650, sets: [] },
+    templates: { intro: '', templates: [] },
+    toolView: 'planner',   // which tool the Tools tab shows (see TOOL_VIEWS)
 
     mode: ['chimps', 'boss', 'normal'].includes(recall('mode', 'chimps')) ? recall('mode', 'chimps') : 'chimps', // which game mode the tiers are shown for (see MODES)
     activeTab: 'tier',     // one of TABS, or a PAGES kind ('tower', 'map'…) while a detail page is open
@@ -144,8 +149,22 @@ export function createHubStore() {
       if (unit) this.openPage(unit.category === 'Heroes' ? 'hero' : 'tower', unit.id);
     },
 
+    /** Open the Tools tab on one tool: openTool('degree') → #degree. */
+    openTool(view) {
+      if (!TOOL_VIEWS.includes(view)) return;
+      this.toolView = view;
+      this.activeTab = 'tools';
+      this.pageId = null;
+      if (location.hash !== `#${view}`) history.replaceState(null, '', `#${view}`);
+      window.scrollTo({ top: 0 });
+    },
+
     openTabFromUrl() {
       const [kind, id] = location.hash.slice(1).split('/');
+      if (TOOL_VIEWS.includes(kind)) {
+        this.openTool(kind);
+        return;
+      }
       if (PAGES[kind] && id) {
         this.activeTab = kind;
         this.pageId = decodeURIComponent(id);

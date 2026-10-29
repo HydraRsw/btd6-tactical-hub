@@ -519,19 +519,54 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 .row--capped td { color: var(--gold); }
 
 
-/* --- ⓘ help buttons --- */
-.field-head { display: flex; align-items: center; gap: 6px; }
-.info-btn {
-  display: inline-grid; place-items: center; width: 22px; height: 22px; padding: 0; flex-shrink: 0; cursor: pointer;
-  border-radius: 50%; border: 2px solid rgba(4, 18, 40, 0.7); background: var(--well); color: var(--cyan);
-}
-.info-btn:hover, .info-btn[aria-expanded="true"] { color: #0b1b33; background: var(--cyan); border-color: var(--outline); }
-.info-btn svg { width: 14px; height: 14px; }
-.info-inline svg { width: 14px; height: 14px; vertical-align: -2px; color: var(--cyan); }
-.help-text { margin: 2px 0 0; padding: 8px 10px; border-radius: 10px; font-size: 0.8rem; line-height: 1.45; color: var(--text-soft); background: rgba(67, 198, 255, 0.12); border: 2px solid rgba(67, 198, 255, 0.35); }
 .calc-field { align-content: start; }
+.info-inline svg { width: 14px; height: 14px; vertical-align: -2px; color: var(--cyan); }
+.field-head { display: flex; align-items: center; gap: 6px; }
 .calc-guide { display: grid; gap: 8px; margin: 0; padding: 12px 14px 12px 32px; font-size: 0.85rem; color: var(--text-soft); }
 .calc-guide strong { color: var(--text); }
+
+
+/* --- Hover tips (x-tip) --- */
+.info-tip { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; color: var(--cyan); cursor: help; flex-shrink: 0; }
+.info-tip:hover, .info-tip:focus-visible { color: #0b1b33; background: var(--cyan); outline: none; }
+.info-tip svg { width: 15px; height: 15px; }
+.tip-bubble {
+  position: fixed; z-index: 1000; max-width: min(300px, calc(100vw - 16px)); padding: 9px 12px; border-radius: 12px; pointer-events: none;
+  font-size: 0.8rem; line-height: 1.45; color: var(--text); background: #0b2a55; border: 2px solid var(--cyan); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+.tip-bubble[hidden] { display: none; }
+
+/* --- Bloon icons --- */
+.bloon-icon { position: relative; display: inline-grid; place-items: center; width: 20px; height: 20px; flex-shrink: 0; }
+.bloon-svg { width: 20px; height: 20px; }
+.bloon-icon__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.bloon-icon--picture .bloon-svg { visibility: hidden; }
+.bloon-chip--blimp .bloon-icon, .bloon-chip--blimp .bloon-svg { width: 26px; }
+.round-chart { position: relative; height: 240px; }
+
+/* --- Tools tab --- */
+.tool-switch { display: flex; flex-wrap: wrap; gap: 8px; }
+.tool-link { display: flex; align-items: center; gap: 14px; text-align: left; cursor: pointer; }
+.tool-link:hover { border-color: var(--gold); }
+.tool-link__text { display: grid; gap: 2px; flex: 1; }
+.planner-templates { align-items: center; }
+.planner-templates > select { width: auto; flex: 1; min-width: 200px; }
+.planner-templates__note { flex-basis: 100%; margin: 0; font-size: 0.85rem; }
+.compare { padding: 4px 0; }
+.compare__row { display: grid; grid-template-columns: 150px minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; padding: 9px 16px; border-bottom: 2px solid rgba(4, 18, 40, 0.45); font-size: 0.85rem; }
+.compare__row:last-child { border-bottom: 0; }
+.compare__row--head { align-items: end; }
+.compare__row--long { font-size: 0.8rem; color: var(--text-soft); }
+.compare__label { font-size: 0.7rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); padding-top: 2px; }
+.compare__pick { display: grid; gap: 8px; justify-items: start; }
+
+/* --- Monkey Knowledge --- */
+.mk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
+.mk { display: grid; gap: 4px; padding: 10px 12px; font-size: 0.85rem; }
+.mk--key { border-color: rgba(122, 212, 32, 0.6); }
+.mk__top { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.mk__effect { color: var(--text-soft); }
+.mk .pill { justify-self: start; }
 
 /* --- Tower costs and hero levels --- */
 .tip-columns--costs { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
@@ -576,5 +611,8 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
   .round-row > :nth-child(3), .round-row > :nth-child(5) { display: none; }
   .level-row { grid-template-columns: 28px 70px minmax(0, 1fr); }
   .timeline-row { grid-template-columns: 64px minmax(0, 1fr); padding: 10px 12px; }
+  .compare__row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 9px 12px; }
+  .compare__label { grid-column: 1 / -1; }
+  .compare__row--head > span:first-child { display: none; }
   .tower-hero__text h2 { font-size: 1.9rem; }
 }

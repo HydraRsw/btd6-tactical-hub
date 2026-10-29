@@ -6,7 +6,7 @@ import { DIFFICULTIES, PARAGON_POWER_CAPS, bossMultiplier, degreeForPower, parag
 import { formatCash } from '../lib/text.js';
 import { recall, remember } from '../lib/storage.js';
 
-// Text for the ⓘ buttons next to each field and result.
+// Text for the ⓘ tips next to each field and result (shown on hover).
 const HELP = {
   paragon: 'The Paragon you plan to build. Each one has its own price, and the price sets how much cash power you get per dollar.',
   difficulty: 'The difficulty of your game. Paragons cost less on Easy and more on Hard and Impoppable, so the same cash gives more power on easier difficulties.',
@@ -29,12 +29,7 @@ export function degreeCalculator() {
     CAPS: PARAGON_POWER_CAPS,
     HELP,
     formatCash,
-    help: null,          // which ⓘ explanation is open
     showGuide: false,    // the "How to use" steps
-
-    toggleHelp(id) {
-      this.help = this.help === id ? null : id;
-    },
     form: { ...DEFAULTS, ...(recall('degreeCalc', null) ?? {}) },
 
     init() {
