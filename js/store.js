@@ -6,7 +6,7 @@ import { recall, remember } from './lib/storage.js';
 
 // Tabs in header order.
 // 'patch' (#patch) is a page reached from the patch label, not a header tab.
-export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'events', 'tools', 'farm', 'chimps', 'patch'];
+export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'events', 'tools', 'farm', 'chimps', 'knowledge', 'patch'];
 
 // The Tools tab has three views; each also has its own address (#planner, #degree, #compare).
 export const TOOL_VIEWS = ['planner', 'degree', 'compare'];
@@ -19,6 +19,7 @@ export const PAGES = {
   map: (hub) => hub.maps.maps,
   mode: (hub) => hub.modes.modes,
   paragon: (hub) => hub.paragons.paragons,
+  boss: (hub) => hub.bosses.bosses,
 };
 
 // Game modes the tiers are ranked for. Each tower/hero has tiers.<mode>.
@@ -47,6 +48,7 @@ export function createHubStore() {
     patch: { intro: '', versions: [] },
     bosses: { intro: '', tierRounds: [], coop: [1], bosses: [], sources: [] },
     events: { intro: '', formats: [] },
+    knowledge: { intro: '', categories: [], treeRules: [], respec: '', entries: [], sources: [] },
     freeplay: { intro: '', speed: [], moabHealth: [], cashPerPop: [], statusResistance: [], sources: [] },
 
     // Saved in this browser only

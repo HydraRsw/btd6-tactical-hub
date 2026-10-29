@@ -138,6 +138,21 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 Map and mode advice comes from each map's Bloons wiki page and the wiki's mode strategy
 pages; Paragon pages from each Paragon's wiki page (its Strategy section).
 
+### Boss pages, Monkey Knowledge and map order
+
+- `bosses.json`: besides health and skulls, each boss has its page: `title`, `introduced`,
+  `summary`, `mechanics` (name + text), `stages` (per tier group: a note and `picks`, each
+  with `name`, `note`, optional `route` and `unit`: a tower/hero id or `paragon:<id>`),
+  `eliteNotes`, `money` and `tips`. Pages open at `#boss/<id>`.
+- `knowledge.json`: every Monkey Knowledge point (`name`, `category`, `effect`, `points`
+  needed in the tree, one-time `mm` cost, `requires`, related `towers`, optional `keyPick`
+  and `downside`), plus the tree unlock table. Shown in the Monkey Knowledge tab.
+- `maps.json` is kept in the order of the game's map menu (`order` field), taken from the
+  wiki's BTD6 map navigation box. The Maps tab can also sort A–Z.
+- Spanish game names (towers, heroes, maps, some Monkey Knowledge) are the official ones
+  from the wiki's "In other languages" tables (Latin American Spanish). Upgrade names stay in
+  English because the wiki doesn't list Spanish names for most of them.
+
 ## Spanish version (EN / ES switch)
 
 The header has an EN / ES switch. Spanish is also picked automatically for

@@ -934,5 +934,37 @@
  "wiki-boss-challenge": {
   "title": "Bloons wiki: Boss Challenge",
   "url": "https://www.bloonswiki.com/Boss_Challenge"
+ },
+ "wiki-boss-page-bloonarius": {
+  "title": "Bloons wiki: Bloonarius (boss page)",
+  "url": "https://www.bloonswiki.com/Bloonarius_(BTD6)"
+ },
+ "wiki-boss-page-lych": {
+  "title": "Bloons wiki: Lych (boss page)",
+  "url": "https://www.bloonswiki.com/Lych"
+ },
+ "wiki-boss-page-vortex": {
+  "title": "Bloons wiki: Vortex (boss page)",
+  "url": "https://www.bloonswiki.com/Vortex_(BTD6)"
+ },
+ "wiki-boss-page-dreadbloon": {
+  "title": "Bloons wiki: Dreadbloon (boss page)",
+  "url": "https://www.bloonswiki.com/Dreadbloon_(BTD6)"
+ },
+ "wiki-boss-page-phayze": {
+  "title": "Bloons wiki: Phayze (boss page)",
+  "url": "https://www.bloonswiki.com/Phayze"
+ },
+ "wiki-boss-page-blastapopoulos": {
+  "title": "Bloons wiki: Blastapopoulos (boss page)",
+  "url": "https://www.bloonswiki.com/Blastapopoulos_(BTD6)"
+ },
+ "wiki-map-menu-order": {
+  "title": "Bloons wiki: BTD6 map navigation (game menu order)",
+  "url": "https://www.bloonswiki.com/Template:BTD6_map_nav"
+ },
+ "wiki-localization": {
+  "title": "Bloons wiki: 'In other languages' tables (official Spanish names)",
+  "url": "https://www.bloonswiki.com/Dart_Monkey_(BTD6)#In_other_languages"
  }
 }

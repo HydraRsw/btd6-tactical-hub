@@ -4,6 +4,7 @@
 // general advice, plus the map's own note for that mode when there is one.
 
 import { matchesQuery } from '../lib/text.js';
+import { t } from '../lib/i18n.js';
 
 export const DIFFICULTIES = ['Beginner', 'Intermediate', 'Advanced', 'Expert'];
 
@@ -49,6 +50,7 @@ export function mapGuide() {
     difficulty: 'All',
     query: '',
     traits: [],
+    sort: 'game', // 'game' = the order of the game's map menu, 'az' = alphabetical (in the page's language)
 
     toggleTrait(id) {
       this.traits = this.traits.includes(id) ? this.traits.filter((t) => t !== id) : [...this.traits, id];
@@ -63,13 +65,18 @@ export function mapGuide() {
       return this.$store.hub.maps.maps.filter((map) =>
         (this.difficulty === 'All' || map.difficulty === this.difficulty) &&
         this.traits.every((id) => this.hasTrait(map, id)) &&
-        matchesQuery(this.query, [map.name, ...map.traits]));
+        matchesQuery(this.query, [map.name, t(map.name), ...map.traits, ...map.traits.map(t)]));
     },
 
     get groups() {
       return DIFFICULTIES
-        .map((difficulty) => ({ difficulty, maps: this.visibleMaps.filter((map) => map.difficulty === difficulty) }))
+        .map((difficulty) => ({ difficulty, maps: this.sorted(this.visibleMaps.filter((map) => map.difficulty === difficulty)) }))
         .filter((group) => group.maps.length > 0);
+    },
+
+    sorted(maps) {
+      if (this.sort !== 'az') return maps; // maps.json is kept in the game's menu order
+      return [...maps].sort((a, b) => t(a.name).localeCompare(t(b.name)));
     },
 
     modesIn(group) {
