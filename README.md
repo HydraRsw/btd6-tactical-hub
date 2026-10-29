@@ -138,6 +138,22 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 Map and mode advice comes from each map's Bloons wiki page and the wiki's mode strategy
 pages; Paragon pages from each Paragon's wiki page (its Strategy section).
 
+### Per-mode routes, tools and link previews
+
+- `towers.json` → `modeRoutes`: the recommended route for `chimps`, `boss` and `normal`
+  (`path` like `2-0-5`, or `null` for "don't use it here", a `name` and a `note`). The tier
+  list and tower pages show the route for the mode you pick; the wizard uses it too.
+- Tools tab: **What to use** (wizard: map + mode + hero → opener, win conditions with the
+  route for that mode, Camo/Lead coverage, danger rounds, map and mode notes, boss pages for
+  boss events), **Boss event planner** (picks this week's boss from Ninja Kiwi's open data;
+  per tier: boss page advice, Paragon + degree → power, cash and pops needed), and **Back up /
+  move** (packs everything this browser remembers into a code, link and QR code; opening a
+  `#restore=` link on another device restores it).
+- Search understands rounds and bloon properties: "camo lead round 50" shows that round and
+  the towers and heroes that handle Camo and Lead.
+- Link previews: Open Graph tags in `index.html` and the picture `img/og-image.jpg`
+  (1200×630, original art; no Ninja Kiwi images).
+
 ### Boss pages, Monkey Knowledge and map order
 
 - `bosses.json`: besides health and skulls, each boss has its page: `title`, `introduced`,

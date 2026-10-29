@@ -4,6 +4,7 @@
 
 import { fuzzyScore } from '../lib/text.js';
 import { t } from '../lib/i18n.js';
+import { meetsRule, parseBloon, roundTags, toPath } from '../lib/game.js';
 
 const MAX_RESULTS = 10;
 
@@ -18,6 +19,7 @@ const KIND_STYLES = {
   Tool: { color: '#ffd23f', icon: 'wrench' },
   Boss: { color: '#ff5b5b', icon: 'skull' },
   Knowledge: { color: '#43c6ff', icon: 'graduation-cap' },
+  Answer: { color: '#7ad420', icon: 'shield-check' },
 };
 
 /** Everything the search box can find, built from the loaded data. */
@@ -122,6 +124,61 @@ function buildSearchIndex(hub) {
   return [...tools, ...towers, ...heroes, ...paragons, ...bosses, ...maps, ...modes, ...knowledge, ...rounds, ...checkpoints, ...strategies];
 }
 
+// Words for bloon properties in a search ("camo lead round 50", "plomo camuflaje").
+const PROPERTY_WORDS = [
+  { id: 'camo', label: 'Camo', words: /\b(camo|camos|camuflaje|camuflados?)\b/i },
+  { id: 'lead', label: 'Lead', words: /\b(lead|leads|plomo|emplomados?|ddts?)\b/i },
+];
+const ROUND_WORDS = /\b(?:r|round|ronda)\s*(\d{1,3})\b/i;
+
+/**
+ * Answers for "camo lead round 50": the round itself, and the towers and heroes
+ * that can handle the bloon properties asked for (or found in that round).
+ */
+function propertyAnswers(hub, query) {
+  const roundMatch = query.match(ROUND_WORDS);
+  const roundNumber = roundMatch ? Number(roundMatch[1]) : null;
+  const round = roundNumber ? hub.rounds.sets?.find((s) => s.id === 'regular')?.rounds.find((r) => r.round === roundNumber) : null;
+  const wanted = new Set(PROPERTY_WORDS.filter((p) => p.words.test(query)).map((p) => p.id));
+  const out = [];
+  if (round) {
+    const tags = roundTags(round);
+    tags.filter((tag) => tag === 'camo' || tag === 'lead').forEach((tag) => wanted.add(tag));
+    const bloons = round.groups.map((g) => `${parseBloon(g.bloon).name ?? g.bloon} ×${g.count}`).join(', ');
+    out.push({ kind: 'Round', title: `Round ${round.round}`, subtitle: bloons, go: () => hub.jumpTo('rounds', `rb-${round.round}`) });
+  }
+  if (!wanted.size) return out;
+  const props = PROPERTY_WORDS.filter((p) => wanted.has(p.id));
+  const need = props.map((p) => p.label).join(' + ');
+  const towers = hub.towers
+    .filter((tower) => tower.detection && props.every((p) => Array.isArray(tower.detection[p.id])))
+    .map((tower) => {
+      const route = hub.routeFor(tower);
+      const atRoute = route && !route.includes('x') && props.every((p) => meetsRule(tower.detection[p.id], toPath(route)));
+      const cheapest = Math.max(...props.map((p) => Math.min(...tower.detection[p.id].map((rule) => rule.reduce((a, b) => a + b, 0)))));
+      return { tower, atRoute, cheapest };
+    })
+    .sort((a, b) => Number(b.atRoute) - Number(a.atRoute) || a.cheapest - b.cheapest)
+    .slice(0, 6)
+    .map(({ tower }) => ({
+      kind: 'Answer',
+      unit: tower,
+      title: tower.name,
+      subtitle: `${need}: ${props.map((p) => tower.detection[`${p.id}Text`]).join(' · ')}`,
+      go: () => hub.openPage('tower', tower.id),
+    }));
+  const heroes = hub.heroes
+    .filter((hero) => props.every((p) => hero[`${p.id}Level`]))
+    .map((hero) => ({
+      kind: 'Answer',
+      unit: hero,
+      title: hero.name,
+      subtitle: `${need}: ${props.map((p) => `${p.label} from level ${hero[`${p.id}Level`]}`).join(' · ')}`,
+      go: () => hub.openPage('hero', hero.id),
+    }));
+  return [...out, ...towers, ...heroes];
+}
+
 export function globalSearch() {
   return {
     query: '',
@@ -139,15 +196,16 @@ export function globalSearch() {
 
     get results() {
       if (!this.query.trim()) return [];
-      return this.index
+      const answers = propertyAnswers(this.$store.hub, this.query);
+      const found = this.index
         .map((entry) => ({
           entry,
           score: Math.max(fuzzyScore(this.query, entry.title) * 1.5, fuzzyScore(this.query, `${entry.title} ${t(entry.title)} ${t(entry.subtitle ?? '')} ${entry.keywords}`)),
         }))
         .filter(({ score }) => score > 0)
         .sort((a, b) => b.score - a.score)
-        .slice(0, MAX_RESULTS)
         .map(({ entry }) => entry);
+      return [...answers, ...found].slice(0, answers.length ? MAX_RESULTS + 4 : MAX_RESULTS);
     },
 
     onType() {

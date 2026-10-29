@@ -304,6 +304,16 @@ for (const b of bossesFile?.bosses ?? []) {
   }
 }
 
+// Best route per mode on every tower
+for (const tw of towers) {
+  for (const mode of ['chimps', 'boss', 'normal']) {
+    const r = tw.modeRoutes?.[mode];
+    if (!r) { problems.push(`towers.json "${tw.id}": modeRoutes.${mode} missing`); continue; }
+    if (r.path !== null && !/^[0-5x]-[0-5x]-[0-5x]$/.test(r.path)) problems.push(`towers.json "${tw.id}": modeRoutes.${mode}.path "${r.path}" isn't like 2-0-5`);
+    if (!r.name || !r.note) problems.push(`towers.json "${tw.id}": modeRoutes.${mode} needs a name and a note`);
+  }
+}
+
 // Monkey Knowledge tab
 const knowledgeFile = load('knowledge');
 if (knowledgeFile) {

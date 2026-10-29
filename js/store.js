@@ -9,7 +9,7 @@ import { recall, remember } from './lib/storage.js';
 export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'events', 'tools', 'farm', 'chimps', 'knowledge', 'patch'];
 
 // The Tools tab has three views; each also has its own address (#planner, #degree, #compare).
-export const TOOL_VIEWS = ['planner', 'degree', 'compare'];
+export const TOOL_VIEWS = ['wizard', 'bossplan', 'planner', 'degree', 'compare', 'backup'];
 
 // Detail pages aren't tabs. Each has an address like #tower/<id> and a list
 // in the data it looks its id up in.
@@ -56,6 +56,9 @@ export function createHubStore() {
     medals: recall('medals', {}),         // { mapId: [modeId, …, 'black-border'] }
     savedBuilds: recall('plannerSaved', []), // [{ id, name, savedAt, build }]
     pendingBuild: null,                   // a saved build the planner should load next
+    pendingRestore: null,                 // a backup code from a #restore= link, for the backup tool
+    pendingTemplate: null,                // { id, mapId }: a template the planner should load next (from the wizard)
+    pendingDegree: null,                  // { paragonId, target, difficulty }: values for the degree calculator (from the boss planner)
     toolView: 'planner',   // which tool the Tools tab shows (see TOOL_VIEWS)
 
     mode: ['chimps', 'boss', 'normal'].includes(recall('mode', 'chimps')) ? recall('mode', 'chimps') : 'chimps', // which game mode the tiers are shown for (see MODES)
@@ -110,6 +113,13 @@ export function createHubStore() {
 
     findMode(modeId) {
       return this.modes.modes.find((mode) => mode.id === modeId) ?? null;
+    },
+
+    /** The recommended route for a tower in a mode (defaults to the shown mode); heroes have none. */
+    routeFor(unit, mode = this.mode) {
+      if (!unit || unit.category === 'Heroes') return null;
+      const route = unit.modeRoutes?.[mode];
+      return route ? route.path : unit.bestRoute;
     },
 
     /** Towers and heroes in one list (the tier list shows both). */
@@ -189,6 +199,16 @@ export function createHubStore() {
     },
 
     /** Open a saved build in the planner. */
+    openTemplate(id, mapId) {
+      this.pendingTemplate = { id, mapId };
+      this.openTool('planner');
+    },
+
+    openDegree(paragonId, target, difficulty) {
+      this.pendingDegree = { paragonId, target, difficulty };
+      this.openTool('degree');
+    },
+
     openBuild(id) {
       const saved = this.savedBuilds.find((b) => b.id === id);
       if (!saved) return;
@@ -224,6 +244,11 @@ export function createHubStore() {
     },
 
     openTabFromUrl() {
+      if (location.hash.startsWith('#restore=')) {
+        this.pendingRestore = location.hash.slice('#restore='.length);
+        this.openTool('backup');
+        return;
+      }
       const [kind, id] = location.hash.slice(1).split('/');
       if (TOOL_VIEWS.includes(kind)) {
         this.openTool(kind);

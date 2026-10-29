@@ -34,6 +34,13 @@ export function degreeCalculator() {
 
     init() {
       this.$watch('form', (value) => remember('degreeCalc', value), { deep: true });
+      const applyPending = (pending) => {
+        if (!pending) return;
+        Object.assign(this.form, { paragonId: pending.paragonId, target: pending.target, difficulty: pending.difficulty ?? this.form.difficulty });
+        this.$store.hub.pendingDegree = null;
+      };
+      this.$watch('$store.hub.pendingDegree', applyPending);
+      applyPending(this.$store.hub.pendingDegree);
     },
 
     get paragon() {

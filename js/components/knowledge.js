@@ -44,6 +44,56 @@ export function knowledgeTab() {
       return { owned: all.filter((e) => this.isOwned(e.id)).length, total: all.length };
     },
 
+    // --- What to get next ------------------------------------------------------
+    byName(name) {
+      return this.$store.hub.knowledge.entries.find((e) => e.name === name);
+    },
+
+    spentIn(category) {
+      return this.$store.hub.knowledge.entries.filter((e) => e.category === category && this.isOwned(e.id)).length;
+    },
+
+    /** Not owned, every prerequisite owned, and enough points already spent in its tree. */
+    canUnlock(entry) {
+      return !this.isOwned(entry.id) && entry.requires.every((name) => this.isOwned(this.byName(name)?.id)) && entry.points <= this.spentIn(entry.category);
+    },
+
+    /** Points you can buy right now, key picks first, then the cheapest. */
+    get nextUp() {
+      return this.$store.hub.knowledge.entries
+        .filter((e) => this.canUnlock(e))
+        .sort((a, b) => Number(Boolean(b.keyPick)) - Number(Boolean(a.keyPick)) || a.mm - b.mm || a.points - b.points)
+        .slice(0, 8);
+    },
+
+    /** Every point still missing on the way to an entry (prerequisites first), with the Monkey Money it all costs. */
+    pathTo(entry) {
+      const chain = [];
+      const seen = new Set();
+      const walk = (e) => {
+        if (!e || seen.has(e.id) || this.isOwned(e.id)) return;
+        seen.add(e.id);
+        e.requires.forEach((name) => walk(this.byName(name)));
+        chain.push(e);
+      };
+      walk(entry);
+      const spent = this.spentIn(entry.category);
+      return {
+        steps: chain,
+        mm: chain.reduce((sum, e) => sum + e.mm, 0),
+        morePoints: Math.max(0, entry.points - spent - (chain.length - 1)),
+      };
+    },
+
+    /** Key picks not owned yet that are still out of reach, with what it takes to reach them. */
+    get keyGoals() {
+      return this.$store.hub.knowledge.entries
+        .filter((e) => e.keyPick && !this.isOwned(e.id) && !this.canUnlock(e))
+        .map((e) => ({ entry: e, path: this.pathTo(e) }))
+        .sort((a, b) => a.path.steps.length - b.path.steps.length || a.path.mm - b.path.mm)
+        .slice(0, 6);
+    },
+
     towerName(id) {
       return this.$store.hub.towers.find((tower) => tower.id === id)?.name ?? id;
     },

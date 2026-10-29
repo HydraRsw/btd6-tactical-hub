@@ -253,7 +253,24 @@
     "effect": "Start every game with a free Dart Monkey (one free tower per game).",
     "cost": "1,000 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "0-2-5",
+    "name": "Crossbow Master",
+    "note": "Crossbow Master needs camo from its own bottom path; place it along straight track sections."
+   },
+   "boss": {
+    "path": "0-2-5",
+    "name": "Crossbow Master",
+    "note": "Apex Plasma Master is the cheapest Paragon and a good option against tier 3–4 bosses."
+   },
+   "normal": {
+    "path": "0-2-5",
+    "name": "Crossbow Master",
+    "note": "Classic opener: Dart + Boomerang, Dart + Sub, Dart + Sniper, Dart + Engineer or three 0-0-0 Darts."
+   }
+  }
  },
  {
   "id": "boomer",
@@ -502,7 +519,24 @@
     "cost": "500 MM",
     "keyPick": true
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "5-0-2",
+    "name": "Glaive Lord",
+    "note": "Glaive Lord (5-0-2) is a win condition; switch to 5-2-0 when you need lead popping."
+   },
+   "boss": {
+    "path": "1-0-2",
+    "name": "Early boss build",
+    "note": "Early boss events: 1-0-2."
+   },
+   "normal": {
+    "path": "5-0-2",
+    "name": "Glaive Lord",
+    "note": "Glaive Lord is a solid win condition in standard games."
+   }
+  }
  },
  {
   "id": "bomb",
@@ -742,7 +776,24 @@
     "effect": "Bloon Impact stuns 25% longer.",
     "cost": "500 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "2-3-0",
+    "name": "MOAB Mauler",
+    "note": "MOAB Mauler (2-3-0) is a standard R40 answer."
+   },
+   "boss": {
+    "path": "0-5-0",
+    "name": "MOAB Eliminator",
+    "note": "MOAB Eliminator against Lych: attack normally, save the ability until a skull."
+   },
+   "normal": {
+    "path": "2-3-0",
+    "name": "MOAB Mauler",
+    "note": "Recursive Cluster struggles against Super Ceramics from round 81."
+   }
+  }
  },
  {
   "id": "tack",
@@ -982,7 +1033,24 @@
     "effect": "Inferno Ring's burst radius grows by 3.",
     "cost": "Free"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "2-0-4",
+    "name": "Overdrive",
+    "note": "Bottom path wants the top-path attack speed crosspath (2-0-4 / 2-0-5)."
+   },
+   "boss": {
+    "path": "2-0-4",
+    "name": "Overdrive",
+    "note": "Overdrive and The Tack Zone appear in Bloonarius, Lych and Dreadbloon strategies."
+   },
+   "normal": {
+    "path": "2-0-5",
+    "name": "The Tack Zone",
+    "note": "The Tack Zone (2-0-5) and Inferno Ring (5-0-2) are supplemental Freeplay defense."
+   }
+  }
  },
  {
   "id": "ice",
@@ -1226,7 +1294,24 @@
     "effect": "Snowstorm freezes for longer.",
     "cost": "500 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "4-2-0",
+    "name": "Embrittlement",
+    "note": "Embrittlement lets your other towers pop leads and adds damage to frozen bloons."
+   },
+   "boss": {
+    "path": "5-2-0",
+    "name": "Super Brittle",
+    "note": "Super Brittle is a staple boss debuff (Lych, Phayze)."
+   },
+   "normal": {
+    "path": "4-2-0",
+    "name": "Embrittlement",
+    "note": "Embrittlement still helps other towers pop leads in standard games."
+   }
+  }
  },
  {
   "id": "glue",
@@ -1473,7 +1558,24 @@
     "effect": "Start every game with a free Glue Gunner (one free tower per game).",
     "cost": "1,000 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "5-2-0",
+    "name": "The Bloon Solver",
+    "note": "The Bloon Solver (5-2-0) is a win condition against late Ceramics and R98's insides."
+   },
+   "boss": {
+    "path": "0-2-5",
+    "name": "Super Glue",
+    "note": "Super Glue and Glue Storm are support picks against Lych."
+   },
+   "normal": {
+    "path": "0-2-4",
+    "name": "Relentless Glue",
+    "note": "MOAB Glue and Relentless Glue are recommended support for rounds 90+."
+   }
+  }
  },
  {
   "id": "desperado",
@@ -1695,7 +1797,24 @@
    "leadText": "Big Iron (3-x-x) or Deadeye (x-3-x).",
    "purple": "Pops Purple, except fire attacks."
   },
-  "knowledge": []
+  "knowledge": [],
+  "modeRoutes": {
+   "chimps": {
+    "path": "5-2-0",
+    "name": "The Blazing Sun",
+    "note": "Two Desperados, or Dart + Desperado, are viable CHIMPS starts thanks to range and targeting."
+   },
+   "boss": {
+    "path": "5-2-0",
+    "name": "The Blazing Sun",
+    "note": "The Blazing Sun is a cheap tier 1 boss option; Bounty Hunter marking boosts damage on blimps."
+   },
+   "normal": {
+    "path": "5-2-0",
+    "name": "The Blazing Sun",
+    "note": "Strong early game with long range; the standard-game and Freeplay guides don't cover it yet."
+   }
+  }
  },
  {
   "id": "sniper",
@@ -1945,7 +2064,24 @@
     "effect": "Snipers, Subs and Buccaneers on Last targeting attack 10% faster.",
     "cost": "500 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "4-0-2",
+    "name": "Maim MOAB",
+    "note": "Maim MOAB stuns blimps; the Cheaper Maiming MK cuts its cost by $1,000."
+   },
+   "boss": {
+    "path": "2-0-5",
+    "name": "Elite Defender",
+    "note": "Elite Defender (2-0-5) can solo Lych from far away and has camo for Phayze."
+   },
+   "normal": {
+    "path": "5-2-0",
+    "name": "Cripple MOAB",
+    "note": "Elite Sniper and Cripple MOAB (5-2-0) are recommended Freeplay support; Elite Defender fits Sun Temple setups."
+   }
+  }
  },
  {
   "id": "sub",
@@ -2199,7 +2335,24 @@
     "cost": "1,000 MM",
     "keyPick": true
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "2-0-2",
+    "name": "Advanced Intel + Airburst Darts",
+    "note": "Standard early build 2-0-2; add Submerge and Support (3-0-2) for decamo."
+   },
+   "boss": {
+    "path": "2-0-5",
+    "name": "Sub Commander",
+    "note": "Sub Commander (2-0-5) works against Dreadbloon, Lych and Phayze."
+   },
+   "normal": {
+    "path": "2-0-2",
+    "name": "Airburst Darts",
+    "note": "Airburst Darts (2-0-2) is strong early on maps with water."
+   }
+  }
  },
  {
   "id": "bucc",
@@ -2457,7 +2610,24 @@
     "effect": "Snipers, Subs and Buccaneers on Last targeting attack 10% faster.",
     "cost": "500 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "5-2-0",
+    "name": "Carrier Flagship",
+    "note": "Water only. Carrier Flagship and Pirate Lord are win conditions with Brickell."
+   },
+   "boss": {
+    "path": "3-1-0",
+    "name": "Destroyer",
+    "note": "Destroyer spam with Brickell works against Dreadbloon and Phayze."
+   },
+   "normal": {
+    "path": "3-1-0",
+    "name": "Destroyer",
+    "note": "Destroyer (3-1-0) handles the first MOAB."
+   }
+  }
  },
  {
   "id": "ace",
@@ -2710,7 +2880,24 @@
     "cost": "500 MM",
     "keyPick": true
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "5-2-0",
+    "name": "Sky Shredder",
+    "note": "Sky Shredder (5-2-0) is a win condition; it benefits from Stronger Stimulant."
+   },
+   "boss": {
+    "path": "2-0-5",
+    "name": "Flying Fortress",
+    "note": "Flying Fortress (2-0-5) is strong late boss damage on any map format."
+   },
+   "normal": {
+    "path": "2-0-5",
+    "name": "Flying Fortress",
+    "note": "Flying Fortress (2-0-5 with a 2-2-0 Village) is the main late-game carry in standard games."
+   }
+  }
  },
  {
   "id": "heli",
@@ -2953,7 +3140,24 @@
     "effect": "Towers carried by Special Poperations (tier 4 and below) keep attacking in transit.",
     "cost": "1,000 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "2-0-5",
+    "name": "Comanche Commander",
+    "note": "Comanche Commander (2-0-5) is a win condition with Geraldo and Glue Storm."
+   },
+   "boss": {
+    "path": "0-5-0",
+    "name": "Special Poperations",
+    "note": "Special Poperations helps keep lives up against Lych."
+   },
+   "normal": {
+    "path": "0-4-0",
+    "name": "Support Chinook",
+    "note": "Support Chinook moves Ninjas into Sun Temple range in the strongest Freeplay hybrid, and can stall for extra income."
+   }
+  }
  },
  {
   "id": "mortar",
@@ -3189,7 +3393,24 @@
     "effect": "Artillery Battery costs $600 less.",
     "cost": "500 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "x-5-x",
+    "name": "Pop and Awe",
+    "note": "Pop and Awe is a win condition with Striker, stuns and Perma-Spike."
+   },
+   "boss": {
+    "path": "x-5-x",
+    "name": "Pop and Awe",
+    "note": "Top-path upgrades have black-bloon weaknesses: bring Striker's buff."
+   },
+   "normal": {
+    "path": "x-4-x",
+    "name": "Artillery Battery",
+    "note": "Artillery Battery is a mid-game pick."
+   }
+  }
  },
  {
   "id": "dartling",
@@ -3433,7 +3654,24 @@
     "effect": "Crossing Plasma or Ray of Doom beams leave plasma pools, which can hit Camo.",
     "cost": "250 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "2-0-5",
+    "name": "Bloon Exclusion Zone",
+    "note": "Bloon Exclusion Zone (2-0-5) is a win condition; BADS (2-0-4) is the save-up step."
+   },
+   "boss": {
+    "path": "1-5-0",
+    "name": "M.A.D",
+    "note": "Ray of Doom and Plasma Accelerator for boss damage; M.A.D against Lych and Bloonarius."
+   },
+   "normal": {
+    "path": "2-0-5",
+    "name": "Bloon Exclusion Zone",
+    "note": "BADS, Plasma Accelerator, Ray of Doom and BEZ are standard-game carries."
+   }
+  }
  },
  {
   "id": "wizard",
@@ -3682,7 +3920,24 @@
     "effect": "Arcane Spike hits MOAB-class and Ceramics harder.",
     "cost": "250 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "5-2-0",
+    "name": "Archmage",
+    "note": "Archmage (5-2-0) does well on many Expert maps and excels on DDT rounds, but needs camo support and struggles with Super Ceramics."
+   },
+   "boss": {
+    "path": "2-5-0",
+    "name": "Wizard Lord Phoenix",
+    "note": "Wizard Lord Phoenix and Archmage against Dreadbloon."
+   },
+   "normal": {
+    "path": "1-2-0",
+    "name": "Wall of Fire",
+    "note": "Wall of Fire (1-2-0, or 0-2-2 toward Dragon's Breath) is a reliable early pick."
+   }
+  }
  },
  {
   "id": "super",
@@ -3941,7 +4196,24 @@
     "effect": "A hidden effect for True Sun God; see the wiki page for what it does.",
     "cost": "500 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "3-0-2",
+    "name": "Sun Avatar (Ultravision)",
+    "note": "Not listed as a CHIMPS win condition on the wiki; needs Ultravision or support for camo."
+   },
+   "boss": {
+    "path": "4-2-0",
+    "name": "Sun Temple",
+    "note": "Sun Temple needs $45,000+ of support sacrifices."
+   },
+   "normal": {
+    "path": "4-2-0",
+    "name": "Sun Temple",
+    "note": "Vengeful True Sun God plus Sun Temples and Sun Avatars is a core Freeplay build (Adora's Blood Sacrifice helps)."
+   }
+  }
  },
  {
   "id": "ninja",
@@ -4184,7 +4456,24 @@
     "effect": "Bloonjitsu and Grandmaster Ninja throw an extra shuriken.",
     "cost": "500 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "0-4-0",
+    "name": "Bloon Sabotage",
+    "note": "Bloon Sabotage (0-4-0) is the R99 pick and strongest against DDTs."
+   },
+   "boss": {
+    "path": "5-0-2",
+    "name": "Grandmaster Ninja",
+    "note": "Grandmaster Ninja (5-0-2) against Dreadbloon; top and middle Ninjas shine against bosses."
+   },
+   "normal": {
+    "path": "4-0-2",
+    "name": "Bloonjitsu",
+    "note": "Bloonjitsu spam with about 20 Shinobi Tactics stacks each is the top Freeplay build (Grandmaster Ninja and Grand Saboteur too)."
+   }
+  }
  },
  {
   "id": "alch",
@@ -4420,7 +4709,24 @@
     "effect": "Acid pools last 5 seconds longer (can steal Rubber to Gold income).",
     "cost": "250 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "4-2-0",
+    "name": "Stronger Stimulant",
+    "note": "Stronger Stimulant at 4-2-0; Berserker Brew at 3-0-1 for slow-attacking towers."
+   },
+   "boss": {
+    "path": "4-2-0",
+    "name": "Stronger Stimulant",
+    "note": "Never rely on brews against Lych: it steals them."
+   },
+   "normal": {
+    "path": "5-x-x",
+    "name": "Permanent Brew",
+    "note": "Permanent Brew is core Freeplay support; Bloon Master Alchemist only when you aren't stalling for abilities."
+   }
+  }
  },
  {
   "id": "druid",
@@ -4666,7 +4972,24 @@
     "effect": "Tornadoes split into 3 smaller ones when they end.",
     "cost": "1,000 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "0-1-5",
+    "name": "Avatar of Wrath",
+    "note": "Avatar of Wrath (0-1-5) with five Poplust druids and Stronger Stimulant is a win condition."
+   },
+   "boss": {
+    "path": "1-4-0",
+    "name": "Jungle's Bounty",
+    "note": "Jungle's Bounty and Spirit of the Forest help with lives against Lych."
+   },
+   "normal": {
+    "path": "1-3-0",
+    "name": "Druid of the Jungle",
+    "note": "Druid of the Jungle (1-3-0) is good on maps with one active lane."
+   }
+  }
  },
  {
   "id": "mermonkey",
@@ -4885,7 +5208,24 @@
    "leadText": "Riptide Champion (x-3-x).",
    "purple": "Pops Purple."
   },
-  "knowledge": []
+  "knowledge": [],
+  "modeRoutes": {
+   "chimps": {
+    "path": "3-0-1",
+    "name": "Abyss Dweller",
+    "note": "Abyss Dweller (3-0-1) is a support pick: its creature adds pierce to nearby towers."
+   },
+   "boss": {
+    "path": "x-5-x",
+    "name": "Popseidon",
+    "note": "Popseidon's freeze lasts longer with Silas."
+   },
+   "normal": {
+    "path": "x-x-5",
+    "name": "The Final Harmonic",
+    "note": "Symphonic Resonance is round-90s support; The Final Harmonic pairs with a 0-5-2 Glue Storm in Freeplay."
+   }
+  }
  },
  {
   "id": "skywarden",
@@ -5102,7 +5442,24 @@
     "effect": "Longer projectile life for Wizards, Super Monkeys, Skywardens and Druids.",
     "cost": "Free"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "2-x-x",
+    "name": "Zephyr Sense",
+    "note": "Too new for a CHIMPS consensus; Zephyr Sense (2-x-x) gives camo."
+   },
+   "boss": {
+    "path": "x-x-5",
+    "name": "Winter's Mercy",
+    "note": "Winter's Mercy path cools Blastapopoulos (v57 increased the heat reduction)."
+   },
+   "normal": {
+    "path": "5-x-x",
+    "name": "Farwind Seer",
+    "note": "Too new for the standard-game or Freeplay guides."
+   }
+  }
  },
  {
   "id": "farm",
@@ -5356,7 +5713,24 @@
     "effect": "Tier 4+ Monkey Banks accept deposits of your cash.",
     "cost": "1,000 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": null,
+    "name": "Skip it",
+    "note": "Earns nothing in CHIMPS."
+   },
+   "boss": {
+    "path": "4-2-0",
+    "name": "Banana Research Facility",
+    "note": "Late: BRF spam with Overclock (5 → 9 crates), Banana Central for +25%."
+   },
+   "normal": {
+    "path": "2-0-3",
+    "name": "Marketplace",
+    "note": "Start with 2-0-0 farms and 2-0-3 Marketplaces; Monkey Bank in the 30s or 40s leads into Monkeyopolis."
+   }
+  }
  },
  {
   "id": "spike",
@@ -5606,7 +5980,24 @@
     "cost": "500 MM",
     "keyPick": true
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "1-0-5",
+    "name": "Perma-Spike",
+    "note": "Perma-Spike (1-0-5) is a win condition with Jungle Drums and a 3-0-1 Berserker Brew."
+   },
+   "boss": {
+    "path": "2-5-0",
+    "name": "Carpet of Spikes",
+    "note": "Spike Storm's ability handles the R100 BAD; Carpet of Spikes is good against bosses."
+   },
+   "normal": {
+    "path": "1-0-5",
+    "name": "Perma-Spike",
+    "note": "Perma-Spike (1-0-5 with Jungle Drums and a 3-0-1 brew) tanks huge numbers of bloons; Super Mines (5-2-0) supports Freeplay."
+   }
+  }
  },
  {
   "id": "village",
@@ -5849,7 +6240,24 @@
     "effect": "Call to Arms lasts 3 seconds longer.",
     "cost": "250 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "2-3-0",
+    "name": "Monkey Intelligence Bureau",
+    "note": "Jungle Drums is always recommended; MIB covers every damage type."
+   },
+   "boss": {
+    "path": "0-0-5",
+    "name": "Monkeyopolis",
+    "note": "Monkeyopolis and Megaopolis drive late boss economy."
+   },
+   "normal": {
+    "path": "2-0-5",
+    "name": "Monkeyopolis",
+    "note": "Monkeyopolis (2-0-5 for range and Jungle Drums) is the main standard-game money-maker."
+   }
+  }
  },
  {
   "id": "engi",
@@ -6094,7 +6502,24 @@
     "effect": "Bloon Trap holds 30 more RBE.",
     "cost": "500 MM"
    }
-  ]
+  ],
+  "modeRoutes": {
+   "chimps": {
+    "path": "0-4-0",
+    "name": "Overclock",
+    "note": "Overclock your main carry (40% shorter attack cooldown)."
+   },
+   "boss": {
+    "path": "0-4-0",
+    "name": "Overclock",
+    "note": "Overclock BRFs during farming; Bloon Trap (0-1-4) and XXXL Trap (0-2-5) for income."
+   },
+   "normal": {
+    "path": "0-4-0",
+    "name": "Overclock",
+    "note": "Overclock expensive carries (not Pouākai)."
+   }
+  }
  },
  {
   "id": "beast",
@@ -6326,6 +6751,23 @@
    "leadText": "Adasaurus (x-2-x), Great White (3-x-x) or Pouākai (x-x-5); the staff and the other birds can't (birds need outside Lead popping).",
    "purple": "The staff can't pop Purple."
   },
-  "knowledge": []
+  "knowledge": [],
+  "modeRoutes": {
+   "chimps": {
+    "path": "4-0-0",
+    "name": "Orca",
+    "note": "Orca (4-0-0) on Strong targeting with Overclock is a win condition."
+   },
+   "boss": {
+    "path": "5-0-0",
+    "name": "Megalodon",
+    "note": "Megalodon (5-0-0) is a strong single-tower option against Bloonarius, Lych and Dreadbloon."
+   },
+   "normal": {
+    "path": "x-x-5",
+    "name": "Pouākai",
+    "note": "Pouākai is a late-game carry, strongest with extra Golden Eagles; Giant Condor is round-90s support."
+   }
+  }
  }
 ]

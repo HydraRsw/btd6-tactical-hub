@@ -712,3 +712,21 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 .mk-card__note svg { width: 14px; height: 14px; flex: none; margin-top: 2px; }
 .mk-card__note--warn { color: #ffc2c2; }
 .mk-card__meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.8rem; }
+
+/* --- Best route per mode (tower page) ---------------------------------------- */
+.mode-route-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 8px; }
+.mode-route { display: grid; gap: 4px; text-align: left; cursor: pointer; padding: 10px 12px; font: inherit; color: inherit; }
+.mode-route--active { box-shadow: inset 0 0 0 2px var(--gold); }
+.mode-route__head { display: flex; justify-content: space-between; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 800; }
+.mode-route__note { font-size: 0.85rem; color: var(--text-muted); }
+
+/* --- Wizard, boss event planner, backup ----------------------------------------- */
+.wizard-inputs { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; }
+.wizard-inputs .planner-field { min-width: min(100%, 220px); }
+.link-button { background: none; border: 0; padding: 0; font: inherit; font-weight: 900; color: var(--cyan); cursor: pointer; }
+.link-button:hover { color: var(--gold); }
+.note--warn { color: #ffc2c2; }
+.boss-plan-tier header { gap: 8px; }
+.qr-box { width: min(100%, 240px); background: #fff; border-radius: 12px; padding: 8px; }
+.qr-box svg { display: block; width: 100%; height: auto; }
+.backup-code { width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.75rem; word-break: break-all; resize: vertical; }
