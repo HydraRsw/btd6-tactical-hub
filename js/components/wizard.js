@@ -101,7 +101,7 @@ export function wizardTool() {
       const byId = (id) => templates.find((t) => t.id === id);
       if (this.mode.only) return null;
       if (this.isWater) return byId('dart-sub');
-      if (this.hasTrait(/line-of-sight|obstacle|wall/i)) return byId('dart-sniper');
+      if (this.map.traits.some((tr) => /line-of-sight|obstacle|wall/i.test(tr) && !/\b(no|light|without|removable)\b/i.test(tr))) return byId('dart-sniper');
       if (['Beginner', 'Intermediate'].includes(this.map.difficulty)) return byId('sauda-start');
       return byId('three-darts');
     },
@@ -147,7 +147,10 @@ export function wizardTool() {
         .filter((t) => this.allowed(t) && !used.has(t.id) && ['S', 'A'].includes(t.tiers[key]) && this.routeOf(t).path)
         .sort((a, b) => TIER_ORDER.indexOf(a.tiers[key]) - TIER_ORDER.indexOf(b.tiers[key]))
         .map((tower) => ({ tower, mapNote: '', upgrade: '' }));
-      return [...fromMap, ...fromTiers].slice(0, 6).map((r) => ({ ...r, route: this.routeOf(r.tower), tier: r.tower.tiers[key] }));
+      const isSupport = (t) => t.roles.includes('Buff') && !t.roles.includes('DPS');
+      const carries = [...fromMap, ...fromTiers].filter((r) => !isSupport(r.tower)).slice(0, 5);
+      const support = [...fromMap, ...fromTiers].filter((r) => isSupport(r.tower)).slice(0, 2);
+      return [...carries, ...support].map((r) => ({ ...r, support: isSupport(r.tower), route: this.routeOf(r.tower), tier: r.tower.tiers[key] }));
     },
 
     // --- Camo and Lead --------------------------------------------------------

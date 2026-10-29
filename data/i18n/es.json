@@ -2557,6 +2557,12 @@
 "Monkey Knowledge ticked": "Conocimiento Mono marcado",
 "Skip it": "No la uses",
 "Early boss build": "Build temprana para jefes",
+"Easy (Standard)": "Fácil (Estándar)",
+"Medium (Standard)": "Medio (Estándar)",
+"Hard (Standard)": "Difícil (Estándar)",
+"Answer": "Respuesta",
+"Tool": "Herramienta",
+"Tower": "Torre",
 "Dart Monkey": "Mono lanzadardos",
 "Boomerang Monkey": "Mono lanzabumeranes",
 "Bomb Shooter": "Tirabombas",
@@ -3294,6 +3300,10 @@
 [
 "^\\+(\\S+)% per round$",
 "+{1}% por ronda"
+],
+[
+"^Camo \\+ Lead: (.+)$",
+"Camuflaje + Plomo: {1}"
 ],
 [
 "^(Camo|Lead): (.+)$",
