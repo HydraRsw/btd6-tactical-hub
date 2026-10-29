@@ -329,8 +329,8 @@
             <nav class="row-wrap">
               <button class="button button--quiet button--small" @click="$store.hub.openTab('tier')"><span x-icon="arrow-left"></span>Tier list</button>
               <span class="push-right row-wrap">
-                <button class="button button--quiet button--small" @click="$store.hub.openTower(neighbour(-1).id)"><span x-icon="chevron-left"></span><span x-text="neighbour(-1).name"></span></button>
-                <button class="button button--quiet button--small" @click="$store.hub.openTower(neighbour(1).id)"><span x-text="neighbour(1).name"></span><span x-icon="chevron-right"></span></button>
+                <button class="button button--quiet button--small" @click="$store.hub.openTower(neighbour(-1).id)" :aria-label="`Previous tower: ${neighbour(-1).name}`"><span x-icon="chevron-left"></span><span class="neighbour-name" x-text="neighbour(-1).name"></span></button>
+                <button class="button button--quiet button--small" @click="$store.hub.openTower(neighbour(1).id)" :aria-label="`Next tower: ${neighbour(1).name}`"><span class="neighbour-name" x-text="neighbour(1).name"></span><span x-icon="chevron-right"></span></button>
               </span>
             </nav>
 
