@@ -1,346 +1,778 @@
 {
-  "intro": "Paragon tiers are for boss events, where Paragons do most of the late damage. They come from the Bloons wiki's boss-event guide and boss strategy pages; costs are Medium difficulty.",
-  "paragons": [
+ "intro": "Paragon tiers are for boss events, where Paragons do most of the late damage. They come from the Bloons wiki's boss-event guide and boss strategy pages; costs are Medium difficulty.",
+ "paragons": [
+  {
+   "id": "goliath-doomship",
+   "name": "Goliath Doomship",
+   "tower": "ace",
+   "cost": 900000,
+   "bossTier": "S",
+   "role": "Damage",
+   "confidence": "verified",
+   "summary": "Named among the highest-damage Paragons in the boss-event guide.",
+   "strengths": [
+    "Top-tier boss damage",
+    "Recommended for high-tier Vortex"
+   ],
+   "weaknesses": [
+    "Most expensive Paragon"
+   ],
+   "sources": [
+    "wiki-goliath-doomship",
+    "wiki-boss-events",
+    "wiki-vortex",
+    "wiki-paragon"
+   ],
+   "combines": [
+    "Sky Shredder",
+    "Tsar Bomba",
+    "Flying Fortress"
+   ],
+   "howItWorks": "A huge aircraft with frontal guns, missiles and a Carpet Bomb ability.",
+   "strategy": [
+    "The most expensive Paragon, but the strongest and most versatile; with enough micro it works on almost any map.",
+    "Micro matters: keep it facing bloons for its frontal attack and over them for its missiles, and time Carpet Bomb.",
+    "Maximise its degree: it has the highest boss-damage potential."
+   ],
+   "synergies": [
     {
-      "id": "goliath-doomship",
-      "name": "Goliath Doomship",
-      "tower": "ace",
-      "cost": 900000,
-      "bossTier": "S",
-      "role": "Damage",
-      "confidence": "verified",
-      "summary": "Named among the highest-damage Paragons in the boss-event guide.",
-      "strengths": [
-        "Top-tier boss damage",
-        "Recommended for high-tier Vortex"
-      ],
-      "weaknesses": [
-        "Most expensive Paragon"
-      ],
-      "sources": [
-        "wiki-boss-events",
-        "wiki-vortex",
-        "wiki-paragon"
-      ]
+     "unit": "navarch",
+     "note": "Its Carrier Flagship buff."
     },
     {
-      "id": "magus-perfectus",
-      "name": "Magus Perfectus",
-      "tower": "wizard",
-      "cost": 800000,
-      "bossTier": "S",
-      "role": "Damage",
-      "confidence": "verified",
-      "summary": "Mana-driven damage Paragon combining Archmage, Phoenix and Necromancer; huge burst during Arcane Metamorphosis.",
-      "strengths": [
-        "Very high damage with its big abilities",
-        "Strong against Bloonarius and Dreadbloon"
-      ],
-      "weaknesses": [
-        "Weakest against Blastapopoulos",
-        "Needs mana and ability management"
-      ],
-      "sources": [
-        "wiki-boss-events",
-        "wiki-magus"
-      ]
-    },
-    {
-      "id": "mmmf",
-      "name": "Mega Massive Munitions Factory",
-      "tower": "spike",
-      "cost": 750000,
-      "bossTier": "S",
-      "role": "Damage",
-      "confidence": "verified",
-      "summary": "Named among the highest-damage Paragons in the boss-event guide.",
-      "strengths": [
-        "Top-tier boss damage"
-      ],
-      "weaknesses": [
-        "Short range: poor direct damage against Phayze",
-        "Lych can steal Controlled Burst at tier 5"
-      ],
-      "sources": [
-        "wiki-boss-events",
-        "wiki-phayze",
-        "wiki-lych"
-      ]
-    },
-    {
-      "id": "nautic-siege-core",
-      "name": "Nautic Siege Core",
-      "tower": "sub",
-      "cost": 400000,
-      "bossTier": "S",
-      "role": "Damage / support",
-      "confidence": "verified",
-      "summary": "A stall-safe pick that can handle later Phayze and Vortex tiers alone or in pairs.",
-      "strengths": [
-        "Recommended against Phayze and Vortex",
-        "Safe when you need to stall"
-      ],
-      "weaknesses": [],
-      "sources": [
-        "wiki-boss-events",
-        "wiki-phayze",
-        "wiki-vortex"
-      ]
-    },
-    {
-      "id": "master-builder",
-      "name": "Master Builder",
-      "tower": "engi",
-      "cost": 600000,
-      "bossTier": "A",
-      "role": "Support",
-      "confidence": "verified",
-      "summary": "Power Glove overclocks other Paragons; Mega Sentries add burst; its nailgun stuns blimps.",
-      "strengths": [
-        "Boosts expensive Paragons (Magus, Doomship, MMMF)",
-        "Best against Bloonarius"
-      ],
-      "weaknesses": [
-        "Worst against Blastapopoulos",
-        "Power Glove doesn't stack with Overclock"
-      ],
-      "sources": [
-        "wiki-boss-events",
-        "wiki-master-builder"
-      ]
-    },
-    {
-      "id": "ascended-shadow",
-      "name": "Ascended Shadow",
-      "tower": "ninja",
-      "cost": 500000,
-      "bossTier": "A",
-      "role": "Damage",
-      "confidence": "verified",
-      "summary": "Recommended against Phayze and Vortex; gives Crucible its camo detection.",
-      "strengths": [
-        "Strong against Phayze and Vortex"
-      ],
-      "weaknesses": [
-        "Loses its anti-camo bonus if you also use decamo towers"
-      ],
-      "sources": [
-        "wiki-phayze",
-        "wiki-vortex",
-        "wiki-crucible"
-      ]
-    },
-    {
-      "id": "navarch",
-      "name": "Navarch of the Seas",
-      "tower": "bucc",
-      "cost": 550000,
-      "bossTier": "A",
-      "role": "Damage / economy",
-      "confidence": "verified",
-      "summary": "Water Paragon recommended against Lych and Phayze; the boss guide plans it around 40 Merchantmen.",
-      "strengths": [
-        "Strong against Lych and Phayze",
-        "Pairs with the Merchantman economy"
-      ],
-      "weaknesses": [
-        "Avoid when you need to stall rounds or let other towers get pops"
-      ],
-      "sources": [
-        "wiki-boss-events",
-        "wiki-lych",
-        "wiki-phayze"
-      ]
-    },
-    {
-      "id": "herald-of-everfrost",
-      "name": "Herald of Everfrost",
-      "tower": "ice",
-      "cost": 300000,
-      "bossTier": "A",
-      "role": "Support / stall",
-      "confidence": "verified",
-      "summary": "A stall-safe support Paragon that also cools Blastapopoulos.",
-      "strengths": [
-        "Stall-safe support",
-        "Reduces Blastapopoulos heat"
-      ],
-      "weaknesses": [],
-      "sources": [
-        "wiki-boss-events",
-        "wiki-blastapopoulos"
-      ]
-    },
-    {
-      "id": "apex-plasma-master",
-      "name": "Apex Plasma Master",
-      "tower": "dart",
-      "cost": 150000,
-      "bossTier": "B",
-      "role": "Budget damage",
-      "confidence": "verified",
-      "summary": "The cheapest Paragon; a good option against tier 3–4 bosses.",
-      "strengths": [
-        "Cheapest Paragon",
-        "Recommended against Lych and Bloonarius"
-      ],
-      "weaknesses": [
-        "Avoid against Elite bosses unless conditions favour it"
-      ],
-      "sources": [
-        "wiki-boss-events",
-        "wiki-dart",
-        "wiki-lych"
-      ]
-    },
-    {
-      "id": "crucible",
-      "name": "Crucible of Steel and Flame",
-      "tower": "tack",
-      "cost": 200000,
-      "bossTier": "B",
-      "role": "Budget burst",
-      "confidence": "verified",
-      "summary": "Second-cheapest Paragon; Meteor Impact burst and a Maelstrom flame ring.",
-      "strengths": [
-        "Cost-efficient",
-        "Strong against Diamondback"
-      ],
-      "weaknesses": [
-        "No camo detection (needs Ascended Shadow)",
-        "Poor against Phayze; Lych steals Maelstrom",
-        "Avoid against Elite bosses unless conditions favour it"
-      ],
-      "sources": [
-        "wiki-crucible",
-        "wiki-boss-events"
-      ]
-    },
-    {
-      "id": "glaive-dominus",
-      "name": "Glaive Dominus",
-      "tower": "boomer",
-      "cost": 375000,
-      "bossTier": "B",
-      "role": "Damage",
-      "confidence": "approximate",
-      "summary": "Listed for Lych and later Bloonarius tiers; the boss guide doesn't single it out.",
-      "strengths": [
-        "Used against Lych and Bloonarius"
-      ],
-      "weaknesses": [],
-      "sources": [
-        "wiki-lych",
-        "wiki-bloonarius"
-      ]
-    },
-    {
-      "id": "bomb-bunker",
-      "name": "Ballistic Obliteration Missile Bunker",
-      "tower": "bomb",
-      "cost": 650000,
-      "bossTier": "C",
-      "role": "Damage",
-      "confidence": "approximate",
-      "summary": "The wiki's boss guides don't recommend it specifically.",
-      "strengths": [],
-      "weaknesses": [
-        "Not featured in the boss guides we cite"
-      ],
-      "sources": [
-        "wiki-paragon",
-        "wiki-bomb"
-      ]
-    },
-    {
-      "id": "root-of-all-nature",
-      "name": "Root of all Nature",
-      "tower": "druid",
-      "cost": 475000,
-      "bossTier": "C",
-      "role": "Damage",
-      "confidence": "approximate",
-      "summary": "The newest pre-v57 Paragon (v54); not yet covered by the boss guides.",
-      "strengths": [],
-      "weaknesses": [
-        "Not featured in the boss guides we cite"
-      ],
-      "sources": [
-        "wiki-paragon",
-        "wiki-druid"
-      ]
-    },
-    {
-      "id": "spider-monkey",
-      "name": "S.P.I.D.E.R. Monkey",
-      "tower": "sniper",
-      "cost": null,
-      "bossTier": "B",
-      "role": "Damage / support",
-      "confidence": "new",
-      "summary": "Sniper Paragon added in v57: bouncing heavy shots with shrapnel, a Cash Drop barrage, an Offensive Supply Drop, an area buff and a charge shot.",
-      "strengths": [
-        "New in v57"
-      ],
-      "weaknesses": [
-        "Too new to rank: placeholder tier"
-      ],
-      "sources": [
-        "steam-v57",
-        "ninjakiwi-x-v57"
-      ]
+     "unit": "master-builder",
+     "note": "Power Glove."
     }
-  ],
-  "degreeGuide": {
-    "basics": [
-      "Unlock the Paragon with tower XP (500,000–1,000,000) after every other upgrade of that tower.",
-      "Have all three tier-5 versions of the tower on the map, then upgrade one of them. Only one of each Paragon can exist; boss events usually cap you at 4.",
-      "Degree runs 1–100 and needs 200,000 power for degree 100. Each degree costs more than the last."
-    ],
-    "powerSources": [
-      {
-        "source": "Cash spent on absorbed towers (and the slider)",
-        "value": "1 power per $1",
-        "cap": "80,000 since v57 (was 60,000)"
-      },
-      {
-        "source": "Extra tier 5s beyond the three you need",
-        "value": "6,000 each",
-        "cap": "50,000"
-      },
-      {
-        "source": "Upgrades on absorbed non-tier-5 towers",
-        "value": "No longer counts",
-        "cap": "0 since v57 (was 10,000)"
-      },
-      {
-        "source": "Pops and income of absorbed towers",
-        "value": "1 per 180 damage, 1 per $45 income",
-        "cap": "125,000 since v57 (was 90,000)"
-      },
-      {
-        "source": "Geraldo's Paragon Power Totems",
-        "value": "2,000 each",
-        "cap": "No cap"
-      }
-    ],
-    "tips": [
-      "Aim for multiples of 20: boss damage jumps at degree 20, 40, 60, 80 and 100, so 19 → 20 matters more than 20 → 21.",
-      "Several mid-degree Paragons usually beat one maxed Paragon, because each degree costs more than the last.",
-      "Spend cash on real towers before the slider; the slider gives slightly less power per dollar.",
-      "Farm pops with income towers: XXXL Trap, Rubber to Gold, Monkey City and Bounty Hunter supply most of the damage/income power.",
-      "Overclock and Ultraboost your Banana Farms while farming power.",
-      "Three Paragon Power Totems equal one extra tier 5.",
-      "If you'll sell it later, upgrade the most expensive of the three tier 5s.",
-      "Four Paragons at degree 40+ handle nearly every boss, including Elite."
-    ],
-    "degree100": "At degree 100, damage and pierce double (+10 flat each) and the boss damage multiplier reaches ×2.25 (Normal) / ×4.5 (Elite).",
-    "note": "Power values come from the wiki's Paragon page (pre-v57) with the cap changes from the v57.0 notes applied. With the new caps, the non-totem sources add up to 255,000, more than the 200,000 needed, so degree 100 may now be reachable solo without totems; this is our arithmetic, not a tested result.",
-    "sources": [
-      "wiki-paragon",
-      "steam-v57",
-      "wiki-master-builder",
-      "wiki-boss-events"
-    ]
+   ],
+   "bestBosses": [
+    "Most bosses, especially tier 5"
+   ],
+   "worstBosses": [
+    "Lych (awkward skull timings)",
+    "Blastapopoulos (meteors cut its DPS and ability uptime)"
+   ],
+   "degreeTips": [
+    "Most pops come from Flying Fortress, sometimes with Sky Shredder.",
+    "Cheapest tiers: 0-2-2 and 0-3-2 for T2/T3, 4-2-0 for T4; 2-0-4 Spectres are the priciest T4."
+   ]
+  },
+  {
+   "id": "magus-perfectus",
+   "name": "Magus Perfectus",
+   "tower": "wizard",
+   "cost": 800000,
+   "bossTier": "S",
+   "role": "Damage",
+   "confidence": "verified",
+   "summary": "Mana-driven damage Paragon combining Archmage, Phoenix and Necromancer; huge burst during Arcane Metamorphosis.",
+   "strengths": [
+    "Very high damage with its big abilities",
+    "Strong against Bloonarius and Dreadbloon"
+   ],
+   "weaknesses": [
+    "Weakest against Blastapopoulos",
+    "Needs mana and ability management"
+   ],
+   "sources": [
+    "wiki-magus",
+    "wiki-boss-events"
+   ],
+   "combines": [
+    "Archmage",
+    "Wizard Lord Phoenix",
+    "Prince of Darkness"
+   ],
+   "howItWorks": "Spends mana on Arcane Spikes, a Dark Phoenix and undead bloons, or switches to a Drain Beam to refill mana.",
+   "strategy": [
+    "Let mana fill, then trigger Arcane Metamorphosis for extreme DPS; when mana runs out, use Phoenix Explosion on BADs.",
+    "Use Drain Beam on slow bloons; switch it off for bursts.",
+    "Master Builder's Power Glove on it is one of the strongest combos in the game."
+   ],
+   "synergies": [
+    {
+     "unit": "master-builder",
+     "note": "Power Glove during Metamorphosis."
+    },
+    {
+     "unit": "nautic-siege-core",
+     "note": "Submerged, it shortens Arcane Metamorphosis' cooldown."
+    }
+   ],
+   "bestBosses": [
+    "Bloonarius",
+    "Dreadbloon"
+   ],
+   "worstBosses": [
+    "Blastapopoulos (longer cooldowns, immune to Phoenix Explosion's damage over time)"
+   ],
+   "degreeTips": [
+    "Cheap T2/T3: 2-0-2 or 3-0-2; cheap T4: 2-0-4 Necromancer; priciest T4: 4-2-0 Arcane Spikes."
+   ]
+  },
+  {
+   "id": "mmmf",
+   "name": "Mega Massive Munitions Factory",
+   "tower": "spike",
+   "cost": 750000,
+   "bossTier": "S",
+   "role": "Damage",
+   "confidence": "verified",
+   "summary": "Named among the highest-damage Paragons in the boss-event guide.",
+   "strengths": [
+    "Top-tier boss damage"
+   ],
+   "weaknesses": [
+    "Short range: poor direct damage against Phayze",
+    "Lych can steal Controlled Burst at tier 5"
+   ],
+   "sources": [
+    "wiki-mmmf",
+    "wiki-boss-events",
+    "wiki-phayze",
+    "wiki-lych"
+   ],
+   "combines": [
+    "Super Mines",
+    "Carpet of Spikes",
+    "Perma-Spike"
+   ],
+   "howItWorks": "Lays giant spiked mines that last up to five rounds and split into spike piles, plus a permanent carpet and the Spikeageddon ability.",
+   "strategy": [
+    "One of the strongest Paragons if it can stockpile mines; more placement-dependent than the Doomship.",
+    "The best pick for Timed boss events: a stockpile does huge damage fast. Use Set Target to focus mines.",
+    "Build it early to stockpile: round 96 for a tier 4 boss, round 117 for tier 5."
+   ],
+   "synergies": [
+    {
+     "unit": "master-builder",
+     "note": "Power Glove target."
+    }
+   ],
+   "bestBosses": [
+    "Bloonarius"
+   ],
+   "worstBosses": [
+    "Vortex (wipes stockpiles)",
+    "Phayze"
+   ],
+   "degreeTips": [
+    "Flat pierce from degree matters a lot (+1 every 10 degrees).",
+    "Aim all Spike Factories at the entrances for pops; cheapest tiers 0-2-2 and 0-2-3, 4-2-0 for the priciest T4."
+   ]
+  },
+  {
+   "id": "nautic-siege-core",
+   "name": "Nautic Siege Core",
+   "tower": "sub",
+   "cost": 400000,
+   "bossTier": "S",
+   "role": "Damage / support",
+   "confidence": "verified",
+   "summary": "A stall-safe pick that can handle later Phayze and Vortex tiers alone or in pairs.",
+   "strengths": [
+    "Recommended against Phayze and Vortex",
+    "Safe when you need to stall"
+   ],
+   "weaknesses": [],
+   "sources": [
+    "wiki-nautic-siege-core",
+    "wiki-boss-events",
+    "wiki-phayze",
+    "wiki-vortex"
+   ],
+   "combines": [
+    "Energizer",
+    "Pre-emptive Strike",
+    "Sub Commander"
+   ],
+   "howItWorks": "Surfaced it fires homing rockets at anything other towers can see; submerged it buffs heroes, Subs and other Paragons' cooldowns. Final Strike does massive damage on a long cooldown.",
+   "strategy": [
+    "In late Freeplay keep it submerged for its buffs and faster Paragon ability cooldowns; surface it for heavy boss damage.",
+    "Submerge it during Final Strike's countdown: the countdown stops its attacks but not its buffs.",
+    "Against bosses, time Final Strike just before the boss arrives (allow for its 3-second arrival delay). Target Last."
+   ],
+   "synergies": [
+    {
+     "unit": "magus-perfectus",
+     "note": "Faster Arcane Metamorphosis cooldown."
+    },
+    {
+     "unit": "brickell",
+     "note": "Buffs heroes while submerged."
+    }
+   ],
+   "bestBosses": [
+    "Vortex (if kept out of its stun area)",
+    "Phayze (with other camo detectors around the map)"
+   ],
+   "worstBosses": [
+    "Lych (soul and revived DDTs)"
+   ],
+   "degreeTips": [
+    "High degree is essential unless you only want the cooldown buff."
+   ]
+  },
+  {
+   "id": "master-builder",
+   "name": "Master Builder",
+   "tower": "engi",
+   "cost": 600000,
+   "bossTier": "A",
+   "role": "Support",
+   "confidence": "verified",
+   "summary": "Power Glove overclocks other Paragons; Mega Sentries add burst; its nailgun stuns blimps.",
+   "strengths": [
+    "Boosts expensive Paragons (Magus, Doomship, MMMF)",
+    "Best against Bloonarius"
+   ],
+   "weaknesses": [
+    "Worst against Blastapopoulos",
+    "Power Glove doesn't stack with Overclock"
+   ],
+   "sources": [
+    "wiki-master-builder",
+    "wiki-boss-events"
+   ],
+   "combines": [
+    "Sentry Champion",
+    "Ultraboost",
+    "XXXL Trap"
+   ],
+   "howItWorks": "Pinning nails that stun bloons, a permanent self-Ultraboost each round, Mega Sentries that detonate, and a Power Glove that overclocks other Paragons.",
+   "strategy": [
+    "Its real value is Power Glove on expensive Paragons: Goliath Doomship, Magus Perfectus and Mega Massive Munitions Factory.",
+    "Stands out in Timed and Least Tier boss events; its nails stall blimps.",
+    "Power Glove doesn't stack with Overclock."
+   ],
+   "synergies": [
+    {
+     "unit": "magus-perfectus",
+     "note": "Power Glove during Arcane Metamorphosis gives some of the highest DPS in the game."
+    },
+    {
+     "unit": "goliath-doomship",
+     "note": "Power Glove target."
+    },
+    {
+     "unit": "mmmf",
+     "note": "Power Glove target."
+    }
+   ],
+   "bestBosses": [
+    "Bloonarius"
+   ],
+   "worstBosses": [
+    "Blastapopoulos (Mega Sentries can't pop purple; longer cooldowns)"
+   ],
+   "degreeTips": [
+    "Pair XXXL Trap with Rubber to Gold, Monkey City and Bounty Hunter: income supplies most of its pop requirement.",
+    "Overclock and Ultraboost Banana Farms for extra income."
+   ]
+  },
+  {
+   "id": "ascended-shadow",
+   "name": "Ascended Shadow",
+   "tower": "ninja",
+   "cost": 500000,
+   "bossTier": "A",
+   "role": "Damage",
+   "confidence": "verified",
+   "summary": "Recommended against Phayze and Vortex; gives Crucible its camo detection.",
+   "strengths": [
+    "Strong against Phayze and Vortex"
+   ],
+   "weaknesses": [
+    "Loses its anti-camo bonus if you also use decamo towers"
+   ],
+   "sources": [
+    "wiki-ascended-shadow",
+    "wiki-phayze",
+    "wiki-vortex",
+    "wiki-crucible"
+   ],
+   "combines": [
+    "Grandmaster Ninja",
+    "Grand Saboteur",
+    "Master Bomber"
+   ],
+   "howItWorks": "Three attacks with bonus damage to camo and boss bloons, a chance to blow bloons back, a Grand Saboteur slow and buffs to Ninjas.",
+   "strategy": [
+    "A Freeplay must-have for its slow and Ninja buffs, but don't buy it too early or it steals pops from later Paragons.",
+    "Set it to Strong; most of its boss damage comes from its sticky bombs."
+   ],
+   "synergies": [
+    {
+     "unit": "ninja",
+     "note": "Buffs Ninja Monkeys; an all-Ninja defense with Shinobi stacks builds its degree."
+    },
+    {
+     "unit": "crucible",
+     "note": "Gives the Crucible camo detection."
+    }
+   ],
+   "bestBosses": [
+    "Phayze (camo bonus damage)"
+   ],
+   "worstBosses": [
+    "Blastapopoulos (destroys sticky bombs before they detonate)"
+   ],
+   "degreeTips": [
+    "Get pops from a Ninja-heavy defense with many Shinobi Tactics.",
+    "Cheapest tiers: 2-2-0 and 3-2-0 for T2/T3, 4-2-0 Bloonjitsu for T4; 2-0-4 Sticky Bombs are the priciest T4."
+   ]
+  },
+  {
+   "id": "navarch",
+   "name": "Navarch of the Seas",
+   "tower": "bucc",
+   "cost": 550000,
+   "bossTier": "A",
+   "role": "Damage / economy",
+   "confidence": "verified",
+   "summary": "Water Paragon recommended against Lych and Phayze; the boss guide plans it around 40 Merchantmen.",
+   "strengths": [
+    "Strong against Lych and Phayze",
+    "Pairs with the Merchantman economy"
+   ],
+   "weaknesses": [
+    "Avoid when you need to stall rounds or let other towers get pops"
+   ],
+   "sources": [
+    "wiki-navarch",
+    "wiki-boss-events",
+    "wiki-lych",
+    "wiki-phayze"
+   ],
+   "combines": [
+    "Carrier Flagship",
+    "Pirate Lord",
+    "Trade Empire"
+   ],
+   "howItWorks": "Six cannon turrets, three fighter planes and ten hooks that reel in blimps; its ability hooks up to two Fortified BADs per round.",
+   "strategy": [
+    "Easy to get to high degree: Trade Empire and Favored Trades income counts toward the pop requirement.",
+    "In boss events it's often bought mainly for its buff to the Goliath Doomship.",
+    "It shines in Freeplay, but its passive can steal pops other Paragons need, and it doesn't fit stall setups. Target Last."
+   ],
+   "synergies": [
+    {
+     "unit": "goliath-doomship",
+     "note": "Its Carrier Flagship buff powers up the Doomship."
+    },
+    {
+     "unit": "bucc",
+     "note": "Favored Trades fleets build its degree and are buffed by it."
+    }
+   ],
+   "bestBosses": [
+    "Lych's spawns",
+    "Vortex (its aircraft)",
+    "Bloonarius bleed bloons"
+   ],
+   "worstBosses": [],
+   "degreeTips": [
+    "Spam Trade Empire / Favored Trades: their cash counts more than raw pops.",
+    "The boss guide saves about $980,000 for a 40-Merchantman Navarch setup."
+   ]
+  },
+  {
+   "id": "herald-of-everfrost",
+   "name": "Herald of Everfrost",
+   "tower": "ice",
+   "cost": 300000,
+   "bossTier": "A",
+   "role": "Support / stall",
+   "confidence": "verified",
+   "summary": "A stall-safe support Paragon that also cools Blastapopoulos.",
+   "strengths": [
+    "Stall-safe support",
+    "Reduces Blastapopoulos heat"
+   ],
+   "weaknesses": [],
+   "sources": [
+    "wiki-herald",
+    "wiki-boss-events",
+    "wiki-blastapopoulos"
+   ],
+   "combines": [
+    "Super Brittle",
+    "Absolute Zero",
+    "Icicle Impale"
+   ],
+   "howItWorks": "Ice lance beams and a snowstorm roar, a strong slowing aura, Super Brittle debuffs, and an ability that can skip boss skull effects and even freeze BADs.",
+   "strategy": [
+    "A cheap support Paragon: its value is the huge bonus damage from debuffs, not its own DPS.",
+    "Time its ability carefully: long delay and cooldown, and it can't carry over between rounds.",
+    "In Freeplay it complements Bloonjitsu + Shinobi; with Time Stop it's one of the only ways to slow BADs."
+   ],
+   "synergies": [
+    {
+     "unit": "ninja",
+     "note": "Essential support for Ninja Freeplay builds."
+    },
+    {
+     "unit": "mermonkey",
+     "note": "Strong synergy with Popseidon and its ability."
+    }
+   ],
+   "bestBosses": [
+    "Dreadbloon (except Primary immunity)",
+    "Lych (preventing skulls avoids invulnerability and souls)"
+   ],
+   "worstBosses": [
+    "Bloonarius"
+   ],
+   "degreeTips": []
+  },
+  {
+   "id": "apex-plasma-master",
+   "name": "Apex Plasma Master",
+   "tower": "dart",
+   "cost": 150000,
+   "bossTier": "B",
+   "role": "Budget damage",
+   "confidence": "verified",
+   "summary": "The cheapest Paragon; a good option against tier 3–4 bosses.",
+   "strengths": [
+    "Cheapest Paragon",
+    "Recommended against Lych and Bloonarius"
+   ],
+   "weaknesses": [
+    "Avoid against Elite bosses unless conditions favour it"
+   ],
+   "sources": [
+    "wiki-apex-plasma-master",
+    "wiki-boss-events",
+    "wiki-dart",
+    "wiki-lych"
+   ],
+   "combines": [
+    "Ultra-Juggernaut",
+    "Plasma Monkey Fan Club",
+    "Crossbow Master"
+   ],
+   "howItWorks": "Fires volleys of plasma juggernaut balls that split twice and bounce off walls to rehit bloons.",
+   "strategy": [
+    "Its damage depends on bouncing: on wall-heavy maps (Sulfur Springs, Encrypted, Dark Path) it can out-damage pricier Paragons; on open maps it's weak.",
+    "Cheap enough for Boss Rush and lower boss tiers; in least-time events sell it after the tier and buy farms.",
+    "Low damage per hit and lots of projectiles pair well with debuffs like Cripple MOAB and Super Brittle."
+   ],
+   "synergies": [
+    {
+     "unit": "sniper",
+     "note": "Cripple MOAB amplifies its many small hits."
+    },
+    {
+     "unit": "ice",
+     "note": "Super Brittle amplifies its many small hits."
+    }
+   ],
+   "bestBosses": [
+    "Blastapopoulos (the rocks let it bounce, and it has no ability to debuff)",
+    "Bloonarius",
+    "Dreadbloon's Ceramic shell"
+   ],
+   "worstBosses": [
+    "Open maps in general"
+   ],
+   "degreeTips": []
+  },
+  {
+   "id": "crucible",
+   "name": "Crucible of Steel and Flame",
+   "tower": "tack",
+   "cost": 200000,
+   "bossTier": "B",
+   "role": "Budget burst",
+   "confidence": "verified",
+   "summary": "Second-cheapest Paragon; Meteor Impact burst and a Maelstrom flame ring.",
+   "strengths": [
+    "Cost-efficient",
+    "Strong against Diamondback"
+   ],
+   "weaknesses": [
+    "No camo detection (needs Ascended Shadow)",
+    "Poor against Phayze; Lych steals Maelstrom",
+    "Avoid against Elite bosses unless conditions favour it"
+   ],
+   "sources": [
+    "wiki-crucible",
+    "wiki-boss-events"
+   ],
+   "combines": [
+    "Inferno Ring",
+    "Super Maelstrom",
+    "The Tack Zone"
+   ],
+   "howItWorks": "Rotating streams of white-hot blades, plus Maelstrom (longer projectiles and a flame ring) and Meteor Impact (big area burst and homing meteors).",
+   "strategy": [
+    "The second-cheapest Paragon; most of its power is in Meteor Impact, so it's very cost-efficient.",
+    "Use Maelstrom when the boss is in range; save Meteor Impact for when a boss becomes vulnerable (Vortex shield down, Dreadbloon out of Primary immunity, a few seconds after Blastapopoulos' rocks)."
+   ],
+   "synergies": [
+    {
+     "unit": "ascended-shadow",
+     "note": "Supplies the camo detection it lacks."
+    }
+   ],
+   "bestBosses": [
+    "Diamondback (all projectiles hit the head; Maelstrom handles Diamond Bloons)"
+   ],
+   "worstBosses": [
+    "Phayze (no camo)",
+    "Lych (steals Maelstrom)"
+   ],
+   "degreeTips": [
+    "Put all tier-5 Tack Shooters near the front for pops.",
+    "Cheapest tiers: 0-2-2 and 0-2-3, 0-4-2 Blade Maelstrom for T4; 2-0-4 Overdrive if you're transitioning into it."
+   ]
+  },
+  {
+   "id": "glaive-dominus",
+   "name": "Glaive Dominus",
+   "tower": "boomer",
+   "cost": 375000,
+   "bossTier": "B",
+   "role": "Damage",
+   "confidence": "approximate",
+   "summary": "Listed for Lych and later Bloonarius tiers; the boss guide doesn't single it out.",
+   "strengths": [
+    "Used against Lych and Bloonarius"
+   ],
+   "weaknesses": [],
+   "sources": [
+    "wiki-glaive-dominus",
+    "wiki-lych",
+    "wiki-bloonarius"
+   ],
+   "combines": [
+    "Glaive Lord",
+    "Perma Charge",
+    "MOAB Domination"
+   ],
+   "howItWorks": "Three boomerang attacks plus an Overcharge ability for a burst of attack speed; strong knockback.",
+   "strategy": [
+    "One of the cheaper Paragons, mainly used against Elite tier 3–4 bosses; not very map-dependent.",
+    "In Freeplay it's mostly used for knockback; if it's your main damage, cycle targeting to spread its damage over time.",
+    "Avoid using Overcharge near Lych."
+   ],
+   "synergies": [],
+   "bestBosses": [
+    "Bosses that spawn bloons, such as Dreadbloon and Lych"
+   ],
+   "worstBosses": [
+    "Blastapopoulos (cuts Overcharge uptime)"
+   ],
+   "degreeTips": [
+    "Degree 40 is usually reached from tiers alone plus a little cash slider; degree 51+ gives full Overcharge uptime.",
+    "Cheapest tiers: 0-2-2 and 3-0-2 for T2/T3, 4-0-2 M.O.A.R Glaives for T4; 2-4-0 Turbo Charges are the priciest T4."
+   ]
+  },
+  {
+   "id": "bomb-bunker",
+   "name": "Ballistic Obliteration Missile Bunker",
+   "tower": "bomb",
+   "cost": 650000,
+   "bossTier": "C",
+   "role": "Damage",
+   "confidence": "approximate",
+   "summary": "The wiki's boss guides don't recommend it specifically.",
+   "strengths": [],
+   "weaknesses": [
+    "Not featured in the boss guides we cite"
+   ],
+   "sources": [
+    "wiki-bomb-bunker",
+    "wiki-paragon",
+    "wiki-bomb"
+   ],
+   "combines": [
+    "Bloon Crush",
+    "MOAB Eliminator",
+    "Bomb Blitz"
+   ],
+   "howItWorks": "Slow, heavy homing missiles that stun and push bloons back and burst into cluster bombs; a passive that can save you from leaking blimps.",
+   "strategy": [
+    "A simpler expensive Paragon: excellent single-target damage, weak against groups of small fast bloons like DDTs.",
+    "Pair it with faster Paragons (Glaive Dominus, Magus Perfectus). Set it to Strong (First against Dreadbloon).",
+    "Its passive has a long cooldown: treat it as a last resort."
+   ],
+   "synergies": [
+    {
+     "unit": "glaive-dominus",
+     "note": "Covers its weakness to groups."
+    },
+    {
+     "unit": "magus-perfectus",
+     "note": "Covers its weakness to groups."
+    },
+    {
+     "unit": "ezili",
+     "note": "Her totem's life loss speeds its cooldowns."
+    }
+   ],
+   "bestBosses": [
+    "Diamondback (clusters hit several segments)"
+   ],
+   "worstBosses": [
+    "Blastapopoulos (ability debuffs hurt its passive)",
+    "Phayze (no camo)"
+   ],
+   "degreeTips": [
+    "Higher degree is essential for consistency."
+   ]
+  },
+  {
+   "id": "root-of-all-nature",
+   "name": "Root of all Nature",
+   "tower": "druid",
+   "cost": 475000,
+   "bossTier": "C",
+   "role": "Damage",
+   "confidence": "approximate",
+   "summary": "The newest pre-v57 Paragon (v54); not yet covered by the boss guides.",
+   "strengths": [],
+   "weaknesses": [
+    "Not featured in the boss guides we cite"
+   ],
+   "sources": [
+    "wiki-root-of-all-nature",
+    "wiki-paragon",
+    "wiki-druid"
+   ],
+   "combines": [
+    "Monarch of Storms",
+    "Spirit of the Forest",
+    "Avatar of Wrath"
+   ],
+   "howItWorks": "Electrified thorns that ricochet and speed up the longer it fires; a Wrathful mode trades income for huge DPS.",
+   "strategy": [
+    "Watch its Wrathful state: it becomes one of the highest-DPS Paragons but needs lots of cash generation.",
+    "Only go Wrathful on tough rounds and when your income is stable afterwards.",
+    "Very strong for Timed bosses, especially tier 5; in Boss Rush you can stay Wrathful because skull income continues."
+   ],
+   "synergies": [
+    {
+     "unit": "farm",
+     "note": "Jungle's Bounty druids ringed by farms supply both income and pops."
+    },
+    {
+     "unit": "druid",
+     "note": "0-4-1 Jungle's Bounty farming builds most of its degree."
+    }
+   ],
+   "bestBosses": [
+    "Bloonarius",
+    "Lych"
+   ],
+   "worstBosses": [
+    "Phayze",
+    "Vortex (long invulnerability windows)"
+   ],
+   "degreeTips": [
+    "Pile up pops over many rounds instead of building it as a makeshift Paragon.",
+    "Most pops should come from 0-4-1 Jungle's Bounty with a full farm setup."
+   ]
+  },
+  {
+   "id": "spider-monkey",
+   "name": "S.P.I.D.E.R. Monkey",
+   "tower": "sniper",
+   "cost": null,
+   "bossTier": "B",
+   "role": "Damage / support",
+   "confidence": "new",
+   "summary": "Sniper Paragon added in v57: bouncing heavy shots with shrapnel, a Cash Drop barrage, an Offensive Supply Drop, an area buff and a charge shot.",
+   "strengths": [
+    "New in v57"
+   ],
+   "weaknesses": [
+    "Too new to rank: placeholder tier"
+   ],
+   "sources": [
+    "wiki-spider-monkey",
+    "steam-v57",
+    "ninjakiwi-x-v57"
+   ],
+   "combines": [
+    "Cripple MOAB",
+    "Elite Sniper",
+    "Elite Defender"
+   ],
+   "howItWorks": "Shoots from a raised platform over the whole map, ignoring line-of-sight; other Snipers can share its target, and Single Out can skip boss skulls.",
+   "strategy": [
+    "An expensive supplement, not a main defense: it devastates single targets (BAD and ZOMG layers) but falls apart against groups.",
+    "Life loss speeds it up (Elite Defender): Ezili's Sacrificial Totem gives bursts of attack speed and faster Single Out."
+   ],
+   "synergies": [
+    {
+     "unit": "sniper",
+     "note": "Other Snipers can use its target."
+    },
+    {
+     "unit": "ezili",
+     "note": "Sacrificial Totem triggers its life-loss speed boost."
+    }
+   ],
+   "bestBosses": [
+    "Most bosses: bypasses Vortex's shield and Blastapopoulos' rocks, global vision against Vortex and Phayze, stops Diamondback shedding segments"
+   ],
+   "worstBosses": [
+    "Bloonarius (many skulls make Single Out weak)"
+   ],
+   "degreeTips": []
   }
+ ],
+ "degreeGuide": {
+  "basics": [
+   "Unlock the Paragon with tower XP (500,000–1,000,000) after every other upgrade of that tower.",
+   "Have all three tier-5 versions of the tower on the map, then upgrade one of them. Only one of each Paragon can exist; boss events usually cap you at 4.",
+   "Degree runs 1–100 and needs 200,000 power for degree 100. Each degree costs more than the last."
+  ],
+  "powerSources": [
+   {
+    "source": "Cash spent on absorbed towers (and the slider)",
+    "value": "1 power per $1",
+    "cap": "80,000 since v57 (was 60,000)"
+   },
+   {
+    "source": "Extra tier 5s beyond the three you need",
+    "value": "6,000 each",
+    "cap": "50,000"
+   },
+   {
+    "source": "Upgrades on absorbed non-tier-5 towers",
+    "value": "No longer counts",
+    "cap": "0 since v57 (was 10,000)"
+   },
+   {
+    "source": "Pops and income of absorbed towers",
+    "value": "1 per 180 damage, 1 per $45 income",
+    "cap": "125,000 since v57 (was 90,000)"
+   },
+   {
+    "source": "Geraldo's Paragon Power Totems",
+    "value": "2,000 each",
+    "cap": "No cap"
+   }
+  ],
+  "tips": [
+   "Aim for multiples of 20: boss damage jumps at degree 20, 40, 60, 80 and 100, so 19 → 20 matters more than 20 → 21.",
+   "Several mid-degree Paragons usually beat one maxed Paragon, because each degree costs more than the last.",
+   "Spend cash on real towers before the slider; the slider gives slightly less power per dollar.",
+   "Farm pops with income towers: XXXL Trap, Rubber to Gold, Monkey City and Bounty Hunter supply most of the damage/income power.",
+   "Overclock and Ultraboost your Banana Farms while farming power.",
+   "Three Paragon Power Totems equal one extra tier 5.",
+   "If you'll sell it later, upgrade the most expensive of the three tier 5s.",
+   "Four Paragons at degree 40+ handle nearly every boss, including Elite."
+  ],
+  "degree100": "At degree 100, damage and pierce double (+10 flat each) and the boss damage multiplier reaches ×2.25 (Normal) / ×4.5 (Elite).",
+  "note": "Power values come from the wiki's Paragon page (pre-v57) with the cap changes from the v57.0 notes applied. With the new caps, the non-totem sources add up to 255,000, more than the 200,000 needed, so degree 100 may now be reachable solo without totems; this is our arithmetic, not a tested result.",
+  "sources": [
+   "wiki-paragon",
+   "steam-v57",
+   "wiki-master-builder",
+   "wiki-boss-events"
+  ]
+ }
 }

@@ -1,4 +1,5 @@
-// Header search: fuzzy-finds towers, heroes, danger rounds and economy topics,
+// Header search: fuzzy-finds towers, heroes, Paragons, maps, modes, danger rounds
+// and economy topics,
 // then jumps to the matching card. Keyboard: / to focus, ↑ ↓ to move, Enter to open.
 
 import { fuzzyScore } from '../lib/text.js';
@@ -11,6 +12,8 @@ const KIND_STYLES = {
   Round: { color: '#ffd23f', icon: 'skull' },
   Economy: { color: '#7ad420', icon: 'banana' },
   Paragon: { color: '#a77bff' },
+  Map: { color: '#7ad420', icon: 'map' },
+  Mode: { color: '#ff9f1c', icon: 'gamepad-2' },
 };
 
 /** Everything the search box can find, built from the loaded data. */
@@ -67,10 +70,26 @@ function buildSearchIndex(hub) {
     title: paragon.name,
     subtitle: `Paragon · boss tier ${paragon.bossTier}`,
     keywords: `paragon degree ${paragon.role}`,
-    go: () => hub.jumpTo('paragons', `paragon-${paragon.id}`),
+    go: () => hub.openPage('paragon', paragon.id),
   }));
 
-  return [...towers, ...heroes, ...paragons, ...rounds, ...checkpoints, ...strategies];
+  const maps = hub.maps.maps.map((map) => ({
+    kind: 'Map',
+    title: map.name,
+    subtitle: `${map.difficulty} map · ${map.traits.slice(0, 2).join(' · ')}`,
+    keywords: `map ${map.difficulty} ${map.traits.join(' ')}`,
+    go: () => hub.openPage('map', map.id),
+  }));
+
+  const modes = hub.modes.modes.map((mode) => ({
+    kind: 'Mode',
+    title: mode.name,
+    subtitle: `${mode.difficulty} game mode`,
+    keywords: `mode ${mode.difficulty}`,
+    go: () => hub.openPage('mode', mode.id),
+  }));
+
+  return [...towers, ...heroes, ...paragons, ...maps, ...modes, ...rounds, ...checkpoints, ...strategies];
 }
 
 export function globalSearch() {
