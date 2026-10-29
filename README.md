@@ -24,6 +24,8 @@ js/
     farming.js           Farming Engine tab (table + chart).
     playbook.js          CHIMPS & Bosses tab (round checklist).
     global-search.js     Header search.
+    tower-page.js        A tower's own page (#tower/<id>).
+    paragons.js          Paragons tab: tier list and degree guide.
   lib/
     economy.js           Farm income / payback maths (pure functions).
     upgrades.js          "2-0-5" → upgrade pip grid.
@@ -37,6 +39,7 @@ data/
   economy.json           Farm builds for the calculator, strategy cards, boss checkpoints.
   playbook.json          Mode notes, CHIMPS danger rounds, hero synergies, boss notes.
   sources.json           Every cited page (id → title + url). Entries point at these ids.
+  paragons.json          Paragon tier list (boss events) and the degree guide.
 ```
 
 ## Updating for a new patch
@@ -72,6 +75,12 @@ A tower looks like this:
 - `icon`: any [Lucide icon](https://lucide.dev/icons) name
 - route `path`: digits 0–5 per path; use `x` for "any / still settling"
 - `sources`: ids from `data/sources.json`. Every claim should trace back to one of them.
+- `upgrades`: three lists (top, middle, bottom path) of five upgrade names; `null` if unknown
+- `tips`: `{ "chimps": [...], "boss": [...] }`, shown on the tower page
+- `synergies`: `[{ "unit": "alch", "note": "…" }]`, where `unit` is a tower or hero id
+- `paragon`: id of the tower's Paragon in `paragons.json` (optional)
+
+Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 
 ## Where the rankings come from
 

@@ -10,6 +10,7 @@ const KIND_STYLES = {
   Hero: { color: '#ff6fb5' },
   Round: { color: '#ffd23f', icon: 'skull' },
   Economy: { color: '#7ad420', icon: 'banana' },
+  Paragon: { color: '#a77bff' },
 };
 
 /** Everything the search box can find, built from the loaded data. */
@@ -22,7 +23,7 @@ function buildSearchIndex(hub) {
     title: tower.name,
     subtitle: `${tower.category} · ${tower.bestRoute} · CHIMPS ${tower.tiers.chimps} / Boss ${tower.tiers.boss}`,
     keywords: [tower.category, tower.bestRoute, ...tower.roles, ...tower.routes.map((r) => `${r.name} ${r.path}`)].join(' '),
-    go: () => hub.jumpTo('tier', `tier-${tower.id}`, tower.id),
+    go: () => hub.openTower(tower.id),
   }));
 
   const heroes = hub.heroes.map((hero) => ({
@@ -60,7 +61,16 @@ function buildSearchIndex(hub) {
     go: () => hub.jumpTo('farm', 'strategies'),
   }));
 
-  return [...towers, ...heroes, ...rounds, ...checkpoints, ...strategies];
+  const paragons = hub.paragons.paragons.map((paragon) => ({
+    kind: 'Paragon',
+    unit: hub.towers.find((tower) => tower.id === paragon.tower),
+    title: paragon.name,
+    subtitle: `Paragon · boss tier ${paragon.bossTier}`,
+    keywords: `paragon degree ${paragon.role}`,
+    go: () => hub.jumpTo('paragons', `paragon-${paragon.id}`),
+  }));
+
+  return [...towers, ...heroes, ...paragons, ...rounds, ...checkpoints, ...strategies];
 }
 
 export function globalSearch() {

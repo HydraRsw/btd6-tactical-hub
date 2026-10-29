@@ -17,6 +17,7 @@ export function tierList() {
     query: '',
     categories: [...CATEGORIES],
     roles: [...ROLES],
+    filtersOpen: false,            // on phones the filter panel starts collapsed
 
     CATEGORIES,
     ROLES,
@@ -32,6 +33,20 @@ export function tierList() {
       const index = this[list].indexOf(value);
       if (index === -1) this[list].push(value);
       else this[list].splice(index, 1);
+    },
+
+    /** Short summary for the collapsed filter button, e.g. "CHIMPS · 4/5 classes · all roles". */
+    get filterSummary() {
+      const mode = this.mode === 'chimps' ? 'CHIMPS' : 'Boss events';
+      const classes = this.categories.length === CATEGORIES.length ? 'all classes' : `${this.categories.length}/${CATEGORIES.length} classes`;
+      const roles = this.roles.length === ROLES.length ? 'all roles' : `${this.roles.length}/${ROLES.length} roles`;
+      return `${mode} · ${classes} · ${roles}`;
+    },
+
+    /** Towers open their own page; heroes expand in place. */
+    openRow(unit) {
+      if (unit.category === 'Heroes') this.$store.hub.toggleOpen(unit.id);
+      else this.$store.hub.openTower(unit.id);
     },
 
     tierOf(unit) {

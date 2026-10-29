@@ -4,7 +4,8 @@
 import { loadGameData } from './lib/data.js';
 import { recall, remember } from './lib/storage.js';
 
-export const TABS = ['tier', 'cross', 'farm', 'chimps'];
+// Tabs in header order. A tower's own page isn't a tab: its address is #tower/<id>.
+export const TABS = ['tier', 'cross', 'paragons', 'farm', 'chimps'];
 
 export function createHubStore() {
   return {
@@ -17,10 +18,17 @@ export function createHubStore() {
     economy: { farmBuilds: [], strategies: [], bossCheckpoints: [] },
     playbook: { modeNotes: {}, dangerRounds: [], heroSynergies: [], bosses: [] },
     sources: {},           // id → { title, url }, referenced by every entry's "sources" list
+    paragons: { intro: '', paragons: [], degreeGuide: { basics: [], powerSources: [], tips: [], sources: [] } },
 
-    activeTab: 'tier',
+    activeTab: 'tier',     // one of TABS, or 'tower' while a tower page is open
+    towerId: null,         // which tower page is open
     openUnitIds: [],       // expanded rows in the tier list
     showPatchBanner: false,
+
+    /** The tower whose page is open, if any. */
+    get currentTower() {
+      return this.towers.find((tower) => tower.id === this.towerId) ?? null;
+    },
 
     /** Towers and heroes in one list (the tier list shows both). */
     get units() {
@@ -45,15 +53,30 @@ export function createHubStore() {
       return Boolean(lastSeen) && lastSeen !== this.meta.patch;
     },
 
-    // --- Tabs (kept in the URL hash so links like #farm work) ----------
+    // --- Tabs and tower pages (kept in the URL hash: #farm, #tower/sniper) --
     openTab(tab) {
       if (!TABS.includes(tab)) return;
       this.activeTab = tab;
+      this.towerId = null;
       if (location.hash !== `#${tab}`) history.replaceState(null, '', `#${tab}`);
     },
 
+    openTower(towerId) {
+      this.towerId = towerId;
+      this.activeTab = 'tower';
+      // pushState so the browser's Back button returns to the list
+      if (location.hash !== `#tower/${towerId}`) history.pushState(null, '', `#tower/${towerId}`);
+      window.scrollTo({ top: 0 });
+    },
+
     openTabFromUrl() {
-      this.openTab(location.hash.slice(1) || 'tier');
+      const hash = location.hash.slice(1);
+      if (hash.startsWith('tower/')) {
+        this.towerId = hash.slice('tower/'.length);
+        this.activeTab = 'tower';
+        return;
+      }
+      this.openTab(hash || 'tier');
     },
 
     // --- Tier list rows -------------------------------------------------

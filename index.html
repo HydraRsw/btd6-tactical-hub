@@ -76,6 +76,7 @@
       <template x-for="tab in [
           { id: 'tier',   label: 'Tier List',        icon: 'layers' },
           { id: 'cross',  label: 'Crosspath Guide',  icon: 'git-branch' },
+          { id: 'paragons', label: 'Paragons',       icon: 'crown' },
           { id: 'farm',   label: 'Farming Engine',   icon: 'banana' },
           { id: 'chimps', label: 'CHIMPS & Bosses',  icon: 'skull' } ]" :key="tab.id">
         <button class="tab" role="tab" :class="{ 'tab--active': $store.hub.activeTab === tab.id }"
@@ -113,7 +114,18 @@
              TAB 1 · TIER LIST
              ============================================================= -->
         <section x-show="$store.hub.activeTab === 'tier'" x-data="tierList" class="tier-layout">
-          <aside class="tier-sidebar stack">
+          <aside class="tier-sidebar">
+            <!-- On phones the filters collapse behind this button -->
+            <button class="panel filters-toggle" @click="filtersOpen = !filtersOpen" :aria-expanded="filtersOpen" aria-controls="tier-filters">
+              <span x-icon="sliders-horizontal"></span>
+              <span class="filters-toggle__text">
+                <span class="game-title game-title--small">Filters</span>
+                <span class="filters-toggle__summary" x-text="filterSummary"></span>
+              </span>
+              <span class="filters-toggle__chevron" :class="{ 'filters-toggle__chevron--open': filtersOpen }" x-icon="chevron-down"></span>
+            </button>
+
+            <div id="tier-filters" class="tier-sidebar__body stack" :class="{ 'tier-sidebar__body--open': filtersOpen }">
             <div class="panel">
               <h3 class="game-title game-title--small sidebar-heading">Game Mode</h3>
               <div class="mode-switch">
@@ -146,6 +158,7 @@
               <span class="legend__item"><span class="pip pip--bought"></span>Upgrade tier bought</span>
               <span class="legend__item"><span class="pip pip--tier5"></span>Tier 5</span>
               <span class="legend__item"><span class="pip pip--unknown"></span>Route still settling</span>
+            </div>
             </div>
           </aside>
 
@@ -185,7 +198,8 @@
                   <article class="tier-row rise-in" :id="`tier-${unit.id}`"
                            :class="{ 'tier-row--open': $store.hub.isOpen(unit.id) }"
                            :style="`--stripe:${TIER_COLORS[tierOf(unit)]}`">
-                    <button class="tier-row__summary" @click="$store.hub.toggleOpen(unit.id)" :aria-expanded="$store.hub.isOpen(unit.id)">
+                    <button class="tier-row__summary" @click="openRow(unit)"
+                            :aria-label="unit.category === 'Heroes' ? `${unit.name}: show details` : `${unit.name}: open tower page`">
                       <span class="tier-badge" :data-tier="tierOf(unit)" x-text="tierOf(unit)"></span>
 
                       <div class="tier-row__identity">
@@ -206,7 +220,8 @@
                       </div>
                       <div class="tier-score"><span class="tier-badge tier-badge--small" :data-tier="unit.tiers.chimps" x-text="unit.tiers.chimps"></span>CHIMPS</div>
                       <div class="tier-score"><span class="tier-badge tier-badge--small" :data-tier="unit.tiers.boss" x-text="unit.tiers.boss"></span>BOSS</div>
-                      <span class="tier-row__chevron" x-icon="chevron-down"></span>
+                      <span class="tier-row__chevron" :class="{ 'tier-row__chevron--page': unit.category !== 'Heroes' }"
+                            x-icon="unit.category === 'Heroes' ? 'chevron-down' : 'chevron-right'"></span>
                     </button>
 
                     <div class="tier-row__details" x-show="$store.hub.isOpen(unit.id)">
@@ -266,7 +281,7 @@
                 <header class="tower-card__head">
                   <div x-avatar.large="{ ...tower, tier: tower.tiers.chimps }"></div>
                   <div style="min-width:0">
-                    <h3 class="game-title game-title--small" x-text="tower.name"></h3>
+                    <h3 class="game-title game-title--small"><a class="tower-link" :href="`#tower/${tower.id}`" @click.prevent="$store.hub.openTower(tower.id)" x-text="tower.name"></a></h3>
                     <div class="tower-card__meta">
                       <span x-icon="CATEGORY_ICONS[tower.category]"></span><span x-text="tower.category"></span>
                       <span class="confidence-dot" :data-confidence="tower.confidence"></span>
@@ -298,11 +313,215 @@
                 <div class="pill-list">
                   <template x-for="role in tower.roles"><span class="pill" :data-role="role" x-text="role"></span></template>
                 </div>
+                <button class="button button--blue button--small" @click="$store.hub.openTower(tower.id)"><span x-icon="book-open"></span>Full tower page</button>
                 <p x-sources="tower.sources"></p>
               </article>
             </template>
           </div>
           <div class="panel panel--padded muted" x-show="visibleTowers.length === 0">No towers match that filter.</div>
+        </section>
+
+        <!-- =============================================================
+             TOWER PAGE  (#tower/<id>, opened from the tier list, guide or search)
+             ============================================================= -->
+        <template x-if="$store.hub.activeTab === 'tower' && $store.hub.currentTower">
+          <section x-data="towerPage" class="stack tower-page">
+            <nav class="row-wrap">
+              <button class="button button--quiet button--small" @click="$store.hub.openTab('tier')"><span x-icon="arrow-left"></span>Tier list</button>
+              <span class="push-right row-wrap">
+                <button class="button button--quiet button--small" @click="$store.hub.openTower(neighbour(-1).id)"><span x-icon="chevron-left"></span><span x-text="neighbour(-1).name"></span></button>
+                <button class="button button--quiet button--small" @click="$store.hub.openTower(neighbour(1).id)"><span x-text="neighbour(1).name"></span><span x-icon="chevron-right"></span></button>
+              </span>
+            </nav>
+
+            <!-- Header -->
+            <header class="panel tower-hero">
+              <div x-avatar.huge="{ ...tower, tier: tower.tiers.chimps }"></div>
+              <div class="tower-hero__text">
+                <h2 class="game-title" x-text="tower.name"></h2>
+                <div class="pill-list">
+                  <span class="pill"><span x-icon="CATEGORY_ICONS[tower.category]"></span><span x-text="tower.category"></span></span>
+                  <span class="pill pill--route" x-text="`Best: ${tower.bestRoute}`"></span>
+                  <template x-for="role in tower.roles"><span class="pill" :data-role="role" x-text="role"></span></template>
+                </div>
+                <p x-text="tower.summary"></p>
+                <p class="tower-hero__confidence"><span class="confidence-dot" :data-confidence="tower.confidence"></span><span x-text="CONFIDENCE_LABELS[tower.confidence]"></span></p>
+              </div>
+              <div class="tower-hero__tiers">
+                <div class="tier-score"><span class="tier-badge" :data-tier="tower.tiers.chimps" x-text="tower.tiers.chimps"></span>CHIMPS</div>
+                <div class="tier-score"><span class="tier-badge" :data-tier="tower.tiers.boss" x-text="tower.tiers.boss"></span>BOSSES</div>
+              </div>
+            </header>
+
+            <!-- Upgrade tree -->
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="git-branch"></span>Upgrade paths</h3>
+              <p class="dim tower-note">Highlighted tiers are the recommended route, <strong class="highlight" x-text="tower.bestRoute"></strong>.</p>
+              <div class="upgrade-tree">
+                <template x-for="row in upgradeRows" :key="row.path">
+                  <div class="upgrade-tree__row">
+                    <span class="upgrade-tree__path" x-text="row.path"></span>
+                    <template x-for="cell in row.cells" :key="cell.tier">
+                      <div class="upgrade-cell" :class="{ 'upgrade-cell--bought': cell.bought, 'upgrade-cell--tier5': cell.tier === 5 }">
+                        <span class="upgrade-cell__tier" x-text="`T${cell.tier}`"></span>
+                        <span class="upgrade-cell__name" x-text="cell.name"></span>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <!-- Routes -->
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="route"></span>Crosspaths</h3>
+              <div class="route-grid">
+                <template x-for="route in tower.routes" :key="route.path + route.name">
+                  <div class="well route-card" :class="`route-card--${route.kind}`">
+                    <div x-pips="route.path"></div>
+                    <div class="route-card__body">
+                      <div class="route-card__top">
+                        <span class="game-title game-title--small route-card__path" x-text="route.path"></span>
+                        <span class="pill push-right" :class="route.kind === 'optimal' ? 'pill--good' : 'pill--warn'" x-text="route.kind === 'optimal' ? 'Optimal' : 'Situational'"></span>
+                      </div>
+                      <div class="route-card__name" x-text="route.name"></div>
+                      <p class="route-card__note" x-text="route.note"></p>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <!-- Strategy tips -->
+            <div class="tip-columns">
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="skull"></span>In CHIMPS</h3>
+                <ul class="tip-list"><template x-for="tip in tower.tips?.chimps ?? []"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template></ul>
+              </div>
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="crown"></span>In boss events</h3>
+                <ul class="tip-list"><template x-for="tip in tower.tips?.boss ?? []"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template></ul>
+              </div>
+            </div>
+
+            <!-- Synergies -->
+            <div class="panel panel--padded" x-show="synergies.length">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="link"></span>Synergies</h3>
+              <div class="synergy-grid">
+                <template x-for="synergy in synergies" :key="synergy.unit">
+                  <button class="well synergy" @click="openUnit(synergy.partner)">
+                    <div x-avatar.small="synergy.partner"></div>
+                    <span class="synergy__text">
+                      <span class="synergy__name" x-text="synergy.partner.name"></span>
+                      <span class="synergy__note" x-text="synergy.note"></span>
+                    </span>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <!-- Paragon -->
+            <template x-if="paragon">
+              <div class="panel panel--padded paragon-strip">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="gem"></span>Paragon</h3>
+                <div class="row-wrap">
+                  <span class="tier-badge tier-badge--small" :data-tier="paragon.bossTier" x-text="paragon.bossTier"></span>
+                  <strong class="game-title game-title--small" x-text="paragon.name"></strong>
+                  <span class="pill" x-text="paragon.role"></span>
+                  <span class="cash numbers" x-text="paragon.cost ? formatCash(paragon.cost) : ''"></span>
+                  <button class="button button--blue button--small push-right" @click="$store.hub.jumpTo('paragons', `paragon-${paragon.id}`)">Paragon guide</button>
+                </div>
+                <p class="muted" x-text="paragon.summary"></p>
+              </div>
+            </template>
+
+            <!-- Mentions elsewhere -->
+            <div class="panel panel--padded" x-show="mentions.length">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="map-pin"></span>Where it shows up</h3>
+              <div class="stack stack--tight">
+                <template x-for="mention in mentions" :key="mention.kind + mention.title">
+                  <button class="well mention" @click="mention.go()">
+                    <span class="pill" x-text="mention.kind"></span>
+                    <span class="mention__text"><strong x-text="mention.title"></strong><span class="muted" x-text="mention.text"></span></span>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <p x-sources="tower.sources"></p>
+          </section>
+        </template>
+
+        <!-- =============================================================
+             TAB · PARAGONS
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'paragons'" x-cloak x-data="paragonGuide" class="stack">
+          <div class="section-head">
+            <div>
+              <h2 class="game-title">Paragon <span class="highlight">Tier List</span></h2>
+              <p x-text="$store.hub.paragons.intro"></p>
+            </div>
+          </div>
+
+          <template x-for="group in groups" :key="group.tier">
+            <div class="stack stack--tight">
+              <div class="tier-group-heading">
+                <span class="tier-badge tier-badge--small" :data-tier="group.tier" x-text="group.tier"></span>
+                <span class="game-title" x-text="`${group.tier} Tier`"></span>
+                <span class="tier-group-heading__line" :style="`background:linear-gradient(90deg, ${TIER_COLORS[group.tier]}, transparent)`"></span>
+              </div>
+              <div class="card-grid">
+                <template x-for="paragon in group.paragons" :key="paragon.id">
+                  <article class="panel paragon-card" :id="`paragon-${paragon.id}`">
+                    <header class="tower-card__head">
+                      <div x-avatar.large="towerOf(paragon)"></div>
+                      <div style="min-width:0">
+                        <h3 class="game-title game-title--small" x-text="paragon.name"></h3>
+                        <div class="tower-card__meta">
+                          <a class="tower-link" :href="`#tower/${paragon.tower}`" @click.prevent="$store.hub.openTower(paragon.tower)" x-text="towerOf(paragon)?.name"></a>
+                          <span class="confidence-dot" :data-confidence="paragon.confidence"></span>
+                        </div>
+                      </div>
+                      <span class="tier-badge push-right" :data-tier="paragon.bossTier" x-text="paragon.bossTier"></span>
+                    </header>
+                    <div class="row-wrap">
+                      <span class="pill" x-text="paragon.role"></span>
+                      <span class="cash numbers paragon-card__cost" x-text="costLabel(paragon)"></span>
+                    </div>
+                    <p x-text="paragon.summary"></p>
+                    <ul class="tip-list">
+                      <template x-for="line in paragon.strengths"><li><span x-icon="circle-check"></span><span x-text="line"></span></li></template>
+                      <template x-for="line in paragon.weaknesses"><li class="tip-list__minus"><span x-icon="circle-alert"></span><span x-text="line"></span></li></template>
+                    </ul>
+                    <p x-sources="paragon.sources"></p>
+                  </article>
+                </template>
+              </div>
+            </div>
+          </template>
+
+          <!-- Degree guide -->
+          <div class="panel panel--padded stack" id="degree-guide">
+            <h3 class="game-title panel__title" style="font-size:1.5rem;margin:0"><span x-icon="trending-up"></span>How to make high-degree Paragons</h3>
+            <ul class="tip-list"><template x-for="line in guide.basics"><li><span x-icon="info"></span><span x-text="line"></span></li></template></ul>
+
+            <div class="well table-scroll">
+              <table class="farm-table power-table">
+                <thead><tr><th>Power source</th><th>Value</th><th>Cap</th></tr></thead>
+                <tbody>
+                  <template x-for="row in guide.powerSources" :key="row.source">
+                    <tr><td x-text="row.source"></td><td x-text="row.value"></td><td x-text="row.cap"></td></tr>
+                  </template>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="game-title game-title--small">Tips for high degrees</h4>
+            <ul class="tip-list"><template x-for="tip in guide.tips"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template></ul>
+            <p class="note"><span x-icon="sparkles"></span><span x-text="guide.degree100"></span></p>
+            <p class="dim tower-note" x-text="guide.note"></p>
+            <p x-sources="guide.sources"></p>
+          </div>
         </section>
 
         <!-- =============================================================
@@ -482,7 +701,7 @@
           </div>
 
           <h3 class="game-title" style="font-size:1.6rem">Boss <span class="highlight">Quick Reference</span></h3>
-          <div class="card-grid">
+          <div class="card-grid" id="boss-reference">
             <template x-for="boss in $store.hub.playbook.bosses" :key="boss.name">
               <article class="panel boss-card">
                 <div class="avatar" data-category="Boss"><span x-icon="boss.icon"></span></div>

@@ -121,8 +121,42 @@ if (playbook) {
   }
 }
 
+// Tower pages: upgrade names, tips, synergy links and Paragon links.
+const paragonsFile = load('paragons');
+const paragonIds = new Set((paragonsFile?.paragons ?? []).map((p) => p.id));
+const unitIds = new Set([...(Array.isArray(towers) ? towers : []), ...(Array.isArray(heroes) ? heroes : [])].map((u) => u.id));
+for (const tower of Array.isArray(towers) ? towers : []) {
+  const at = `towers.json "${tower.id}"`;
+  if (tower.upgrades !== undefined) {
+    const ok = Array.isArray(tower.upgrades) && tower.upgrades.length === 3
+      && tower.upgrades.every((path) => Array.isArray(path) && path.length === 5 && path.every((n) => n === null || typeof n === 'string'));
+    if (!ok) problems.push(`${at}: upgrades must be 3 lists of 5 names (null for unknown)`);
+  }
+  if (tower.tips !== undefined && !(Array.isArray(tower.tips.chimps) && Array.isArray(tower.tips.boss))) {
+    problems.push(`${at}: tips needs "chimps" and "boss" lists`);
+  }
+  for (const synergy of tower.synergies ?? []) {
+    if (!unitIds.has(synergy.unit)) problems.push(`${at}: synergy points at unknown tower/hero "${synergy.unit}"`);
+    if (!synergy.note) problems.push(`${at}: synergy with "${synergy.unit}" needs a note`);
+  }
+  if (tower.paragon !== undefined && !paragonIds.has(tower.paragon)) problems.push(`${at}: unknown paragon "${tower.paragon}"`);
+}
+
+if (paragonsFile) {
+  const towerIds = new Set((Array.isArray(towers) ? towers : []).map((t) => t.id));
+  for (const paragon of paragonsFile.paragons ?? []) {
+    const at = `paragons.json "${paragon.id}"`;
+    if (!towerIds.has(paragon.tower)) problems.push(`${at}: unknown tower "${paragon.tower}"`);
+    if (!TIERS.includes(paragon.bossTier)) problems.push(`${at}: bossTier must be S, A, B, C or D`);
+    if (!CONFIDENCE.includes(paragon.confidence)) problems.push(`${at}: bad confidence`);
+    if (paragon.cost !== null && typeof paragon.cost !== 'number') problems.push(`${at}: cost must be a number or null`);
+    checkSourceIds(paragon.sources, at);
+  }
+  checkSourceIds(paragonsFile.degreeGuide?.sources, 'paragons.json degreeGuide');
+}
+
 if (problems.length) {
   console.error(`✗ ${problems.length} problem(s) in /data:\n  - ${problems.join('\n  - ')}`);
   process.exit(1);
 }
-console.log(`✓ data OK: patch ${meta.patch}, ${towers.length} towers, ${heroes.length} heroes`);
+console.log(`✓ data OK: patch ${meta.patch}, ${towers.length} towers, ${heroes.length} heroes, ${paragonIds.size} paragons`);

@@ -11,6 +11,8 @@ import { crosspathGuide } from './components/crosspath.js';
 import { farmingEngine } from './components/farming.js';
 import { chimpsPlaybook } from './components/playbook.js';
 import { globalSearch } from './components/global-search.js';
+import { towerPage } from './components/tower-page.js';
+import { paragonGuide } from './components/paragons.js';
 
 document.addEventListener('alpine:init', () => {
   const Alpine = window.Alpine;
@@ -23,6 +25,8 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('farmingEngine', farmingEngine);
   Alpine.data('chimpsPlaybook', chimpsPlaybook);
   Alpine.data('globalSearch', globalSearch);
+  Alpine.data('towerPage', towerPage);
+  Alpine.data('paragonGuide', paragonGuide);
 
   const hub = Alpine.store('hub');
   hub.openTabFromUrl();
@@ -32,7 +36,7 @@ document.addEventListener('alpine:init', () => {
   document.addEventListener('keydown', (event) => handleShortcut(event, hub));
 });
 
-/** "/" focuses search, 1–4 switch tabs (ignored while typing in a field). */
+/** "/" focuses search, 1–5 switch tabs (ignored while typing in a field). */
 function handleShortcut(event, hub) {
   const typing = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName);
   if (typing || event.ctrlKey || event.metaKey || event.altKey) return;
@@ -40,7 +44,7 @@ function handleShortcut(event, hub) {
   if (event.key === '/') {
     event.preventDefault();
     document.getElementById('site-search-input')?.focus();
-  } else if (['1', '2', '3', '4'].includes(event.key)) {
+  } else if (/^[1-5]$/.test(event.key)) {
     hub.openTab(TABS[Number(event.key) - 1]);
   }
 }
