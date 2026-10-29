@@ -57,23 +57,23 @@ export function eventsTab() {
       this.loading = true;
       this.error = '';
       try {
-        const [bosses, races, odysseys, cts] = await Promise.all(['bosses', 'races', 'odyssey', 'ct'].map((path) => getJson(`${API}/${path}`)));
-        const boss = pickEvent(bosses);
-        const race = pickEvent(races);
-        const odyssey = pickEvent(odysseys);
-        const ct = pickEvent(cts);
+        // Each list on its own: if Ninja Kiwi's race feed is down, the other cards still show.
+        const lists = await Promise.all(['bosses', 'races', 'odyssey', 'ct'].map((path) => getJson(`${API}/${path}`).catch(() => null)));
+        const [boss, race, odyssey, ct] = lists.map((list) => (Array.isArray(list) && list.length ? pickEvent(list) : null));
+        if (!boss && !race && !odyssey && !ct) throw new Error('no event lists');
         const [bossRules, raceRules, odysseyInfo, odysseyMaps, ctTiles] = await Promise.all([
-          getJson(boss.event.metadataStandard).catch(() => null),
-          getJson(race.event.metadata).catch(() => null),
-          getJson(odyssey.event.metadata_medium).catch(() => null),
-          getJson(`${API}/odyssey/${odyssey.event.id}/medium/maps`).catch(() => []),
-          getJson(ct.event.tiles).catch(() => null),
+          boss ? getJson(boss.event.metadataStandard).catch(() => null) : null,
+          race ? getJson(race.event.metadata).catch(() => null) : null,
+          odyssey ? getJson(odyssey.event.metadata_medium).catch(() => null) : null,
+          odyssey ? getJson(`${API}/odyssey/${odyssey.event.id}/medium/maps`).catch(() => []) : [],
+          ct ? getJson(ct.event.tiles).catch(() => null) : null,
         ]);
         cache = {
-          boss: { ...boss, rules: bossRules },
-          race: { ...race, rules: raceRules },
-          odyssey: { ...odyssey, info: odysseyInfo, maps: odysseyMaps ?? [] },
-          ct: { ...ct, tiles: ctTiles?.tiles ?? [] },
+          boss: boss && { ...boss, rules: bossRules },
+          race: race && { ...race, rules: raceRules },
+          odyssey: odyssey && { ...odyssey, info: odysseyInfo, maps: odysseyMaps ?? [] },
+          ct: ct && { ...ct, tiles: ctTiles?.tiles ?? [] },
+          missing: ['boss', 'race', 'odyssey', 'ct'].filter((_, i) => ![boss, race, odyssey, ct][i]),
           fetchedAt: Date.now(),
         };
         this.live = cache;

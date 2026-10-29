@@ -25,37 +25,37 @@
   <script type="importmap">
   {
     "imports": {
-      "./js/components/compare.js": "./js/components/compare.js?v=6abae05e8b",
-      "./js/components/crosspath.js": "./js/components/crosspath.js?v=6abae05e8b",
-      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=6abae05e8b",
-      "./js/components/events.js": "./js/components/events.js?v=6abae05e8b",
-      "./js/components/farming.js": "./js/components/farming.js?v=6abae05e8b",
-      "./js/components/global-search.js": "./js/components/global-search.js?v=6abae05e8b",
-      "./js/components/hero-page.js": "./js/components/hero-page.js?v=6abae05e8b",
-      "./js/components/maps.js": "./js/components/maps.js?v=6abae05e8b",
-      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=6abae05e8b",
-      "./js/components/paragons.js": "./js/components/paragons.js?v=6abae05e8b",
-      "./js/components/planner.js": "./js/components/planner.js?v=6abae05e8b",
-      "./js/components/playbook.js": "./js/components/playbook.js?v=6abae05e8b",
-      "./js/components/rounds.js": "./js/components/rounds.js?v=6abae05e8b",
-      "./js/components/tier-list.js": "./js/components/tier-list.js?v=6abae05e8b",
-      "./js/components/tower-page.js": "./js/components/tower-page.js?v=6abae05e8b",
-      "./js/components/tracker.js": "./js/components/tracker.js?v=6abae05e8b",
-      "./js/directives.js": "./js/directives.js?v=6abae05e8b",
-      "./js/lib/data.js": "./js/lib/data.js?v=6abae05e8b",
-      "./js/lib/economy.js": "./js/lib/economy.js?v=6abae05e8b",
-      "./js/lib/game.js": "./js/lib/game.js?v=6abae05e8b",
-      "./js/lib/i18n.js": "./js/lib/i18n.js?v=6abae05e8b",
-      "./js/lib/storage.js": "./js/lib/storage.js?v=6abae05e8b",
-      "./js/lib/text.js": "./js/lib/text.js?v=6abae05e8b",
-      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=6abae05e8b",
-      "./js/main.js": "./js/main.js?v=6abae05e8b",
-      "./js/store.js": "./js/store.js?v=6abae05e8b"
+      "./js/components/compare.js": "./js/components/compare.js?v=21783a85b0",
+      "./js/components/crosspath.js": "./js/components/crosspath.js?v=21783a85b0",
+      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=21783a85b0",
+      "./js/components/events.js": "./js/components/events.js?v=21783a85b0",
+      "./js/components/farming.js": "./js/components/farming.js?v=21783a85b0",
+      "./js/components/global-search.js": "./js/components/global-search.js?v=21783a85b0",
+      "./js/components/hero-page.js": "./js/components/hero-page.js?v=21783a85b0",
+      "./js/components/maps.js": "./js/components/maps.js?v=21783a85b0",
+      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=21783a85b0",
+      "./js/components/paragons.js": "./js/components/paragons.js?v=21783a85b0",
+      "./js/components/planner.js": "./js/components/planner.js?v=21783a85b0",
+      "./js/components/playbook.js": "./js/components/playbook.js?v=21783a85b0",
+      "./js/components/rounds.js": "./js/components/rounds.js?v=21783a85b0",
+      "./js/components/tier-list.js": "./js/components/tier-list.js?v=21783a85b0",
+      "./js/components/tower-page.js": "./js/components/tower-page.js?v=21783a85b0",
+      "./js/components/tracker.js": "./js/components/tracker.js?v=21783a85b0",
+      "./js/directives.js": "./js/directives.js?v=21783a85b0",
+      "./js/lib/data.js": "./js/lib/data.js?v=21783a85b0",
+      "./js/lib/economy.js": "./js/lib/economy.js?v=21783a85b0",
+      "./js/lib/game.js": "./js/lib/game.js?v=21783a85b0",
+      "./js/lib/i18n.js": "./js/lib/i18n.js?v=21783a85b0",
+      "./js/lib/storage.js": "./js/lib/storage.js?v=21783a85b0",
+      "./js/lib/text.js": "./js/lib/text.js?v=21783a85b0",
+      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=21783a85b0",
+      "./js/main.js": "./js/main.js?v=21783a85b0",
+      "./js/store.js": "./js/store.js?v=21783a85b0"
     }
   }
   </script>
   <!-- import-map:end -->
-  <script type="module" src="js/main.js?v=6abae05e8b"></script>
+  <script type="module" src="js/main.js?v=21783a85b0"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 
@@ -1300,6 +1300,7 @@
           <template x-if="live">
             <div class="event-grid">
               <!-- Boss event -->
+              <template x-if="live.boss">
               <article class="panel event-card">
                 <header class="event-card__head">
                   <img class="event-card__icon" :src="live.boss.event.bossTypeURL" alt="" loading="lazy">
@@ -1329,8 +1330,10 @@
                   <button class="button button--quiet button--small" x-show="mapFor(live.boss.rules?.map)" @click="$store.hub.openPage('map', mapFor(live.boss.rules.map).id)"><span x-icon="map"></span>Map page</button>
                 </div>
               </article>
+              </template>
 
               <!-- Race -->
+              <template x-if="live.race">
               <article class="panel event-card">
                 <header class="event-card__head">
                   <img class="event-card__icon" :src="live.race.rules?.mapURL" alt="" loading="lazy" x-show="live.race.rules?.mapURL">
@@ -1356,8 +1359,10 @@
                 </template>
                 <button class="button button--quiet button--small" style="justify-self:start" x-show="mapFor(live.race.rules?.map)" @click="$store.hub.openPage('map', mapFor(live.race.rules.map).id)"><span x-icon="map"></span>Map page</button>
               </article>
+              </template>
 
               <!-- Odyssey -->
+              <template x-if="live.odyssey">
               <article class="panel event-card">
                 <header class="event-card__head">
                   <span class="avatar avatar--small" data-category="Military" aria-hidden="true"><span x-icon="ship"></span></span>
@@ -1377,8 +1382,10 @@
                   </template>
                 </ol>
               </article>
+              </template>
 
               <!-- Contested Territory -->
+              <template x-if="live.ct">
               <article class="panel event-card">
                 <header class="event-card__head">
                   <span class="avatar avatar--small" data-category="Support" aria-hidden="true"><span x-icon="hexagon"></span></span>
@@ -1396,8 +1403,10 @@
                   </div>
                 </template>
               </article>
+              </template>
             </div>
           </template>
+          <p class="dim tower-note" x-show="live?.missing?.length" x-text="live?.missing?.length ? `Ninja Kiwi didn't send data for: ${live.missing.map((k) => ({ boss: 'Boss event', race: 'Race', odyssey: 'Odyssey', ct: 'Contested Territory' })[k]).join(', ')}. Try again later.` : ''"></p>
           <p class="dim tower-note" x-show="live" x-text="live ? `Fetched from Ninja Kiwi's Open Data API at ${new Date(live.fetchedAt).toLocaleTimeString()}. Times are in your time zone.` : ''"></p>
 
           <!-- Boss guide -->

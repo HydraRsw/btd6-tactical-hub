@@ -2157,6 +2157,8 @@
 "Extreme": "Extremo",
 "· Extreme": "· Extremo",
 "Not covered": "Sin cubrir",
+"Race": "Carrera",
+"Boss event": "Evento de jefe",
 "Crosspath Guide": "Guía de crosspaths",
 "Maps & Modes": "Mapas y modos",
 "Most maps": "La mayoría de mapas",
@@ -2534,6 +2536,26 @@
 [
 "^Tier (\\S)$",
 "Tier {1}"
+],
+[
+"^Heroes: (.+)$",
+"Héroes: {1}"
+],
+[
+"^Not allowed: (.+)$",
+"No permitido: {1}"
+],
+[
+"^Limited: (.+)$",
+"Limitado: {1}"
+],
+[
+"^Scoring: (.+)$",
+"Puntuación: {1}"
+],
+[
+"^Ninja Kiwi didn't send data for: (.+)\\. Try again later\\.$",
+"Ninja Kiwi no envió datos de: {1}. Inténtalo más tarde."
 ],
 [
 "^(\\S+) (\\d+)% shorter$",
