@@ -25,6 +25,9 @@ import { medalTracker, favouritesBar, patchPage } from './components/tracker.js'
 import { tabScroller } from './components/tab-scroller.js';
 import { bossPage } from './components/boss-page.js';
 import { knowledgeTab } from './components/knowledge.js';
+import { wizardTool } from './components/wizard.js';
+import { bossPlanner } from './components/boss-plan.js';
+import { backupTool } from './components/backup.js';
 import { startI18n } from './lib/i18n.js';
 
 // Spanish (or English) text swap; runs alongside Alpine and catches up on whatever it rendered.
@@ -59,6 +62,9 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('tabScroller', tabScroller);
   Alpine.data('bossPage', bossPage);
   Alpine.data('knowledgeTab', knowledgeTab);
+  Alpine.data('wizardTool', wizardTool);
+  Alpine.data('bossPlanner', bossPlanner);
+  Alpine.data('backupTool', backupTool);
 
   const hub = Alpine.store('hub');
   hub.openTabFromUrl();

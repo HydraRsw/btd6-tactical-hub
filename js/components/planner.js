@@ -79,6 +79,8 @@ export function buildPlanner() {
       this.$watch('build', (value) => remember('plannerBuild', value), { deep: true });
       // a saved build opened from the favourites bar or the library
       this.$watch('$store.hub.pendingBuild', (saved) => saved && this.loadSaved(saved));
+      this.$watch('$store.hub.pendingTemplate', (pending) => pending && this.loadPendingTemplate(pending));
+      if (this.$store.hub.pendingTemplate) this.loadPendingTemplate(this.$store.hub.pendingTemplate);
       if (this.$store.hub.pendingBuild) this.loadSaved(this.$store.hub.pendingBuild);
     },
 
@@ -167,6 +169,13 @@ export function buildPlanner() {
 
     get template() {
       return this.templates.find((t) => t.id === this.templateId) ?? null;
+    },
+
+    loadPendingTemplate({ id, mapId }) {
+      this.templateId = id;
+      if (mapId) this.build.mapId = mapId;
+      this.loadTemplate();
+      this.$store.hub.pendingTemplate = null;
     },
 
     loadTemplate() {
