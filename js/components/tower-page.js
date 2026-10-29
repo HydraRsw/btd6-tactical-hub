@@ -50,8 +50,14 @@ export function towerPage() {
       return `At ${this.tower.bestRoute} its main attack ${parts.join(' and ')}.`;
     },
 
+    keep: null,
+
+    init() {
+      this.keep = this.$store.hub.pageKeeper('tower');
+    },
+
     get tower() {
-      return this.$store.hub.currentTower;
+      return this.keep ? this.keep() : this.$store.hub.currentPage;
     },
 
     /**

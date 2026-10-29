@@ -87,8 +87,14 @@ export function mapPage() {
   return {
     restriction,
 
+    keep: null,
+
+    init() {
+      this.keep = this.$store.hub.pageKeeper('map');
+    },
+
     get map() {
-      return this.$store.hub.currentPage;
+      return this.keep ? this.keep() : this.$store.hub.currentPage;
     },
 
     get mode() {
@@ -133,8 +139,14 @@ export function modePage() {
   return {
     restriction,
 
+    keep: null,
+
+    init() {
+      this.keep = this.$store.hub.pageKeeper('mode');
+    },
+
     get mode() {
-      return this.$store.hub.currentPage;
+      return this.keep ? this.keep() : this.$store.hub.currentPage;
     },
 
     get towers() {

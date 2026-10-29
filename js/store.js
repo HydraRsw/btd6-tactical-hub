@@ -77,6 +77,19 @@ export function createHubStore() {
       return this.activeTab === 'tower' ? this.currentPage : null;
     },
 
+    /**
+     * For detail-page components: the open item of this kind, or (while the
+     * page is being closed) the last one it showed, so its template never
+     * reads from null or from another kind of page.
+     */
+    pageKeeper(kind) {
+      let last = null;
+      return () => {
+        if (this.activeTab === kind && this.currentPage) last = this.currentPage;
+        return last;
+      };
+    },
+
     findMode(modeId) {
       return this.modes.modes.find((mode) => mode.id === modeId) ?? null;
     },

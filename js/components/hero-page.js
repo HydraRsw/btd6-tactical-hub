@@ -14,8 +14,14 @@ export function heroPage() {
     placeRound: 6,
     mapDifficulty: 'Intermediate',
 
+    keep: null,
+
+    init() {
+      this.keep = this.$store.hub.pageKeeper('hero');
+    },
+
     get hero() {
-      return this.$store.hub.currentPage;
+      return this.keep ? this.keep() : this.$store.hub.currentPage;
     },
 
     get regularRounds() {
