@@ -394,11 +394,12 @@
    }
   ],
   "camoLevel": null,
-  "leadLevel": 0,
+  "leadLevel": 13,
   "bestFor": "A versatile hero with a strong early game from her laser, best on maps with one active lane per round. Her discounts help afford Flying Fortress and Apache Prime.",
   "tips": [
    "Most of her damage is the laser; use grenades for grouped cleanup.",
-   "Scatter Missile is excellent for clearing a tough clump."
+   "Scatter Missile is excellent for clearing a tough clump.",
+   "Before level 13 only her enhanced 10th laser shot can hurt Lead; from 13 the laser is Plasma."
   ],
   "pairs": [
    {
@@ -554,7 +555,8 @@
   "bestFor": "Easy income for casual games and boss events. In CHIMPS he earns nothing but Syphon Funding can delete dense rounds like 94, 96 and 98.",
   "tips": [
    "Keep him away from income-per-pop towers and Paragons: Trojan steals their pops.",
-   "In CHIMPS, place him around round 80 just to reach level 10 in time."
+   "In CHIMPS, place him around round 80 just to reach level 10 in time.",
+   "He deals no direct damage; from level 18 his Trojan can target Camo Bloons."
   ],
   "pairs": [
    {
@@ -870,7 +872,7 @@
    }
   ],
   "camoLevel": 5,
-  "leadLevel": 0,
+  "leadLevel": null,
   "bestFor": "Solid damage and support with a strong mid game. His level 8 map-wide Camo detection can replace a Radar Scanner.",
   "tips": [
    "UAV doesn't help against Phayze's Radar Jam.",
@@ -953,7 +955,7 @@
    }
   ],
   "camoLevel": 0,
-  "leadLevel": 3,
+  "leadLevel": 13,
   "bestFor": "An easy, strong early game, best on Beginner and Intermediate maps and maps with overlapping lanes (Quad). Needs towers that trigger her bonus damage later.",
   "tips": [
    "Pair her with stuns, slows and burns: Relentless Glue and Dragon's Breath.",
@@ -1202,11 +1204,12 @@
    }
   ],
   "camoLevel": null,
-  "leadLevel": 0,
+  "leadLevel": null,
   "bestFor": "Boss events (Paragon Power Totems and efficient income) and Least Tiers. Flexible in every stage but hard to master.",
   "tips": [
    "Don't overspend on items; learn their value in casual games first.",
-   "Buy the Rare Quincy Action Figure early for a big payout later."
+   "Buy the Rare Quincy Action Figure early for a big payout later.",
+   "He can't pop Lead himself; from level 8 the Gerry's Fire item gives a tower fire damage."
   ],
   "pairs": [
    {
@@ -1274,7 +1277,7 @@
    }
   ],
   "camoLevel": null,
-  "leadLevel": 0,
+  "leadLevel": null,
   "bestFor": "CHIMPS and Half Cash: his spells save a lot of cash if used well. Best on maps with one active lane per round.",
   "tips": [
    "Echo is essential for chaining spells on hard rounds.",
@@ -1350,11 +1353,12 @@
    }
   ],
   "camoLevel": 0,
-  "leadLevel": 0,
+  "leadLevel": null,
   "bestFor": "Ice Monkey builds. His slowing aura and Camo detection make early placement easier on Flooded Valley and #Ouch.",
   "tips": [
    "His early game is slow and many early towers can't pop frozen Bloons.",
-   "Place him so his range edge covers a lot of track while his aura still reaches it."
+   "Place him so his range edge covers a lot of track while his aura still reaches it.",
+   "His main attack never pops Lead; his Ice Walls (level 4+) do affect Lead Bloons."
   ],
   "pairs": [
    {
@@ -1421,7 +1425,8 @@
   "bestFor": "Cheap support: Reposition substitutes for a Support Chinook, Rabble Rouser for Pat's roar, and it triggers life-loss passives (Elite Defender, x-x-2+ Desperado) in CHIMPS.",
   "tips": [
    "His base form is usually preferred for its support; the Masqued Macaque is good in ABR for its Camo and Lead.",
-   "Use Transform's damage burst on hard grouped early rounds."
+   "Use Transform's damage burst on hard grouped early rounds.",
+   "His base form has no Camo detection or Lead popping of its own; the Masqued Macaque form has both."
   ],
   "pairs": [
    {

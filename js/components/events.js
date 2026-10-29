@@ -122,12 +122,14 @@ export function eventsTab() {
     /** Restrictions from an event's tower list, in words. */
     restrictions(rules) {
       if (!rules?._towers) return null;
+      // "ChosenPrimaryHero" allowed = the player may bring any hero they like.
+      const anyHero = rules._towers.some((t) => t.tower === 'ChosenPrimaryHero' && t.max !== 0);
       const towers = rules._towers.filter((t) => t.tower !== 'ChosenPrimaryHero');
       const heroes = towers.filter((t) => t.isHero && t.max !== 0);
       const banned = towers.filter((t) => !t.isHero && t.max === 0);
       const limited = towers.filter((t) => !t.isHero && t.max > 0);
       const pathLimited = towers.filter((t) => !t.isHero && t.max !== 0 && (t.path1NumBlockedTiers || t.path2NumBlockedTiers || t.path3NumBlockedTiers));
-      const heroText = heroes.length === towers.filter((t) => t.isHero).length ? 'Any hero' : heroes.length ? heroes.map((h) => this.unitLabel(h.tower)).join(', ') : 'No heroes';
+      const heroText = anyHero || heroes.length === towers.filter((t) => t.isHero).length ? 'Any hero' : heroes.length ? heroes.map((h) => this.unitLabel(h.tower)).join(', ') : 'No heroes';
       return {
         heroes: heroText,
         banned: banned.map((t) => this.unitLabel(t.tower)),
@@ -157,6 +159,15 @@ export function eventsTab() {
       if (rules.noContinues) out.push('No continues');
       if (rules.abilityCooldownReductionMultiplier && rules.abilityCooldownReductionMultiplier !== 1) out.push(`Ability cooldowns ×${rules.abilityCooldownReductionMultiplier}`);
       return out;
+    },
+
+    /** "DoubleMoabHealth" → "Double HP MOABs", "Clicks" → "CHIMPS". */
+    modeLabel(apiMode) {
+      const aliases = { clicks: 'chimps', doublemoabhealth: 'double-hp-moabs', alternatebloonsrounds: 'abr', magicmonkeysonly: 'magic-only', magiconly: 'magic-only', primaryonly: 'primary-only', militaryonly: 'military-only', halfcash: 'half-cash', standard: null };
+      const key = squash(apiMode);
+      if (key === 'standard') return 'Standard';
+      const id = aliases[key] ?? key;
+      return this.$store.hub.modes.modes.find((m) => m.id === id || squash(m.name) === key)?.name ?? String(apiMode).replace(/([a-z])([A-Z])/g, '$1 $2');
     },
 
     scoring(type) {

@@ -116,7 +116,7 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 ### Costs, detection, heroes and rounds
 
 - Towers have `costs: { base: [e, m, h, i], upgrades: [path][tier] → [e, m, h, i] }` (Easy,
-  Medium, Hard, Impoppable) and `detection: { camo, lead }` as lists of minimum crosspaths
+  Medium, Hard, Impoppable) and `detection: { camo, lead }` (can the main attack hit Camo / pop Lead) as lists of minimum crosspaths
   (`[[0, 0, 2]]` = bottom path tier 2 or more; `[[0, 0, 0]]` = from the start; `[]` = never
   on its own), with `camoText`, `leadText` and `purple` notes for people.
 - Heroes have `cost` (same four prices), `xpModifier`, `milestones: [{ level, text }]`
