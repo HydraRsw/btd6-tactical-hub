@@ -299,6 +299,11 @@
 .option__label svg { width: 16px; height: 16px; }
 .option small { color: var(--text-dim); font-weight: 700; }
 
+/* --- "Sources: …" line under cards ---------------------------------- */
+.sources { font-size: 0.72rem; font-weight: 700; color: var(--text-dim); }
+.sources a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
+.sources a:hover { color: var(--gold); }
+
 /* --- Animation helpers ------------------------------------------------ */
 .rise-in { animation: rise-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 

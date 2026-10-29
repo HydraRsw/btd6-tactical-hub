@@ -1,95 +1,124 @@
 {
   "modeNotes": {
-    "chimps": "CHIMPS strips income and selling: farms, Merchantmen, Benjamin’s cash and Bloon Trap give nothing. Value comes from efficient DPS per dollar, camo/lead/fortified coverage, and buffs (Alch, Village, Overclock).",
-    "boss": "Boss events reward economy (BRF/Marketplace/Merchantmen + Benjamin) and raw single-target damage amplified by debuffs (Super Brittle, Embrittlement) and buffs. Bosses ignore stuns/slows/knockback."
+    "chimps": "CHIMPS disables income and selling, so farms, Merchantmen, Monkey City and Benjamin give nothing. Tiers lean on the Bloons wiki's CHIMPS strategy page: its listed win conditions rank highest, its support picks next.",
+    "boss": "Boss events reward economy first (Geraldo and Benjamin, BRFs with Overclock), then raw damage and Paragons in later tiers. Each boss counters different things, so check the boss notes before committing."
   },
   "dangerRounds": [
     {
       "round": 40,
       "title": "First MOAB",
-      "threat": "A single MOAB with no prior MOAB pressure — the first real DPS check.",
+      "threat": "The first MOAB of the game.",
       "counters": [
-        "Bomb 0-3-0 MOAB Mauler (or 2-3-0)",
-        "Sniper 2-0-2 / 2-0-3 + Ballistic Missile Sub 0-3-0",
-        "Sauda / Quincy ability timing",
-        "Ninja 2-0-3 Flash Bomb stun"
+        "Ezili's MOAB Hex or Corvus's Ancestral Might",
+        "Bomb Shooter MOAB Mauler (2-3-0)",
+        "Buccaneer Destroyer (3-1-0)"
+      ],
+      "sources": [
+        "wiki-chimps"
       ]
     },
     {
       "round": 63,
-      "title": "Dense Leads & Ceramics",
-      "threat": "Massive ceramic rush with lead bloons mixed in — a pierce and lead-popping check.",
+      "title": "Ceramic waves",
+      "threat": "Large waves of Ceramics that test grouped damage.",
       "counters": [
-        "Village 2-3-0 MIB (all damage types)",
-        "Wizard 0-2-4 Necromancer / Dragon’s Breath line",
-        "Ice 3-0-0+ (Ice Shards) or Embrittlement",
-        "Spike Factory end-of-track insurance"
+        "Towers with strong grouped damage",
+        "Wall of Fire (1-2-0) or Dragon's Breath",
+        "Glue to hold the wave together"
+      ],
+      "sources": [
+        "wiki-chimps"
       ]
     },
     {
-      "round": 76,
-      "title": "Regrow Ceramic Rush",
-      "threat": "Dense regrow ceramics that refill layers if not finished quickly.",
+      "round": 75,
+      "title": "Leads, Fortified MOABs and BFBs",
+      "threat": "A mix of Lead bloons, Fortified MOABs and BFBs.",
       "counters": [
-        "Village Grow Blocker (x-1-x) in radius",
-        "Druid Heart of Oak (x-2-x) blocks regrow",
-        "Mortar 0-2-4 Shattering Shells removes regrow",
-        "High-pierce Crossbow Master / Necromancer"
+        "Solid grouped popping power",
+        "Lead coverage (MIB 2-3-0, White Hot Spikes)",
+        "MOAB-class damage ready"
+      ],
+      "sources": [
+        "wiki-chimps"
       ]
     },
     {
       "round": 78,
-      "title": "Camo Ceramic Waves",
-      "threat": "Fast camo ceramics — any DPS without camo detection is wasted.",
+      "title": "Camo Ceramics",
+      "threat": "Camo Ceramic waves: anything without camo detection is wasted.",
       "counters": [
-        "Village Radar Scanner (x-2-x)",
-        "Etienne UAV / Sub Advanced Intel",
-        "Ice Embrittlement or Mortar Signal Flare strips camo",
-        "Ninja (native camo) Bloonjitsu"
+        "Camo detection on your carries (Radar Scanner, Ultravision, Ninja)",
+        "Grouped popping power",
+        "Submerge and Support decamo (3-0-2 Sub)"
+      ],
+      "sources": [
+        "wiki-chimps"
+      ]
+    },
+    {
+      "round": 90,
+      "title": "Camo Regrow Leads + DDTs",
+      "threat": "Fortified Camo Regrow Leads and three DDTs.",
+      "counters": [
+        "Towers that pop Camo, Black and Lead",
+        "DDT-capable damage (Archmage, Bloon Sabotage)",
+        "MIB to cover damage types"
+      ],
+      "sources": [
+        "wiki-chimps"
       ]
     },
     {
       "round": 95,
-      "title": "DDT Rush",
-      "threat": "Many DDTs — fast, camo, lead & black properties (immune to sharp and explosive without help).",
+      "title": "DDT rush",
+      "threat": "Around 30 DDTs alongside Fortified MOABs.",
       "counters": [
-        "MIB (Village 2-3-0) on your carries",
-        "Embrittlement / Shattering Shells to strip properties",
-        "Sniper 4-0-2 / Elite Sniper (ignores pathing)",
-        "Comanche / Perma-Spike as leak insurance"
+        "Strong DDT damage not blocked by the Fortified MOABs' insides",
+        "Bloon Sabotage slows DDTs globally",
+        "Glue Strike / Glue Storm so lead-blocked towers can hurt DDTs"
+      ],
+      "sources": [
+        "wiki-chimps"
       ]
     },
     {
       "round": 98,
-      "title": "Mass Fortified BFB / ZOMG",
-      "threat": "The classic run-ender: a dense wall of fortified MOAB-class.",
+      "title": "Fortified BFBs and ZOMGs",
+      "threat": "The classic run-ender: dense Fortified BFBs and ZOMGs.",
       "counters": [
-        "Ninja 0-4-0 Bloon Sabotage + Sniper Maim MOAB stuns",
-        "Boomerang 2-0-4 MOAB Press defortify + knockback",
-        "First Strike / MOAB Assassin abilities saved for this round",
-        "Call to Arms + Overclock timed on your carry"
+        "Strong grouped popping",
+        "MOAB Press (2-0-4) or The Bloon Solver for the Super Ceramic insides",
+        "Save MOAB-killing abilities for this round"
+      ],
+      "sources": [
+        "wiki-chimps"
       ]
     },
     {
       "round": 99,
-      "title": "Fortified DDTs",
-      "threat": "Fortified DDTs that punish weak damage-per-hit and lack of camo/black coverage.",
+      "title": "MOABs and Fortified DDTs",
+      "threat": "MOABs plus Fortified DDTs; plan ability cooldowns from R98.",
       "counters": [
-        "Super Monkey 3-0-2+/Sun Temple with MIB",
-        "Embrittlement (+damage, removes camo)",
-        "Elite Defender / Perma-Spike backup",
-        "Re-check every carry has camo + MIB"
+        "Grouped DDT damage",
+        "MOAB Press (2-0-4)",
+        "Bloon Sabotage (0-4-0), timed with cooldowns in mind"
+      ],
+      "sources": [
+        "wiki-chimps"
       ]
     },
     {
       "round": 100,
       "title": "B.A.D.",
-      "threat": "Big Airship of Doom: immune to stuns, slows and knockback; spawns ZOMGs & DDTs on death.",
+      "threat": "The Big Airship of Doom; its insides spawn ZOMGs and DDTs.",
       "counters": [
-        "Pure single-target DPS: Sun Temple, Legend of the Night, MOAB Eliminator, Ray of Doom",
-        "Ice Embrittlement / Super Brittle damage amp",
-        "Save MOAB-killer abilities for the children",
-        "Don’t rely on Maim/Sabotage/Glue — BAD ignores them"
+        "Saved single-target burst: Spike Storm (2-4-0) or First Strike Capability (0-4-0)",
+        "First Strike can skip a damaged BAD's insides",
+        "Psi and Silas abilities do nothing to the BAD itself"
+      ],
+      "sources": [
+        "wiki-chimps"
       ]
     }
   ],
@@ -103,27 +132,38 @@
         "Bosses"
       ],
       "synergies": [
-        "Sharpening Stone on your main carry (Crossbow Master, Sniper)",
-        "Creepy Idol / Jar of Pickles stall & black-bloon help",
-        "Fertilizer accelerates Banana Farms in boss events",
-        "Paragon Power Totem for degree boosting"
+        "Rare Quincy Action Figure funds early farms in boss events",
+        "Blade Trap handles Bloonarius bleed and skull bloons",
+        "Rejuv Potion resets ability cooldowns (watch the heat cost against Blastapopoulos)",
+        "Support pairing for Comanche Commander in CHIMPS"
       ],
-      "tip": "Level him early — the shop unlocks scale with level and items are cheap for their value."
+      "tip": "A primary boss-event hero; in CHIMPS he is a support pick rather than a win condition.",
+      "sources": [
+        "wiki-boss-events",
+        "wiki-bloonarius",
+        "wiki-blastapopoulos",
+        "wiki-chimps"
+      ]
     },
     {
       "heroId": "sauda",
       "name": "Sauda",
       "tagline": "Early-game blender",
       "modes": [
-        "CHIMPS"
+        "CHIMPS",
+        "Boss Rush"
       ],
       "synergies": [
-        "Carries R1–R60 nearly solo → save cash for T4/T5 MOAB answers",
-        "Pair with MOAB-class specialists: Sniper 4-0-2, Bomb 2-4-0, Ninja Sabotage",
-        "Place at a track crossing for maximum sword uptime",
-        "Weak late game — plan your R80+ DPS early"
+        "Strong early CHIMPS starter, especially on maps with overlapping lanes",
+        "Relentless Glue triggers her stun and slow bonus damage",
+        "Dragon's Breath triggers her damage-over-time bonus",
+        "Leaping Sword is spammable early boss damage in Boss Rush"
       ],
-      "tip": "Her value is the cash she saves you; spend it on the MOAB carry before R63."
+      "tip": "She isn't a solo tower: plan the towers that set up her bonus damage before the mid game.",
+      "sources": [
+        "wiki-sauda",
+        "wiki-chimps"
+      ]
     },
     {
       "heroId": "ben",
@@ -133,28 +173,35 @@
         "Bosses"
       ],
       "synergies": [
-        "Passive cash each round + Bank Hack boosts Monkey Banks",
-        "Biohack ability buffs adjacent towers for big burst windows",
-        "Stacks with BRF/Marketplace/Merchant setups",
-        "Useless income in CHIMPS (income disabled)"
+        "Early cash snowballs the whole boss-event economy",
+        "Place him behind a line-of-sight blocker, or sell him between tiers 1 and 2",
+        "Stacks with BRF, Marketplace or Merchantman setups",
+        "Avoid in CHIMPS: income is disabled"
       ],
-      "tip": "Place him first in boss events; his early cash compounds into the R40 checkpoint."
+      "tip": "Pick him first in boss events; never in CHIMPS.",
+      "sources": [
+        "wiki-boss-events",
+        "wiki-chimps"
+      ]
     },
     {
       "heroId": "psi",
       "name": "Psi",
       "tagline": "MOAB-class deleter",
       "modes": [
-        "CHIMPS",
-        "Bosses"
+        "CHIMPS"
       ],
       "synergies": [
-        "Alch + Village buffs boost his blast rate",
-        "Psionic Scream for MOAB-class waves (R98)",
-        "Cover his weak pierce with Necromancer / Crossbow Master",
-        "Check boss immunities before relying on him"
+        "MIB, Embrittlement and Glue Strike let him hit Lead and Purple bloons early",
+        "Energizer Subs help him level toward 20",
+        "Instakills MOABs at level 14, BFBs at 16, DDTs and ZOMGs at 20",
+        "Never targets BADs or Boss Bloons; clashes with Perma-Spike stalling"
       ],
-      "tip": "Excellent filler single-target; treat abilities like a mini MOAB Assassin."
+      "tip": "Great in CHIMPS, nearly useless in boss events.",
+      "sources": [
+        "wiki-psi",
+        "wiki-sub"
+      ]
     },
     {
       "heroId": "brickell",
@@ -165,44 +212,69 @@
         "Bosses"
       ],
       "synergies": [
-        "Naval Tactics boosts attack speed of water towers (Sub Commander, Pirates, Mermonkey)",
-        "Mega Mine deletes MOAB-class on R98/R100",
-        "Pair with Sub 2-0-5 for decamo + lead",
-        "Merchantman eco synergy in boss events"
+        "Buffs naval towers: Carrier Flagship and Pirate Lord are CHIMPS win conditions with her",
+        "Destroyer and Sub spam against Dreadbloon and Phayze",
+        "Sub Commander with Brickell works against Lych",
+        "Energizer Subs are a common late pairing"
       ],
-      "tip": "Only pick her on maps with real water space near the track."
+      "tip": "Only worth it on maps with real water space near the track.",
+      "sources": [
+        "wiki-chimps",
+        "wiki-dreadbloon",
+        "wiki-phayze",
+        "wiki-lych",
+        "wiki-sub"
+      ]
     }
   ],
   "bosses": [
     {
       "name": "Bloonarius",
       "icon": "droplets",
-      "note": "Spawns bloons as it takes damage. Needs strong cleanup + single-target carry; Spike Factory end-of-track helps."
+      "note": "High health, slow; its threat is the bloons it spawns. Damage releases Bleed bloons, and skulls spawn waves (BADs at later tiers). Mix boss damage with spawn defense; Geraldo's Blade Trap helps.",
+      "sources": [
+        "wiki-bloonarius"
+      ]
     },
     {
       "name": "Lych",
       "icon": "skull",
-      "note": "Steals buffs and drains lives via its soul; Ezili Heartstopper and life generation (Healthy Bananas) help."
+      "note": "Steals most buffs (not Village range) and heals when you sell. Its soul drains lives and it revives MOABs. Keep Overclock, Call to Arms and brews away from it; Elite Defender (2-0-5) can solo it from range.",
+      "sources": [
+        "wiki-lych"
+      ]
     },
     {
       "name": "Vortex",
       "icon": "wind",
-      "note": "Very fast; stuns towers. Needs damage concentrated near spawn and range coverage."
+      "note": "Speeds every bloon up until they reach it. At each skull it is knocked back, shielded, and stuns nearby towers. Use long-range towers, spread defenses along the track and keep exit backup.",
+      "sources": [
+        "wiki-vortex"
+      ]
     },
     {
       "name": "Dreadbloon",
       "icon": "shield",
-      "note": "Armored with lead/fortified shields — bring MIB/lead-popping burst for shield phases."
+      "note": "Cycles immunity through Primary, Military, Magic and Support, so mix tower classes. Constantly spawns Dreadrock bloons and has a Ceramic phase then a Lead phase that reduces incoming damage.",
+      "sources": [
+        "wiki-dreadbloon"
+      ]
     },
     {
       "name": "Phayze",
       "icon": "eye-off",
-      "note": "Blinds and disables towers in phases — spread DPS and keep camo detection redundant."
+      "note": "Camo, warps ahead after skulls, and jams radar so towers attack about half the time. Use native-camo, long-range towers (Elite Defender, Aircraft Carrier, Plasma Accelerator).",
+      "sources": [
+        "wiki-phayze"
+      ]
     },
     {
       "name": "Blastapopoulos",
       "icon": "flame",
-      "note": "Overheats and stuns towers; heat-resistant positioning and alternating carries matter."
+      "note": "Purple, burns off damage-over-time, and shrinks tower range. Most hits add heat; overheating stuns towers and slows abilities. Ice towers cut heat, and Ice Monkeys and Silas ignore the overheat.",
+      "sources": [
+        "wiki-blastapopoulos"
+      ]
     }
   ]
 }

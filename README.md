@@ -36,6 +36,7 @@ data/
   heroes.json            Every hero: tiers, roles, summary.
   economy.json           Farm builds for the calculator, strategy cards, boss checkpoints.
   playbook.json          Mode notes, CHIMPS danger rounds, hero synergies, boss notes.
+  sources.json           Every cited page (id → title + url). Entries point at these ids.
 ```
 
 ## Updating for a new patch
@@ -56,10 +57,11 @@ A tower looks like this:
   "bestRoute": "4-0-2",
   "roles": ["DPS", "MOAB", "Stall"],
   "confidence": "verified",
-  "summary": "Global range. Maim MOAB stuns blimps…",
+  "summary": "Global range. Elite Defender can clear Lych…",
   "routes": [
-    { "path": "4-0-2", "kind": "optimal", "name": "Maim MOAB", "note": "…" }
-  ]
+    { "path": "2-0-5", "kind": "optimal", "name": "Elite Defender", "note": "…" }
+  ],
+  "sources": ["wiki-sniper", "wiki-lych"]
 }
 ```
 
@@ -69,6 +71,18 @@ A tower looks like this:
 - `confidence`: `verified`, `approximate` or `new`
 - `icon`: any [Lucide icon](https://lucide.dev/icons) name
 - route `path`: digits 0–5 per path; use `x` for "any / still settling"
+- `sources`: ids from `data/sources.json`. Every claim should trace back to one of them.
+
+## Where the rankings come from
+
+Tiers and routes are editorial judgments, not copied from any single list. They were
+last re-checked on the date in `meta.json` → `researched`, mostly against the Bloons
+wiki ([CHIMPS strategy](https://www.bloonswiki.com/Strategy:CHIMPS), the
+[boss event guide](https://www.bloonswiki.com/Strategy:Boss_Bloon_Event), each
+boss's strategy page and each tower's page). Its CHIMPS-listed win conditions rank
+highest. `confidence` says how well-backed an entry is: `verified` (sources support
+the route and tier), `approximate` (partly supported, or the source is silent on
+crosspaths), `new` (tower too new for a consensus).
 
 ## Checking the data
 
