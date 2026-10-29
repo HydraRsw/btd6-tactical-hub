@@ -1,9 +1,11 @@
-// Planner tab (#planner): lay out a run round by round — which towers you buy,
-// when you upgrade them, and your hero — then see whether you can afford each
-// step and whether you'll have Camo and Lead answers by the rounds that need them.
+// Planner (Tools tab): lay out a run round by round — which towers you buy,
+// when you upgrade them, and when (or whether) you place a hero — then see
+// whether you can afford each step and whether you'll have Camo and Lead
+// answers by the rounds that need them.
 //
 // A build is plain data, so it can be saved in the browser and shared as a link:
-//   { mode, setId, halfCash, mapId, heroId, heroRound, towers: [{ key, tower, steps: [{ round, path }] }] }
+//   { mode, setId, halfCash, mapId, towers: [{ key, tower, steps: [{ round, path }] }] }
+// An entry whose `tower` is a hero id is the hero (only its first step's round matters).
 
 import {
   DIFFICULTIES, cashAtRoundStart, crosspathProblem, firstRoundWith, heroLevels,
@@ -21,7 +23,20 @@ export const PLAN_MODES = [
   { id: 'easy', label: 'Easy', difficulty: 0, start: 1, end: 40 },
 ];
 
-const EMPTY_BUILD = { mode: 'chimps', setId: 'regular', halfCash: false, mapId: 'logs', heroId: 'quincy', heroRound: 6, towers: [] };
+const EMPTY_BUILD = { mode: 'chimps', setId: 'regular', halfCash: false, mapId: 'logs', towers: [] };
+
+let nextKey = Date.now();
+
+/** Older saved builds kept the hero in heroId/heroRound; turn that into a hero entry. */
+function upgradeBuild(saved) {
+  const build = { ...EMPTY_BUILD, ...(saved ?? {}), towers: [...(saved?.towers ?? [])] };
+  if (build.heroId) {
+    build.towers.unshift({ key: nextKey++, tower: build.heroId, steps: [{ round: build.heroRound ?? 6, path: '0-0-0' }] });
+  }
+  delete build.heroId;
+  delete build.heroRound;
+  return build;
+}
 
 /** Reads a shared build from ?build=… in the address, if there is one. */
 function buildFromUrl() {
@@ -39,23 +54,22 @@ function encodeBuild(build) {
   return btoa(unescape(encodeURIComponent(JSON.stringify(build)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
-let nextKey = Date.now();
-
 export function buildPlanner() {
   return {
     PLAN_MODES,
     DIFFICULTIES,
     formatCash,
     pathText,
-    build: { ...EMPTY_BUILD, ...(recall('plannerBuild', null) ?? {}) },
-    newTower: 'dart',
+    build: upgradeBuild(recall('plannerBuild', null)),
+    newUnit: 'dart',
     newRound: 6,
     copied: false,
+    templateId: '',
 
     init() {
       const shared = buildFromUrl();
       if (shared) {
-        this.build = { ...EMPTY_BUILD, ...shared };
+        this.build = upgradeBuild(shared);
         history.replaceState(null, '', location.pathname + location.hash);
       }
       this.newRound = this.mode.start;
@@ -76,12 +90,25 @@ export function buildPlanner() {
       return this.$store.hub.maps.maps.find((m) => m.id === this.build.mapId) ?? null;
     },
 
-    get hero() {
-      return this.$store.hub.heroes.find((h) => h.id === this.build.heroId) ?? null;
+    unitData(id) {
+      return this.$store.hub.units.find((u) => u.id === id);
     },
 
-    towerData(id) {
-      return this.$store.hub.towers.find((t) => t.id === id);
+    isHero(entry) {
+      return this.unitData(entry.tower)?.category === 'Heroes';
+    },
+
+    /** The hero entry, if the build has one. */
+    get heroEntry() {
+      return this.build.towers.find((entry) => this.isHero(entry)) ?? null;
+    },
+
+    get hero() {
+      return this.heroEntry ? this.unitData(this.heroEntry.tower) : null;
+    },
+
+    get heroRound() {
+      return this.heroEntry ? this.clampRound(this.heroEntry.steps[0].round) : null;
     },
 
     clampRound(value) {
@@ -89,9 +116,15 @@ export function buildPlanner() {
     },
 
     // --- Editing ----------------------------------------------------------
-    addTower() {
+    /** Add the tower or hero picked in the "Add" row. A second hero replaces the first. */
+    addUnit() {
       const round = this.clampRound(this.newRound);
-      this.build.towers.push({ key: nextKey++, tower: this.newTower, steps: [{ round, path: '0-0-0' }] });
+      const unit = this.unitData(this.newUnit);
+      if (!unit) return;
+      if (unit.category === 'Heroes') {
+        this.build.towers = this.build.towers.filter((entry) => !this.isHero(entry));
+      }
+      this.build.towers.push({ key: nextKey++, tower: unit.id, steps: [{ round, path: '0-0-0' }] });
     },
 
     removeTower(index) {
@@ -119,6 +152,27 @@ export function buildPlanner() {
       this.build = { ...EMPTY_BUILD, towers: [] };
     },
 
+    // --- Templates --------------------------------------------------------
+    get templates() {
+      return this.$store.hub.templates.templates;
+    },
+
+    get template() {
+      return this.templates.find((t) => t.id === this.templateId) ?? null;
+    },
+
+    loadTemplate() {
+      const t = this.template;
+      if (!t) return;
+      this.build = {
+        ...EMPTY_BUILD,
+        mapId: this.build.mapId,
+        setId: this.build.setId,
+        mode: t.mode,
+        towers: t.entries.map((entry) => ({ key: nextKey++, tower: entry.tower, steps: entry.steps.map((s) => ({ ...s })) })),
+      };
+    },
+
     async share() {
       const url = `${location.origin}${location.pathname}?build=${encodeBuild(this.build)}#planner`;
       try {
@@ -135,18 +189,20 @@ export function buildPlanner() {
     get purchases() {
       const diff = this.mode.difficulty;
       const list = [];
-      if (this.hero) {
-        list.push({ round: this.clampRound(this.build.heroRound), label: `${this.hero.name} (hero)`, cost: this.hero.cost?.[diff] ?? 0, kind: 'hero' });
-      }
       this.build.towers.forEach((entry) => {
-        const tower = this.towerData(entry.tower);
+        const unit = this.unitData(entry.tower);
+        if (!unit) return;
+        if (unit.category === 'Heroes') {
+          list.push({ round: this.clampRound(entry.steps[0].round), label: `${unit.name} (hero)`, cost: unit.cost?.[diff] ?? 0, kind: 'hero', key: entry.key });
+          return;
+        }
         let previous = null;
         [...entry.steps].sort((a, b) => a.round - b.round).forEach((step) => {
           const path = toPath(step.path);
           const lowered = previous && path.some((tier, i) => tier < previous[i]);
           const problem = crosspathProblem(path) || (lowered ? "Upgrades can't be undone: this step goes below the previous one." : '');
-          const cost = problem ? 0 : upgradeCost(tower, previous, path, diff);
-          const label = previous ? `${tower.name} → ${step.path}` : `${tower.name} ${step.path}`;
+          const cost = problem ? 0 : upgradeCost(unit, previous, path, diff);
+          const label = previous ? `${unit.name} → ${step.path}` : `${unit.name} ${step.path}`;
           list.push({ round: step.round, label, cost, problem, kind: 'tower', key: entry.key });
           if (!problem) previous = path;
         });
@@ -169,7 +225,6 @@ export function buildPlanner() {
         .filter((r) => r >= this.mode.start && r <= this.mode.end)
         .sort((a, b) => a - b)
         .map((round) => {
-          // everything bought in earlier rounds
           const spentBefore = this.purchases.filter((p) => p.round < round).reduce((sum, p) => sum + p.cost, 0);
           const buys = byRound[round] ?? [];
           const cost = buys.reduce((sum, p) => sum + p.cost, 0);
@@ -198,20 +253,20 @@ export function buildPlanner() {
     /** The build at the start of a round (after that round's purchases): towers with their crosspath, hero level. */
     snapshot(round) {
       const towers = this.build.towers
+        .filter((entry) => !this.isHero(entry))
         .map((entry) => {
           const steps = entry.steps.filter((s) => s.round <= round && !crosspathProblem(toPath(s.path))).sort((a, b) => a.round - b.round);
-          return steps.length ? { tower: this.towerData(entry.tower), path: toPath(steps.at(-1).path) } : null;
+          return steps.length ? { tower: this.unitData(entry.tower), path: toPath(steps.at(-1).path) } : null;
         })
-        .filter(Boolean);
-      const heroLevel = this.heroLevelAt(round);
-      return { towers, heroLevel };
+        .filter((item) => item?.tower);
+      return { towers, heroLevel: this.heroLevelAt(round) };
     },
 
     get heroCurve() {
       if (!this.hero) return [];
       return heroLevels(this.rounds, {
         xpModifier: this.hero.xpModifier ?? 1,
-        placeRound: this.clampRound(this.build.heroRound),
+        placeRound: this.heroRound,
         mapDifficulty: this.map?.difficulty ?? 'Beginner',
       });
     },
@@ -241,13 +296,14 @@ export function buildPlanner() {
     },
 
     stepCost(entry, index) {
+      const unit = this.unitData(entry.tower);
+      if (unit?.category === 'Heroes') return unit.cost?.[this.mode.difficulty] ?? 0;
       const sorted = [...entry.steps].sort((a, b) => a.round - b.round);
       const step = entry.steps[index];
       const prior = sorted.filter((s) => s !== step && s.round <= step.round && sorted.indexOf(s) < sorted.indexOf(step)).at(-1);
-      const tower = this.towerData(entry.tower);
       const to = toPath(step.path);
       if (crosspathProblem(to)) return null;
-      return upgradeCost(tower, prior ? toPath(prior.path) : null, to, this.mode.difficulty);
+      return upgradeCost(unit, prior ? toPath(prior.path) : null, to, this.mode.difficulty);
     },
 
     stepProblem(step) {

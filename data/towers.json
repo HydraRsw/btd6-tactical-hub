@@ -219,7 +219,40 @@
    ],
    "leadText": "Juggernaut (4-x-x); base darts can't pop Lead.",
    "purple": "Pops Purple, except Plasma Monkey Fan Club's plasma darts."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Extra Dart Pops",
+    "effect": "+1 pierce on every Dart Monkey shot.",
+    "cost": "Free"
+   },
+   {
+    "name": "Crossbow Reach",
+    "effect": "More range for Crossbow.",
+    "cost": "Free"
+   },
+   {
+    "name": "4 and 4",
+    "effect": "Triple Shot fires 4 darts every 4th shot.",
+    "cost": "Free"
+   },
+   {
+    "name": "Force vs Force",
+    "effect": "Juggernaut deals +2 damage to MOAB-class.",
+    "cost": "Free"
+   },
+   {
+    "name": "Master Double Cross",
+    "effect": "Lets you own two Crossbow Masters, which also means an extra tier 5 for Apex Plasma Master.",
+    "cost": "250 MM",
+    "keyPick": true
+   },
+   {
+    "name": "Bonus Monkey!",
+    "effect": "Start every game with a free Dart Monkey (one free tower per game).",
+    "cost": "1,000 MM"
+   }
+  ]
  },
  {
   "id": "boomer",
@@ -435,7 +468,40 @@
    ],
    "leadText": "Red Hot Rangs (x-x-2).",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Cheap 'Rangs",
+    "effect": "Boomerang Monkey costs $50 less.",
+    "cost": "Free"
+   },
+   {
+    "name": "Extra Bounce",
+    "effect": "Glaive Ricochet gets +30 pierce.",
+    "cost": "Free"
+   },
+   {
+    "name": "Recurring 'Rangs",
+    "effect": "Boomerangs that come back are thrown again.",
+    "cost": "Free"
+   },
+   {
+    "name": "Hard Press",
+    "effect": "MOAB Press pushes 30% further.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Long Turbo",
+    "effect": "Turbo Charge lasts 15 seconds.",
+    "cost": "500 MM"
+   },
+   {
+    "name": "Bionic Augmentation",
+    "effect": "Bionic Boomerang sees Camo while Turbo Charge is active, a camo option for x-4-x builds.",
+    "cost": "500 MM",
+    "keyPick": true
+   }
+  ]
  },
  {
   "id": "bomb",
@@ -653,7 +719,29 @@
    ],
    "leadText": "Explosions pop Lead from the start, but not Black or Zebra.",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Fraggy Frags",
+    "effect": "Frag Bombs throw 2 extra frags.",
+    "cost": "Free"
+   },
+   {
+    "name": "Budget Clusters",
+    "effect": "Cluster Bombs cost $100 less.",
+    "cost": "Free"
+   },
+   {
+    "name": "Mega Mauler",
+    "effect": "MOAB Mauler deals more damage per hit.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Violent Impact",
+    "effect": "Bloon Impact stuns 25% longer.",
+    "cost": "500 MM"
+   }
+  ]
  },
  {
   "id": "tack",
@@ -870,7 +958,30 @@
    ],
    "leadText": "Hot Shots (3-x-x).",
    "purple": "Ring of Fire and Inferno Ring are fire and can't pop Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Fast Tack Attacks",
+    "effect": "Tack Shooters attack 8% faster.",
+    "cost": "Free"
+   },
+   {
+    "name": "Hard Tacks",
+    "effect": "Tacks can pop Frozen Bloons, which makes Tacks work next to Ice Monkeys.",
+    "cost": "Free",
+    "keyPick": true
+   },
+   {
+    "name": "Poppy Blades",
+    "effect": "Blade Shooter gets +2 pierce.",
+    "cost": "Free"
+   },
+   {
+    "name": "Big Inferno",
+    "effect": "Inferno Ring's burst radius grows by 3.",
+    "cost": "Free"
+   }
+  ]
  },
  {
   "id": "ice",
@@ -1092,7 +1203,29 @@
    ],
    "leadText": "Cold Snap (2-x-x).",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Icy Chill",
+    "effect": "Slightly bigger freeze radius.",
+    "cost": "Free"
+   },
+   {
+    "name": "So... Cold...",
+    "effect": "Permafrost slows by 60%.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Big Cryo Blast",
+    "effect": "Cryo Cannon's blast radius grows.",
+    "cost": "500 MM"
+   },
+   {
+    "name": "Hypothermia",
+    "effect": "Snowstorm freezes for longer.",
+    "cost": "500 MM"
+   }
+  ]
  },
  {
   "id": "glue",
@@ -1311,7 +1444,35 @@
    ],
    "leadText": "Glue sticks to Lead; Corrosive Glue (2-x-x) damages it. Glue Strike (x-4-x) strips Lead immunity for everyone.",
    "purple": "Glue affects Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Fast Glue",
+    "effect": "Glue Gunners attack 10% faster.",
+    "cost": "Free"
+   },
+   {
+    "name": "More Splatty Glue",
+    "effect": "Glue Splatter hits 2 more Bloons per shot.",
+    "cost": "Free"
+   },
+   {
+    "name": "Aviation Grade Glue",
+    "effect": "MOAB Glue slows more.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Cheaper Solution",
+    "effect": "Bloon Liquefier costs $1,000 less.",
+    "cost": "500 MM",
+    "keyPick": true
+   },
+   {
+    "name": "Bonus Glue Gunner",
+    "effect": "Start every game with a free Glue Gunner (one free tower per game).",
+    "cost": "1,000 MM"
+   }
+  ]
  },
  {
   "id": "desperado",
@@ -1532,7 +1693,8 @@
    ],
    "leadText": "Big Iron (3-x-x) or Deadeye (x-3-x).",
    "purple": "Pops Purple, except fire attacks."
-  }
+  },
+  "knowledge": []
  },
  {
   "id": "sniper",
@@ -1757,7 +1919,30 @@
    ],
    "leadText": "Full Metal Jacket (1-x-x).",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Ceramic Shock",
+    "effect": "Sniper hits briefly slow Ceramics.",
+    "cost": "Free"
+   },
+   {
+    "name": "Cheaper Maiming",
+    "effect": "Maim MOAB costs $1,000 less.",
+    "cost": "Free",
+    "keyPick": true
+   },
+   {
+    "name": "Master Defender",
+    "effect": "Elite Defender's ability has no cooldown.",
+    "cost": "500 MM"
+   },
+   {
+    "name": "Flanking Maneuvers",
+    "effect": "Snipers, Subs and Buccaneers on Last targeting attack 10% faster.",
+    "cost": "500 MM"
+   }
+  ]
  },
  {
   "id": "sub",
@@ -1983,7 +2168,35 @@
    ],
    "leadText": "Heat-tipped Darts (x-2-x).",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Naval Upgrades",
+    "effect": "Subs and Buccaneers get +1 pierce per shot.",
+    "cost": "Free"
+   },
+   {
+    "name": "Breaking Ballistic",
+    "effect": "Ballistic Missile hits Ceramics harder.",
+    "cost": "Free"
+   },
+   {
+    "name": "Quad Burst",
+    "effect": "Airburst Darts split into 4 instead of 3.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Flanking Maneuvers",
+    "effect": "Snipers, Subs and Buccaneers on Last targeting attack 10% faster.",
+    "cost": "500 MM"
+   },
+   {
+    "name": "Sub Admiral",
+    "effect": "Sub Commander buffs every Sub on the map, not just nearby ones.",
+    "cost": "1,000 MM",
+    "keyPick": true
+   }
+  ]
  },
  {
   "id": "bucc",
@@ -2213,7 +2426,35 @@
    ],
    "leadText": "Hot Shot grapes (x-2-x) and Cannon Ship bombs; base darts can't.",
    "purple": "Hot Shot grapes are fire and skip Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Naval Upgrades",
+    "effect": "Subs and Buccaneers get +1 pierce per shot.",
+    "cost": "Free"
+   },
+   {
+    "name": "Big Bunch",
+    "effect": "Grape Shot fires 6 grapes.",
+    "cost": "Free"
+   },
+   {
+    "name": "Faster Takedowns",
+    "effect": "MOAB Takedown cooldown is 5 seconds shorter.",
+    "cost": "Free"
+   },
+   {
+    "name": "Trade Agreements",
+    "effect": "Merchantmen make +$20 per round.",
+    "cost": "250 MM",
+    "keyPick": true
+   },
+   {
+    "name": "Flanking Maneuvers",
+    "effect": "Snipers, Subs and Buccaneers on Last targeting attack 10% faster.",
+    "cost": "500 MM"
+   }
+  ]
  },
  {
   "id": "ace",
@@ -2433,7 +2674,40 @@
    ],
    "leadText": "Exploding Pineapple and Bomber Ace explosions (x-1-x+); base darts can't. Explosions can't pop Black.",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Airforce Upgrades",
+    "effect": "Tier 3+ Aces and Helis get +1 pierce per shot.",
+    "cost": "Free"
+   },
+   {
+    "name": "Accelerated Aerodarts",
+    "effect": "Ace darts fly faster.",
+    "cost": "Free"
+   },
+   {
+    "name": "Targeted Pineapples",
+    "effect": "Pineapples only drop near the track (can be worse on tiny maps).",
+    "cost": "Free"
+   },
+   {
+    "name": "Gun Coolant",
+    "effect": "Aces attack 10% faster.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Wingmonkey",
+    "effect": "Several Aces stagger their attack runs.",
+    "cost": "500 MM"
+   },
+   {
+    "name": "Aeronautic Subsidy",
+    "effect": "Ace tier 5s cost 10% less.",
+    "cost": "500 MM",
+    "keyPick": true
+   }
+  ]
  },
  {
   "id": "heli",
@@ -2654,7 +2928,29 @@
    ],
    "leadText": "Razor Rotors (3-x-x); base darts can't.",
    "purple": "Some upgraded attacks can't pop Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Airforce Upgrades",
+    "effect": "Tier 3+ Aces and Helis get +1 pierce per shot.",
+    "cost": "Free"
+   },
+   {
+    "name": "Rapid Razors",
+    "effect": "Razor Rotors pop faster.",
+    "cost": "Free"
+   },
+   {
+    "name": "Charged Chinooks",
+    "effect": "Support Chinook drops give 25% more lives and cash.",
+    "cost": "500 MM"
+   },
+   {
+    "name": "Door Gunner",
+    "effect": "Towers carried by Special Poperations (tier 4 and below) keep attacking in transit.",
+    "cost": "1,000 MM"
+   }
+  ]
  },
  {
   "id": "mortar",
@@ -2872,7 +3168,25 @@
    ],
    "leadText": "Explosions pop Lead from the start, but not Black or Zebra until Heavy Shells (x-3-x) or Striker Jones.",
    "purple": "Burny Stuff fire skips Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Extra Burny Stuff",
+    "effect": "Burny Stuff ticks every second.",
+    "cost": "Free"
+   },
+   {
+    "name": "Paint Stripper",
+    "effect": "Shattering Shells strip Fortified from DDTs, a big help on rounds 99 and up.",
+    "cost": "250 MM",
+    "keyPick": true
+   },
+   {
+    "name": "Budget Battery",
+    "effect": "Artillery Battery costs $600 less.",
+    "cost": "500 MM"
+   }
+  ]
  },
  {
   "id": "dartling",
@@ -3099,7 +3413,24 @@
    ],
    "leadText": "Laser Cannon (3-x-x) or Hydra Rocket Pods (x-3-x); base darts can't.",
    "purple": "Laser Cannon and Plasma Accelerator can't pop Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Emergency Unlock",
+    "effect": "Ability that unlocks locked Dartlings and speeds their swivel (can interfere with hotkeys).",
+    "cost": "Free"
+   },
+   {
+    "name": "Gorgon Storm",
+    "effect": "Rocket Storm briefly stuns what it hits.",
+    "cost": "Free"
+   },
+   {
+    "name": "Cross the Streams",
+    "effect": "Crossing Plasma or Ray of Doom beams leave plasma pools, which can hit Camo.",
+    "cost": "250 MM"
+   }
+  ]
  },
  {
   "id": "wizard",
@@ -3321,7 +3652,29 @@
    ],
    "leadText": "Energy bolts pop Lead from the start.",
    "purple": "Can't pop Purple: base bolts are energy, Arcane Spike is plasma and the fire path is fire."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Lingering Magic",
+    "effect": "Longer projectile life for Wizards, Super Monkeys, Skywardens and Druids.",
+    "cost": "Free"
+   },
+   {
+    "name": "Magic Tricks",
+    "effect": "Guided Magic and Intense Magic cost $25 less.",
+    "cost": "Free"
+   },
+   {
+    "name": "Flame Jet",
+    "effect": "Dragon's Breath flames travel much faster.",
+    "cost": "Free"
+   },
+   {
+    "name": "Arcane Impale",
+    "effect": "Arcane Spike hits MOAB-class and Ceramics harder.",
+    "cost": "250 MM"
+   }
+  ]
  },
  {
   "id": "super",
@@ -3546,7 +3899,41 @@
    ],
    "leadText": "Plasma Blasts (2-x-x); base darts can't.",
    "purple": "Laser Blasts (1-x-x) and up can't pop Purple; Sun Avatar's 'Strike Down the False' lets it."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Lingering Magic",
+    "effect": "Longer projectile life for Wizards, Super Monkeys, Skywardens and Druids.",
+    "cost": "Free"
+   },
+   {
+    "name": "SUPER Range",
+    "effect": "Super Range gives even more range.",
+    "cost": "Free"
+   },
+   {
+    "name": "Heavy Knockback",
+    "effect": "Knockback pushes Bloons a bit harder.",
+    "cost": "Free"
+   },
+   {
+    "name": "Strike Down the False",
+    "effect": "Sun Avatar can pop Purple Bloons.",
+    "cost": "Free",
+    "keyPick": true
+   },
+   {
+    "name": "X-ray Ultra",
+    "effect": "Ultravision sees and fires through obstacles.",
+    "cost": "250 MM",
+    "keyPick": true
+   },
+   {
+    "name": "There Can Be Only One",
+    "effect": "A hidden effect for True Sun God; see the wiki page for what it does.",
+    "cost": "500 MM"
+   }
+  ]
  },
  {
   "id": "ninja",
@@ -3772,7 +4159,24 @@
    ],
    "leadText": "Flash Bomb (x-x-3); shurikens can't pop Lead.",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Cheaper Doubles",
+    "effect": "Double Shot costs $100 less.",
+    "cost": "Free"
+   },
+   {
+    "name": "Diversion Tactics",
+    "effect": "Distraction sends Bloons back more often.",
+    "cost": "Free"
+   },
+   {
+    "name": "Deadly Tranquility",
+    "effect": "Bloonjitsu and Grandmaster Ninja throw an extra shuriken.",
+    "cost": "500 MM"
+   }
+  ]
  },
  {
   "id": "alch",
@@ -3991,7 +4395,24 @@
    ],
    "leadText": "Acid pops Lead; Acidic Mixture Dip (2-x-x) lets other towers pop Lead.",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Speedy Brewing",
+    "effect": "Every potion reloads 5% faster.",
+    "cost": "Free"
+   },
+   {
+    "name": "Strong Tonic",
+    "effect": "Transforming Tonic lasts longer.",
+    "cost": "Free"
+   },
+   {
+    "name": "Acid Stability",
+    "effect": "Acid pools last 5 seconds longer (can steal Rubber to Gold income).",
+    "cost": "250 MM"
+   }
+  ]
  },
  {
   "id": "druid",
@@ -4210,7 +4631,34 @@
    ],
    "leadText": "Hard Thorns (1-x-x).",
    "purple": "Lightning can't damage Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Lingering Magic",
+    "effect": "Longer projectile life for Wizards, Super Monkeys, Skywardens and Druids.",
+    "cost": "Free"
+   },
+   {
+    "name": "Warm Oak",
+    "effect": "Heart of Oak costs $100 less.",
+    "cost": "Free"
+   },
+   {
+    "name": "Cold Front",
+    "effect": "Ball Lightning's extra bolts also freeze.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Vine Rupture",
+    "effect": "Spirit of the Forest gets an ability that bursts all track vines (not against Lead).",
+    "cost": "500 MM"
+   },
+   {
+    "name": "Tiny Tornadoes",
+    "effect": "Tornadoes split into 3 smaller ones when they end.",
+    "cost": "1,000 MM"
+   }
+  ]
  },
  {
   "id": "mermonkey",
@@ -4428,7 +4876,8 @@
    ],
    "leadText": "Riptide Champion (x-3-x).",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": []
  },
  {
   "id": "skywarden",
@@ -4638,7 +5087,14 @@
    ],
    "leadText": "Thundering Arc (x-2-x).",
    "purple": "Storm's Pulse (x-1-x) and Thundering Arc can't pop Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Lingering Magic",
+    "effect": "Longer projectile life for Wizards, Super Monkeys, Skywardens and Druids.",
+    "cost": "Free"
+   }
+  ]
  },
  {
   "id": "farm",
@@ -4854,7 +5310,45 @@
    "lead": null,
    "leadText": "Doesn't attack.",
    "purple": "Doesn't attack."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Flat Pack Buildings",
+    "effect": "Farms and Villages cost 2% less and sell for 2% more.",
+    "cost": "Free"
+   },
+   {
+    "name": "More Valuable Bananas",
+    "effect": "Valuable Bananas gives 30% more.",
+    "cost": "Free"
+   },
+   {
+    "name": "Bigger Banks",
+    "effect": "Monkey Banks hold $2,500 more.",
+    "cost": "Free"
+   },
+   {
+    "name": "Farm Subsidy",
+    "effect": "Your first Banana Farm each game costs $100 less.",
+    "cost": "Free"
+   },
+   {
+    "name": "Backroom Deals",
+    "effect": "IMF Loan gives $1,000 more and only 40% of income repays it.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Healthy Bananas",
+    "effect": "Marketplaces make 1 life per round, Central Markets 3.",
+    "cost": "500 MM",
+    "keyPick": true
+   },
+   {
+    "name": "Bank Deposits",
+    "effect": "Tier 4+ Monkey Banks accept deposits of your cash.",
+    "cost": "1,000 MM"
+   }
+  ]
  },
  {
   "id": "spike",
@@ -5081,7 +5575,30 @@
    ],
    "leadText": "White Hot Spikes (2-x-x).",
    "purple": "Spiked Mines' burn skips Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "One More Spike",
+    "effect": "Spike piles get +1 spike.",
+    "cost": "Free"
+   },
+   {
+    "name": "First Last Line of Defense",
+    "effect": "Your first Spike Factory each game costs $150 less.",
+    "cost": "Free"
+   },
+   {
+    "name": "Very Shreddy",
+    "effect": "MOAB SHREDR spikes deal +1 to MOAB-class.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Hi-Value Mines",
+    "effect": "Spiked Mines costs $1,500 less.",
+    "cost": "500 MM",
+    "keyPick": true
+   }
+  ]
  },
  {
   "id": "village",
@@ -5302,7 +5819,29 @@
    ],
    "leadText": "Monkey Intelligence Bureau (x-3-x) lets towers in range pop every Bloon type.",
    "purple": "MIB covers Purple too."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Flat Pack Buildings",
+    "effect": "Farms and Villages cost 2% less and sell for 2% more.",
+    "cost": "Free"
+   },
+   {
+    "name": "Insider Trades",
+    "effect": "Monkey Business discount is 2% bigger.",
+    "cost": "Free"
+   },
+   {
+    "name": "Inland Revenue Streams",
+    "effect": "Monkey Town's cash bonus is 10% higher.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "To ARMS!",
+    "effect": "Call to Arms lasts 3 seconds longer.",
+    "cost": "250 MM"
+   }
+  ]
  },
  {
   "id": "engi",
@@ -5530,7 +6069,24 @@
    ],
    "leadText": "Cleansing Foam (x-3-x).",
    "purple": "Pops Purple."
-  }
+  },
+  "knowledge": [
+   {
+    "name": "Vigilant Sentries",
+    "effect": "Sentries last longer.",
+    "cost": "Free"
+   },
+   {
+    "name": "Thicker Foams",
+    "effect": "Cleansing Foam hits 3 more Bloons.",
+    "cost": "250 MM"
+   },
+   {
+    "name": "Big Traps",
+    "effect": "Bloon Trap holds 30 more RBE.",
+    "cost": "500 MM"
+   }
+  ]
  },
  {
   "id": "beast",
@@ -5756,6 +6312,7 @@
    ],
    "leadText": "Adasaurus (x-2-x) or Horned Owl (x-x-2); the staff can't.",
    "purple": "The staff can't pop Purple."
-  }
+  },
+  "knowledge": []
  }
 ]

@@ -1,0 +1,224 @@
+{
+ "intro": "Starting points for the CHIMPS early game (rounds 6–40), based on the openings the wiki's CHIMPS strategy page recommends. Load one, then adjust it to your map and plan the rest.",
+ "templates": [
+  {
+   "id": "three-darts",
+   "name": "Three Darts, then Quincy",
+   "fits": "Most maps",
+   "description": "Three 0-0-0 Dart Monkeys (one on Strong) handle rounds 6–8 on most maps. Save for Quincy next, get Camo by round 24 and a MOAB Mauler for the round 40 MOAB.",
+   "mode": "chimps",
+   "entries": [
+    {
+     "tower": "dart",
+     "steps": [
+      {
+       "round": 6,
+       "path": "0-0-0"
+      },
+      {
+       "round": 17,
+       "path": "0-0-2"
+      }
+     ]
+    },
+    {
+     "tower": "dart",
+     "steps": [
+      {
+       "round": 6,
+       "path": "0-0-0"
+      }
+     ]
+    },
+    {
+     "tower": "dart",
+     "steps": [
+      {
+       "round": 6,
+       "path": "0-0-0"
+      }
+     ]
+    },
+    {
+     "tower": "quincy",
+     "steps": [
+      {
+       "round": 10,
+       "path": "0-0-0"
+      }
+     ]
+    },
+    {
+     "tower": "bomb",
+     "steps": [
+      {
+       "round": 27,
+       "path": "0-2-0"
+      },
+      {
+       "round": 34,
+       "path": "0-3-0"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    "wiki-chimps"
+   ]
+  },
+  {
+   "id": "dart-sub",
+   "name": "Dart + Sub (water maps)",
+   "fits": "Maps with water",
+   "description": "Dart on Strong chips the Greens while the Sub cleans up. Airburst Darts (2-0-2) is strong on almost every water map; a Berserker Brew on it and then Triple Guns carries the 30s and early 40s.",
+   "mode": "chimps",
+   "entries": [
+    {
+     "tower": "dart",
+     "steps": [
+      {
+       "round": 6,
+       "path": "0-0-0"
+      }
+     ]
+    },
+    {
+     "tower": "sub",
+     "steps": [
+      {
+       "round": 6,
+       "path": "0-0-0"
+      },
+      {
+       "round": 14,
+       "path": "0-0-2"
+      },
+      {
+       "round": 19,
+       "path": "2-0-2"
+      },
+      {
+       "round": 33,
+       "path": "2-0-3"
+      }
+     ]
+    },
+    {
+     "tower": "alch",
+     "steps": [
+      {
+       "round": 28,
+       "path": "3-0-0"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    "wiki-chimps"
+   ]
+  },
+  {
+   "id": "sauda-start",
+   "name": "Sauda start",
+   "fits": "Beginner and most Intermediate maps",
+   "description": "Sauda alone beats the first rounds and sees Camo from the start. Add a Spike Factory for leaks and Camo, then a MOAB Mauler before round 40.",
+   "mode": "chimps",
+   "entries": [
+    {
+     "tower": "sauda",
+     "steps": [
+      {
+       "round": 6,
+       "path": "0-0-0"
+      }
+     ]
+    },
+    {
+     "tower": "spike",
+     "steps": [
+      {
+       "round": 20,
+       "path": "0-0-0"
+      }
+     ]
+    },
+    {
+     "tower": "bomb",
+     "steps": [
+      {
+       "round": 28,
+       "path": "0-2-0"
+      },
+      {
+       "round": 35,
+       "path": "0-3-0"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    "wiki-chimps"
+   ]
+  },
+  {
+   "id": "dart-sniper",
+   "name": "Dart + Sniper",
+   "fits": "Maps where range is a problem",
+   "description": "The Sniper on Strong chips Greens while the Dart cleans up. Night Vision Goggles covers round 24 Camo and Full Metal Jacket pops the round 28 Leads.",
+   "mode": "chimps",
+   "entries": [
+    {
+     "tower": "dart",
+     "steps": [
+      {
+       "round": 6,
+       "path": "0-0-0"
+      }
+     ]
+    },
+    {
+     "tower": "sniper",
+     "steps": [
+      {
+       "round": 6,
+       "path": "0-0-0"
+      },
+      {
+       "round": 14,
+       "path": "0-1-0"
+      },
+      {
+       "round": 22,
+       "path": "1-1-0"
+      }
+     ]
+    },
+    {
+     "tower": "quincy",
+     "steps": [
+      {
+       "round": 16,
+       "path": "0-0-0"
+      }
+     ]
+    },
+    {
+     "tower": "bomb",
+     "steps": [
+      {
+       "round": 30,
+       "path": "0-2-0"
+      },
+      {
+       "round": 36,
+       "path": "0-3-0"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    "wiki-chimps"
+   ]
+  }
+ ]
+}

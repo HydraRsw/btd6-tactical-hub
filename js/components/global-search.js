@@ -88,9 +88,10 @@ function buildSearchIndex(hub) {
   }));
 
   const tools = [
-    { title: 'Build planner', subtitle: 'Plan a CHIMPS run round by round', keywords: 'planner chimps build cash afford', go: () => hub.openTab('planner') },
+    { title: 'Build planner', subtitle: 'Plan a CHIMPS run round by round', keywords: 'planner chimps build cash afford', go: () => hub.openTool('planner') },
     { title: 'Round browser', subtitle: 'Every round: bloons, RBE and cash', keywords: 'rounds rbe cash abr alternate', go: () => hub.openTab('rounds') },
-    { title: 'Paragon degree calculator', subtitle: 'Power and degree from what you absorb', keywords: 'paragon degree power calculator', go: () => hub.jumpTo('paragons', 'degree-calculator') },
+    { title: 'Paragon degree calculator', subtitle: 'Power and degree from what you absorb', keywords: 'paragon degree power calculator', go: () => hub.openTool('degree') },
+    { title: 'Compare towers and heroes', subtitle: 'Two units side by side', keywords: 'compare versus vs side by side', go: () => hub.openTool('compare') },
   ].map((tool) => ({ kind: 'Tool', ...tool }));
 
   return [...tools, ...towers, ...heroes, ...paragons, ...maps, ...modes, ...rounds, ...checkpoints, ...strategies];

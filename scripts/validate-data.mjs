@@ -244,6 +244,26 @@ if (roundsFile) {
   }
 }
 
+// Monkey Knowledge on towers, planner templates
+for (const tower of Array.isArray(towers) ? towers : []) {
+  if (!Array.isArray(tower.knowledge)) problems.push(`towers.json "${tower.id}": knowledge must be a list (can be empty)`);
+  for (const mk of tower.knowledge ?? []) if (!mk.name || !mk.effect || !mk.cost) problems.push(`towers.json "${tower.id}": each knowledge entry needs name, effect and cost`);
+}
+const templatesFile = load('templates');
+for (const t of templatesFile?.templates ?? []) {
+  const at = `templates.json "${t.id}"`;
+  if (!t.name || !t.description) problems.push(`${at}: needs a name and description`);
+  for (const entry of t.entries ?? []) {
+    if (!unitIds.has(entry.tower)) problems.push(`${at}: unknown tower/hero "${entry.tower}"`);
+    if (!Array.isArray(entry.steps) || !entry.steps.length) problems.push(`${at}: "${entry.tower}" needs at least one step`);
+    for (const step of entry.steps ?? []) {
+      if (!Number.isInteger(step.round)) problems.push(`${at}: "${entry.tower}" step round must be a whole number`);
+      if (!/^[0-5]-[0-5]-[0-5]$/.test(step.path ?? '')) problems.push(`${at}: "${entry.tower}" step path must look like 0-2-3`);
+    }
+  }
+  checkSourceIds(t.sources, at);
+}
+
 if (problems.length) {
   console.error(`✗ ${problems.length} problem(s) in /data:\n  - ${problems.join('\n  - ')}`);
   process.exit(1);
