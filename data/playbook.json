@@ -275,6 +275,14 @@
       "sources": [
         "wiki-blastapopoulos"
       ]
+    },
+    {
+      "name": "Diamondback",
+      "icon": "gem",
+      "note": "Multi-segment snake: the head cancels pierce, so hit it from the sides or behind where segments bunch up. Breaking the tail shield stuns it; skulls release Diamond Bloon waves, so keep fast or damage-over-time cleanup.",
+      "sources": [
+        "wiki-diamondback"
+      ]
     }
   ]
 }

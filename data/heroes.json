@@ -12,9 +12,10 @@
       "DPS"
     ],
     "confidence": "verified",
-    "summary": "Recommended as an early-game CHIMPS starter.",
+    "summary": "Recommended as an early-game CHIMPS starter. v57 gave him a Focus toggle at level 4 (more range and precise shots, slower attacks).",
     "sources": [
-      "wiki-chimps"
+      "wiki-chimps",
+      "steam-v57"
     ]
   },
   {
@@ -237,12 +238,13 @@
       "MOAB"
     ],
     "confidence": "verified",
-    "summary": "Support hero that buffs naval towers: pairs with Carrier Flagship, Pirate Lord, Destroyers and Subs.",
+    "summary": "Support hero that buffs naval towers: pairs with Carrier Flagship, Pirate Lord, Destroyers and Subs. v57 reworked her: weaker early Naval Tactics and Pistol, water towers get +1 pierce from level 4, shorter Mega Mine.",
     "sources": [
       "wiki-chimps",
       "wiki-lych",
       "wiki-phayze",
-      "wiki-dreadbloon"
+      "wiki-dreadbloon",
+      "steam-v57"
     ]
   },
   {

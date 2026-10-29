@@ -178,5 +178,17 @@
   "wiki-sauda": {
     "title": "Bloons wiki: Sauda",
     "url": "https://www.bloonswiki.com/Sauda_(BTD6)"
+  },
+  "steam-v57": {
+    "title": "Ninja Kiwi on Steam: v57.0 update notes (Oct 8, 2026)",
+    "url": "https://steamcommunity.com/app/960090/announcements/"
+  },
+  "ninjakiwi-x-v57": {
+    "title": "Ninja Kiwi on X: update 57 announcement",
+    "url": "https://x.com/ninjakiwigames/status/2106029995147612207"
+  },
+  "wiki-diamondback": {
+    "title": "Bloons wiki: Diamondback",
+    "url": "https://www.bloonswiki.com/Diamondback"
   }
 }
