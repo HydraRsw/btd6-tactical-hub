@@ -23,6 +23,7 @@ let patterns = [];
 const cache = new Map();
 const lastOutput = new WeakMap();
 let lang = 'en';
+let ready = false; // dictionary loaded (until then nothing is cached, so early calls don't stick in English)
 
 export function currentLang() {
   try {
@@ -46,7 +47,7 @@ export function setLang(next) {
 
 /** Translate one piece of text (English in, Spanish or English out). */
 export function t(text) {
-  if (lang === 'en' || text == null) return text;
+  if (lang === 'en' || !ready || text == null) return text;
   const source = String(text);
   const core = source.replace(/\s+/g, ' ').trim();
   if (!core || !/[A-Za-z]{2}/.test(core)) return source;
@@ -161,6 +162,8 @@ export async function startI18n() {
     const json = await response.json();
     exact = new Map(Object.entries(json.exact));
     patterns = json.patterns.map(([regex, replacement]) => [new RegExp(regex), replacement]);
+    cache.clear();
+    ready = true;
     document.title = t(document.title);
     translateTree(document.body);
     observe();
