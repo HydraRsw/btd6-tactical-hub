@@ -1,0 +1,187 @@
+{
+  "farmBuilds": [
+    {
+      "id": "brf",
+      "name": "4-2-0 Banana Research Facility",
+      "group": "Land",
+      "incomeRule": "brf",
+      "quantity": 2,
+      "cost": 27465,
+      "incomePerRound": 1950,
+      "sellbackPercent": 70,
+      "isEstimate": false,
+      "note": "5 crates × $390 (Valuable Bananas). Banana Central adds +25%."
+    },
+    {
+      "id": "bc",
+      "name": "5-2-0 Banana Central",
+      "group": "Land",
+      "incomeRule": "bc",
+      "quantity": 0,
+      "cost": 127465,
+      "incomePerRound": 7800,
+      "sellbackPercent": 70,
+      "isEstimate": true,
+      "note": "Estimate: 5 crates at Central value with Valuable Bananas; also buffs all BRFs +25%."
+    },
+    {
+      "id": "mkt3",
+      "name": "0-2-3 Marketplace",
+      "group": "Hands-off",
+      "incomeRule": "flat",
+      "quantity": 4,
+      "cost": 5350,
+      "incomePerRound": 416,
+      "sellbackPercent": 85,
+      "isEstimate": true,
+      "note": "16 auto packets/round. Banana Salvage + Marketplace bonus give boosted sellback."
+    },
+    {
+      "id": "mkt4",
+      "name": "0-2-4 Central Market",
+      "group": "Hands-off",
+      "incomeRule": "flat",
+      "quantity": 0,
+      "cost": 20350,
+      "incomePerRound": 1456,
+      "sellbackPercent": 85,
+      "isEstimate": true,
+      "note": "16 × $70 base ($1,120) before middle-path bonus; each CM also buffs Merchantmen +10%."
+    },
+    {
+      "id": "merch",
+      "name": "0-2-3 Merchantman",
+      "group": "Water",
+      "incomeRule": "merch",
+      "quantity": 6,
+      "cost": 3800,
+      "incomePerRound": 200,
+      "sellbackPercent": 70,
+      "isEstimate": true,
+      "note": "$200/round base (wiki). Middle crosspath adds Grape/Hot Shot defense."
+    },
+    {
+      "id": "fav",
+      "name": "0-2-4 Favored Trades",
+      "group": "Water",
+      "incomeRule": "fav",
+      "quantity": 0,
+      "cost": 9500,
+      "incomePerRound": 500,
+      "sellbackPercent": 70,
+      "isEstimate": true,
+      "note": "$500/round; boosts sellback of nearby towers. Prioritized by Trade Empire."
+    },
+    {
+      "id": "te",
+      "name": "0-0-5 Trade Empire",
+      "group": "Water",
+      "incomeRule": "te",
+      "quantity": 0,
+      "cost": 32000,
+      "incomePerRound": 800,
+      "sellbackPercent": 70,
+      "isEstimate": true,
+      "note": "$800/round itself + buffs up to 20 boats. Worth it from ~16 Merchantmen."
+    },
+    {
+      "id": "bank",
+      "name": "2-3-0 Monkey Bank",
+      "group": "Active",
+      "incomeRule": "flat",
+      "quantity": 0,
+      "cost": 7200,
+      "incomePerRound": 450,
+      "sellbackPercent": 70,
+      "isEstimate": true,
+      "note": "Effective $/rd incl. interest — must be collected manually. Upgrade to IMF for loans."
+    }
+  ],
+  "strategies": [
+    {
+      "icon": "tractor",
+      "title": "Land Meta",
+      "tag": "Max raw cash",
+      "color": "amber",
+      "points": [
+        "Core: 4-2-0 BRF spam once you can afford ~$27k each; they out-earn Marketplaces per farm slot.",
+        "Add one 5-2-0 Banana Central when you own 6+ BRFs — the +25% crate buff pays for itself fast.",
+        "Rotate an Overclock (Engineer 0-4-0) onto a BRF to boost its production; Ultraboost for permanent gains.",
+        "Use Marketplaces as a stepping stone and sell them into BRF upgrades."
+      ]
+    },
+    {
+      "icon": "hand-coins",
+      "title": "Hands-off",
+      "tag": "Zero collection",
+      "color": "emerald",
+      "points": [
+        "0-2-3 / 0-2-4 Marketplaces auto-collect every packet — no tapping, no missed bananas.",
+        "Boosted sellback (default ~85% in the calculator — confirm on your patch) means you lose little when you liquidate before a boss tier.",
+        "Central Markets also give every Merchantman +10% (stacks 10×), bridging into the water meta.",
+        "Healthy Bananas MK: Marketplaces/Central Markets generate lives — useful vs. Lych."
+      ]
+    },
+    {
+      "icon": "ship",
+      "title": "Water Meta",
+      "tag": "Best scaling on water maps",
+      "color": "sky",
+      "points": [
+        "Spam 0-2-3 Merchantmen (cheap, discountable with Monkey Commerce) — $200/rd each.",
+        "At ~16 boats, buy 0-0-5 Trade Empire: +$10 per Merchantman / +$20 per Favored Trades to up to 20 boats, plus damage.",
+        "Upgrade to 0-2-4 Favored Trades once 20 Merchantmen exist; 10 Central Markets double Merchantman income.",
+        "0-0-4 Monkey City villages near the fleet stack discounts and cash bonuses before Monkeyopolis."
+      ]
+    },
+    {
+      "icon": "zap",
+      "title": "Active Tricks",
+      "tag": "High APM value",
+      "color": "rose",
+      "points": [
+        "2-4-0 IMF Loan: take the loan right before a big buy, repay automatically from income — ideal before a boss tier spike.",
+        "Cycle: Loan → buy DPS → bank refills → collect at cap → loan again when off cooldown.",
+        "Monkeyopolis (0-0-5 Village) absorbs farms in its radius and converts their value into crates — space farms inside the circle before buying it.",
+        "Sacrificing expensive 4-x-x farms gives the best absorption value per farm."
+      ]
+    }
+  ],
+  "bossCheckpoints": [
+    {
+      "round": 40,
+      "bossTier": "Tier 1",
+      "cashTarget": "$15k–25k banked or ~$4k/rd eco",
+      "defense": "Camo + lead coverage, one MOAB answer (Bomb 2-3-0/Sniper 2-0-2), Ice Embrittlement if affordable.",
+      "economy": "Keep farming; buy first BRF or 4–6 Marketplaces."
+    },
+    {
+      "round": 60,
+      "bossTier": "Tier 2",
+      "cashTarget": "$40k–60k or ~$10k/rd eco",
+      "defense": "Main single-target carry at T4 (Sniper 4-0-2 / Sub 2-0-4), Alch 4-0-1, Village MIB.",
+      "economy": "Transition Marketplaces → BRFs; Trade Empire on water."
+    },
+    {
+      "round": 80,
+      "bossTier": "Tier 3",
+      "cashTarget": "$100k–150k or ~$20k/rd eco",
+      "defense": "First T5 damage (Super Brittle, MOAB Eliminator or Sun Temple), Overclock rotation.",
+      "economy": "Banana Central; consider selling some eco before the boss spawns."
+    },
+    {
+      "round": 100,
+      "bossTier": "Tier 4",
+      "cashTarget": "$250k+",
+      "defense": "2+ T5 carries, full buff stack (Alch, Village 2-3-0/2-4-0, Ice debuff), Geraldo items.",
+      "economy": "Liquidate low-ROI farms before spawn; keep BRFs only if the boss can be stalled."
+    },
+    {
+      "round": 120,
+      "bossTier": "Tier 5",
+      "cashTarget": "$500k+ / Paragon-ready",
+      "defense": "Paragon or several T5s + Monkey Knowledge/Powers as allowed by the event.",
+      "economy": "Sell remaining eco into damage at the end of R119."
+    }
+  ]
+}

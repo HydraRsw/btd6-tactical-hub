@@ -1,0 +1,315 @@
+/* ==========================================================================
+   Components — reusable building blocks used across every tab.
+   Panels, buttons, badges, avatars, upgrade pips, pills and form fields.
+   ========================================================================== */
+
+/* Icons are <span x-icon="name"> wrappers around an <svg> */
+[x-icon] { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+/* --- Panels ----------------------------------------------------------- */
+.panel {
+  background: linear-gradient(180deg, var(--panel-light) 0%, var(--panel) 40%, var(--panel-dark) 100%);
+  border: 2px solid var(--outline);
+  border-radius: var(--radius);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.18),
+    0 6px 0 rgba(4, 18, 40, 0.55),
+    0 14px 28px -10px rgba(0, 0, 0, 0.5);
+}
+
+.panel--padded { padding: 16px; }
+
+.panel__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.panel__title svg { color: var(--gold); width: 20px; height: 20px; }
+
+.well {
+  background: var(--well);
+  border: 2px solid rgba(4, 18, 40, 0.7);
+  border-radius: 12px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: rgba(20, 70, 135, 0.72);
+  border: 2px solid var(--outline);
+  border-radius: 14px;
+}
+
+.note svg { color: var(--gold); flex-shrink: 0; width: 16px; height: 16px; margin-top: 2px; }
+
+/* --- Buttons ---------------------------------------------------------- */
+.button {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.button:hover { filter: brightness(1.08); }
+.button:active { transform: translateY(2px); }
+.button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.button svg { width: 16px; height: 16px; }
+
+.button--gold {
+  color: #3a2200;
+  background: linear-gradient(180deg, #fff08a 0%, var(--gold) 45%, var(--gold-dark) 100%);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.6), 0 4px 0 var(--gold-edge);
+}
+
+.button--blue {
+  color: #fff;
+  background: linear-gradient(180deg, #5fb6ff 0%, #2f8ae6 50%, #1d5fb0 100%);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.35), 0 4px 0 var(--outline);
+}
+
+.button--quiet {
+  color: var(--text-muted);
+  background: rgba(6, 26, 56, 0.45);
+  border-color: rgba(4, 18, 40, 0.8);
+}
+
+.button--small { padding: 5px 10px; font-size: 0.75rem; }
+
+/* light sweep across gold buttons */
+.button--gold::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  animation: shine 4.5s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0%, 70% { left: -60%; }
+  100% { left: 140%; }
+}
+
+/* --- Tier badge (S A B C D) ------------------------------------------- */
+.tier-badge {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  font-family: var(--font-game);
+  font-size: 1.5rem;
+  color: #fff;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  -webkit-text-stroke: 1.2px var(--ink);
+  paint-order: stroke fill;
+  text-shadow: 0 2px 0 var(--ink);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.45), 0 3px 0 var(--ink);
+}
+
+.tier-badge--small { width: 30px; height: 30px; font-size: 1.05rem; border-radius: 8px; }
+
+.tier-badge[data-tier="S"] { background: linear-gradient(180deg, #ff8f8f, var(--tier-s)); box-shadow: inset 0 2px 0 rgba(255,255,255,.45), 0 3px 0 var(--ink), 0 0 16px rgba(255, 71, 71, 0.5); }
+.tier-badge[data-tier="A"] { background: linear-gradient(180deg, #ffc07a, var(--tier-a)); }
+.tier-badge[data-tier="B"] { background: linear-gradient(180deg, #fff08a, var(--tier-b)); }
+.tier-badge[data-tier="C"] { background: linear-gradient(180deg, #b5f26a, var(--tier-c)); }
+.tier-badge[data-tier="D"] { background: linear-gradient(180deg, #8fdcff, var(--tier-d)); }
+
+/* --- Avatar (tower / hero badge) -------------------------------------- */
+.avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border: 2.5px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.4), inset 0 -4px 0 rgba(0, 0, 0, 0.25), 0 3px 0 var(--ink);
+}
+
+.avatar::before {             /* glossy highlight */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.55), transparent 45%);
+}
+
+.avatar svg { position: relative; width: 28px; height: 28px; color: #fff; filter: drop-shadow(0 2px 0 rgba(10, 28, 56, 0.9)); }
+.avatar__initials { position: relative; font-family: var(--font-game); font-size: 1.15rem; -webkit-text-stroke: 1px var(--ink); paint-order: stroke fill; text-shadow: 0 2px 0 var(--ink); }
+.avatar__image { position: absolute; inset: 2px; width: calc(100% - 4px); height: calc(100% - 4px); object-fit: contain; z-index: 1; filter: drop-shadow(0 2px 0 rgba(10, 28, 56, 0.85)); }
+
+.avatar--small { width: 36px; height: 36px; border-radius: 10px; }
+.avatar--small svg { width: 18px; height: 18px; }
+.avatar--small .avatar__initials { font-size: 0.85rem; }
+.avatar--large { width: 64px; height: 64px; }
+.avatar--large svg { width: 32px; height: 32px; }
+.avatar--s-tier { outline: 3px solid var(--gold); outline-offset: 1px; }
+
+.avatar[data-category="Primary"]  { background: linear-gradient(160deg, #7fd0ff, #1f86e0); }
+.avatar[data-category="Military"] { background: linear-gradient(160deg, #b9ef6c, #3f9a10); }
+.avatar[data-category="Magic"]    { background: linear-gradient(160deg, #d3a8ff, #7a3fe0); }
+.avatar[data-category="Support"]  { background: linear-gradient(160deg, #ffe27a, #f08c00); }
+.avatar[data-category="Heroes"]   { background: linear-gradient(160deg, #ffa3cf, #e0306f); }
+.avatar[data-category="Boss"]     { background: linear-gradient(160deg, #ff8f8f, #b81e4a); }
+
+/* --- Upgrade pips: 3 paths × 5 tiers, like the in-game upgrade panel --- */
+.upgrade-pips { display: grid; gap: 3px; flex-shrink: 0; }
+.upgrade-pips__row { display: flex; gap: 3px; }
+
+.pip {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  background: rgba(6, 26, 56, 0.65);
+  border: 1.5px solid rgba(4, 18, 40, 0.9);
+}
+
+.pip--bought { background: linear-gradient(180deg, #9df25c, #4fb312); border-color: #1f5200; }
+.pip--tier5  { background: linear-gradient(180deg, #fff08a, #ffb800); border-color: var(--gold-edge); box-shadow: 0 0 8px rgba(255, 210, 63, 0.9); }
+.pip--unknown { background: repeating-linear-gradient(45deg, rgba(95, 182, 255, 0.35) 0 3px, transparent 3px 6px); }
+
+/* --- Pills (small labels) --------------------------------------------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 9px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.4;
+  white-space: nowrap;
+  border: 1.5px solid rgba(4, 18, 40, 0.8);
+  border-radius: 999px;
+  background: var(--well);
+  color: var(--text-muted);
+}
+
+.pill svg { width: 12px; height: 12px; }
+.pill--route  { background: rgba(255, 210, 63, 0.18); color: #ffe98f; font-variant-numeric: tabular-nums; }
+.pill--good   { background: rgba(122, 212, 32, 0.25); color: #c8f59a; }
+.pill--warn   { background: rgba(255, 210, 63, 0.2); color: #ffe98f; }
+.pill--danger { background: rgba(255, 91, 91, 0.28); color: #ffc2c2; }
+.pill--hero   { background: rgba(255, 111, 181, 0.2); color: #ffc2df; }
+
+.pill[data-role="DPS"]     { background: rgba(255, 91, 91, 0.2);  color: #ffb3b3; }
+.pill[data-role="Stall"]   { background: rgba(67, 198, 255, 0.18); color: #a9e6ff; }
+.pill[data-role="Buff"]    { background: rgba(167, 123, 255, 0.2); color: #dcc8ff; }
+.pill[data-role="Cleanup"] { background: rgba(122, 212, 32, 0.2);  color: #c8f59a; }
+.pill[data-role="MOAB"]    { background: rgba(255, 155, 61, 0.2);  color: #ffd2a6; }
+.pill[data-role="Income"]  { background: rgba(255, 210, 63, 0.2);  color: #ffe98f; }
+
+.pill-list { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+
+/* confidence dot next to a route */
+.confidence-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.confidence-dot[data-confidence="verified"]    { background: var(--green); }
+.confidence-dot[data-confidence="approximate"] { background: var(--gold); }
+.confidence-dot[data-confidence="new"]         { background: var(--cyan); }
+
+/* --- Form fields ------------------------------------------------------ */
+.field {
+  width: 100%;
+  padding: 8px 10px;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: rgba(6, 26, 56, 0.6);
+  border: 2px solid rgba(4, 18, 40, 0.85);
+  border-radius: var(--radius-sm);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.field::placeholder { color: var(--text-dim); }
+.field:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(255, 210, 63, 0.3); }
+.field--estimate { border-color: rgba(255, 210, 63, 0.6); }
+.field--number { width: 5.5rem; text-align: right; padding: 4px 6px; }
+.field--tiny { width: 3.5rem; }
+
+.field-with-icon { position: relative; }
+.field-with-icon > [x-icon] { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-dim); pointer-events: none; }
+.field-with-icon > [x-icon] svg { width: 16px; height: 16px; }
+.field-with-icon > .field { padding-left: 34px; }
+
+.label { display: grid; gap: 4px; font-size: 0.75rem; color: var(--text-muted); }
+
+/* Game-style checkbox */
+.checkbox {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: rgba(6, 26, 56, 0.6);
+  cursor: pointer;
+}
+
+.checkbox:checked { background: linear-gradient(180deg, #9df25c, #4fb312); }
+.checkbox:checked::after { content: '✓'; color: #103400; font-size: 13px; font-weight: 900; line-height: 1; }
+.checkbox:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+/* Checkbox list (sidebar filters, calculator modifiers) */
+.option-list { overflow: hidden; }
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 14px;
+  font-weight: 800;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid rgba(4, 18, 40, 0.45);
+  transition: background 0.12s, color 0.12s;
+}
+
+.option:last-child { border-bottom: 0; }
+.option:hover { background: rgba(255, 255, 255, 0.06); color: #fff; }
+.option--on { color: #fff; }
+.option__label { display: flex; align-items: center; gap: 8px; }
+.option__label svg { width: 16px; height: 16px; }
+.option small { color: var(--text-dim); font-weight: 700; }
+
+/* --- Animation helpers ------------------------------------------------ */
+.rise-in { animation: rise-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+@keyframes rise-in {
+  from { opacity: 0.001; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.flash { animation: flash 1.6s ease; }
+
+@keyframes flash {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 210, 63, 0); }
+  25%      { box-shadow: 0 0 0 5px rgba(255, 210, 63, 0.9); }
+}

@@ -1,0 +1,267 @@
+[
+  {
+    "id": "quincy",
+    "name": "Quincy",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "B",
+      "boss": "C"
+    },
+    "bestRoute": "Lv 10",
+    "roles": [
+      "DPS"
+    ],
+    "confidence": "verified",
+    "summary": "Cheap and consistent early game; falls off past R80."
+  },
+  {
+    "id": "gwen",
+    "name": "Gwendolin",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "B",
+      "boss": "C"
+    },
+    "bestRoute": "Lv 10",
+    "roles": [
+      "Cleanup",
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Fire damage pops leads early; Heat It Up buffs nearby towers."
+  },
+  {
+    "id": "striker",
+    "name": "Striker Jones",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Buffs bombs/mortars and black-bloon handling; Artillery Command resets cooldowns."
+  },
+  {
+    "id": "obyn",
+    "name": "Obyn Greenfoot",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "B"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "Buff",
+      "Stall"
+    ],
+    "confidence": "verified",
+    "summary": "Magic tower buff + Wall of Trees; Ocean Obyn for water comps."
+  },
+  {
+    "id": "rosalia",
+    "name": "Rosalia",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "B",
+      "boss": "B"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "DPS"
+    ],
+    "confidence": "approximate",
+    "summary": "Flexible ranged DPS with movement; mid-tier pick."
+  },
+  {
+    "id": "churchill",
+    "name": "Captain Churchill",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "DPS",
+      "MOAB"
+    ],
+    "confidence": "verified",
+    "summary": "Tank shell DPS and MOAB Barrage; expensive but powerful."
+  },
+  {
+    "id": "ben",
+    "name": "Benjamin",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "C",
+      "boss": "S"
+    },
+    "bestRoute": "Lv 10+",
+    "roles": [
+      "Income",
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Cash per round + Bank Hack / Syphon Funding. Income disabled in CHIMPS; a boss-event econ king."
+  },
+  {
+    "id": "pat",
+    "name": "Pat Fusty",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "B",
+      "boss": "B"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "Stall"
+    ],
+    "confidence": "verified",
+    "summary": "Big Squeeze grabs blimps; Rallying Roar buffs nearby. Bosses immune to squeeze."
+  },
+  {
+    "id": "ezili",
+    "name": "Ezili",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "DPS",
+      "MOAB"
+    ],
+    "confidence": "verified",
+    "summary": "Percentage-style MOAB hex damage; Heartstopper stops healing/regen bosses."
+  },
+  {
+    "id": "adora",
+    "name": "Adora",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "DPS"
+    ],
+    "confidence": "verified",
+    "summary": "Sacrifice towers to power her up; Blood Sacrifice + Ball of Light."
+  },
+  {
+    "id": "etienne",
+    "name": "Etienne",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "Lv 10",
+    "roles": [
+      "Buff"
+    ],
+    "confidence": "verified",
+    "summary": "Global camo detection (UAV) and drone DPS — removes camo worries for R78/R95."
+  },
+  {
+    "id": "sauda",
+    "name": "Sauda",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "S",
+      "boss": "B"
+    },
+    "bestRoute": "Lv 11",
+    "roles": [
+      "DPS",
+      "Cleanup"
+    ],
+    "confidence": "verified",
+    "summary": "Shreds non-MOAB bloons and carries R1–R60 nearly alone. Weak vs. MOAB-class."
+  },
+  {
+    "id": "brickell",
+    "name": "Admiral Brickell",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "Lv 10",
+    "roles": [
+      "Buff",
+      "MOAB"
+    ],
+    "confidence": "verified",
+    "summary": "Naval Tactics attack-speed buff for water towers; Mega Mine for MOAB-class."
+  },
+  {
+    "id": "psi",
+    "name": "Psi",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "DPS",
+      "MOAB"
+    ],
+    "confidence": "approximate",
+    "summary": "Psychic blasts lock and destroy bloons; Psionic Scream for MOAB waves. Check boss immunities."
+  },
+  {
+    "id": "geraldo",
+    "name": "Geraldo",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "S",
+      "boss": "S"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "Buff",
+      "Stall"
+    ],
+    "confidence": "verified",
+    "summary": "Shop items: Sharpening Stone, Creepy Idol, Jar of Pickles, Genie Bottle, Fertilizer, Paragon Totem."
+  },
+  {
+    "id": "corvus",
+    "name": "Corvus",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "A"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "DPS"
+    ],
+    "confidence": "approximate",
+    "summary": "Mana-based spellbook with very high late-game ceiling; micro-intensive."
+  },
+  {
+    "id": "silas",
+    "name": "Silas",
+    "category": "Heroes",
+    "tiers": {
+      "chimps": "A",
+      "boss": "B"
+    },
+    "bestRoute": "Lv 20",
+    "roles": [
+      "Buff",
+      "Stall"
+    ],
+    "confidence": "approximate",
+    "summary": "Ice Shaper (v50). Synergizes with Ice Monkeys; strong freeze control."
+  }
+]

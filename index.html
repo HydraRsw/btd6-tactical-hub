@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BTD6 Tactical Hub</title>
+  <meta name="description" content="Unofficial BTD6 fan hub: tier lists, crosspath guide, farming calculator and CHIMPS/boss playbooks.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎈</text></svg>">
+
+  <!-- Fonts: Luckiest Guy for BTD6-style headings, Nunito for everything else -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@600;700;800;900&display=swap">
+
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Libraries (no build step). Order matters: our module first, Alpine last. -->
+  <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <div class="balloons" id="balloons" aria-hidden="true"></div>
+
+  <!-- ===================================================================
+       HEADER: logo, search, tabs
+       =================================================================== -->
+  <header class="site-header" x-data>
+    <div class="container site-header__top">
+      <a class="brand" href="#tier">
+        <div class="avatar avatar--small" data-category="Support" aria-hidden="true"><span x-icon="target"></span></div>
+        <div>
+          <div class="game-title brand__name">BTD6 <span class="highlight">Tactical Hub</span></div>
+          <div class="brand__patch" x-text="$store.hub.meta.patch ? `Patch v${$store.hub.meta.patch} · updated ${$store.hub.meta.updated}` : 'Loading patch data…'"></div>
+        </div>
+      </a>
+
+      <div class="site-search" x-data="globalSearch" @click.outside="close()">
+        <div class="field-with-icon">
+          <span x-icon="search"></span>
+          <input id="site-search-input" x-ref="input" class="field" type="search" autocomplete="off"
+                 placeholder="Search towers, heroes, rounds…  ( / )"
+                 x-model="query" @input="onType()" @focus="onType()"
+                 @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)"
+                 @keydown.enter.prevent="choose()" @keydown.escape="close(); $el.blur()">
+        </div>
+
+        <div class="panel search-results" x-show="isOpen" x-cloak>
+          <template x-for="(result, i) in results" :key="result.title">
+            <button class="search-result" :class="{ 'search-result--selected': i === selected }"
+                    @mouseenter="selected = i" @mousedown.prevent="choose(result)">
+              <template x-if="result.unit"><div x-avatar.small="result.unit"></div></template>
+              <template x-if="!result.unit">
+                <div class="avatar avatar--small" :style="`background:${KIND_STYLES[result.kind].color}`"><span x-icon="KIND_STYLES[result.kind].icon"></span></div>
+              </template>
+              <span class="search-result__text">
+                <span class="search-result__title" x-text="result.title"></span>
+                <span class="search-result__subtitle" x-text="result.subtitle"></span>
+              </span>
+              <span class="pill" :style="`color:${KIND_STYLES[result.kind].color}`" x-text="result.kind"></span>
+            </button>
+          </template>
+          <p class="muted" style="padding:8px 10px" x-show="results.length === 0">No matches.</p>
+        </div>
+      </div>
+
+      <div class="site-header__actions">
+        <a class="button button--gold" href="#chimps"><span x-icon="skull"></span>CHIMPS Check</a>
+      </div>
+    </div>
+
+    <nav class="container tabs" role="tablist" aria-label="Sections">
+      <template x-for="tab in [
+          { id: 'tier',   label: 'Tier List',        icon: 'layers' },
+          { id: 'cross',  label: 'Crosspath Guide',  icon: 'git-branch' },
+          { id: 'farm',   label: 'Farming Engine',   icon: 'banana' },
+          { id: 'chimps', label: 'CHIMPS & Bosses',  icon: 'skull' } ]" :key="tab.id">
+        <button class="tab" role="tab" :class="{ 'tab--active': $store.hub.activeTab === tab.id }"
+                :aria-selected="$store.hub.activeTab === tab.id" @click="$store.hub.openTab(tab.id)">
+          <span x-icon="tab.icon"></span><span x-text="tab.label"></span>
+        </button>
+      </template>
+    </nav>
+  </header>
+
+  <main class="container" x-data>
+    <!-- Loading and error states -->
+    <div class="panel panel--padded" x-show="$store.hub.status === 'loading'">
+      <p class="game-title game-title--small">Loading the latest patch data…</p>
+    </div>
+    <div class="panel panel--padded" x-show="$store.hub.status === 'error'" x-cloak>
+      <p class="game-title game-title--small">Couldn't load the game data</p>
+      <p class="muted" x-text="$store.hub.errorMessage"></p>
+      <p class="dim">If you opened index.html straight from your disk, run a local server instead (see README).</p>
+    </div>
+
+    <template x-if="$store.hub.status === 'ready'">
+      <div>
+        <!-- "Updated for vXX" banner, shown once to returning visitors -->
+        <div class="panel update-banner" x-show="$store.hub.showPatchBanner" x-cloak>
+          <div class="avatar avatar--small" data-category="Support"><span x-icon="sparkles"></span></div>
+          <div style="flex:1">
+            <p class="game-title game-title--small">Updated for <span class="highlight" x-text="`v${$store.hub.meta.patch}`"></span></p>
+            <ul><template x-for="change in $store.hub.meta.changes"><li x-text="change"></li></template></ul>
+          </div>
+          <button class="button button--quiet button--small" @click="$store.hub.showPatchBanner = false" aria-label="Dismiss"><span x-icon="x"></span></button>
+        </div>
+
+        <!-- =============================================================
+             TAB 1 · TIER LIST
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'tier'" x-data="tierList" class="tier-layout">
+          <aside class="tier-sidebar stack">
+            <div class="panel">
+              <h3 class="game-title game-title--small sidebar-heading">Game Mode</h3>
+              <div class="mode-switch">
+                <button class="button button--small" :class="mode === 'chimps' ? 'button--gold' : 'button--quiet'" @click="setMode('chimps')">CHIMPS</button>
+                <button class="button button--small" :class="mode === 'boss' ? 'button--gold' : 'button--quiet'" @click="setMode('boss')">Boss Events</button>
+              </div>
+            </div>
+
+            <div class="panel option-list">
+              <h3 class="game-title game-title--small sidebar-heading">Class</h3>
+              <template x-for="category in CATEGORIES" :key="category">
+                <label class="option" :class="{ 'option--on': categories.includes(category) }">
+                  <span class="option__label"><span x-icon="CATEGORY_ICONS[category]"></span><span x-text="category"></span></span>
+                  <input type="checkbox" class="checkbox" :checked="categories.includes(category)" @change="toggle('categories', category)">
+                </label>
+              </template>
+            </div>
+
+            <div class="panel option-list">
+              <h3 class="game-title game-title--small sidebar-heading">Role</h3>
+              <template x-for="role in ROLES" :key="role">
+                <label class="option" :class="{ 'option--on': roles.includes(role) }">
+                  <span class="pill" :data-role="role" x-text="role"></span>
+                  <input type="checkbox" class="checkbox" :checked="roles.includes(role)" @change="toggle('roles', role)">
+                </label>
+              </template>
+            </div>
+
+            <div class="note legend">
+              <span class="legend__item"><span class="pip pip--bought"></span>Upgrade tier bought</span>
+              <span class="legend__item"><span class="pip pip--tier5"></span>Tier 5</span>
+              <span class="legend__item"><span class="pip pip--unknown"></span>Route still settling</span>
+            </div>
+          </aside>
+
+          <div class="stack stack--tight" style="min-width:0">
+            <div class="section-head">
+              <h2 class="game-title">Meta <span class="highlight">Tier List</span></h2>
+              <div class="section-head__tools">
+                <select class="field" style="width:auto" x-model="sortBy" aria-label="Sort">
+                  <option value="tier">Sort: Tier</option>
+                  <option value="name">Sort: Name</option>
+                  <option value="category">Sort: Class</option>
+                </select>
+                <div class="field-with-icon" style="width:180px">
+                  <span x-icon="filter"></span>
+                  <input class="field" type="search" placeholder="Filter…" x-model="query">
+                </div>
+              </div>
+            </div>
+
+            <p class="note"><span x-icon="info"></span><span x-text="modeNote"></span></p>
+
+            <div class="list-columns">
+              <span>Tier</span><span>Tower · best route</span><span>Upgrades</span><span>CHIMPS</span><span>Bosses</span><span></span>
+            </div>
+
+            <template x-for="group in groups" :key="group.tier ?? 'all'">
+              <div class="stack stack--tight">
+                <template x-if="group.tier">
+                  <div class="tier-group-heading">
+                    <span class="tier-badge tier-badge--small" :data-tier="group.tier" x-text="group.tier"></span>
+                    <span class="game-title" x-text="`${group.tier} Tier`"></span>
+                    <span class="tier-group-heading__line" :style="`background:linear-gradient(90deg, ${TIER_COLORS[group.tier]}, transparent)`"></span>
+                  </div>
+                </template>
+
+                <template x-for="unit in group.units" :key="unit.id">
+                  <article class="tier-row rise-in" :id="`tier-${unit.id}`"
+                           :class="{ 'tier-row--open': $store.hub.isOpen(unit.id) }"
+                           :style="`--stripe:${TIER_COLORS[tierOf(unit)]}`">
+                    <button class="tier-row__summary" @click="$store.hub.toggleOpen(unit.id)" :aria-expanded="$store.hub.isOpen(unit.id)">
+                      <span class="tier-badge" :data-tier="tierOf(unit)" x-text="tierOf(unit)"></span>
+
+                      <div class="tier-row__identity">
+                        <div x-avatar="{ ...unit, tier: tierOf(unit) }"></div>
+                        <div style="min-width:0">
+                          <div class="game-title game-title--small tier-row__name" x-text="unit.name"></div>
+                          <div class="pill-list">
+                            <span class="pill pill--route" x-text="unit.bestRoute"></span>
+                            <template x-for="role in unit.roles"><span class="pill" :data-role="role" x-text="role"></span></template>
+                            <span class="confidence-dot" :data-confidence="unit.confidence" :title="unit.confidence"></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="tier-row__pips">
+                        <template x-if="unit.category === 'Heroes'"><span class="pill pill--hero"><span x-icon="star"></span>Hero</span></template>
+                        <template x-if="unit.category !== 'Heroes'"><div x-pips="unit.bestRoute"></div></template>
+                      </div>
+                      <div class="tier-score"><span class="tier-badge tier-badge--small" :data-tier="unit.tiers.chimps" x-text="unit.tiers.chimps"></span>CHIMPS</div>
+                      <div class="tier-score"><span class="tier-badge tier-badge--small" :data-tier="unit.tiers.boss" x-text="unit.tiers.boss"></span>BOSS</div>
+                      <span class="tier-row__chevron" x-icon="chevron-down"></span>
+                    </button>
+
+                    <div class="tier-row__details" x-show="$store.hub.isOpen(unit.id)">
+                      <p x-text="unit.summary"></p>
+                      <div class="route-grid" x-show="unit.routes">
+                        <template x-for="route in unit.routes ?? []" :key="route.path + route.name">
+                          <div class="well route-card" :class="`route-card--${route.kind}`">
+                            <div x-pips="route.path"></div>
+                            <div class="route-card__body">
+                              <div class="route-card__top">
+                                <span class="game-title game-title--small route-card__path" x-text="route.path"></span>
+                                <span class="pill push-right" :class="route.kind === 'optimal' ? 'pill--good' : 'pill--warn'" x-text="route.kind === 'optimal' ? 'Optimal' : 'Situational'"></span>
+                              </div>
+                              <div class="route-card__name" x-text="route.name"></div>
+                              <p class="route-card__note" x-text="route.note"></p>
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                  </article>
+                </template>
+              </div>
+            </template>
+
+            <div class="panel panel--padded muted" x-show="visibleUnits.length === 0">Nothing matches these filters.</div>
+          </div>
+        </section>
+
+        <!-- =============================================================
+             TAB 2 · CROSSPATH GUIDE
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'cross'" x-cloak x-data="crosspathGuide" class="stack">
+          <div class="section-head">
+            <div>
+              <h2 class="game-title">Crosspath <span class="highlight">Compendium</span></h2>
+              <p>Routes are written <strong>Top-Middle-Bottom</strong>. Green is the default route, gold is a situational alternative.</p>
+            </div>
+            <div class="section-head__tools field-with-icon" style="width:min(100%, 300px)">
+              <span x-icon="filter"></span>
+              <input class="field" type="search" placeholder="Filter (camo, MOAB, 0-2-5…)" x-model="query">
+            </div>
+          </div>
+
+          <div class="row-wrap">
+            <template x-for="category in TOWER_CATEGORIES" :key="category">
+              <button class="button button--small" :class="categories.includes(category) ? 'button--blue' : 'button--quiet'" @click="toggleCategory(category)">
+                <span x-icon="CATEGORY_ICONS[category]"></span><span x-text="category"></span>
+              </button>
+            </template>
+          </div>
+
+          <div class="card-grid">
+            <template x-for="tower in visibleTowers" :key="tower.id">
+              <article class="panel tower-card rise-in" :id="`cross-${tower.id}`">
+                <header class="tower-card__head">
+                  <div x-avatar.large="{ ...tower, tier: tower.tiers.chimps }"></div>
+                  <div style="min-width:0">
+                    <h3 class="game-title game-title--small" x-text="tower.name"></h3>
+                    <div class="tower-card__meta">
+                      <span x-icon="CATEGORY_ICONS[tower.category]"></span><span x-text="tower.category"></span>
+                      <span class="confidence-dot" :data-confidence="tower.confidence"></span>
+                      <span x-text="CONFIDENCE_LABELS[tower.confidence]"></span>
+                    </div>
+                  </div>
+                  <div class="tower-card__tiers">
+                    <span class="tier-badge tier-badge--small" :data-tier="tower.tiers.chimps" x-text="tower.tiers.chimps"></span>CHIMPS
+                    <span class="tier-badge tier-badge--small" :data-tier="tower.tiers.boss" x-text="tower.tiers.boss"></span>BOSS
+                  </div>
+                </header>
+
+                <p x-text="tower.summary"></p>
+
+                <template x-for="route in tower.routes" :key="route.path + route.name">
+                  <div class="well route-card" :class="`route-card--${route.kind}`">
+                    <div x-pips="route.path"></div>
+                    <div class="route-card__body">
+                      <div class="route-card__top">
+                        <span class="game-title game-title--small route-card__path" x-text="route.path"></span>
+                        <span class="pill push-right" :class="route.kind === 'optimal' ? 'pill--good' : 'pill--warn'" x-text="route.kind === 'optimal' ? 'Optimal' : 'Situational'"></span>
+                      </div>
+                      <div class="route-card__name" x-text="route.name"></div>
+                      <p class="route-card__note" x-text="route.note"></p>
+                    </div>
+                  </div>
+                </template>
+
+                <div class="pill-list">
+                  <template x-for="role in tower.roles"><span class="pill" :data-role="role" x-text="role"></span></template>
+                </div>
+              </article>
+            </template>
+          </div>
+          <div class="panel panel--padded muted" x-show="visibleTowers.length === 0">No towers match that filter.</div>
+        </section>
+
+        <!-- =============================================================
+             TAB 3 · FARMING ENGINE
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'farm'" x-cloak x-data="farmingEngine" class="stack">
+          <div class="section-head">
+            <div>
+              <h2 class="game-title">Farming <span class="highlight">Engine</span></h2>
+              <p>Medium-difficulty defaults. Gold-edged fields are estimates, and every number can be edited. Farms and Merchantmen earn nothing in CHIMPS.</p>
+            </div>
+          </div>
+
+          <div class="farm-layout">
+            <!-- Scenario -->
+            <div class="panel panel--padded stack">
+              <h3 class="game-title game-title--small panel__title" style="margin:0"><span x-icon="sliders-horizontal"></span>Scenario</h3>
+              <div class="two-fields">
+                <label class="label">Buy on round <input class="field" type="number" min="1" max="139" x-model.number="startRound"></label>
+                <label class="label">Evaluate until <input class="field" type="number" min="2" max="140" x-model.number="endRound"></label>
+              </div>
+              <div class="well option-list">
+                <label class="option"><span>Banana Central on map <small>+25% BRF</small></span>
+                  <input type="checkbox" class="checkbox" x-model="modifiers.bananaCentral"></label>
+                <label class="option"><span>Central Markets <small>+10% Merchantman each</small></span>
+                  <input type="number" class="field field--number field--tiny" min="0" max="10" x-model.number="modifiers.centralMarkets"></label>
+                <label class="option"><span>Trade Empire on map</span>
+                  <input type="checkbox" class="checkbox" x-model="modifiers.tradeEmpire"></label>
+                <label class="option"><span>Trade Agreements MK <small>+$20</small></span>
+                  <input type="checkbox" class="checkbox" x-model="modifiers.tradeAgreements"></label>
+              </div>
+              <p class="dim" style="font-size:.78rem">Profit = income × rounds owned − cost. "If sold" adds the sellback at the final round. Trade Empire gives +$10 per buffed Merchantman and +$20 per buffed Favored Trades (20 boats max).</p>
+            </div>
+
+            <!-- Comparator -->
+            <div class="panel panel--padded" style="min-width:0">
+              <div class="row-wrap" style="margin-bottom:12px">
+                <h3 class="game-title game-title--small panel__title" style="margin:0"><span x-icon="calculator"></span>Build Comparator</h3>
+                <button class="button button--quiet button--small push-right" @click="resetBuilds()"><span x-icon="rotate-ccw"></span>Reset</button>
+              </div>
+
+              <div class="well table-scroll">
+                <table class="farm-table numbers">
+                  <thead>
+                    <tr><th>Use</th><th>Build</th><th>Qty</th><th>Cost each</th><th>Base $/rd</th><th>Sell %</th><th>Real $/rd</th><th>Payback</th><th>Profit</th></tr>
+                  </thead>
+                  <tbody>
+                    <template x-for="build in builds" :key="build.id">
+                      <tr :class="{ 'farm-table__off': !build.enabled }">
+                        <td><input type="checkbox" class="checkbox" x-model="build.enabled" :aria-label="`Use ${build.name}`"></td>
+                        <td>
+                          <div class="farm-table__build" x-text="build.name"></div>
+                          <div class="farm-table__note" x-text="`${build.group} · ${build.note}`"></div>
+                        </td>
+                        <td><input type="number" min="0" class="field field--number field--tiny" :value="build.quantity" @change="setNumber(build, 'quantity', $event.target.value)"></td>
+                        <td><input type="number" min="0" class="field field--number" :class="{ 'field--estimate': build.isEstimate }" :value="build.cost" @change="setNumber(build, 'cost', $event.target.value)"></td>
+                        <td><input type="number" min="0" class="field field--number" :class="{ 'field--estimate': build.isEstimate }" :value="build.incomePerRound" @change="setNumber(build, 'incomePerRound', $event.target.value)"></td>
+                        <td><input type="number" min="0" max="100" class="field field--number field--tiny" :value="build.sellbackPercent" @change="setNumber(build, 'sellbackPercent', $event.target.value)"></td>
+                        <td class="farm-table__income" x-text="formatCash(income(build))"></td>
+                        <td :class="paysBackInTime(build) ? 'good' : 'bad'" x-text="paybackLabel(build)"></td>
+                        <td>
+                          <template x-if="build.quantity > 0">
+                            <div>
+                              <div :class="profit(build) >= 0 ? 'good' : 'bad'" x-text="formatCash(profit(build))"></div>
+                              <div class="dim" style="font-size:.7rem" x-text="`if sold ${formatCash(profitIfSold(build))}`"></div>
+                            </div>
+                          </template>
+                          <span class="dim" x-show="build.quantity === 0">—</span>
+                        </td>
+                      </tr>
+                    </template>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="well chart-box"><canvas x-effect="drawChart($el)" aria-label="Net cash over rounds"></canvas></div>
+            </div>
+          </div>
+
+          <!-- Strategy cards -->
+          <div class="strategy-grid" id="strategies">
+            <template x-for="strategy in $store.hub.economy.strategies" :key="strategy.title">
+              <article class="panel strategy-card" :style="`--accent:${STRATEGY_COLORS[strategy.color]}`">
+                <div class="strategy-card__head">
+                  <div class="avatar avatar--small" :style="`background:linear-gradient(160deg, ${STRATEGY_COLORS[strategy.color]}, #0f3a73)`"><span x-icon="strategy.icon"></span></div>
+                  <div>
+                    <h3 class="game-title game-title--small" x-text="strategy.title"></h3>
+                    <span class="strategy-card__tag" x-text="strategy.tag"></span>
+                  </div>
+                </div>
+                <ul><template x-for="point in strategy.points"><li x-text="point"></li></template></ul>
+              </article>
+            </template>
+          </div>
+
+          <!-- Boss checkpoints -->
+          <div class="panel panel--padded stack stack--tight">
+            <div class="row-wrap">
+              <h3 class="game-title game-title--small panel__title" style="margin:0"><span x-icon="flag"></span>Boss Checkpoints</h3>
+              <span class="dim push-right" style="font-size:.78rem">Normal-tier guideline · roughly 2–3× for Elite</span>
+            </div>
+            <template x-for="(checkpoint, i) in $store.hub.economy.bossCheckpoints" :key="checkpoint.round">
+              <div class="tier-row checkpoint" :id="`checkpoint-${checkpoint.round}`" :style="`--stripe:${CHECKPOINT_COLORS[i % CHECKPOINT_COLORS.length]}`">
+                <div>
+                  <div class="game-title checkpoint__round" x-text="`R${checkpoint.round}`"></div>
+                  <span class="pill pill--danger" x-text="checkpoint.bossTier"></span>
+                </div>
+                <div class="checkpoint__cash" x-text="checkpoint.cashTarget"></div>
+                <p><span class="checkpoint__label">Defense</span><span x-text="checkpoint.defense"></span></p>
+                <p class="muted"><span class="checkpoint__label">Economy move</span><span x-text="checkpoint.economy"></span></p>
+              </div>
+            </template>
+          </div>
+        </section>
+
+        <!-- =============================================================
+             TAB 4 · CHIMPS & BOSSES
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'chimps'" x-cloak x-data="chimpsPlaybook" class="stack">
+          <div class="section-head">
+            <div>
+              <h2 class="game-title">CHIMPS <span class="highlight">Playbook</span></h2>
+              <p>No Continues, Hearts lost, Income, Monkey Knowledge, Powers or Selling. Tick each round once your defense covers it. Your progress is saved in this browser.</p>
+            </div>
+            <div class="section-head__tools" style="align-items:center">
+              <span class="game-title progress-count"><span class="highlight" x-text="coveredRounds.length"></span> / <span x-text="totalRounds"></span></span>
+              <button class="button button--quiet button--small" @click="clearChecklist()">Clear</button>
+            </div>
+          </div>
+          <div class="well progress"><div class="progress__fill" :style="`width:${progressPercent}%`"></div></div>
+
+          <div class="round-grid">
+            <template x-for="danger in $store.hub.playbook.dangerRounds" :key="danger.round">
+              <article class="panel round-card" :id="`round-${danger.round}`" :class="{ 'round-card--covered': isCovered(danger.round) }">
+                <label class="round-card__head">
+                  <input type="checkbox" class="checkbox" :checked="isCovered(danger.round)" @change="toggleRound(danger.round)">
+                  <div style="flex:1">
+                    <div class="round-card__title">
+                      <span class="game-title round-card__number" x-text="`R${danger.round}`"></span>
+                      <span class="game-title game-title--small" x-text="danger.title"></span>
+                      <span class="pill push-right" :class="isCovered(danger.round) ? 'pill--good' : 'pill--danger'" x-text="isCovered(danger.round) ? 'Covered' : 'Danger'"></span>
+                    </div>
+                    <p class="round-card__threat" x-text="danger.threat"></p>
+                  </div>
+                </label>
+                <ul>
+                  <template x-for="counter in danger.counters"><li class="well"><span x-icon="circle-check"></span><span x-text="counter"></span></li></template>
+                </ul>
+              </article>
+            </template>
+          </div>
+
+          <h3 class="game-title" style="font-size:1.6rem">Hero <span class="highlight">Synergies</span></h3>
+          <div class="card-grid">
+            <template x-for="synergy in $store.hub.playbook.heroSynergies" :key="synergy.heroId">
+              <article class="panel hero-card" :id="`hero-${synergy.heroId}`">
+                <header class="hero-card__head">
+                  <div x-avatar="heroFor(synergy)"></div>
+                  <div>
+                    <h4 class="game-title game-title--small" x-text="synergy.name"></h4>
+                    <p x-text="synergy.tagline"></p>
+                  </div>
+                  <div class="hero-card__tiers">
+                    <span class="tier-badge tier-badge--small" :data-tier="heroFor(synergy).tiers.chimps" x-text="heroFor(synergy).tiers.chimps" title="CHIMPS"></span>
+                    <span class="tier-badge tier-badge--small" :data-tier="heroFor(synergy).tiers.boss" x-text="heroFor(synergy).tiers.boss" title="Boss events"></span>
+                  </div>
+                </header>
+                <div class="pill-list"><template x-for="mode in synergy.modes"><span class="pill" x-text="mode"></span></template></div>
+                <ul><template x-for="line in synergy.synergies"><li><span x-icon="link"></span><span x-text="line"></span></li></template></ul>
+                <p class="hero-card__tip"><strong>Pro tip:</strong> <span x-text="synergy.tip"></span></p>
+              </article>
+            </template>
+          </div>
+
+          <h3 class="game-title" style="font-size:1.6rem">Boss <span class="highlight">Quick Reference</span></h3>
+          <div class="card-grid">
+            <template x-for="boss in $store.hub.playbook.bosses" :key="boss.name">
+              <article class="panel boss-card">
+                <div class="avatar" data-category="Boss"><span x-icon="boss.icon"></span></div>
+                <div>
+                  <h4 class="game-title game-title--small" x-text="boss.name"></h4>
+                  <p x-text="boss.note"></p>
+                </div>
+              </article>
+            </template>
+          </div>
+        </section>
+      </div>
+    </template>
+  </main>
+
+  <footer class="container site-footer">
+    <p>Bloons TD 6 and all related monkey graphics, character designs and trademarks are the property of
+      <a href="https://ninjakiwi.com" target="_blank" rel="noopener">Ninja Kiwi Limited</a>.</p>
+    <p>BTD6 Tactical Hub is an unofficial, non-commercial fan-made project and is not affiliated with, endorsed or sponsored by Ninja Kiwi.</p>
+    <p>Shortcuts: <kbd>/</kbd> search · <kbd>1–4</kbd> switch tabs · <kbd>Esc</kbd> close search</p>
+  </footer>
+</body>
+</html>
