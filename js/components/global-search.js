@@ -3,6 +3,7 @@
 // then jumps to the matching card. Keyboard: / to focus, ↑ ↓ to move, Enter to open.
 
 import { fuzzyScore } from '../lib/text.js';
+import { t } from '../lib/i18n.js';
 
 const MAX_RESULTS = 10;
 
@@ -122,7 +123,7 @@ export function globalSearch() {
       return this.index
         .map((entry) => ({
           entry,
-          score: Math.max(fuzzyScore(this.query, entry.title) * 1.5, fuzzyScore(this.query, `${entry.title} ${entry.keywords}`)),
+          score: Math.max(fuzzyScore(this.query, entry.title) * 1.5, fuzzyScore(this.query, `${entry.title} ${t(entry.title)} ${t(entry.subtitle ?? '')} ${entry.keywords}`)),
         }))
         .filter(({ score }) => score > 0)
         .sort((a, b) => b.score - a.score)

@@ -86,7 +86,7 @@ export function eventsTab() {
 
     // --- Formatting helpers for the live cards ---------------------------
     when(event, status) {
-      const date = (ms) => new Date(ms).toLocaleString(undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+      const date = (ms) => new Date(ms).toLocaleString(document.documentElement.lang || undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
       if (status === 'live') return `Live now · ends ${date(event.end)} (${this.timeLeft(event.end)} left)`;
       if (status === 'next') return `Starts ${date(event.start)}`;
       return `Ended ${date(event.end)}`;

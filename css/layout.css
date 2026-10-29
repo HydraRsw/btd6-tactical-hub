@@ -585,6 +585,10 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 .chip--fav svg { width: 15px; height: 15px; }
 .patch-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 800; color: var(--text-muted); text-decoration: none; white-space: nowrap; }
 .patch-link:hover { color: var(--gold); }
+.lang-switch { display: inline-flex; border: 2px solid #071b38; border-radius: 999px; overflow: hidden; background: rgba(0, 0, 0, 0.25); }
+.lang-switch__option { border: 0; background: none; color: var(--text-muted); font: inherit; font-size: 0.72rem; font-weight: 900; padding: 4px 9px; cursor: pointer; }
+.lang-switch__option:hover { color: var(--gold); }
+.lang-switch__option--active { background: var(--gold); color: #0b2d5c; }
 .patch-link svg { width: 16px; height: 16px; }
 .patch-list { display: grid; gap: 8px; font-size: 0.9rem; }
 .patch-list li { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
