@@ -444,6 +444,93 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 .synergy--blocked { opacity: 0.55; }
 .note--gold { color: var(--text-soft); border-color: var(--gold); background: rgba(255, 210, 63, 0.12); }
 
+
+/* ==========================================================================
+   Shared small controls (round browser, planner, calculators)
+   ========================================================================== */
+.chip {
+  padding: 4px 11px; border-radius: 999px; font: inherit; font-size: 0.78rem; font-weight: 800; cursor: pointer;
+  color: var(--text-soft); background: var(--well); border: 2px solid rgba(4, 18, 40, 0.7);
+}
+.chip:hover { border-color: rgba(255, 210, 63, 0.5); }
+.chip--on { color: #0b1b33; background: var(--gold); border-color: var(--gold-edge); }
+.filter-label { font-size: 0.72rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.06em; }
+.option--inline { display: inline-flex; gap: 8px; align-items: center; padding: 0; background: none; border: 0; font-size: 0.85rem; font-weight: 800; }
+.button--tiny { padding: 2px 7px; font-size: 0.75rem; min-width: 26px; }
+.planner-field { display: grid; gap: 4px; font-size: 0.72rem; min-width: 150px; flex: 1; }
+.planner-field--small { min-width: 0; flex: 0 0 auto; }
+.planner-field--small .field { width: 6rem; }
+.cost-table, .power-table { min-width: 0 !important; }
+
+/* --- Round browser --- */
+.round-table-wrap { padding: 4px 0; overflow: hidden; }
+.round-row {
+  display: grid; grid-template-columns: 70px minmax(0, 1fr) 90px 90px 100px; gap: 12px; align-items: center;
+  padding: 10px 16px; border-bottom: 2px solid rgba(4, 18, 40, 0.45); font-size: 0.85rem;
+}
+.round-row:last-child { border-bottom: 0; }
+.round-row > .numbers { text-align: right; }
+.round-row--head { font-size: 0.66rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+.round-row--danger { background: linear-gradient(90deg, rgba(255, 91, 91, 0.16), transparent 60%); }
+.round-row__n { display: grid; }
+.round-row__bloons { display: flex; flex-wrap: wrap; gap: 5px; }
+.bloon-chip { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px 2px 4px; border-radius: 999px; background: var(--well); font-size: 0.75rem; font-weight: 800; white-space: nowrap; }
+.bloon-chip--blimp { outline: 2px solid rgba(255, 210, 63, 0.45); }
+.bloon-dot { width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--ink); flex-shrink: 0; }
+.danger-link { cursor: pointer; border: 0; font: inherit; font-size: 0.72rem; }
+
+/* --- Planner --- */
+.planner-settings { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.stat { display: grid; gap: 4px; padding: 12px 14px; border-left: 5px solid var(--gold); }
+.stat strong { font-size: 1.05rem; }
+.stat--good { border-left-color: var(--green); }
+.stat--bad { border-left-color: var(--red); }
+.planner-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px; align-items: start; }
+.planner-add { align-items: end; }
+.planner-add > select { flex: 1; min-width: 160px; width: auto; }
+.planner-tower { display: grid; gap: 8px; padding: 12px 14px; }
+.planner-step { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; padding: 8px 10px; border-radius: 12px; background: var(--well); }
+.planner-step--bad { outline: 2px solid var(--red); }
+.planner-step > .cash { margin-left: auto; align-self: center; font-weight: 900; }
+.path-stepper { display: flex; gap: 6px; }
+.path-stepper__path { display: inline-flex; align-items: center; gap: 4px; padding: 2px; border-radius: 10px; background: rgba(6, 26, 56, 0.6); }
+.path-stepper__path .numbers { min-width: 14px; text-align: center; font-weight: 900; }
+.timeline { padding-bottom: 6px; }
+.timeline-row { display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 12px; padding: 10px 16px; border-top: 2px solid rgba(4, 18, 40, 0.45); }
+.timeline-row--short { background: linear-gradient(90deg, rgba(255, 91, 91, 0.2), transparent 70%); }
+.timeline-row__round { display: grid; align-content: start; font-size: 0.78rem; }
+.timeline-row__body { display: grid; gap: 6px; font-size: 0.85rem; }
+.timeline-buy { display: flex; justify-content: space-between; gap: 10px; }
+.timeline-buy--bad { color: #ff9b9b; }
+.timeline-warn { display: flex; gap: 6px; align-items: center; color: #ff9b9b; font-weight: 800; }
+.timeline-warn svg { width: 15px; height: 15px; }
+.timeline-danger { display: grid; gap: 4px; justify-items: start; font-size: 0.8rem; }
+.timeline-danger .pill { cursor: pointer; border: 0; font: inherit; font-size: 0.72rem; }
+.timeline-snapshot { color: var(--text-soft); }
+
+/* --- Degree calculator --- */
+.calc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.calc-result { display: flex; gap: 16px; align-items: stretch; flex-wrap: wrap; }
+.calc-degree { display: grid; place-items: center; align-content: center; gap: 2px; min-width: 150px; padding: 12px; border-radius: 16px; background: linear-gradient(180deg, rgba(167, 123, 255, 0.35), rgba(80, 40, 160, 0.3)); border: 2px solid var(--outline); }
+.calc-degree strong { font-size: 3.2rem; line-height: 1; color: var(--gold); }
+.calc-degree .dim { font-size: 0.72rem; text-align: center; }
+.calc-target { display: grid; gap: 6px; padding: 12px 14px; }
+.row--capped td { color: var(--gold); }
+
+/* --- Tower costs and hero levels --- */
+.tip-columns--costs { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+.cost-table th, .cost-table td { text-align: left !important; }
+.cost-table td { vertical-align: top; }
+.cost-cell__name { display: block; font-size: 0.75rem; color: var(--text-muted); }
+.cost-cell--route { background: rgba(122, 212, 32, 0.14); }
+.detection-list strong { color: var(--text); }
+.level-list { display: grid; gap: 4px; }
+.level-row { display: grid; grid-template-columns: 34px 82px minmax(0, 1fr); gap: 10px; align-items: center; padding: 6px 10px; border-radius: 10px; font-size: 0.85rem; color: var(--text-dim); }
+.level-row--key { background: var(--well); color: var(--text-soft); }
+.level-row__level { text-align: center; }
+.level-row__round { font-weight: 900; color: var(--cash); }
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -453,7 +540,7 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
   .filters-toggle { display: flex; }
   .tier-sidebar__body { display: none; margin-top: 12px; }
   .tier-sidebar__body--open { display: grid; }
-  .tip-columns, .tip-columns--two { grid-template-columns: minmax(0, 1fr); }
+  .tip-columns, .tip-columns--two, .tip-columns--costs, .planner-layout { grid-template-columns: minmax(0, 1fr); }
   .checkpoint { grid-template-columns: 90px minmax(0, 1fr); }
 }
 
@@ -470,5 +557,9 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
   .neighbour-name { display: none; }
   .map-search { width: 100%; }
   .mode-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .round-row { grid-template-columns: 46px minmax(0, 1fr) 76px; gap: 8px; padding: 10px 12px; }
+  .round-row > :nth-child(3), .round-row > :nth-child(5) { display: none; }
+  .level-row { grid-template-columns: 28px 70px minmax(0, 1fr); }
+  .timeline-row { grid-template-columns: 64px minmax(0, 1fr); padding: 10px 12px; }
   .tower-hero__text h2 { font-size: 1.9rem; }
 }

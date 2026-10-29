@@ -15,6 +15,10 @@ import { towerPage } from './components/tower-page.js';
 import { paragonGuide } from './components/paragons.js';
 import { mapGuide, mapPage, modePage } from './components/maps.js';
 import { paragonPage } from './components/paragon-page.js';
+import { roundBrowser } from './components/rounds.js';
+import { buildPlanner } from './components/planner.js';
+import { degreeCalculator } from './components/degree-calc.js';
+import { heroPage } from './components/hero-page.js';
 
 document.addEventListener('alpine:init', () => {
   const Alpine = window.Alpine;
@@ -33,6 +37,10 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('mapPage', mapPage);
   Alpine.data('modePage', modePage);
   Alpine.data('paragonPage', paragonPage);
+  Alpine.data('roundBrowser', roundBrowser);
+  Alpine.data('buildPlanner', buildPlanner);
+  Alpine.data('degreeCalculator', degreeCalculator);
+  Alpine.data('heroPage', heroPage);
 
   const hub = Alpine.store('hub');
   hub.openTabFromUrl();
@@ -42,7 +50,7 @@ document.addEventListener('alpine:init', () => {
   document.addEventListener('keydown', (event) => handleShortcut(event, hub));
 });
 
-/** "/" focuses search, 1–6 switch tabs (ignored while typing in a field). */
+/** "/" focuses search, 1–8 switch tabs (ignored while typing in a field). */
 function handleShortcut(event, hub) {
   const typing = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName);
   if (typing || event.ctrlKey || event.metaKey || event.altKey) return;
@@ -50,7 +58,7 @@ function handleShortcut(event, hub) {
   if (event.key === '/') {
     event.preventDefault();
     document.getElementById('site-search-input')?.focus();
-  } else if (/^[1-6]$/.test(event.key)) {
+  } else if (/^[1-8]$/.test(event.key)) {
     hub.openTab(TABS[Number(event.key) - 1]);
   }
 }

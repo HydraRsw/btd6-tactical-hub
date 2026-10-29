@@ -7,6 +7,18 @@ import { matchesQuery } from '../lib/text.js';
 
 export const DIFFICULTIES = ['Beginner', 'Intermediate', 'Advanced', 'Expert'];
 
+// Trait filters: each matches words in a map's traits list.
+export const TRAIT_FILTERS = [
+  { id: 'water', label: 'Water', test: /water|pond|river|pool|lake|sea/i },
+  { id: 'single', label: 'Single lane', test: /single lane|one active|one entrance/i },
+  { id: 'multi', label: 'Several lanes', test: /two|three|four|five|six|eight|lanes|paths|entrances|simultaneous|alternating/i },
+  { id: 'los', label: 'Line-of-sight blockers', test: /line-of-sight|blocks|walls?\b|trees/i },
+  { id: 'changing', label: 'Moving or changing map', test: /moving|rotat|collapse|freeze|darkness|spawns change|change every|toggle/i },
+  { id: 'removable', label: 'Removable obstacles', test: /removable|drainable|\$[\d,]+/i },
+  { id: 'long', label: 'Long track', test: /long/i },
+  { id: 'short', label: 'Short track', test: /short/i },
+];
+
 // Mode difficulty groups, in the order the game's mode picker shows them.
 const MODE_GROUPS = ['Easy', 'Medium', 'Hard', 'Any'];
 
@@ -33,12 +45,24 @@ export function mapGuide() {
   return {
     DIFFICULTIES,
     MODE_GROUPS,
+    TRAIT_FILTERS,
     difficulty: 'All',
     query: '',
+    traits: [],
+
+    toggleTrait(id) {
+      this.traits = this.traits.includes(id) ? this.traits.filter((t) => t !== id) : [...this.traits, id];
+    },
+
+    hasTrait(map, id) {
+      const filter = TRAIT_FILTERS.find((f) => f.id === id);
+      return map.traits.some((trait) => filter.test.test(trait));
+    },
 
     get visibleMaps() {
       return this.$store.hub.maps.maps.filter((map) =>
         (this.difficulty === 'All' || map.difficulty === this.difficulty) &&
+        this.traits.every((id) => this.hasTrait(map, id)) &&
         matchesQuery(this.query, [map.name, ...map.traits]));
     },
 
@@ -100,9 +124,7 @@ export function mapPage() {
     },
 
     openUnit(unit) {
-      const hub = this.$store.hub;
-      if (unit.category === 'Heroes') hub.jumpTo('tier', `tier-${unit.id}`, unit.id);
-      else hub.openTower(unit.id);
+      this.$store.hub.openUnit(unit);
     },
   };
 }
@@ -133,9 +155,7 @@ export function modePage() {
     },
 
     openUnit(unit) {
-      const hub = this.$store.hub;
-      if (unit.category === 'Heroes') hub.jumpTo('tier', `tier-${unit.id}`, unit.id);
-      else hub.openTower(unit.id);
+      this.$store.hub.openUnit(unit);
     },
   };
 }

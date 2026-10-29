@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="css/theme.css?v=194c6e55ae">
   <link rel="stylesheet" href="css/components.css?v=84766d580b">
-  <link rel="stylesheet" href="css/layout.css?v=65bd3d7522">
+  <link rel="stylesheet" href="css/layout.css?v=9a26bc86d1">
 
   <!-- Libraries (no build step). Order matters: our module first, Alpine last. -->
   <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
@@ -22,28 +22,33 @@
   <script type="importmap">
   {
     "imports": {
-      "./js/components/crosspath.js": "./js/components/crosspath.js?v=0167d9aee1",
-      "./js/components/farming.js": "./js/components/farming.js?v=0167d9aee1",
-      "./js/components/global-search.js": "./js/components/global-search.js?v=0167d9aee1",
-      "./js/components/maps.js": "./js/components/maps.js?v=0167d9aee1",
-      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=0167d9aee1",
-      "./js/components/paragons.js": "./js/components/paragons.js?v=0167d9aee1",
-      "./js/components/playbook.js": "./js/components/playbook.js?v=0167d9aee1",
-      "./js/components/tier-list.js": "./js/components/tier-list.js?v=0167d9aee1",
-      "./js/components/tower-page.js": "./js/components/tower-page.js?v=0167d9aee1",
-      "./js/directives.js": "./js/directives.js?v=0167d9aee1",
-      "./js/lib/data.js": "./js/lib/data.js?v=0167d9aee1",
-      "./js/lib/economy.js": "./js/lib/economy.js?v=0167d9aee1",
-      "./js/lib/storage.js": "./js/lib/storage.js?v=0167d9aee1",
-      "./js/lib/text.js": "./js/lib/text.js?v=0167d9aee1",
-      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=0167d9aee1",
-      "./js/main.js": "./js/main.js?v=0167d9aee1",
-      "./js/store.js": "./js/store.js?v=0167d9aee1"
+      "./js/components/crosspath.js": "./js/components/crosspath.js?v=a10c92ce41",
+      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=a10c92ce41",
+      "./js/components/farming.js": "./js/components/farming.js?v=a10c92ce41",
+      "./js/components/global-search.js": "./js/components/global-search.js?v=a10c92ce41",
+      "./js/components/hero-page.js": "./js/components/hero-page.js?v=a10c92ce41",
+      "./js/components/maps.js": "./js/components/maps.js?v=a10c92ce41",
+      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=a10c92ce41",
+      "./js/components/paragons.js": "./js/components/paragons.js?v=a10c92ce41",
+      "./js/components/planner.js": "./js/components/planner.js?v=a10c92ce41",
+      "./js/components/playbook.js": "./js/components/playbook.js?v=a10c92ce41",
+      "./js/components/rounds.js": "./js/components/rounds.js?v=a10c92ce41",
+      "./js/components/tier-list.js": "./js/components/tier-list.js?v=a10c92ce41",
+      "./js/components/tower-page.js": "./js/components/tower-page.js?v=a10c92ce41",
+      "./js/directives.js": "./js/directives.js?v=a10c92ce41",
+      "./js/lib/data.js": "./js/lib/data.js?v=a10c92ce41",
+      "./js/lib/economy.js": "./js/lib/economy.js?v=a10c92ce41",
+      "./js/lib/game.js": "./js/lib/game.js?v=a10c92ce41",
+      "./js/lib/storage.js": "./js/lib/storage.js?v=a10c92ce41",
+      "./js/lib/text.js": "./js/lib/text.js?v=a10c92ce41",
+      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=a10c92ce41",
+      "./js/main.js": "./js/main.js?v=a10c92ce41",
+      "./js/store.js": "./js/store.js?v=a10c92ce41"
     }
   }
   </script>
   <!-- import-map:end -->
-  <script type="module" src="js/main.js?v=0167d9aee1"></script>
+  <script type="module" src="js/main.js?v=a10c92ce41"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 
@@ -67,7 +72,7 @@
         <div class="field-with-icon">
           <span x-icon="search"></span>
           <input id="site-search-input" x-ref="input" class="field" type="search" autocomplete="off"
-                 placeholder="Search towers, maps, Paragons…  ( / )"
+                 placeholder="Search towers, heroes, maps, rounds…  ( / )"
                  x-model="query" @input="onType()" @focus="onType()"
                  @keydown.down.prevent="move(1)" @keydown.up.prevent="move(-1)"
                  @keydown.enter.prevent="choose()" @keydown.escape="close(); $el.blur()">
@@ -103,6 +108,8 @@
           { id: 'cross',  label: 'Crosspath Guide',  icon: 'git-branch' },
           { id: 'maps',   label: 'Maps & Modes',     icon: 'map' },
           { id: 'paragons', label: 'Paragons',       icon: 'crown' },
+          { id: 'rounds', label: 'Rounds',           icon: 'list-ordered' },
+          { id: 'planner', label: 'Planner',         icon: 'clipboard-list' },
           { id: 'farm',   label: 'Farming Engine',   icon: 'banana' },
           { id: 'chimps', label: 'CHIMPS & Bosses',  icon: 'skull' } ]" :key="tab.id">
         <button class="tab" role="tab" :class="{ 'tab--active': $store.hub.activeTab === tab.id }"
@@ -227,7 +234,7 @@
                            :class="{ 'tier-row--open': $store.hub.isOpen(unit.id) }"
                            :style="`--stripe:${TIER_COLORS[tierOf(unit)]}`">
                     <button class="tier-row__summary" @click="openRow(unit)"
-                            :aria-label="unit.category === 'Heroes' ? `${unit.name}: show details` : `${unit.name}: open tower page`">
+                            :aria-label="unit.category === 'Heroes' ? `${unit.name}: open hero page` : `${unit.name}: open tower page`">
                       <span class="tier-badge" :data-tier="tierOf(unit)" x-text="tierOf(unit)"></span>
 
                       <div class="tier-row__identity">
@@ -246,8 +253,7 @@
                         <template x-if="unit.category === 'Heroes'"><span class="pill pill--hero"><span x-icon="star"></span>Hero</span></template>
                         <template x-if="unit.category !== 'Heroes'"><div x-pips="unit.bestRoute"></div></template>
                       </div>
-                      <span class="tier-row__chevron" :class="{ 'tier-row__chevron--page': unit.category !== 'Heroes' }"
-                            x-icon="unit.category === 'Heroes' ? 'chevron-down' : 'chevron-right'"></span>
+                      <span class="tier-row__chevron tier-row__chevron--page" x-icon="chevron-right"></span>
                     </button>
 
                     <div class="tier-row__details" x-show="$store.hub.isOpen(unit.id)">
@@ -397,6 +403,14 @@
               <span x-icon="filter"></span>
               <input class="field" type="search" placeholder="Find a map or trait…" x-model="query" aria-label="Find a map">
             </div>
+          </div>
+
+          <div class="row-wrap">
+            <span class="dim filter-label">Traits</span>
+            <template x-for="f in TRAIT_FILTERS" :key="f.id">
+              <button class="chip" :class="{ 'chip--on': traits.includes(f.id) }" :aria-pressed="traits.includes(f.id)" @click="toggleTrait(f.id)" x-text="f.label"></button>
+            </template>
+            <button class="button button--quiet button--tiny" x-show="traits.length" @click="traits = []">Clear</button>
           </div>
 
           <template x-for="group in groups" :key="group.difficulty">
@@ -629,6 +643,51 @@
               </div>
             </div>
 
+            <!-- Costs and what it can pop -->
+            <div class="tip-columns tip-columns--costs">
+              <div class="panel panel--padded" x-show="tower.costs">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="coins"></span>Upgrade costs</h3>
+                <div class="row-wrap" style="margin-bottom:10px">
+                  <div class="mode-switch mode-switch--wide">
+                    <template x-for="(d, i) in DIFFICULTIES" :key="d.id">
+                      <button class="button button--small" :class="costDifficulty === i ? 'button--gold' : 'button--quiet'" :aria-pressed="costDifficulty === i" @click="costDifficulty = i" x-text="d.label"></button>
+                    </template>
+                  </div>
+                </div>
+                <div class="table-scroll">
+                  <table class="farm-table cost-table">
+                    <thead><tr><th>Tier</th><template x-for="name in PATH_NAMES"><th x-text="name"></th></template></tr></thead>
+                    <tbody>
+                      <tr><td>Base</td><td colspan="3" class="numbers cash" x-text="formatCash(tower.costs.base[costDifficulty])"></td></tr>
+                      <template x-for="tier in [1, 2, 3, 4, 5]" :key="tier">
+                        <tr>
+                          <td x-text="`T${tier}`"></td>
+                          <template x-for="p in [0, 1, 2]" :key="p">
+                            <td :class="{ 'cost-cell--route': onRoute(p, tier) }">
+                              <span class="cost-cell__name" x-text="tower.upgrades[p][tier - 1]"></span>
+                              <span class="numbers cash" x-text="formatCash(tower.costs.upgrades[p][tier - 1][costDifficulty])"></span>
+                            </td>
+                          </template>
+                        </tr>
+                      </template>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="note" x-show="routeCost !== null"><span x-icon="calculator"></span><span x-text="`${tower.bestRoute} costs ${formatCash(routeCost)} in total on ${DIFFICULTIES[costDifficulty].label}.`"></span></p>
+                <p class="dim tower-note" x-show="tower.costs.note" x-text="tower.costs.note"></p>
+              </div>
+              <div class="panel panel--padded" x-show="tower.detection">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="eye"></span>What it can pop</h3>
+                <ul class="tip-list detection-list">
+                  <li><span x-icon="eye"></span><span><strong>Camo: </strong><span x-text="tower.detection.camoText"></span></span></li>
+                  <li><span x-icon="shield"></span><span><strong>Lead: </strong><span x-text="tower.detection.leadText"></span></span></li>
+                  <li><span x-icon="circle-dot"></span><span><strong>Purple: </strong><span x-text="tower.detection.purple"></span></span></li>
+                </ul>
+                <p class="note" x-show="routeDetection"><span x-icon="info"></span><span x-text="routeDetection"></span></p>
+                <p class="dim tower-note">About the main attack. Abilities, sub-towers and buffs from other towers can add to it.</p>
+              </div>
+            </div>
+
             <!-- Routes -->
             <div class="panel panel--padded">
               <h3 class="game-title game-title--small panel__title"><span x-icon="route"></span>Crosspaths</h3>
@@ -714,6 +773,114 @@
         </template>
 
         <!-- =============================================================
+             HERO PAGE  (#hero/<id>)
+             ============================================================= -->
+        <template x-if="$store.hub.activeTab === 'hero' && $store.hub.currentPage">
+          <section x-data="heroPage" class="stack tower-page">
+            <nav class="row-wrap">
+              <button class="button button--quiet button--small" @click="$store.hub.openTab('tier')"><span x-icon="arrow-left"></span>Tier list</button>
+              <span class="push-right row-wrap">
+                <button class="button button--quiet button--small" @click="$store.hub.openPage('hero', neighbour(-1).id)" :aria-label="`Previous hero: ${neighbour(-1).name}`"><span x-icon="chevron-left"></span><span class="neighbour-name" x-text="neighbour(-1).name"></span></button>
+                <button class="button button--quiet button--small" @click="$store.hub.openPage('hero', neighbour(1).id)" :aria-label="`Next hero: ${neighbour(1).name}`"><span class="neighbour-name" x-text="neighbour(1).name"></span><span x-icon="chevron-right"></span></button>
+              </span>
+            </nav>
+
+            <header class="panel tower-hero">
+              <div x-avatar.huge="{ ...hero, tier: hero.tiers[$store.hub.mode] }"></div>
+              <div class="tower-hero__text">
+                <h2 class="game-title" x-text="hero.name"></h2>
+                <div class="pill-list">
+                  <span class="pill pill--hero"><span x-icon="star"></span>Hero</span>
+                  <template x-for="role in hero.roles"><span class="pill" :data-role="role" x-text="role"></span></template>
+                  <span class="pill" x-show="hero.introduced" x-text="`Added: ${hero.introduced}`"></span>
+                </div>
+                <p x-text="hero.bestFor || hero.summary"></p>
+                <p class="muted" x-show="hero.bestFor" x-text="hero.summary"></p>
+              </div>
+              <div class="tower-hero__tiers">
+                <template x-for="m in MODES" :key="m.id">
+                  <button class="tier-score tier-score--button" :class="{ 'tier-score--active': $store.hub.mode === m.id }" :title="`${m.label}: tier ${hero.tiers[m.id]}`" @click="$store.hub.setMode(m.id)">
+                    <span class="tier-badge" :data-tier="hero.tiers[m.id]" x-text="hero.tiers[m.id]"></span><span x-text="m.short"></span>
+                  </button>
+                </template>
+              </div>
+            </header>
+
+            <div class="tip-columns">
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="coins"></span>Cost</h3>
+                <table class="farm-table cost-table">
+                  <tbody>
+                    <template x-for="(d, i) in DIFFICULTIES" :key="d.id"><tr><td x-text="d.label"></td><td class="numbers cash" x-text="hero.cost ? formatCash(hero.cost[i]) : '—'"></td></tr></template>
+                  </tbody>
+                </table>
+                <p class="dim tower-note" x-text="`Levels at ×${hero.xpModifier ?? 1} the normal XP cost.`"></p>
+              </div>
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="eye"></span>Camo and Lead</h3>
+                <ul class="tip-list">
+                  <li><span x-icon="eye"></span><span x-text="`Camo: ${levelLabel(hero.camoLevel)}`"></span></li>
+                  <li><span x-icon="shield"></span><span x-text="`Lead: ${levelLabel(hero.leadLevel)}`"></span></li>
+                </ul>
+                <p class="dim tower-note">For the main attack; abilities and items can differ (see the milestones).</p>
+              </div>
+              <div class="panel panel--padded">
+                <h3 class="game-title game-title--small panel__title"><span x-icon="lightbulb"></span>Tips</h3>
+                <ul class="tip-list"><template x-for="tip in hero.tips ?? []"><li><span x-icon="circle-check"></span><span x-text="tip"></span></li></template></ul>
+              </div>
+            </div>
+
+            <!-- Levels -->
+            <div class="panel panel--padded">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="trending-up"></span>Levels and when you get them</h3>
+              <div class="row-wrap" style="margin-bottom:12px">
+                <label class="planner-field planner-field--small"><span class="dim">Placed on round</span><input class="field numbers" type="number" min="1" max="100" x-model.number="placeRound"></label>
+                <label class="planner-field"><span class="dim">Map difficulty</span>
+                  <select class="field" x-model="mapDifficulty"><template x-for="d in MAP_DIFFICULTIES" :key="d"><option :value="d" x-text="d" :selected="d === mapDifficulty"></option></template></select>
+                </label>
+              </div>
+              <div class="level-list">
+                <template x-for="l in levels" :key="l.level">
+                  <div class="level-row" :class="{ 'level-row--key': l.text }">
+                    <span class="level-row__level game-title game-title--small" x-text="l.level"></span>
+                    <span class="level-row__round numbers" x-text="l.round ? `R${l.round}` : 'after R100'"></span>
+                    <span class="level-row__text" x-text="l.text"></span>
+                  </div>
+                </template>
+              </div>
+              <p class="dim tower-note" style="margin-top:10px">Rounds assume no other hero XP boosts (no Energizer, Monkey Knowledge or Banana Farmer XP). Milestones are summarised in our own words; see the sources for the full level list.</p>
+            </div>
+
+            <!-- Pairs and mentions -->
+            <div class="panel panel--padded" x-show="pairs.length">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="link"></span>Pairs well with</h3>
+              <div class="synergy-grid">
+                <template x-for="p in pairs" :key="p.unit">
+                  <button class="well synergy" @click="$store.hub.openUnit(p.partner)">
+                    <div x-avatar.small="p.partner"></div>
+                    <span class="synergy__text"><span class="synergy__name" x-text="p.partner.name"></span><span class="synergy__note" x-text="p.note"></span></span>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <div class="panel panel--padded" x-show="mentions.length">
+              <h3 class="game-title game-title--small panel__title"><span x-icon="map-pin"></span>Where it shows up</h3>
+              <div class="stack stack--tight">
+                <template x-for="mention in mentions" :key="mention.kind + mention.title + mention.text">
+                  <button class="well mention" @click="mention.go()">
+                    <span class="pill" x-text="mention.kind"></span>
+                    <span class="mention__text"><strong x-text="mention.title"></strong><span class="muted" x-text="mention.text"></span></span>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <p x-sources="hero.sources"></p>
+          </section>
+        </template>
+
+        <!-- =============================================================
              TAB · PARAGONS
              ============================================================= -->
         <section x-show="$store.hub.activeTab === 'paragons'" x-cloak x-data="paragonGuide" class="stack">
@@ -761,6 +928,62 @@
               </div>
             </div>
           </template>
+
+          <!-- Degree calculator -->
+          <div class="panel panel--padded stack" id="degree-calculator" x-data="degreeCalculator">
+            <h3 class="game-title panel__title" style="font-size:1.5rem;margin:0"><span x-icon="calculator"></span>Degree calculator</h3>
+            <p class="dim tower-note" style="margin:0">Enter what your Paragon will absorb. Cash power depends on the Paragon's price on your difficulty.</p>
+            <div class="calc-grid">
+              <label class="planner-field"><span class="dim">Paragon</span>
+                <select class="field" x-model="form.paragonId">
+                  <template x-for="p in $store.hub.paragons.paragons" :key="p.id"><option :value="p.id" x-text="p.name" :selected="p.id === form.paragonId"></option></template>
+                </select>
+              </label>
+              <label class="planner-field"><span class="dim">Difficulty</span>
+                <select class="field" x-model.number="form.difficulty">
+                  <template x-for="(d, i) in DIFFICULTIES" :key="d.id"><option :value="i" x-text="d.label" :selected="i === form.difficulty"></option></template>
+                </select>
+              </label>
+              <label class="planner-field"><span class="dim">Cash on absorbed towers (not tier 5s)</span><input class="field numbers" type="number" min="0" step="1000" x-model.number="form.towerCash"></label>
+              <label class="planner-field"><span class="dim">Cash on the slider</span><input class="field numbers" type="number" min="0" step="1000" x-model.number="form.sliderCash"></label>
+              <label class="planner-field"><span class="dim">Extra tier 5s (beyond the 3)</span><input class="field numbers" type="number" min="0" x-model.number="form.extraTier5"></label>
+              <label class="planner-field"><span class="dim">Damage dealt by absorbed towers</span><input class="field numbers" type="number" min="0" step="10000" x-model.number="form.damage"></label>
+              <label class="planner-field"><span class="dim">Income made by absorbed towers ($)</span><input class="field numbers" type="number" min="0" step="1000" x-model.number="form.income"></label>
+              <label class="planner-field"><span class="dim">Paragon Power Totems</span><input class="field numbers" type="number" min="0" x-model.number="form.totems"></label>
+            </div>
+
+            <div class="calc-result">
+              <div class="calc-degree">
+                <span class="dim">Degree</span>
+                <strong class="game-title" x-text="degree"></strong>
+                <span class="dim" x-text="`×${bossMultiplier(degree)} boss · ×${bossMultiplier(degree, true)} Elite`"></span>
+              </div>
+              <div class="well table-scroll" style="flex:1">
+                <table class="farm-table power-table">
+                  <thead><tr><th>Source</th><th>Power</th><th>Cap</th></tr></thead>
+                  <tbody>
+                    <template x-for="row in breakdown" :key="row.label">
+                      <tr :class="{ 'row--capped': row.cap && row.value >= row.cap }">
+                        <td x-text="row.label"></td><td class="numbers" x-text="row.value.toLocaleString('en-US')"></td><td class="numbers" x-text="row.cap ? row.cap.toLocaleString('en-US') : 'None'"></td>
+                      </tr>
+                    </template>
+                    <tr><td><strong>Total</strong></td><td class="numbers"><strong x-text="power.total.toLocaleString('en-US')"></strong></td><td></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p class="note" x-show="next"><span x-icon="trending-up"></span>
+              <span x-text="next ? `${next.power.toLocaleString('en-US')} more power for degree ${next.degree}; ${next.twentyPower.toLocaleString('en-US')} more for degree ${next.twenty}, the next boss-damage step.` : ''"></span>
+            </p>
+            <p class="dim tower-note" style="margin:0" x-text="`On this difficulty ${paragon.name} costs ${formatCash(paragonCost)}, so 1 power costs ${formatCash(power.perPower)} on towers or ${formatCash(power.perPower * 1.05)} on the slider.`"></p>
+
+            <div class="well calc-target">
+              <label class="planner-field planner-field--small"><span class="dim">Target degree</span><input class="field numbers" type="number" min="1" max="100" x-model.number="form.target"></label>
+              <p x-text="target.missing === 0 ? `You already reach degree ${target.degree}.` : `Degree ${target.degree} needs ${target.needed.toLocaleString('en-US')} power: ${target.missing.toLocaleString('en-US')} more. ` + (target.sliderCash ? `The slider can add up to ${formatCash(target.sliderCash)} worth before the cash cap` : 'The cash cap is already reached') + (target.afterSlider > 0 ? `, leaving ${target.afterSlider.toLocaleString('en-US')} power (about ${target.totems} totems, or more pops/tier 5s).` : '.')"></p>
+              <p class="dim" x-text="`At degree ${target.degree}: ×${target.normal} damage to bosses, ×${target.elite} to Elite bosses.`"></p>
+            </div>
+            <p x-sources="['wiki-paragon']"></p>
+          </div>
 
           <!-- Degree guide -->
           <div class="panel panel--padded stack" id="degree-guide">
@@ -877,6 +1100,215 @@
             <p x-sources="paragon.sources"></p>
           </section>
         </template>
+
+        <!-- =============================================================
+             TAB · ROUNDS  (every round of the standard and ABR sets)
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'rounds'" x-cloak x-data="roundBrowser" class="stack">
+          <div class="section-head">
+            <div>
+              <h2 class="game-title">Round <span class="highlight">Browser</span></h2>
+              <p x-text="$store.hub.rounds.intro"></p>
+            </div>
+          </div>
+
+          <div class="panel panel--padded stack stack--tight">
+            <div class="row-wrap">
+              <div class="mode-switch mode-switch--wide">
+                <template x-for="s in $store.hub.rounds.sets" :key="s.id">
+                  <button class="button button--small" :class="setId === s.id ? 'button--gold' : 'button--quiet'" :aria-pressed="setId === s.id" @click="pickSet(s.id)" x-text="s.name"></button>
+                </template>
+              </div>
+              <div class="mode-switch mode-switch--wide push-right">
+                <template x-for="r in RANGES" :key="r.id">
+                  <button class="button button--small" :class="range === r.id ? 'button--gold' : 'button--quiet'" :aria-pressed="range === r.id" @click="range = r.id" x-text="r.label"></button>
+                </template>
+              </div>
+            </div>
+            <div class="row-wrap">
+              <span class="dim filter-label">Contains</span>
+              <template x-for="tag in ROUND_TAGS" :key="tag.id">
+                <button class="chip" :class="{ 'chip--on': tags.includes(tag.id) }" :aria-pressed="tags.includes(tag.id)" @click="toggleTag(tag.id)" x-text="tag.label"></button>
+              </template>
+            </div>
+            <div class="row-wrap">
+              <label class="dim filter-label" for="round-start">Cash count</label>
+              <select id="round-start" class="field" style="width:auto" :value="startRound" @change="pickStart($event.target.value)">
+                <template x-for="s in STARTS" :key="s.id"><option :value="s.id" x-text="s.label" :selected="s.id === startRound"></option></template>
+              </select>
+              <label class="option option--inline"><input type="checkbox" class="checkbox" x-model="halfCash"><span>Half Cash</span></label>
+            </div>
+          </div>
+
+          <div class="panel round-table-wrap">
+            <div class="round-row round-row--head">
+              <span>Round</span><span>Bloons</span><span class="numbers">RBE</span><span class="numbers">Cash</span><span class="numbers">Banked</span>
+            </div>
+            <template x-for="row in rows" :key="row.round">
+              <div class="round-row" :class="{ 'round-row--danger': row.danger }">
+                <span class="round-row__n">
+                  <strong class="game-title game-title--small" x-text="row.round"></strong>
+                  <span class="dim" x-text="`${row.duration.toFixed(1)}s`"></span>
+                </span>
+                <span class="round-row__bloons">
+                  <template x-for="(b, i) in row.bloons" :key="i">
+                    <span class="bloon-chip" :class="{ 'bloon-chip--blimp': b.blimp }" :title="b.name">
+                      <span class="bloon-dot" :style="`background:${b.color}`"></span>
+                      <span x-text="`${b.name} ×${b.count}`"></span>
+                    </span>
+                  </template>
+                  <template x-if="row.danger">
+                    <button class="pill pill--warn danger-link" @click="$store.hub.jumpTo('chimps', `round-${row.round}`)"><span x-icon="skull"></span><span x-text="row.danger.title"></span></button>
+                  </template>
+                </span>
+                <span class="numbers" x-text="row.rbe.toLocaleString('en-US')"></span>
+                <span class="numbers cash" x-text="formatCash(row.cash)"></span>
+                <span class="numbers dim" x-text="row.banked === null ? '—' : formatCash(row.banked)"></span>
+              </div>
+            </template>
+            <p class="muted" style="padding:14px" x-show="rows.length === 0">No rounds match those filters.</p>
+          </div>
+          <p class="dim tower-note">"Banked" is the total cash you'd have after that round if you spent nothing, counting from the round you picked and starting with $650. Cash per pop drops after round 50, and the figures already include that.</p>
+          <p x-sources="set.sources"></p>
+        </section>
+
+        <!-- =============================================================
+             TAB · PLANNER  (CHIMPS build planner)
+             ============================================================= -->
+        <section x-show="$store.hub.activeTab === 'planner'" x-cloak x-data="buildPlanner" class="stack">
+          <div class="section-head">
+            <div>
+              <h2 class="game-title">Build <span class="highlight">Planner</span></h2>
+              <p>Plan a run round by round: when you buy each tower and upgrade it, and when you place your hero. The planner adds up the cost on your difficulty, checks you can afford each step from round income alone, and flags whether you'll have Camo and Lead answers in time.</p>
+            </div>
+            <div class="section-head__tools">
+              <button class="button button--blue button--small" @click="share()"><span x-icon="link"></span><span x-text="copied ? 'Link copied' : 'Share link'"></span></button>
+              <button class="button button--quiet button--small" @click="reset()"><span x-icon="rotate-ccw"></span>Start over</button>
+            </div>
+          </div>
+
+          <!-- Settings -->
+          <div class="panel panel--padded planner-settings">
+            <label class="planner-field"><span class="dim">Mode</span>
+              <select class="field" x-model="build.mode">
+                <template x-for="m in PLAN_MODES" :key="m.id"><option :value="m.id" x-text="`${m.label} (rounds ${m.start}–${m.end})`" :selected="m.id === build.mode"></option></template>
+              </select>
+            </label>
+            <label class="planner-field"><span class="dim">Rounds</span>
+              <select class="field" x-model="build.setId">
+                <template x-for="s in $store.hub.rounds.sets" :key="s.id"><option :value="s.id" x-text="s.name" :selected="s.id === build.setId"></option></template>
+              </select>
+            </label>
+            <label class="planner-field"><span class="dim">Map</span>
+              <select class="field" x-model="build.mapId">
+                <template x-for="m in $store.hub.maps.maps" :key="m.id"><option :value="m.id" x-text="`${m.name} (${m.difficulty})`" :selected="m.id === build.mapId"></option></template>
+              </select>
+            </label>
+            <label class="planner-field"><span class="dim">Hero</span>
+              <select class="field" x-model="build.heroId">
+                <option value="">No hero</option>
+                <template x-for="h in $store.hub.heroes" :key="h.id"><option :value="h.id" x-text="h.name" :selected="h.id === build.heroId"></option></template>
+              </select>
+            </label>
+            <label class="planner-field planner-field--small" x-show="build.heroId"><span class="dim">Hero on round</span>
+              <input class="field numbers" type="number" :min="mode.start" :max="mode.end" x-model.number="build.heroRound">
+            </label>
+            <label class="option option--inline"><input type="checkbox" class="checkbox" x-model="build.halfCash"><span>Half Cash</span></label>
+          </div>
+
+          <!-- Summary and checks -->
+          <div class="stat-row">
+            <div class="panel stat"><span class="dim">Total spent</span><strong class="numbers cash" x-text="formatCash(totals.spent)"></strong></div>
+            <div class="panel stat"><span class="dim" x-text="`Cash earned by round ${mode.end}`"></span><strong class="numbers" x-text="formatCash(totals.earned)"></strong></div>
+            <div class="panel stat" :class="totals.firstShort ? 'stat--bad' : 'stat--good'">
+              <span class="dim">Affordable?</span>
+              <strong x-text="totals.firstShort ? `Short on round ${totals.firstShort.round}` : 'Every step'"></strong>
+            </div>
+            <template x-for="check in checks" :key="check.kind">
+              <div class="panel stat" :class="check.round && !check.who.length ? 'stat--bad' : 'stat--good'">
+                <span class="dim" x-text="check.round ? `${check.kind === 'camo' ? 'Camo' : 'Lead'} by round ${check.round}` : `No ${check.kind} rounds`"></span>
+                <strong x-text="!check.round ? '—' : check.who.length ? check.who[0] : 'Nothing covers it'"></strong>
+              </div>
+            </template>
+          </div>
+
+          <div class="planner-layout">
+            <!-- Towers -->
+            <div class="stack stack--tight">
+              <div class="panel panel--padded row-wrap planner-add">
+                <select class="field" x-model="newTower" aria-label="Tower to add">
+                  <template x-for="t in $store.hub.towers" :key="t.id"><option :value="t.id" x-text="t.name"></option></template>
+                </select>
+                <label class="planner-field planner-field--small"><span class="dim">on round</span>
+                  <input class="field numbers" type="number" :min="mode.start" :max="mode.end" x-model.number="newRound">
+                </label>
+                <button class="button button--gold button--small" @click="addTower()"><span x-icon="plus"></span>Add tower</button>
+              </div>
+
+              <template x-for="(entry, index) in build.towers" :key="entry.key">
+                <article class="panel planner-tower">
+                  <header class="row-wrap">
+                    <div x-avatar.small="towerData(entry.tower)"></div>
+                    <strong class="game-title game-title--small" x-text="towerData(entry.tower)?.name"></strong>
+                    <button class="button button--quiet button--small push-right" @click="removeTower(index)" :aria-label="`Remove ${towerData(entry.tower)?.name}`"><span x-icon="trash-2"></span></button>
+                  </header>
+                  <template x-for="(step, s) in entry.steps" :key="s">
+                    <div class="planner-step" :class="{ 'planner-step--bad': stepProblem(step) }">
+                      <label class="planner-field planner-field--small"><span class="dim">Round</span>
+                        <input class="field numbers" type="number" :min="mode.start" :max="mode.end" x-model.number="step.round">
+                      </label>
+                      <div class="path-stepper" role="group" aria-label="Crosspath">
+                        <template x-for="p in [0, 1, 2]" :key="p">
+                          <span class="path-stepper__path">
+                            <button class="button button--quiet button--tiny" @click="bump(step, p, -1)" :aria-label="`Lower path ${p + 1}`">−</button>
+                            <span class="numbers" x-text="step.path.split('-')[p]"></span>
+                            <button class="button button--quiet button--tiny" @click="bump(step, p, 1)" :aria-label="`Raise path ${p + 1}`">+</button>
+                          </span>
+                        </template>
+                      </div>
+                      <span class="cash numbers" x-text="stepCost(entry, s) === null ? '—' : formatCash(stepCost(entry, s))"></span>
+                      <button class="button button--quiet button--tiny" x-show="entry.steps.length > 1" @click="removeStep(entry, s)" aria-label="Remove step"><span x-icon="x"></span></button>
+                    </div>
+                  </template>
+                  <button class="button button--quiet button--small" @click="addStep(entry)"><span x-icon="circle-arrow-up"></span>Upgrade later</button>
+                </article>
+              </template>
+              <p class="panel panel--padded muted" x-show="!build.towers.length">Add your first tower above. Each tower starts at 0-0-0; use the + buttons to set its crosspath and "Upgrade later" to add a step on a later round.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="panel timeline">
+              <h3 class="game-title game-title--small panel__title" style="padding:14px 16px 4px"><span x-icon="calendar-range"></span>Round by round</h3>
+              <template x-for="row in timeline" :key="row.round">
+                <div class="timeline-row" :class="{ 'timeline-row--short': row.short, 'timeline-row--danger': row.danger }">
+                  <div class="timeline-row__round">
+                    <strong class="game-title game-title--small" x-text="`R${row.round}`"></strong>
+                    <span class="numbers dim" x-text="formatCash(row.cashBefore)"></span>
+                  </div>
+                  <div class="timeline-row__body">
+                    <template x-for="buy in row.buys" :key="buy.label + buy.round">
+                      <div class="timeline-buy" :class="{ 'timeline-buy--bad': buy.problem }">
+                        <span x-text="buy.label"></span>
+                        <span class="cash numbers" x-text="buy.problem ? buy.problem : formatCash(buy.cost)"></span>
+                      </div>
+                    </template>
+                    <p class="timeline-warn" x-show="row.short"><span x-icon="circle-alert"></span><span x-text="`Short by ${formatCash(row.short)} at the start of the round.`"></span></p>
+                    <template x-if="row.danger">
+                      <div class="timeline-danger">
+                        <button class="pill pill--warn" @click="$store.hub.jumpTo('chimps', `round-${row.round}`)"><span x-icon="skull"></span><span x-text="row.danger.title"></span></button>
+                        <span class="dim" x-text="row.danger.counters.slice(0, 2).join(' · ')"></span>
+                        <span class="timeline-snapshot" x-text="row.snapshot.towers.length ? 'You have: ' + row.snapshot.towers.map((t) => `${t.tower.name} ${pathText(t.path)}`).join(', ') + (row.snapshot.heroLevel ? ` · ${hero.name} level ${row.snapshot.heroLevel}` : '') : 'Nothing placed yet.'"></span>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <p class="dim tower-note">Cash counts only the round income (pops plus the end-of-round bonus) and the $650 start, so farms, Merchantmen and other income aren't included. In CHIMPS they don't exist anyway. Purchases on a round are checked against the cash you have when that round starts. Prices use your mode's difficulty and no discounts. Hero levels use the map's difficulty (harder maps level faster).</p>
+          <p x-sources="['wiki-rounds', 'wiki-hero-xp', 'wiki-camo-detection']"></p>
+        </section>
 
         <!-- =============================================================
              TAB 3 · FARMING ENGINE

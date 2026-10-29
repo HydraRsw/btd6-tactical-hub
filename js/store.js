@@ -5,12 +5,13 @@ import { loadGameData } from './lib/data.js';
 import { recall, remember } from './lib/storage.js';
 
 // Tabs in header order.
-export const TABS = ['tier', 'cross', 'maps', 'paragons', 'farm', 'chimps'];
+export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'planner', 'farm', 'chimps'];
 
 // Detail pages aren't tabs. Each has an address like #tower/<id> and a list
 // in the data it looks its id up in.
 export const PAGES = {
   tower: (hub) => hub.towers,
+  hero: (hub) => hub.heroes,
   map: (hub) => hub.maps.maps,
   mode: (hub) => hub.modes.modes,
   paragon: (hub) => hub.paragons.paragons,
@@ -37,6 +38,7 @@ export function createHubStore() {
     paragons: { intro: '', paragons: [], degreeGuide: { basics: [], powerSources: [], tips: [], sources: [] } },
     maps: { intro: '', maps: [] },
     modes: { modes: [] },
+    rounds: { startCash: 650, sets: [] },
 
     mode: ['chimps', 'boss', 'normal'].includes(recall('mode', 'chimps')) ? recall('mode', 'chimps') : 'chimps', // which game mode the tiers are shown for (see MODES)
     activeTab: 'tier',     // one of TABS, or a PAGES kind ('tower', 'map'…) while a detail page is open
@@ -122,6 +124,11 @@ export function createHubStore() {
 
     openTower(towerId) {
       this.openPage('tower', towerId);
+    },
+
+    /** A tower or hero's own page. */
+    openUnit(unit) {
+      if (unit) this.openPage(unit.category === 'Heroes' ? 'hero' : 'tower', unit.id);
     },
 
     openTabFromUrl() {

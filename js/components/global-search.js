@@ -14,11 +14,11 @@ const KIND_STYLES = {
   Paragon: { color: '#a77bff' },
   Map: { color: '#7ad420', icon: 'map' },
   Mode: { color: '#ff9f1c', icon: 'gamepad-2' },
+  Tool: { color: '#ffd23f', icon: 'wrench' },
 };
 
 /** Everything the search box can find, built from the loaded data. */
 function buildSearchIndex(hub) {
-  const synergyHeroIds = hub.playbook.heroSynergies.map((s) => s.heroId);
 
   const towers = hub.towers.map((tower) => ({
     kind: 'Tower',
@@ -35,9 +35,7 @@ function buildSearchIndex(hub) {
     title: hero.name,
     subtitle: `Hero · CHIMPS ${hero.tiers.chimps} / Boss ${hero.tiers.boss} / Normal ${hero.tiers.normal}`,
     keywords: ['hero', ...hero.roles].join(' '),
-    go: synergyHeroIds.includes(hero.id)
-      ? () => hub.jumpTo('chimps', `hero-${hero.id}`)
-      : () => hub.jumpTo('tier', `tier-${hero.id}`, hero.id),
+    go: () => hub.openPage('hero', hero.id),
   }));
 
   const rounds = hub.playbook.dangerRounds.map((round) => ({
@@ -89,7 +87,13 @@ function buildSearchIndex(hub) {
     go: () => hub.openPage('mode', mode.id),
   }));
 
-  return [...towers, ...heroes, ...paragons, ...maps, ...modes, ...rounds, ...checkpoints, ...strategies];
+  const tools = [
+    { title: 'Build planner', subtitle: 'Plan a CHIMPS run round by round', keywords: 'planner chimps build cash afford', go: () => hub.openTab('planner') },
+    { title: 'Round browser', subtitle: 'Every round: bloons, RBE and cash', keywords: 'rounds rbe cash abr alternate', go: () => hub.openTab('rounds') },
+    { title: 'Paragon degree calculator', subtitle: 'Power and degree from what you absorb', keywords: 'paragon degree power calculator', go: () => hub.jumpTo('paragons', 'degree-calculator') },
+  ].map((tool) => ({ kind: 'Tool', ...tool }));
+
+  return [...tools, ...towers, ...heroes, ...paragons, ...maps, ...modes, ...rounds, ...checkpoints, ...strategies];
 }
 
 export function globalSearch() {

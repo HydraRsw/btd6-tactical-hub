@@ -29,9 +29,7 @@ export function paragonPage() {
         }
         const unit = hub.units.find((u) => u.id === synergy.unit);
         if (!unit) return null;
-        const go = unit.category === 'Heroes'
-          ? () => hub.jumpTo('tier', `tier-${unit.id}`, unit.id)
-          : () => hub.openTower(unit.id);
+        const go = () => hub.openUnit(unit);
         return { ...synergy, name: unit.name, avatar: unit, go };
       }).filter(Boolean);
     },
