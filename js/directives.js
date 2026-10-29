@@ -153,26 +153,41 @@ function bloonImageNames(bloon) {
   return [...new Set([prefix ? `${prefix}-${base}` : base, base])];
 }
 
+// Each picture file is checked once per visit, so missing files cost one request, not one per icon.
+const pictureChecks = new Map();
+function pictureExists(src) {
+  if (!pictureChecks.has(src)) {
+    pictureChecks.set(src, new Promise((resolve) => {
+      const probe = new Image();
+      probe.onload = () => resolve(true);
+      probe.onerror = () => resolve(false);
+      probe.src = src;
+    }));
+  }
+  return pictureChecks.get(src);
+}
+
 function buildBloon(bloon, imageDir) {
   const wrap = document.createElement('span');
   wrap.className = 'bloon-icon';
   wrap.title = bloon.name;
   wrap.append(drawBloon(bloon));
   if (imageDir) {
-    const names = bloonImageNames(bloon);
-    const picture = document.createElement('img');
-    picture.className = 'bloon-icon__image';
-    picture.alt = '';
-    picture.loading = 'lazy';
-    let attempt = 0;
-    const tryNext = () => {
-      if (attempt >= names.length) return picture.remove();
-      picture.src = `${imageDir.replace(/\/+$/, '')}/bloons/${names[attempt++]}.png`;
-    };
-    picture.addEventListener('error', tryNext);
-    picture.addEventListener('load', () => wrap.classList.add('bloon-icon--picture'));
-    tryNext();
-    wrap.append(picture);
+    const folder = `${imageDir.replace(/\/+$/, '')}/bloons`;
+    (async () => {
+      for (const name of bloonImageNames(bloon)) {
+        const src = `${folder}/${name}.png`;
+        if (await pictureExists(src)) {
+          const picture = document.createElement('img');
+          picture.className = 'bloon-icon__image';
+          picture.alt = '';
+          picture.src = src;
+          wrap.append(picture);
+          wrap.classList.add('bloon-icon--picture');
+          return;
+        }
+      }
+    })();
   }
   return wrap;
 }
