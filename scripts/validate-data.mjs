@@ -291,6 +291,21 @@ for (const f of eventsFile?.formats ?? []) checkSourceIds(f.sources, `events.jso
 const freeplayFile = load('freeplay');
 if (freeplayFile) checkSourceIds(freeplayFile.sources, 'freeplay.json');
 
+// Spanish dictionary (js/lib/i18n.js): exact strings and regex patterns must be usable.
+const es = load('i18n/es');
+if (es) {
+  if (typeof es.exact !== 'object' || Array.isArray(es.exact)) problems.push('i18n/es.json: "exact" must be an object');
+  for (const [english, spanish] of Object.entries(es.exact ?? {})) if (typeof spanish !== 'string' || !spanish.trim()) problems.push(`i18n/es.json: empty translation for "${english}"`);
+  for (const entry of es.patterns ?? []) {
+    try {
+      new RegExp(entry[0]);
+    } catch (error) {
+      problems.push(`i18n/es.json: bad pattern ${entry[0]} (${error.message})`);
+    }
+    if (typeof entry[1] !== 'string') problems.push(`i18n/es.json: pattern ${entry[0]} needs a Spanish string`);
+  }
+}
+
 if (problems.length) {
   console.error(`✗ ${problems.length} problem(s) in /data:\n  - ${problems.join('\n  - ')}`);
   process.exit(1);

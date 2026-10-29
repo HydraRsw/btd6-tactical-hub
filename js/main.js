@@ -22,6 +22,10 @@ import { heroPage } from './components/hero-page.js';
 import { compareUnits } from './components/compare.js';
 import { eventsTab } from './components/events.js';
 import { medalTracker, favouritesBar, patchPage } from './components/tracker.js';
+import { startI18n } from './lib/i18n.js';
+
+// Spanish (or English) text swap; runs alongside Alpine and catches up on whatever it rendered.
+startI18n();
 
 document.addEventListener('alpine:init', () => {
   const Alpine = window.Alpine;

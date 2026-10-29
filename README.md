@@ -138,6 +138,23 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 Map and mode advice comes from each map's Bloons wiki page and the wiki's mode strategy
 pages; Paragon pages from each Paragon's wiki page (its Strategy section).
 
+## Spanish version (EN / ES switch)
+
+The header has an EN / ES switch. Spanish is also picked automatically for
+browsers set to Spanish; the choice is remembered in the browser.
+
+The site is written in English and `js/lib/i18n.js` swaps the text on the page
+for Spanish as it appears, using `data/i18n/es.json`:
+
+- `exact`: English text exactly as shown (spaces collapsed) → Spanish.
+- `patterns`: text built from numbers or names, as `["^Round (\\d+)$", "Ronda {1}"]`.
+  `{1}`, `{2}`… are the regex groups, and they're translated too when known.
+
+Anything missing simply shows in English, so new text never breaks the page.
+When you add or change text (data notes, patch notes, labels), add its Spanish
+line to `exact`. Tower, upgrade, hero, map and mode names are game names and
+stay in English. `node scripts/validate-data.mjs` checks the file.
+
 ## Where the rankings come from
 
 Tiers and routes are editorial judgments, not copied from any single list. They were

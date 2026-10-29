@@ -4,6 +4,7 @@
 import { ROUND_TAGS, cashAtRoundStart, cashPerPop, freeplayMoabHealth, freeplaySpeed, parseBloon, roundCash, roundTags } from '../lib/game.js';
 import { formatCash } from '../lib/text.js';
 import { recall, remember } from '../lib/storage.js';
+import { t } from '../lib/i18n.js';
 
 const RANGES = [
   { id: 'all', label: 'All', from: 1, to: 140 },
@@ -129,18 +130,18 @@ export function roundBrowser() {
         data: {
           labels: rounds.map((r) => r.round),
           datasets: [
-            { label: 'RBE', data: rounds.map((r) => r.rbe), borderColor: '#ff6b6b', backgroundColor: 'rgba(255,107,107,.2)', yAxisID: 'rbe', pointRadius: 0, borderWidth: 2, tension: 0.2 },
-            { label: 'Cash', data: rounds.map((r) => roundCash(r, { halfCash: this.halfCash })), borderColor: '#a8f05a', backgroundColor: 'rgba(168,240,90,.2)', yAxisID: 'cash', pointRadius: 0, borderWidth: 2, tension: 0.2 },
+            { label: t('RBE'), data: rounds.map((r) => r.rbe), borderColor: '#ff6b6b', backgroundColor: 'rgba(255,107,107,.2)', yAxisID: 'rbe', pointRadius: 0, borderWidth: 2, tension: 0.2 },
+            { label: t('Cash'), data: rounds.map((r) => roundCash(r, { halfCash: this.halfCash })), borderColor: '#a8f05a', backgroundColor: 'rgba(168,240,90,.2)', yAxisID: 'cash', pointRadius: 0, borderWidth: 2, tension: 0.2 },
           ],
         },
         options: {
           maintainAspectRatio: false,
           interaction: { mode: 'index', intersect: false },
-          plugins: { legend: { labels: { color: '#dce8ff' } }, tooltip: { callbacks: { title: (items) => `Round ${items[0].label}` } } },
+          plugins: { legend: { labels: { color: '#dce8ff' } }, tooltip: { callbacks: { title: (items) => t(`Round ${items[0].label}`) } } },
           scales: {
             x: { ticks: { color: '#b9cdee', maxTicksLimit: 14 }, grid: { color: 'rgba(255,255,255,.06)' } },
-            rbe: { type: 'logarithmic', position: 'left', title: { display: true, text: 'RBE (log scale)', color: '#ff9b9b' }, ticks: { color: '#b9cdee' }, grid: { color: 'rgba(255,255,255,.06)' } },
-            cash: { type: 'linear', position: 'right', title: { display: true, text: 'Cash', color: '#c8f59a' }, ticks: { color: '#b9cdee' }, grid: { display: false } },
+            rbe: { type: 'logarithmic', position: 'left', title: { display: true, text: t('RBE (log scale)'), color: '#ff9b9b' }, ticks: { color: '#b9cdee' }, grid: { color: 'rgba(255,255,255,.06)' } },
+            cash: { type: 'linear', position: 'right', title: { display: true, text: t('Cash'), color: '#c8f59a' }, ticks: { color: '#b9cdee' }, grid: { display: false } },
           },
         },
       });
@@ -164,17 +165,17 @@ export function roundBrowser() {
         data: {
           labels: rounds,
           datasets: [
-            { label: 'MOAB-class health ×', data: rounds.map(freeplayMoabHealth), borderColor: '#ff6b6b', pointRadius: 0, borderWidth: 2 },
-            { label: 'Bloon speed ×', data: rounds.map(freeplaySpeed), borderColor: '#43c6ff', pointRadius: 0, borderWidth: 2 },
+            { label: t('MOAB-class health ×'), data: rounds.map(freeplayMoabHealth), borderColor: '#ff6b6b', pointRadius: 0, borderWidth: 2 },
+            { label: t('Bloon speed ×'), data: rounds.map(freeplaySpeed), borderColor: '#43c6ff', pointRadius: 0, borderWidth: 2 },
           ],
         },
         options: {
           maintainAspectRatio: false,
           interaction: { mode: 'index', intersect: false },
-          plugins: { legend: { labels: { color: '#dce8ff' } }, tooltip: { callbacks: { title: (items) => `Round ${items[0].label}`, label: (item) => `${item.dataset.label}${item.parsed.y.toFixed(2)}` } } },
+          plugins: { legend: { labels: { color: '#dce8ff' } }, tooltip: { callbacks: { title: (items) => t(`Round ${items[0].label}`), label: (item) => `${item.dataset.label}${item.parsed.y.toFixed(2)}` } } },
           scales: {
             x: { ticks: { color: '#b9cdee', maxTicksLimit: 12 }, grid: { color: 'rgba(255,255,255,.06)' } },
-            y: { type: 'logarithmic', ticks: { color: '#b9cdee' }, grid: { color: 'rgba(255,255,255,.06)' }, title: { display: true, text: 'Multiplier (log scale)', color: '#b9cdee' } },
+            y: { type: 'logarithmic', ticks: { color: '#b9cdee' }, grid: { color: 'rgba(255,255,255,.06)' }, title: { display: true, text: t('Multiplier (log scale)'), color: '#b9cdee' } },
           },
         },
       });
