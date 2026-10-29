@@ -418,5 +418,6 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
   .checkpoint { grid-template-columns: minmax(0, 1fr); }
   .section-head h2 { font-size: 1.6rem; }
   .tower-hero { grid-template-columns: minmax(0, 1fr); justify-items: start; }
+  .neighbour-name { display: none; }
   .tower-hero__text h2 { font-size: 1.9rem; }
 }
