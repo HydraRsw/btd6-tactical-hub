@@ -2157,6 +2157,13 @@
 "Extreme": "Extremo",
 "· Extreme": "· Extremo",
 "Not covered": "Sin cubrir",
+"Crosspath Guide": "Guía de crosspaths",
+"Maps & Modes": "Mapas y modos",
+"Most maps": "La mayoría de mapas",
+"Maps with water": "Mapas con agua",
+"Beginner and most Intermediate maps": "Mapas Principiante y la mayoría de Intermedios",
+"Maps where range is a problem": "Mapas donde el alcance es un problema",
+"Every round in the standard and Alternate Bloons Rounds sets: bloon groups, duration, RBE (total health) and cash. Cash is the base amount from popping plus the end-of-round bonus; Half Cash halves both.": "Cada ronda de los conjuntos estándar y Alternate Bloons Rounds: grupos de bloons, duración, RBE (vida total) y dinero. El dinero es la cantidad base por explotar más el bonus de fin de ronda; Half Cash reduce ambos a la mitad.",
 "lives": "vidas"
 },
 "patterns": [
@@ -2249,8 +2256,8 @@
 "Sube de nivel con ×{1} del coste normal de XP."
 ],
 [
-"^Effects get shorter from round 150: (.+)$",
-"Los efectos se acortan desde la ronda 150: {1}"
+"^Effects get shorter from round 150: (.+)\\.$",
+"Los efectos se acortan desde la ronda 150: {1}."
 ],
 [
 "^Boss event · (.+)$",
@@ -2527,6 +2534,26 @@
 [
 "^Tier (\\S)$",
 "Tier {1}"
+],
+[
+"^(\\S+) (\\d+)% shorter$",
+"{1} {2}% más cortos"
+],
+[
+"^\\+(\\S+)% per round$",
+"+{1}% por ronda"
+],
+[
+"^(Camo|Lead): (.+)$",
+"{1}: {2}"
+],
+[
+"^(.+) in (.+):$",
+"{1} en {2}:"
+],
+[
+"^(\\d+) and (\\d+)$",
+"{1} y {2}"
 ]
 ]
 }

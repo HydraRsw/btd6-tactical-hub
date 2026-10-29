@@ -69,6 +69,12 @@ function lookup(core) {
     const match = core.match(regex);
     if (match) return replacement.replace(/\{(\d+)\}/g, (_, n) => part(match[Number(n)] ?? ''));
   }
+  // "Land · Estimate: …" and other " · " lists: translate each piece.
+  if (core.includes(' · ')) {
+    const pieces = core.split(' · ');
+    const translated = pieces.map((piece) => lookupQuiet(piece));
+    if (translated.some((piece, i) => piece !== pieces[i])) return translated.join(' · ');
+  }
   return undefined;
 }
 

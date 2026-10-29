@@ -25,37 +25,37 @@
   <script type="importmap">
   {
     "imports": {
-      "./js/components/compare.js": "./js/components/compare.js?v=22551d34fd",
-      "./js/components/crosspath.js": "./js/components/crosspath.js?v=22551d34fd",
-      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=22551d34fd",
-      "./js/components/events.js": "./js/components/events.js?v=22551d34fd",
-      "./js/components/farming.js": "./js/components/farming.js?v=22551d34fd",
-      "./js/components/global-search.js": "./js/components/global-search.js?v=22551d34fd",
-      "./js/components/hero-page.js": "./js/components/hero-page.js?v=22551d34fd",
-      "./js/components/maps.js": "./js/components/maps.js?v=22551d34fd",
-      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=22551d34fd",
-      "./js/components/paragons.js": "./js/components/paragons.js?v=22551d34fd",
-      "./js/components/planner.js": "./js/components/planner.js?v=22551d34fd",
-      "./js/components/playbook.js": "./js/components/playbook.js?v=22551d34fd",
-      "./js/components/rounds.js": "./js/components/rounds.js?v=22551d34fd",
-      "./js/components/tier-list.js": "./js/components/tier-list.js?v=22551d34fd",
-      "./js/components/tower-page.js": "./js/components/tower-page.js?v=22551d34fd",
-      "./js/components/tracker.js": "./js/components/tracker.js?v=22551d34fd",
-      "./js/directives.js": "./js/directives.js?v=22551d34fd",
-      "./js/lib/data.js": "./js/lib/data.js?v=22551d34fd",
-      "./js/lib/economy.js": "./js/lib/economy.js?v=22551d34fd",
-      "./js/lib/game.js": "./js/lib/game.js?v=22551d34fd",
-      "./js/lib/i18n.js": "./js/lib/i18n.js?v=22551d34fd",
-      "./js/lib/storage.js": "./js/lib/storage.js?v=22551d34fd",
-      "./js/lib/text.js": "./js/lib/text.js?v=22551d34fd",
-      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=22551d34fd",
-      "./js/main.js": "./js/main.js?v=22551d34fd",
-      "./js/store.js": "./js/store.js?v=22551d34fd"
+      "./js/components/compare.js": "./js/components/compare.js?v=6abae05e8b",
+      "./js/components/crosspath.js": "./js/components/crosspath.js?v=6abae05e8b",
+      "./js/components/degree-calc.js": "./js/components/degree-calc.js?v=6abae05e8b",
+      "./js/components/events.js": "./js/components/events.js?v=6abae05e8b",
+      "./js/components/farming.js": "./js/components/farming.js?v=6abae05e8b",
+      "./js/components/global-search.js": "./js/components/global-search.js?v=6abae05e8b",
+      "./js/components/hero-page.js": "./js/components/hero-page.js?v=6abae05e8b",
+      "./js/components/maps.js": "./js/components/maps.js?v=6abae05e8b",
+      "./js/components/paragon-page.js": "./js/components/paragon-page.js?v=6abae05e8b",
+      "./js/components/paragons.js": "./js/components/paragons.js?v=6abae05e8b",
+      "./js/components/planner.js": "./js/components/planner.js?v=6abae05e8b",
+      "./js/components/playbook.js": "./js/components/playbook.js?v=6abae05e8b",
+      "./js/components/rounds.js": "./js/components/rounds.js?v=6abae05e8b",
+      "./js/components/tier-list.js": "./js/components/tier-list.js?v=6abae05e8b",
+      "./js/components/tower-page.js": "./js/components/tower-page.js?v=6abae05e8b",
+      "./js/components/tracker.js": "./js/components/tracker.js?v=6abae05e8b",
+      "./js/directives.js": "./js/directives.js?v=6abae05e8b",
+      "./js/lib/data.js": "./js/lib/data.js?v=6abae05e8b",
+      "./js/lib/economy.js": "./js/lib/economy.js?v=6abae05e8b",
+      "./js/lib/game.js": "./js/lib/game.js?v=6abae05e8b",
+      "./js/lib/i18n.js": "./js/lib/i18n.js?v=6abae05e8b",
+      "./js/lib/storage.js": "./js/lib/storage.js?v=6abae05e8b",
+      "./js/lib/text.js": "./js/lib/text.js?v=6abae05e8b",
+      "./js/lib/upgrades.js": "./js/lib/upgrades.js?v=6abae05e8b",
+      "./js/main.js": "./js/main.js?v=6abae05e8b",
+      "./js/store.js": "./js/store.js?v=6abae05e8b"
     }
   }
   </script>
   <!-- import-map:end -->
-  <script type="module" src="js/main.js?v=22551d34fd"></script>
+  <script type="module" src="js/main.js?v=6abae05e8b"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 
@@ -1269,7 +1269,7 @@
               </div>
               <ul class="tip-list">
                 <li><span x-icon="circle-alert"></span><span x-text="$store.hub.freeplay.superCeramics"></span></li>
-                <li><span x-icon="timer"></span><span x-text="`Effects get shorter from round 150: ${$store.hub.freeplay.statusResistance.map((r) => r.rounds + ' ' + r.value).join(', ')}. ${$store.hub.freeplay.statusNote}`"></span></li>
+                <li><span x-icon="timer"></span><span><span x-text="`Effects get shorter from round 150: ${$store.hub.freeplay.statusResistance.map((r) => r.rounds + ' ' + r.value).join(', ')}.`"></span> <span x-text="$store.hub.freeplay.statusNote"></span></span></li>
                 <li><span x-icon="info"></span><span x-text="$store.hub.freeplay.bossNote"></span></li>
               </ul>
               <p x-sources="$store.hub.freeplay.sources"></p>
