@@ -966,5 +966,9 @@
  "wiki-localization": {
   "title": "Bloons wiki: 'In other languages' tables (official Spanish names)",
   "url": "https://www.bloonswiki.com/Dart_Monkey_(BTD6)#In_other_languages"
+ },
+ "wiki-bloons": {
+  "title": "Bloons wiki: Bloon (types, health, RBE and immunities)",
+  "url": "https://www.bloonswiki.com/Bloon"
  }
 }

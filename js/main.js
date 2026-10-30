@@ -26,6 +26,7 @@ import { tabScroller } from './components/tab-scroller.js';
 import { bossPage } from './components/boss-page.js';
 import { knowledgeTab } from './components/knowledge.js';
 import { wizardTool } from './components/wizard.js';
+import { bloonsTab } from './components/bloons.js';
 import { bossPlanner } from './components/boss-plan.js';
 import { backupTool } from './components/backup.js';
 import { startI18n } from './lib/i18n.js';
@@ -63,6 +64,7 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('bossPage', bossPage);
   Alpine.data('knowledgeTab', knowledgeTab);
   Alpine.data('wizardTool', wizardTool);
+  Alpine.data('bloonsTab', bloonsTab);
   Alpine.data('bossPlanner', bossPlanner);
   Alpine.data('backupTool', backupTool);
 
