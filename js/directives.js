@@ -228,6 +228,54 @@ export function registerDirectives(Alpine) {
     }));
   });
 
+  /**
+   * x-number="expr": a number field that shows US-style thousands commas
+   * ("26,000") and writes a plain number back to `expr`. Arrow keys step by the
+   * input's data-step (default 1); min/max come from data-min / data-max.
+   */
+  Alpine.directive('number', (el, { expression }, { evaluateLater, effect }) => {
+    const read = evaluateLater(expression);
+    const write = evaluateLater(`${expression} = __value`);
+    const min = el.dataset.min !== undefined ? Number(el.dataset.min) : 0;
+    const max = el.dataset.max !== undefined ? Number(el.dataset.max) : Infinity;
+    const step = Number(el.dataset.step) || 1;
+    const format = (n) => (Number.isFinite(n) ? n.toLocaleString('en-US', { maximumFractionDigits: 2 }) : '');
+    const parse = (text) => {
+      const n = Number(String(text).replace(/[^\d.-]/g, ''));
+      return Number.isFinite(n) ? Math.min(max, Math.max(min, n)) : min;
+    };
+    el.setAttribute('type', 'text');
+    el.setAttribute('inputmode', 'numeric');
+    el.setAttribute('autocomplete', 'off');
+    const set = (n) => write(() => {}, { scope: { __value: n } });
+    effect(() => read((value) => {
+      if (document.activeElement === el && parse(el.value) === Number(value)) return;
+      el.value = format(Number(value) || 0);
+    }));
+    el.addEventListener('input', () => {
+      // Re-insert commas while typing, keeping the caret after the same digit.
+      const digitsBefore = el.value.slice(0, el.selectionStart ?? el.value.length).replace(/[^\d]/g, '').length;
+      const raw = el.value.replace(/[^\d.]/g, '');
+      if (raw === '' ) { set(min); return; }
+      const n = parse(raw);
+      const shown = raw.endsWith('.') ? `${format(Math.trunc(n))}.` : format(n);
+      el.value = shown;
+      let caret = 0;
+      for (let seen = 0; caret < shown.length && seen < digitsBefore; caret += 1) if (/\d/.test(shown[caret])) seen += 1;
+      el.setSelectionRange(caret, caret);
+      set(n);
+    });
+    el.addEventListener('blur', () => { el.value = format(parse(el.value)); });
+    el.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
+      event.preventDefault();
+      const n = parse(el.value) + (event.key === 'ArrowUp' ? step : -step);
+      const clamped = Math.min(max, Math.max(min, n));
+      el.value = format(clamped);
+      set(clamped);
+    });
+  });
+
   Alpine.directive('tip', (el, { expression }, { evaluateLater, effect, cleanup }) => {
     const readText = evaluateLater(expression);
     let text = '';
