@@ -304,6 +304,13 @@ for (const b of bossesFile?.bosses ?? []) {
   }
 }
 
+// Upgrade descriptions (shown when an upgrade is clicked on a tower page)
+for (const tw of towers) {
+  for (let p = 0; p < 3; p += 1) for (let i = 0; i < 5; i += 1) {
+    if (!tw.upgradeInfo?.[p]?.[i]?.text) problems.push(`towers.json "${tw.id}": upgradeInfo[${p}][${i}] needs a text`);
+  }
+}
+
 // Best route per mode on every tower
 for (const tw of towers) {
   for (const mode of ['chimps', 'boss', 'normal']) {

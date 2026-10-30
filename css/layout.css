@@ -742,3 +742,11 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 .bloon-picks { display: grid; gap: 6px; }
 .bloon-coverage summary { cursor: pointer; font-weight: 800; display: flex; align-items: center; gap: 6px; }
 .bloon-coverage summary svg { width: 16px; height: 16px; }
+
+/* --- Clickable upgrade tree ----------------------------------------------------- */
+button.upgrade-cell { font: inherit; color: inherit; text-align: left; cursor: pointer; }
+button.upgrade-cell:hover { border-color: rgba(255, 210, 63, 0.6); }
+.upgrade-cell--selected { border-color: var(--gold) !important; box-shadow: 0 0 0 2px rgba(255, 210, 63, 0.35); }
+.upgrade-detail { margin-top: 12px; padding: 12px 14px; display: grid; gap: 8px; }
+.upgrade-detail p { margin: 0; }
+.upgrade-detail__name { font-size: 1.05rem; }

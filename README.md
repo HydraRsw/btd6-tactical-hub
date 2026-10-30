@@ -138,6 +138,13 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 Map and mode advice comes from each map's Bloons wiki page and the wiki's mode strategy
 pages; Paragon pages from each Paragon's wiki page (its Strategy section).
 
+### Upgrade details on tower pages
+
+- `towers.json` → `upgradeInfo[path][tier]`: `{ text, xp }`, what each upgrade does (in our
+  own words, from the wiki's upgrade table) and the XP to unlock it. Clicking an upgrade in
+  the tree shows this with its price on the chosen difficulty, and whether that upgrade is
+  where the tower starts seeing Camo or popping Lead.
+
 ### Bloons tab
 
 - `bloons.json`: every bloon type (`kind`: regular / blimp) and property (Camo, Regrow,
