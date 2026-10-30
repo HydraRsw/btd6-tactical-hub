@@ -144,6 +144,23 @@ pages; Paragon pages from each Paragon's wiki page (its Strategy section).
   own words, from the wiki's upgrade table) and the XP to unlock it. Clicking an upgrade in
   the tree shows this with its price on the chosen difficulty, and whether that upgrade is
   where the tower starts seeing Camo or popping Lead.
+- `towers.json` → `stats["000" | "100" … "005"]`: `{ range, cooldown, pierce, damage, type }`
+  for the base tower and each single-path upgrade, taken from the main attack in the wiki's
+  game-data stats tables (`{{BTD6 stats|Tower|100}}`). Shown with the change from the tier
+  below. Banana Farm, Monkey Village and Skywarden have no stats yet (the wiki's data pages
+  for them don't render); `null` means the main attack has no direct damage/pierce.
+
+### Hero pages: levels, skins, Geraldo's shop
+
+- `heroes.json` → `levels`: 20 `{ level, text }`, every level in our own words (from the wiki's
+  Levels tables). Clicking a level shows total XP and the round it's reached on each map
+  difficulty. Abilities are written as "Ability – Name: …" so the page can pick them out.
+- `heroes.json` → `skins`: `{ name, mm, note? }`; `mm` is the Monkey Money price, `null` with a
+  `note` when it isn't sold for MM (pack-only, plush code) or the wiki has no price.
+  Chinese-version-only skins are left out.
+- `heroes.json` (Geraldo) → `shop`: `{ name, level, cost[4], stock, maxStock, restock, text }`.
+  Medium prices are from the wiki's shop table; the other difficulties are scaled ×0.85 /
+  ×1.08 / ×1.2 and rounded to $5 like tower costs.
 
 ### Bloons tab
 

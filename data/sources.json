@@ -970,5 +970,17 @@
  "wiki-bloons": {
   "title": "Bloons wiki: Bloon (types, health, RBE and immunities)",
   "url": "https://www.bloonswiki.com/Bloon"
+ },
+ "wiki-tower-stats": {
+  "title": "Bloons wiki: tower stats pages (game data, v55.1)",
+  "url": "https://www.bloonswiki.com/Category:BTD6_tower_stats"
+ },
+ "wiki-hero-skins": {
+  "title": "Bloons wiki: Hero Skins",
+  "url": "https://www.bloonswiki.com/Hero_Skin"
+ },
+ "wiki-geraldo-shop": {
+  "title": "Bloons wiki: Geraldo's Shop",
+  "url": "https://www.bloonswiki.com/Geraldo_(BTD6)#Geraldo's_Shop"
  }
 }

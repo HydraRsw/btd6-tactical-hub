@@ -1,7 +1,7 @@
 // Hero page (#hero/<id>): cost, level milestones, when the hero reaches each
 // level on each map difficulty, what to pair them with and where they show up.
 
-import { DIFFICULTIES, MAP_XP, levelRounds } from '../lib/game.js';
+import { DIFFICULTIES, MAP_XP, heroXpTable, levelRounds } from '../lib/game.js';
 import { formatCash } from '../lib/text.js';
 import { MODES } from '../store.js';
 
@@ -13,6 +13,8 @@ export function heroPage() {
     formatCash,
     placeRound: 6,
     mapDifficulty: 'Intermediate',
+    openLevel: null,
+    shopDifficulty: 1,
 
     keep: null,
 
@@ -36,7 +38,38 @@ export function heroPage() {
         mapDifficulty: this.mapDifficulty,
       });
       const milestones = Object.fromEntries((this.hero.milestones ?? []).map((m) => [m.level, m.text]));
-      return Array.from({ length: 20 }, (_, i) => ({ level: i + 1, round: reached[i + 1], text: milestones[i + 1] ?? '' }));
+      const full = Object.fromEntries((this.hero.levels ?? []).map((l) => [l.level, l.text]));
+      return Array.from({ length: 20 }, (_, i) => ({
+        level: i + 1,
+        round: reached[i + 1],
+        text: milestones[i + 1] ?? '',
+        full: full[i + 1] ?? milestones[i + 1] ?? '',
+        ability: (full[i + 1] ?? '').match(/Ability – ([^:]+):/)?.[1] ?? null,
+      }));
+    },
+
+    toggleLevel(level) {
+      this.openLevel = this.openLevel === level ? null : level;
+    },
+
+    /** Details for a clicked level: total XP and the round it's reached on every map difficulty. */
+    levelDetail(level) {
+      const xp = heroXpTable(this.hero.xpModifier ?? 1)[level] ?? 0;
+      const placeRound = Math.min(100, Math.max(1, Number(this.placeRound) || 1));
+      const byMap = this.MAP_DIFFICULTIES.map((d) => ({
+        label: d,
+        round: levelRounds(this.regularRounds, { xpModifier: this.hero.xpModifier ?? 1, placeRound, mapDifficulty: d })[level],
+      }));
+      const abilities = this.levels.filter((l) => l.ability && l.level <= level).map((l) => l.ability);
+      return { xp, byMap, abilities };
+    },
+
+    get skins() {
+      return this.hero.skins ?? [];
+    },
+
+    get shop() {
+      return this.hero.shop ?? [];
     },
 
     get keyLevels() {

@@ -84,8 +84,41 @@ export function towerPage() {
         cost: t.costs?.upgrades?.[path]?.[tier - 1]?.[this.costDifficulty] ?? null,
         camo: (t.detection?.camo ?? []).some(onlyThisPath),
         lead: (t.detection?.lead ?? []).some(onlyThisPath),
+        stats: this.statsFor(path, tier),
         onRoute: routeNames.some((n) => n && n.split(/ \+ | → | \/ /).some((part) => part.replace(/^[\dx]-[\dx]-[\dx] /, '').replace(/ \(.*\)$/, '').trim() === name)),
       };
+    },
+
+    /**
+     * Main-attack stats for one upgrade on its own (no crosspath), compared with
+     * the tier below. Data comes from the wiki's game-data tables.
+     */
+    statsFor(path, tier) {
+      const stats = this.tower.stats;
+      if (!stats) return [];
+      const code = (p, t) => [0, 1, 2].map((i) => (i === p ? t : 0)).join('');
+      const now = path === null ? stats['000'] : stats[code(path, tier)];
+      const before = path === null ? null : stats[code(path, tier - 1)];
+      if (!now) return [];
+      const fmt = (v, unit = '') => (v === null || v === undefined ? '—' : `${Number(v).toLocaleString('en-US', { maximumFractionDigits: 3 })}${unit}`);
+      const row = (label, key, unit, lowerIsBetter = false) => {
+        const a = before?.[key];
+        const b = now[key];
+        let delta = null;
+        if (typeof a === 'number' && typeof b === 'number' && a !== b) {
+          const better = lowerIsBetter ? b < a : b > a;
+          delta = { text: `${b > a ? '+' : '−'}${fmt(Math.abs(b - a))}${unit}`, better };
+        }
+        return { label, value: fmt(b, unit), delta };
+      };
+      const list = [row('Range', 'range'), row('Attack every', 'cooldown', 's', true), row('Pierce', 'pierce'), row('Damage', 'damage')];
+      const typeChanged = before && before.type !== now.type && now.type;
+      list.push({ label: 'Damage type', value: now.type ?? '—', delta: typeChanged ? { text: `was ${before.type ?? '—'}`, better: true } : null });
+      return list;
+    },
+
+    get baseStats() {
+      return this.statsFor(null, 0);
     },
 
     get tower() {

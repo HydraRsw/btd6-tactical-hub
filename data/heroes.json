@@ -18,7 +18,8 @@
    "wiki-chimps",
    "steam-v57",
    "wiki-hero-quincy",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    460,
@@ -82,6 +83,99 @@
     "unit": "village",
     "note": "Monkey Intelligence Bureau lets him hit DDTs."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Arrows bounce between up to 3 Bloons."
+   },
+   {
+    "level": 2,
+    "text": "Arrows bounce to a 4th target."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Rapid Shot: attacks three times as fast for a few seconds."
+   },
+   {
+    "level": 4,
+    "text": "More range; can line up longer, more precise but slower shots."
+   },
+   {
+    "level": 5,
+    "text": "Can see and hit Camo Bloons."
+   },
+   {
+    "level": 6,
+    "text": "Fires 2 arrows per shot."
+   },
+   {
+    "level": 7,
+    "text": "Every 3rd shot is an exploding arrow."
+   },
+   {
+    "level": 8,
+    "text": "Arrows deal 3× damage to MOAB-class Bloons."
+   },
+   {
+    "level": 9,
+    "text": "Arrows bounce up to 6 times."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Storm of Arrows: rains arrows over a wide area."
+   },
+   {
+    "level": 11,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 12,
+    "text": "Each arrow pops more Bloons."
+   },
+   {
+    "level": 13,
+    "text": "A little more range; Rapid Shot lasts longer."
+   },
+   {
+    "level": 14,
+    "text": "Arrows deal 4× damage to MOAB-class Bloons."
+   },
+   {
+    "level": 15,
+    "text": "Rapid Shot gives 4× attack speed and recharges sooner."
+   },
+   {
+    "level": 16,
+    "text": "Attacks faster again."
+   },
+   {
+    "level": 17,
+    "text": "Arrows travel 25% longer; every 2nd shot explodes."
+   },
+   {
+    "level": 18,
+    "text": "Faster attacks and a much stronger Storm of Arrows."
+   },
+   {
+    "level": 19,
+    "text": "Fires 3 arrows per shot, each popping more Bloons."
+   },
+   {
+    "level": 20,
+    "text": "Even faster attacks; Storm of Arrows fires more, harder-hitting arrows."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Cyber Quincy",
+    "mm": null,
+    "note": "Price not listed on the wiki."
+   },
+   {
+    "name": "Wolfpack Quincy",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -102,7 +196,8 @@
   "summary": "Fire damage pops leads early; Heat It Up buffs nearby towers. Not covered by the wiki's strategy pages.",
   "sources": [
    "wiki-hero-gwen",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    615,
@@ -162,6 +257,102 @@
     "unit": "mortar",
     "note": "Her fire-tower passive speeds Signal Flare too."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Sprays fire at Bloons with her pyro gun."
+   },
+   {
+    "level": 2,
+    "text": "Each shot pops a little more."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Cocktail of Fire: throws a flask that leaves a burning patch on the track."
+   },
+   {
+    "level": 4,
+    "text": "Heat It Up: every 40 attacks, a fire wave pops Bloons and gives nearby Monkeys fire damage."
+   },
+   {
+    "level": 5,
+    "text": "Pops more; Ring of Fire, Signal Flare and Dragon's Breath get 10% faster attacks and radius."
+   },
+   {
+    "level": 6,
+    "text": "Her hits set the target on fire."
+   },
+   {
+    "level": 7,
+    "text": "Bigger Heat It Up radius; stronger Cocktail of Fire."
+   },
+   {
+    "level": 8,
+    "text": "Fires 2 blasts per shot."
+   },
+   {
+    "level": 9,
+    "text": "First hit of each blast pops an extra layer; burns get stronger every level from here."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Firestorm: burns every Bloon on screen and gives all Monkeys Heat It Up."
+   },
+   {
+    "level": 11,
+    "text": "More range; stronger Cocktail of Fire."
+   },
+   {
+    "level": 12,
+    "text": "Faster attacks; Heat It Up hits harder."
+   },
+   {
+    "level": 13,
+    "text": "Pops a lot more; blasts fly faster and further."
+   },
+   {
+    "level": 14,
+    "text": "Cocktail of Fire hits harder and can burn MOAB-class Bloons."
+   },
+   {
+    "level": 15,
+    "text": "Faster attacks; Heat It Up hits harder."
+   },
+   {
+    "level": 16,
+    "text": "Longer, stronger Firestorm; she can now damage Purple Bloons."
+   },
+   {
+    "level": 17,
+    "text": "Heat It Up makes Monkeys pop 1 extra layer and deal +2 to Lead."
+   },
+   {
+    "level": 18,
+    "text": "Faster attacks and stronger Heat It Up; fire tower buffs rise to 20%."
+   },
+   {
+    "level": 19,
+    "text": "Fires 3 blasts per shot."
+   },
+   {
+    "level": 20,
+    "text": "Firestorm deals far more damage."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Firecracker Gwen",
+    "mm": 2500
+   },
+   {
+    "name": "Harlegwen",
+    "mm": 2500
+   },
+   {
+    "name": "Scientist Gwendolin",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -183,7 +374,8 @@
    "wiki-chimps",
    "wiki-mortar",
    "wiki-hero-striker",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    595,
@@ -247,6 +439,98 @@
     "unit": "spike",
     "note": "His pierce buff helps Spike Factories."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Fires a bazooka whose blasts knock Bloons back."
+   },
+   {
+    "level": 2,
+    "text": "Bigger blast radius."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Concussive Shell: a guided shell that stuns what it hits."
+   },
+   {
+    "level": 4,
+    "text": "All Bomb Shooters and Mortar Monkeys attack 10% faster."
+   },
+   {
+    "level": 5,
+    "text": "Black Bloons take explosive damage more easily from every Monkey."
+   },
+   {
+    "level": 6,
+    "text": "Much bigger blasts that pop more."
+   },
+   {
+    "level": 7,
+    "text": "Pops 4 layers per shot; Mortars get 10% more radius. Ability – Target Focus: Mortars aim at your cursor more accurately for 15s."
+   },
+   {
+    "level": 8,
+    "text": "Nearby towers get +5% range and +25% pierce."
+   },
+   {
+    "level": 9,
+    "text": "Faster attacks; Concussive Shell pierces, hits and stuns more."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Artillery Command: resets every Bomb Shooter and Mortar ability."
+   },
+   {
+    "level": 11,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 12,
+    "text": "A bit more range; pops 2 more layers per shot."
+   },
+   {
+    "level": 13,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 14,
+    "text": "Concussive Shell covers more area and stuns longer."
+   },
+   {
+    "level": 15,
+    "text": "Concussive Shell recharges in 11s."
+   },
+   {
+    "level": 16,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 17,
+    "text": "More range; pops 8 layers per shot."
+   },
+   {
+    "level": 18,
+    "text": "Bomb Shooters and Mortars attack another 10% faster."
+   },
+   {
+    "level": 19,
+    "text": "Faster attacks; Black Bloons lose all resistance to explosions."
+   },
+   {
+    "level": 20,
+    "text": "Artillery Command also doubles Bomb and Mortar damage and pierce for 10s."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Biker Bones",
+    "mm": 2500
+   },
+   {
+    "name": "Octojones",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -268,7 +552,8 @@
   "sources": [
    "wiki-chimps",
    "wiki-hero-obyn",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    555,
@@ -328,6 +613,103 @@
     "unit": "skywarden",
     "note": "Pierce and Camo detection, plus path-specific buffs."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Sends spirit wolves after Bloons."
+   },
+   {
+    "level": 2,
+    "text": "Druids and Skywardens in range get +1 pierce."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Brambles: a thorn bush on the track that pops 50 Bloons and can last several rounds."
+   },
+   {
+    "level": 4,
+    "text": "Every 18s places a totem that slows nearby Bloons by 30% (less on MOABs)."
+   },
+   {
+    "level": 5,
+    "text": "Faster attacks; Druid of the Jungle and Wind Weaver get more range; Druids earn bonus cash."
+   },
+   {
+    "level": 6,
+    "text": "Pops more; wolves fly faster."
+   },
+   {
+    "level": 7,
+    "text": "Brambles pop 100 Bloons."
+   },
+   {
+    "level": 8,
+    "text": "Totems slow by 40%; Druids and Skywardens in range see Camo."
+   },
+   {
+    "level": 9,
+    "text": "More damage; storm Druids and Galvanic Conduit Skywardens hit bigger areas."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Wall of Trees: a wall across the track that eats Bloons, then bursts into cash when full."
+   },
+   {
+    "level": 11,
+    "text": "All Magic Monkeys in range get +5 range and +2 pierce (Druids/Skywardens +1 more)."
+   },
+   {
+    "level": 12,
+    "text": "Faster attacks; Magic Monkey ability cooldowns 5% shorter."
+   },
+   {
+    "level": 13,
+    "text": "Pops even more; even faster wolves."
+   },
+   {
+    "level": 14,
+    "text": "Attacks pop extra layers."
+   },
+   {
+    "level": 15,
+    "text": "Totems slow by 60% and come more often."
+   },
+   {
+    "level": 16,
+    "text": "Brambles pop 500 Bloons and hurt every Bloon type."
+   },
+   {
+    "level": 17,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 18,
+    "text": "Druid of Wrath starts each round fully charged; Coldchain Skywardens shatter tougher frozen Bloons."
+   },
+   {
+    "level": 19,
+    "text": "Attacks pop extra layers."
+   },
+   {
+    "level": 20,
+    "text": "Wall of Trees holds far more and recharges sooner."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Mountain Guardian",
+    "mm": 2500
+   },
+   {
+    "name": "Ocean Guardian",
+    "mm": 2500
+   },
+   {
+    "name": "Skeletor",
+    "mm": null,
+    "note": "Only in a Masters of the Universe pack (10,000 Monkey Money)."
+   }
   ]
  },
  {
@@ -349,7 +731,8 @@
    "wiki-heli",
    "wiki-ace",
    "wiki-hero-rosalia",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    745,
@@ -410,6 +793,94 @@
     "unit": "heli",
     "note": "Cheaper upgrades for aircraft near her workshop."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Flies around her workshop firing a laser."
+   },
+   {
+    "level": 2,
+    "text": "Unlocks a grenade launcher; she switches weapons to suit the target."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Scatter Missile: the workshop launches a missile that splits into a shower of small ones."
+   },
+   {
+    "level": 4,
+    "text": "Attacks faster the more Bloons are near her."
+   },
+   {
+    "level": 5,
+    "text": "Better attacks; grenades bounce; every 10th shot is empowered."
+   },
+   {
+    "level": 6,
+    "text": "Nearby Monkey Aces and Heli Pilots get cheaper upgrades."
+   },
+   {
+    "level": 7,
+    "text": "Jetpack: she hovers over the map. Ability – Flight Boost: nearby aircraft fly faster and she chases Bloons anywhere."
+   },
+   {
+    "level": 8,
+    "text": "Grenades hit harder; laser deals much more to MOABs."
+   },
+   {
+    "level": 9,
+    "text": "Scatter Missile releases more mini-missiles."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Kinetic Charge: sticks to a Bloon, stores the damage it takes and then explodes."
+   },
+   {
+    "level": 11,
+    "text": "Higher max speed boost from nearby Bloons."
+   },
+   {
+    "level": 12,
+    "text": "Bouncier grenades; stronger laser."
+   },
+   {
+    "level": 13,
+    "text": "Cluster grenades, plasma laser and stronger 10th shots."
+   },
+   {
+    "level": 14,
+    "text": "Scatter Missile hits harder, especially MOABs."
+   },
+   {
+    "level": 15,
+    "text": "Laser deals much more to MOABs; grenades more to Ceramics."
+   },
+   {
+    "level": 16,
+    "text": "Kinetic Charge and Scatter Missile recharge sooner."
+   },
+   {
+    "level": 17,
+    "text": "Higher max speed boost again."
+   },
+   {
+    "level": 18,
+    "text": "Flight Boost recharges much sooner."
+   },
+   {
+    "level": 19,
+    "text": "Bigger grenade clusters; laser even stronger on MOABs."
+   },
+   {
+    "level": 20,
+    "text": "Anti-Bloon upgrade 30% cheaper; triple Scatter Missiles; much stronger Kinetic Charge."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Tinkerfairy",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -431,7 +902,8 @@
   "sources": [
    "wiki-overclock",
    "wiki-hero-churchill",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    1700,
@@ -483,6 +955,98 @@
     "unit": "sub",
     "note": "Energizer helps him keep leveling."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Tank shells pierce and explode up to 3 times."
+   },
+   {
+    "level": 2,
+    "text": "Each shot pops more."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Armor Piercing Shells: can pop Black Bloons and deal extra to Ceramics; lasts longer as he levels."
+   },
+   {
+    "level": 4,
+    "text": "More range."
+   },
+   {
+    "level": 5,
+    "text": "Adds a fast machine gun."
+   },
+   {
+    "level": 6,
+    "text": "Binoculars: sees Camo."
+   },
+   {
+    "level": 7,
+    "text": "More damage; shells explode more times."
+   },
+   {
+    "level": 8,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 9,
+    "text": "Shells explode 5 times."
+   },
+   {
+    "level": 10,
+    "text": "Ability – MOAB Barrage: hits up to 10 MOAB-class Bloons with heavy shells."
+   },
+   {
+    "level": 11,
+    "text": "Each shell pops more."
+   },
+   {
+    "level": 12,
+    "text": "More damage; shells explode 6 times."
+   },
+   {
+    "level": 13,
+    "text": "Armor Piercing pops 3 layers and hits Ceramics and up harder; stronger MOAB Barrage."
+   },
+   {
+    "level": 14,
+    "text": "Main gun pops 3 more layers; machine gun 1 more."
+   },
+   {
+    "level": 15,
+    "text": "Extra damage to Camo, Lead, Fortified and stunned Bloons."
+   },
+   {
+    "level": 16,
+    "text": "Armor Piercing and MOAB Barrage hit harder."
+   },
+   {
+    "level": 17,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 18,
+    "text": "Shells pop 3 more layers; machine gun 1 more."
+   },
+   {
+    "level": 19,
+    "text": "Shells explode 7 times."
+   },
+   {
+    "level": 20,
+    "text": "Huge damage boost to MOAB Barrage and both guns."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Sentai Churchill",
+    "mm": 2500
+   },
+   {
+    "name": "Sleigh Churchill",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -506,7 +1070,8 @@
    "wiki-chimps",
    "wiki-standard",
    "wiki-hero-ben",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    1020,
@@ -563,6 +1128,98 @@
     "unit": "farm",
     "note": "Bank Hack boosts Monkey Banks."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Hacks in $90 each round."
+   },
+   {
+    "level": 2,
+    "text": "Income rises to $140 per round."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Biohack: the 4 closest Monkeys pop an extra layer for 6s, then can't attack for 2s."
+   },
+   {
+    "level": 4,
+    "text": "Cyber Security: gain 5 lives at the end of each round."
+   },
+   {
+    "level": 5,
+    "text": "Bank Hack: banks earn 5% more."
+   },
+   {
+    "level": 6,
+    "text": "Skimming: +$1 for each new Bloon that spawns."
+   },
+   {
+    "level": 7,
+    "text": "Bloon Trojan: a virus sent to a random Bloon stops it from leaving children and gives extra cash."
+   },
+   {
+    "level": 8,
+    "text": "Income rises to $250 per round."
+   },
+   {
+    "level": 9,
+    "text": "Bank Hack rises to 12%."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Syphon Funding: new Bloons spawn one rank weaker and pay double for 10s."
+   },
+   {
+    "level": 11,
+    "text": "Income rises to $1,000 per round."
+   },
+   {
+    "level": 12,
+    "text": "Skimming rises to $2 per Bloon."
+   },
+   {
+    "level": 13,
+    "text": "Biohack is stronger and hits 6 Monkeys for 8s."
+   },
+   {
+    "level": 14,
+    "text": "Cyber Security gives 10 lives per round, up to 100 over your starting lives."
+   },
+   {
+    "level": 15,
+    "text": "Income rises to $2,500 per round."
+   },
+   {
+    "level": 16,
+    "text": "Bloon Trojan comes more often and pays more."
+   },
+   {
+    "level": 17,
+    "text": "Income rises to $5,000 per round."
+   },
+   {
+    "level": 18,
+    "text": "Bloon Trojan can infect BFBs and DDTs."
+   },
+   {
+    "level": 19,
+    "text": "Biohack lasts 9s and gives 3 extra layers instead of 2."
+   },
+   {
+    "level": 20,
+    "text": "Syphon Funding lasts 20s and pays triple."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Benjammin DJ",
+    "mm": 2500
+   },
+   {
+    "name": "Sushi Bento",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -583,7 +1240,8 @@
   "sources": [
    "wiki-overclock",
    "wiki-hero-pat",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    680,
@@ -643,6 +1301,98 @@
     "unit": "alch",
     "note": "Berserker Brew makes his stuns much more frequent."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Slams Bloons into the ground."
+   },
+   {
+    "level": 2,
+    "text": "Bigger slam radius."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Rallying Roar: nearby Monkeys pop +1 layer for a short time."
+   },
+   {
+    "level": 4,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 5,
+    "text": "Sometimes slaps Bloons back toward the entrance."
+   },
+   {
+    "level": 6,
+    "text": "His hits stun Bloons briefly."
+   },
+   {
+    "level": 7,
+    "text": "More pierce and damage."
+   },
+   {
+    "level": 8,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 9,
+    "text": "More range; Rallying Roar adds more damage."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Big Squeeze: grabs a MOAB, BFB, visible DDT or ZOMG and crushes it over 5s."
+   },
+   {
+    "level": 11,
+    "text": "Pops more layers."
+   },
+   {
+    "level": 12,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 13,
+    "text": "Longer stuns, and very short stuns on MOAB-class."
+   },
+   {
+    "level": 14,
+    "text": "Rallying Roar lasts longer and adds more damage."
+   },
+   {
+    "level": 15,
+    "text": "Slam and slap hit more Bloons."
+   },
+   {
+    "level": 16,
+    "text": "Much more damage to Ceramics."
+   },
+   {
+    "level": 17,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 18,
+    "text": "More pierce."
+   },
+   {
+    "level": 19,
+    "text": "Pops more layers."
+   },
+   {
+    "level": 20,
+    "text": "Big Squeeze grabs several big Bloons and stuns those nearby."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Fusty the Snowman",
+    "mm": 2500
+   },
+   {
+    "name": "Kaiju Pat",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -666,7 +1416,8 @@
    "wiki-boss-events",
    "wiki-freeplay",
    "wiki-hero-ezili",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    470,
@@ -730,6 +1481,98 @@
     "unit": "wizard",
     "note": "Sacrificial Totem buffs Wizards most."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Curses Bloons with damage over time. Sees Camo."
+   },
+   {
+    "level": 2,
+    "text": "More range."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Heartstopper: Monkeys can pop Purple, and Regrow is blocked for 10s."
+   },
+   {
+    "level": 4,
+    "text": "Curses several Bloons per attack."
+   },
+   {
+    "level": 5,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 6,
+    "text": "Much more damage to MOAB-class."
+   },
+   {
+    "level": 7,
+    "text": "Ability – Sacrificial Totem: costs 10 lives; nearby Monkeys (especially Wizards) get Camo, pierce, range and speed."
+   },
+   {
+    "level": 8,
+    "text": "Curse lasts longer and ticks faster."
+   },
+   {
+    "level": 9,
+    "text": "Removes Camo, Regrow and Fortified from non-MOAB Bloons."
+   },
+   {
+    "level": 10,
+    "text": "Ability – MOAB Hex: curses a MOAB-class Bloon, damaging it every second until it pops."
+   },
+   {
+    "level": 11,
+    "text": "More range; totem boosts reanimated Bloon pierce by 50%."
+   },
+   {
+    "level": 12,
+    "text": "Heartstopper recharges sooner, lasts longer and hurts MOABs more."
+   },
+   {
+    "level": 13,
+    "text": "Bigger splash and more pierce."
+   },
+   {
+    "level": 14,
+    "text": "Heartstopper lasts much longer."
+   },
+   {
+    "level": 15,
+    "text": "Curse lasts longer and ticks faster."
+   },
+   {
+    "level": 16,
+    "text": "Totem lasts longer and costs only 1 life; removes Camo from DDTs."
+   },
+   {
+    "level": 17,
+    "text": "Bigger splash and more pierce."
+   },
+   {
+    "level": 18,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 19,
+    "text": "Each curse tick pops more layers."
+   },
+   {
+    "level": 20,
+    "text": "MOAB Hex works faster and can kill BADs."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Galaxili",
+    "mm": 2500
+   },
+   {
+    "name": "Smudge Catt",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -752,7 +1595,8 @@
    "wiki-bloonarius",
    "wiki-freeplay",
    "wiki-hero-adora",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    850,
@@ -808,6 +1652,103 @@
     "unit": "engi",
     "note": "Overclock at level 20."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Fires seeking divine bolts."
+   },
+   {
+    "level": 2,
+    "text": "More range."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Long Arm of Light: big range and power boost for a while; hits every Bloon type."
+   },
+   {
+    "level": 4,
+    "text": "Fires 2 bolts."
+   },
+   {
+    "level": 5,
+    "text": "Bolts pierce more Bloons."
+   },
+   {
+    "level": 6,
+    "text": "Fires 3 bolts."
+   },
+   {
+    "level": 7,
+    "text": "Ability – Blood Sacrifice: sacrifice a tower for lots of XP and a temporary range and speed boost."
+   },
+   {
+    "level": 8,
+    "text": "Fires 4 bolts."
+   },
+   {
+    "level": 9,
+    "text": "More range; more damage to Fortified."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Ball of Light: summons a powerful orb that strikes Bloons."
+   },
+   {
+    "level": 11,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 12,
+    "text": "Fires 5 bolts."
+   },
+   {
+    "level": 13,
+    "text": "Bolts pierce even more; more damage to Fortified."
+   },
+   {
+    "level": 14,
+    "text": "Fires 6 bolts."
+   },
+   {
+    "level": 15,
+    "text": "Bolts pop an extra layer; stronger Ball of Light."
+   },
+   {
+    "level": 16,
+    "text": "Long Arm of Light becomes even deadlier."
+   },
+   {
+    "level": 17,
+    "text": "Attacks even faster."
+   },
+   {
+    "level": 18,
+    "text": "Fires 8 bolts."
+   },
+   {
+    "level": 19,
+    "text": "More range; more damage to Fortified."
+   },
+   {
+    "level": 20,
+    "text": "Much better Ball of Light; Sacrifice buffs are stronger and longer."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Joan of Arc Adora",
+    "mm": 2500
+   },
+   {
+    "name": "She-Ra",
+    "mm": null,
+    "note": "Only in a Masters of the Universe pack (10,000 Monkey Money)."
+   },
+   {
+    "name": "Voidora",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -827,7 +1768,8 @@
   "summary": "Drone DPS and global camo detection. Not covered by the wiki's strategy pages.",
   "sources": [
    "wiki-hero-etienne",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    555,
@@ -888,6 +1830,98 @@
     "unit": "desperado",
     "note": "Range buff for path 1 and 2 Desperados."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Pilots a small drone that shoots Bloons."
+   },
+   {
+    "level": 2,
+    "text": "More range; Monkeys in his radius get 10% more range."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Drone Swarm: 4 extra temporary drones."
+   },
+   {
+    "level": 4,
+    "text": "Drones pop more."
+   },
+   {
+    "level": 5,
+    "text": "Drones fire faster and see Camo."
+   },
+   {
+    "level": 6,
+    "text": "Drone Swarm recharges sooner."
+   },
+   {
+    "level": 7,
+    "text": "Controls 2 drones."
+   },
+   {
+    "level": 8,
+    "text": "UAV: every Monkey sees Camo."
+   },
+   {
+    "level": 9,
+    "text": "Drones pop an extra layer."
+   },
+   {
+    "level": 10,
+    "text": "Ability – UCAV: the spy drone becomes a heavy combat drone for a while."
+   },
+   {
+    "level": 11,
+    "text": "Controls 3 drones."
+   },
+   {
+    "level": 12,
+    "text": "Drones pop more and fly faster."
+   },
+   {
+    "level": 13,
+    "text": "UCAV recharges sooner."
+   },
+   {
+    "level": 14,
+    "text": "Drones deal much more damage."
+   },
+   {
+    "level": 15,
+    "text": "UCAV lasts longer and deals much more."
+   },
+   {
+    "level": 16,
+    "text": "More range and drone power, faster Drone Swarm; nearby Monkeys get 20% range."
+   },
+   {
+    "level": 17,
+    "text": "UCAV deals much more again."
+   },
+   {
+    "level": 18,
+    "text": "Drones deal more damage."
+   },
+   {
+    "level": 19,
+    "text": "Controls 4 drones at all times."
+   },
+   {
+    "level": 20,
+    "text": "Permanent UCAV; activating it powers it up further and lets it pop every type."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Book Wyrm",
+    "mm": 2500
+   },
+   {
+    "name": "ETn",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -910,7 +1944,8 @@
    "wiki-sauda",
    "wiki-chimps",
    "wiki-hero-sauda",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    510,
@@ -970,6 +2005,104 @@
     "unit": "wizard",
     "note": "Dragon's Breath burn triggers her damage-over-time bonus."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Slashes nearby Bloons with two swords. Sees Camo."
+   },
+   {
+    "level": 2,
+    "text": "Pops more per attack."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Leaping Sword: leaps onto Bloons with a Lead-popping slam."
+   },
+   {
+    "level": 4,
+    "text": "Swords cut 2 layers."
+   },
+   {
+    "level": 5,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 6,
+    "text": "More range and popping power."
+   },
+   {
+    "level": 7,
+    "text": "Extra damage to stunned Bloons; can pop frozen Bloons."
+   },
+   {
+    "level": 8,
+    "text": "Attacks even faster."
+   },
+   {
+    "level": 9,
+    "text": "Bloon Bleed: each strike cuts 3 layers and adds damage over time."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Sword Charge: dashes along the whole track."
+   },
+   {
+    "level": 11,
+    "text": "Extra damage to Bloons slowed, held or burning from other Monkeys."
+   },
+   {
+    "level": 12,
+    "text": "Leaping Sword is much stronger."
+   },
+   {
+    "level": 13,
+    "text": "Enchanted blades hit harder and damage every Bloon type."
+   },
+   {
+    "level": 14,
+    "text": "Attacks even faster; Sword Charge sweeps every lane twice."
+   },
+   {
+    "level": 15,
+    "text": "More range and pops; Leaping Sword hits harder."
+   },
+   {
+    "level": 16,
+    "text": "Sword Charge deals much more."
+   },
+   {
+    "level": 17,
+    "text": "Swords cut many layers at once."
+   },
+   {
+    "level": 18,
+    "text": "Attacks blindingly fast."
+   },
+   {
+    "level": 19,
+    "text": "Extra damage to Regrow, Fortified and Camo."
+   },
+   {
+    "level": 20,
+    "text": "Sword Charge sweeps every lane three times; much stronger Leaping Sword."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Jiangshi Sauda",
+    "mm": null,
+    "note": "Price not listed on the wiki."
+   },
+   {
+    "name": "Red Sauda",
+    "mm": null,
+    "note": "Unlocked with the code from a Sauda plush, not sold in the store."
+   },
+   {
+    "name": "Viking Sauda",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -995,7 +2128,8 @@
    "wiki-dreadbloon",
    "steam-v57",
    "wiki-hero-brickell",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    765,
@@ -1059,6 +2193,98 @@
     "unit": "mermonkey",
     "note": "Amphibious towers on water benefit from level 8."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Drops seeking sea mines."
+   },
+   {
+    "level": 2,
+    "text": "Attacks faster."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Naval Tactics: she and nearby Subs and Buccaneers attack much faster for a while."
+   },
+   {
+    "level": 4,
+    "text": "Water towers in range get extra pierce."
+   },
+   {
+    "level": 5,
+    "text": "Naval Tactics pops more and lets them hit every type except Camo."
+   },
+   {
+    "level": 6,
+    "text": "Mines and pistol hit harder."
+   },
+   {
+    "level": 7,
+    "text": "Ability – Blast Chain: mines fire faster for a while. She gains range and sees Camo."
+   },
+   {
+    "level": 8,
+    "text": "Naval Tactics works on every water tower and adds Camo."
+   },
+   {
+    "level": 9,
+    "text": "Mines deal extra damage."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Mega Mine: a huge mine on any water that triggers on MOABs and stuns around it; lasts 3 rounds."
+   },
+   {
+    "level": 11,
+    "text": "Mines deploy faster."
+   },
+   {
+    "level": 12,
+    "text": "Faster, stronger pistol; stronger mines."
+   },
+   {
+    "level": 13,
+    "text": "Mega Mine recharges sooner and lasts longer."
+   },
+   {
+    "level": 14,
+    "text": "Naval Tactics lasts longer and adds damage."
+   },
+   {
+    "level": 15,
+    "text": "Bigger mine blasts that hit Black and strip Camo; stronger pistol."
+   },
+   {
+    "level": 16,
+    "text": "Naval Tactics gives even more attack speed."
+   },
+   {
+    "level": 17,
+    "text": "Mines deal much more; stronger pistol."
+   },
+   {
+    "level": 18,
+    "text": "Mega Mine recharges even sooner."
+   },
+   {
+    "level": 19,
+    "text": "Naval Tactics reaches the whole map."
+   },
+   {
+    "level": 20,
+    "text": "Mega Mine deals massive damage and stuns longer."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Dread Pirate Brickell",
+    "mm": 2500
+   },
+   {
+    "name": "Lifeguard Brickell",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -1081,7 +2307,8 @@
    "wiki-psi",
    "wiki-freeplay",
    "wiki-hero-psi",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    850,
@@ -1137,6 +2364,98 @@
     "unit": "sub",
     "note": "Energizer to reach level 20."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Destroys one Bloon at a time from anywhere, ignoring obstacles. Sees Camo."
+   },
+   {
+    "level": 2,
+    "text": "Destroys Bloons faster."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Psychic Blast: stuns nearby Bloons for a long time."
+   },
+   {
+    "level": 4,
+    "text": "Can also hit a Bloon right next to the target."
+   },
+   {
+    "level": 5,
+    "text": "Attacks slightly faster."
+   },
+   {
+    "level": 6,
+    "text": "Can pop Lead."
+   },
+   {
+    "level": 7,
+    "text": "Psychic Blast pulses twice; can destroy Ceramics."
+   },
+   {
+    "level": 8,
+    "text": "Bloons he destroys damage those nearby."
+   },
+   {
+    "level": 9,
+    "text": "Targets 2 Bloons at once."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Psionic Scream: throws Bloons into chaos."
+   },
+   {
+    "level": 11,
+    "text": "Can pop Purple."
+   },
+   {
+    "level": 12,
+    "text": "Psychic Blast pulses three times."
+   },
+   {
+    "level": 13,
+    "text": "Destroys Bloons even faster."
+   },
+   {
+    "level": 14,
+    "text": "Can target MOABs."
+   },
+   {
+    "level": 15,
+    "text": "Stronger chain damage from destroyed Bloons."
+   },
+   {
+    "level": 16,
+    "text": "Destroys Bloons very fast; can target BFBs."
+   },
+   {
+    "level": 17,
+    "text": "Targets 3 Bloons at once."
+   },
+   {
+    "level": 18,
+    "text": "Hits a wider area around the target."
+   },
+   {
+    "level": 19,
+    "text": "Much stronger chain damage."
+   },
+   {
+    "level": 20,
+    "text": "Psionic Scream holds and damages every Bloon on screen; can target DDTs and ZOMGs."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Dreamstate Psi",
+    "mm": 2500
+   },
+   {
+    "name": "Psimbals",
+    "mm": 2500
+   }
   ]
  },
  {
@@ -1163,7 +2482,9 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-hero-geraldo",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins",
+   "wiki-geraldo-shop"
   ],
   "cost": [
    640,
@@ -1216,6 +2537,320 @@
     "unit": "farm",
     "note": "Fertilizer boosts farms."
    }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Shop opens: Shooty Turret, Stack of Old Nails, Creepy Idol, Jar of Pickles. Short-range magic attack."
+   },
+   {
+    "level": 2,
+    "text": "New item: Rare Quincy Action Figure, which sells for more the longer you keep it."
+   },
+   {
+    "level": 3,
+    "text": "New item: See Invisibility Potion (temporary Camo). More range."
+   },
+   {
+    "level": 4,
+    "text": "New item: Tube of Amaz-o-Glue, slows Bloons on the track."
+   },
+   {
+    "level": 5,
+    "text": "New item: Sharpening Stone (+pierce for sharp attacks). Faster attacks."
+   },
+   {
+    "level": 6,
+    "text": "New item: Worn Hero's Cape turns a Dart Monkey (tier 2 or lower) into a Super Monkey, capped at tier 3."
+   },
+   {
+    "level": 7,
+    "text": "New item: Blade Trap, a spinning-blade burst when a visible Bloon touches it. Stronger attack."
+   },
+   {
+    "level": 8,
+    "text": "New item: Gerry's Fire hot sauce gives a Monkey, hero or minion a fire attack for 5 rounds."
+   },
+   {
+    "level": 9,
+    "text": "New item: Fertilizer boosts a Banana Farm for a few rounds. Bigger blast."
+   },
+   {
+    "level": 10,
+    "text": "New item: Pet Rabbit."
+   },
+   {
+    "level": 11,
+    "text": "New item: Rejuv Potion resets cooldowns and restores 50 lives. More pierce."
+   },
+   {
+    "level": 12,
+    "text": "New item: Genie Bottle summons a plasma Genie for 2 rounds. Creepy Idol can briefly stun visible MOABs."
+   },
+   {
+    "level": 13,
+    "text": "Shooty Turret fires faster and harder; nails hit harder."
+   },
+   {
+    "level": 14,
+    "text": "See Invisibility Potion gives more range and lasts longer."
+   },
+   {
+    "level": 15,
+    "text": "Sharpening Stone adds more pierce; Blade Trap is stronger."
+   },
+   {
+    "level": 16,
+    "text": "Nails become a Nail Mine; pickles hit Fortified harder; Gerry's Fire is stronger and lasts 10 rounds."
+   },
+   {
+    "level": 17,
+    "text": "Stronger attack; Amaz-o-Glue slightly slows MOABs."
+   },
+   {
+    "level": 18,
+    "text": "Genie gets a second close-range attack; an expiring Idol shrouds nearby MOABs so they take damage when popped."
+   },
+   {
+    "level": 19,
+    "text": "Much stronger attack; the potion adds damage to Camo."
+   },
+   {
+    "level": 20,
+    "text": "New item: Paragon Power Totem. The shop fully restocks. Stronger attack."
+   }
+  ],
+  "shop": [
+   {
+    "name": "Shooty Turret",
+    "level": 1,
+    "cost": [
+     210,
+     250,
+     270,
+     300
+    ],
+    "stock": 2,
+    "maxStock": 4,
+    "restock": 5,
+    "text": "A small turret that shoots sharp bolts; it stays even if Geraldo is sold. Turrets bought from level 13 are stronger."
+   },
+   {
+    "name": "Stack of Old Nails",
+    "level": 1,
+    "cost": [
+     40,
+     50,
+     55,
+     60
+    ],
+    "stock": 4,
+    "maxStock": 10,
+    "restock": 1,
+    "text": "A pile of nails on the track that pops a handful of Bloons."
+   },
+   {
+    "name": "Creepy Idol",
+    "level": 1,
+    "cost": [
+     100,
+     120,
+     130,
+     145
+    ],
+    "stock": 1,
+    "maxStock": 4,
+    "restock": 3,
+    "text": "Placed beside the track; scares passing Bloons back the way they came."
+   },
+   {
+    "name": "Jar of Pickles",
+    "level": 1,
+    "cost": [
+     130,
+     150,
+     160,
+     180
+    ],
+    "stock": 2,
+    "maxStock": 4,
+    "restock": 4,
+    "text": "Given to a tower: it hits harder but attacks slower for a while."
+   },
+   {
+    "name": "Rare Quincy Action Figure",
+    "level": 2,
+    "cost": [
+     550,
+     650,
+     700,
+     780
+    ],
+    "stock": 1,
+    "maxStock": 1,
+    "restock": 4,
+    "text": "A collectible whose sell value climbs every round you keep it — Geraldo's money maker."
+   },
+   {
+    "name": "See Invisibility Potion",
+    "level": 3,
+    "cost": [
+     170,
+     200,
+     215,
+     240
+    ],
+    "stock": 1,
+    "maxStock": 2,
+    "restock": 10,
+    "text": "Gives one tower or hero Camo detection for a limited time."
+   },
+   {
+    "name": "Tube of Amaz-o-Glue",
+    "level": 4,
+    "cost": [
+     130,
+     150,
+     160,
+     180
+    ],
+    "stock": 2,
+    "maxStock": 3,
+    "restock": 4,
+    "text": "A glue patch on the track that slows Bloons."
+   },
+   {
+    "name": "Sharpening Stone",
+    "level": 5,
+    "cost": [
+     170,
+     200,
+     215,
+     240
+    ],
+    "stock": 1,
+    "maxStock": 3,
+    "restock": 5,
+    "text": "Extra pierce for a tower's sharp attacks for 10 rounds."
+   },
+   {
+    "name": "Worn Hero's Cape",
+    "level": 6,
+    "cost": [
+     1490,
+     1750,
+     1890,
+     2100
+    ],
+    "stock": 1,
+    "maxStock": 3,
+    "restock": 7,
+    "text": "Turns a Dart Monkey of tier 2 or lower into a Super Monkey (upgradable to tier 3 only)."
+   },
+   {
+    "name": "Blade Trap",
+    "level": 7,
+    "cost": [
+     550,
+     650,
+     700,
+     780
+    ],
+    "stock": 1,
+    "maxStock": 4,
+    "restock": 5,
+    "text": "A track trap that unleashes a spinning-blade storm on the first visible Bloons to touch it."
+   },
+   {
+    "name": "Bottle of 'Gerry's Fire' Hot Sauce",
+    "level": 8,
+    "cost": [
+     550,
+     650,
+     700,
+     780
+    ],
+    "stock": 2,
+    "maxStock": 3,
+    "restock": 2,
+    "text": "Gives a Monkey, hero or minion a fire attack for several rounds."
+   },
+   {
+    "name": "Fertilizer",
+    "level": 9,
+    "cost": [
+     255,
+     300,
+     325,
+     360
+    ],
+    "stock": 1,
+    "maxStock": 4,
+    "restock": 3,
+    "text": "Used on a Banana Farm: more bananas and a cash bonus over a few rounds."
+   },
+   {
+    "name": "Pet Rabbit",
+    "level": 10,
+    "cost": [
+     1490,
+     1750,
+     1890,
+     2100
+    ],
+    "stock": 1,
+    "maxStock": 2,
+    "restock": 3,
+    "text": "Harmless on its own, but buy 4 and they merge into a Killer Rabbit that attacks Bloons anywhere on the map and sees Camo."
+   },
+   {
+    "name": "Rejuv Potion",
+    "level": 11,
+    "cost": [
+     1700,
+     2000,
+     2160,
+     2400
+    ],
+    "stock": 1,
+    "maxStock": 2,
+    "restock": 5,
+    "text": "Resets every tower and hero ability cooldown and restores 50 lives."
+   },
+   {
+    "name": "Genie Bottle",
+    "level": 12,
+    "cost": [
+     2125,
+     2500,
+     2700,
+     3000
+    ],
+    "stock": 1,
+    "maxStock": 2,
+    "restock": 5,
+    "text": "Summons a plasma-powered Genie Monkey that fights for 2 rounds."
+   },
+   {
+    "name": "Paragon Power Totem",
+    "level": 20,
+    "cost": [
+     22100,
+     26000,
+     28080,
+     31200
+    ],
+    "stock": 1,
+    "maxStock": 2,
+    "restock": 1,
+    "text": "Each placed totem adds 2,000 Paragon power to the next Paragon you build."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Gentlemonkey Gadgeteer",
+    "mm": 3500
+   }
   ]
  },
  {
@@ -1236,7 +2871,8 @@
   "sources": [
    "wiki-chimps",
    "wiki-hero-corvus",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    1125,
@@ -1288,6 +2924,95 @@
    {
     "unit": "spike",
     "note": "Perma-Spike or Spiked Mines as a safety net."
+   }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Haunted Bloons are weakened and explode into Mana. His Spirit attacks anywhere on the map. Spells: Spear, Nourishment, Repel."
+   },
+   {
+    "level": 2,
+    "text": "Bigger Spirit that hits more Bloons."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Soul Harvest: instantly harvests nearby Bloons. Spells: Echo, Haste."
+   },
+   {
+    "level": 4,
+    "text": "Spirit hits harder. Spells: Soul Barrier, Trample."
+   },
+   {
+    "level": 5,
+    "text": "Spells: Frostbound, Aggression, Vision."
+   },
+   {
+    "level": 6,
+    "text": "Haunted explosions and the Spirit hit harder. Spell: Ember."
+   },
+   {
+    "level": 7,
+    "text": "Ability – Spirit Walk: move Corvus to a new spot. Spells: Ancestral Might, Malevolence."
+   },
+   {
+    "level": 8,
+    "text": "Mana refills faster when low; better Haste. Spell: Storm."
+   },
+   {
+    "level": 9,
+    "text": "Spirit hits harder and more vs MOABs; Frostbound hits MOABs; Soul Barrier blocks more."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Dark Ritual: harvests a huge number of Bloons near him. Stronger Trample. Spell: Recovery."
+   },
+   {
+    "level": 11,
+    "text": "Spirit grows stronger as Mana fills; stronger Soul Harvest (extra vs Ceramic); Frostbound gains permafrost."
+   },
+   {
+    "level": 12,
+    "text": "Stronger haunted explosions and Spear; Repel can push MOABs."
+   },
+   {
+    "level": 13,
+    "text": "Stronger Ancestral Might. Spell: Overload."
+   },
+   {
+    "level": 14,
+    "text": "Spirit hits harder; Malevolence hits harder (extra vs Ceramic)."
+   },
+   {
+    "level": 15,
+    "text": "Ember drops more often and harder; Nourishment pays more per Mana."
+   },
+   {
+    "level": 16,
+    "text": "More range; Spirit hits harder."
+   },
+   {
+    "level": 17,
+    "text": "Haunted Bloons are weaker and explode harder; Soul Barrier blocks more."
+   },
+   {
+    "level": 18,
+    "text": "Storm's blades hit more and harder; stronger Spear."
+   },
+   {
+    "level": 19,
+    "text": "Can haunt MOAB-class Bloons; stronger Trample."
+   },
+   {
+    "level": 20,
+    "text": "Spirit much stronger (extra vs MOABs); stronger Ancestral Might and Overload; more cash from Nourishment."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Decryptor Corvus",
+    "mm": null,
+    "note": "Price not listed on the wiki."
    }
   ]
  },
@@ -1369,7 +3094,90 @@
     "unit": "skywarden",
     "note": "Coldchain Skywardens benefit from his ice buffs."
    }
-  ]
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Ice attack: hit Bloons get rimed, then frozen, then shatter in an icy blast. Slows Bloons near him. Sees Camo."
+   },
+   {
+    "level": 2,
+    "text": "Ice Monkeys in range spawn orbiting ice fragments when they attack."
+   },
+   {
+    "level": 3,
+    "text": "Ability – Frostbite: hits every Bloon type; frozen Bloons take extra based on freeze time left."
+   },
+   {
+    "level": 4,
+    "text": "Ice walls form on the track near him, pushing back and freezing Bloons."
+   },
+   {
+    "level": 5,
+    "text": "White Bloons resist ice less; freezes from all Monkeys last longer."
+   },
+   {
+    "level": 6,
+    "text": "Can attack Bloons inside any Ice Monkey's range."
+   },
+   {
+    "level": 7,
+    "text": "Ability – Frozen Cascade: an ice blast that spreads from him through other Ice Monkeys and Coldchain Skywardens."
+   },
+   {
+    "level": 8,
+    "text": "More range for Ice Monkeys and Coldchain Skywardens; more hero XP per tier 3 Ice Monkey."
+   },
+   {
+    "level": 9,
+    "text": "More Frostbite damage to frozen Bloons; stronger ice fragments."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Frozen Burial: freezes and damages every Bloon, then fills the track with ice walls."
+   },
+   {
+    "level": 11,
+    "text": "Stronger slow aura that also slows MOABs."
+   },
+   {
+    "level": 12,
+    "text": "Ice walls hit more and last longer; stronger rime blast."
+   },
+   {
+    "level": 13,
+    "text": "Tier 5 Ice Monkeys cost less and you can build a 4th tier 5; White Bloons lose all ice resistance."
+   },
+   {
+    "level": 14,
+    "text": "Ice Monkeys make more ice fragments."
+   },
+   {
+    "level": 15,
+    "text": "Frozen Bloons take more ability damage; longer Frostbite and faster Cascade and Burial."
+   },
+   {
+    "level": 16,
+    "text": "Stronger rime blast; fragments hit frozen Bloons harder."
+   },
+   {
+    "level": 17,
+    "text": "Tier 3 Ice Monkeys make even more fragments."
+   },
+   {
+    "level": 18,
+    "text": "Stronger slow aura; rimed Bloons take more ice damage; even stronger rime blast."
+   },
+   {
+    "level": 19,
+    "text": "Ice walls pierce more and last longer; fragments pierce more and hit frozen harder."
+   },
+   {
+    "level": 20,
+    "text": "Even more Frostbite damage; more ice walls; freezes last longer again."
+   }
+  ],
+  "skins": []
  },
  {
   "id": "dan",
@@ -1388,7 +3196,8 @@
   "summary": "Added in v55. A cheap support hero: Reposition moves towers, Rabble Rouser buffs nearby Monkeys and triggers life-loss passives; his alter ego adds Camo and Lead.",
   "sources": [
    "wiki-hero-dan",
-   "wiki-hero-xp"
+   "wiki-hero-xp",
+   "wiki-hero-skins"
   ],
   "cost": [
    555,
@@ -1436,6 +3245,95 @@
    {
     "unit": "desperado",
     "note": "Triggers x-x-2+ Desperado life-loss passives."
+   }
+  ],
+  "levels": [
+   {
+    "level": 1,
+    "text": "Stabs Bloons with his sword."
+   },
+   {
+    "level": 2,
+    "text": "Hits more Bloons per thrust."
+   },
+   {
+    "level": 3,
+    "text": "Some thrusts knock Bloons back. Ability – Transformation: switch to the Masqued Macaque with a damaging burst and a short speed boost. (Macaque: every 3rd attack adds chain lightning.)"
+   },
+   {
+    "level": 4,
+    "text": "More sword damage; Dan throws net traps on the track (Macaque: stronger lightning)."
+   },
+   {
+    "level": 5,
+    "text": "When a Bloon leaks, a shield cuts the lives lost and pushes the next Bloons back."
+   },
+   {
+    "level": 6,
+    "text": "More sword and transformation damage (Macaque: stronger lightning)."
+   },
+   {
+    "level": 7,
+    "text": "Ability – Reposition: move any Monkey, himself included (Macaque: Volant Strike, a leap that stuns and deals heavy damage)."
+   },
+   {
+    "level": 8,
+    "text": "Taunts Bloons, distracting and weakening them (Macaque: periodic stomp that scatters Bloons)."
+   },
+   {
+    "level": 9,
+    "text": "A flurry of jabs every few attacks (Macaque: faster attacks)."
+   },
+   {
+    "level": 10,
+    "text": "Ability – Rabble Rouser: nearby Monkeys attack slower but harder and ignore enemy debuffs (Macaque: Berserk Frenzy, a fast area rampage)."
+   },
+   {
+    "level": 11,
+    "text": "More sword range and pierce."
+   },
+   {
+    "level": 12,
+    "text": "After a leak, fewer lives are lost for a moment and up to 40 escaping Bloons are distracted instead."
+   },
+   {
+    "level": 13,
+    "text": "Better jab flurry (Macaque: attacks faster again)."
+   },
+   {
+    "level": 14,
+    "text": "Slowly regains the lives from the last leak (Macaque: can smash a MOAB back up the track)."
+   },
+   {
+    "level": 15,
+    "text": "More sword pierce; all Monkey distraction and wind effects push Bloons further."
+   },
+   {
+    "level": 16,
+    "text": "Sword and transformation damage up again."
+   },
+   {
+    "level": 17,
+    "text": "Longer post-transformation buff; level 7 and 10 abilities recharge sooner."
+   },
+   {
+    "level": 18,
+    "text": "Jab flurry adds extra strikes (Macaque: fastest attacks)."
+   },
+   {
+    "level": 19,
+    "text": "Pops build a Mana Shield and he hits harder per shield (Macaque: more damage the fewer lives you have)."
+   },
+   {
+    "level": 20,
+    "text": "More damage the more Bloons are around, and faster attacks the closer they are to leaking."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Prince Adam",
+    "mm": null,
+    "note": "Only in a Masters of the Universe pack (10,000 Monkey Money)."
    }
   ]
  }
