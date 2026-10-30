@@ -52,8 +52,40 @@ export function towerPage() {
 
     keep: null,
 
+    selected: null, // { path: 0–2, tier: 1–5 }: the upgrade whose details are open
+
     init() {
       this.keep = this.$store.hub.pageKeeper('tower');
+      this.$watch('$store.hub.pageId', () => { this.selected = null; });
+    },
+
+    select(path, tier) {
+      this.selected = this.selected?.path === path && this.selected?.tier === tier ? null : { path, tier };
+    },
+
+    isSelected(path, tier) {
+      return this.selected?.path === path && this.selected?.tier === tier;
+    },
+
+    /** What the open upgrade does, what it costs here, and what it unlocks. */
+    get selectedInfo() {
+      if (!this.selected) return null;
+      const { path, tier } = this.selected;
+      const t = this.tower;
+      const onlyThisPath = (rule) => rule[path] === tier && rule.every((v, i) => i === path || v === 0);
+      const routeNames = [...(t.routes ?? []), ...Object.values(t.modeRoutes ?? {})].map((r) => r.name);
+      const name = t.upgrades?.[path]?.[tier - 1] ?? '';
+      return {
+        name,
+        pathName: PATH_NAMES[path],
+        tier,
+        text: t.upgradeInfo?.[path]?.[tier - 1]?.text ?? '',
+        xp: t.upgradeInfo?.[path]?.[tier - 1]?.xp ?? null,
+        cost: t.costs?.upgrades?.[path]?.[tier - 1]?.[this.costDifficulty] ?? null,
+        camo: (t.detection?.camo ?? []).some(onlyThisPath),
+        lead: (t.detection?.lead ?? []).some(onlyThisPath),
+        onRoute: routeNames.some((n) => n && n.split(/ \+ | → | \/ /).some((part) => part.replace(/^[\dx]-[\dx]-[\dx] /, '').replace(/ \(.*\)$/, '').trim() === name)),
+      };
     },
 
     get tower() {
@@ -68,6 +100,7 @@ export function towerPage() {
       const bought = parseRoute(this.tower.bestRoute);
       return (this.tower.upgrades ?? [[], [], []]).map((names, path) => ({
         path: PATH_NAMES[path],
+        index: path,
         cells: Array.from({ length: 5 }, (_, i) => ({
           tier: i + 1,
           name: names[i] ?? 'Unknown',

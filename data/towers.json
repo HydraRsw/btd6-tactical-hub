@@ -270,7 +270,75 @@
     "name": "Crossbow Master",
     "note": "Classic opener: Dart + Boomerang, Dart + Sub, Dart + Sniper, Dart + Engineer or three 0-0-0 Darts."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Each dart pops 1 more bloon.",
+     "xp": 0
+    },
+    {
+     "text": "Each dart pops 2 more bloons.",
+     "xp": 100
+    },
+    {
+     "text": "Swaps darts for a slower catapult whose big spiked balls pop many bloons and bounce off walls.",
+     "xp": 2100
+    },
+    {
+     "text": "A giant spiked ball that pops Lead and is great against Ceramic and Fortified bloons.",
+     "xp": 7500
+    },
+    {
+     "text": "The giant ball splits twice into six Juggernaut balls: even stronger against Ceramic, Fortified and Lead.",
+     "xp": 22000
+    }
+   ],
+   [
+    {
+     "text": "Throws 15% faster.",
+     "xp": 0
+    },
+    {
+     "text": "Throws 33% faster.",
+     "xp": 100
+    },
+    {
+     "text": "Throws three darts at once instead of one.",
+     "xp": 2000
+    },
+    {
+     "text": "Ability: turns up to 10 nearby Dart Monkeys (itself included) into Super Monkeys for 15 seconds; also attacks faster.",
+     "xp": 9500
+    },
+    {
+     "text": "A stronger version of the fan club ability with plasma-firing Dart Monkeys.",
+     "xp": 30000
+    }
+   ],
+   [
+    {
+     "text": "More range.",
+     "xp": 0
+    },
+    {
+     "text": "Even more range, and it sees Camo.",
+     "xp": 100
+    },
+    {
+     "text": "A long-range crossbow whose bolts pop 3 layers per hit.",
+     "xp": 1900
+    },
+    {
+     "text": "Attacks faster and lands a big critical hit every few shots.",
+     "xp": 12000
+    },
+    {
+     "text": "Fires very fast and tears through most bloon types.",
+     "xp": 35000
+    }
+   ]
+  ]
  },
  {
   "id": "boomer",
@@ -536,7 +604,75 @@
     "name": "Glaive Lord",
     "note": "Glaive Lord is a solid win condition in standard games."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Each throw pops up to 8 bloons.",
+     "xp": 100
+    },
+    {
+     "text": "Throws bigger, faster glaives that hit more bloons.",
+     "xp": 520
+    },
+    {
+     "text": "Glaives bounce from bloon to bloon on their own.",
+     "xp": 2500
+    },
+    {
+     "text": "Ricochet glaives get much stronger.",
+     "xp": 8500
+    },
+    {
+     "text": "Three orbiting glaives shred anything nearby, and its glaives slowly tear MOAB-class bloons apart.",
+     "xp": 37500
+    }
+   ],
+   [
+    {
+     "text": "Throws faster.",
+     "xp": 120
+    },
+    {
+     "text": "Boomerangs are thrown and fly faster.",
+     "xp": 550
+    },
+    {
+     "text": "A bionic arm throws extremely fast and does more damage to MOAB-class.",
+     "xp": 2500
+    },
+    {
+     "text": "Ability: attacks incredibly fast for 10 seconds.",
+     "xp": 9000
+    },
+    {
+     "text": "The super fast attack speed becomes permanent; the ability adds even more.",
+     "xp": 32000
+    }
+   ],
+   [
+    {
+     "text": "Throws farther.",
+     "xp": 110
+    },
+    {
+     "text": "Boomerangs pop Frozen and Lead bloons and hit harder.",
+     "xp": 490
+    },
+    {
+     "text": "Heavy Kylie boomerangs fly in a straight line instead of curving.",
+     "xp": 3000
+    },
+    {
+     "text": "Kylies hit MOAB-class bloons several times per throw and sometimes push them back.",
+     "xp": 9500
+    },
+    {
+     "text": "The knockback kylies trigger more often and deal much more damage.",
+     "xp": 28000
+    }
+   ]
+  ]
  },
  {
   "id": "bomb",
@@ -793,7 +929,75 @@
     "name": "MOAB Mauler",
     "note": "Recursive Cluster struggles against Super Ceramics from round 81."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Bigger bombs with a larger blast and more pops.",
+     "xp": 200
+    },
+    {
+     "text": "Heavy bombs smash 2 layers at once and pop more bloons.",
+     "xp": 1000
+    },
+    {
+     "text": "Huge bombs hit harder over a big area and knock bloons back.",
+     "xp": 3000
+    },
+    {
+     "text": "Explosions stun bloons briefly; more range and stronger frags.",
+     "xp": 10000
+    },
+    {
+     "text": "Massive explosions that can even stun MOAB-class bloons.",
+     "xp": 37500
+    }
+   ],
+   [
+    {
+     "text": "Reloads faster.",
+     "xp": 180
+    },
+    {
+     "text": "Swaps bombs for faster missiles with more range.",
+     "xp": 650
+    },
+    {
+     "text": "Missiles deal much more damage to MOAB-class bloons.",
+     "xp": 2700
+    },
+    {
+     "text": "Ability: a special missile deals massive damage to one MOAB-class bloon; more range and blimp damage.",
+     "xp": 10000
+    },
+    {
+     "text": "Huge blimp damage, and the ability hits 6× harder on a short cooldown.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "More range.",
+     "xp": 150
+    },
+    {
+     "text": "Explosions throw sharp fragments that pop more bloons.",
+     "xp": 600
+    },
+    {
+     "text": "Throws small bombs instead of fragments.",
+     "xp": 2500
+    },
+    {
+     "text": "Every second shot, the cluster bombs release more cluster bombs.",
+     "xp": 10000
+    },
+    {
+     "text": "Much more damage, plus a passive bomb storm that wipes most bloons when you would lose lives (since v57, once per round).",
+     "xp": 25000
+    }
+   ]
+  ]
  },
  {
   "id": "tack",
@@ -1050,7 +1254,75 @@
     "name": "The Tack Zone",
     "note": "The Tack Zone (2-0-5) and Inferno Ring (5-0-2) are supplemental Freeplay defense."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Shoots faster.",
+     "xp": 150
+    },
+    {
+     "text": "Shoots even faster.",
+     "xp": 550
+    },
+    {
+     "text": "Red-hot tacks deal extra damage and pop Lead.",
+     "xp": 2400
+    },
+    {
+     "text": "A ring of fire replaces the tacks and burns many more bloons.",
+     "xp": 9500
+    },
+    {
+     "text": "A much stronger inferno ring.",
+     "xp": 32500
+    }
+   ],
+   [
+    {
+     "text": "Tacks fly farther.",
+     "xp": 140
+    },
+    {
+     "text": "Even more range and more pops per tack.",
+     "xp": 500
+    },
+    {
+     "text": "High-pierce blades that also shatter frozen bloons.",
+     "xp": 2300
+    },
+    {
+     "text": "Ability: covers the area in a storm of blades.",
+     "xp": 9000
+    },
+    {
+     "text": "A stronger, longer blade storm ability.",
+     "xp": 28000
+    }
+   ],
+   [
+    {
+     "text": "Shoots 10 tacks instead of 8 (and boosts Ring of Fire).",
+     "xp": 150
+    },
+    {
+     "text": "Shoots 12 tacks (and boosts Ring of Fire more).",
+     "xp": 490
+    },
+    {
+     "text": "Sprays 16 tougher tacks per volley.",
+     "xp": 2450
+    },
+    {
+     "text": "Shoots incredibly fast.",
+     "xp": 8750
+    },
+    {
+     "text": "An enormous number of tacks.",
+     "xp": 26500
+    }
+   ]
+  ]
  },
  {
   "id": "ice",
@@ -1311,7 +1583,75 @@
     "name": "Embrittlement",
     "note": "Embrittlement still helps other towers pop leads in standard games."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Bloons stay slowed after they thaw.",
+     "xp": 160
+    },
+    {
+     "text": "Can freeze and pop Lead and Camo bloons.",
+     "xp": 500
+    },
+    {
+     "text": "Hits strip Camo and Regrow; frozen bloons burst into sharp shards.",
+     "xp": 2500
+    },
+    {
+     "text": "Can hit MOAB-class; hit bloons take extra damage while frozen and briefly lose Lead immunity.",
+     "xp": 8250
+    },
+    {
+     "text": "Frozen bloons take huge damage, and its shards rip through Ceramics.",
+     "xp": 25000
+    }
+   ],
+   [
+    {
+     "text": "Attacks faster and freezes for longer.",
+     "xp": 160
+    },
+    {
+     "text": "More pierce, freezes an extra layer and for longer.",
+     "xp": 500
+    },
+    {
+     "text": "A freezing aura slows nearby bloons and freezes water into platforms.",
+     "xp": 2500
+    },
+    {
+     "text": "Ability: freezes every regular bloon on screen, briefly freezes White, Zebra and Camo, and slows blimps.",
+     "xp": 8500
+    },
+    {
+     "text": "Every attack briefly freezes all bloons on the map; the snowstorm lasts longer and speeds up all Ice Monkeys.",
+     "xp": 27500
+    }
+   ],
+   [
+    {
+     "text": "Bigger freeze area.",
+     "xp": 160
+    },
+    {
+     "text": "Can freeze bloons that are already frozen.",
+     "xp": 500
+    },
+    {
+     "text": "Fires small ice bombs quickly at long range.",
+     "xp": 2500
+    },
+    {
+     "text": "Bonus damage to blimps; frozen bloons grow icicles that pop bloons touching them.",
+     "xp": 9000
+    },
+    {
+     "text": "Fires huge icicle spikes that crush and freeze blimps.",
+     "xp": 30000
+    }
+   ]
+  ]
  },
  {
   "id": "glue",
@@ -1575,7 +1915,75 @@
     "name": "Relentless Glue",
     "note": "MOAB Glue and Relentless Glue are recommended support for rounds 90+."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Glue soaks through every layer of a bloon.",
+     "xp": 150
+    },
+    {
+     "text": "Glued bloons lose a layer every few seconds.",
+     "xp": 550
+    },
+    {
+     "text": "Glues one extra bloon per shot and melts two layers per second.",
+     "xp": 2500
+    },
+    {
+     "text": "Glue deals 10 pops per second and leaves acid on the track.",
+     "xp": 9000
+    },
+    {
+     "text": "The strongest dissolving glue: answers late Ceramics.",
+     "xp": 37500
+    }
+   ],
+   [
+    {
+     "text": "Glues 2 bloons per shot.",
+     "xp": 120
+    },
+    {
+     "text": "Glue splashes across up to 5 bloons.",
+     "xp": 900
+    },
+    {
+     "text": "Shoots glue 3× as fast over a wider area.",
+     "xp": 2500
+    },
+    {
+     "text": "Ability: glues every bloon on screen, removing Lead immunity and making them take more damage.",
+     "xp": 8500
+    },
+    {
+     "text": "Ability: rains glue over the whole screen for 20 seconds.",
+     "xp": 25000
+    }
+   ],
+   [
+    {
+     "text": "Glue lasts much longer.",
+     "xp": 130
+    },
+    {
+     "text": "Slows bloons even more.",
+     "xp": 600
+    },
+    {
+     "text": "Glue sticks to MOAB-class bloons.",
+     "xp": 2500
+    },
+    {
+     "text": "When a glued bloon pops, nearby bloons are stunned.",
+     "xp": 8000
+    },
+    {
+     "text": "Glue so strong it briefly stops bloons completely.",
+     "xp": 30000
+    }
+   ]
+  ]
  },
  {
   "id": "desperado",
@@ -1814,7 +2222,75 @@
     "name": "The Blazing Sun",
     "note": "Strong early game with long range; the standard-game and Freeplay guides don't cover it yet."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Attacks faster the farther away the bloons are.",
+     "xp": 200
+    },
+    {
+     "text": "Attacks faster the fewer bloons are in range.",
+     "xp": 450
+    },
+    {
+     "text": "A six-shot revolver that pops Lead; even faster with few bloons in range.",
+     "xp": 2100
+    },
+    {
+     "text": "Twin revolvers that hit harder.",
+     "xp": 9500
+    },
+    {
+     "text": "Revolvers fire so fast they set alight: the top single-target damage of the path.",
+     "xp": 29000
+    }
+   ],
+   [
+    {
+     "text": "Sees Camo.",
+     "xp": 200
+    },
+    {
+     "text": "Shots can crit, more often against distant bloons.",
+     "xp": 650
+    },
+    {
+     "text": "Ability: gives a tower more range, accuracy and Camo detection; adds a long rifle that pops Lead and beats Fortified.",
+     "xp": 3750
+    },
+    {
+     "text": "Ability: marks bloons, which take more damage and give more cash; every Desperado can target them.",
+     "xp": 18000
+    },
+    {
+     "text": "A longarm whose shots go clean through crowds of bloons.",
+     "xp": 40000
+    }
+   ],
+   [
+    {
+     "text": "Attacks much faster when few other towers share its range.",
+     "xp": 150
+    },
+    {
+     "text": "Faster with more bloons in range; losing lives gives a short boost and a little cash.",
+     "xp": 600
+    },
+    {
+     "text": "A shotgun that knocks back bloons at close range.",
+     "xp": 3000
+    },
+    {
+     "text": "Shotgun shrapnel that can push back MOABs; leaks briefly cost only 1 life each.",
+     "xp": 14000
+    },
+    {
+     "text": "Hits like a mine blast: huge crowd damage and knockback.",
+     "xp": 29000
+    }
+   ]
+  ]
  },
  {
   "id": "sniper",
@@ -2081,7 +2557,75 @@
     "name": "Cripple MOAB",
     "note": "Elite Sniper and Cripple MOAB (5-2-0) are recommended Freeplay support; Elite Defender fits Sun Temple setups."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Shots pop 4 layers and pop Lead and Frozen bloons.",
+     "xp": 120
+    },
+    {
+     "text": "Shots pop 7 layers.",
+     "xp": 800
+    },
+    {
+     "text": "20 damage per shot plus bonus damage to Ceramics.",
+     "xp": 3500
+    },
+    {
+     "text": "Much more damage, and shots stun MOAB-class bloons briefly.",
+     "xp": 10500
+    },
+    {
+     "text": "Longer stuns, and crippled blimps take extra damage from everything.",
+     "xp": 37500
+    }
+   ],
+   [
+    {
+     "text": "Sees Camo and deals +2 damage to Camo bloons.",
+     "xp": 200
+    },
+    {
+     "text": "Hit bloons spray a cone of shrapnel.",
+     "xp": 600
+    },
+    {
+     "text": "Bullets bounce to up to 2 more targets.",
+     "xp": 2500
+    },
+    {
+     "text": "Ability: drops a cash crate, or an ammo crate that powers up shrapnel for a few shots.",
+     "xp": 11000
+    },
+    {
+     "text": "Bigger cash drops, the ammo drop buffs 2 nearby Snipers, and all Snipers reload faster with Elite targeting.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "Shoots faster.",
+     "xp": 130
+    },
+    {
+     "text": "Shoots even faster.",
+     "xp": 600
+    },
+    {
+     "text": "Attacks 3× as fast.",
+     "xp": 2750
+    },
+    {
+     "text": "A fully automatic rifle with huge popping power.",
+     "xp": 10000
+    },
+    {
+     "text": "Fires extremely fast, hits blimps harder and speeds up the closer bloons get to the exit; losing lives gives 4× attack speed.",
+     "xp": 30000
+    }
+   ]
+  ]
  },
  {
   "id": "sub",
@@ -2352,7 +2896,75 @@
     "name": "Airburst Darts",
     "note": "Airburst Darts (2-0-2) is strong early on maps with water."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "More range.",
+     "xp": 125
+    },
+    {
+     "text": "Can attack bloons in range of your other towers.",
+     "xp": 750
+    },
+    {
+     "text": "Submerged, it reveals Camo bloons in its radius but stops attacking.",
+     "xp": 2250
+    },
+    {
+     "text": "Submerged, it reveals Camo, pops bloons and cuts nearby water towers' ability cooldowns by 15%.",
+     "xp": 11000
+    },
+    {
+     "text": "Cuts ability cooldowns 20% everywhere (40% for water towers) and heroes in range earn XP 50% faster.",
+     "xp": 33000
+    }
+   ],
+   [
+    {
+     "text": "Darts pop 3 more bloons; other weapons pierce more too.",
+     "xp": 130
+    },
+    {
+     "text": "Darts pop Frozen and Lead bloons.",
+     "xp": 600
+    },
+    {
+     "text": "Missiles that fly over walls and hit blimps and Ceramics harder.",
+     "xp": 3000
+    },
+    {
+     "text": "Ability: a huge missile strike on the biggest bloon on screen, with splash damage.",
+     "xp": 20000
+    },
+    {
+     "text": "Automatically fires a strong missile at every blimp that enters the map.",
+     "xp": 45000
+    }
+   ],
+   [
+    {
+     "text": "A second gun doubles attack speed.",
+     "xp": 150
+    },
+    {
+     "text": "Darts split into 3 on impact.",
+     "xp": 1000
+    },
+    {
+     "text": "A third gun for even faster firing.",
+     "xp": 2750
+    },
+    {
+     "text": "Armor-piercing darts with more damage and pierce, plus bonus damage to Fortified and blimps.",
+     "xp": 10000
+    },
+    {
+     "text": "Boosts the pierce and damage of every Sub in its radius, itself included.",
+     "xp": 25000
+    }
+   ]
+  ]
  },
  {
   "id": "bucc",
@@ -2627,7 +3239,75 @@
     "name": "Destroyer",
     "note": "Destroyer (3-1-0) handles the first MOAB."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Every weapon on the ship fires faster.",
+     "xp": 150
+    },
+    {
+     "text": "Fires more shots per volley.",
+     "xp": 700
+    },
+    {
+     "text": "Attacks extremely fast.",
+     "xp": 3000
+    },
+    {
+     "text": "Launches fighter planes that strafe bloons and fire missiles at blimps.",
+     "xp": 12500
+    },
+    {
+     "text": "More damage; other towers can stand on its decks, and it speeds up every water tower and Monkey Ace.",
+     "xp": 37000
+    }
+   ],
+   [
+    {
+     "text": "Adds a spray of 5 sharp grapes.",
+     "xp": 200
+    },
+    {
+     "text": "Burning grapes pop Lead and set bloons on fire.",
+     "xp": 650
+    },
+    {
+     "text": "Adds a cannon that fires strong bombs.",
+     "xp": 2700
+    },
+    {
+     "text": "Two more cannons and more damage. Ability: harpoons a blimp and drags it down.",
+     "xp": 13000
+    },
+    {
+     "text": "Much stronger, hooks many blimps at once and plunders extra cash from each.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "Much more range, with faster projectiles and more pierce.",
+     "xp": 150
+    },
+    {
+     "text": "Can hit Camo bloons.",
+     "xp": 600
+    },
+    {
+     "text": "Makes cash every round, and hits harder when you have over $10,000 saved.",
+     "xp": 3100
+    },
+    {
+     "text": "Lots of income, raises the sell value of towers in range, and hits harder over $50,000 saved.",
+     "xp": 10000
+    },
+    {
+     "text": "More income, plus damage and income bonuses for up to 20 Merchantmen.",
+     "xp": 40000
+    }
+   ]
+  ]
  },
  {
   "id": "ace",
@@ -2897,7 +3577,75 @@
     "name": "Flying Fortress",
     "note": "Flying Fortress (2-0-5 with a 2-2-0 Village) is the main late-game carry in standard games."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Shoots faster.",
+     "xp": 160
+    },
+    {
+     "text": "Shoots 12 darts at a time.",
+     "xp": 750
+    },
+    {
+     "text": "Flies fast and fires anti-blimp missiles.",
+     "xp": 2700
+    },
+    {
+     "text": "16 darts per volley, twice as fast.",
+     "xp": 8000
+    },
+    {
+     "text": "A storm of darts and missiles that shreds bloons and blimps.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "Drops pineapples that explode after a few seconds; better explosions.",
+     "xp": 120
+    },
+    {
+     "text": "Can hit Camo bloons and deals more damage to them.",
+     "xp": 600
+    },
+    {
+     "text": "Drops a line of bombs each time it crosses the track.",
+     "xp": 2500
+    },
+    {
+     "text": "Much stronger bombs. Ability: a huge bomb that wipes most of the screen.",
+     "xp": 15000
+    },
+    {
+     "text": "A gigantic, even stronger bomb ability.",
+     "xp": 30000
+    }
+   ],
+   [
+    {
+     "text": "Each dart pops 8 bloons.",
+     "xp": 160
+    },
+    {
+     "text": "A central flight path that covers more of the map.",
+     "xp": 600
+    },
+    {
+     "text": "Darts seek out bloons by themselves.",
+     "xp": 3000
+    },
+    {
+     "text": "Fires darts and bombs rapidly and handles most bloon types.",
+     "xp": 19000
+    },
+    {
+     "text": "A huge flying fortress with heavy firepower.",
+     "xp": 45000
+    }
+   ]
+  ]
  },
  {
   "id": "heli",
@@ -3157,7 +3905,75 @@
     "name": "Support Chinook",
     "note": "Support Chinook moves Ninjas into Sun Temple range in the strongest Freeplay hybrid, and can stall for extra income."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "4 darts per volley instead of 2.",
+     "xp": 200
+    },
+    {
+     "text": "A targeting option to chase bloons on its own.",
+     "xp": 650
+    },
+    {
+     "text": "Razor rotors shred bloons on contact, including Lead and Frozen.",
+     "xp": 2700
+    },
+    {
+     "text": "Adds a big missile array and strong machine guns.",
+     "xp": 20000
+    },
+    {
+     "text": "A much stronger gunship.",
+     "xp": 55000
+    }
+   ],
+   [
+    {
+     "text": "Stronger jets: moves much faster.",
+     "xp": 150
+    },
+    {
+     "text": "Can see and shoot Camo bloons.",
+     "xp": 650
+    },
+    {
+     "text": "Blows bloons back toward the entrance.",
+     "xp": 3300
+    },
+    {
+     "text": "Blows back more bloons; abilities drop lives and cash and move towers around the map.",
+     "xp": 15000
+    },
+    {
+     "text": "Deploys a special Monkey Marine with a machine gun.",
+     "xp": 40000
+    }
+   ],
+   [
+    {
+     "text": "Darts fly much faster.",
+     "xp": 140
+    },
+    {
+     "text": "All its attacks fire faster.",
+     "xp": 550
+    },
+    {
+     "text": "Can ram and shove MOAB-class bloons back or slow them (stronger with Bigger Jets and IFR).",
+     "xp": 2500
+    },
+    {
+     "text": "Calls in mini Comanches when they are needed most.",
+     "xp": 12500
+    },
+    {
+     "text": "Better weapons and 3 more permanent Comanches.",
+     "xp": 50000
+    }
+   ]
+  ]
  },
  {
   "id": "mortar",
@@ -3410,7 +4226,75 @@
     "name": "Artillery Battery",
     "note": "Artillery Battery is a mid-game pick."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Bigger blast radius.",
+     "xp": 180
+    },
+    {
+     "text": "Each shell smashes 3 layers.",
+     "xp": 600
+    },
+    {
+     "text": "The blast stuns bloons, hits a wider area and boosts Burny Stuff.",
+     "xp": 2500
+    },
+    {
+     "text": "Devastating blasts pop 10 layers.",
+     "xp": 15000
+    },
+    {
+     "text": "Enormous blasts deep through bloons over a huge area.",
+     "xp": 29000
+    }
+   ],
+   [
+    {
+     "text": "Fires faster.",
+     "xp": 150
+    },
+    {
+     "text": "Fires even faster.",
+     "xp": 600
+    },
+    {
+     "text": "Heavy shells: extra damage to Ceramic, Lead, Fortified, blimps and stunned bloons; faster, and pops Black.",
+     "xp": 2300
+    },
+    {
+     "text": "Three barrels for very fast attacks. Ability: a rapid-fire bombardment.",
+     "xp": 12500
+    },
+    {
+     "text": "Permanent rapid fire. Ability: explosions rain over the whole screen, stunning bloons.",
+     "xp": 32000
+    }
+   ],
+   [
+    {
+     "text": "More accurate shots that can hit Camo.",
+     "xp": 140
+    },
+    {
+     "text": "Hits set bloons on fire for a moment.",
+     "xp": 650
+    },
+    {
+     "text": "Flares permanently strip Camo from bloons.",
+     "xp": 2200
+    },
+    {
+     "text": "Shells strip special properties (like Fortified) from all but the biggest bloons; stronger burning, also on blimps.",
+     "xp": 12000
+    },
+    {
+     "text": "Superhot fire that burns blimps down easily.",
+     "xp": 35000
+    }
+   ]
+  ]
  },
  {
   "id": "dartling",
@@ -3671,7 +4555,75 @@
     "name": "Bloon Exclusion Zone",
     "note": "BADS, Plasma Accelerator, Ray of Doom and BEZ are standard-game carries."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "More accurate.",
+     "xp": 150
+    },
+    {
+     "text": "Laser shots shock bloons, popping them again a second later.",
+     "xp": 600
+    },
+    {
+     "text": "Powerful lasers that pop Frozen bloons and hit blimps harder.",
+     "xp": 2600
+    },
+    {
+     "text": "A concentrated plasma beam.",
+     "xp": 12500
+    },
+    {
+     "text": "A solid beam of destruction that erases most bloons.",
+     "xp": 75000
+    }
+   ],
+   [
+    {
+     "text": "Can hit Camo bloons.",
+     "xp": 130
+    },
+    {
+     "text": "Fires much faster.",
+     "xp": 700
+    },
+    {
+     "text": "Missiles that can hit every bloon type and explode several times.",
+     "xp": 2700
+    },
+    {
+     "text": "Ability: a storm of rockets in a wide cone.",
+     "xp": 14000
+    },
+    {
+     "text": "Slow mega missiles with extreme damage to blimps.",
+     "xp": 60000
+    }
+   ],
+   [
+    {
+     "text": "The barrel turns much faster.",
+     "xp": 110
+    },
+    {
+     "text": "Faster darts that pop Frozen bloons and pop 3 bloons each.",
+     "xp": 650
+    },
+    {
+     "text": "Fires blasts of buckshot instead of darts.",
+     "xp": 3000
+    },
+    {
+     "text": "A 4-barrel auto-cannon that can aim by itself.",
+     "xp": 15000
+    },
+    {
+     "text": "6 barrels and massive damage.",
+     "xp": 55000
+    }
+   ]
+  ]
  },
  {
   "id": "wizard",
@@ -3937,7 +4889,75 @@
     "name": "Wall of Fire",
     "note": "Wall of Fire (1-2-0, or 0-2-2 toward Dragon's Breath) is a reliable early pick."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Magic shots last longer and seek bloons, even behind walls.",
+     "xp": 110
+    },
+    {
+     "text": "Bigger blasts that pop 2 layers.",
+     "xp": 600
+    },
+    {
+     "text": "Faster, with more range, damage and pierce.",
+     "xp": 2300
+    },
+    {
+     "text": "Fast, heavy magic, especially strong against blimps (plasma: pops Lead).",
+     "xp": 11000
+    },
+    {
+     "text": "A true master: faster and much stronger against blimps.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "Casts an explosive fireball every few seconds.",
+     "xp": 130
+    },
+    {
+     "text": "Places a wall of fire on the track.",
+     "xp": 700
+    },
+    {
+     "text": "Breathes constant flames and improves Fireball and Wall of Fire.",
+     "xp": 2600
+    },
+    {
+     "text": "Ability: summons a phoenix for 20 seconds.",
+     "xp": 13000
+    },
+    {
+     "text": "Becomes a lava phoenix for a short time.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "Stronger, faster shots with more pierce.",
+     "xp": 140
+    },
+    {
+     "text": "A bit more range, and can hit Camo.",
+     "xp": 500
+    },
+    {
+     "text": "A dark attack that permanently reveals nearby Camo bloons.",
+     "xp": 2200
+    },
+    {
+     "text": "Raises popped bloons as zombies that attack any bloon type.",
+     "xp": 10000
+    },
+    {
+     "text": "Stronger zombie bloons, and it buffs other Necromancers.",
+     "xp": 30000
+    }
+   ]
+  ]
  },
  {
   "id": "super",
@@ -4213,7 +5233,75 @@
     "name": "Sun Temple",
     "note": "Vengeful True Sun God plus Sun Temples and Sun Avatars is a core Freeplay build (Adora's Blood Sacrifice helps)."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Fires laser blasts instead of darts.",
+     "xp": 500
+    },
+    {
+     "text": "Plasma blasts that vaporize almost anything.",
+     "xp": 2200
+    },
+    {
+     "text": "Channels the power of the sun.",
+     "xp": 7000
+    },
+    {
+     "text": "Sacrificed towers power up and change its attacks.",
+     "xp": 50000
+    },
+    {
+     "text": "The awesome power of the True Sun God.",
+     "xp": 150000
+    }
+   ],
+   [
+    {
+     "text": "More range.",
+     "xp": 300
+    },
+    {
+     "text": "Even more range.",
+     "xp": 1300
+    },
+    {
+     "text": "Two guns at once with critical hits.",
+     "xp": 6000
+    },
+    {
+     "text": "Ability: annihilates most bloons in a blast radius.",
+     "xp": 35000
+    },
+    {
+     "text": "A much stronger robot.",
+     "xp": 85000
+    }
+   ],
+   [
+    {
+     "text": "Hits push bloons back or slow them.",
+     "xp": 550
+    },
+    {
+     "text": "A bit more range, sees Camo and hits it harder.",
+     "xp": 2000
+    },
+    {
+     "text": "Dark blades with more knockback, pierce and blimp damage; can teleport nearby.",
+     "xp": 6500
+    },
+    {
+     "text": "Stronger dark blades against every bloon type; teleports anywhere.",
+     "xp": 47500
+    },
+    {
+     "text": "The strongest dark knight.",
+     "xp": 100000
+    }
+   ]
+  ]
  },
  {
   "id": "ninja",
@@ -4473,7 +5561,75 @@
     "name": "Bloonjitsu",
     "note": "Bloonjitsu spam with about 20 Shinobi Tactics stacks each is the top Freeplay build (Grandmaster Ninja and Grand Saboteur too)."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Attacks faster.",
+     "xp": 150
+    },
+    {
+     "text": "Each shuriken pops 4 bloons.",
+     "xp": 550
+    },
+    {
+     "text": "Throws 2 shurikens at once.",
+     "xp": 2000
+    },
+    {
+     "text": "Throws 5 shurikens at once.",
+     "xp": 16000
+    },
+    {
+     "text": "Throws incredibly fast, 8 shurikens at a time.",
+     "xp": 50000
+    }
+   ],
+   [
+    {
+     "text": "Some bloons get distracted and walk backwards.",
+     "xp": 200
+    },
+    {
+     "text": "Attacks strip Camo from the bloons they hit.",
+     "xp": 600
+    },
+    {
+     "text": "Speeds up and adds pierce to nearby Ninjas (stacks 20 times).",
+     "xp": 2000
+    },
+    {
+     "text": "Ability: every bloon moves at half speed for 15 seconds.",
+     "xp": 14000
+    },
+    {
+     "text": "Longer sabotage that buffs Shinobi, and blimps spawn with less health during it.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "More range, and shurikens seek bloons.",
+     "xp": 140
+    },
+    {
+     "text": "Throws spiked caltrops onto the track.",
+     "xp": 500
+    },
+    {
+     "text": "Alternates stunning flash bombs with shurikens that hit stunned bloons harder.",
+     "xp": 2500
+    },
+    {
+     "text": "Sticks strong timed bombs on blimps.",
+     "xp": 15500
+    },
+    {
+     "text": "A blimp demolition machine.",
+     "xp": 37500
+    }
+   ]
+  ]
  },
  {
   "id": "alch",
@@ -4726,7 +5882,75 @@
     "name": "Permanent Brew",
     "note": "Permanent Brew is core Freeplay support; Bloon Master Alchemist only when you aren't stalling for abilities."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Potions splash over more bloons.",
+     "xp": 140
+    },
+    {
+     "text": "Coats nearby towers so they pop Lead and hit Ceramics and blimps harder for a few attacks.",
+     "xp": 550
+    },
+    {
+     "text": "A brew that briefly gives a tower more damage, range and attack speed.",
+     "xp": 2250
+    },
+    {
+     "text": "A stronger, longer-lasting brew.",
+     "xp": 10000
+    },
+    {
+     "text": "The brew becomes permanent on towers that drink it.",
+     "xp": 30000
+    }
+   ],
+   [
+    {
+     "text": "Acid dissolves bloons faster.",
+     "xp": 140
+    },
+    {
+     "text": "More blimp damage, strips Fortified from smaller bloons, and buff potions last longer.",
+     "xp": 500
+    },
+    {
+     "text": "Coats blimps so they explode when popped.",
+     "xp": 2500
+    },
+    {
+     "text": "Ability: turns into an attack monster for 20 seconds.",
+     "xp": 10000
+    },
+    {
+     "text": "Ability: turns five nearby towers into attack monsters for 20 seconds.",
+     "xp": 28000
+    }
+   ],
+   [
+    {
+     "text": "Throws and attacks faster.",
+     "xp": 145
+    },
+    {
+     "text": "Spills acid pools on the track.",
+     "xp": 700
+    },
+    {
+     "text": "Lead bloons pop in one shot and turn into cash.",
+     "xp": 2000
+    },
+    {
+     "text": "Partly turns bloons to gold: removes immunities and pays more per pop.",
+     "xp": 8500
+    },
+    {
+     "text": "Shrinks affected bloons into Red bloons.",
+     "xp": 24000
+    }
+   ]
+  ]
  },
  {
   "id": "druid",
@@ -4989,7 +6213,75 @@
     "name": "Druid of the Jungle",
     "note": "Druid of the Jungle (1-3-0) is good on maps with one active lane."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Thorns pop 2 bloons each and can pop any bloon type.",
+     "xp": 150
+    },
+    {
+     "text": "Regular forked lightning that arcs between bloons.",
+     "xp": 750
+    },
+    {
+     "text": "Gusts of wind blow bloons back, away from the exit.",
+     "xp": 2500
+    },
+    {
+     "text": "Sees Camo; balls of lightning that can freeze bloons, with extra bolts arcing off.",
+     "xp": 12000
+    },
+    {
+     "text": "Constant superstorms that hit every bloon type hard and blow them back.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "8 thorns per shot instead of 5.",
+     "xp": 140
+    },
+    {
+     "text": "Attacks remove Regrow; gains pierce for every life gained above your starting lives.",
+     "xp": 600
+    },
+    {
+     "text": "A vine grabs and crushes bloons one at a time, leaving thorn piles.",
+     "xp": 2000
+    },
+    {
+     "text": "Stronger thorns; earns cash and lives every round (more with nearby farms). Ability: vines grab many bloons.",
+     "xp": 11000
+    },
+    {
+     "text": "Thorny vines along the whole track deal constant damage, extra to Ceramics.",
+     "xp": 40000
+    }
+   ],
+   [
+    {
+     "text": "Much more range.",
+     "xp": 120
+    },
+    {
+     "text": "+10% attack speed, plus more for every life lost (up to +50%).",
+     "xp": 550
+    },
+    {
+     "text": "Attacks faster and faster during a round while it keeps attacking.",
+     "xp": 1700
+    },
+    {
+     "text": "Boosts attack speed and pierce of other Druids in range (stacks up to 5 times).",
+     "xp": 14000
+    },
+    {
+     "text": "Hits harder the more bloons there are on screen.",
+     "xp": 33000
+    }
+   ]
+  ]
  },
  {
   "id": "mermonkey",
@@ -5225,7 +6517,75 @@
     "name": "The Final Harmonic",
     "note": "Symphonic Resonance is round-90s support; The Final Harmonic pairs with a 0-5-2 Glue Storm in Freeplay."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "All attacks are faster.",
+     "xp": 160
+    },
+    {
+     "text": "Tridents are thrown faster and fly farther.",
+     "xp": 580
+    },
+    {
+     "text": "An abyssal creature lashes bloons with tentacles and gives nearby towers a little pierce.",
+     "xp": 2800
+    },
+    {
+     "text": "Ink-coated tridents slow bloons; a stronger creature and more pierce for nearby towers.",
+     "xp": 11000
+    },
+    {
+     "text": "The creature fully unleashed: crushes most bloons and greatly boosts nearby pierce.",
+     "xp": 68000
+    }
+   ],
+   [
+    {
+     "text": "Each attack pops more bloons.",
+     "xp": 150
+    },
+    {
+     "text": "Bigger icy tridents that can freeze bloons.",
+     "xp": 700
+    },
+    {
+     "text": "Tridents pop Lead and grow stronger the farther they fly.",
+     "xp": 2500
+    },
+    {
+     "text": "Tridents power up faster. Ability: a barrage of bouncing ice balls.",
+     "xp": 16000
+    },
+    {
+     "text": "Its ability floods the map with icy water, freezing every bloon and sinking the weak ones.",
+     "xp": 70000
+    }
+   ],
+   [
+    {
+     "text": "Tridents see Camo and seek their target.",
+     "xp": 150
+    },
+    {
+     "text": "More range for every Echosense Mermonkey (stacks 10 times).",
+     "xp": 670
+    },
+    {
+     "text": "A hypnotic tune entrances smaller bloons, detonates damage over time and strips Camo.",
+     "xp": 3000
+    },
+    {
+     "text": "The tune can affect small blimps and echo from a chosen point.",
+     "xp": 14500
+    },
+    {
+     "text": "The tune reaches anywhere; nearby heroes get range and faster cooldowns, Magic towers get pierce.",
+     "xp": 52000
+    }
+   ]
+  ]
  },
  {
   "id": "skywarden",
@@ -5459,7 +6819,75 @@
     "name": "Farwind Seer",
     "note": "Too new for the standard-game or Freeplay guides."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Much more range for itself and for nearby towers (stacks 3 times).",
+     "xp": 150
+    },
+    {
+     "text": "Sees Camo; can switch to a slow, pinpoint long-range stance.",
+     "xp": 550
+    },
+    {
+     "text": "A wind combo that blows bloons back, splits extra arrows and pulls bloons together.",
+     "xp": 2750
+    },
+    {
+     "text": "Quick volleys, and it removes Camo from bloons in range.",
+     "xp": 16000
+    },
+    {
+     "text": "Arrows hit harder the farther they fly.",
+     "xp": 30000
+    }
+   ],
+   [
+    {
+     "text": "Energy arrows that fly faster and speed up its attacks as they hit.",
+     "xp": 175
+    },
+    {
+     "text": "Arrows explode in a blast that grows with distance; fires over walls and can aim at a spot (Plasma since v57).",
+     "xp": 650
+    },
+    {
+     "text": "A lightning combo that sets up chain lightning and ends with a heavy stunning strike.",
+     "xp": 3000
+    },
+    {
+     "text": "Combos can stun ZOMGs. Ability: charges nearby towers with fast ricocheting shots.",
+     "xp": 12000
+    },
+    {
+     "text": "Spent arrows become lightning conduits; its ability links them in a deadly web.",
+     "xp": 36000
+    }
+   ],
+   [
+    {
+     "text": "More pierce and accuracy; small frozen bloons shatter instantly.",
+     "xp": 200
+    },
+    {
+     "text": "Ice arrows pierce better and hit frozen bloons harder.",
+     "xp": 500
+    },
+    {
+     "text": "An ice combo that slows bloons, spreads the slow and ends in freezing shrapnel.",
+     "xp": 2750
+    },
+    {
+     "text": "Frozen bloons leave icy remains that slow and then explode.",
+     "xp": 14000
+    },
+    {
+     "text": "Stronger with more frozen bloons around; frozen MOABs burst in huge iceplosions.",
+     "xp": 32000
+    }
+   ]
+  ]
  },
  {
   "id": "farm",
@@ -5730,7 +7158,75 @@
     "name": "Marketplace",
     "note": "Start with 2-0-0 farms and 2-0-3 Marketplaces; Monkey Bank in the 30s or 40s leads into Monkeyopolis."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "2 extra bunches per round.",
+     "xp": 200
+    },
+    {
+     "text": "2 more extra bunches per round.",
+     "xp": 750
+    },
+    {
+     "text": "16 bunches per round.",
+     "xp": 3000
+    },
+    {
+     "text": "5 big crates every round, worth $300 each.",
+     "xp": 20000
+    },
+    {
+     "text": "A huge banana operation that also boosts every Banana Research Facility.",
+     "xp": 50000
+    }
+   ],
+   [
+    {
+     "text": "Bananas last 30 seconds instead of 15.",
+     "xp": 200
+    },
+    {
+     "text": "Bananas are worth 25% more.",
+     "xp": 1000
+    },
+    {
+     "text": "Stores its money in a bank that earns 15% interest each round.",
+     "xp": 3500
+    },
+    {
+     "text": "Ability: a $9,000 loan you repay over time.",
+     "xp": 20000
+    },
+    {
+     "text": "A much bigger bank with bigger loans.",
+     "xp": 50000
+    }
+   ],
+   [
+    {
+     "text": "Bigger collect radius; uncollected bananas auto-collect at half value.",
+     "xp": 200
+    },
+    {
+     "text": "Uncollected bananas auto-collect at almost full value; sells for 10% more.",
+     "xp": 950
+    },
+    {
+     "text": "Adds money each round automatically.",
+     "xp": 3200
+    },
+    {
+     "text": "Lots of money each round, and +10% income for Merchantmen.",
+     "xp": 20000
+    },
+    {
+     "text": "Huge income, lives each round, and collects income in its radius.",
+     "xp": 50000
+    }
+   ]
+  ]
  },
  {
   "id": "spike",
@@ -5997,7 +7493,75 @@
     "name": "Perma-Spike",
     "note": "Perma-Spike (1-0-5 with Jungle Drums and a 3-0-1 brew) tanks huge numbers of bloons; Super Mines (5-2-0) supports Freeplay."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Bigger spike piles.",
+     "xp": 170
+    },
+    {
+     "text": "Spikes cut through Lead and Frozen bloons.",
+     "xp": 600
+    },
+    {
+     "text": "Spiked balls that hit Ceramic and Fortified harder.",
+     "xp": 2400
+    },
+    {
+     "text": "Mines that explode when they run out of spikes.",
+     "xp": 15000
+    },
+    {
+     "text": "Giant exploding mines that wipe out almost anything.",
+     "xp": 32500
+    }
+   ],
+   [
+    {
+     "text": "Produces much faster.",
+     "xp": 180
+    },
+    {
+     "text": "Produces even faster.",
+     "xp": 650
+    },
+    {
+     "text": "Razor spikes that shred MOAB-class bloons.",
+     "xp": 2500
+    },
+    {
+     "text": "Ability: covers the whole track in spikes.",
+     "xp": 11000
+    },
+    {
+     "text": "Regularly lays a carpet of spikes over the whole track.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "Longer placing range, and piles last longer.",
+     "xp": 120
+    },
+    {
+     "text": "Special targeting, and faster production at the start of each round.",
+     "xp": 550
+    },
+    {
+     "text": "Spikes last much longer and can carry over to the next round.",
+     "xp": 2100
+    },
+    {
+     "text": "Spikes pop 3 layers each and last another round.",
+     "xp": 9000
+    },
+    {
+     "text": "Strong spikes that stay almost forever.",
+     "xp": 29500
+    }
+   ]
+  ]
  },
  {
   "id": "village",
@@ -6257,7 +7821,75 @@
     "name": "Monkeyopolis",
     "note": "Monkeyopolis (2-0-5 for range and Jungle Drums) is the main standard-game money-maker."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Bigger buff radius.",
+     "xp": 160
+    },
+    {
+     "text": "Towers in range attack faster.",
+     "xp": 1000
+    },
+    {
+     "text": "Primary towers in range get more range, pierce and projectile speed.",
+     "xp": 2000
+    },
+    {
+     "text": "Primary towers in range get tier 1 upgrades free, more range and faster abilities.",
+     "xp": 12000
+    },
+    {
+     "text": "Adds a Mega Ballista; Primary towers get more pierce, faster abilities and free tier 1–2 upgrades.",
+     "xp": 32000
+    }
+   ],
+   [
+    {
+     "text": "Stops Regrow working in its radius.",
+     "xp": 150
+    },
+    {
+     "text": "Towers in range can attack Camo.",
+     "xp": 2500
+    },
+    {
+     "text": "Towers in range can pop every bloon type.",
+     "xp": 3500
+    },
+    {
+     "text": "Ability: +50% attack speed and pierce for towers in range for a short time.",
+     "xp": 20000
+    },
+    {
+     "text": "The ability gives +100% attack speed and pierce to every tower for 20 seconds.",
+     "xp": 30000
+    }
+   ],
+   [
+    {
+     "text": "10% off towers and tier 1–3 upgrades bought in its range.",
+     "xp": 250
+    },
+    {
+     "text": "Another 5% off, stacking with up to 2 more Commerce villages.",
+     "xp": 750
+    },
+    {
+     "text": "Towers in range earn extra cash per pop.",
+     "xp": 3000
+    },
+    {
+     "text": "Bigger radius and more cash, plus a free Dart Monkey every round.",
+     "xp": 15500
+    },
+    {
+     "text": "Absorbs nearby Banana Farms and their income, freeing their space.",
+     "xp": 28000
+    }
+   ]
+  ]
  },
  {
   "id": "engi",
@@ -6519,7 +8151,75 @@
     "name": "Overclock",
     "note": "Overclock expensive carries (not Pouākai)."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "Builds temporary sentry guns near the track in its range.",
+     "xp": 160
+    },
+    {
+     "text": "Makes sentries, foam and traps more often.",
+     "xp": 550
+    },
+    {
+     "text": "Sentries and the Engineer attack faster.",
+     "xp": 1850
+    },
+    {
+     "text": "Sentries come with the damage type you need.",
+     "xp": 9500
+    },
+    {
+     "text": "Very powerful but unstable sentries.",
+     "xp": 30000
+    }
+   ],
+   [
+    {
+     "text": "More range for it and its sentries, placed over a bigger area.",
+     "xp": 170
+    },
+    {
+     "text": "Nails and sentries hit blimps and Fortified harder.",
+     "xp": 500
+    },
+    {
+     "text": "Sprays foam that removes Camo and Regrow and pops Lead.",
+     "xp": 2000
+    },
+    {
+     "text": "Ability: supercharges another tower's attack speed for a while.",
+     "xp": 14000
+    },
+    {
+     "text": "Overclocked towers keep a small permanent boost each time.",
+     "xp": 35000
+    }
+   ],
+   [
+    {
+     "text": "Huge nails pop 8 bloons (frozen too); better foam and sentries.",
+     "xp": 150
+    },
+    {
+     "text": "Hits pin bloons in place for a moment.",
+     "xp": 500
+    },
+    {
+     "text": "Two nail guns.",
+     "xp": 1800
+    },
+    {
+     "text": "A trap catches bloons until full; empty it for cash.",
+     "xp": 11000
+    },
+    {
+     "text": "Huge traps that can catch some of the biggest bloons.",
+     "xp": 40000
+    }
+   ]
+  ]
  },
  {
   "id": "beast",
@@ -6768,6 +8468,74 @@
     "name": "Pouākai",
     "note": "Pouākai is a late-game carry, strongest with extra Golden Eagles; Giant Condor is round-90s support."
    }
-  }
+  },
+  "upgradeInfo": [
+   [
+    {
+     "text": "A small piranha that leaps at bloons.",
+     "xp": 250
+    },
+    {
+     "text": "A barracuda that knocks bloons back and pops several layers.",
+     "xp": 500
+    },
+    {
+     "text": "A great white that crushes bloons, Lead included; at max Beast Power it drags down MOABs.",
+     "xp": 1000
+    },
+    {
+     "text": "An orca that drags almost any bloon under; at max Beast Power it takes ZOMGs.",
+     "xp": 4250
+    },
+    {
+     "text": "A colossal shark; needs 3 more Orca handlers to control.",
+     "xp": 100000
+    }
+   ],
+   [
+    {
+     "text": "A small clawed dinosaur.",
+     "xp": 250
+    },
+    {
+     "text": "Sharp teeth with high close-range damage that tear through Lead.",
+     "xp": 500
+    },
+    {
+     "text": "Slashes and bites, hitting stunned bloons harder.",
+     "xp": 1000
+    },
+    {
+     "text": "Huge bites. Ability: a stomp that stuns up to ZOMGs in a wide area.",
+     "xp": 5000
+    },
+    {
+     "text": "The biggest dinosaur: shreds almost anything; its stomp hits the whole map. Needs 3 more T-Rex handlers.",
+     "xp": 90000
+    }
+   ],
+   [
+    {
+     "text": "A small falcon that grabs bloons and moves them to a drop-off point.",
+     "xp": 250
+    },
+    {
+     "text": "An owl strong enough to grab Ceramics, and it sees Camo.",
+     "xp": 550
+    },
+    {
+     "text": "Grabs many bloons at once; at max Beast Power it lifts small MOABs.",
+     "xp": 1000
+    },
+    {
+     "text": "Lifts smaller MOAB-class bloons.",
+     "xp": 5500
+    },
+    {
+     "text": "A legendary bird that carries off almost any bloon; needs 3 more Condor handlers.",
+     "xp": 110000
+    }
+   ]
+  ]
  }
 ]
