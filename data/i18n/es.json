@@ -3867,7 +3867,7 @@
 "XP para desbloquear: {1}"
 ],
 [
-"^(Top|Middle|Bottom) path · T(\\d)$",
+"^((?:Top|Middle|Bottom) path) · T(\\d)$",
 "{1} · T{2}"
 ],
 [
