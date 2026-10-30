@@ -101,7 +101,7 @@ export function towerPage() {
       const before = path === null ? null : stats[code(path, tier - 1)];
       if (!now) return [];
       const fmt = (v, unit = '') => (v === null || v === undefined ? '—' : `${Number(v).toLocaleString('en-US', { maximumFractionDigits: 3 })}${unit}`);
-      const row = (label, key, unit, lowerIsBetter = false) => {
+      const row = (label, key, unit = '', lowerIsBetter = false) => {
         const a = before?.[key];
         const b = now[key];
         let delta = null;
