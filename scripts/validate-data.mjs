@@ -311,6 +311,28 @@ for (const tw of towers) {
   }
 }
 
+// Main-attack stats per single-path variant (optional; shown on tower pages)
+for (const tw of towers) {
+  if (!tw.stats) continue;
+  const codes = ['000', ...[0, 1, 2].flatMap((p) => [1, 2, 3, 4, 5].map((t) => [0, 1, 2].map((i) => (i === p ? t : 0)).join('')))];
+  for (const c of codes) {
+    const st = tw.stats[c];
+    if (!st) { problems.push(`towers.json "${tw.id}": stats["${c}"] missing`); continue; }
+    for (const k of ['range', 'cooldown', 'pierce', 'damage']) if (st[k] !== null && typeof st[k] !== 'number') problems.push(`towers.json "${tw.id}": stats["${c}"].${k} must be a number or null`);
+  }
+}
+
+// Hero level texts, skins and Geraldo's shop
+for (const h of heroes) {
+  if (!Array.isArray(h.levels) || h.levels.length !== 20 || h.levels.some((l, i) => l.level !== i + 1 || !l.text)) problems.push(`heroes.json "${h.id}": levels must be 20 {level, text} entries`);
+  for (const s of h.skins ?? []) if (!s.name || (s.mm !== null && typeof s.mm !== 'number') || (s.mm === null && !s.note)) problems.push(`heroes.json "${h.id}": skin "${s.name}" needs mm (number) or a note`);
+  for (const it of h.shop ?? []) {
+    if (!it.name || !it.text || !(it.level >= 1 && it.level <= 20)) problems.push(`heroes.json "${h.id}": shop item "${it.name}" needs name, text and level 1–20`);
+    if (!Array.isArray(it.cost) || it.cost.length !== 4 || it.cost.some((c) => typeof c !== 'number')) problems.push(`heroes.json "${h.id}": shop item "${it.name}" needs 4 costs`);
+  }
+}
+if (!heroes.find((h) => h.id === 'geraldo')?.shop?.length) problems.push('heroes.json "geraldo": shop is missing');
+
 // Best route per mode on every tower
 for (const tw of towers) {
   for (const mode of ['chimps', 'boss', 'normal']) {

@@ -42,7 +42,8 @@
    "steam-v57",
    "wiki-standard",
    "wiki-tower-dart",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -338,7 +339,121 @@
      "xp": 35000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 32,
+    "cooldown": 0.95,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 40,
+    "cooldown": 0.95,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 48,
+    "cooldown": 0.95,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 60,
+    "cooldown": 0.95,
+    "pierce": 4,
+    "damage": 3,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 60,
+    "cooldown": 0.475,
+    "pierce": 4,
+    "damage": 6,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 80,
+    "cooldown": 0.2375,
+    "pierce": 8,
+    "damage": 8,
+    "type": "Normal"
+   },
+   "010": {
+    "range": 32,
+    "cooldown": 0.8075,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 32,
+    "cooldown": 0.6365,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 32,
+    "cooldown": 0.4774,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 32,
+    "cooldown": 0.2387,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "050": {
+    "range": 32,
+    "cooldown": 0.2387,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "100": {
+    "range": 32,
+    "cooldown": 0.95,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 32,
+    "cooldown": 0.95,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 36.8,
+    "cooldown": 1.15,
+    "pierce": 18,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "400": {
+    "range": 36.8,
+    "cooldown": 1,
+    "pierce": 60,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "500": {
+    "range": 36.8,
+    "cooldown": 1,
+    "pierce": 210,
+    "damage": 5,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "boomer",
@@ -385,7 +500,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-boomer",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -672,7 +788,121 @@
      "xp": 28000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 43,
+    "cooldown": 1.2,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 57.19,
+    "cooldown": 1.2,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 57.19,
+    "cooldown": 1.2,
+    "pierce": 4,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "003": {
+    "range": 57.19,
+    "cooldown": 1.2,
+    "pierce": 18,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "004": {
+    "range": 57.19,
+    "cooldown": 1.2,
+    "pierce": 18,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "005": {
+    "range": 57.19,
+    "cooldown": 0.6,
+    "pierce": 54,
+    "damage": 12,
+    "type": "Normal"
+   },
+   "010": {
+    "range": 43,
+    "cooldown": 0.9,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 43,
+    "cooldown": 0.6,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 43,
+    "cooldown": 0.15,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 43,
+    "cooldown": 0.15,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "050": {
+    "range": 43,
+    "cooldown": 0.03,
+    "pierce": 4,
+    "damage": 4,
+    "type": "Sharp"
+   },
+   "100": {
+    "range": 43,
+    "cooldown": 1.2,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 43,
+    "cooldown": 1.2,
+    "pierce": 13,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 43,
+    "cooldown": 1.2,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "400": {
+    "range": 43,
+    "cooldown": 0.4,
+    "pierce": 60,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "500": {
+    "range": 43,
+    "cooldown": 0.4,
+    "pierce": 60,
+    "damage": 6,
+    "type": "Sharp"
+   }
+  }
  },
  {
   "id": "bomb",
@@ -726,7 +956,8 @@
    "steam-v57",
    "wiki-standard",
    "wiki-tower-bomb",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -997,7 +1228,121 @@
      "xp": 25000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 40,
+    "cooldown": 1.5,
+    "pierce": 22,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "001": {
+    "range": 52,
+    "cooldown": 1.5,
+    "pierce": 22,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "002": {
+    "range": 54,
+    "cooldown": 1.5,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 54,
+    "cooldown": 1.5,
+    "pierce": 22,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "004": {
+    "range": 54,
+    "cooldown": 1.5,
+    "pierce": 18,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "005": {
+    "range": 54,
+    "cooldown": 0.9,
+    "pierce": 18,
+    "damage": 5,
+    "type": "Explosion"
+   },
+   "010": {
+    "range": 40,
+    "cooldown": 1.125,
+    "pierce": 22,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "020": {
+    "range": 44,
+    "cooldown": 0.825,
+    "pierce": 22,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "030": {
+    "range": 49,
+    "cooldown": 0.825,
+    "pierce": 22,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "040": {
+    "range": 54,
+    "cooldown": 0.825,
+    "pierce": 22,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "050": {
+    "range": 54,
+    "cooldown": 0.825,
+    "pierce": 22,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "100": {
+    "range": 40,
+    "cooldown": 1.5,
+    "pierce": 28,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "200": {
+    "range": 40,
+    "cooldown": 1.5,
+    "pierce": 38,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "300": {
+    "range": 40,
+    "cooldown": 1.5,
+    "pierce": 80,
+    "damage": 4,
+    "type": "Explosion"
+   },
+   "400": {
+    "range": 43,
+    "cooldown": 1.5,
+    "pierce": 80,
+    "damage": 4,
+    "type": "Explosion"
+   },
+   "500": {
+    "range": 43,
+    "cooldown": 1.5,
+    "pierce": 80,
+    "damage": 24,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "tack",
@@ -1045,7 +1390,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-tack",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -1322,7 +1668,121 @@
      "xp": 26500
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 23,
+    "cooldown": 1.12,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 23,
+    "cooldown": 1.12,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 23,
+    "cooldown": 1.12,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 23,
+    "cooldown": 1.12,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 23,
+    "cooldown": 0.3733,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 30,
+    "cooldown": 0.224,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "010": {
+    "range": 26.91,
+    "cooldown": 1.12,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 30.82,
+    "cooldown": 1.12,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 46,
+    "cooldown": 1.12,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Shatter"
+   },
+   "040": {
+    "range": 46,
+    "cooldown": 1.12,
+    "pierce": 8,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "050": {
+    "range": 46,
+    "cooldown": 1.12,
+    "pierce": 8,
+    "damage": 5,
+    "type": "Normal"
+   },
+   "100": {
+    "range": 23,
+    "cooldown": 0.84,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 23,
+    "cooldown": 0.63,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 23,
+    "cooldown": 0.63,
+    "pierce": 1,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "400": {
+    "range": 23,
+    "cooldown": 0.315,
+    "pierce": 30,
+    "damage": 5,
+    "type": "Fire"
+   },
+   "500": {
+    "range": 34.5,
+    "cooldown": 0.1,
+    "pierce": 45,
+    "damage": 8,
+    "type": "Fire"
+   }
+  }
  },
  {
   "id": "ice",
@@ -1370,7 +1830,8 @@
    "steam-v57",
    "wiki-freeplay",
    "wiki-tower-ice",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -1651,7 +2112,121 @@
      "xp": 30000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 20,
+    "cooldown": 2.4,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "001": {
+    "range": 27,
+    "cooldown": 2.4,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "002": {
+    "range": 27,
+    "cooldown": 2.4,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "003": {
+    "range": 46,
+    "cooldown": 1.2,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "004": {
+    "range": 46,
+    "cooldown": 0.75,
+    "pierce": 40,
+    "damage": 2,
+    "type": "Cold"
+   },
+   "005": {
+    "range": 46,
+    "cooldown": 0.75,
+    "pierce": 40,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "010": {
+    "range": 20,
+    "cooldown": 1.8,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "020": {
+    "range": 20,
+    "cooldown": 1.8,
+    "pierce": 45,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "030": {
+    "range": 20,
+    "cooldown": 1.8,
+    "pierce": 45,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "040": {
+    "range": 30,
+    "cooldown": 1.8,
+    "pierce": 45,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "050": {
+    "range": 40,
+    "cooldown": 1.8,
+    "pierce": 300,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "100": {
+    "range": 20,
+    "cooldown": 2.4,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Cold"
+   },
+   "200": {
+    "range": 20,
+    "cooldown": 2.4,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Glacier"
+   },
+   "300": {
+    "range": 25,
+    "cooldown": 2.4,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Glacier"
+   },
+   "400": {
+    "range": 25,
+    "cooldown": 2.4,
+    "pierce": 40,
+    "damage": 1,
+    "type": "Glacier"
+   },
+   "500": {
+    "range": 25,
+    "cooldown": 1.2,
+    "pierce": 40,
+    "damage": 5,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "glue",
@@ -1699,7 +2274,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-glue",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -1983,7 +2559,121 @@
      "xp": 30000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "001": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "002": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "003": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "004": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "005": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": 6,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "010": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "020": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "030": {
+    "range": 58,
+    "cooldown": 0.34,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "040": {
+    "range": 58,
+    "cooldown": 0.34,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "050": {
+    "range": 58,
+    "cooldown": 0.34,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "100": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "200": {
+    "range": 46,
+    "cooldown": 1,
+    "pierce": null,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "300": {
+    "range": 46,
+    "cooldown": 0.5,
+    "pierce": null,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "400": {
+    "range": 46,
+    "cooldown": 0.5,
+    "pierce": null,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "500": {
+    "range": 46,
+    "cooldown": 0.25,
+    "pierce": null,
+    "damage": 1,
+    "type": "Acid"
+   }
+  }
  },
  {
   "id": "desperado",
@@ -2028,7 +2718,8 @@
    "wiki-bloonarius",
    "wiki-lych",
    "wiki-tower-desperado",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -2290,7 +2981,121 @@
      "xp": 29000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 6,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 18,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 60,
+    "cooldown": 0.6,
+    "pierce": 1,
+    "damage": 50,
+    "type": "Sharp"
+   },
+   "010": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 80,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 6,
+    "type": "Normal"
+   },
+   "040": {
+    "range": 80,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 6,
+    "type": "Normal"
+   },
+   "050": {
+    "range": 80,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 24,
+    "type": "Normal"
+   },
+   "100": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "400": {
+    "range": 60,
+    "cooldown": 1.2,
+    "pierce": 1,
+    "damage": 6,
+    "type": "Sharp"
+   },
+   "500": {
+    "range": 60,
+    "cooldown": 0.3,
+    "pierce": null,
+    "damage": 75,
+    "type": "Fire"
+   }
+  }
  },
  {
   "id": "sniper",
@@ -2341,7 +3146,8 @@
    "wiki-freeplay",
    "wiki-tower-sniper",
    "wiki-camo-detection",
-   "wiki-v57-1"
+   "wiki-v57-1",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -2625,7 +3431,121 @@
      "xp": 30000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 1,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 20,
+    "cooldown": 1.113,
+    "pierce": 1,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 20,
+    "cooldown": 0.7791,
+    "pierce": 1,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 20,
+    "cooldown": 0.2597,
+    "pierce": 5,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 20,
+    "cooldown": 0.1298,
+    "pierce": 5,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 20,
+    "cooldown": 0.0649,
+    "pierce": 5,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "010": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 1,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 1,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 5,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "050": {
+    "range": 20,
+    "cooldown": 0.636,
+    "pierce": 5,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "100": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 1,
+    "damage": 4,
+    "type": "Normal"
+   },
+   "200": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 1,
+    "damage": 7,
+    "type": "Normal"
+   },
+   "300": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 1,
+    "damage": 20,
+    "type": "Normal"
+   },
+   "400": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 1,
+    "damage": 30,
+    "type": "Normal"
+   },
+   "500": {
+    "range": 20,
+    "cooldown": 1.59,
+    "pierce": 1,
+    "damage": 140,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "sub",
@@ -2679,7 +3599,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-sub",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -2964,7 +3885,121 @@
      "xp": 25000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 42,
+    "cooldown": 0.75,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 42,
+    "cooldown": 0.375,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 42,
+    "cooldown": 0.375,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 42,
+    "cooldown": 0.2512,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 42,
+    "cooldown": 0.2512,
+    "pierce": 2,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 42,
+    "cooldown": 0.1256,
+    "pierce": 2,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "010": {
+    "range": 42,
+    "cooldown": 0.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 42,
+    "cooldown": 0.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "030": {
+    "range": 50,
+    "cooldown": 0.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "040": {
+    "range": 50,
+    "cooldown": 0.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "050": {
+    "range": 50,
+    "cooldown": 0.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "100": {
+    "range": 52,
+    "cooldown": 0.75,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 52,
+    "cooldown": 0.75,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 52,
+    "cooldown": 0.75,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "400": {
+    "range": 52,
+    "cooldown": 0.75,
+    "pierce": 2,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "500": {
+    "range": 52,
+    "cooldown": 0.75,
+    "pierce": 2,
+    "damage": 5,
+    "type": "Sharp"
+   }
+  }
  },
  {
   "id": "bucc",
@@ -3019,7 +4054,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-bucc",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -3307,7 +4343,121 @@
      "xp": 40000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 60,
+    "cooldown": 1,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 71,
+    "cooldown": 1,
+    "pierce": 6,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 71,
+    "cooldown": 1,
+    "pierce": 6,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 71,
+    "cooldown": 1,
+    "pierce": 6,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 71,
+    "cooldown": 0.5,
+    "pierce": 6,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 71,
+    "cooldown": 0.5,
+    "pierce": 6,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "010": {
+    "range": 60,
+    "cooldown": 1,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 60,
+    "cooldown": 1,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 60,
+    "cooldown": null,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "040": {
+    "range": 60,
+    "cooldown": null,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "050": {
+    "range": 60,
+    "cooldown": null,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "100": {
+    "range": 60,
+    "cooldown": 0.75,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 60,
+    "cooldown": 0.75,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 60,
+    "cooldown": 0.15,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "400": {
+    "range": 60,
+    "cooldown": 0.15,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "500": {
+    "range": 60,
+    "cooldown": 0.15,
+    "pierce": 7,
+    "damage": 1,
+    "type": "Sharp"
+   }
+  }
  },
  {
   "id": "ace",
@@ -3353,7 +4503,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-ace",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -3645,7 +4796,121 @@
      "xp": 45000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 8,
+    "damage": 3,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 8,
+    "damage": 6,
+    "type": "Normal"
+   },
+   "010": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "050": {
+    "range": 22,
+    "cooldown": 1.68,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "100": {
+    "range": 22,
+    "cooldown": 1.26,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 22,
+    "cooldown": 1.26,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 22,
+    "cooldown": 1.26,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "400": {
+    "range": 22,
+    "cooldown": 0.63,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "500": {
+    "range": 22,
+    "cooldown": 0.315,
+    "pierce": 8,
+    "damage": 3,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "heli",
@@ -3690,7 +4955,8 @@
    "wiki-lych",
    "wiki-freeplay",
    "wiki-tower-heli",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -3973,7 +5239,121 @@
      "xp": 50000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 22,
+    "cooldown": 0.456,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 22,
+    "cooldown": 0.456,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 22,
+    "cooldown": 0.456,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 22,
+    "cooldown": 0.456,
+    "pierce": 3,
+    "damage": 3,
+    "type": "Sharp"
+   },
+   "010": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "050": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Sharp"
+   },
+   "100": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 22,
+    "cooldown": 0.57,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "400": {
+    "range": 22,
+    "cooldown": 0.4275,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "500": {
+    "range": 22,
+    "cooldown": 0.4275,
+    "pierce": 23,
+    "damage": 6,
+    "type": "Energy"
+   }
+  }
  },
  {
   "id": "mortar",
@@ -4018,7 +5398,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-mortar",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -4294,7 +5675,121 @@
      "xp": 35000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "001": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "002": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "003": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "004": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": null,
+    "damage": 20,
+    "type": "Normal"
+   },
+   "005": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 20,
+    "damage": 1,
+    "type": "Fire"
+   },
+   "010": {
+    "range": 30,
+    "cooldown": 1.5,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "020": {
+    "range": 30,
+    "cooldown": 1.08,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "030": {
+    "range": 30,
+    "cooldown": 0.81,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "040": {
+    "range": 30,
+    "cooldown": 0.27,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "050": {
+    "range": 30,
+    "cooldown": 0.0675,
+    "pierce": 25,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "100": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 45,
+    "damage": 2,
+    "type": "Explosion"
+   },
+   "200": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 45,
+    "damage": 3,
+    "type": "Explosion"
+   },
+   "300": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 45,
+    "damage": 1,
+    "type": "Explosion"
+   },
+   "400": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 85,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "500": {
+    "range": 30,
+    "cooldown": 2,
+    "pierce": 200,
+    "damage": 2,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "dartling",
@@ -4348,7 +5843,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-dartling",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -4623,7 +6119,121 @@
      "xp": 55000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Shatter"
+   },
+   "003": {
+    "range": 20,
+    "cooldown": 1.2,
+    "pierce": 4,
+    "damage": 3,
+    "type": "Shatter"
+   },
+   "004": {
+    "range": 20,
+    "cooldown": 1.2,
+    "pierce": 4,
+    "damage": 3,
+    "type": "Shatter"
+   },
+   "005": {
+    "range": 20,
+    "cooldown": 1.2,
+    "pierce": 6,
+    "damage": 6,
+    "type": "Shatter"
+   },
+   "010": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 20,
+    "cooldown": 0.132,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 20,
+    "cooldown": 0.132,
+    "pierce": 6,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "040": {
+    "range": 20,
+    "cooldown": 0.132,
+    "pierce": 8,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "050": {
+    "range": 20,
+    "cooldown": 0.396,
+    "pierce": 20,
+    "damage": 0,
+    "type": "Normal"
+   },
+   "100": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 6,
+    "damage": 2,
+    "type": "Energy"
+   },
+   "400": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 50,
+    "damage": 1,
+    "type": "Plasma"
+   },
+   "500": {
+    "range": 20,
+    "cooldown": 0.2,
+    "pierce": 999,
+    "damage": 30,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "wizard",
@@ -4671,7 +6281,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-wizard",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -4957,7 +6568,121 @@
      "xp": 30000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "001": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "002": {
+    "range": 50,
+    "cooldown": 1.1,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "003": {
+    "range": 60,
+    "cooldown": 1.1,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "004": {
+    "range": 60,
+    "cooldown": 1.1,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "005": {
+    "range": 80,
+    "cooldown": 0.275,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "010": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "020": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "030": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "040": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "050": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "100": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "200": {
+    "range": 40,
+    "cooldown": 1.1,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Energy"
+   },
+   "300": {
+    "range": 60,
+    "cooldown": 0.55,
+    "pierce": 7,
+    "damage": 3,
+    "type": "Energy"
+   },
+   "400": {
+    "range": 60,
+    "cooldown": 0.275,
+    "pierce": 7,
+    "damage": 6,
+    "type": "Plasma"
+   },
+   "500": {
+    "range": 60,
+    "cooldown": 0.1375,
+    "pierce": 11,
+    "damage": 8,
+    "type": "Plasma"
+   }
+  }
  },
  {
   "id": "super",
@@ -5010,7 +6735,8 @@
    "wiki-alch-strategy",
    "wiki-freeplay",
    "wiki-tower-super",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -5301,7 +7027,121 @@
      "xp": 100000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 50,
+    "cooldown": 0.045,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 50,
+    "cooldown": 0.045,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 53,
+    "cooldown": 0.045,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 53,
+    "cooldown": 0.045,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 57,
+    "cooldown": 0.0225,
+    "pierce": 8,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "005": {
+    "range": 57,
+    "cooldown": 0.0225,
+    "pierce": 16,
+    "damage": 10,
+    "type": "Normal"
+   },
+   "010": {
+    "range": 60,
+    "cooldown": 0.045,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 72,
+    "cooldown": 0.045,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 72,
+    "cooldown": 0.045,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 72,
+    "cooldown": 0.045,
+    "pierce": 7,
+    "damage": 1,
+    "type": "Plasma"
+   },
+   "050": {
+    "range": 82,
+    "cooldown": 0.045,
+    "pierce": 12,
+    "damage": 5,
+    "type": "Normal"
+   },
+   "100": {
+    "range": 50,
+    "cooldown": 0.045,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "200": {
+    "range": 50,
+    "cooldown": 0.03,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Plasma"
+   },
+   "300": {
+    "range": 50,
+    "cooldown": 0.03,
+    "pierce": 6,
+    "damage": 1,
+    "type": "Plasma"
+   },
+   "400": {
+    "range": 65,
+    "cooldown": 0.05,
+    "pierce": 20,
+    "damage": 5,
+    "type": "Normal"
+   },
+   "500": {
+    "range": 65,
+    "cooldown": 0.05,
+    "pierce": 20,
+    "damage": 15,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "ninja",
@@ -5349,7 +7189,8 @@
    "wiki-freeplay",
    "wiki-standard",
    "wiki-tower-ninja",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -5629,7 +7470,121 @@
      "xp": 37500
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 40,
+    "cooldown": 0.62,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 47,
+    "cooldown": 0.62,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 47,
+    "cooldown": 0.62,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 47,
+    "cooldown": 0.62,
+    "pierce": 30,
+    "damage": 3,
+    "type": "Normal"
+   },
+   "004": {
+    "range": 47,
+    "cooldown": 0.62,
+    "pierce": 30,
+    "damage": 3,
+    "type": "Normal"
+   },
+   "005": {
+    "range": 47,
+    "cooldown": 0.62,
+    "pierce": 30,
+    "damage": 10,
+    "type": "Normal"
+   },
+   "010": {
+    "range": 40,
+    "cooldown": 0.62,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 40,
+    "cooldown": 0.62,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 40,
+    "cooldown": 0.62,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 40,
+    "cooldown": 0.62,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "050": {
+    "range": 40,
+    "cooldown": 0.62,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "100": {
+    "range": 40,
+    "cooldown": 0.434,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 40,
+    "cooldown": 0.434,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 40,
+    "cooldown": 0.434,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "400": {
+    "range": 40,
+    "cooldown": 0.434,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "500": {
+    "range": 50,
+    "cooldown": 0.217,
+    "pierce": 4,
+    "damage": 2,
+    "type": "Sharp"
+   }
+  }
  },
  {
   "id": "alch",
@@ -5676,7 +7631,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-alch",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -5950,7 +7906,121 @@
      "xp": 24000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "001": {
+    "range": 45,
+    "cooldown": 1.6,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "002": {
+    "range": 45,
+    "cooldown": 1.6,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "003": {
+    "range": 45,
+    "cooldown": 1.6,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "004": {
+    "range": 45,
+    "cooldown": 1.6,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "005": {
+    "range": 45,
+    "cooldown": 1.6,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "010": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "020": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "030": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "040": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "050": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "100": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 20,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "200": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 20,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "300": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 20,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "400": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 20,
+    "damage": 1,
+    "type": "Acid"
+   },
+   "500": {
+    "range": 45,
+    "cooldown": 2,
+    "pierce": 20,
+    "damage": 1,
+    "type": "Acid"
+   }
+  }
  },
  {
   "id": "druid",
@@ -5996,7 +8066,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-druid",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -6281,7 +8352,121 @@
      "xp": 33000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 45,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 45,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 45,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 45,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 50,
+    "cooldown": 0.55,
+    "pierce": 1,
+    "damage": 4,
+    "type": "Sharp"
+   },
+   "010": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 45,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "050": {
+    "range": 45,
+    "cooldown": 1.1,
+    "pierce": 1,
+    "damage": 6,
+    "type": "Sharp"
+   },
+   "100": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "200": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "300": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "400": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "500": {
+    "range": 35,
+    "cooldown": 1.1,
+    "pierce": 2,
+    "damage": 1,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "mermonkey",
@@ -6327,7 +8512,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-mermonkey",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -6585,7 +8771,121 @@
      "xp": 52000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 28,
+    "cooldown": 1.2,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "001": {
+    "range": 28,
+    "cooldown": 1.2,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "002": {
+    "range": 28,
+    "cooldown": 1.2,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "003": {
+    "range": 28,
+    "cooldown": 1.2,
+    "pierce": 9,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "004": {
+    "range": 32,
+    "cooldown": 1.2,
+    "pierce": 9,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "005": {
+    "range": 38,
+    "cooldown": 1.2,
+    "pierce": 18,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "010": {
+    "range": 28,
+    "cooldown": 1.2,
+    "pierce": 6,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "020": {
+    "range": 28,
+    "cooldown": 1.2,
+    "pierce": 6,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "030": {
+    "range": 32,
+    "cooldown": 1.5,
+    "pierce": 25,
+    "damage": 4,
+    "type": "Frigid"
+   },
+   "040": {
+    "range": 32,
+    "cooldown": 1.5,
+    "pierce": 25,
+    "damage": 8,
+    "type": "Frigid"
+   },
+   "050": {
+    "range": 40,
+    "cooldown": 0.75,
+    "pierce": 25,
+    "damage": 15,
+    "type": "Frigid"
+   },
+   "100": {
+    "range": 28,
+    "cooldown": 0.96,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "200": {
+    "range": 28,
+    "cooldown": 0.66,
+    "pierce": 3,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "300": {
+    "range": 28,
+    "cooldown": 0.66,
+    "pierce": 3,
+    "damage": 4,
+    "type": "Shatter"
+   },
+   "400": {
+    "range": 28,
+    "cooldown": 0.66,
+    "pierce": 3,
+    "damage": 8,
+    "type": "Shatter"
+   },
+   "500": {
+    "range": 32,
+    "cooldown": 0.33,
+    "pierce": 3,
+    "damage": 10,
+    "type": "Shatter"
+   }
+  }
  },
  {
   "id": "skywarden",
@@ -7274,7 +9574,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-spike",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -7561,7 +9862,121 @@
      "xp": 29500
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 34,
+    "cooldown": 1.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 42,
+    "cooldown": 1.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "002": {
+    "range": 42,
+    "cooldown": 1.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "003": {
+    "range": 42,
+    "cooldown": 1.75,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "004": {
+    "range": 42,
+    "cooldown": 1.75,
+    "pierce": 5,
+    "damage": 3,
+    "type": "Sharp"
+   },
+   "005": {
+    "range": 42,
+    "cooldown": 6.0625,
+    "pierce": 50,
+    "damage": 10,
+    "type": "Sharp"
+   },
+   "010": {
+    "range": 34,
+    "cooldown": 1.4,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 34,
+    "cooldown": 1.05,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 34,
+    "cooldown": 1.05,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 34,
+    "cooldown": 1.05,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "050": {
+    "range": 50,
+    "cooldown": 0.525,
+    "pierce": 10,
+    "damage": 3,
+    "type": "Sharp"
+   },
+   "100": {
+    "range": 34,
+    "cooldown": 1.75,
+    "pierce": 10,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 34,
+    "cooldown": 1.75,
+    "pierce": 10,
+    "damage": 1,
+    "type": "Normal"
+   },
+   "300": {
+    "range": 34,
+    "cooldown": 1.75,
+    "pierce": 11,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "400": {
+    "range": 34,
+    "cooldown": 1.75,
+    "pierce": 18,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "500": {
+    "range": 34,
+    "cooldown": 3.5,
+    "pierce": 18,
+    "damage": 50,
+    "type": "Normal"
+   }
+  }
  },
  {
   "id": "village",
@@ -7944,7 +10359,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-engi",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -8219,7 +10635,121 @@
      "xp": 40000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 40,
+    "cooldown": 0.7,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "001": {
+    "range": 40,
+    "cooldown": 0.7,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Shatter"
+   },
+   "002": {
+    "range": 40,
+    "cooldown": 0.7,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Shatter"
+   },
+   "003": {
+    "range": 40,
+    "cooldown": 0.35,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Shatter"
+   },
+   "004": {
+    "range": 40,
+    "cooldown": 0.35,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Shatter"
+   },
+   "005": {
+    "range": 40,
+    "cooldown": 0.35,
+    "pierce": 8,
+    "damage": 1,
+    "type": "Shatter"
+   },
+   "010": {
+    "range": 60,
+    "cooldown": 0.7,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 60,
+    "cooldown": 0.7,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "030": {
+    "range": 60,
+    "cooldown": 0.7,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "040": {
+    "range": 60,
+    "cooldown": 0.7,
+    "pierce": 15,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "050": {
+    "range": 60,
+    "cooldown": 0.7,
+    "pierce": 30,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "100": {
+    "range": 40,
+    "cooldown": 0.7,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "200": {
+    "range": 40,
+    "cooldown": 0.7,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "300": {
+    "range": 40,
+    "cooldown": 0.35,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "400": {
+    "range": 40,
+    "cooldown": 0.35,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "500": {
+    "range": 40,
+    "cooldown": 0.3,
+    "pierce": 3,
+    "damage": 1,
+    "type": "Sharp"
+   }
+  }
  },
  {
   "id": "beast",
@@ -8272,7 +10802,8 @@
    "wiki-dreadbloon",
    "wiki-standard",
    "wiki-tower-beast",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-tower-stats"
   ],
   "upgrades": [
    [
@@ -8536,6 +11067,120 @@
      "xp": 110000
     }
    ]
-  ]
+  ],
+  "stats": {
+   "000": {
+    "range": 20,
+    "cooldown": 1.4,
+    "pierce": 4,
+    "damage": 1,
+    "type": "Energy"
+   },
+   "001": {
+    "range": 60,
+    "cooldown": null,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "002": {
+    "range": 60,
+    "cooldown": null,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "003": {
+    "range": 60,
+    "cooldown": null,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "004": {
+    "range": 60,
+    "cooldown": null,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "005": {
+    "range": 60,
+    "cooldown": null,
+    "pierce": null,
+    "damage": null,
+    "type": null
+   },
+   "010": {
+    "range": 60,
+    "cooldown": 1,
+    "pierce": 5,
+    "damage": 1,
+    "type": "Sharp"
+   },
+   "020": {
+    "range": 60,
+    "cooldown": 1,
+    "pierce": 8,
+    "damage": 2,
+    "type": "Normal"
+   },
+   "030": {
+    "range": 60,
+    "cooldown": 1,
+    "pierce": 12,
+    "damage": 4,
+    "type": "Normal"
+   },
+   "040": {
+    "range": 60,
+    "cooldown": 1,
+    "pierce": 22,
+    "damage": 20,
+    "type": "Normal"
+   },
+   "050": {
+    "range": 60,
+    "cooldown": 1.25,
+    "pierce": 44,
+    "damage": 750,
+    "type": "Normal"
+   },
+   "100": {
+    "range": 60,
+    "cooldown": 0.6,
+    "pierce": 1,
+    "damage": 1,
+    "type": "Shatter"
+   },
+   "200": {
+    "range": 60,
+    "cooldown": 0.6,
+    "pierce": 4,
+    "damage": 2,
+    "type": "Shatter"
+   },
+   "300": {
+    "range": 60,
+    "cooldown": 1.1,
+    "pierce": 10,
+    "damage": 12,
+    "type": "Normal"
+   },
+   "400": {
+    "range": 60,
+    "cooldown": 1.1,
+    "pierce": 20,
+    "damage": 30,
+    "type": "Normal"
+   },
+   "500": {
+    "range": 60,
+    "cooldown": 1.1,
+    "pierce": 50,
+    "damage": 600,
+    "type": "Normal"
+   }
+  }
  }
 ]
