@@ -1460,8 +1460,8 @@
                   <div>
                     <h3 class="game-title game-title--small" style="margin:0" x-text="b.name"></h3>
                     <div class="pill-list">
-                      <span class="pill numbers" x-show="b.health" x-text="`Health ${b.health.toLocaleString('en-US')}${b.healthFort ? ' (' + b.healthFort.toLocaleString('en-US') + ' Fortified)' : ''}`"></span>
-                      <span class="pill numbers" x-show="b.rbe" x-text="`RBE ${b.rbe.toLocaleString('en-US')}`"></span>
+                      <span class="pill numbers" x-show="b.health" x-text="b.health ? `Health ${b.health.toLocaleString('en-US')}${b.healthFort ? ' (' + b.healthFort.toLocaleString('en-US') + ' Fortified)' : ''}` : ''"></span>
+                      <span class="pill numbers" x-show="b.rbe" x-text="b.rbe ? `RBE ${b.rbe.toLocaleString('en-US')}` : ''"></span>
                       <span class="pill numbers" x-show="b.speed" x-text="`Speed ×${b.speed}`"></span>
                       <span class="pill pill--warn numbers" x-show="firstRounds(b).regular" x-text="`First appears: round ${firstRounds(b).regular}` + (firstRounds(b).abr ? ` (ABR ${firstRounds(b).abr})` : '')"></span>
                     </div>
