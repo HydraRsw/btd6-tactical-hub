@@ -314,6 +314,15 @@ for (const tw of towers) {
   }
 }
 
+// Bloons tab
+const bloonsFile = load('bloons');
+for (const b of bloonsFile?.bloons ?? []) {
+  const at = `bloons.json "${b.id}"`;
+  if (!b.summary) problems.push(`${at}: needs a summary`);
+  for (const p of b.picks ?? []) if (!bossUnitIds.has(p.unit)) problems.push(`${at}: pick points at unknown "${p.unit}"`);
+}
+if (bloonsFile) checkSourceIds(bloonsFile.sources, 'bloons.json');
+
 // Monkey Knowledge tab
 const knowledgeFile = load('knowledge');
 if (knowledgeFile) {

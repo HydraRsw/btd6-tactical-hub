@@ -1,0 +1,772 @@
+{
+ "intro": "Every bloon type and property: how tough it is, what it shrugs off, when it first shows up and which towers handle it. Health is hits to pop one layer; RBE (red bloon equivalent) is the total pops inside. Speed is compared with a Red Bloon.",
+ "bloons": [
+  {
+   "id": "red",
+   "name": "Red Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 1,
+   "rbeFort": null,
+   "speed": 1.0,
+   "children": "",
+   "immune": [],
+   "summary": "The weakest bloon: one hit pops it and it leaves nothing behind.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "0-0-0",
+     "note": "Any basic tower handles them."
+    },
+    {
+     "unit": "quincy",
+     "route": null,
+     "note": "Cheap hero that pops early rounds alone."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Red"
+  },
+  {
+   "id": "blue",
+   "name": "Blue Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 2,
+   "rbeFort": null,
+   "speed": 1.4,
+   "children": "1 Red",
+   "immune": [],
+   "summary": "A little faster than Red; pops into one Red.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "0-0-0",
+     "note": "Darts and Boomerangs cover it."
+    },
+    {
+     "unit": "boomer",
+     "route": "0-0-0",
+     "note": "Its boomerang hits a whole line of them."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Blue"
+  },
+  {
+   "id": "green",
+   "name": "Green Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 3,
+   "rbeFort": null,
+   "speed": 1.8,
+   "children": "1 Blue",
+   "immune": [],
+   "summary": "Faster again; CHIMPS starts with them on round 6.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "0-0-0",
+     "note": "Three Dart Monkeys (one on Strong) are the classic CHIMPS start."
+    },
+    {
+     "unit": "sniper",
+     "route": "0-0-0",
+     "note": "On Strong it chips Greens anywhere on the map."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Green"
+  },
+  {
+   "id": "yellow",
+   "name": "Yellow Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 4,
+   "rbeFort": null,
+   "speed": 3.2,
+   "children": "1 Green",
+   "immune": [],
+   "summary": "Much faster: slow projectiles miss it, so pick accurate or instant attacks.",
+   "picks": [
+    {
+     "unit": "sniper",
+     "route": "0-0-0",
+     "note": "Instant hits never miss."
+    },
+    {
+     "unit": "desperado",
+     "route": "0-0-0",
+     "note": "Long range and perfect targeting."
+    },
+    {
+     "unit": "tack",
+     "route": "0-0-0",
+     "note": "On a corner its tacks cover every direction."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Yellow"
+  },
+  {
+   "id": "pink",
+   "name": "Pink Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 5,
+   "rbeFort": null,
+   "speed": 3.5,
+   "children": "1 Yellow",
+   "immune": [],
+   "summary": "The fastest regular bloon (3.5× Red). Often comes out of Blacks, Whites and Purples.",
+   "picks": [
+    {
+     "unit": "sniper",
+     "route": "0-0-0",
+     "note": "Instant hits."
+    },
+    {
+     "unit": "tack",
+     "route": "2-0-0",
+     "note": "Fast tacks on corners."
+    },
+    {
+     "unit": "ninja",
+     "route": "0-0-0",
+     "note": "Fast, seeking shurikens; sees Camo too."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Pink"
+  },
+  {
+   "id": "black",
+   "name": "Black Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 11,
+   "rbeFort": null,
+   "speed": 1.8,
+   "children": "2 Pink",
+   "immune": [
+    "Explosions"
+   ],
+   "summary": "Small and immune to explosions, so early Bomb Shooters and Mortars let it through.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "0-0-2",
+     "note": "Darts aren't explosive."
+    },
+    {
+     "unit": "ninja",
+     "route": "0-0-0",
+     "note": "Shurikens pop it and see Camo."
+    },
+    {
+     "unit": "striker",
+     "route": null,
+     "note": "Lets your explosive towers pop Black (and Zebra)."
+    }
+   ],
+   "tips": [],
+   "avoid": [
+    "Bomb Shooter and Mortar before Heavy Shells (x-3-x) or Striker Jones."
+   ],
+   "match": "Black"
+  },
+  {
+   "id": "white",
+   "name": "White Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 11,
+   "rbeFort": null,
+   "speed": 2.0,
+   "children": "2 Pink",
+   "immune": [
+    "Freezing (cold)"
+   ],
+   "summary": "Small and immune to freezing, so it walks through Ice Monkeys.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "0-0-0",
+     "note": "Any sharp attack works."
+    },
+    {
+     "unit": "bomb",
+     "route": "0-0-0",
+     "note": "Explosions pop it fine."
+    },
+    {
+     "unit": "boomer",
+     "route": "0-0-0",
+     "note": "Good pierce through groups."
+    }
+   ],
+   "tips": [],
+   "avoid": [
+    "Ice Monkey freezes and Mermonkey freezing waves."
+   ],
+   "match": "White"
+  },
+  {
+   "id": "purple",
+   "name": "Purple Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 11,
+   "rbeFort": null,
+   "speed": 3.0,
+   "children": "2 Pink",
+   "immune": [
+    "Energy, plasma and fire",
+    "Frigid (some cold)"
+   ],
+   "summary": "Fast and immune to energy, plasma and fire: magic bolts, lasers and fire skip it.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "0-0-0",
+     "note": "Darts pop Purple."
+    },
+    {
+     "unit": "boomer",
+     "route": "0-0-0",
+     "note": "Boomerangs pop Purple."
+    },
+    {
+     "unit": "ninja",
+     "route": "0-0-0",
+     "note": "Shurikens pop Purple."
+    },
+    {
+     "unit": "village",
+     "route": "0-3-0",
+     "note": "MIB lets towers in range pop Purple."
+    }
+   ],
+   "tips": [
+    "Wizards, Super Monkey lasers, Dartling lasers and fire attacks need help here."
+   ],
+   "avoid": [],
+   "match": "Purple"
+  },
+  {
+   "id": "lead",
+   "name": "Lead Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": 4,
+   "rbe": 23,
+   "rbeFort": 26,
+   "speed": 1.0,
+   "children": "2 Black (1 from round 81)",
+   "immune": [
+    "Sharp (darts, tacks, blades)",
+    "Cold and energy"
+   ],
+   "summary": "Slow but shrugs off sharp, cold and energy attacks. Fortified Leads take 4 hits.",
+   "picks": [
+    {
+     "unit": "bomb",
+     "route": "0-0-0",
+     "note": "Explosions pop Lead from the start."
+    },
+    {
+     "unit": "sniper",
+     "route": "1-0-0",
+     "note": "Full Metal Jacket."
+    },
+    {
+     "unit": "alch",
+     "route": "0-0-0",
+     "note": "Acid pops Lead; Acidic Mixture Dip shares it."
+    },
+    {
+     "unit": "wizard",
+     "route": "0-1-0",
+     "note": "Fireball explosions."
+    },
+    {
+     "unit": "village",
+     "route": "0-3-0",
+     "note": "MIB lets towers in range pop Lead."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Lead"
+  },
+  {
+   "id": "zebra",
+   "name": "Zebra Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 23,
+   "rbeFort": null,
+   "speed": 1.8,
+   "children": "1 Black + 1 White (only Black from round 81)",
+   "immune": [
+    "Explosions",
+    "Freezing (cold)"
+   ],
+   "summary": "Immune to both explosions and freezing, like Black and White together.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "0-0-2",
+     "note": "Sharp attacks pop it."
+    },
+    {
+     "unit": "ninja",
+     "route": "0-0-0",
+     "note": "Fast shurikens."
+    },
+    {
+     "unit": "boomer",
+     "route": "2-0-0",
+     "note": "Pierce through the wave."
+    },
+    {
+     "unit": "striker",
+     "route": null,
+     "note": "Lets explosions pop Black and Zebra."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Zebra"
+  },
+  {
+   "id": "rainbow",
+   "name": "Rainbow Bloon",
+   "kind": "regular",
+   "health": 1,
+   "healthFort": null,
+   "rbe": 47,
+   "rbeFort": null,
+   "speed": 2.2,
+   "children": "2 Zebra",
+   "immune": [],
+   "summary": "No immunities, but 47 bloons inside: it tests pierce.",
+   "picks": [
+    {
+     "unit": "boomer",
+     "route": "4-0-2",
+     "note": "Glaives slice through whole groups."
+    },
+    {
+     "unit": "tack",
+     "route": "4-2-0",
+     "note": "Ring of Fire on a corner."
+    },
+    {
+     "unit": "wizard",
+     "route": "0-3-0",
+     "note": "Dragon's Breath melts dense waves."
+    },
+    {
+     "unit": "spike",
+     "route": "2-0-0",
+     "note": "Spikes catch what leaks."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Rainbow"
+  },
+  {
+   "id": "ceramic",
+   "name": "Ceramic Bloon",
+   "kind": "regular",
+   "health": 10,
+   "healthFort": 20,
+   "rbe": 104,
+   "rbeFort": 114,
+   "speed": 2.5,
+   "children": "2 Rainbow (before round 81)",
+   "immune": [],
+   "summary": "The first bloon with real health (10, 20 if Fortified). From round 81 they become Super Ceramics with far more health.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "4-0-0",
+     "note": "Juggernaut deals bonus damage to Ceramics."
+    },
+    {
+     "unit": "sub",
+     "route": "0-3-0",
+     "note": "Ballistic Missile hits Ceramics harder."
+    },
+    {
+     "unit": "wizard",
+     "route": "4-2-0",
+     "note": "Arcane Spike hits Ceramics harder."
+    },
+    {
+     "unit": "glue",
+     "route": "5-2-0",
+     "note": "The Bloon Solver beats late Ceramics."
+    },
+    {
+     "unit": "ice",
+     "route": "4-2-0",
+     "note": "Embrittlement adds damage to every hit."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "Ceramic"
+  },
+  {
+   "id": "moab",
+   "name": "MOAB",
+   "kind": "blimp",
+   "health": 200,
+   "healthFort": 400,
+   "rbe": 616,
+   "rbeFort": 856,
+   "speed": 1.0,
+   "children": "4 Ceramic",
+   "immune": [],
+   "summary": "The first blimp (round 40): slow but tanky. Fortified MOABs have 400 health.",
+   "picks": [
+    {
+     "unit": "bomb",
+     "route": "2-3-0",
+     "note": "MOAB Mauler is the standard round 40 answer."
+    },
+    {
+     "unit": "bucc",
+     "route": "3-1-0",
+     "note": "Destroyer shreds it on water maps."
+    },
+    {
+     "unit": "ezili",
+     "route": null,
+     "note": "MOAB Hex."
+    },
+    {
+     "unit": "corvus",
+     "route": null,
+     "note": "Ancestral Might beats round 40."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "MOAB"
+  },
+  {
+   "id": "bfb",
+   "name": "BFB",
+   "kind": "blimp",
+   "health": 700,
+   "healthFort": 1400,
+   "rbe": 3164,
+   "rbeFort": 4824,
+   "speed": 0.25,
+   "children": "4 MOAB",
+   "immune": [],
+   "summary": "Very slow and very tanky (700 health); attacks that only work up to MOABs can't touch it.",
+   "picks": [
+    {
+     "unit": "bomb",
+     "route": "0-4-0",
+     "note": "MOAB Assassin's ability deletes it."
+    },
+    {
+     "unit": "sniper",
+     "route": "4-0-2",
+     "note": "Maim MOAB stuns it."
+    },
+    {
+     "unit": "beast",
+     "route": "4-0-0",
+     "note": "Orca drags blimps down."
+    },
+    {
+     "unit": "bucc",
+     "route": "4-2-0",
+     "note": "Aircraft Carrier planes."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "BFB"
+  },
+  {
+   "id": "zomg",
+   "name": "ZOMG",
+   "kind": "blimp",
+   "health": 4000,
+   "healthFort": 8000,
+   "rbe": 16656,
+   "rbeFort": 27296,
+   "speed": 0.18,
+   "children": "4 BFB",
+   "immune": [],
+   "summary": "A huge slow blimp (4,000 health) holding four BFBs. Many hooks and stuns can't grab it.",
+   "picks": [
+    {
+     "unit": "ace",
+     "route": "5-2-0",
+     "note": "Sky Shredder melts blimps."
+    },
+    {
+     "unit": "dartling",
+     "route": "5-2-0",
+     "note": "Ray of Doom."
+    },
+    {
+     "unit": "bucc",
+     "route": "x-5-x",
+     "note": "Pirate Lord hooks blimps."
+    },
+    {
+     "unit": "sniper",
+     "route": "5-0-2",
+     "note": "Cripple MOAB stuns and weakens it."
+    },
+    {
+     "unit": "ice",
+     "route": "5-2-0",
+     "note": "Super Brittle makes it take more damage."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "ZOMG"
+  },
+  {
+   "id": "ddt",
+   "name": "DDT",
+   "kind": "blimp",
+   "health": 400,
+   "healthFort": 800,
+   "rbe": 816,
+   "rbeFort": 1256,
+   "speed": 2.64,
+   "children": "4 Camo Regrow Ceramic",
+   "immune": [
+    "Sharp, shatter, cold, energy and explosions"
+   ],
+   "summary": "Fast (faster than a Ceramic) and Black + Lead + Camo at once: most towers can't see or hurt it.",
+   "picks": [
+    {
+     "unit": "ninja",
+     "route": "0-4-0",
+     "note": "Bloon Sabotage slows DDTs on the whole map."
+    },
+    {
+     "unit": "wizard",
+     "route": "5-2-0",
+     "note": "Archmage excels on DDT rounds (needs camo support)."
+    },
+    {
+     "unit": "glue",
+     "route": "2-4-0",
+     "note": "Glue Strike lets lead-blocked towers hurt them."
+    },
+    {
+     "unit": "ice",
+     "route": "0-2-5",
+     "note": "Icicle Impale with a camo Village can handle them alone."
+    },
+    {
+     "unit": "spike",
+     "route": "2-0-0",
+     "note": "White Hot Spikes pop DDTs at the exit."
+    }
+   ],
+   "tips": [
+    "Rounds 90 and 95 are the DDT checks in CHIMPS.",
+    "Mortar Shattering Shells (with the Paint Stripper MK) removes Fortified from DDTs."
+   ],
+   "avoid": [],
+   "match": "DDT"
+  },
+  {
+   "id": "bad",
+   "name": "BAD",
+   "kind": "blimp",
+   "health": 20000,
+   "healthFort": 40000,
+   "rbe": 55760,
+   "rbeFort": 98360,
+   "speed": 0.18,
+   "children": "2 ZOMG + 3 DDT",
+   "immune": [
+    "Slows, stuns and knockback"
+   ],
+   "summary": "The Big Airship of Doom (20,000 health): ignores slows and stuns and releases two ZOMGs and three DDTs.",
+   "picks": [
+    {
+     "unit": "spike",
+     "route": "2-4-0",
+     "note": "Spike Storm's ability handles the round 100 BAD."
+    },
+    {
+     "unit": "sub",
+     "route": "0-4-0",
+     "note": "First Strike can skip a damaged BAD's insides."
+    },
+    {
+     "unit": "ezili",
+     "route": null,
+     "note": "MOAB Hex deals percentage damage, great against BADs."
+    },
+    {
+     "unit": "ice",
+     "route": "5-2-0",
+     "note": "Super Brittle boosts everyone's damage on it."
+    }
+   ],
+   "tips": [
+    "Save single-target burst for it and keep DDT answers ready for what comes out."
+   ],
+   "avoid": [],
+   "match": "BAD"
+  },
+  {
+   "id": "camo",
+   "name": "Camo",
+   "kind": "property",
+   "health": null,
+   "healthFort": null,
+   "rbe": null,
+   "rbeFort": null,
+   "speed": null,
+   "children": "",
+   "immune": [],
+   "summary": "Camo bloons can only be targeted by towers with camo detection. They appear from round 24 (round 5 in ABR); DDTs are always Camo.",
+   "picks": [
+    {
+     "unit": "ninja",
+     "route": "0-0-0",
+     "note": "Sees Camo from the start."
+    },
+    {
+     "unit": "village",
+     "route": "0-2-0",
+     "note": "Radar Scanner gives every tower in range camo detection."
+    },
+    {
+     "unit": "sub",
+     "route": "3-0-2",
+     "note": "Submerge and Support strips Camo."
+    },
+    {
+     "unit": "engi",
+     "route": "0-3-0",
+     "note": "Cleansing Foam strips Camo and Regrow."
+    },
+    {
+     "unit": "sniper",
+     "route": "0-1-0",
+     "note": "Night Vision Goggles."
+    }
+   ],
+   "tips": [
+    "Round 78 (camo Ceramics) and round 90 test camo detection on your main towers."
+   ],
+   "avoid": [],
+   "match": "camo"
+  },
+  {
+   "id": "regrow",
+   "name": "Regrow",
+   "kind": "property",
+   "health": null,
+   "healthFort": null,
+   "rbe": null,
+   "rbeFort": null,
+   "speed": null,
+   "children": "",
+   "immune": [],
+   "summary": "Regrow bloons grow back a layer every 3 seconds, up to what they started as. They appear from round 17 (round 3 in ABR).",
+   "picks": [
+    {
+     "unit": "engi",
+     "route": "0-3-0",
+     "note": "Cleansing Foam removes Regrow."
+    },
+    {
+     "unit": "druid",
+     "route": "2-0-0",
+     "note": "Heart of Oak removes Regrow."
+    },
+    {
+     "unit": "tack",
+     "route": "4-2-0",
+     "note": "Ring of Fire pops whole groups before they regrow."
+    }
+   ],
+   "tips": [
+    "Pop them in one place with lots of damage instead of chipping them along the track."
+   ],
+   "avoid": [],
+   "match": "regrow"
+  },
+  {
+   "id": "fortified",
+   "name": "Fortified",
+   "kind": "property",
+   "health": null,
+   "healthFort": null,
+   "rbe": null,
+   "rbeFort": null,
+   "speed": null,
+   "children": "",
+   "immune": [],
+   "summary": "Lead, Ceramic and blimp bloons can be Fortified: Leads take 4 hits and Ceramics and blimps have double health. Children aren't Fortified unless they can be.",
+   "picks": [
+    {
+     "unit": "dart",
+     "route": "4-0-0",
+     "note": "Juggernaut deals bonus damage to Fortified bloons."
+    },
+    {
+     "unit": "mortar",
+     "route": "x-x-4",
+     "note": "Shattering Shells strip Fortified."
+    },
+    {
+     "unit": "ice",
+     "route": "4-2-0",
+     "note": "Embrittlement adds damage to every hit."
+    },
+    {
+     "unit": "bomb",
+     "route": "2-3-0",
+     "note": "MOAB Mauler hits Fortified blimps hard."
+    }
+   ],
+   "tips": [],
+   "avoid": [],
+   "match": "fortified"
+  }
+ ],
+ "sources": [
+  "wiki-bloons",
+  "wiki-rounds",
+  "wiki-camo-detection"
+ ]
+}

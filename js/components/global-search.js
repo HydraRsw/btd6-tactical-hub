@@ -20,6 +20,7 @@ const KIND_STYLES = {
   Boss: { color: '#ff5b5b', icon: 'skull' },
   Knowledge: { color: '#43c6ff', icon: 'graduation-cap' },
   Answer: { color: '#7ad420', icon: 'shield-check' },
+  Bloon: { color: '#ff4d4d', icon: 'circle-dot' },
 };
 
 /** Everything the search box can find, built from the loaded data. */
@@ -100,6 +101,14 @@ function buildSearchIndex(hub) {
     go: () => hub.openPage('boss', boss.id),
   }));
 
+  const bloons = hub.bloons.bloons.map((bloon) => ({
+    kind: 'Bloon',
+    title: bloon.name,
+    subtitle: bloon.summary,
+    keywords: `bloon ${bloon.kind} ${bloon.immune.join(' ')}`,
+    go: () => hub.jumpTo('bloons', `bloon-${bloon.id}`),
+  }));
+
   const knowledge = hub.knowledge.entries.map((entry) => ({
     kind: 'Knowledge',
     title: entry.name,
@@ -121,7 +130,7 @@ function buildSearchIndex(hub) {
     { title: 'Compare towers and heroes', subtitle: 'Two units side by side', keywords: 'compare versus vs side by side', go: () => hub.openTool('compare') },
   ].map((tool) => ({ kind: 'Tool', ...tool }));
 
-  return [...tools, ...towers, ...heroes, ...paragons, ...bosses, ...maps, ...modes, ...knowledge, ...rounds, ...checkpoints, ...strategies];
+  return [...tools, ...towers, ...heroes, ...paragons, ...bosses, ...bloons, ...maps, ...modes, ...knowledge, ...rounds, ...checkpoints, ...strategies];
 }
 
 // Words for bloon properties in a search ("camo lead round 50", "plomo camuflaje").

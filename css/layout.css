@@ -730,3 +730,15 @@ main.container { position: relative; z-index: 1; padding-block: 24px 40px; }
 .qr-box { width: min(100%, 240px); background: #fff; border-radius: 12px; padding: 8px; }
 .qr-box svg { display: block; width: 100%; height: auto; }
 .backup-code { width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.75rem; word-break: break-all; resize: vertical; }
+
+/* --- Bloons tab ----------------------------------------------------------------- */
+.bloon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 12px; align-items: start; }
+.bloon-card { padding: 14px 16px; display: grid; gap: 8px; scroll-margin-top: 140px; }
+.bloon-card p { margin: 0; }
+.bloon-card__head { display: flex; gap: 12px; align-items: center; }
+.bloon-card__icon { width: 52px; height: 52px; flex: none; display: inline-flex; }
+.bloon-card__icon svg, .bloon-card__icon img { width: 100%; height: 100%; }
+.bloon-card__sub { margin: 4px 0 0; font-size: 0.85rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gold); }
+.bloon-picks { display: grid; gap: 6px; }
+.bloon-coverage summary { cursor: pointer; font-weight: 800; display: flex; align-items: center; gap: 6px; }
+.bloon-coverage summary svg { width: 16px; height: 16px; }

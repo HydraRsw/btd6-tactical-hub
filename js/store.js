@@ -6,7 +6,7 @@ import { recall, remember } from './lib/storage.js';
 
 // Tabs in header order.
 // 'patch' (#patch) is a page reached from the patch label, not a header tab.
-export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'events', 'tools', 'farm', 'chimps', 'knowledge', 'patch'];
+export const TABS = ['tier', 'cross', 'maps', 'paragons', 'rounds', 'bloons', 'events', 'tools', 'farm', 'chimps', 'knowledge', 'patch'];
 
 // The Tools tab has three views; each also has its own address (#planner, #degree, #compare).
 export const TOOL_VIEWS = ['wizard', 'bossplan', 'planner', 'degree', 'compare', 'backup'];
@@ -48,6 +48,7 @@ export function createHubStore() {
     patch: { intro: '', versions: [] },
     bosses: { intro: '', tierRounds: [], coop: [1], bosses: [], sources: [] },
     events: { intro: '', formats: [] },
+    bloons: { intro: '', bloons: [], sources: [] },
     knowledge: { intro: '', categories: [], treeRules: [], respec: '', entries: [], sources: [] },
     freeplay: { intro: '', speed: [], moabHealth: [], cashPerPop: [], statusResistance: [], sources: [] },
 
