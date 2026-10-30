@@ -766,6 +766,7 @@ button.upgrade-cell:hover { border-color: rgba(255, 210, 63, 0.6); }
 .upgrade-cell--selected { border-color: var(--gold) !important; box-shadow: 0 0 0 2px rgba(255, 210, 63, 0.35); }
 .upgrade-detail { margin-top: 12px; padding: 12px 14px; display: grid; gap: 8px; }
 .upgrade-detail p { margin: 0; }
+.upgrade-detail .tower-note { margin-bottom: 0; }
 .upgrade-detail__name { font-size: 1.05rem; }
 .pill--small { font-size: 0.7rem; padding: 1px 7px; gap: 3px; }
 .pill--small svg { width: 11px; height: 11px; }
