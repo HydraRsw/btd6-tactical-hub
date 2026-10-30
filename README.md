@@ -138,6 +138,15 @@ Each tower has its own page at `#tower/<id>` (for example `#tower/sniper`).
 Map and mode advice comes from each map's Bloons wiki page and the wiki's mode strategy
 pages; Paragon pages from each Paragon's wiki page (its Strategy section).
 
+### Bloons tab
+
+- `bloons.json`: every bloon type (`kind`: regular / blimp) and property (Camo, Regrow,
+  Fortified) with health, RBE, speed (× Red), children, immunities, a summary, `picks` (towers
+  or heroes that handle it, with a route and why) plus optional `tips` and `avoid`. Stats come
+  from the wiki's bloon table. The first round each appears is worked out from `rounds.json`,
+  and for Camo, Lead, Purple and DDT the full list of towers that can deal with it comes from
+  each tower's `detection` data, so it stays right when towers change.
+
 ### Per-mode routes, tools and link previews
 
 - `towers.json` → `modeRoutes`: the recommended route for `chimps`, `boss` and `normal`
