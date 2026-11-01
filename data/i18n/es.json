@@ -3805,6 +3805,10 @@
 },
 "patterns": [
 [
+"^(.+) · ((?:Top|Middle|Bottom) path) T(\\d)$",
+"{1} · {2} T{3}"
+],
+[
 "^Total XP: (\\S+)$",
 "XP total: {1}"
 ],
