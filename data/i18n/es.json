@@ -3839,6 +3839,10 @@
 },
 "patterns": [
 [
+"^((?:Top|Middle|Bottom) path) T(\\d)$",
+"{1} T{2}"
+],
+[
 "^(.+) · ((?:Top|Middle|Bottom) path) T(\\d)$",
 "{1} · {2} T{3}"
 ],
