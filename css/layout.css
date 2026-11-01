@@ -777,3 +777,5 @@ button.upgrade-cell:hover { border-color: rgba(255, 210, 63, 0.6); }
 .pill--button { cursor: pointer; border: 0; font-family: inherit; }
 .pill--button:hover:not(:disabled) { filter: brightness(1.2); }
 .pill--button:disabled { cursor: default; }
+.ability--change { border-left: 3px solid var(--gold); }
+.ability--paragon { border-left: 3px solid #ff6fb5; }

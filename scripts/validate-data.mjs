@@ -325,8 +325,9 @@ for (const tw of towers) {
 // Activated abilities on tower pages
 for (const tw of towers) {
   for (const a of tw.abilities ?? []) {
-    if (!a.name || !a.text || !a.cooldown || !Array.isArray(a.from) || !a.from.length) problems.push(`towers.json "${tw.id}": ability "${a.name}" needs name, text, cooldown and from`);
-    for (const f of a.from ?? []) if (f.path !== null && tw.upgrades?.[f.path]?.[f.tier - 1] !== f.upgrade) problems.push(`towers.json "${tw.id}": ability "${a.name}" points at "${f.upgrade}" but that isn't path ${f.path} tier ${f.tier}`);
+    if (!a.name || !a.text || !a.cooldown || !a.upgrade) problems.push(`towers.json "${tw.id}": ability "${a.name}" needs name, text, cooldown and upgrade`);
+    if (a.kind !== "paragon" && tw.upgrades?.[a.path]?.[a.tier - 1] !== a.upgrade) problems.push(`towers.json "${tw.id}": ability "${a.name}" says "${a.upgrade}" but that isn't path ${a.path} tier ${a.tier}`);
+    if (!["new", "changes", "paragon"].includes(a.kind)) problems.push(`towers.json "${tw.id}": ability "${a.name}" has unknown kind "${a.kind}"`);
   }
 }
 

@@ -150,10 +150,11 @@ pages; Paragon pages from each Paragon's wiki page (its Strategy section).
   below. Banana Farm, Monkey Village and Skywarden have no stats yet (the wiki's data pages
   for them don't render); `null` means the main attack has no direct damage/pierce.
 
-- `towers.json` → `abilities`: `{ name, cooldown, limits?, text, from: [{ upgrade, path, tier }] }`,
-  every activated ability in our own words (from the wiki's Activated Ability table). `path`/`tier`
-  are `null` for Paragon abilities. Shown in an "Activated abilities" panel and as a pill on the
-  upgrade that grants it.
+- `towers.json` → `abilities`: one entry per upgrade that adds or changes an activated ability:
+  `{ name, upgrade, path, tier, kind, cooldown, limits?, text }`. `kind` is `new` (first time you
+  get it), `changes` (text says only what that upgrade adds on top) or `paragon` (then `path`/`tier`
+  are `null` and `paragon` is the Paragon id; these also show on the Paragon page). In our own
+  words, from the wiki's Activated Ability table (v56.3) plus the v57 Sniper/S.P.I.D.E.R. pages.
 
 ### Hero pages: levels, skins, Geraldo's shop
 

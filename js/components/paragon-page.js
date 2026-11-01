@@ -21,6 +21,11 @@ export function paragonPage() {
       return this.$store.hub.towers.find((tower) => tower.id === this.paragon.tower);
     },
 
+    /** The Paragon's own activated abilities (stored on its tower). */
+    get abilities() {
+      return (this.tower?.abilities ?? []).filter((a) => a.kind === 'paragon' && a.paragon === this.paragon.id);
+    },
+
     /**
      * Synergy entries resolved to what they point at: a tower, a hero or
      * another Paragon (shown with its tower's picture).
