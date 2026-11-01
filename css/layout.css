@@ -770,3 +770,10 @@ button.upgrade-cell:hover { border-color: rgba(255, 210, 63, 0.6); }
 .upgrade-detail__name { font-size: 1.05rem; }
 .pill--small { font-size: 0.7rem; padding: 1px 7px; gap: 3px; }
 .pill--small svg { width: 11px; height: 11px; }
+.ability-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 8px; }
+.ability { display: grid; gap: 8px; padding: 12px 14px; align-content: start; }
+.ability p { margin: 0; font-size: 0.9rem; }
+.ability__name { font-size: 1rem; }
+.pill--button { cursor: pointer; border: 0; font-family: inherit; }
+.pill--button:hover:not(:disabled) { filter: brightness(1.2); }
+.pill--button:disabled { cursor: default; }

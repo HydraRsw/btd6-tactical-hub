@@ -322,6 +322,14 @@ for (const tw of towers) {
   }
 }
 
+// Activated abilities on tower pages
+for (const tw of towers) {
+  for (const a of tw.abilities ?? []) {
+    if (!a.name || !a.text || !a.cooldown || !Array.isArray(a.from) || !a.from.length) problems.push(`towers.json "${tw.id}": ability "${a.name}" needs name, text, cooldown and from`);
+    for (const f of a.from ?? []) if (f.path !== null && tw.upgrades?.[f.path]?.[f.tier - 1] !== f.upgrade) problems.push(`towers.json "${tw.id}": ability "${a.name}" points at "${f.upgrade}" but that isn't path ${f.path} tier ${f.tier}`);
+  }
+}
+
 // Hero level texts, skins and Geraldo's shop
 for (const h of heroes) {
   if (!Array.isArray(h.levels) || h.levels.length !== 20 || h.levels.some((l, i) => l.level !== i + 1 || !l.text)) problems.push(`heroes.json "${h.id}": levels must be 20 {level, text} entries`);

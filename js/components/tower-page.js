@@ -85,6 +85,7 @@ export function towerPage() {
         camo: (t.detection?.camo ?? []).some(onlyThisPath),
         lead: (t.detection?.lead ?? []).some(onlyThisPath),
         stats: this.statsFor(path, tier),
+        abilities: (t.abilities ?? []).filter((a) => a.from.some((f) => f.path === path && f.tier === tier)).map((a) => a.name),
         onRoute: routeNames.some((n) => n && n.split(/ \+ | → | \/ /).some((part) => part.replace(/^[\dx]-[\dx]-[\dx] /, '').replace(/ \(.*\)$/, '').trim() === name)),
       };
     },
@@ -115,6 +116,20 @@ export function towerPage() {
       const typeChanged = before && before.type !== now.type && now.type;
       list.push({ label: 'Damage type', value: now.type ?? '—', delta: typeChanged ? { text: `was ${before.type ?? '—'}`, better: true } : null });
       return list;
+    },
+
+    /** Activated abilities with where they come from (upgrade + path/tier, or the Paragon). */
+    get abilities() {
+      return (this.tower.abilities ?? []).map((a) => ({
+        ...a,
+        sources: a.from.map((f) => ({ ...f, label: f.path === null ? f.upgrade : `${f.upgrade} · ${PATH_NAMES[f.path]} T${f.tier}` })),
+      }));
+    },
+
+    openAbilitySource(f) {
+      if (f.path === null) return;
+      this.selected = { path: f.path, tier: f.tier };
+      this.$nextTick(() => this.$root.querySelector('.upgrade-tree')?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
     },
 
     get baseStats() {

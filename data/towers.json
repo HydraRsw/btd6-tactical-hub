@@ -43,7 +43,8 @@
    "wiki-standard",
    "wiki-tower-dart",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -453,7 +454,26 @@
     "damage": 5,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Super Monkey Fan Club",
+    "from": [
+     {
+      "upgrade": "Super Monkey Fan Club",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Plasma Monkey Fan Club",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "50s",
+    "text": "For 15s it and the 9 nearest Dart Monkeys (up to 2-4-2) become Super Monkeys. At tier 5 it converts 19 others (up to 2-5-2) and they fire plasma."
+   }
+  ]
  },
  {
   "id": "boomer",
@@ -501,7 +521,8 @@
    "wiki-freeplay",
    "wiki-tower-boomer",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -902,7 +923,46 @@
     "damage": 6,
     "type": "Sharp"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Turbo Charge",
+    "from": [
+     {
+      "upgrade": "Turbo Charge",
+      "path": 1,
+      "tier": 4
+     }
+    ],
+    "cooldown": "45s",
+    "text": "Attacks 5× as fast for 10s."
+   },
+   {
+    "name": "Perma Charge",
+    "from": [
+     {
+      "upgrade": "Perma Charge",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s",
+    "text": "The speed boost becomes permanent; the ability now adds +8 damage per boomerang for 15s."
+   },
+   {
+    "name": "Overcharge",
+    "from": [
+     {
+      "upgrade": "Glaive Dominus",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "45s",
+    "text": "Gives itself 10 stacks that each make it attack 10% faster; one stack fades every 4s.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "bomb",
@@ -957,7 +1017,8 @@
    "wiki-standard",
    "wiki-tower-bomb",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -1342,7 +1403,39 @@
     "damage": 24,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Assassinate MOAB",
+    "from": [
+     {
+      "upgrade": "MOAB Assassin",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "MOAB Eliminator",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "30s → 10s",
+    "text": "Fires a missile at a MOAB-class Bloon for 750 damage (small splash on others). At tier 5 it deals 4,500 and recharges in 10s."
+   },
+   {
+    "name": "ISABM",
+    "from": [
+     {
+      "upgrade": "Ballistic Obliteration Missile Bunker",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "30s",
+    "text": "A huge homing missile that leaves explosions along its flight and hits its target for 150,000.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "tack",
@@ -1391,7 +1484,8 @@
    "wiki-freeplay",
    "wiki-tower-tack",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -1782,7 +1876,52 @@
     "damage": 8,
     "type": "Fire"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Blade Maelstrom",
+    "from": [
+     {
+      "upgrade": "Blade Maelstrom",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Super Maelstrom",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "20s",
+    "text": "Spins out high-pierce blades that cover the whole map for 3s. At tier 5 it lasts 9s with twice the blades and more pierce."
+   },
+   {
+    "name": "Maelstrom",
+    "from": [
+     {
+      "upgrade": "Crucible of Steel and Flame",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "20s",
+    "text": "For 9s its projectiles reach 2.5× further and it adds a ring of fire around it.",
+    "limits": "Paragon"
+   },
+   {
+    "name": "Meteor Impact",
+    "from": [
+     {
+      "upgrade": "Crucible of Steel and Flame",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "60s",
+    "text": "Drops a meteor that deals 60,000 in a big radius, then splits into 32 seeking fireballs.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "ice",
@@ -1831,7 +1970,8 @@
    "wiki-freeplay",
    "wiki-tower-ice",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -2226,7 +2366,39 @@
     "damage": 5,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Snowstorm",
+    "from": [
+     {
+      "upgrade": "Snowstorm",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Absolute Zero",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "30s → 20s",
+    "text": "Hits every Bloon on screen for 1, freezes non-MOABs for 6s (3s for White, Zebra and Camo) and slows MOABs. At tier 5 the full freeze applies to all, MOABs slow more and every Ice Monkey attacks 50% faster for 10s."
+   },
+   {
+    "name": "Eclipse of Fimbulwinter",
+    "from": [
+     {
+      "upgrade": "Herald of Everfrost",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "90s",
+    "text": "Darkens the map for 25s and slows everything; after 5s it freezes all Bloons (shorter on BADs and bosses), adds permafrost, and can cancel one boss skull effect.",
+    "limits": "Paragon · once per round"
+   }
+  ]
  },
  {
   "id": "glue",
@@ -2275,7 +2447,8 @@
    "wiki-freeplay",
    "wiki-tower-glue",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -2673,7 +2846,26 @@
     "damage": 1,
     "type": "Acid"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Glue Strike",
+    "from": [
+     {
+      "upgrade": "Glue Strike",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Glue Storm",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "40s",
+    "text": "Glues every Bloon on screen for 11s: slowed and taking +2 from every hit; Lead and Frozen lose their immunity. At tier 5 the glue is reapplied every second for 10s."
+   }
+  ]
  },
  {
   "id": "desperado",
@@ -2719,7 +2911,8 @@
    "wiki-lych",
    "wiki-tower-desperado",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -3095,7 +3288,48 @@
     "damage": 75,
     "type": "Fire"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Take Aim",
+    "from": [
+     {
+      "upgrade": "Deadeye",
+      "path": 1,
+      "tier": 3
+     },
+     {
+      "upgrade": "Bounty Hunter",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Golden Justice",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "30s",
+    "text": "Buffs one Monkey for 15s: +25% range, tighter spread and Camo detection. At tiers 4–5: +50% range and it can pop Black, White and Purple."
+   },
+   {
+    "name": "Marked to Pop",
+    "from": [
+     {
+      "upgrade": "Bounty Hunter",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Golden Justice",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s",
+    "text": "Marks Bloons for 2s, then executes them (30 damage, 300 at tier 5). Marked Bloons pay double and take double damage from Desperados."
+   }
+  ]
  },
  {
   "id": "sniper",
@@ -3147,7 +3381,8 @@
    "wiki-tower-sniper",
    "wiki-camo-detection",
    "wiki-v57-1",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -3545,7 +3780,27 @@
     "damage": 140,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Supply Drop",
+    "from": [
+     {
+      "upgrade": "Supply Drop",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Elite Sniper",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "90s",
+    "text": "Drops a crate with $1,100 ($3,000 at tier 5). All ready Supply Drops fire together.",
+    "limits": "3 per round · first 3 min of the round"
+   }
+  ]
  },
  {
   "id": "sub",
@@ -3600,7 +3855,8 @@
    "wiki-freeplay",
    "wiki-tower-sub",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -3999,7 +4255,39 @@
     "damage": 5,
     "type": "Sharp"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "First Strike",
+    "from": [
+     {
+      "upgrade": "First Strike Capability",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Pre-emptive Strike",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "60s → 45s",
+    "text": "Fires a missile at the strongest Bloon for 10,000 damage (350 splash). At tier 5: 20,000 (1,000 splash) and a shorter cooldown."
+   },
+   {
+    "name": "Final Strike",
+    "from": [
+     {
+      "upgrade": "Nautic Siege Core",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "240s",
+    "text": "Stops attacking for a 15s countdown, then fires 3 missiles (60,000 each plus a 15,000 shockwave that stuns for 15s) and leaves a radioactive zone for 36s.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "bucc",
@@ -4055,7 +4343,8 @@
    "wiki-freeplay",
    "wiki-tower-bucc",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -4457,7 +4746,39 @@
     "damage": 1,
     "type": "Sharp"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Takedown",
+    "from": [
+     {
+      "upgrade": "Monkey Pirates",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Pirate Lord",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s → 30s",
+    "text": "Hooks a MOAB, BFB or (with Camo) DDT and drags it off the track. At tier 5: 6 hooks, can take ZOMGs (3 hooks), double cash from hooked Bloons, shorter cooldown."
+   },
+   {
+    "name": "Takedown (Paragon)",
+    "from": [
+     {
+      "upgrade": "Navarch of the Seas",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "30s",
+    "text": "One hook strong enough to take down a BAD.",
+    "limits": "Paragon · 2 per round"
+   }
+  ]
  },
  {
   "id": "ace",
@@ -4504,7 +4825,8 @@
    "wiki-freeplay",
    "wiki-tower-ace",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -4910,7 +5232,39 @@
     "damage": 3,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Ground Zero",
+    "from": [
+     {
+      "upgrade": "Ground Zero",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Tsar Bomba",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "35s",
+    "text": "A bomb hits up to 2,000 Bloons anywhere for 700. At tier 5: 3,000 damage to up to 5,000 Bloons and survivors are stunned 8s."
+   },
+   {
+    "name": "Carpet Bomb",
+    "from": [
+     {
+      "upgrade": "Goliath Doomship",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "60s",
+    "text": "Three planes bomb a line you draw: 30,000 damage and an 8s stun.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "heli",
@@ -4956,7 +5310,8 @@
    "wiki-freeplay",
    "wiki-tower-heli",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -5353,7 +5708,56 @@
     "damage": 6,
     "type": "Energy"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Reposition",
+    "from": [
+     {
+      "upgrade": "Support Chinook",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Special Poperations",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s → 15s",
+    "text": "Picks up most towers and moves them somewhere else."
+   },
+   {
+    "name": "Supply Crate",
+    "from": [
+     {
+      "upgrade": "Support Chinook",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Special Poperations",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "90s",
+    "text": "Drops $1,550 and 10 lives ($4,500 and 25 lives at tier 5).",
+    "limits": "2 per round · first 3 min of the round"
+   },
+   {
+    "name": "Monkey Marine",
+    "from": [
+     {
+      "upgrade": "Special Poperations",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "25s",
+    "text": "Drops a Monkey Marine with a machine gun for 30s."
+   }
+  ]
  },
  {
   "id": "mortar",
@@ -5399,7 +5803,8 @@
    "wiki-freeplay",
    "wiki-tower-mortar",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -5789,7 +6194,33 @@
     "damage": 2,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Bombardment",
+    "from": [
+     {
+      "upgrade": "Artillery Battery",
+      "path": 1,
+      "tier": 4
+     }
+    ],
+    "cooldown": "60s",
+    "text": "Fires 4× as fast with 15% bigger blasts for 8s."
+   },
+   {
+    "name": "Pop and Awe",
+    "from": [
+     {
+      "upgrade": "Pop and Awe",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "60s",
+    "text": "The speed boost becomes permanent; the ability hits every Bloon on screen for 20 and stuns them each second for 8s."
+   }
+  ]
  },
  {
   "id": "dartling",
@@ -5844,7 +6275,8 @@
    "wiki-freeplay",
    "wiki-tower-dartling",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -6233,7 +6665,26 @@
     "damage": 30,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Rocket Storm",
+    "from": [
+     {
+      "upgrade": "Rocket Storm",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "M.A.D",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s",
+    "text": "Fires waves of 10 missiles every 0.5s for 7.5s. At tier 5 the missiles pierce more and hit MOABs and Ceramics much harder."
+   }
+  ]
  },
  {
   "id": "wizard",
@@ -6282,7 +6733,8 @@
    "wiki-freeplay",
    "wiki-tower-wizard",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -6682,7 +7134,59 @@
     "damage": 8,
     "type": "Plasma"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Summon Phoenix",
+    "from": [
+     {
+      "upgrade": "Summon Phoenix",
+      "path": 1,
+      "tier": 4
+     }
+    ],
+    "cooldown": "45s",
+    "text": "Summons a Phoenix that circles the map raining fire for 20s."
+   },
+   {
+    "name": "Summon Lord Phoenix",
+    "from": [
+     {
+      "upgrade": "Wizard Lord Phoenix",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s",
+    "text": "The Wizard becomes a Lava Phoenix with stronger flames and fireballs (it already has a permanent Phoenix)."
+   },
+   {
+    "name": "Phoenix Explosion",
+    "from": [
+     {
+      "upgrade": "Magus Perfectus",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "40s",
+    "text": "Spends all Mana to blow up its Phoenix (heavy damage over time) and raises zombie ZOMGs that travel backwards.",
+    "limits": "Paragon"
+   },
+   {
+    "name": "Arcane Metamorphosis",
+    "from": [
+     {
+      "upgrade": "Magus Perfectus",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "90s",
+    "text": "Merges with its Phoenix for a huge flamethrower that leaves fire walls, draining Mana while it lasts.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "super",
@@ -6736,7 +7240,8 @@
    "wiki-freeplay",
    "wiki-tower-super",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -7141,7 +7646,48 @@
     "damage": 15,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Annihilation",
+    "from": [
+     {
+      "upgrade": "Tech Terror",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "The Anti-Bloon",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s → 30s",
+    "text": "Hits up to 2,000 nearby Bloons for 2,600 (every 3rd use crits for 3,900). At tier 5: 10,400 (15,600 crit), bigger radius, shorter cooldown."
+   },
+   {
+    "name": "Darkshift",
+    "from": [
+     {
+      "upgrade": "Dark Knight",
+      "path": 2,
+      "tier": 3
+     },
+     {
+      "upgrade": "Dark Champion",
+      "path": 2,
+      "tier": 4
+     },
+     {
+      "upgrade": "Legend of the Night",
+      "path": 2,
+      "tier": 5
+     }
+    ],
+    "cooldown": "20s",
+    "text": "Teleports within its range; at tiers 4–5 anywhere on the map."
+   }
+  ]
  },
  {
   "id": "ninja",
@@ -7190,7 +7736,8 @@
    "wiki-standard",
    "wiki-tower-ninja",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -7584,7 +8131,26 @@
     "damage": 2,
     "type": "Sharp"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Sabotage",
+    "from": [
+     {
+      "upgrade": "Bloon Sabotage",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Grand Saboteur",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "60s",
+    "text": "Slows most Bloons by 50% for 15s. At tier 5 it lasts 30s, new MOAB-class spawn with 25% less health and Shinobi Ninjas get range and MOAB damage."
+   }
+  ]
  },
  {
   "id": "alch",
@@ -7632,7 +8198,8 @@
    "wiki-freeplay",
    "wiki-tower-alch",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -8020,7 +8587,26 @@
     "damage": 1,
     "type": "Acid"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Transformation",
+    "from": [
+     {
+      "upgrade": "Transforming Tonic",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Total Transformation",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "60s → 40s",
+    "text": "Turns into a monster with a rapid eye laser for 20s. At tier 5 it also transforms 5 nearby tier 3-or-lower Monkeys."
+   }
+  ]
  },
  {
   "id": "druid",
@@ -8067,7 +8653,8 @@
    "wiki-freeplay",
    "wiki-tower-druid",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -8466,7 +9053,52 @@
     "damage": 1,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Vine Crush",
+    "from": [
+     {
+      "upgrade": "Jungle's Bounty",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Spirit of the Forest",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "30s",
+    "text": "Grabs and crushes up to 10 non-MOAB Bloons (60 at tier 5)."
+   },
+   {
+    "name": "Vine Rupture",
+    "from": [
+     {
+      "upgrade": "Spirit of the Forest",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "60s",
+    "text": "Bursts all track vines for 150 damage and a 7s stun; the vines need time to regrow.",
+    "limits": "Needs the Vine Rupture toggle"
+   },
+   {
+    "name": "Primordial Wrath",
+    "from": [
+     {
+      "upgrade": "Root of all Nature",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "9s",
+    "text": "Toggles Wrathful mode: more range and accuracy and extra damage, but it drains 1% of your cash per second and stops all income.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "mermonkey",
@@ -8513,7 +9145,8 @@
    "wiki-freeplay",
    "wiki-tower-mermonkey",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -8885,7 +9518,26 @@
     "damage": 10,
     "type": "Shatter"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Ice Jet",
+    "from": [
+     {
+      "upgrade": "Arctic Knight",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Popseidon",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s",
+    "text": "For 3s fires bouncing ice balls (20 damage, freeze small Bloons) that you can aim. At tier 5 it starts with a wave that hits and freezes everything, and the balls deal 30."
+   }
+  ]
  },
  {
   "id": "skywarden",
@@ -8929,7 +9581,8 @@
    "wiki-farwind-seer",
    "steam-v57",
    "wiki-tower-skywarden",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -9187,6 +9840,25 @@
      "xp": 32000
     }
    ]
+  ],
+  "abilities": [
+   {
+    "name": "Thunder Charge",
+    "from": [
+     {
+      "upgrade": "Thunder's Decree",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Stormwrath Archon",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s → 30s",
+    "text": "Charges towers in range: faster projectiles that pop Frozen Bloons and ricochet twice. At tier 5 lightning also jumps between its rods."
+   }
   ]
  },
  {
@@ -9234,7 +9906,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-farm",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -9526,6 +10199,26 @@
      "xp": 50000
     }
    ]
+  ],
+  "abilities": [
+   {
+    "name": "IMF Loan",
+    "from": [
+     {
+      "upgrade": "IMF Loan",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Monkey-Nomics",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "85s → 60s",
+    "text": "Gives $9,000 as a loan: half of all income repays it until it's cleared. At tier 5 there's no debt and a shorter cooldown.",
+    "limits": "2 per round · first 3 min of the round"
+   }
   ]
  },
  {
@@ -9575,7 +10268,8 @@
    "wiki-freeplay",
    "wiki-tower-spike",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -9976,7 +10670,52 @@
     "damage": 50,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Spike Storm",
+    "from": [
+     {
+      "upgrade": "Spike Storm",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Carpet of Spikes",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "50s",
+    "text": "Sprays spike piles all over the track for 2s; they last about 10s."
+   },
+   {
+    "name": "Controlled Burst",
+    "from": [
+     {
+      "upgrade": "Mega Massive Munitions Factory",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "15s",
+    "text": "Makes mines 4× as fast for 15s.",
+    "limits": "Paragon · once per round"
+   },
+   {
+    "name": "Spikeageddon",
+    "from": [
+     {
+      "upgrade": "Mega Massive Munitions Factory",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "75s",
+    "text": "Spreads big mines along the whole track that explode and leave smaller mines; reusing it detonates leftovers.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "village",
@@ -10023,7 +10762,8 @@
    "wiki-standard",
    "wiki-freeplay",
    "wiki-tower-village",
-   "wiki-camo-detection"
+   "wiki-camo-detection",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -10304,6 +11044,25 @@
      "xp": 28000
     }
    ]
+  ],
+  "abilities": [
+   {
+    "name": "Call to Arms",
+    "from": [
+     {
+      "upgrade": "Call to Arms",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Homeland Defense",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "45s",
+    "text": "Every tower in range gets +50% attack speed and pierce for 15s. At tier 5: +100% for 20s, and it reaches the whole map."
+   }
   ]
  },
  {
@@ -10360,7 +11119,8 @@
    "wiki-freeplay",
    "wiki-tower-engi",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -10749,7 +11509,59 @@
     "damage": 1,
     "type": "Sharp"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Overclock",
+    "from": [
+     {
+      "upgrade": "Overclock",
+      "path": 1,
+      "tier": 4
+     }
+    ],
+    "cooldown": "45s",
+    "text": "Makes one tower attack 67% faster (farms produce more, villages get range). Lasts 60s on tier ≤3, 45s on tier 4, 30s on tier 5."
+   },
+   {
+    "name": "Ultraboost",
+    "from": [
+     {
+      "upgrade": "Ultraboost",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "35s",
+    "text": "Overclock that always lasts 60s and adds a permanent +4% speed, stacking up to 10 times per tower."
+   },
+   {
+    "name": "Power Glove",
+    "from": [
+     {
+      "upgrade": "Master Builder",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "60s",
+    "text": "Overclocks a tower for 60s and towers near it for 30s.",
+    "limits": "Paragon"
+   },
+   {
+    "name": "Mega Sentry",
+    "from": [
+     {
+      "upgrade": "Master Builder",
+      "path": null,
+      "tier": null
+     }
+    ],
+    "cooldown": "20s",
+    "text": "Places a Paragon sentry, cycling green (laser), red (plasma) and blue (missiles); placing a 4th blows up the old one.",
+    "limits": "Paragon"
+   }
+  ]
  },
  {
   "id": "beast",
@@ -10803,7 +11615,8 @@
    "wiki-standard",
    "wiki-tower-beast",
    "wiki-camo-detection",
-   "wiki-tower-stats"
+   "wiki-tower-stats",
+   "wiki-abilities"
   ],
   "upgrades": [
    [
@@ -11181,6 +11994,25 @@
     "damage": 600,
     "type": "Normal"
    }
-  }
+  },
+  "abilities": [
+   {
+    "name": "Stomp",
+    "from": [
+     {
+      "upgrade": "Tyrannosaurus Rex",
+      "path": 1,
+      "tier": 4
+     },
+     {
+      "upgrade": "Giganotosaurus",
+      "path": 1,
+      "tier": 5
+     }
+    ],
+    "cooldown": "40s → 25s",
+    "text": "Stomps for 150 damage on up to 400 nearby Bloons and stuns them. At tier 5 it covers the whole map, hits 600 and stuns longer."
+   }
+  ]
  }
 ]
